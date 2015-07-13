@@ -1,0 +1,31 @@
+.fxs_main_nav_rules(@textTransform, @borderBottom, @fontSize,@colorItems, @displayPosition){
+    display: @displayPosition;
+    text-decoration: none;
+    border-bottom:@borderBottom;
+    text-transform: @textTransform;
+    &:extend(.fxs_transition);
+    padding: 10px 1rem;
+    color: @colorItems;
+    font-size: @fontSize;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  border-bottom: none;
+  text-transform: none;
+  padding: 10px 1rem;
+  color: #a2a2a7;
+  font-size: 0.75rem;
+  padding: 0.25rem 1rem;
+}
+
+.fxs_nav_menu > ul > li a {
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #2e2e32;
+  text-transform: uppercase;
+  padding: 10px 1rem;
+  color: #a2a2a7;
+  font-size: 0.88rem;
+}
