@@ -663,6 +663,7 @@
                     <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
                 </nav>
                 <div class="fxs_timezone_hours">
+
                     <ol id="selectable">
                         <li class="ui-widget-content">
                             <span><time>10:20 (GMT+1:00) first</time></span>
@@ -772,15 +773,13 @@
         });
 
         $('.fxs_timezone_btn').click(function () {
-            $('.fxs_timezone_items').addClass('fxs_pageSidebar_transition');
-            $('.fxs_timezone_items').css('right', '0');
-
+            $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
         })
 
         $("#selectable").selectable();
  
         $('.fxs_timezone_close, .fxs_timezone_done').click(function () {         
-            $('.fxs_timezone_items').css('right', '-276px');
+            $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
         })
 
       
