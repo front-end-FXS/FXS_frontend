@@ -83,7 +83,6 @@
 .fxs_logo {
     display: inline-block;
     float: left;
-    background: url("../website-img/fxs_logo.png") 0 0 no-repeat;  
     width: 98px;
     height: 0;
     font-size: @txt_defaultsize_px;
@@ -940,15 +939,13 @@
 ///////////////// FOOTER //////////////////
 
 .fxs_footer {
-    display: none;
-    &:extend(.fxs_clear_both);
-    position:fixed;
-    bottom:0;
+    background-color: #ffffff;
+    position:relative;
+
     .fxs_copy_disclaimer{ // capa contenedora navegación copyright y disclaimer
         background-color:@light_5_clr;     
         text-decoration:none; 
         overflow-y:hidden; 
-        width:100%;
         .fxs_terms_nav{  
             float:left; 
             padding:5px 5px 5px 1rem;       
@@ -974,22 +971,25 @@
                 padding-left:5px;
             }
         }
-        .fxs_dropdownBlock{
-            display:none;
-            position:absolute;
-            bottom:34px;
-            background-color:@lightest_clr;
-            font-size:@txt_size_nano;
-            padding:1rem;
-        }
-        .fxs_dropdownBlock.active{
-            display:block;
-        }
+      
+    }    
+    .fxs_dropdownBlock{
+        display:none;
+        position:absolute;
+        bottom:34px;
+        background-color:@lightest_clr;
+        font-size:@txt_size_nano;
+        padding:1rem;
+        z-index:103;
+    }
+    .fxs_dropdownBlock.active{
+        display:block;
     }
     @media (min-width: @screen-m) {
         display: block;
     }
     @media (min-width: @screen-l) {
-        padding-left:325px;
+        margin-left: @left_rail_space;
+        .calc(width, ~'100% - @{left_rail_space}'); 
     }
 }
