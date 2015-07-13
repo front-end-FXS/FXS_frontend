@@ -1,0 +1,63 @@
+button, input {
+    border: 0;
+    border-radius: 0;
+    font-family: @txt_fontfamily;
+}
+
+button {
+    background-color: transparent;
+    -webkit-appearance: button;
+}
+
+input {
+    height: @base_module_size;
+    -webkit-appearance: none; // Reset para safari y iOS
+    &:extend(.fxs_transition);
+    &[type="search"]{
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration { display: none; }
+    }
+}
+
+// Text inputs & fields
+input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
+    background-color: @lightest_clr;
+    border: 1px solid @dark_3_clr;
+    color: @dark_4_clr;
+    font-size: @txt_size_small;
+    padding: 5px 1rem;
+    &:hover { border-color: @light_2_clr; }
+    &:focus {
+        outline: 0;
+        border-color: @highlight_clr;
+    }
+    &:invalid, &.fxs_hasError { border-color: @error_clr; }
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    &:extend(.fxs_boldAntialised_style);
+}
+
+///////////////////////////////////////////////////
+////////// Forms layouts & input groups //////////
+.fxs_inlineForm_group {
+    margin-bottom: 1rem;
+    min-width: 100%;
+    &:extend(.fxs_iBlock);
+    > * { margin-bottom: 0.5rem; }
+    @media (min-width: @screen-m) { width: auto; }
+    input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
+        vertical-align: middle;
+        width: 100%;
+        &:extend(.fxs_iBlock);
+        @media (min-width: @screen-m) {
+            width: auto;
+            min-width: 250px;
+        }
+        @media (min-width: @screen-xl) { min-width: 320px; }
+    }
+}
