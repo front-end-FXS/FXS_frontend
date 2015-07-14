@@ -279,6 +279,8 @@ input[type=submit],
 .fxs_scrollableContent,
 .fxs_swipeContent_slider,
 .fxs_pageSidebar,
+.fxs_sidebar_user .fxs_timezone_items,
+.fxs_sidebar_user .fxs_timezone_hours,
 .fxs_listViewRail {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
@@ -288,6 +290,8 @@ input[type=submit],
   .fxs_scrollableContent,
   .fxs_swipeContent_slider,
   .fxs_pageSidebar,
+  .fxs_sidebar_user .fxs_timezone_items,
+  .fxs_sidebar_user .fxs_timezone_hours,
   .fxs_listViewRail {
     scrollbar-base-color: transparent;
     scrollbar-3dlight-color: #ffffff;
@@ -307,6 +311,14 @@ input[type=submit],
   .fxs_pageSidebar::-webkit-scrollbar-track,
   .fxs_pageSidebar::-webkit-scrollbar-corner,
   .fxs_pageSidebar::-webkit-scrollbar-button,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-track,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-corner,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-button,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-track,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-corner,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-button,
   .fxs_listViewRail::-webkit-scrollbar,
   .fxs_listViewRail::-webkit-scrollbar-track,
   .fxs_listViewRail::-webkit-scrollbar-corner,
@@ -316,6 +328,8 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar,
   .fxs_swipeContent_slider::-webkit-scrollbar,
   .fxs_pageSidebar::-webkit-scrollbar,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar,
   .fxs_listViewRail::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -324,6 +338,8 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar-track,
   .fxs_swipeContent_slider::-webkit-scrollbar-track,
   .fxs_pageSidebar::-webkit-scrollbar-track,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-track,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-track,
   .fxs_listViewRail::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
     -moz-box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
@@ -332,6 +348,8 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar-thumb,
   .fxs_swipeContent_slider::-webkit-scrollbar-thumb,
   .fxs_pageSidebar::-webkit-scrollbar-thumb,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-thumb,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-thumb,
   .fxs_listViewRail::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
     -moz-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
@@ -342,6 +360,8 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar-button,
   .fxs_swipeContent_slider::-webkit-scrollbar-button,
   .fxs_pageSidebar::-webkit-scrollbar-button,
+  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-button,
+  .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-button,
   .fxs_listViewRail::-webkit-scrollbar-button {
     width: 0;
     height: 0;
@@ -378,7 +398,8 @@ input,
 .fxs_sidebar_language ul > li a,
 .fxs_sidebar_user nav.fxs_nav_login_form a,
 .fxs_sidebar_user .fxs_timezone_btn,
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol li,
+.fxs_sidebar_user .fxs_timezone_items,
+.fxs_sidebar_user .fxs_timezone_hours ol li,
 .fxs_listView,
 .fxs_listView_newItemsAlert,
 .fxs_filter,
@@ -1656,6 +1677,9 @@ label {
 .fxs_pageSidebar.fxs_sidebar_user {
   right: 0;
 }
+.fxs_pageSidebar.fxs_sidebar_user {
+  right: 0;
+}
 .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_sidebar_nav {
   visibility: visible;
   zoom: 1;
@@ -1735,9 +1759,9 @@ label {
 .fxs_logo {
   display: inline-block;
   float: left;
-  background: url("../website-img/fxs_logo.png") 0 0 no-repeat;
   width: 98px;
   height: 0;
+  background: url("../website-img/fxs_logo.png") 0 0 no-repeat;
   font-size: 16px;
   overflow: hidden;
   padding-top: 24px;
@@ -1977,22 +2001,6 @@ width:calc(100% - 320px);
 .fxs_sidebar_language.active .fxs_lang_group {
   display: block;
 }
-.fxs_sidebar_user {
-  /*nav{
-        ul.fxs_user_nav_group{
-            border-bottom:1px solid @dark_3_clr;
-            li.fxs_user_nav_item{
-                a{
-                     .fxs_main_nav_rules(none, none, @txt_size_small, @lightest_clr, block, 10px 1rem 10px 1rem);
-                     &:hover{
-                        background-color:@dark_3_clr;
-                    }
-                }
-            }         
-        }
-    }
-       */
-}
 .fxs_sidebar_user nav.fxs_nav_login_form {
   border-bottom: 1px solid #2e2e32;
   margin-bottom: 1rem;
@@ -2199,8 +2207,6 @@ width:calc(100% - 320px);
   color: #8b8c91;
   font-size: 0.75rem;
   height: auto;
-}
-.fxs_sidebar_user .fxs_timezone_btn.fxs_timezone_btn {
   font-style: italic;
 }
 .fxs_sidebar_user .fxs_timezone_btn time {
@@ -2216,39 +2222,40 @@ width:calc(100% - 320px);
 }
 .fxs_sidebar_user .fxs_timezone_items {
   right: -276px;
-  overflow-y: hidden;
-}
-.fxs_sidebar_user .fxs_timezone_items {
+  position: fixed;
   background-color: #1a1b22;
   position: absolute;
   top: 0;
   z-index: 101;
   width: 100%;
   bottom: 0;
+  height: 100%;
   overflow-y: auto;
 }
-.fxs_sidebar_user .fxs_timezone_items nav.fxs_timezone_nav {
-  height: 45px;
-  padding: 1rem;
-  position: fixed;
-  background-color: #2e2e32;
+.fxs_sidebar_user .fxs_timezone_items:hover,
+.fxs_touch .fxs_sidebar_user .fxs_timezone_items {
+  overflow-y: auto;
+}
+.fxs_sidebar_user .fxs_timezone_hours {
+  padding-bottom: 35px;
+  position: absolute;
+  top: 45px;
   width: 100%;
-  z-index: 103;
+  -lh-property: 0;
+height:-webkit-calc(100% - 35px - 45px);
+height:-moz-calc(100% - 35px - 45px);
+height:calc(100% - 35px - 45px);
+;
 }
-.fxs_sidebar_user .fxs_timezone_items nav.fxs_timezone_nav .fxs_helperLabel_title {
-  padding: 0 45px 0 45px;
-  color: #a2a2a7;
+.fxs_sidebar_user .fxs_timezone_hours:hover,
+.fxs_touch .fxs_sidebar_user .fxs_timezone_hours {
+  overflow-y: auto;
 }
-.fxs_sidebar_user .fxs_timezone_items nav.fxs_timezone_nav a {
-  color: #e4871b;
-  display: inline-block;
-  font-size: 0.88rem;
-}
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol#selectable .ui-selected {
+.fxs_sidebar_user .fxs_timezone_hours ol#selectable .ui-selected li {
   background-color: #2e2e32;
-  position: relative;
+  position: absolute;
 }
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol#selectable .ui-selected span:after {
+.fxs_sidebar_user .fxs_timezone_hours ol#selectable .ui-selected span:after {
   content: "\f00c";
   position: absolute;
   margin-top: -3px;
@@ -2258,10 +2265,7 @@ width:calc(100% - 320px);
   font-size: 0.88rem;
   padding-left: 10px;
 }
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol {
-  padding-top: 45px;
-}
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol li {
+.fxs_sidebar_user .fxs_timezone_hours ol li {
   display: block;
   text-decoration: none;
   border-bottom: 1px solid #2e2e32;
@@ -2271,18 +2275,44 @@ width:calc(100% - 320px);
   font-size: 0.88rem;
   cursor: pointer;
 }
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol li:hover {
+.fxs_sidebar_user .fxs_timezone_hours ol li:hover {
   background-color: #2e2e32;
 }
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol li p {
+.fxs_sidebar_user .fxs_timezone_hours ol li p {
   margin: 0;
   padding: 0;
 }
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol li span {
+.fxs_sidebar_user .fxs_timezone_hours ol li span {
   color: #ffffff;
 }
-.fxs_sidebar_user .fxs_timezone_items .fxs_timezone_hours ol li p {
+.fxs_sidebar_user .fxs_timezone_hours ol li p {
   color: #a2a2a7;
+}
+.fxs_sidebar_user .fxs_timezone_nav {
+  height: 45px;
+  -lh-property: 0;
+height:-webkit-calc(100% - @{@main_header_height});
+height:-moz-calc(100% - @{@main_header_height});
+height:calc(100% - @{@main_header_height});
+;
+  padding: 1rem;
+  position: relative;
+  top: 0;
+  background-color: #2e2e32;
+  width: 100%;
+  z-index: 103;
+}
+.fxs_sidebar_user .fxs_timezone_nav .fxs_helperLabel_title {
+  padding: 0 35px;
+  color: #a2a2a7;
+}
+.fxs_sidebar_user .fxs_timezone_nav a {
+  color: #e4871b;
+  display: inline-block;
+  font-size: 0.88rem;
+}
+.fxs_sidebar_user .fxs_show_timezoneHours {
+  right: 0;
 }
 .fxs_sidebar_user .fxs_user_area_content {
   border-bottom: 1px solid #2e2e32;
@@ -2463,6 +2493,7 @@ height:calc(100% - 35px - 45px);
 }
 @media (min-width: 768px) {
   .fxs_listViewRail_fixedWidthRebased,
+  .fxs_sidebar_user .fxs_timezone_hours,
   .fxs_listView,
   .fxs_listViewRail {
     width: 325px;
@@ -2709,15 +2740,13 @@ height:calc(100% - 35px - 45px);
   background-color: #dcddde;
 }
 .fxs_footer {
-  display: none;
-  position: fixed;
-  bottom: 0;
+  background-color: #ffffff;
+  position: relative;
 }
 .fxs_footer .fxs_copy_disclaimer {
   background-color: #f7f7f7;
   text-decoration: none;
   overflow-y: hidden;
-  width: 100%;
 }
 .fxs_footer .fxs_copy_disclaimer .fxs_terms_nav {
   float: left;
@@ -2744,15 +2773,16 @@ height:calc(100% - 35px - 45px);
 .fxs_footer .fxs_copy_disclaimer .fxs_btn_disclaimer .fa-caret-up {
   padding-left: 5px;
 }
-.fxs_footer .fxs_copy_disclaimer .fxs_dropdownBlock {
+.fxs_footer .fxs_dropdownBlock {
   display: none;
   position: absolute;
   bottom: 34px;
   background-color: #ffffff;
   font-size: 11px;
   padding: 1rem;
+  z-index: 103;
 }
-.fxs_footer .fxs_copy_disclaimer .fxs_dropdownBlock.active {
+.fxs_footer .fxs_dropdownBlock.active {
   display: block;
 }
 @media (min-width: 768px) {
@@ -2762,7 +2792,12 @@ height:calc(100% - 35px - 45px);
 }
 @media (min-width: 1024px) {
   .fxs_footer {
-    padding-left: 325px;
+    margin-left: 320px;
+    -lh-property: 0;
+width:-webkit-calc(100% - 320px);
+width:-moz-calc(100% - 320px);
+width:calc(100% - 320px);
+;
   }
 }
 .fxs_article_header {
