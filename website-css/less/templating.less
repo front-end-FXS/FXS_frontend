@@ -109,6 +109,14 @@
 }
 
 .fxs_show_usermenu {
+    position:relative;
+    .fxs_badge{
+        top:0;
+        right:0;
+        margin:0;
+        display:block;
+        position:absolute;
+    }
     float: right;
     &:extend(.fxs_headerButtons all);
 }
@@ -162,7 +170,8 @@
     color: @colorItems;
     font-size: @fontSize;
 }
-.fxs_nav_menu {   
+
+.fxs_nav_menu { 
     > ul > li a {
         .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr, @txt_size_small, @light_2_clr, block, 10px 1rem 10px 1rem);
         &:hover{
@@ -298,6 +307,7 @@
 // sidebar user
 
 .fxs_sidebar_user {  
+    overflow:auto;
     nav.fxs_nav_login_form{
         border-bottom:1px solid @dark_3_clr;
         margin-bottom:1rem;

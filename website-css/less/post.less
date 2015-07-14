@@ -7,7 +7,8 @@
     border-bottom: 3px solid @light_4_clr;
     &:extend(.fxs_relativePositioning);
     margin-bottom:1rem;
-    //&:extend(.fxs_baseMargin_bottom all);
+    //&:extend(.fxs_baseMargin_bottom all); // agregar margin:1rem;
+    margin:1rem;
     @media (min-width: @screen-m) {
         margin-bottom: 2rem;
     }
@@ -26,7 +27,8 @@
 }
 
 .fxs_article_body {
-    &:extend(.fxs_baseMargin_bottom all);
+    //&:extend(.fxs_baseMargin_bottom all);
+    margin:1rem;
     &:extend(.fxs_clearfix all);
     &:extend(.fxs_entryPlain_txt_large all);
     @media (min-width: @screen-xl) {

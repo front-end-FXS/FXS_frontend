@@ -14,7 +14,6 @@ body {
 }
 
 //////////// Links styles ////////////
-
 a{
 	color: @highlight_clr;
 	text-decoration: none;
@@ -341,22 +340,20 @@ h1, h2, h3, h4, h5 {
 	&:extend(.fxs_avatar_circleImage);
 }
 .fxs_badge{
-    top:0;
-    right:0;
     padding: 4px 7px;
     border-radius:10px;
     min-width:10px;
     line-height: 1;
     background-color:@error_clr;
-    position:absolute;
     color:@lightest_clr;
     text-align:center;
     font-size:@txt_size_nano;
     white-space: nowrap;
     vertical-align: middle;
     z-index:102;
+    display:inline-block;
+    margin-left:10px;
 }
-
 // Wide content widgets
 .fxs_wideContent {
 	margin-left:-1rem;
