@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////////////
+////////// General classes to extend and mixins //////////
+///////////// ONLY EXTEND CLASSES FROM HERE /////////////
 .fxs_clearfix {
   &::before, &::after {
     content: " ";
@@ -15,9 +18,55 @@
   font-weight: @txt_fontweight_bold;
 }
 
+// Italic upercased labels
+.fxs_styledIndicator_label {
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-style: italic;
+}
+
+// Headline link
+.fxs_headerLink {
+  color: @dark_1_clr;
+  display: block;
+  &:hover{
+    color: @highlight_clr;
+    text-decoration: none;
+  }
+}
+
+// Content source only for acceskey
+.fxs_skip {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    font-size: @txt_size_nano;
+    &:active, &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto
+    }
+}
+
 // Positions & displays
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
+
+// Dividers
+.fxs_divider_base() {
+  background-color: @light_4_clr;
+  border: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
+}
 
 /////////////////////////////////////////
 ////////// Scrollable content //////////
@@ -63,10 +112,11 @@
     &:hover, .fxs_touch & { overflow-x: auto; }
 }
 
+///////////////////////////////////////////////
+////////// TRANSITIONS & ANIMATIONS //////////
 // General transitions
 .fxs_transition { .transition(all .25s ease-in-out); }
 .fxs_pageSidebar_transition { .transition(transform .25s ease-in-out); }
-
 // Animations
 .keyframes(~'slide-from-top, from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}');
 .keyframes(~'slide-from-top-and-appear, from {top: 97%; opacity:0; visibility: hidden; } to {top: 100%; opacity:1; visibility: visible}');

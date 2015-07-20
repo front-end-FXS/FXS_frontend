@@ -55,7 +55,6 @@
             .fxs_listView {
                 .translate(@slide_sidebar_space);
                 @media (min-width: @screen-m) { .translate(0); }
-                // @media (min-width: @screen-l) { .translate(0); }
             }
         }
         @media (min-width: @screen-l) {
@@ -72,7 +71,7 @@
             visibility: visible;
             .opacity(1);
         }
-        .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer { .translate(-@slide_sidebar_space); }
+        .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_show_timezoneHours { .translate(-@slide_sidebar_space); }
     }
 }
 
@@ -536,9 +535,6 @@
             font-size: @txt_size_small;
         }
     }
-    .fxs_show_timezoneHours{
-        .translate(-@slide_sidebar_space);
-    }
     .fxs_user_area_content{
         border-bottom:1px solid @dark_3_clr;
         padding:1rem 2rem 1rem 1rem;
@@ -914,20 +910,23 @@
 ///////////////// FOOTER //////////////////
 
 .fxs_footer {
-    background-color: #ffffff;
-    position:relative;
-
+    position:absolute;
+    z-index: 9;
+    bottom: 0;
+    width: 100%;
+    &:extend(.fxs_pageSidebar_transition);
     .fxs_copy_disclaimer{ // capa contenedora navegación copyright y disclaimer
-        background-color:@light_5_clr;     
-        text-decoration:none; 
+        background-color:@light_5_clr;
         overflow-y:hidden; 
         .fxs_terms_nav{  
             float:left; 
             padding:5px 5px 5px 1rem;       
             a{
-               color:@dark_4_clr;
-               padding-right:10px; 
-               font-size:@txt_size_nano;
+                display: none;
+                color:@dark_4_clr;
+                padding-right:10px; 
+                font-size:@txt_size_nano;
+                @media (min-width: @screen-l) { display: inline-block; }
             }
             .fxs_copyRight{
                 font-size:@txt_size_nano;
@@ -941,30 +940,72 @@
             font-size:@txt_size_nano;
             color:@dark_1_clr;
             padding:5px 1rem 5px 1rem;
-            vertical-align:middle;
-            .fa-caret-up{
-                padding-left:5px;
-            }
+            vertical-align: middle;
         }
       
     }    
     .fxs_dropdownBlock{
         display:none;
         position:absolute;
-        bottom:34px;
+        bottom:100%;
         background-color:@lightest_clr;
         font-size:@txt_size_nano;
         padding:1rem;
-        z-index:103;
     }
-    .fxs_dropdownBlock.active{
-        display:block;
-    }
-    @media (min-width: @screen-m) {
-        display: block;
-    }
+    .fxs_dropdownBlock.active{ display:block; }
     @media (min-width: @screen-l) {
         margin-left: @left_rail_space;
         .calc(width, ~'100% - @{left_rail_space}'); 
     }
 }
+
+
+// START Telerik.Sitefinity.Resources.Themes.LayoutsBasics.css 
+.sf_cols{width:100%;margin:0;padding:0}
+.sf_cols:before,.sf_cols:after{content:"";display:table;}
+.sf_cols:after{clear:both}
+.sf_cols{zoom:1}
+.sf_colsOut+.sf_colsOut{*margin-left:-1px!important}
+.sf_block{display:block}
+.sf_1col_1_100{float:none;margin:0}
+.sf_2cols_1_25{float:left;width:25%;margin:0}
+.sf_2cols_2_75{float:right;width:75%;margin:0}
+.sf_2cols_2_75 .sf_2cols_2in_75{margin-left:12px}
+.sf_2cols_1_33{float:left;width:33%;margin:0}
+.sf_2cols_2_67{float:right;width:67%;margin:0}
+.sf_2cols_2_67 .sf_2cols_2in_67{margin-left:12px}
+.sf_2cols_1_50{float:left;width:50%;margin:0}
+.sf_2cols_2_50{float:right;width:50%;margin:0}
+.sf_2cols_2_50 .sf_2cols_2in_50{margin-left:12px}
+.sf_2cols_1_67{float:left;width:67%;margin:0}
+.sf_2cols_2_33{float:right;width:33%;margin:0}
+.sf_2cols_2_33 .sf_2cols_2in_33{margin-left:12px}
+.sf_2cols_1_75{float:left;width:75%;margin:0}
+.sf_2cols_2_25{float:right;width:25%;margin:0}
+.sf_2cols_2_25 .sf_2cols_2in_25{margin-left:12px}
+.sf_3cols_1_33{float:left;width:33%;margin:0}
+.sf_3cols_2_34{float:left;width:34%;margin:0}
+.sf_3cols_3_33{float:left;width:33%;margin:0;_margin-left:-1px!important}
+.sf_3cols_2_34 .sf_3cols_2in_34,.sf_3cols_3_33 .sf_3cols_3in_33{margin-left:12px}
+.sf_3cols_1_25{float:left;width:25%;margin:0}
+.sf_3cols_2_50{float:left;width:50%;margin:0}
+.sf_3cols_3_25{float:left;width:25%;margin:0;_margin-left:-1px!important}
+.sf_3cols_2_50 .sf_3cols_2in_50,.sf_3cols_3_25 .sf_3cols_3in_25{margin-left:12px}
+.sf_4cols_1_25,.sf_4cols_2_25,.sf_4cols_3_25,.sf_4cols_4_25{float:left;width:25%;margin:0}
+.sf_4cols_4_25{_margin-left:-1px!important}
+.sf_4cols_2_25 .sf_4cols_2in_25,.sf_4cols_3_25 .sf_4cols_3in_25,.sf_4cols_4_25 .sf_4cols_4in_25{margin-left:12px}
+.sf_5cols_1_20,.sf_5cols_2_20,.sf_5cols_3_20,.sf_5cols_4_20,.sf_5cols_5_20{float:left;width:20%;margin:0}
+.sf_5cols_5_20{_margin-left:-1px!important}
+.sf_5cols_2_20 .sf_5cols_2in_20,.sf_5cols_3_20 .sf_5cols_3in_20,.sf_5cols_4_20 .sf_5cols_4in_20,.sf_5cols_5_20 .sf_5cols_5in_20{margin-left:12px}
+/* END Telerik.Sitefinity.Resources.Themes.LayoutsBasics.css */
+
+
+/////////////////////////STYCKY/////////////////////////////
+// .stickem-container{ position: relative; }
+// .stickit{
+//     position: fixed;
+//     top: 0;
+//     .fxs_listView & { top: 80px; }
+//     &-end { position: absolute; bottom: 3px; }
+// }
+/////////////////////////////////////////////////////////////

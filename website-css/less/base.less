@@ -20,15 +20,7 @@ a{
 	&:extend(.fxs_boldAntialised_style);
 	&:hover{ text-decoration: underline; }
 }
-// Header link
-.fxs_headerLink {
-	color: @dark_1_clr;
-	display: block;
-	&:hover{
-		color: @highlight_clr;
-		text-decoration: none;
-	}
-}
+
 // Parent section link breadcrumb
 .fxs_entry_sectionlink {
 	display: inline-block;
@@ -73,7 +65,7 @@ blockquote {
 	}
 }
 
-.fxs_entryPlain_txt {
+.fxs_entryPlain_txt, .fxs_entryPlain_txt_large {
 	font-weight: @txt_fontweight_light;
 	font-size: @txt_size_small;
 	line-height: @txt_lineheight_small;
@@ -103,7 +95,6 @@ blockquote {
 }
 
 .fxs_entryPlain_txt_large {
-	&:extend(.fxs_entryPlain_txt all);
 	font-size: @txt_defaultsize_rem;
     line-height: @txt_lineheight_reset;
 	@media (min-width: @screen-m) { font-size: @txt_size_large; }
@@ -122,13 +113,6 @@ figcaption {
     @media (min-width: @screen-m) { margin: 0.5rem 0; }
 }
 
-// Italic upercased labels
-.fxs_styledIndicator_label {
-	text-transform: uppercase;
-    white-space: nowrap;
-    font-style: italic;
-}
-
 // muted label
 .fxs_mutedContent_label {
 	font-size: @txt_size_xsmall;
@@ -137,27 +121,6 @@ figcaption {
 	display: block;
 	margin-top: -1rem/4;
 	i{ font-size: @txt_size_small; }
-}
-
-// Content source only for acceskey
-.fxs_skip {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-    font-size: @txt_size_nano;
-    &:active, &:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto
-    }
 }
 
 ////////////////////////////////////
@@ -200,7 +163,7 @@ h1, h2, h3, h4, h5 {
 	line-height: @txt_lineheight_small;
 	> a { &:extend(.fxs_headerLink all); }
 }
-.fxs_headline_nano {
+.fxs_headline_nano, .fxs_headline_from_nano_to_small, .fxs_headline_from_nano_to_tiny {
 	font-size: @txt_size_small;
 	line-height: @txt_lineheight_small;
 	> a { &:extend(.fxs_headerLink all); }
@@ -208,7 +171,6 @@ h1, h2, h3, h4, h5 {
 
 // Scalable headers (for the smallest sizes in multi-cols)
 .fxs_headline_from_nano_to_small {
-	&:extend(.fxs_headline_nano all);
 	@media (min-width: @screen-m) {
 		font-size: @txt_size_large;
 		line-height: @txt_lineheight;
@@ -216,7 +178,6 @@ h1, h2, h3, h4, h5 {
 }
 
 .fxs_headline_from_nano_to_tiny {
-	&:extend(.fxs_headline_nano all);
 	@media (min-width: @screen-m) {
 		font-size: @txt_defaultsize_rem;
 		line-height: @txt_lineheight_small;
@@ -224,41 +185,28 @@ h1, h2, h3, h4, h5 {
 }
 
 // Subsection titles
-.fxs_titlesSecondary {
-	display: inline-block;
+.fxs_titlesSecondary, .fxs_subsectionTitle, .fxs_helperLabel_title {
 	color: @dark_4_clr;
 	font-size: @txt_size_small;
 	letter-spacing: inherit;
- 	&:extend(.fxs_styledIndicator_label);
-    &:extend(.fxs_boldAntialised_style);
+ 	&:extend(.fxs_styledIndicator_label, .fxs_boldAntialised_style, .fxs_iBlock);
 }
 
 .fxs_subsectionTitle {
-	&:extend(.fxs_titlesSecondary);
     padding: 0 12px;
     margin: 0 0 1rem -1rem;
     background-color: @light_3_clr;
 }
 // label titles
-.fxs_helperLabel_title {
-    margin-right: 0.5rem;
-    &:extend(.fxs_titlesSecondary);
-}
+.fxs_helperLabel_title { margin-right: 0.5rem; }
 
 /////////////////////////////////////////////////
 //////////////// Objects (Misc) ////////////////
 
 // Dividers
-////// Coments OMAR //////
-// Incluir el base en los mixins
-.fxs_divider_base() {
-	background-color: @light_4_clr;
-	border: 0;
-	margin-bottom: 1rem;
-}
-.fxs_divider_first {
-	height: 5px;
+.fxs_divider_first, .fxs_divider_wide {
 	.fxs_divider_base();
+	height: 5px;
 }
 
 .fxs_divider_second {
@@ -269,15 +217,13 @@ h1, h2, h3, h4, h5 {
 .fxs_divider_third {
 	.fxs_divider_base();
 	height: 1px;
-	background-color: @dark_4_clr;
 }
 
 .fxs_divider_wide {
-	&:extend(.fxs_divider_first);
-	&:extend(.fxs_wideContent all);
+	.fxs_divider_base();
     margin-top:1rem;
     margin-bottom:2rem;
-
+    &:extend(.fxs_wideContent all);
 }
 
 // Media objects //
@@ -369,7 +315,6 @@ h1, h2, h3, h4, h5 {
 .fxs_wideContent_bordered {
     &:extend(.fxs_wideContent all);
     border-top: 5px solid @light_4_clr;
-    //border-bottom: 5px solid @light_4_clr; modificado por pablo
 }
 
 // Entry meta info: date, author
@@ -644,44 +589,3 @@ input[type=submit], .fxs_btn {
         margin-bottom: 1rem; 
     }     
 }
-
-
-
-// START Telerik.Sitefinity.Resources.Themes.LayoutsBasics.css 
-.sf_cols{width:100%;margin:0;padding:0}
-.sf_cols:before,.sf_cols:after{content:"";display:table;}
-.sf_cols:after{clear:both}
-.sf_cols{zoom:1}
-.sf_colsOut+.sf_colsOut{*margin-left:-1px!important}
-.sf_block{display:block}
-.sf_1col_1_100{float:none;margin:0}
-.sf_2cols_1_25{float:left;width:25%;margin:0}
-.sf_2cols_2_75{float:right;width:75%;margin:0}
-.sf_2cols_2_75 .sf_2cols_2in_75{margin-left:12px}
-.sf_2cols_1_33{float:left;width:33%;margin:0}
-.sf_2cols_2_67{float:right;width:67%;margin:0}
-.sf_2cols_2_67 .sf_2cols_2in_67{margin-left:12px}
-.sf_2cols_1_50{float:left;width:50%;margin:0}
-.sf_2cols_2_50{float:right;width:50%;margin:0}
-.sf_2cols_2_50 .sf_2cols_2in_50{margin-left:12px}
-.sf_2cols_1_67{float:left;width:67%;margin:0}
-.sf_2cols_2_33{float:right;width:33%;margin:0}
-.sf_2cols_2_33 .sf_2cols_2in_33{margin-left:12px}
-.sf_2cols_1_75{float:left;width:75%;margin:0}
-.sf_2cols_2_25{float:right;width:25%;margin:0}
-.sf_2cols_2_25 .sf_2cols_2in_25{margin-left:12px}
-.sf_3cols_1_33{float:left;width:33%;margin:0}
-.sf_3cols_2_34{float:left;width:34%;margin:0}
-.sf_3cols_3_33{float:left;width:33%;margin:0;_margin-left:-1px!important}
-.sf_3cols_2_34 .sf_3cols_2in_34,.sf_3cols_3_33 .sf_3cols_3in_33{margin-left:12px}
-.sf_3cols_1_25{float:left;width:25%;margin:0}
-.sf_3cols_2_50{float:left;width:50%;margin:0}
-.sf_3cols_3_25{float:left;width:25%;margin:0;_margin-left:-1px!important}
-.sf_3cols_2_50 .sf_3cols_2in_50,.sf_3cols_3_25 .sf_3cols_3in_25{margin-left:12px}
-.sf_4cols_1_25,.sf_4cols_2_25,.sf_4cols_3_25,.sf_4cols_4_25{float:left;width:25%;margin:0}
-.sf_4cols_4_25{_margin-left:-1px!important}
-.sf_4cols_2_25 .sf_4cols_2in_25,.sf_4cols_3_25 .sf_4cols_3in_25,.sf_4cols_4_25 .sf_4cols_4in_25{margin-left:12px}
-.sf_5cols_1_20,.sf_5cols_2_20,.sf_5cols_3_20,.sf_5cols_4_20,.sf_5cols_5_20{float:left;width:20%;margin:0}
-.sf_5cols_5_20{_margin-left:-1px!important}
-.sf_5cols_2_20 .sf_5cols_2in_20,.sf_5cols_3_20 .sf_5cols_3in_20,.sf_5cols_4_20 .sf_5cols_4in_20,.sf_5cols_5_20 .sf_5cols_5in_20{margin-left:12px}
-/* END Telerik.Sitefinity.Resources.Themes.LayoutsBasics.css */
