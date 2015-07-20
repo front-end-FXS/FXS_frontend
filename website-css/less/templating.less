@@ -249,8 +249,7 @@
         }
     }
     .fxs_menuList_header {
-        &:extend(.fxs_styledIndicator_label);
-        &:extend(.fxs_boldAntialised_style);
+        &:extend(.fxs_styledIndicator_label, .fxs_boldAntialised_style);
         color: @light_1_clr;
         font-size: @txt_size_xsmall;
         padding:10px 1rem 10px 1rem;
@@ -311,7 +310,6 @@
     .fxs_timezone_hours {
         width: @slide_sidebar_space;
     }
-    // Coment Omar: NO, bajo ninguna circunstancia concatenar tag con clase: MENOS con nav, header, section o aside
     
     // Esto será la clase genérica de tabs
     .fxs_nav_login_form{

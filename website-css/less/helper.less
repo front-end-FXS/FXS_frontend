@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////
-////////// General classes to extend and mixins //////////
+/////////////// General classes to extend ////////////////
 ///////////// ONLY EXTEND CLASSES FROM HERE /////////////
 .fxs_clearfix {
   &::before, &::after {
@@ -60,14 +60,6 @@
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
 
-// Dividers
-.fxs_divider_base() {
-  background-color: @light_4_clr;
-  border: 0;
-  margin-bottom: 1rem;
-  margin-left: 0;
-}
-
 /////////////////////////////////////////
 ////////// Scrollable content //////////
 .fxs_scrollableContent {
@@ -110,6 +102,28 @@
     &:extend(.fxs_iBlock);
     &:extend(.fxs_scrollableContent all);
     &:hover, .fxs_touch & { overflow-x: auto; }
+}
+
+///////////////////////////////////////////////////////////
+////////////////////// FXS Mixins ////////////////////////
+
+// Media objects //
+.fxs_aspectRatio_media(@width, @height) {
+  &:extend(.fxs_relativePositioning);
+  &:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+  }
+}
+
+// Dividers
+.fxs_divider_base() {
+  background-color: @light_4_clr;
+  border: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
 }
 
 ///////////////////////////////////////////////

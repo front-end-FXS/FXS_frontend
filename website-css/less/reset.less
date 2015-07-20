@@ -14,16 +14,30 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
+
+html {
+	font-size: @txt_defaultsize_px;
+	height: 100%;
+}
+
+body {
+	background-color: @dark_2_clr;
+	font-family: @txt_fontfamily;
+	font-size: @txt_defaultsize_rem;
+	height:100%;
+	line-height: @txt_lineheight;
+	color: @dark_4_clr;
+	overflow: hidden;
+}
+
 // HTML5 display-role reset for older browsers 
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body { line-height: 1; }
 ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
@@ -31,10 +45,12 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 // Box model & typo rendering
 * {
 	.box-sizing(border-box);
