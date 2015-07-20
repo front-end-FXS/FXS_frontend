@@ -47,18 +47,61 @@
     border: 0;
     font-size: @txt_size_nano;
     &:active, &:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto
-    }
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto
+  }
 }
 
 // Positions & displays
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
+
+// Button styles
+.fxs_btn, .fxs_btn_txt, .fxs_btn_icon, .fxs_btn_socialMedia {
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: @lightest_clr;
+  font-size: @txt_size_small;
+  height: @base_module_size;
+  line-height: @base_module_size - 4;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  &:extend(.fxs_iBlock, .fxs_boldAntialised_style, .fxs_transition);
+  &:hover { text-decoration: none; }
+}
+
+.fxs_btn_txt { padding: 0 1rem; }
+
+.fxs_btn_icon, .fxs_btn_socialMedia {
+    width: @base_module_size;
+    font-size: @icon_defaultsize;
+}
+
+// Dividers
+.fxs_divider_base {
+  background-color: @light_4_clr;
+  border: 0;
+  margin-bottom: 1rem;
+  margin-left: 0;
+}
+
+// Wide content widgets
+.fxs_wideContent, .fxs_wideContent_bordered {
+  margin-left:-1rem;
+  margin-right:-1rem;
+  &:extend(.fxs_clearfix all);
+  @media (min-width: @screen-m) {
+      margin-left:-2rem;
+      margin-right:-2rem;
+  }
+}
+.fxs_wideContent_bordered { border-top: 5px solid @light_4_clr; }
 
 /////////////////////////////////////////
 ////////// Scrollable content //////////
@@ -107,6 +150,18 @@
 ///////////////////////////////////////////////////////////
 ////////////////////// FXS Mixins ////////////////////////
 
+// mixin base styles nav
+.fxs_main_nav_rules(@textTransform, @borderBottom, @fontSize, @colorItems, @displayPosition, @paddingParameters){
+    display: @displayPosition;
+    border-bottom:@borderBottom;
+    text-transform: @textTransform;
+    padding: @paddingParameters;
+    color: @colorItems;
+    font-size: @fontSize;
+    text-decoration: none;
+    &:extend(.fxs_transition);
+}
+
 // Media objects //
 .fxs_aspectRatio_media(@width, @height) {
   &:extend(.fxs_relativePositioning);
@@ -116,14 +171,6 @@
     width: 100%;
     padding-top: (@height / @width) * 100%;
   }
-}
-
-// Dividers
-.fxs_divider_base() {
-  background-color: @light_4_clr;
-  border: 0;
-  margin-bottom: 1rem;
-  margin-left: 0;
 }
 
 ///////////////////////////////////////////////

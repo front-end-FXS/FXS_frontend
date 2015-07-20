@@ -20,8 +20,7 @@
     overflow: auto;
     z-index: 1;
     -webkit-overflow-scrolling: touch;
-    &:extend(.fxs_relativePositioning);
-    &:extend(.fxs_pageSidebar_transition);
+    &:extend(.fxs_relativePositioning, .fxs_pageSidebar_transition);
     @media (min-width: @screen-l) {
         margin-left: @left_rail_space;
     }
@@ -36,8 +35,7 @@
     top: 0;
     overflow-x: hidden;
     visibility: hidden;
-    &:extend(.fxs_transition);
-    &:extend(.fxs_scrollableContent all);
+    &:extend(.fxs_transition, .fxs_scrollableContent all);
     &:hover, .fxs_touch & { overflow-y: auto; }
     &.fxs_sidebar_nav  { left: 0; }
     &.fxs_sidebar_user { right: 0; }
@@ -108,11 +106,10 @@
 .fxs_show_usermenu {
     position:relative;
     .fxs_badge{
-        top:0;
-        right:0;
-        margin:0;
-        display:block;
+        bottom:2px;
+        right:-2px;
         position:absolute;
+        z-index: 1;
     }
     float: right;
     &:extend(.fxs_headerButtons all);
@@ -156,18 +153,6 @@
 }
 
 // Main Navigation MENUS
-// mixin base styles nav
-.fxs_main_nav_rules(@textTransform, @borderBottom, @fontSize,@colorItems, @displayPosition, @paddingParameters){
-    display: @displayPosition;
-    text-decoration: none;
-    border-bottom:@borderBottom;
-    text-transform: @textTransform;
-    &:extend(.fxs_transition);
-    padding: @paddingParameters;
-    color: @colorItems;
-    font-size: @fontSize;
-}
-
 .fxs_nav_menu { 
     > ul > li a {
         .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr, @txt_size_small, @light_2_clr, block, 10px 1rem 10px 1rem);

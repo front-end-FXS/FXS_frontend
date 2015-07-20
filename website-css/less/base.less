@@ -170,7 +170,7 @@ h1, h2, h3, h4, h5 {
 }
 
 // Subsection titles
-.fxs_titlesSecondary, .fxs_subsectionTitle, .fxs_helperLabel_title {
+.fxs_subsectionTitle, .fxs_helperLabel_title {
 	color: @dark_4_clr;
 	font-size: @txt_size_small;
 	letter-spacing: inherit;
@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5 {
     margin: 0 0 1rem -1rem;
     background-color: @light_3_clr;
 }
-// label titles
+
 .fxs_helperLabel_title { margin-right: 0.5rem; }
 
 /////////////////////////////////////////////////
@@ -190,24 +190,23 @@ h1, h2, h3, h4, h5 {
 
 // Dividers
 .fxs_divider_first, .fxs_divider_wide {
-	.fxs_divider_base();
 	height: 5px;
+	&:extend(.fxs_divider_base);
 }
 
 .fxs_divider_second {
-	.fxs_divider_base();
 	height: 3px;
+	&:extend(.fxs_divider_base);
 }
 
 .fxs_divider_third {
-	.fxs_divider_base();
 	height: 1px;
+	&:extend(.fxs_divider_base);
 }
 
 .fxs_divider_wide {
-	.fxs_divider_base();
-    margin-top:1rem;
-    margin-bottom:2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     &:extend(.fxs_wideContent all);
 }
 
@@ -239,50 +238,35 @@ h1, h2, h3, h4, h5 {
 // Avatar images
 .fxs_avatar_circleImage {
 	border-radius: 50%;
+	vertical-align: middle;
 	&:extend(.fxs_floatingMedia_imageContainer);
 }
 
 .fxs_avatar_circleImage_s {
 	width: @avatar_s;
 	height: @avatar_s;
-	vertical-align: middle;
 	margin-bottom: 0;
 	&:extend(.fxs_avatar_circleImage);
 }
 .fxs_avatar_circleImage_m {
 	width: @avatar_m;
 	height: @avatar_m;
-	vertical-align: middle;
 	margin-bottom: 0;
 	&:extend(.fxs_avatar_circleImage);
 }
 .fxs_badge{
-    padding: 4px 7px;
-    border-radius:10px;
-    min-width:10px;
-    line-height: 1;
+    border-radius:50%;
+    min-width: 1rem;
+    line-height: 1rem;
     background-color:@error_clr;
     color:@lightest_clr;
     text-align:center;
     font-size:@txt_size_nano;
     white-space: nowrap;
     vertical-align: middle;
-    z-index:102;
     display:inline-block;
-    margin-left:10px;
+    margin-left:0.5rem;
 }
-// Wide content widgets
-.fxs_wideContent, .fxs_wideContent_bordered {
-	margin-left:-1rem;
-    margin-right:-1rem;
-	&:extend(.fxs_clearfix all);
-	@media (min-width: @screen-m) {
-     	margin-left:-2rem;
-        margin-right:-2rem;
-	}
-}
-
-.fxs_wideContent_bordered { border-top: 5px solid @light_4_clr; }
 
 // Entry meta info: date, author
 .fxs_entry_metaInfo {
@@ -326,7 +310,10 @@ h1, h2, h3, h4, h5 {
 		border: 4px solid transparent;
 		border-bottom-color: @dark_3_clr;
     }
-    .fxs_divider_third { margin: 0.5rem 0; }
+    .fxs_divider_third {
+    	margin: 0.5rem 0;
+    	background-color: @dark_4_clr;
+    }
 }
 // Dropdown list items
 .fxs_dropdownHeader, .fxs_dropdownList > li > a {
@@ -363,6 +350,17 @@ h1, h2, h3, h4, h5 {
 	}
 }
 
+// Close Icon
+.fxs_close {
+    display: block;
+    float: right;
+    color: @lightest_clr;
+    padding: 0 10px;
+    margin-top: -5px;
+    font-size: @txt_size_large;
+    &:hover { .opacity(.75); }
+}
+
 ////////// Tables //////////
 .fxs_table {
 	width: 100%;
@@ -394,145 +392,6 @@ caption {
 	text-align: left;
 }
 
-///////////////////////////////////////////////////////
-//////////////// Buttons basic styles ////////////////
-// BTN
-button, input[type=button],
-input[type=submit], .fxs_btn {
-	border: 2px solid transparent;
-    cursor: pointer;
-    color: @lightest_clr;
-    font-size: @txt_size_small;
-    height: @base_module_size;
-    line-height: @base_module_size - 4;
-    margin: 0;
-    text-align: center;
-    vertical-align: middle;
-    &:extend(.fxs_iBlock, .fxs_boldAntialised_style, .fxs_transition);
-    &:hover { text-decoration: none; }
-}
-
-.fxs_btn_txt {
-    padding: 0 1rem;
-    &:extend(.fxs_btn all);
-}
-
-.fxs_btn_icon {
-    width: @base_module_size;
-    font-size: @icon_defaultsize;
-    &:extend(.fxs_btn all);
-}
-
-.fxs_btn_small {
-	height: @base_module_size - 5;
-    line-height: @base_module_size - 9;
-}
-
-.fxs_btn_default {
-    background-color: @brand_highlight_clr; 
-    &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background-color: fade(@brand_highlight_clr, 80%); }
-    &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@brand_highlight_clr, 15%); }
-}
-
-.fxs_btn_cta {
-    background-color: @highlight_clr;
-    &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background-color: fade(@highlight_clr, 80%); }
-    &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@highlight_clr, 15%); }
-}
-
-.fxs_btn_functional {
-    background-color: @dark_1_clr; 
-    &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background-color: fade(@dark_1_clr, 80%); }
-    &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@dark_1_clr, 15%); }
-}
-
-.fxs_btn_danger {
-    background-color: @error_clr; 
-    &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background-color: fade(@error_clr, 80%); }
-    &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@error_clr, 15%); }
-}
-
-.fxs_btn_line {
-    border-color: @dark_1_clr;
-    color: @dark_1_clr;  
-    &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus {
-    	background-color: fade(@dark_1_clr, 15%);
-    	border-color: darken(@dark_1_clr, 10%);
-    	color: darken(@dark_1_clr, 10%);
-    }
-}
-
-.fxs_btn_group {
-	vertical-align: middle;
-	&:extend(.fxs_iBlock);
-	&:extend(.fxs_relativePositioning);
-	> [class^="fxs_btn"] { float: left; }
-	> [class^="fxs_btn"]:not(:first-child) { margin-left: 2px; }
-}
-
-// Close Btn
-.fxs_close {
-    display: block;
-    float: right;
-    color: @lightest_clr;
-    padding: 0 10px;
-    margin-top: -5px;
-    font-size: @txt_size_large;
-    &:hover { .opacity(.75); }
-}
-
-////////// Social media buttons //////////
-// General
-.fxs_shareOptions_boxed {
-	&:extend(.fxs_iBlock);
-	white-space: nowrap;
-}
-
-.fxs_socialMedia_item {
-	&:extend(.fxs_iBlock);
-	vertical-align: middle;
-}
-
-.fxs_btn_socialMedia { &:extend(.fxs_btn_icon); }
-
-// Spescific for Header title block in detail pages
-.fxs_shareContent_holder {
-	display: none;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	@media (min-width: @screen-m){ display: block; }
-	.fxs_shareOptions_boxed { background-color: @light_4_clr; }
-	> ul > li > .fxs_btn_socialMedia {
-		color: @dark_2_clr;
-		&:hover{
-			background-color: @dark_2_clr;
-			color: @lightest_clr;
-		}
-	}
-}
-
-// Spescific for sidebar botton nav
-.fxs_shareContent_sidebar_nav{
-    padding:2rem 0 0 10px;
-    .fxs_btn_socialMedia {
-		color: @light_1_clr;
-		&:hover{
-			background-color: @dark_3_clr;
-			color: @lightest_clr;
-		}
-	}
-}
-// Spescific for subscribe social media widget
-.fxs_suscribeSocialBtn {
-    li { margin: 0 0.5rem 0 0; }
-    .fxs_btn_socialMedia {
-    	background-color: @lightest_clr;
-        color: @dark_2_clr;
-       	&:hover { .opacity(.75); }
-    }
-}
-
 //////////////////////////////
 ////////// Loaders //////////
 .fxs_feedbackLoading_msg {
@@ -552,4 +411,54 @@ input[type=submit], .fxs_btn {
         font-size: @icon_defaultsize * 1.455;
         margin-bottom: 1rem; 
     }     
+}
+
+////////// Social media objects //////////
+// General
+.fxs_shareOptions_boxed {
+    &:extend(.fxs_iBlock);
+    white-space: nowrap;
+}
+
+.fxs_socialMedia_item {
+    &:extend(.fxs_iBlock);
+    vertical-align: middle;
+}
+
+// Spescific for Header title block in detail pages
+.fxs_shareContent_holder {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media (min-width: @screen-m){ display: block; }
+    .fxs_shareOptions_boxed { background-color: @light_4_clr; }
+    > ul > li > .fxs_btn_socialMedia {
+        color: @dark_2_clr;
+        &:hover{
+            background-color: @dark_2_clr;
+            color: @lightest_clr;
+        }
+    }
+}
+
+// Spescific for sidebar botton nav
+.fxs_shareContent_sidebar_nav{
+    padding:2rem 0 0 10px;
+    .fxs_btn_socialMedia {
+        color: @light_1_clr;
+        &:hover{
+            background-color: @dark_3_clr;
+            color: @lightest_clr;
+        }
+    }
+}
+// Spescific for subscribe social media widget
+.fxs_suscribeSocialBtn {
+    li { margin: 0 0.5rem 0 0; }
+    .fxs_btn_socialMedia {
+        background-color: @lightest_clr;
+        color: @dark_2_clr;
+        &:hover { .opacity(.75); }
+    }
 }
