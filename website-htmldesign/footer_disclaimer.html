@@ -781,22 +781,18 @@
             $('.fxs_sidebar_language').toggleClass('active');
         });
 
-        $('#fxs_timezone_btn').click(function () {
-            $('.fxs_timezone_items').addClass('fxs_pageSidebar_transition');
-            $('.fxs_timezone_items').css('right', '0');
-
+        $('.fxs_timezone_btn').click(function () {
+            $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
         })
 
         $("#selectable").selectable();
  
-        $('#fxs_timezone_close, #fxs_timezone_done').click(function () {         
-            $('.fxs_timezone_items').css('right', '-276px');
+        $('.fxs_timezone_close, .fxs_timezone_done').click(function () {         
+            $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
         })
 
-        // footer
-        $(".fxs_btn_disclaimer").click(function () {
-            $(".fxs_dropdownBlock").toggleClass("active");
-        });
+      
+        //$("#selectable").selectable();
 
         $('#fxs_login_btn').click(function () {
             $('.fxs_login_form_content').show();
@@ -810,8 +806,12 @@
             $(this).addClass('active');
             $('#fxs_login_btn').removeClass('active');
         });
-    </script>
 
+        // footer
+        $(".fxs_btn_disclaimer").click(function () {
+            $(".fxs_dropdownBlock").toggleClass("active");
+        });
+    </script>
 </body>
 
 </html>

@@ -304,14 +304,23 @@
 
 // sidebar user
 
-.fxs_sidebar_user { 
+.fxs_sidebar_user {
+    .fxs_nav_login_form,
+    .fxs_login_form_content,
+    .fxs_signup_form_content,
+    .fxs_timezone_items,
+    .fxs_timezone_hours {
+        width: @slide_sidebar_space;
+    }
     // Coment Omar: NO, bajo ninguna circunstancia concatenar tag con clase: MENOS con nav, header, section o aside
+    
+    // Esto será la clase genérica de tabs
     .fxs_nav_login_form{
         border-bottom:1px solid @dark_3_clr;
         margin-bottom:1rem;
         a{
             .fxs_main_nav_rules(uppercase, none, @txt_size_small,  @light_1_clr, inline-block, 10px 1rem 10px 1rem);
-            margin:10px 10px 0 10px;
+            margin:10px 10px 0;
             padding:0;
             &.active{
                 border-bottom: 5px solid @highlight_clr; 
@@ -324,6 +333,7 @@
         }
     }
     .fxs_login_form_content, .fxs_signup_form_content{
+        margin-bottom: @main_header_height;
         &.fxs_signup_form_content{
             display:none;
             form button{
@@ -331,11 +341,11 @@
                 margin-top:1rem;
             }
         }
+        // Comment Omar: Todo esto dentro de forms, tendremos que buscar generalizar los formularios
         form{
-            margin:0 10px 0 10px;
+            margin:0 10px;
             position:relative;
-            label{
-                
+            label{ 
                 z-index:100;
                 color:@light_2_clr;
                 &.fxs_btn_username, &.fxs_btn_email{
@@ -355,48 +365,24 @@
                 }
             }
             .fxs_usr_remember, .fxs_usr_terms{
-                //position:absolute;
                 display:inline-block;
                 font-size:@txt_size_xsmall;
                 color: @lightest_clr;
-                width:100%;
-                &:first-letter{
-                    text-transform:uppercase;
-                }
             }
             
             input[type=text]{
-                font-style:italic;
                 width:100%;
                 margin-bottom:5px;
                 padding-left:30px; // placeholder
-                &:focus{
-                    border:2px solid @highlight_clr;
-                    font-style:normal;
-                }
-            }
-            input[type=checkbox]{
-                -webkit-appearance: checkbox; // default state don't display checkbox ??
-                height:auto;
-                vertical-align:top;
-                margin-left:10px;
             }
             button{
                 width:100%;
-                text-transform:uppercase;  
             }
             
-            a{
-                font-size:@txt_size_xsmall;
-                padding-left:10px;
-                &:first-letter{
-                    text-transform:uppercase;
-                }
-            }
+            a{ font-size:@txt_size_xsmall; }
             .fxs_signup_conditions{
-                
-                margin-left:1rem;
-                margin-top:-10px;
+                margin-left: 1.5rem;
+                display: block;
             }
             .fxs_usr_terms{
                 padding:0;
@@ -413,21 +399,21 @@
                 color:@light_1_clr; 
                 font-style:italic;
                 font-size:@txt_size_small;
-            }
-            span:before,
-            span:after {
-                border-top: 1px solid  @dark_3_clr;
-                display: block;
-                height: 1px;
-                content: " ";
-                width: 45%;
-                position: absolute;
-                left: 0;
-                top: 0.7rem;
-            }
-            span:after {
-                right: 0;  
-                left: auto; 
+                &:before,
+                &:after {
+                    border-top: 1px solid  @dark_3_clr;
+                    display: block;
+                    height: 1px;
+                    content: " ";
+                    width: 45%;
+                    position: absolute;
+                    left: 0;
+                    top: 0.7rem;
+                }
+                &:after {
+                    right: 0;  
+                    left: auto; 
+                }
             }
         }
         .fxs_social_sidebar_nav{
@@ -445,7 +431,6 @@
             background-color:@dark_3_clr;
             padding:10px 1rem 10px 1rem;
             margin-top:30px;
-            text-transform:uppercase;
             p,a{
                 margin:0;
                 padding:0;
@@ -454,6 +439,7 @@
                 color:@light_2_clr;
                 font-size:@txt_size_xsmall;
                 font-style:italic;
+                text-transform:uppercase;
             }
             a{
                   font-size:@txt_size_small;
@@ -462,7 +448,7 @@
     }
    
     .fxs_timezone_btn{
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 100%;
         background-color:@dark_1_clr;
@@ -487,24 +473,18 @@
         position:fixed;
         &:extend(.fxs_pageSidebar_transition);
         background-color:@dark_1_clr;
-        width: @slide_sidebar_space;
         height: 100%;
         top:0;
         z-index:101;
     }
     .fxs_timezone_hours{
-        padding-bottom: @base_module_size;
         position: absolute;
         top: @main_header_height;
-        width: @slide_sidebar_space;
-        .calc(height, ~'100% - @{base_module_size}');
+        .calc(height, ~'100% - @{main_header_height}');
         &:extend(.fxs_scrollableContent all);
         &:hover, .fxs_touch & { overflow-y: auto; }
         #selectable .ui-selected {
-            li{
-                background-color:@dark_3_clr;
-                position:absolute;
-            }
+            background-color:@dark_3_clr;
             span{
                 &:after {
                     content:"\f00c";

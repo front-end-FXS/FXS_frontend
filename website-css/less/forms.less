@@ -9,20 +9,12 @@ button {
     -webkit-appearance: button;
 }
 
-input {
-    height: @base_module_size;
-    -webkit-appearance: none; // Reset para safari y iOS
-    &:extend(.fxs_transition);
-    &[type="search"]{
-        &::-webkit-search-decoration,
-        &::-webkit-search-cancel-button,
-        &::-webkit-search-results-button,
-        &::-webkit-search-results-decoration { display: none; }
-    }
-}
+input { &:extend(.fxs_transition); }
 
 // Text inputs & fields
 input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
+    -webkit-appearance: none; // Reset para safari y iOS
+    height: @base_module_size;
     background-color: @lightest_clr;
     border: 1px solid @dark_3_clr;
     color: @dark_4_clr;
@@ -34,6 +26,19 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
         border-color: @highlight_clr;
     }
     &:invalid, &.fxs_hasError { border-color: @error_clr; }
+}
+
+input[type="search"]{
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration { display: none; }
+}
+
+input[type=checkbox]{
+    -webkit-appearance: checkbox; // default state don't display checkbox ??
+    vertical-align:top;
+    margin-right: 0.5rem;
 }
 
 label {

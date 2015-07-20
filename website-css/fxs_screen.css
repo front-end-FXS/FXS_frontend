@@ -1514,22 +1514,14 @@ button {
   background-color: transparent;
   -webkit-appearance: button;
 }
-input {
-  height: 35px;
-  -webkit-appearance: none;
-}
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
 input[type=text],
 input[type=email],
 input[type=password],
 input[type=search],
 input[type=tel],
 textarea {
+  -webkit-appearance: none;
+  height: 35px;
   background-color: #ffffff;
   border: 1px solid #2e2e32;
   color: #48484e;
@@ -1566,6 +1558,17 @@ input[type=search].fxs_hasError,
 input[type=tel].fxs_hasError,
 textarea.fxs_hasError {
   border-color: #ce4735;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+input[type=checkbox] {
+  -webkit-appearance: checkbox;
+  vertical-align: top;
+  margin-right: 0.5rem;
 }
 label {
   display: inline-block;
@@ -1991,6 +1994,13 @@ width:calc(100% - 320px);
 .fxs_sidebar_language.active .fxs_lang_group {
   display: block;
 }
+.fxs_sidebar_user .fxs_nav_login_form,
+.fxs_sidebar_user .fxs_login_form_content,
+.fxs_sidebar_user .fxs_signup_form_content,
+.fxs_sidebar_user .fxs_timezone_items,
+.fxs_sidebar_user .fxs_timezone_hours {
+  width: 276px;
+}
 .fxs_sidebar_user .fxs_nav_login_form {
   border-bottom: 1px solid #2e2e32;
   margin-bottom: 1rem;
@@ -2003,7 +2013,7 @@ width:calc(100% - 320px);
   padding: 10px 1rem 10px 1rem;
   color: #8b8c91;
   font-size: 0.88rem;
-  margin: 10px 10px 0 10px;
+  margin: 10px 10px 0;
   padding: 0;
 }
 .fxs_sidebar_user .fxs_nav_login_form a.active {
@@ -2013,6 +2023,10 @@ width:calc(100% - 320px);
 .fxs_sidebar_user .fxs_nav_login_form a:hover {
   border-bottom: 5px solid #e4871b;
   color: #ffffff;
+}
+.fxs_sidebar_user .fxs_login_form_content,
+.fxs_sidebar_user .fxs_signup_form_content {
+  margin-bottom: 45px;
 }
 .fxs_sidebar_user .fxs_login_form_content.fxs_signup_form_content,
 .fxs_sidebar_user .fxs_signup_form_content.fxs_signup_form_content {
@@ -2025,7 +2039,7 @@ width:calc(100% - 320px);
 }
 .fxs_sidebar_user .fxs_login_form_content form,
 .fxs_sidebar_user .fxs_signup_form_content form {
-  margin: 0 10px 0 10px;
+  margin: 0 10px;
   position: relative;
 }
 .fxs_sidebar_user .fxs_login_form_content form label,
@@ -2062,51 +2076,25 @@ width:calc(100% - 320px);
   display: inline-block;
   font-size: 0.75rem;
   color: #ffffff;
-  width: 100%;
-}
-.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_remember:first-letter,
-.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_remember:first-letter,
-.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_terms:first-letter,
-.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_terms:first-letter {
-  text-transform: uppercase;
 }
 .fxs_sidebar_user .fxs_login_form_content form input[type=text],
 .fxs_sidebar_user .fxs_signup_form_content form input[type=text] {
-  font-style: italic;
   width: 100%;
   margin-bottom: 5px;
   padding-left: 30px;
 }
-.fxs_sidebar_user .fxs_login_form_content form input[type=text]:focus,
-.fxs_sidebar_user .fxs_signup_form_content form input[type=text]:focus {
-  border: 2px solid #e4871b;
-  font-style: normal;
-}
-.fxs_sidebar_user .fxs_login_form_content form input[type=checkbox],
-.fxs_sidebar_user .fxs_signup_form_content form input[type=checkbox] {
-  -webkit-appearance: checkbox;
-  height: auto;
-  vertical-align: top;
-  margin-left: 10px;
-}
 .fxs_sidebar_user .fxs_login_form_content form button,
 .fxs_sidebar_user .fxs_signup_form_content form button {
   width: 100%;
-  text-transform: uppercase;
 }
 .fxs_sidebar_user .fxs_login_form_content form a,
 .fxs_sidebar_user .fxs_signup_form_content form a {
   font-size: 0.75rem;
-  padding-left: 10px;
-}
-.fxs_sidebar_user .fxs_login_form_content form a:first-letter,
-.fxs_sidebar_user .fxs_signup_form_content form a:first-letter {
-  text-transform: uppercase;
 }
 .fxs_sidebar_user .fxs_login_form_content form .fxs_signup_conditions,
 .fxs_sidebar_user .fxs_signup_form_content form .fxs_signup_conditions {
-  margin-left: 1rem;
-  margin-top: -10px;
+  margin-left: 1.5rem;
+  display: block;
 }
 .fxs_sidebar_user .fxs_login_form_content form .fxs_usr_terms,
 .fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_terms {
@@ -2164,7 +2152,6 @@ width:calc(100% - 320px);
   background-color: #2e2e32;
   padding: 10px 1rem 10px 1rem;
   margin-top: 30px;
-  text-transform: uppercase;
 }
 .fxs_sidebar_user .fxs_login_form_content .fxs_login_message p,
 .fxs_sidebar_user .fxs_signup_form_content .fxs_login_message p,
@@ -2178,13 +2165,14 @@ width:calc(100% - 320px);
   color: #a2a2a7;
   font-size: 0.75rem;
   font-style: italic;
+  text-transform: uppercase;
 }
 .fxs_sidebar_user .fxs_login_form_content .fxs_login_message a,
 .fxs_sidebar_user .fxs_signup_form_content .fxs_login_message a {
   font-size: 0.88rem;
 }
 .fxs_sidebar_user .fxs_timezone_btn {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: #1a1b22;
   border-top: 1px solid #2e2e32;
@@ -2216,29 +2204,25 @@ width:calc(100% - 320px);
   right: -276px;
   position: fixed;
   background-color: #1a1b22;
-  width: 276px;
   height: 100%;
   top: 0;
   z-index: 101;
 }
 .fxs_sidebar_user .fxs_timezone_hours {
-  padding-bottom: 35px;
   position: absolute;
   top: 45px;
-  width: 276px;
   -lh-property: 0;
-height:-webkit-calc(100% - 35px);
-height:-moz-calc(100% - 35px);
-height:calc(100% - 35px);
+height:-webkit-calc(100% - 45px);
+height:-moz-calc(100% - 45px);
+height:calc(100% - 45px);
 ;
 }
 .fxs_sidebar_user .fxs_timezone_hours:hover,
 .fxs_touch .fxs_sidebar_user .fxs_timezone_hours {
   overflow-y: auto;
 }
-.fxs_sidebar_user .fxs_timezone_hours #selectable .ui-selected li {
+.fxs_sidebar_user .fxs_timezone_hours #selectable .ui-selected {
   background-color: #2e2e32;
-  position: absolute;
 }
 .fxs_sidebar_user .fxs_timezone_hours #selectable .ui-selected span:after {
   content: "\f00c";
