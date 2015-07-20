@@ -151,20 +151,6 @@
 
                 <!-- star sponsor container -->
                 <style>
-                    .fxs_sponsor_container::before,
-                    .fxs_sponsor_container::after{
-                        content: " ";
-                        display: table;
-                    }
-                    .fxs_sponsor_container::after{
-                        clear:both;
-                    }
-                    .fxs_sponsor_container{
-                        -webkit-transition: all 0.25s ease-in-out;
-                          -moz-transition: all 0.25s ease-in-out;
-                          -o-transition: all 0.25s ease-in-out;
-                          transition: all 0.25s ease-in-out;
-                    }
                     .fxs_sponsor_container.fxs_inVisualField {
                         background: url(../website-img/bg-test-sponsor.jpg) repeat;
                         padding-top: 1rem;
@@ -173,47 +159,7 @@
                         -o-animation: just-appear 1s ease-in-out;
                         animation: just-appear 1s ease-in-out;
                         padding: 0 1rem;
-                    }
-                    @media (min-width: 1024px) {
-                        .fxs_sponsor_container.fxs_inVisualField {
-                        margin-right: -12px;
-                        margin-left: -12px;
-                        }
-                    }
-                    .fxs_sponsor_container.fxs_inVisualField .fxs_leaderboard_sponsor {
-                        display: block;
-                    }
-                    .fxs_main_sponsor {
-                        overflow: hidden;
-                        height: auto;
-                        -webkit-animation: show-sponsor-from-top 0.5s ease-in;
-                        -moz-animation: show-sponsor-from-top 0.5s ease-in;
-                        -o-animation: show-sponsor-from-top 0.5s ease-in;
-                        animation: show-sponsor-from-top 0.5s ease-in;
-                    }
-                    .fxs_main_sponsor img {
-                        display: block;
-                        height: auto;
-                        min-height: inherit;
-                    }
-                    .fxs_leaderboard,
-                    .fxs_leaderboard_sponsor {
-                      display: none;
-                      padding: 1rem 0;
-                    }
-                    @media (min-width: 768px) {
-                      .fxs_leaderboard,
-                      .fxs_leaderboard_sponsor {
-                        display: block;
-                      }
-                    }
-                    @media (min-width: 1024px) {
-                      .fxs_leaderboard,
-                      .fxs_leaderboard_sponsor {
-                        max-width: 1000px;
-                        margin: 0 auto;
-                      }
-                    }
+                    }   
                 </style>
                 <div class="fxs_sponsor_container fxs_inVisualField">
                     <div class="fxs_leaderboard_sponsor">
