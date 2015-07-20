@@ -1,6 +1,6 @@
 //////////// Structure fundations //////////
 .fxs_header {
-     background-color: @corp_clr;
+    background-color: @corp_clr;
     height: @main_header_height;
     width: 100%;
     position: fixed;
@@ -12,22 +12,20 @@
     height: 100%;
     width: 100%;
     padding-top: 45px;
-    position: relative;
-    z-index: 1;
+    &:extend(.fxs_relativePositioning);
 }
 .fxs_content {
     background-color: @light_4_clr;
-    min-height: 100%;
+    height: 100%;
     overflow: auto;
     z-index: 1;
+    -webkit-overflow-scrolling: touch;
     &:extend(.fxs_relativePositioning);
     &:extend(.fxs_pageSidebar_transition);
     @media (min-width: @screen-l) {
         margin-left: @left_rail_space;
     }
 }
-
-// footer
 
 .fxs_pageSidebar {
     background-color: @dark_1_clr;
@@ -36,12 +34,12 @@
     height: 100%;
     .opacity(0);
     top: 0;
+    overflow-x: hidden;
     visibility: hidden;
     &:extend(.fxs_transition);
     &:extend(.fxs_scrollableContent all);
     &:hover, .fxs_touch & { overflow-y: auto; }
     &.fxs_sidebar_nav  { left: 0; }
-    &.fxs_sidebar_user { right: 0; }
     &.fxs_sidebar_user { right: 0; }
 }
 
@@ -306,9 +304,9 @@
 
 // sidebar user
 
-.fxs_sidebar_user {  
-    overflow:auto;
-    nav.fxs_nav_login_form{
+.fxs_sidebar_user { 
+    // Coment Omar: NO, bajo ninguna circunstancia concatenar tag con clase: MENOS con nav, header, section o aside
+    .fxs_nav_login_form{
         border-bottom:1px solid @dark_3_clr;
         margin-bottom:1rem;
         a{
@@ -356,7 +354,7 @@
                     position:absolute;
                 }
             }
-            label.fxs_usr_remember, label.fxs_usr_terms{
+            .fxs_usr_remember, .fxs_usr_terms{
                 //position:absolute;
                 display:inline-block;
                 font-size:@txt_size_xsmall;
@@ -395,12 +393,12 @@
                     text-transform:uppercase;
                 }
             }
-            a.fxs_signup_conditions{
+            .fxs_signup_conditions{
                 
                 margin-left:1rem;
                 margin-top:-10px;
             }
-            label.fxs_usr_terms{
+            .fxs_usr_terms{
                 padding:0;
                 margin:5px 0 0 0;
             }
@@ -473,50 +471,40 @@
         .fxs_main_nav_rules(uppercase, none, @txt_size_xsmall,  @light_1_clr, inline-block, 10px 1rem 10px 1rem);
         height:auto;
         font-style:italic;
-            
+        time, i { color: @lightest_clr; }   
         time{
             font-style:normal;
             padding-left:20px;
-            color: @lightest_clr;
-            font-size: @txt_size_small;
-                
+            font-size: @txt_size_small;    
         }
-        .fa-angle-right{
+        i{
             padding-left:40px;
-            font-weight:bold;
-            color: @lightest_clr;
-                  
+            font-weight:bold;     
         }
     }
     .fxs_timezone_items{
         right:-276px;
         position:fixed;
-        &:extend(.fxs_transition);
-        &:extend(.fxs_scrollableContent all);
-        &:hover, .fxs_touch & { overflow-y: auto; }
+        &:extend(.fxs_pageSidebar_transition);
         background-color:@dark_1_clr;
-        position:absolute;
+        width: @slide_sidebar_space;
+        height: 100%;
         top:0;
         z-index:101;
-        width:100%;
-        bottom:0;
-        height: 100%;
-        overflow-y:auto;   
     }
     .fxs_timezone_hours{
         padding-bottom: @base_module_size;
         position: absolute;
-        top: @main_header_height;;
-        width: 100%;
-        .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
-       &:extend(.fxs_listViewRail_fixedWidthRebased, .fxs_scrollableContent all);
+        top: @main_header_height;
+        width: @slide_sidebar_space;
+        .calc(height, ~'100% - @{base_module_size}');
+        &:extend(.fxs_scrollableContent all);
         &:hover, .fxs_touch & { overflow-y: auto; }
-        ol#selectable .ui-selected {
+        #selectable .ui-selected {
             li{
                 background-color:@dark_3_clr;
                 position:absolute;
             }
-            
             span{
                 &:after {
                     content:"\f00c";
@@ -553,28 +541,25 @@
     } 
     .fxs_timezone_nav{
         height: @main_header_height;
-        .calc(height, ~'100% - @{@main_header_height}'); 
         padding:1rem;
         position:relative;
         top:0;
-        background-color:@dark_3_clr;
-        width:100%;
+        background-color: @dark_3_clr;
+        width: 100%;
         z-index:103;               
         .fxs_helperLabel_title{
             padding:0 35px;
             color:@light_2_clr;
         }
         a{
-            color:@highlight_clr;
             display:inline-block;
             font-size: @txt_size_small;
         }
     }
     .fxs_show_timezoneHours{
-        right:0;
+        .translate(-@slide_sidebar_space);
     }
     .fxs_user_area_content{
-        //overflow-y:hidden;
         border-bottom:1px solid @dark_3_clr;
         padding:1rem 2rem 1rem 1rem;
         .form_group{

@@ -225,6 +225,7 @@ label,
 blockquote,
 .fxs_overflowOptions,
 .fxs_btn_group,
+.fxs_wrapper,
 .fxs_content,
 .fxs_listView_blockWrapper,
 .fxs_listView_item,
@@ -276,7 +277,6 @@ input[type=submit],
 .fxs_scrollableContent,
 .fxs_swipeContent_slider,
 .fxs_pageSidebar,
-.fxs_sidebar_user .fxs_timezone_items,
 .fxs_sidebar_user .fxs_timezone_hours,
 .fxs_listViewRail {
   -webkit-overflow-scrolling: touch;
@@ -287,7 +287,6 @@ input[type=submit],
   .fxs_scrollableContent,
   .fxs_swipeContent_slider,
   .fxs_pageSidebar,
-  .fxs_sidebar_user .fxs_timezone_items,
   .fxs_sidebar_user .fxs_timezone_hours,
   .fxs_listViewRail {
     scrollbar-base-color: transparent;
@@ -308,10 +307,6 @@ input[type=submit],
   .fxs_pageSidebar::-webkit-scrollbar-track,
   .fxs_pageSidebar::-webkit-scrollbar-corner,
   .fxs_pageSidebar::-webkit-scrollbar-button,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-track,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-corner,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-button,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-track,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-corner,
@@ -325,7 +320,6 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar,
   .fxs_swipeContent_slider::-webkit-scrollbar,
   .fxs_pageSidebar::-webkit-scrollbar,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar,
   .fxs_listViewRail::-webkit-scrollbar {
     width: 5px;
@@ -335,7 +329,6 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar-track,
   .fxs_swipeContent_slider::-webkit-scrollbar-track,
   .fxs_pageSidebar::-webkit-scrollbar-track,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-track,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-track,
   .fxs_listViewRail::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
@@ -345,7 +338,6 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar-thumb,
   .fxs_swipeContent_slider::-webkit-scrollbar-thumb,
   .fxs_pageSidebar::-webkit-scrollbar-thumb,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-thumb,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-thumb,
   .fxs_listViewRail::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
@@ -357,7 +349,6 @@ input[type=submit],
   .fxs_scrollableContent::-webkit-scrollbar-button,
   .fxs_swipeContent_slider::-webkit-scrollbar-button,
   .fxs_pageSidebar::-webkit-scrollbar-button,
-  .fxs_sidebar_user .fxs_timezone_items::-webkit-scrollbar-button,
   .fxs_sidebar_user .fxs_timezone_hours::-webkit-scrollbar-button,
   .fxs_listViewRail::-webkit-scrollbar-button {
     width: 0;
@@ -393,9 +384,8 @@ input,
 .fxs_sidebar_language a,
 .fxs_sidebar_language p,
 .fxs_sidebar_language ul > li a,
-.fxs_sidebar_user nav.fxs_nav_login_form a,
+.fxs_sidebar_user .fxs_nav_login_form a,
 .fxs_sidebar_user .fxs_timezone_btn,
-.fxs_sidebar_user .fxs_timezone_items,
 .fxs_sidebar_user .fxs_timezone_hours ol li,
 .fxs_listView,
 .fxs_listView_newItemsAlert,
@@ -427,7 +417,8 @@ input,
 .fxs_pageSidebar_transition,
 .fxs_header,
 .fxs_content,
-.fxs_content_subnav {
+.fxs_content_subnav,
+.fxs_sidebar_user .fxs_timezone_items {
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   -moz-transition: -moz-transform 0.25s ease-in-out;
   -o-transition: -o-transform 0.25s ease-in-out;
@@ -479,7 +470,7 @@ body {
   height: 100%;
   line-height: 1.38rem;
   color: #48484e;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 a {
   color: #e4871b;
@@ -1634,14 +1625,13 @@ label {
   height: 100%;
   width: 100%;
   padding-top: 45px;
-  position: relative;
-  z-index: 1;
 }
 .fxs_content {
   background-color: #efeff0;
-  min-height: 100%;
+  height: 100%;
   overflow: auto;
   z-index: 1;
+  -webkit-overflow-scrolling: touch;
 }
 @media (min-width: 1024px) {
   .fxs_content {
@@ -1659,6 +1649,7 @@ label {
   -moz-opacity: 0;
   opacity: 0;
   top: 0;
+  overflow-x: hidden;
   visibility: hidden;
 }
 .fxs_pageSidebar:hover,
@@ -1667,9 +1658,6 @@ label {
 }
 .fxs_pageSidebar.fxs_sidebar_nav {
   left: 0;
-}
-.fxs_pageSidebar.fxs_sidebar_user {
-  right: 0;
 }
 .fxs_pageSidebar.fxs_sidebar_user {
   right: 0;
@@ -2003,14 +1991,11 @@ width:calc(100% - 320px);
 .fxs_sidebar_language.active .fxs_lang_group {
   display: block;
 }
-.fxs_sidebar_user {
-  overflow: auto;
-}
-.fxs_sidebar_user nav.fxs_nav_login_form {
+.fxs_sidebar_user .fxs_nav_login_form {
   border-bottom: 1px solid #2e2e32;
   margin-bottom: 1rem;
 }
-.fxs_sidebar_user nav.fxs_nav_login_form a {
+.fxs_sidebar_user .fxs_nav_login_form a {
   display: inline-block;
   text-decoration: none;
   border-bottom: none;
@@ -2021,11 +2006,11 @@ width:calc(100% - 320px);
   margin: 10px 10px 0 10px;
   padding: 0;
 }
-.fxs_sidebar_user nav.fxs_nav_login_form a.active {
+.fxs_sidebar_user .fxs_nav_login_form a.active {
   border-bottom: 5px solid #e4871b;
   color: #ffffff;
 }
-.fxs_sidebar_user nav.fxs_nav_login_form a:hover {
+.fxs_sidebar_user .fxs_nav_login_form a:hover {
   border-bottom: 5px solid #e4871b;
   color: #ffffff;
 }
@@ -2070,19 +2055,19 @@ width:calc(100% - 320px);
   left: 10px;
   position: absolute;
 }
-.fxs_sidebar_user .fxs_login_form_content form label.fxs_usr_remember,
-.fxs_sidebar_user .fxs_signup_form_content form label.fxs_usr_remember,
-.fxs_sidebar_user .fxs_login_form_content form label.fxs_usr_terms,
-.fxs_sidebar_user .fxs_signup_form_content form label.fxs_usr_terms {
+.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_remember,
+.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_remember,
+.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_terms,
+.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_terms {
   display: inline-block;
   font-size: 0.75rem;
   color: #ffffff;
   width: 100%;
 }
-.fxs_sidebar_user .fxs_login_form_content form label.fxs_usr_remember:first-letter,
-.fxs_sidebar_user .fxs_signup_form_content form label.fxs_usr_remember:first-letter,
-.fxs_sidebar_user .fxs_login_form_content form label.fxs_usr_terms:first-letter,
-.fxs_sidebar_user .fxs_signup_form_content form label.fxs_usr_terms:first-letter {
+.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_remember:first-letter,
+.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_remember:first-letter,
+.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_terms:first-letter,
+.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_terms:first-letter {
   text-transform: uppercase;
 }
 .fxs_sidebar_user .fxs_login_form_content form input[type=text],
@@ -2118,13 +2103,13 @@ width:calc(100% - 320px);
 .fxs_sidebar_user .fxs_signup_form_content form a:first-letter {
   text-transform: uppercase;
 }
-.fxs_sidebar_user .fxs_login_form_content form a.fxs_signup_conditions,
-.fxs_sidebar_user .fxs_signup_form_content form a.fxs_signup_conditions {
+.fxs_sidebar_user .fxs_login_form_content form .fxs_signup_conditions,
+.fxs_sidebar_user .fxs_signup_form_content form .fxs_signup_conditions {
   margin-left: 1rem;
   margin-top: -10px;
 }
-.fxs_sidebar_user .fxs_login_form_content form label.fxs_usr_terms,
-.fxs_sidebar_user .fxs_signup_form_content form label.fxs_usr_terms {
+.fxs_sidebar_user .fxs_login_form_content form .fxs_usr_terms,
+.fxs_sidebar_user .fxs_signup_form_content form .fxs_usr_terms {
   padding: 0;
   margin: 5px 0 0 0;
 }
@@ -2214,53 +2199,48 @@ width:calc(100% - 320px);
   height: auto;
   font-style: italic;
 }
+.fxs_sidebar_user .fxs_timezone_btn time,
+.fxs_sidebar_user .fxs_timezone_btn i {
+  color: #ffffff;
+}
 .fxs_sidebar_user .fxs_timezone_btn time {
   font-style: normal;
   padding-left: 20px;
-  color: #ffffff;
   font-size: 0.88rem;
 }
-.fxs_sidebar_user .fxs_timezone_btn .fa-angle-right {
+.fxs_sidebar_user .fxs_timezone_btn i {
   padding-left: 40px;
   font-weight: bold;
-  color: #ffffff;
 }
 .fxs_sidebar_user .fxs_timezone_items {
   right: -276px;
   position: fixed;
   background-color: #1a1b22;
-  position: absolute;
+  width: 276px;
+  height: 100%;
   top: 0;
   z-index: 101;
-  width: 100%;
-  bottom: 0;
-  height: 100%;
-  overflow-y: auto;
-}
-.fxs_sidebar_user .fxs_timezone_items:hover,
-.fxs_touch .fxs_sidebar_user .fxs_timezone_items {
-  overflow-y: auto;
 }
 .fxs_sidebar_user .fxs_timezone_hours {
   padding-bottom: 35px;
   position: absolute;
   top: 45px;
-  width: 100%;
+  width: 276px;
   -lh-property: 0;
-height:-webkit-calc(100% - 35px - 45px);
-height:-moz-calc(100% - 35px - 45px);
-height:calc(100% - 35px - 45px);
+height:-webkit-calc(100% - 35px);
+height:-moz-calc(100% - 35px);
+height:calc(100% - 35px);
 ;
 }
 .fxs_sidebar_user .fxs_timezone_hours:hover,
 .fxs_touch .fxs_sidebar_user .fxs_timezone_hours {
   overflow-y: auto;
 }
-.fxs_sidebar_user .fxs_timezone_hours ol#selectable .ui-selected li {
+.fxs_sidebar_user .fxs_timezone_hours #selectable .ui-selected li {
   background-color: #2e2e32;
   position: absolute;
 }
-.fxs_sidebar_user .fxs_timezone_hours ol#selectable .ui-selected span:after {
+.fxs_sidebar_user .fxs_timezone_hours #selectable .ui-selected span:after {
   content: "\f00c";
   position: absolute;
   margin-top: -3px;
@@ -2295,11 +2275,6 @@ height:calc(100% - 35px - 45px);
 }
 .fxs_sidebar_user .fxs_timezone_nav {
   height: 45px;
-  -lh-property: 0;
-height:-webkit-calc(100% - @{@main_header_height});
-height:-moz-calc(100% - @{@main_header_height});
-height:calc(100% - @{@main_header_height});
-;
   padding: 1rem;
   position: relative;
   top: 0;
@@ -2312,12 +2287,15 @@ height:calc(100% - @{@main_header_height});
   color: #a2a2a7;
 }
 .fxs_sidebar_user .fxs_timezone_nav a {
-  color: #e4871b;
   display: inline-block;
   font-size: 0.88rem;
 }
 .fxs_sidebar_user .fxs_show_timezoneHours {
-  right: 0;
+  -webkit-transform: translate(-276px);
+  -moz-transform: translate(-276px);
+  -o-transform: translate(-276px);
+  -ms-transform: translate(-276px);
+  transform: translate(-276px);
 }
 .fxs_sidebar_user .fxs_user_area_content {
   border-bottom: 1px solid #2e2e32;
@@ -2495,7 +2473,6 @@ height:calc(100% - 35px - 45px);
 }
 @media (min-width: 768px) {
   .fxs_listViewRail_fixedWidthRebased,
-  .fxs_sidebar_user .fxs_timezone_hours,
   .fxs_listView,
   .fxs_listViewRail {
     width: 325px;
