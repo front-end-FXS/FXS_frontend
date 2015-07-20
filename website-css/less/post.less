@@ -7,8 +7,6 @@
     border-bottom: 3px solid @light_4_clr;
     &:extend(.fxs_relativePositioning);
     margin-bottom:1rem;
-    //&:extend(.fxs_baseMargin_bottom all); // agregar margin:1rem;
-    margin:1rem;
     @media (min-width: @screen-m) {
         margin-bottom: 2rem;
     }
@@ -27,8 +25,7 @@
 }
 
 .fxs_article_body {
-    //&:extend(.fxs_baseMargin_bottom all);
-    margin:1rem;
+    margin-bottom:1rem;
     &:extend(.fxs_clearfix all);
     &:extend(.fxs_entryPlain_txt_large all);
     @media (min-width: @screen-xl) {
@@ -48,10 +45,10 @@
 
 .fxs_article_tags {
     padding: 1rem 0;
+    margin-bottom: 1rem;
     border-top: 3px solid @light_4_clr;
     border-bottom: 3px solid @light_4_clr;
     vertical-align: middle;
-    &:extend(.fxs_baseMargin_bottom all);
     ul {
         display: inline-block;
         li {
@@ -70,7 +67,6 @@
 // Entry related content
 .fxs_relatedContent_holder {
     &:extend(.fxs_clearfix all);
-    &:extend(.fxs_baseMargin_bottom all);
 }
 
 .fxs_relatedContentSlot {
