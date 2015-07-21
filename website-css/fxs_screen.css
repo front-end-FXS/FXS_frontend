@@ -94,7 +94,6 @@ body {
   height: 100%;
   line-height: 1.38rem;
   color: #48484e;
-  overflow: hidden;
 }
 article,
 aside,
@@ -143,8 +142,6 @@ img {
 .fxs_clearfix::after,
 .fxs_wideContent::before,
 .fxs_wideContent::after,
-.fxs_wideContent_bordered::before,
-.fxs_wideContent_bordered::after,
 .fxs_divider_first::before,
 .fxs_divider_first::after,
 .fxs_divider_wide::before,
@@ -167,14 +164,16 @@ img {
 .fxs_suscribeSocial::after,
 .fxs_sponsor_container::before,
 .fxs_sponsor_container::after,
-.fxs_alert::before,
-.fxs_alert::after,
+.fxs_wideContent_bordered::before,
+.fxs_wideContent_bordered::after,
 .fxs_divider_wide::before,
 .fxs_divider_wide::after,
-.fxs_wideWidget_pre::before,
-.fxs_wideWidget_pre::after,
 .fxs_entryFeatured_imgSide::before,
 .fxs_entryFeatured_imgSide::after,
+.fxs_alert::before,
+.fxs_alert::after,
+.fxs_wideWidget_pre::before,
+.fxs_wideWidget_pre::after,
 .fxs_suscribe::before,
 .fxs_suscribe::after,
 .fxs_entriesList_carousel::before,
@@ -184,7 +183,6 @@ img {
 }
 .fxs_clearfix::after,
 .fxs_wideContent::after,
-.fxs_wideContent_bordered::after,
 .fxs_divider_first::after,
 .fxs_divider_wide::after,
 .fxs_divider_second::after,
@@ -196,10 +194,11 @@ img {
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::after,
 .fxs_sponsor_container::after,
-.fxs_alert::after,
+.fxs_wideContent_bordered::after,
 .fxs_divider_wide::after,
-.fxs_wideWidget_pre::after,
 .fxs_entryFeatured_imgSide::after,
+.fxs_alert::after,
+.fxs_wideWidget_pre::after,
 .fxs_suscribe::after,
 .fxs_entriesList_carousel::after {
   clear: both;
@@ -233,9 +232,6 @@ h3,
 h4,
 h5,
 .fxs_btn,
-.fxs_btn_txt,
-.fxs_btn_icon,
-.fxs_btn_socialMedia,
 .fxs_subsectionTitle,
 .fxs_label,
 .fxs_alertLabel,
@@ -252,6 +248,9 @@ label,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a:focus,
 .fxs_typeaheadList > li.fxs_typeaheadGroup.active a,
 .fxs_suscribeText span,
+.fxs_btn_txt,
+.fxs_btn_icon,
+.fxs_btn_socialMedia,
 button,
 input[type=button],
 input[type=submit],
@@ -468,9 +467,6 @@ h4 {
 }
 .fxs_transition,
 .fxs_btn,
-.fxs_btn_txt,
-.fxs_btn_icon,
-.fxs_btn_socialMedia,
 .fxs_mediaContainer,
 input[type=text],
 input[type=email],
@@ -496,23 +492,26 @@ input[type=checkbox],
 .fxs_typeaheadField input,
 .fxs_sexy_bannerText,
 .fxs_sponsor_container,
+.fxs_btn_txt,
+.fxs_btn_icon,
+.fxs_btn_socialMedia,
 .fxs_floatingMedia_imageContainer,
 button,
 input[type=button],
 input[type=submit],
-.fxs_headerButtons,
-.fxs_btn_filter,
-.fxs_dismissQuery,
 .fxs_article_mainMedia,
 .fxs_sexy_bannerImg,
 .fxs_entryFeatured_img,
 .fxs_avatar_circleImage,
-.fxs_show_navmenu,
-.fxs_show_usermenu,
+.fxs_headerButtons,
 .fxs_listView_squareImage,
+.fxs_btn_filter,
+.fxs_dismissQuery,
 .fxs_entryFeatured_imgSide .fxs_entryFeatured_img,
 .fxs_avatar_circleImage_s,
-.fxs_avatar_circleImage_m {
+.fxs_avatar_circleImage_m,
+.fxs_show_navmenu,
+.fxs_show_usermenu {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
@@ -594,7 +593,12 @@ input[type=submit],
 .fxs_btn_socialMedia:hover,
 button:hover,
 input[type=button]:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+.fxs_headerButtons:hover,
+.fxs_btn_filter:hover,
+.fxs_dismissQuery:hover,
+.fxs_show_navmenu:hover,
+.fxs_show_usermenu:hover {
   text-decoration: none;
 }
 .fxs_btn_txt {
@@ -612,8 +616,8 @@ input[type=submit]:hover {
 }
 .fxs_wideContent,
 .fxs_wideContent_bordered,
-.fxs_alert,
 .fxs_divider_wide,
+.fxs_alert,
 .fxs_wideWidget_pre,
 .fxs_suscribe,
 .fxs_entriesList_carousel {
@@ -623,8 +627,8 @@ input[type=submit]:hover {
 @media (min-width: 768px) {
   .fxs_wideContent,
   .fxs_wideContent_bordered,
-  .fxs_alert,
   .fxs_divider_wide,
+  .fxs_alert,
   .fxs_wideWidget_pre,
   .fxs_suscribe,
   .fxs_entriesList_carousel {
@@ -1572,6 +1576,7 @@ label {
 .fxs_wrapper {
   height: 100%;
   width: 100%;
+  overflow: hidden;
   padding-top: 45px;
 }
 .fxs_content {

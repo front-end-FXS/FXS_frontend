@@ -172,11 +172,6 @@ h3 { font-size: @txt_size_xlarge; }
 
 h4 { font-size: @txt_size_large;}
 
-////////////////////////////////////////////////////////////
-//////////////////// Misc objects /////////////////////////
-//////////////////////////////////////////////////////////
-
-
 ////////////////////////////////////////////////
 ////////// TRANSITIONS & ANIMATIONS ///////////
 //////////////////////////////////////////////
@@ -193,8 +188,12 @@ h4 { font-size: @txt_size_large;}
 .keyframes(~'show-sponsor-from-top, from {height:0; opacity:0; } to {height:90px; opacity:1;}');
 
 
+////////////////////////////////////////////////////////////
+//////////////////// Misc objects /////////////////////////
+//////////////////////////////////////////////////////////
+
 // Button styles
-.fxs_btn, .fxs_btn_txt, .fxs_btn_icon, .fxs_btn_socialMedia {
+.fxs_btn {
   display: inline-block;
   background-color: transparent;
   border: 2px solid transparent;
@@ -210,15 +209,19 @@ h4 { font-size: @txt_size_large;}
   &:hover { text-decoration: none; }
 }
 
-.fxs_btn_txt { padding: 0 1rem; }
+.fxs_btn_txt {
+  padding: 0 1rem;
+  &:extend(.fxs_btn all);
+}
 
 .fxs_btn_icon, .fxs_btn_socialMedia {
     width: @base_module_size;
     font-size: @icon_defaultsize;
+    &:extend(.fxs_btn all);
 }
 
 // Wide content widgets
-.fxs_wideContent, .fxs_wideContent_bordered {
+.fxs_wideContent {
   margin-left:-1rem;
   margin-right:-1rem;
   &:extend(.fxs_clearfix all);
@@ -228,7 +231,10 @@ h4 { font-size: @txt_size_large;}
   }
 }
 
-.fxs_wideContent_bordered { border-top: 5px solid @light_4_clr; }
+.fxs_wideContent_bordered {
+  border-top: 5px solid @light_4_clr;
+  &:extend(.fxs_wideContent all);
+}
 
 ////////// Scrollable content
 .fxs_scrollableContent {
