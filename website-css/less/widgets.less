@@ -1,14 +1,7 @@
-// Pre wide widgets
-.fxs_wideWidget_pre {
-  padding: 1rem;
-  &:extend(.fxs_wideContent_bordered all);
-  @media (min-width: @screen-m) { padding: 2rem; }
-}
-
 // SUSCRIBE NEWSLETTER
 .fxs_suscribe {
+  .fxs_wideWidget_pre();
   background-color: @dark_2_clr;
-  &:extend(.fxs_wideWidget_pre all);
 }
 
 .fxs_suscribeForm {
@@ -33,7 +26,9 @@
 
 // SEXY BANNER
 .fxs_sexy_banner {
-  &:extend(.fxs_relativePositioning);
+  .fxs_wideWidget_pre();
+  position: relative;
+  &:extend(.fxs_transition);
   &:hover {
       cursor: pointer;
       .fxs_sexy_bannerText { background-color: fade(@dark_2_clr, 85%); }
@@ -43,21 +38,25 @@
 
 .fxs_sexy_bannerText {
   position: absolute;
-  display: inline-block;
-  vertical-align: middle;
   z-index: 1;
   width: 46%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 1rem;
+  top: @txt_defaultsize_rem;
+  left: @txt_defaultsize_rem;
+  padding: @txt_defaultsize_rem;
   background-color: fade(@dark_2_clr, 80%);
-  &:extend(.fxs_transition);
-  @media (min-width: @screen-m) { padding: 2rem 2rem; }
+  height: 82%;
+  .calc(height, ~'100% - 2rem');
+  @media (min-width: @screen-m) {
+    padding: 2rem;
+    top: 2rem;
+    left: 2rem;
+    height: 84%;
+    .calc(height, ~'100% - 4rem');
+  }
   .fxs_entryHeadline, .fxs_entryHeadline a, .fxs_entryPlain_txt, .fxs_helperLabel_title, .fxs_entry_metaInfo { color: @lightest_clr; }
   header, .fxs_helperLabel_title{
       margin-bottom: 0.25rem;
-      @media (min-width: @screen-m) { margin-bottom: 1rem; }
+      @media (min-width: @screen-m) { margin-bottom: @txt_defaultsize_rem; }
   }
   .fxs_entryHeadline {
       font-size: @txt_defaultsize_rem;
@@ -77,10 +76,9 @@
 
 .fxs_sexy_bannerImg {
   max-height: 150px;
+  margin-bottom: 0;
   &:extend(.fxs_mediaContainer all);
-  @media (min-width: @screen-m) { 
-      max-height: 350px;
-  }
+  @media (min-width: @screen-m) { max-height: 350px; }
 }
 
 // Entries list
@@ -97,8 +95,7 @@
 }
 
 .fxs_entriesList_carousel {
-  &:extend(.fxs_wideWidget_pre all);
-  padding:2rem 3rem;
+  .fxs_wideWidget_pre(@widget-padding-default: 1rem 2rem; @widget-padding-sm: 2rem 3rem);
   position:relative;
   overflow:hidden;
   .carousel {

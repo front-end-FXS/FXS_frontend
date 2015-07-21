@@ -139,22 +139,14 @@ a{
   &:hover{ text-decoration: underline; }
 }
 
-// Headline link
-.fxs_headerLink {
-  color: @dark_1_clr;
-  display: block;
-  &:hover{
-    color: @highlight_clr;
-    text-decoration: none;
-  }
-}
-
 // Parent section link
 .fxs_entry_sectionlink {
   display: inline-block;
   padding:0 2px;
   text-transform: uppercase;
 }
+
+// Pablo: falta el link muted - el link negro con underline en hover (como el de footer disclaimer)
 
 /////////////////////////////////////////////////////////////
 //////////////////// Header styles /////////////////////////
@@ -164,6 +156,15 @@ h1, h2, h3, h4, h5 {
   color: @dark_1_clr;
   letter-spacing: -0.03rem;
   &:extend(.fxs_boldAntialised_style);
+  // Headline link
+  a {
+    color: @dark_1_clr;
+    display: block;
+    &:hover{
+      color: @highlight_clr;
+      text-decoration: none;
+    }
+  }
 }
 
 h2 { font-size: @txt_size_xxlarge; }
@@ -171,6 +172,58 @@ h2 { font-size: @txt_size_xxlarge; }
 h3 { font-size: @txt_size_xlarge; }
 
 h4 { font-size: @txt_size_large;}
+
+// Headlines
+.fxs_headline_large {
+  font-size: @txt_size_huge;
+  line-height: @txt_lineheight_large;
+  padding: 0.5rem 0;
+  @media (min-width: @screen-m) {
+    font-size: @txt_size_xhuge;
+    line-height: @txt_lineheight_xlarge;
+  }
+}
+
+.fxs_headline_medium {
+  font-size: @txt_size_large;
+  line-height: @txt_lineheight;
+  padding: 0 0 0.25rem;
+  @media (min-width: @screen-m) {
+    font-size: @txt_size_huge;
+    line-height: @txt_lineheight_large;
+  }
+}
+
+.fxs_headline_small {
+  font-size: @txt_size_large;
+  line-height: @txt_lineheight;
+  padding: 0 0 0.25rem;
+}
+
+.fxs_headline_tiny {
+  font-size: @txt_defaultsize_rem;
+  line-height: @txt_lineheight_small;
+}
+
+.fxs_headline_nano, .fxs_headline_from_nano_to_small, .fxs_headline_from_nano_to_tiny {
+  font-size: @txt_size_small;
+  line-height: @txt_lineheight_small;
+}
+
+// Responsive headlines
+.fxs_headline_from_nano_to_small {
+  @media (min-width: @screen-m) {
+    font-size: @txt_size_large;
+    line-height: @txt_lineheight;
+  }
+}
+
+.fxs_headline_from_nano_to_tiny {
+  @media (min-width: @screen-m) {
+    font-size: @txt_defaultsize_rem;
+    line-height: @txt_lineheight_small;
+  }
+}
 
 ////////////////////////////////////////////////
 ////////// TRANSITIONS & ANIMATIONS ///////////
@@ -220,7 +273,7 @@ h4 { font-size: @txt_size_large;}
     &:extend(.fxs_btn all);
 }
 
-// Wide content widgets
+// Wide content containers
 .fxs_wideContent {
   margin-left:-1rem;
   margin-right:-1rem;
@@ -322,4 +375,11 @@ h4 { font-size: @txt_size_large;}
     width: 100%;
     padding-top: (@height / @width) * 100%;
   }
+}
+
+// Pre space wide widgets
+.fxs_wideWidget_pre(@widget-padding-default: 1rem; @widget-padding-sm: 2rem) {
+  padding: @widget-padding-default;
+  &:extend(.fxs_wideContent_bordered);
+  @media (min-width: @screen-m) { padding: @widget-padding-sm; }
 }
