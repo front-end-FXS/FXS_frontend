@@ -1,6 +1,6 @@
-///////////////////////////////////////////////////////////
-/////////////// General classes to extend ////////////////
-///////////// ONLY EXTEND CLASSES FROM HERE /////////////
+//////////////////////////////////////////////////////////////////
+/////////////// Basic styles & classes to extend ////////////////
+//////////////// ONLY EXTEND CLASSES FROM HERE /////////////////
 .fxs_clearfix {
   &::before, &::after {
     content: " ";
@@ -103,8 +103,7 @@
 }
 .fxs_wideContent_bordered { border-top: 5px solid @light_4_clr; }
 
-/////////////////////////////////////////
-////////// Scrollable content //////////
+////////// Scrollable content
 .fxs_scrollableContent {
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
@@ -137,7 +136,7 @@
   }
 }
 
-////////// Swipe content in mobile //////////
+////////// Swipe content in mobile
 .fxs_swipeContent_slider {
     .calc(width, ~'100% + 1rem');
     padding: 0 0.5rem 1rem;
@@ -150,8 +149,21 @@
 ///////////////////////////////////////////////////////////
 ////////////////////// FXS Mixins ////////////////////////
 
+// Label variants
+.fxs_label_variants(@label-background; @label-textColor) {
+  background-color: @label-background;
+  color: @label-textColor;
+}
+
+// ALERT VARIANTS
+.fxs_alert_variants(@alert-background; @alert-textColor) {
+  background-color: @alert-background;
+  color: @alert-textColor;
+  a { color: @alert-textColor; }
+}
+
 // mixin base styles nav
-.fxs_main_nav_rules(@textTransform, @borderBottom, @fontSize, @colorItems, @displayPosition, @paddingParameters){
+.fxs_main_nav_rules(@textTransform; @borderBottom; @fontSize; @colorItems; @displayPosition; @paddingParameters){
     display: @displayPosition;
     border-bottom:@borderBottom;
     text-transform: @textTransform;
@@ -162,8 +174,8 @@
     &:extend(.fxs_transition);
 }
 
-// Media objects //
-.fxs_aspectRatio_media(@width, @height) {
+// Media objects
+.fxs_aspectRatio_media(@width; @height) {
   &:extend(.fxs_relativePositioning);
   &:before {
     display: block;
