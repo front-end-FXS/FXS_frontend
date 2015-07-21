@@ -1,0 +1,452 @@
+.fxs_entryPlain_txt, .fxs_entryPlain_txt_large {
+	font-weight: @txt_fontweight_light;
+	font-size: @txt_size_small;
+	line-height: @txt_lineheight_small;
+	> p, ul, ol, > table, > blockquote { margin-bottom: @txt_size_large; }
+	ul, ol {
+		padding-top: @txt_size_xsmall;
+		padding-left: 1rem;
+		@media (min-width: @screen-m) { padding-left: 2rem; }
+		li { margin-bottom: @txt_size_xsmall; }
+	}
+	ul {
+		list-style-type: disc;
+		ul {
+			list-style-type: circle;
+			ul { list-style-type: square; }
+		}
+	}
+	ol { list-style-type: decimal; }
+    h2, h3, h4 { margin-bottom: @txt_defaultsize_rem; }
+    > img, .fxs_mediaContainer img {
+    	min-width: inherit;
+    	max-width: 100%;
+    }
+}
+
+.fxs_entryPlain_txt_large {
+	font-size: @txt_defaultsize_rem;
+  line-height: @txt_lineheight_reset;
+	@media (min-width: @screen-m) { font-size: @txt_size_large; }
+}
+
+// Headlines
+.fxs_headline_large {
+	font-size: @txt_size_huge;
+	line-height: @txt_lineheight_large;
+	padding: 0.5rem 0;
+	@media (min-width: @screen-m) {
+		font-size: @txt_size_xhuge;
+		line-height: @txt_lineheight_xlarge;
+	}
+	> a { &:extend(.fxs_headerLink all); }
+}
+
+.fxs_headline_medium {
+	font-size: @txt_size_large;
+	line-height: @txt_lineheight;
+	padding: 0 0 0.25rem;
+	@media (min-width: @screen-m) {
+		font-size: @txt_size_huge;
+		line-height: @txt_lineheight_large;
+	}
+	> a { &:extend(.fxs_headerLink all); }
+}
+
+.fxs_headline_small {
+	font-size: @txt_size_large;
+	line-height: @txt_lineheight;
+	padding: 0 0 0.25rem;
+	> a { &:extend(.fxs_headerLink all); }
+}
+
+.fxs_headline_tiny {
+	font-size: @txt_defaultsize_rem;
+	line-height: @txt_lineheight_small;
+	> a { &:extend(.fxs_headerLink all); }
+}
+
+.fxs_headline_nano, .fxs_headline_from_nano_to_small, .fxs_headline_from_nano_to_tiny {
+	font-size: @txt_size_small;
+	line-height: @txt_lineheight_small;
+	> a { &:extend(.fxs_headerLink all); }
+}
+
+// Responsive headlines
+.fxs_headline_from_nano_to_small {
+	@media (min-width: @screen-m) {
+		font-size: @txt_size_large;
+		line-height: @txt_lineheight;
+	}
+}
+
+.fxs_headline_from_nano_to_tiny {
+	@media (min-width: @screen-m) {
+		font-size: @txt_defaultsize_rem;
+		line-height: @txt_lineheight_small;
+	}
+}
+
+// Subsection titles
+.fxs_subsectionTitle {
+	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
+	background-color: @light_3_clr;
+	letter-spacing: inherit;
+	margin: 0 0 1rem -1rem;
+	padding: 0 0.8rem;
+}
+
+/////////////////////////////////////////////////
+//////////////// Objects (Misc) ////////////////
+
+// Labels
+.fxs_label, .fxs_alertLabel {
+	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_xsmall);
+  margin: 0 0.5rem 0 0;
+  padding: 1px 0.4rem;
+}
+
+.fxs_label_featured  {
+  .fxs_label_variants(@highlight_clr; @lightest_clr);
+}
+
+.fxs_label_error  {
+  .fxs_label_variants(@error_clr; @lightest_clr);
+}
+
+.fxs_label_success  {
+  .fxs_label_variants(@success_clr; @lightest_clr);
+}
+
+.fxs_label_warning  {
+  .fxs_label_variants(@warning_clr; @dark_1_clr);
+}
+
+.fxs_label_info  {
+  .fxs_alert_variants(@info_clr; @lightest_clr);
+}
+
+.fxs_helperLabel_title {
+	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
+	margin-right: 0.5rem;
+}
+
+.fxs_alertLabel {
+	color: @lightest_clr;
+	float: left;
+  .fxs_alert_live & { background-color: @error_clr; }
+  .fxs_alert_featured & { background-color: @highlight_clr; }
+  .fxs_alert_warning & { color: @dark_1_clr; }
+}
+
+// ALERTS
+.fxs_alert {
+  padding: 0.5rem;
+  line-height: @txt_lineheight_reset;
+  font-size: @txt_size_small; 
+  overflow: hidden;
+  margin-bottom:2rem;
+  .animation(grow-and-show 0.5s ease-in-out);
+  &:extend(.fxs_wideContent_bordered all);
+  .fxs_alertText { margin-bottom: 0; }
+  a {
+    text-decoration: underline;
+    &:hover { text-decoration: none; }
+  }
+}
+
+.fxs_alert_featured, .fxs_alert_live  {
+  .fxs_alert_variants(@dark_2_clr; @lightest_clr);
+}
+
+.fxs_alert_error  {
+  .fxs_alert_variants(@error_clr; @lightest_clr);
+}
+
+.fxs_alert_success  {
+  .fxs_alert_variants(@success_clr; @lightest_clr);
+}
+
+.fxs_alert_warning  {
+  .fxs_alert_variants(@warning_clr; @dark_1_clr);
+}
+
+.fxs_alert_info  {
+  .fxs_alert_variants(@info_clr; @lightest_clr);
+}
+
+// Dividers
+.fxs_divider_wide {
+	height: 5px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  &:extend(.fxs_divider_base, .fxs_wideContent all);
+}
+
+.fxs_divider_first, .fxs_divider_wide {
+	height: 5px;
+	&:extend(.fxs_divider_base, .fxs_clearfix all);
+}
+
+.fxs_divider_second {
+	height: 3px;
+	&:extend(.fxs_divider_base, .fxs_clearfix all);
+}
+
+.fxs_divider_third {
+	height: 1px;
+	&:extend(.fxs_divider_base, .fxs_clearfix all);
+}
+
+// Media objects //
+.fxs_mediaContainer{
+	overflow: hidden;
+	margin-bottom: 1rem;
+	position: relative;
+	.fxs_aspectRatio_media(16, 9);
+	&:extend(.fxs_transition);
+	img {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+// Floating media
+.fxs_floatingMedia_module { &:extend(.fxs_clearfix all); }
+
+.fxs_floatingMedia_imageContainer {
+	margin-right: 1rem;
+	float: left;
+	&:extend(.fxs_iBlock, .fxs_mediaContainer all);
+}
+
+.fxs_floatingMedia_textBody { overflow: hidden; }
+
+// Avatar images
+.fxs_avatar_circleImage {
+	border-radius: 50%;
+	vertical-align: middle;
+	&:extend(.fxs_floatingMedia_imageContainer);
+}
+
+.fxs_avatar_circleImage_s {
+	width: @avatar_s;
+	height: @avatar_s;
+	margin-bottom: 0;
+	&:extend(.fxs_avatar_circleImage);
+}
+.fxs_avatar_circleImage_m {
+	width: @avatar_m;
+	height: @avatar_m;
+	margin-bottom: 0;
+	&:extend(.fxs_avatar_circleImage);
+}
+.fxs_badge{
+    border-radius:50%;
+    min-width: 1rem;
+    line-height: 1rem;
+    background-color:@error_clr;
+    color:@lightest_clr;
+    text-align:center;
+    font-size:@txt_size_nano;
+    white-space: nowrap;
+    vertical-align: middle;
+    display:inline-block;
+    margin-left:0.5rem;
+}
+
+// Entry meta info: date, author
+.fxs_entry_metaInfo {
+	font-size: @txt_size_xsmall;
+	time{ color: @light_2_clr; }
+}
+
+////////// Dropdowns //////////
+.fxs_dropdown_generic {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 98%;
+	z-index: 10;
+	.animation(slide-from-top-and-appear 0.35s ease-in);
+	.fxs_overflowOptions:hover &, .active > & {
+		display: block;
+		top: 100%;
+	}
+}
+.fxs_dropdownList {
+	background-color: @dark_3_clr;
+	&:extend(.fxs_dropdown_generic all);
+	margin-top: 0.25rem;
+	min-width: 170px;
+    width: 100%;
+    > li {
+        > a {
+            color: @lightest_clr;
+            line-height: @base_module_size - 5;
+            text-decoration: none;
+            &:hover{ background-color: @dark_4_clr; }
+        }
+    }
+    &:after{
+		content: " ";
+		display: block;
+		position: absolute;
+		top: -8px;
+		right: 14px;
+		border: 4px solid transparent;
+		border-bottom-color: @dark_3_clr;
+    }
+    .fxs_divider_third {
+    	margin: 0.5rem 0;
+    	background-color: @dark_4_clr;
+    }
+}
+// Dropdown list items
+.fxs_dropdownHeader, .fxs_dropdownList > li > a {
+	display: block;
+    padding: 0 0.88rem;
+    font-size: @txt_size_xsmall;
+	white-space: nowrap;
+	&:extend(.fxs_boldAntialised_style);
+}
+.fxs_dropdownHeader {
+	&:extend(.fxs_styledIndicator_label);
+	color: @light_2_clr;
+	line-height: @base_module_size;
+}
+
+//////// Variant dropdown //////
+.fxs_btnGroup_dropdownList {
+	background-color: @dark_2_clr;
+	&:extend(.fxs_dropdown_generic all);
+	[class^="fxs_btn"] {
+		color: @lightest_clr;
+		&:hover { .opacity(.75); }
+	}
+}
+
+// trigger/holder btn Group dd
+.fxs_overflowOptions {
+	&:extend(.fxs_relativePositioning, .fxs_iBlock);
+	&:hover, &.active {
+		> [class^="fxs_btn"] {
+			background-color: @dark_2_clr;
+			color: @lightest_clr;
+		}
+	}
+}
+
+// Close Icon
+.fxs_close {
+    display: block;
+    float: right;
+    color: @lightest_clr;
+    padding: 0 10px;
+    margin-top: -5px;
+    font-size: @txt_size_large;
+    &:hover { .opacity(.75); }
+}
+
+////////// Tables //////////
+.fxs_table {
+	width: 100%;
+ 	max-width: 100%;
+ 	font-size: @txt_size_small;
+ 	> thead > tr > th{ vertical-align: bottom; }
+ 	> tbody > tr > td,
+ 	> tbody > tr > th,
+ 	> tfoot > tr > td,
+ 	> tfoot > tr > th,
+ 	> thead > tr > td,
+ 	> thead > tr > th  {
+ 		padding: 8px;
+  		line-height: 1.42857143;
+  		vertical-align: top;
+  		border-bottom: 1px solid @light_3_clr;
+ 	}
+ 	th {
+ 		color: @light_2_clr;
+ 		text-align: left;
+ 		&:extend(.fxs_boldAntialised_style); 
+ 	}
+}
+
+caption {
+	font-size: @txt_size_small;
+	color: @light_1_clr;
+	padding: 0.5rem 0;
+	text-align: left;
+}
+
+//////////////////////////////
+////////// Loaders //////////
+.fxs_feedbackLoading_msg {
+    padding: 1em;
+    color: @light_2_clr;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    display: none; // It'll be shown by js
+    .animation(just-appear 0.5s ease-in);
+    .background-image(linear-gradient(to bottom, @lightest_clr 0%,@light_4_clr 25%));
+    .fxs_loadingStatus {
+        display: block;
+        clear: both;
+        &:extend(.fxs_headline_nano, .fxs_boldAntialised_style);
+    }
+    i {
+        font-size: @icon_defaultsize * 1.455;
+        margin-bottom: 1rem; 
+    }     
+}
+
+////////// Social media objects //////////
+// General
+.fxs_shareOptions_boxed {
+    &:extend(.fxs_iBlock);
+    white-space: nowrap;
+}
+
+.fxs_socialMedia_item {
+    &:extend(.fxs_iBlock);
+    vertical-align: middle;
+}
+
+// Spescific for Header title block in detail pages
+.fxs_shareContent_holder {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media (min-width: @screen-m){ display: block; }
+    .fxs_shareOptions_boxed { background-color: @light_4_clr; }
+    > ul > li > .fxs_btn_socialMedia {
+        color: @dark_2_clr;
+        &:hover{
+            background-color: @dark_2_clr;
+            color: @lightest_clr;
+        }
+    }
+}
+
+// Spescific for sidebar botton nav
+.fxs_shareContent_sidebar_nav{
+    padding:2rem 0 0 10px;
+    .fxs_btn_socialMedia {
+        color: @light_1_clr;
+        &:hover{
+            background-color: @dark_3_clr;
+            color: @lightest_clr;
+        }
+    }
+}
+// Spescific for subscribe social media widget
+.fxs_suscribeSocialBtn {
+    li { margin: 0 0.5rem 0 0; }
+    .fxs_btn_socialMedia {
+        background-color: @lightest_clr;
+        color: @dark_2_clr;
+        &:hover { .opacity(.75); }
+    }
+}
