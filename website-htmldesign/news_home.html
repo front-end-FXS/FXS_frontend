@@ -160,20 +160,67 @@
                         add
                     </div>
                 </div>
-
+                <header class="fxs_sectionTitle">
+                    <h1 class="fxs_sectionTitle_header">Section title H1</h1>
+                    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                        <div class="fxs_overflowOptions">
+                            <span class="fxs_btn_socialMedia" title="Share options"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_socialMedia" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <!--
+                                -->
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_socialMedia" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
                 <section class="fxs_detail">
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Headlines
+                        </h2>
+                        <div class="fxs_clearfix"></div>
+                        <h2 class="fxs_headline_large">Headline large - for main titles in news</h2>
+                        <h2 class="fxs_headline_medium">Headline Medium - for second level news</h2>
+                        <h2 class="fxs_headline_small">Headline Small - for third level news</h2>
+                        <h2 class="fxs_headline_tiny">Headline Tiny - for related news</h2>
+                        <hr class="fxs_divider_wide">
+                    </div>
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Subtitles
+                        </h2>
+                        <div class="fxs_clearfix"></div>
+                        <h2 class="fxs_subsectionTitle">
+                            Subsection title
+                        </h2>
+                        <div class="fxs_clearfix"></div>
+                        <h3 class="fxs_subtitle">
+                            Subtitle for related content
+                        </h3>
+                        <div class="fxs_clearfix"></div>
+                        <h4 class="fxs_helperLabel_title">
+                            Helper label title
+                        </h3>
+                        <small>And this label is inline</small>
+                        <hr class="fxs_divider_wide">
+                    </div>
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
                             Buttons
                         </h2>
-                        <div class="fxs_clear_both"></div>
-                        <a type="submit" class="fxs_btn_txt fxs_btn_cta">Button CTA</a>
-                        <a type="submit" class="fxs_btn_txt fxs_btn_functional">Button Functional</a>
-                        <a type="submit" class="fxs_btn_txt fxs_btn_default">Button Default</a>
-                        <a type="submit" class="fxs_btn_txt fxs_btn_line">Button Line</a>
-                        <a type="submit" class="fxs_btn_txt fxs_btn_danger">Dont do it!</a>
+                        <div class="fxs_clearfix"></div>
+                        <a type="submit" class="fxs_btn fxs_btn_cta">Button CTA</a>
+                        <a type="submit" class="fxs_btn fxs_btn_functional">Button Functional</a>
+                        <a type="submit" class="fxs_btn fxs_btn_default">Button Default</a>
+                        <a type="submit" class="fxs_btn fxs_btn_line">Button Line</a>
+                        <a type="submit" class="fxs_btn fxs_btn_danger">Dont do it!</a>
                         <div class="fxs_btn_group">
-                            <button type="submit" class="fxs_btn_txt fxs_btn_default">Split dropdown</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default">Split dropdown</button>
                             <button type="button" class="fxs_btn_icon fxs_btn_default fxs_btn_dd">
                                 <i class="fa fa-caret-down"></i>
                                 <span class="fxs_skip">More options</span>
@@ -186,18 +233,24 @@
                                 <li><a href="#">Opt 3</a></li>
                             </ul>
                         </div>
+                        <hr class="fxs_divider_wide">
                     </div>
                     <h2 class="fxs_subsectionTitle">
                         Dividers
                     </h2>
-                    <h3>Divider first level</h3>
+                    <div class="fxs_clearfix"></div>
+                    <h3 class="fxs_subtitle">Divider first level</h3>
                     <hr class="fxs_divider_first">
-                    <h3>Divider second level</h3>
+                    <h3 class="fxs_subtitle">Divider second level</h3>
                     <hr class="fxs_divider_second">
-                    <h3>Divider third level</h3>
+                    <h3 class="fxs_subtitle">Divider third level</h3>
                     <hr class="fxs_divider_third">
-                    <h3>Divider wide</h3>
+                    <h3 class="fxs_subtitle">Divider wide</h3>
                     <hr class="fxs_divider_wide">
+                    <h3 class="fxs_subtitle">Divider date (~calendar)</h3>
+                    <div class="fxs_dateIndicator_divider">
+                        <time pubdate="" datetime="2015-09-14"><span>Today</span> Sept 14 2015</time>
+                    </div>
                 </section>
 
                 <!-- Main Section -->
@@ -586,71 +639,78 @@
                 <a href="#" title="Sign up" id="fxs_signup_btn">sign up</a>
             </nav>
             <div class="fxs_login_form_content">
-                <form id="fxs_login_form">
-                    <label class="fxs_btn_username" title="username" for="u">
-                        <i class="fa fa-user"></i>
-                        <span class="fxs_skip">username</span>
-                    </label>
-                    <input type="text" placeholder="username" id="u" />
-
-                    <label class="fxs_btn_password" title="password" for="ps">
-                        <i class="fa fa-lock"></i>
-                        <span class="fxs_skip">password</span>
-                    </label>
-                    <input type="text" placeholder="password" id="ps" />
-
-                    <!-- <label class="textTerms">I have read and accept the <a href="">FXStreet terms and conditions</a></label>-->
-                    <label class="fxs_usr_remember"><input type="checkbox" id="terms" />Remember me</label>
-                    <button type="submit" class="fxs_btn_txt fxs_btn_cta">log in</button>
+                <form class="fxs_signup_form">
+                    <div class="fxs_formGroup">
+                        <label class="fxs_btn_username_signup" title="username_signup" for="us">
+                            <i class="fa fa-user"></i>
+                            <span class="fxs_skip">Choose your username</span>
+                        </label>
+                        <input type="text" placeholder="Choose your username" id="us" />
+                    </div>
+                    <div class="fxs_formGroup">
+                        <label class="fxs_btn_password_signup" title="Set your password" for="ps">
+                            <i class="fa fa-lock"></i>
+                            <span class="fxs_skip">Set your password</span>
+                        </label>
+                        <input type="password" placeholder="Set your password" id="ps" />
+                    </div>
+                    <div class="fxs_formGroup">
+                        <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                    </div>
+                    <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
                     <a href="#" title="Forgot password">Forgot password</a>
                 </form>
+
                 <div class="fxs_sidebar_divider"><span>or</span></div>
 
                 <div class="fxs_social_sidebar_nav">
-                    <button type="submit" class="fxs_btn_txt fxs_btn_default"><i class="fa fa-facebook"></i> Log in with Facebook</button>
-                    <button type="submit" class="fxs_btn_txt fxs_btn_default"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
                 </div>
 
                 <div class="fxs_login_message">
-                    <p>i'm not an fxstreet member</p>
-                    <a href="#">sign up</a>
+                    <p>I'm not an fxstreet member</p>
+                    <a href="#">Sign up</a>
                 </div>
             </div>
             <div class="fxs_signup_form_content">
-                <form id="fxs_signup_form">
-                    <label class="fxs_btn_email" title="Enter your email address" for="email">
-                        <i class="fa fa-envelope-o"></i>
-                        <span class="fxs_skip">enter your email address</span>
-                    </label>
-                    <input type="text" placeholder="Enter your email address" id="email" />
-
-                    <label class="fxs_btn_username_signup" title="username_signup" for="us">
-                        <i class="fa fa-user"></i>
-                        <span class="fxs_skip">Choose your username</span>
-                    </label>
-                    <input type="text" placeholder="Choose your username" id="us" />
-
-                    <label class="fxs_btn_password_signup" title="Set your password" for="ps">
-                        <i class="fa fa-lock"></i>
-                        <span class="fxs_skip">Set your password</span>
-                    </label>
-                    <input type="text" placeholder="Set your password" id="ps" />
-
-                    <!-- <label class="textTerms">I have read and accept the <a href="">FXStreet terms and conditions</a></label>-->
-                    <label class="fxs_usr_terms">
-                        <input type="checkbox" id="terms" />
-                        I have read and accept the
-                    </label>
-                    <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
-
-                    <button type="submit" class="fxs_btn_txt fxs_btn_cta">sign up now</button>
-
+                <form class="fxs_signup_form">
+                    <div class="fxs_formGroup">
+                        <label class="fxs_btn_email" title="Enter your email address" for="email">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="fxs_skip">enter your email address</span>
+                        </label>
+                        <input type="email" placeholder="Enter your email address" id="email" />
+                    </div>
+                    <div class="fxs_formGroup">
+                        <label class="fxs_btn_username_signup" title="username_signup" for="us">
+                            <i class="fa fa-user"></i>
+                            <span class="fxs_skip">Choose your username</span>
+                        </label>
+                        <input type="text" placeholder="Choose your username" id="us" />
+                    </div>
+                    <div class="fxs_formGroup">
+                        <label class="fxs_btn_password_signup" title="Set your password" for="ps">
+                            <i class="fa fa-lock"></i>
+                            <span class="fxs_skip">Set your password</span>
+                        </label>
+                        <input type="password" placeholder="Set your password" id="ps" />
+                    </div>
+                    <div class="fxs_formGroup">
+                        <label class="fxs_checkboxGroup">
+                            <input type="checkbox" id="terms" />
+                            I have read and accept the
+                        </label>
+                        <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                    </div>
+                    <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
                 </form>
+                
                 <div class="fxs_sidebar_divider"><span>or</span></div>
 
                 <div class="fxs_social_sidebar_nav">
-                    <button type="submit" class="fxs_btn_txt fxs_btn_default"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
-                    <button type="submit" class="fxs_btn_txt fxs_btn_default"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
                 </div>
 
                 <div class="fxs_login_message">
@@ -658,7 +718,7 @@
                     <a href="#" title="login">login</a>
                 </div>
             </div>
-            <div class="fxs_timezone_items">
+            <div class="fxs_timezone_items fxs_pageSidebar">
                 <nav class="fxs_timezone_nav">
                     <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
                 </nav>
@@ -749,7 +809,10 @@
                 </div>
                 
             </div>
-            <a class="fxs_timezone_btn" href="#" title="select timezone">timezone <time>10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i></a>
+            <a class="fxs_timezone_btn" href="#" title="select timezone">
+                <span class="fxs_helperLabel_title">Timezone</span>
+                <time>10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+            </a>
         </div>
         <!-- /Sidebar right -->
 

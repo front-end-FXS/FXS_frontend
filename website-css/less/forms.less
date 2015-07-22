@@ -6,6 +6,7 @@ button, input {
 
 // Text inputs & fields
 input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
+    &:extend(.fxs_transition);
     -webkit-appearance: none; // Reset para safari y iOS
     height: @base_module_size;
     background-color: @lightest_clr;
@@ -13,7 +14,6 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
     color: @dark_4_clr;
     font-size: @txt_size_small;
     padding: 5px 1rem;
-    &:extend(.fxs_transition);
     &:hover { border-color: @light_2_clr; }
     &:focus {
         outline: 0;
@@ -33,13 +33,12 @@ input[type=checkbox]{
     -webkit-appearance: checkbox; // default state don't display checkbox ??
     vertical-align:top;
     margin-right: 0.5rem;
-    &:extend(.fxs_transition);
 }
 
 label {
+    &:extend(.fxs_boldAntialised_style);
     display: inline-block;
     margin-bottom: 0.5rem;
-    &:extend(.fxs_boldAntialised_style);
 }
 
 ///////////////////////////////////////////////////////
@@ -48,31 +47,30 @@ label {
 button, input[type=button],
 input[type=submit] { &:extend(.fxs_btn all); }
 
-.fxs_btn_small {
-    height: @base_module_size - 5;
-    line-height: @base_module_size - 9;
-}
-
 .fxs_btn_default {
-    background: @brand_highlight_clr; 
+    background: @brand_highlight_clr;
+    color: @lightest_clr;
     &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@brand_highlight_clr, 80%); }
     &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@brand_highlight_clr, 15%); }
 }
 
 .fxs_btn_cta {
     background: @highlight_clr;
+    color: @lightest_clr;
     &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@highlight_clr, 80%); }
     &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@highlight_clr, 15%); }
 }
 
 .fxs_btn_functional {
-    background: @dark_1_clr; 
+    background: @dark_1_clr;
+    color: @lightest_clr;
     &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@dark_1_clr, 80%); }
     &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@dark_1_clr, 15%); }
 }
 
 .fxs_btn_danger {
     background: @error_clr; 
+    color: @lightest_clr;
     &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@error_clr, 80%); }
     &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@error_clr, 15%); }
 }
@@ -90,23 +88,30 @@ input[type=submit] { &:extend(.fxs_btn all); }
 //
 .fxs_btn_group {
     vertical-align: middle;
-    &:extend(.fxs_iBlock, .fxs_relativePositioning);
+    display: inline-block;
+    position: relative;
     > [class^="fxs_btn"] { float: left; }
     > [class^="fxs_btn"]:not(:first-child) { margin-left: 2px; }
 }
 
 ///////////////////////////////////////////////////
 ////////// Forms layouts & input groups //////////
+.fxs_formGroup { margin-bottom: 5px; }
+
+.fxs_checkboxGroup {
+    font-size: @txt_size_xsmall;
+    margin-bottom: 0;
+}
+
 .fxs_inlineForm_group {
     margin-bottom: 1rem;
-    min-width: 100%;
-    &:extend(.fxs_iBlock);
+    display: inline-block;
     > * { margin-bottom: 0.5rem; }
     @media (min-width: @screen-m) { width: auto; }
     input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
         vertical-align: middle;
         width: 100%;
-        &:extend(.fxs_iBlock);
+        display: inline-block;
         @media (min-width: @screen-m) {
             width: auto;
             min-width: 250px;
