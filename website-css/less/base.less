@@ -2,6 +2,12 @@
 ///////////////// Helper classes to extend ////////////////
 //////////////// (only extend from here) /////////////////
 
+// Box model & typo rendering
+* {
+  .box-sizing(border-box);
+  text-rendering: optimizelegibility;
+}
+
 // Clear content rows
 .fxs_clearfix {
   &::before, &::after {
@@ -49,7 +55,7 @@
   font-style: italic;
 }
 
-// muted text label
+// muted text
 .fxs_mutedContent_label {
   font-size: @txt_size_xsmall;
   color: @light_2_clr;
@@ -65,12 +71,28 @@
   margin-bottom: 1rem;
 }
 
-// Positions & displays
+// Helpers, generic margins, positions & displays
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
 
+// Wide content containers
+.fxs_wideContent {
+  &:extend(.fxs_clearfix all);
+  margin-left:-1rem;
+  margin-right:-1rem;
+  @media (min-width: @screen-m) {
+      margin-left:-2rem;
+      margin-right:-2rem;
+  }
+}
+
+.fxs_wideContent_bordered {
+  &:extend(.fxs_wideContent all);
+  border-top: 5px solid @light_4_clr;
+}
+
 /////////////////////////////////////////////////////////////
-///////////////// Basic text styles ////////////////////////
+///////////////// Basic html styles ////////////////////////
 ///////////////////////////////////////////////////////////
 
 p { margin: 0 0 @txt_size_xsmall; }
@@ -130,6 +152,26 @@ figcaption {
     padding-top: .25rem;
   }
   @media (min-width: @screen-m) { margin: 0.5rem 0; }
+}
+
+ol, ul { list-style: none; }
+
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+// Images
+img {
+  max-width: 100%;
+  min-width: 100%;
+  height: inherit;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /////////////////////////////////////////////////////////////
@@ -242,84 +284,12 @@ h4 { font-size: @txt_size_large;}
 .keyframes(~'slide-from-top-and-appear, from {top: 97%; opacity:0; visibility: hidden; } to {top: 100%; opacity:1; visibility: visible}');
 .keyframes(~'grow-and-show, from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;}');
 .keyframes(~'just-appear, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
-.keyframes(~'show-sponsor-from-top, from {height:0; opacity:0; } to {height:90px; opacity:1;}');
+.keyframes(~'show-sponsor-from-top, 0% {height:0; opacity:0; } 70% {height:90px; opacity:0.7;} 100% {height:auto; opacity:1;}');
 
 
-////////////////////////////////////////////////////////////
-//////////////////// Misc objects /////////////////////////
-//////////////////////////////////////////////////////////
-
-// Button styles
-.fxs_btn_properties(@btn-bg-color; @btn-border; @btn-height; @btn-margin; @btn-padding) {
-  &:extend(.fxs_boldAntialised_style, .fxs_transition);
-  background-color: @btn-bg-color;
-  border: @btn-border;
-  margin: @btn-margin;
-  padding: @btn-padding;
-  height: @btn-height;
-  line-height: @base_module_size - 4;
-  cursor: pointer;
-  display: inline-block;
-  font-size: @txt_size_small;
-  text-align: center;
-  vertical-align: middle;
-  &:hover { text-decoration: none; }
-}
-.fxs_btn {
-  
-  cursor: pointer;
-  display: inline-block;
-  
-  height: @base_module_size;
-  line-height: @base_module_size - 4;
-  margin: 0;
-  padding: 0 1rem;
-  
-  
-}
-
-.fxs_btn_icon, .fxs_btn_socialMedia {
-  &:extend(.fxs_btn all);
-  font-size: @icon_defaultsize;
-  width: @base_module_size;
-  padding: 0;
-}
-
-.fxs_btn_small {
-  height: @base_module_size - 5;
-  line-height: @base_module_size - 9;
-}
-
-.fxs_btn_block {
-  display: block;
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
-.fxs_headerButtons {
-  &:extend(.fxs_btn_icon);
-  height: @main_header_height;
-  width: @main_header_height - 5;
-  line-height: @main_header_height - 2;
-  color: @light_4_clr;
-  &:hover, &.active { background-color: @brand_highlight_clr; }
-}
-
-// Wide content containers
-.fxs_wideContent {
-  &:extend(.fxs_clearfix all);
-  margin-left:-1rem;
-  margin-right:-1rem;
-  @media (min-width: @screen-m) {
-      margin-left:-2rem;
-      margin-right:-2rem;
-  }
-}
-
-.fxs_wideContent_bordered {
-  &:extend(.fxs_wideContent all);
-  border-top: 5px solid @light_4_clr;
-}
+/////////////////////////////////////////////////////////////////////
+/////////// Scrollable & Swipe content styles //////////////////////
+///////////////////////////////////////////////////////////////////
 
 // Scrollable content
 .fxs_scrollableContent {
@@ -354,16 +324,17 @@ h4 { font-size: @txt_size_large;}
 
 // Swipe content in mobile
 .fxs_swipeContent_slider {
-    .calc(width, ~'100% + 1rem');
-    padding: 0 0.5rem 1rem;
-    white-space: nowrap;
-    display: inline-block;
-    &:extend(.fxs_scrollableContent all);
-    &:hover, .fxs_touch & { overflow-x: auto; }
+  &:extend(.fxs_scrollableContent all);
+  .calc(width, ~'100% + 1rem');
+  padding: 0 0.5rem 1rem;
+  white-space: nowrap;
+  display: inline-block;
+  &:hover, .fxs_touch & { overflow-x: auto; }
 }
 
 ///////////////////////////////////////////////////////////
 ////////////////////// FXS Mixins ////////////////////////
+/////////////////////////////////////////////////////////
 
 // Plain text generic style
 .fxs_plain_txt_rules(@txt-font-size; @txt-line-height) {
@@ -401,60 +372,26 @@ h4 { font-size: @txt_size_large;}
   @media (min-width: @screen-m) { font-size: @txt_size_large; }
 }
 
-// Button styles
-.fxs_btn_properties(@btn-bg-color; @btn-border; @btn-height; @btn-margin; @btn-padding) {
+// Button Generic
+.fxs_btn_properties(@btn-border; @btn-height; @btn-margin; @btn-padding) {
   &:extend(.fxs_boldAntialised_style, .fxs_transition);
-  background-color: @btn-bg-color;
   border: @btn-border;
+  height: @btn-height;
   margin: @btn-margin;
   padding: @btn-padding;
-  height: @btn-height;
-  line-height: @base_module_size - 4;
   cursor: pointer;
   display: inline-block;
-  font-size: @txt_size_small;
   text-align: center;
   vertical-align: middle;
   &:hover { text-decoration: none; }
-}
-// Button variants
-.fxs_btn_default {
-  background: @brand_highlight_clr;
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@brand_highlight_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@brand_highlight_clr, 15%); }
-}
-
-.fxs_btn_cta {
-  background: @highlight_clr;
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@highlight_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@highlight_clr, 15%); }
-}
-
-.fxs_btn_functional {
-  background: @dark_1_clr;
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@dark_1_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@dark_1_clr, 15%); }
-}
-
-.fxs_btn_danger {
-  background: @error_clr; 
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@error_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@error_clr, 15%); }
-}
-
-.fxs_btn_line {
-  border-color: @dark_1_clr;
-  color: @dark_1_clr;  
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus {
-      background: fade(@dark_1_clr, 15%);
-      border-color: darken(@dark_1_clr, 10%);
-      color: darken(@dark_1_clr, 10%);
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: disabled;
+    .opacity(.65);
   }
 }
+
 
 // Labels & subtitles text style
 .fxs_stiled_text_variants(@text-box-display; @text-color; @text-font-size) {

@@ -92,14 +92,22 @@
   @media (min-width: @screen-xl) { margin-left: 1rem; }
 }
 
+// Header buttons
+.fxs_show_navmenu, .fxs_show_usermenu {
+  .fxs_btn_properties(none; @main_header_height; 0; 0);
+  color: @light_4_clr;
+  font-size: @icon_defaultsize;
+  line-height: @main_header_height - 2;
+  width: @main_header_height - 5;
+  &:hover, &.active { background-color: @brand_highlight_clr; }
+}
+
 .fxs_show_navmenu {
-  &:extend(.fxs_headerButtons all);
   float: left;
   @media (min-width: @screen-xl) { display: none; }
 }
 
 .fxs_show_usermenu {
-  &:extend(.fxs_headerButtons all);
   float: right;
   position:relative;
   .fxs_badge{
@@ -112,39 +120,39 @@
 
 ////////// Subnav bar & Toggle list //////////
 .fxs_content_subnav {
+  &:extend(.fxs_pageSidebar_transition);
+  height: @base_module_size;
+  background-color: @lightest_clr; 
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  border-bottom: 1px solid @light_5_clr;
+  @media (min-width: @screen-l) {
+      position: absolute;
+      left: @left_rail_space;
+      .calc(width, ~'100% - @{left_rail_space}'); 
+  }
+  .fxs_toggleList {
+    display: inline-block;
+    cursor: pointer;
     height: @base_module_size;
-    background-color: @lightest_clr; 
-    position: fixed;
-    z-index: 2;
-    width: 100%;
-    border-bottom: 1px solid @light_5_clr;
-     &:extend(.fxs_pageSidebar_transition);
-    @media (min-width: @screen-l) {
-        position: absolute;
-        left: @left_rail_space;
-        .calc(width, ~'100% - @{left_rail_space}'); 
+    line-height: @base_module_size;
+    text-transform: uppercase;
+    font-size: @txt_size_xsmall;
+    padding: 0 1rem 0 13px;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &:extend(.fxs_transition);
+    &.active { .translateX(@left_rail_space); }
+    &.disabled {
+        .opacity(.5);
+        cursor: default;
+        &:hover{ text-decoration: none; }
     }
-    .fxs_toggleList {
-        display: inline-block;
-        cursor: pointer;
-        height: @base_module_size;
-        line-height: @base_module_size;
-        text-transform: uppercase;
-        font-size: @txt_size_xsmall;
-        padding: 0 1rem 0 13px;
-        white-space: nowrap;
-        position: absolute;
-        left: 0;
-        top: 0;
-        &:extend(.fxs_transition);
-        &.active { .translateX(@left_rail_space); }
-        &.disabled {
-            .opacity(.5);
-            cursor: default;
-            &:hover{ text-decoration: none; }
-        }
-        @media (min-width: @screen-l) { display: none; }
-    }
+    @media (min-width: @screen-l) { display: none; }
+  }
 }
 
 // Main Navigation MENUS
@@ -653,6 +661,157 @@
       height: 100%;
       max-width: inherit;
   }
+}
+
+///////////////////////////////////////////////////////////////
+////////////////////// FXStreet FILTER ///////////////////////
+.fxs_queryResults, .fxs_queryResults_label { display: none; }
+
+.fxs_filter{
+  &:extend(.fxs_transition);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: @base_module_size; 
+  &.active {
+    width: 100%;
+    .fxs_btn_filter { color: @light_2_clr; }
+    .fxs_typeaheadField {
+      input {
+        border-color: @light_3_clr;
+        padding-right: @base_module_size;
+        &:hover { border-color: @light_2_clr; }
+        &:focus { border-color: @highlight_clr; }
+      }
+    }
+    .fxs_queryResults {
+      display: block;
+      &.fxs_selectedQuery {
+        .fxs_queryResults_label {
+          .animation(just-appear 0.25s ease-in);
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Filter buttons
+.fxs_btn_filter, .fxs_dismissQuery {
+  .fxs_btn_properties(none; @base_module_size; 0; 0);
+  background-color: transparent;
+  color: @dark_3_clr;
+  font-size: @icon_defaultsize;
+  line-height: @base_module_size - 2;
+  width: @base_module_size;
+  &:hover { .opacity(.75); }
+} 
+.fxs_btn_filter {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.fxs_dismissQuery{ .animation(just-appear 0.5s ease-in); }
+
+// Query results
+.fxs_queryResults {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.fxs_queryResults_label{
+    &:extend(.fxs_mutedContent_label);
+    float: left;
+    line-height: @base_module_size; 
+    margin-top: 0;
+    margin-right: -5px;
+}
+
+// TYPEAHEAD
+.fxs_typeaheadContainer {
+  position: relative;
+  &.result .fxs_typeaheadList { display: block!important; }
+  .fxs_typeaheadList { display: none!important; }
+  &.hint .typeahead-hint { visibility: visible!important; }
+  .typeahead-hint { visibility: hidden!important; }
+}
+
+.fxs_typeaheadField {
+  position: relative;
+  width: 100%;
+  input {
+    width: 100%;
+    line-height: @base_module_size;
+    padding: 5px 0 5px @base_module_size;
+    border-width: 0;
+    border-bottom-width: 3px;
+    &.disabled, &[disabled] {
+      cursor: not-allowed;
+      background-color: @light_5_clr;
+      opacity: 1;
+    }
+    &.typeahead-hint[readonly] {
+      background-color: transparent;
+      border:none!important;
+    }
+    &, &:hover { border-color: transparent; }
+  }
+}
+
+.fxs_typeaheadQuery {
+  background: @lightest_clr;
+  position: relative;
+  z-index: 10;
+}
+
+// Typeahead results list
+.fxs_typeaheadList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  font-size: @txt_size_small;
+  text-align: left;
+  background-color: @lightest_clr;
+  border: 1px solid @light_5_clr;
+  > li {
+    position: relative;
+    border-bottom: solid 1px @light_5_clr;
+    &:last-child { border-bottom: none; }
+    a {
+      display: block;
+      padding: 5px 1rem;
+      clear: both;
+      font-weight: @txt_fontweight;
+      line-height: @base_module_size;
+      color: @dark_4_clr;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    a:hover, a:focus, &.active a {
+      background-color: @light_4_clr;
+      color: @dark_3_clr;
+      text-decoration: none;
+    }
+    &.fxs_typeaheadGroup {
+      border-bottom: none;
+      padding-top: 1rem;
+      a, a:hover, a:focus, &.active a {
+        .fxs_stiled_text_variants(block; @light_2_clr; @txt_size_xsmall);
+        background-color: @lightest_clr;
+        cursor: default;
+        line-height: @base_module_size / 2;
+      }
+    }
+  }
+  // Extra styles
+  strong { background-color: @light_3_clr; }
+  .fxs_typeaheadTxt { display: inline-block; }
 }
 
 ////////////////////////////////////////////

@@ -1,7 +1,7 @@
 button, input {
-    border: 0;
-    border-radius: 0;
-    font-family: @txt_fontfamily;
+  border: 0;
+  border-radius: 0;
+  font-family: @txt_fontfamily;
 }
 
 // Text inputs & fields
@@ -44,8 +44,10 @@ label {
 ///////////////////////////////////////////////////////
 //////////////// Buttons basic styles ////////////////
 // BTN
-button, input[type=button],
-input[type=submit] { &:extend(.fxs_btn all); }
+button, input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
 
 //
 .fxs_btn_group {
@@ -70,9 +72,10 @@ input[type=submit] { &:extend(.fxs_btn all); }
 
 .fxs_inputGroup_iconLabel {
     position: relative;
-    label {
+    .fxs_btn_icon {
         color: @light_3_clr;
         left: 0;
+        margin: 0;
         position: absolute;
         top: 0;
         z-index: 1;

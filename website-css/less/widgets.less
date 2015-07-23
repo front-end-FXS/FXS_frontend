@@ -134,6 +134,7 @@
 
 // Entries featured
 .fxs_entryFeatured {
+  margin-bottom: 1rem;
     header { margin-bottom: 0.5rem; }
     &:hover {
         cursor: pointer;
@@ -161,20 +162,17 @@
 }
 
 .fxs_entryFeatured_reduced {
-    padding-bottom:1rem; // sepación entre posts
     .fxs_entryHeadline {
         &:extend(.fxs_headline_from_nano_to_small all);
     }
 }
 
 .fxs_entryFeatured_imgSide {
-    padding: 0 0 1rem;
-   // border-bottom: 3px solid @light_4_clr; // se incluirá separación con hr manual
     .fxs_entryPlain_txt { display: none; }
     &:extend(.fxs_floatingMedia_module);
     .fxs_entryFeatured_img {
         &:extend(.fxs_floatingMedia_imageContainer);
-        margin-bottom: 0.5rem;
+        margin-bottom: 0;
         width: 33%; 
     }
     .fxs_entryHeadline {
@@ -187,36 +185,36 @@
 
 // sponsor bg content and main img
 .fxs_leaderboard_sponsor{
-  &:extend(.fxs_leaderboard);
   display: none;
-}
-.fxs_mutedContent_label_sponsored{
-  &:extend(.fxs_mutedContent_label);
-  display:inline-block;
+  .fxs_inVisualField & { display: block; }
 }
 
-.fxs_sponsor_container{
+.fxs_sponsor_container {
   &:extend(.fxs_clearfix all);
-  &:extend(.fxs_transition);
-}
-
-.fxs_inVisualField{
-   @media(min-width: @screen-l){
-      margin-right:-12px;
-      margin-left:-12px;
+  background-image: none;
+  background-color: transparent;
+  margin: 0 -3px;
+  padding: 1rem 3px;
+  @media(min-width: @screen-l){
+    padding: 1rem 5px;
+    margin: 0 -5px 0 0;
   }
-   padding:0 1rem;
-  .fxs_leaderboard_sponsor{ display: block; }
+  @media(min-width: @screen-xl){
+    padding: 1rem;
+    margin: 0 -1rem;
+  }
 }
  
-.fxs_main_sponsor{
-  overflow:hidden;
-  height:auto;
-  .animation(show-sponsor-from-top 0.5s ease-in);
-  img{
-      display:block;
-      height:auto;
-      min-height:inherit;
+.fxs_main_sponsor {
+  overflow: hidden;
+  text-align: center;
+  height: 0;
+  .animation(show-sponsor-from-top 0.5s ease-in 0.6s forwards);
+  img {
+    display:inline-block;
+    height:auto;
+    min-height:inherit;
+    min-width: inherit;
   }
 }
     
