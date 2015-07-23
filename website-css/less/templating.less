@@ -285,199 +285,196 @@
 .fxs_sidebar_user {
     .fxs_nav_login_form, .fxs_timezone_hours, .fxs_login_form_content, .fxs_signup_form_content { width: @slide_sidebar_space; }
     // Esto será la clase genérica de tabs
-    .fxs_nav_login_form{
-        border-bottom:1px solid @dark_3_clr;
-        margin-bottom:1rem;
-        height: @main_header_height;
-        a{
-            .fxs_main_nav_rules(uppercase, none, @txt_size_small,  @light_1_clr, inline-block, 10px 1rem 10px 1rem);
-            margin:10px 10px 0;
-            padding:0;
-            &.active{
-                border-bottom: 5px solid @highlight_clr; 
-                color: @lightest_clr;
-            }
-            &:hover{
-                border-bottom: 5px solid @highlight_clr; 
-                color: @lightest_clr;
-            }
-        }
-    }
-
-    .fxs_signup_form_content{ display:none; }
-
-    .fxs_login_form_content, .fxs_signup_form_content{
-      margin-bottom: @main_header_height;
-      font-size: @txt_size_xsmall;
-      .fxs_signup_form{
-        margin:0 10px 1rem;
-        .fxs_signup_conditions{
-          margin-left: 1.5rem;
-          display: block;
-        }
+  .fxs_nav_login_form {
+    border-bottom:1px solid @dark_3_clr;
+    margin-bottom:1rem;
+    height: @main_header_height;
+    a {
+      .fxs_main_nav_rules(uppercase, none, @txt_size_small,  @light_1_clr, inline-block, 10px 1rem 10px 1rem);
+      margin:10px 10px 0;
+      padding:0;
+      &.active {
+        border-bottom: 5px solid @highlight_clr; 
+        color: @lightest_clr;
       }
-
-      // rules for divider
-      .fxs_sidebar_divider {
-          margin:10px 0 10px 0;
-          text-align: center;
-          position:relative;
-          span {
-              display: inline-block;
-              text-transform:uppercase;
-              color:@light_1_clr; 
-              font-style:italic;
-              font-size:@txt_size_small;
-              &:before,
-              &:after {
-                  border-top: 1px solid  @dark_3_clr;
-                  display: block;
-                  height: 1px;
-                  content: " ";
-                  width: 45%;
-                  position: absolute;
-                  left: 0;
-                  top: 0.7rem;
-              }
-              &:after {
-                  right: 0;  
-                  left: auto; 
-              }
-          }
-      }
-      .fxs_social_sidebar_nav{
-        padding:10px;
-        .fxs_btn {
-          text-align: left;
-          i { padding-right: 30px; }
-        }
-      }
-
-      .fxs_login_message{
-        background-color:@dark_3_clr;
-        padding:10px 1rem 10px 1rem;
-        margin-top:30px;
-        p,a{
-            margin:0;
-            padding:0;
-        }
-        p{
-            color:@light_2_clr;
-            font-size:@txt_size_xsmall;
-            font-style:italic;
-            text-transform:uppercase;
-        }
-        a{
-              font-size:@txt_size_small;
-        }
+      &:hover {
+        border-bottom: 5px solid @highlight_clr; 
+        color: @lightest_clr;
       }
     }
-   
-    .fxs_timezone_btn{
-      .fxs_main_nav_rules(uppercase; none; @txt_size_small; @lightest_clr; inline-block; 10px 1rem 10px 1rem);
-      background-color: @dark_1_clr;
-      border-top: 1px solid @dark_3_clr;
-      bottom: 0;
-      position: fixed;
-      width:100%;   
-      time{ padding-left: 1rem; }
-      i{ padding-left: 2rem; }
+  }
+
+  .fxs_signup_form_content{ display:none; }
+
+  .fxs_login_form_content, .fxs_signup_form_content{ 
+    margin-bottom: @main_header_height;
+    font-size: @txt_size_xsmall;
+    .fxs_signup_form {
+      margin:0 10px 1rem;
+      .fxs_signup_conditions {
+        margin-left: 1.5rem;
+        display: block;
+      }
     }
-    .fxs_timezone_items{
-      &:extend(.fxs_pageSidebar_transition);
-      right:-276px;
-      z-index:99;
-    }
-    .fxs_timezone_hours{
-        position: absolute;
-        top: @main_header_height;
-        .calc(height, ~'100% - @{main_header_height}');
-        &:extend(.fxs_scrollableContent all);
-        &:hover, .fxs_touch & { overflow-y: auto; }
-        #selectable .ui-selected {
-            background-color:@dark_3_clr;
-            span{
-                &:after {
-                    content:"\f00c";
-                    position:absolute;
-                    margin-top: -3px;
-                    font-family: FontAwesome;
-                    text-decoration: inherit;
-                    color:@lightest_clr;
-                    font-size: @txt_size_small;
-                    padding-left: 10px;
-                }
-            }  
-        }
-        ol {
-            li{
-                .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr,  @txt_size_small, @light_1_clr, block, 10px 1rem 10px 1rem);
-                cursor:pointer;
-                &:hover{ background-color:@dark_3_clr; }
-                p{
-                  margin:0;
-                  padding:0;
-                }
-                span{ color:@lightest_clr; }
-                p{ color:@light_2_clr; }
-            }
-        }
-    } 
-    .fxs_timezone_nav{
-        height: @main_header_height;
-        padding:1rem;
+    // rules for divider
+    .fxs_sidebar_divider {
+        margin:10px 0 10px 0;
+        text-align: center;
         position:relative;
-        top:0;
-        background-color: @dark_3_clr;
-        width: 100%;
-        z-index:103;               
-        .fxs_helperLabel_title{ padding:0 35px; }
-        a{
-            display:inline-block;
-            font-size: @txt_size_small;
+        span {
+            display: inline-block;
+            text-transform:uppercase;
+            color:@light_1_clr; 
+            font-style:italic;
+            font-size:@txt_size_small;
+            &:before,
+            &:after {
+                border-top: 1px solid  @dark_3_clr;
+                display: block;
+                height: 1px;
+                content: " ";
+                width: 45%;
+                position: absolute;
+                left: 0;
+                top: 0.7rem;
+            }
+            &:after {
+                right: 0;  
+                left: auto; 
+            }
         }
     }
-
-    .fxs_user_area_content{
-        border-bottom:1px solid @dark_3_clr;
-        padding:1rem 2rem 1rem 1rem;
-        .form_group{
-            float:left;
-            label{
-                width:70px;
-                position:relative;
-                margin-bottom:none;
-                cursor:pointer;
-                .custom-file-input{ height:0; }
-                .custom-file-input::-webkit-file-upload-button {
-                  visibility: hidden;
-                  width:0;
-                }
-                .custom-file-input::before {
-                  content:  "\f030";
-                  font-family: FontAwesome;
-                  left:0;
-                 // width:20px;
-                  bottom:20px;
-                  position:absolute;
-                  color:@lightest_clr;
-                  cursor: pointer;
-                }
-            }
-        }
-        .fxs_user_info{
-            color:@lightest_clr;
-            .fxs_profile_data{
-                color:@light_2_clr;
-                font-size: @txt_size_small;
-                span{
-                    color:@error_clr;
-                    font-size: @txt_size_small;
-                }
-            }
-        }
-   }
+    //
+    .fxs_social_sidebar_nav{
+      padding:10px;
+      .fxs_btn {
+        text-align: left;
+        i { padding-right: 30px; }
+      }
+    }
+    .fxs_login_message{
+      background-color:@dark_3_clr;
+      color:@light_2_clr;
+      padding:10px 1rem 10px 1rem;
+      margin-top:30px;
+      p{
+          font-style:italic;
+          text-transform:uppercase;
+          margin:0;
+      }
+    }
+  }
+   
+  .fxs_timezone_btn{
+    .fxs_main_nav_rules(uppercase; none; @txt_size_small; @lightest_clr; inline-block; 10px 1rem 10px 1rem);
+    background-color: @dark_1_clr;
+    border-top: 1px solid @dark_3_clr;
+    bottom: 0;
+    position: fixed;
+    width:100%;   
+    time{ padding-left: 1rem; }
+    i{ padding-left: 2rem; }
+  }
 }
+
+// Timezone menu
+.fxs_timezone_items{
+  &:extend(.fxs_pageSidebar_transition);
+  right:-276px;
+  z-index:99;
+}
+
+.fxs_timezone_hours {
+  position: absolute;
+  top: @main_header_height;
+  .calc(height, ~'100% - @{main_header_height}');
+  &:extend(.fxs_scrollableContent all);
+  &:hover, .fxs_touch & { overflow-y: auto; }
+  #selectable .ui-selected {
+    background-color:@dark_3_clr;
+    span{
+        &:after {
+          content:"\f00c";
+          position:absolute;
+          margin-top: -3px;
+          font-family: FontAwesome;
+          text-decoration: inherit;
+          color:@lightest_clr;
+          font-size: @txt_size_small;
+          padding-left: 10px;
+      }
+    }  
+  }
+  ol {
+    li {
+      .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr,  @txt_size_small, @light_1_clr, block, 10px 1rem 10px 1rem);
+      cursor:pointer;
+      &:hover{ background-color:@dark_3_clr; }
+      p {
+        margin:0;
+        padding:0;
+      }
+      span { color:@lightest_clr; }
+      p { color:@light_2_clr; }
+    }
+  }
+}
+
+.fxs_timezone_nav {
+  height: @main_header_height;
+  padding:1rem;
+  position:relative;
+  top:0;
+  background-color: @dark_3_clr;
+  width: 100%;
+  z-index:103;               
+  .fxs_helperLabel_title{ padding:0 35px; }
+  a{
+      display:inline-block;
+      font-size: @txt_size_small;
+  }
+}
+//
+// User area
+.fxs_user_area_content {
+  border-bottom:1px solid @dark_3_clr;
+  padding:1rem 2rem 1rem 1rem;
+  .form_group {
+    float:left;
+    label {
+      width:70px;
+      position:relative;
+      margin-bottom:none;
+      cursor:pointer;
+      .custom-file-input{ height:0; }
+      .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+        width:0;
+      }
+      .custom-file-input::before {
+        content:  "\f030";
+        font-family: FontAwesome;
+        left:0;
+        bottom:20px;
+        position:absolute;
+        color:@lightest_clr;
+        cursor: pointer;
+      }
+    }
+  }
+  .fxs_user_info {
+    color:@lightest_clr;
+    .fxs_profile_data {
+      color:@light_2_clr;
+      font-size: @txt_size_small;
+      span {
+          color:@error_clr;
+          font-size: @txt_size_small;
+      }
+    }
+  }
+}
+//
 // end sidebar user
 
 ////////// CONTENT //////// 

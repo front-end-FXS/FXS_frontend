@@ -250,20 +250,32 @@ h4 { font-size: @txt_size_large;}
 //////////////////////////////////////////////////////////
 
 // Button styles
-.fxs_btn {
+.fxs_btn_properties(@btn-bg-color; @btn-border; @btn-height; @btn-margin; @btn-padding) {
   &:extend(.fxs_boldAntialised_style, .fxs_transition);
-  background-color: transparent;
-  border: 2px solid transparent;
+  background-color: @btn-bg-color;
+  border: @btn-border;
+  margin: @btn-margin;
+  padding: @btn-padding;
+  height: @btn-height;
+  line-height: @base_module_size - 4;
   cursor: pointer;
   display: inline-block;
   font-size: @txt_size_small;
+  text-align: center;
+  vertical-align: middle;
+  &:hover { text-decoration: none; }
+}
+.fxs_btn {
+  
+  cursor: pointer;
+  display: inline-block;
+  
   height: @base_module_size;
   line-height: @base_module_size - 4;
   margin: 0;
   padding: 0 1rem;
-  text-align: center;
-  vertical-align: middle;
-  &:hover { text-decoration: none; }
+  
+  
 }
 
 .fxs_btn_icon, .fxs_btn_socialMedia {
@@ -295,9 +307,9 @@ h4 { font-size: @txt_size_large;}
 
 // Wide content containers
 .fxs_wideContent {
+  &:extend(.fxs_clearfix all);
   margin-left:-1rem;
   margin-right:-1rem;
-  &:extend(.fxs_clearfix all);
   @media (min-width: @screen-m) {
       margin-left:-2rem;
       margin-right:-2rem;
@@ -305,8 +317,8 @@ h4 { font-size: @txt_size_large;}
 }
 
 .fxs_wideContent_bordered {
-  border-top: 5px solid @light_4_clr;
   &:extend(.fxs_wideContent all);
+  border-top: 5px solid @light_4_clr;
 }
 
 // Scrollable content
@@ -387,6 +399,61 @@ h4 { font-size: @txt_size_large;}
 .fxs_entryPlain_txt_large {
   .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
   @media (min-width: @screen-m) { font-size: @txt_size_large; }
+}
+
+// Button styles
+.fxs_btn_properties(@btn-bg-color; @btn-border; @btn-height; @btn-margin; @btn-padding) {
+  &:extend(.fxs_boldAntialised_style, .fxs_transition);
+  background-color: @btn-bg-color;
+  border: @btn-border;
+  margin: @btn-margin;
+  padding: @btn-padding;
+  height: @btn-height;
+  line-height: @base_module_size - 4;
+  cursor: pointer;
+  display: inline-block;
+  font-size: @txt_size_small;
+  text-align: center;
+  vertical-align: middle;
+  &:hover { text-decoration: none; }
+}
+// Button variants
+.fxs_btn_default {
+  background: @brand_highlight_clr;
+  color: @lightest_clr;
+  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@brand_highlight_clr, 80%); }
+  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@brand_highlight_clr, 15%); }
+}
+
+.fxs_btn_cta {
+  background: @highlight_clr;
+  color: @lightest_clr;
+  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@highlight_clr, 80%); }
+  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@highlight_clr, 15%); }
+}
+
+.fxs_btn_functional {
+  background: @dark_1_clr;
+  color: @lightest_clr;
+  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@dark_1_clr, 80%); }
+  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@dark_1_clr, 15%); }
+}
+
+.fxs_btn_danger {
+  background: @error_clr; 
+  color: @lightest_clr;
+  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@error_clr, 80%); }
+  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@error_clr, 15%); }
+}
+
+.fxs_btn_line {
+  border-color: @dark_1_clr;
+  color: @dark_1_clr;  
+  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus {
+      background: fade(@dark_1_clr, 15%);
+      border-color: darken(@dark_1_clr, 10%);
+      color: darken(@dark_1_clr, 10%);
+  }
 }
 
 // Labels & subtitles text style
