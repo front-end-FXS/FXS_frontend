@@ -97,7 +97,7 @@
   .fxs_btn_properties(none; @main_header_height; 0; 0);
   color: @light_4_clr;
   font-size: @icon_defaultsize;
-  line-height: @main_header_height - 2;
+  line-height: @main_header_height;
   width: @main_header_height - 5;
   &:hover, &.active { background-color: @brand_highlight_clr; }
 }
@@ -133,6 +133,7 @@
       .calc(width, ~'100% - @{left_rail_space}'); 
   }
   .fxs_toggleList {
+    &:extend(.fxs_transition);
     display: inline-block;
     cursor: pointer;
     height: @base_module_size;
@@ -144,7 +145,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    &:extend(.fxs_transition);
     &.active { .translateX(@left_rail_space); }
     &.disabled {
         .opacity(.5);
@@ -393,10 +393,10 @@
 }
 
 .fxs_timezone_hours {
+  &:extend(.fxs_scrollableContent all);
   position: absolute;
   top: @main_header_height;
   .calc(height, ~'100% - @{main_header_height}');
-  &:extend(.fxs_scrollableContent all);
   &:hover, .fxs_touch & { overflow-y: auto; }
   #selectable .ui-selected {
     background-color:@dark_3_clr;
@@ -502,14 +502,21 @@
 
 .fxs_sectionTitle {
   background-color: @lightest_clr;
-  height: @base_module_size;
   margin-bottom: 5px;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   position: relative;
-  @media (min-width: @screen-m) { padding: 0.4rem 2rem; }
+  @media (min-width: @screen-m) {
+    height: @main_header_height;
+    padding: 0 2rem;
+  }
   @media (min-width: @screen-l) {
     max-width: @content_rail_width;
     margin: 0 auto 5px;
+  }
+  .fxs_overflowOptions .fxs_btn_icon {
+    height: @main_header_height;
+    line-height: @main_header_height;
+    width: @main_header_height;
   }
 }
 
@@ -553,7 +560,7 @@
 ///////////////////////////////////////////////
 
 .fxs_listView {
-  &:extend(.fxs_transition);
+  &:extend(.fxs_pageSidebar_transition);
   width: 100%;
   height: 100%;
   background-color: @light_4_clr;
@@ -563,7 +570,7 @@
   left: -100%;
   .fxs_isParent_section & { left: auto; }
   @media (min-width: @screen-m){ left: -(@left_rail_space + 5px)!important; }
-  @media (min-width: @screen-l) { left: auto!important; }
+  @media (min-width: @screen-l) { left: auto!important; transform: none!important; }
   &.cbp-spmenu-open {
       .translateX(100%);
       @media (min-width: @screen-m){
@@ -866,85 +873,6 @@
 
 
 
-
-// START Telerik.Sitefinity.Resources.Themes.LayoutsBasics.css 
-//.sf_cols{width:100%;margin:0;padding:0}
-
-//.sf_cols:before,.sf_cols:after{content:"";display:table;}
-
-//.sf_cols:after{clear:both}
-
-//.sf_cols{zoom:1}
-
-//.sf_colsOut+.sf_colsOut{*margin-left:-1px!important}
-
-//.sf_block{display:block}
-
-//.sf_1col_1_100{float:none;margin:0}
-
-//.sf_2cols_1_25{float:left;width:25%;margin:0}
-
-//.sf_2cols_2_75{float:right;width:75%;margin:0}
-
-//.sf_2cols_2_75 .sf_2cols_2in_75{margin-left:12px}
-
-//.sf_2cols_1_33{float:left;width:33%;margin:0}
-
-//.sf_2cols_2_67{float:right;width:67%;margin:0}
-
-//.sf_2cols_2_67 .sf_2cols_2in_67{margin-left:12px}
-
-//.sf_2cols_1_50{float:left;width:50%;margin:0}
-
-//.sf_2cols_2_50{float:right;width:50%;margin:0}
-
-//.sf_2cols_2_50 .sf_2cols_2in_50{margin-left:12px}
-
-//.sf_2cols_1_67{float:left;width:67%;margin:0}
-
-//.sf_2cols_2_33{float:right;width:33%;margin:0}
-
-//.sf_2cols_2_33 .sf_2cols_2in_33{margin-left:12px}
-
-//.sf_2cols_1_75{float:left;width:75%;margin:0}
-
-//.sf_2cols_2_25{float:right;width:25%;margin:0}
-
-//.sf_2cols_2_25 .sf_2cols_2in_25{margin-left:12px}
-
-//.sf_3cols_1_33{float:left;width:33%;margin:0}
-
-
-
-//.sf_3cols_2_34{float:left;width:34%;margin:0}
-
-//.sf_3cols_3_33{float:left;width:33%;margin:0;_margin-left:-1px!important}
-
-//.sf_3cols_2_34 .sf_3cols_2in_34,.sf_3cols_3_33 .sf_3cols_3in_33{margin-left:12px}
-
-//.sf_3cols_1_25{float:left;width:25%;margin:0}
-
-//.sf_3cols_2_50{float:left;width:50%;margin:0}
-
-//.sf_3cols_3_25{float:left;width:25%;margin:0;_margin-left:-1px!important}
-
-//.sf_3cols_2_50 .sf_3cols_2in_50,.sf_3cols_3_25 .sf_3cols_3in_25{margin-left:12px}
-
-//.sf_4cols_1_25,.sf_4cols_2_25,.sf_4cols_3_25,.sf_4cols_4_25{float:left;width:25%;margin:0}
-
-
-// hacks internet explorer old versions
-//.sf_4cols_4_25{_margin-left:-1px!important}
-
-//.sf_4cols_2_25 .sf_4cols_2in_25,.sf_4cols_3_25 .sf_4cols_3in_25,.sf_4cols_4_25 .sf_4cols_4in_25{margin-left:12px}
-
-//.sf_5cols_1_20,.sf_5cols_2_20,.sf_5cols_3_20,.sf_5cols_4_20,.sf_5cols_5_20{float:left;width:20%;margin:0}
-
-//.sf_5cols_5_20{_margin-left:-1px!important}
-
-//.sf_5cols_2_20 .sf_5cols_2in_20,.sf_5cols_3_20 .sf_5cols_3in_20,.sf_5cols_4_20 .sf_5cols_4in_20,.sf_5cols_5_20 .sf_5cols_5in_20{margin-left:12px}
-/* END Telerik.Sitefinity.Resources.Themes.LayoutsBasics.css */
-
 // fxstreet grid breakpoints
 
 @grid-columns:              12;
@@ -1002,7 +930,7 @@
 }
 
 // Generate the extra large columns 1180
-.make-lg-column(@columns) {
+.make-xlg-column(@columns) {
   // Calculate width based on number of columns available
   @media (min-width:@grid-float-breakpoint-xlarge) {
     float: left;
@@ -1011,9 +939,9 @@
 }
 
 
-/* custom sitefinity cols by pablo */
+// custom sitefinity cols by pablo
 
-/* 12 columns */
+// 12 columns 
 
 .sf_cols{
     .make-row();
@@ -1031,7 +959,7 @@
 
 /* 3 x 33% */
 .sf_3cols_3_33{
-    .make-sm-column(4); 
+    .make-md-column(4); 
 }
 /* 2 x 66% - 33% */
 .sf_2cols_1_67{
@@ -1042,15 +970,15 @@
 }
 /* 2 x 75% - 25% */
 .sf_2cols_1_75{
-    .make-md-column(9);
+    .make-xlg-column(9);
 }
 .sf_2cols_1_25{
-    .make-lg-column(3); // ad
+    .make-xlg-column(3); // ad
     display:none;
 }
 /* 2 x 50% */
 .sf_2cols_2_50{
-    .make-sm-column(6);
+    .make-md-column(6);
 }
 /* 4 x 25% */
 .sf_4cols_4_25{

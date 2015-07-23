@@ -1,6 +1,7 @@
+///////////////////////////////////////////////////////////////
+/////////////// Helper classes & basic styles ////////////////
+/////////////// (Helpers, html base & mixins) ///////////////
 ////////////////////////////////////////////////////////////
-///////////////// Helper classes to extend ////////////////
-//////////////// (only extend from here) /////////////////
 
 // Box model & typo rendering
 * {
@@ -51,7 +52,6 @@
 // Italic upercased labels
 .fxs_styledIndicator_label {
   text-transform: uppercase;
-  white-space: nowrap;
   font-style: italic;
 }
 
@@ -284,7 +284,7 @@ h4 { font-size: @txt_size_large;}
 .keyframes(~'slide-from-top-and-appear, from {top: 97%; opacity:0; visibility: hidden; } to {top: 100%; opacity:1; visibility: visible}');
 .keyframes(~'grow-and-show, from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;}');
 .keyframes(~'just-appear, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
-.keyframes(~'show-sponsor-from-top, 0% {height:0; opacity:0; } 70% {height:90px; opacity:0.7;} 100% {height:auto; opacity:1;}');
+.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}');
 
 
 /////////////////////////////////////////////////////////////////////

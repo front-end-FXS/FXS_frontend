@@ -28,7 +28,6 @@
 .fxs_sexy_banner {
   .fxs_wideWidget_pre();
   position: relative;
-  &:extend(.fxs_transition);
   &:hover {
       cursor: pointer;
       .fxs_sexy_bannerText { background-color: fade(@dark_2_clr, 85%); }
@@ -75,9 +74,9 @@
 }
 
 .fxs_sexy_bannerImg {
+  &:extend(.fxs_mediaContainer all);
   max-height: 150px;
   margin-bottom: 0;
-  &:extend(.fxs_mediaContainer all);
   @media (min-width: @screen-m) { max-height: 350px; }
 }
 
@@ -184,10 +183,6 @@
 }
 
 // sponsor bg content and main img
-.fxs_leaderboard_sponsor{
-  display: none;
-  .fxs_inVisualField & { display: block; }
-}
 
 .fxs_sponsor_container {
   &:extend(.fxs_clearfix all);
@@ -208,13 +203,18 @@
 .fxs_main_sponsor {
   overflow: hidden;
   text-align: center;
-  height: 0;
-  .animation(show-sponsor-from-top 0.5s ease-in 0.6s forwards);
+  max-height: 0;
+  .fxs_inVisualField & { .animation(show-sponsor-from-top 0.5s ease-in 0.6s forwards); }
   img {
     display:inline-block;
     height:auto;
     min-height:inherit;
     min-width: inherit;
   }
+}
+
+.fxs_leaderboard_sponsor{
+  display: none;
+  .fxs_inVisualField & { display: block; }
 }
     

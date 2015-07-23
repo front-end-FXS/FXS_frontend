@@ -149,18 +149,20 @@
             <div class="fxs_contentView">
 
 
-                <!-- star sponsor container -->
+                <!-- start sponsor container -->
                 <style>
-                    @-webkit-keyframes fade-background { from {background: none; } to {background: url(../website-img/bg-test-sponsor.jpg) repeat;} }
-                    @-moz-keyframes fade-background { from {background: none; } to {background: url(../website-img/bg-test-sponsor.jpg) repeat;} }
-                    @-o-keyframes fade-background { from {background: none; } to {background: url(../website-img/bg-test-sponsor.jpg) repeat;} }
-                    @keyframes fade-background { from {background: none; } to {background: url(../website-img/bg-test-sponsor.jpg) repeat;} }
+                    /*Keyframes for the background to appear*/
+                    @-webkit-keyframes fade-background { from {background: none transparent; } to {background: url(../website-img/bg-test-sponsor.jpg) no-repeat #CF383D;} }
+                    @-moz-keyframes fade-background { from {background: none transparent; } to {background: url(../website-img/bg-test-sponsor.jpg) no-repeat #CF383D;} }
+                    @-o-keyframes fade-background { from {background: none transparent; } to {background: url(../website-img/bg-test-sponsor.jpg) no-repeat #CF383D;} }
+                    @keyframes fade-background { from {background: none transparent; } to {background: url(../website-img/bg-test-sponsor.jpg) no-repeat #CF383D;} }
+                    
                     .fxs_sponsor_container.fxs_inVisualField {
-                        -webkit-animation: fade-background 0.5s ease-in;
-                        -moz-animation: fade-background 0.5s ease-in;
-                        -o-animation: fade-background 0.5s ease-in;
-                        animation: fade-background 0.5s ease-in;
-                        background: url(../website-img/bg-test-sponsor.jpg) repeat;
+                        -webkit-animation: fade-background 0.5s ease-in forwards;
+                        -moz-animation: fade-background 0.5s ease-in forwards;
+                        -o-animation: fade-background 0.5s ease-in forwards;
+                        animation: fade-background 0.5s ease-in forwards;
+                        /*background: url(../website-img/bg-test-sponsor.jpg) repeat;*/
                     }   
                 </style>
                 <div class="fxs_sponsor_container fxs_inVisualField">

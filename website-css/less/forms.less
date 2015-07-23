@@ -49,17 +49,8 @@ button, input[type=reset], input[type=submit] {
   cursor: pointer;
 }
 
-//
-.fxs_btn_group {
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    > [class^="fxs_btn"] { float: left; }
-    > [class^="fxs_btn"]:not(:first-child) { margin-left: 2px; }
-}
-
-///////////////////////////////////////////////////
-////////// Forms layouts & input groups //////////
+///////////////////////////////////////////////////////////
+////////// Forms grouped layouts & input groups //////////
 .fxs_formGroup {
     margin-bottom: 0.5rem;
     .fxs_textInput { width: 100%; }
@@ -83,19 +74,27 @@ button, input[type=reset], input[type=submit] {
     .fxs_textInput { padding-left: @base_module_size;}
 }
 
+.fxs_btn_group {
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  > [class^="fxs_btn"] { float: left; }
+  > [class^="fxs_btn"]:not(:first-child) { margin-left: 2px; }
+}
+
 .fxs_subscribeForm_group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  > * { margin-bottom: 0.5rem; }
+  @media (min-width: @screen-m) { width: auto; }
+  .fxs_textInput {
+    vertical-align: middle;
+    width: 100%;
     display: inline-block;
-    > * { margin-bottom: 0.5rem; }
-    @media (min-width: @screen-m) { width: auto; }
-    .fxs_textInput {
-        vertical-align: middle;
-        width: 100%;
-        display: inline-block;
-        @media (min-width: @screen-m) {
-            width: auto;
-            min-width: 250px;
-        }
-        @media (min-width: @screen-xl) { min-width: 320px; }
+    @media (min-width: @screen-m) {
+        width: auto;
+        min-width: 250px;
     }
+    @media (min-width: @screen-xl) { min-width: 320px; }
+  }
 }
