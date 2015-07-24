@@ -157,6 +157,23 @@
 
 // Main Navigation MENUS
 .fxs_nav_menu { 
+    a{
+        .fxs_main_nav(uppercase, 1px solid @dark_3_clr, 25px, @txt_size_small);
+    }    
+    .fxs_header & {
+        display: none;
+        @media (min-width: @screen-xl) {
+            display: inline-block;
+            float: left;
+            white-space: nowrap;
+        }
+        .fxs_tab_item(); // mixin to load the main nav in big resolution
+    }
+    
+}
+
+// Main Navigation MENUS
+/*.fxs_nav_menu { 
     > ul > li a {
         .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr, @txt_size_small, @light_2_clr, block, 10px 1rem 10px 1rem);
         &:hover{
@@ -192,10 +209,10 @@
         }
     }
 }
-
+*/
 // clase para la navegacion del usuario barra lateral responsive
 
-.fxs_menuList {
+/*.fxs_menuList {
     border-bottom: 1px solid @dark_3_clr;
     padding: 1rem 0;
     li{
@@ -207,6 +224,26 @@
                 background-color:@dark_3_clr;
             }
         }
+    }
+    .fxs_menuList_header {
+        &:extend(.fxs_styledIndicator_label);
+        &:extend(.fxs_boldAntialised_style);
+        color: @light_1_clr;
+        font-size: @txt_size_small;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+*/
+.fxs_tabs_nav{
+    .fxs_tab_item();
+}
+.fxs_user_list {
+    border-bottom: 1px solid @dark_3_clr;
+    padding: 1rem 0;
+    a{
+        .fxs_main_nav(none, none, 25px, @txt_size_xsmall);            
     }
     .fxs_menuList_header {
         &:extend(.fxs_styledIndicator_label);
@@ -906,7 +943,6 @@
 }
 .sf_2cols_1_25{
     .make-xlg-column(3); // ad
-    display:none;
 }
 /* 2 x 50% */
 .sf_2cols_2_50{
@@ -919,6 +955,7 @@
 
 // special responsive rules
 .sf_disable_cols{
+    display:none;
     @media (min-width: @grid-float-breakpoint-xlarge){
         display:block;
     }
