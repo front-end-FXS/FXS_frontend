@@ -872,78 +872,9 @@
   }
 }
 
-
-
-// fxstreet grid breakpoints
-
-@grid-columns:              12;
-@grid-gutter-width:         2rem;
-@grid-float-breakpoint-small:     @screen-s;
-@grid-float-breakpoint-medium:     @screen-m;
-@grid-float-breakpoint-large:      @screen-l;
-@grid-float-breakpoint-xlarge:     @screen-xl;
-
-// Creates a wrapper for a series of columns
-.make-row(@gutter: @grid-gutter-width) {
-  // Then clear the floated columns
-
-  &:extend(.fxs_clearfix all);
-  margin-left:  (@gutter / -2);
-  margin-right: (@gutter / -2);
-  
-}
-
-// default 
-.column-default-parameters(@gutter: @grid-gutter-width){
-    position: relative;
-    // Prevent columns from collapsing when empty
-    min-height: 1px;
-    // Inner gutter via padding
-    padding-left:  (@gutter / 2);
-    padding-right: (@gutter / 2);
-}
-
-// Generate the small columns 320
-.make-sm-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-small) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the medium columns 768
-.make-md-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-medium) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the large columns 1024
-.make-lg-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-large) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the extra large columns 1180
-.make-xlg-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width:@grid-float-breakpoint-xlarge) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-
 // custom sitefinity cols by pablo
 
 // 12 columns 
-
 .sf_cols{
     .make-row();
 }
@@ -986,18 +917,13 @@
     .make-md-column(3);
 }
 
-
 // special responsive rules
-
 .sf_disable_cols{
     @media (min-width: @grid-float-breakpoint-xlarge){
         display:block;
     }
 }
-
-
-
-/* end cols pablo */
+ // end cols pablo 
 
 
 /////////////////////////STYCKY/////////////////////////////
