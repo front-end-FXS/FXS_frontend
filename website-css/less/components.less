@@ -3,7 +3,25 @@
 ////// Elements that function as a unit and can be mixed to build widgets /////////
 //////////////////////////////////////////////////////////////////////////////////
 
-// Section & subsection titles
+/// LIST MENUS
+
+// Lista que pone Pablo
+//
+
+// La otra lista que pone Pablo
+//
+
+// Mini-menu: barra topics (.fxs_content_subnav) y footer
+.fxs_subnavInlined_list {
+  display: none;
+  @media (min-width: @screen-l) { display: inline-block; }
+  li {
+    display: inline-block;
+    padding-right: 5px;
+  }
+}
+
+// SECTION & SUBSECTION TITLES
 .fxs_sectionTitle_header {
   .fxs_stiled_text_variants(inline-block; @dark_3_clr; @txt_defaultsize_rem);
   @media (min-width: @screen-m) { line-height: @main_header_height;  }
@@ -27,13 +45,7 @@
   margin-right: 0.5rem;
 }
 
-// Entry meta info: date, author
-.fxs_entry_metaInfo {
-  font-size: @txt_size_xsmall;
-  time{ color: @light_2_clr; }
-}
-
-// Buttons
+// BUTTONS
 .fxs_btn, .fxs_btn_icon {
   .fxs_btn_properties(2px solid transparent; @base_module_size; 0.25rem 0; 0 1rem);
   line-height: @base_module_size - 2;
@@ -80,7 +92,7 @@
   &.inverse, .fxs_pageSidebar & { .fxs-button-variants(@lightest_clr; @lightest_clr; @lightest_clr); }
 }
 
-// Labels
+// LABELS
 .fxs_label, .fxs_alertLabel {
 	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_xsmall);
   margin: 0 0.5rem 0 0;
@@ -111,19 +123,19 @@
   .fxs_label_variants(@light_2_clr; @lightest_clr);
 }
 
-// Badges
+// BADGES
 .fxs_badge{
   border-radius:50%;
-  min-width: 1rem;
-  line-height: 1rem;
   background-color:@error_clr;
   color:@lightest_clr;
-  text-align:center;
-  font-size:@txt_size_nano;
-  white-space: nowrap;
-  vertical-align: middle;
   display: inline-block;
-  margin-left: 0.5rem;
+  font-size: @txt_size_nano;
+  line-height: 1rem;
+  margin: 0 0.5rem 0 0;
+  min-width: 1rem;
+  text-align:center;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 // ALERTS
@@ -170,7 +182,7 @@
   .fxs_alert_warning & { color: @dark_1_clr; }
 }
 
-// Dividers
+// DIVIDERS
 .fxs_divider_wide {
   &:extend(.fxs_divider_base, .fxs_wideContent all);
   height: 5px;
@@ -200,26 +212,15 @@
   padding: 0.25rem 1rem;
 }
 
-// Media objects //
-.fxs_mediaContainer{
+// MEDIA OBJECTS
+.fxs_mediaContainer, .fxs_entryFeatured_img {
   .fxs_aspectRatio_media(16, 9);
-  &:extend(.fxs_transition);
-	overflow: hidden;
-	margin-bottom: 1rem;
-	position: relative;
-	img {
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-	}
+  margin-bottom: 1rem;
 }
 
 // Floating media
-.fxs_floatingMedia_module { &:extend(.fxs_clearfix all); }
-
 .fxs_floatingMedia_imageContainer {
-  &:extend(.fxs_mediaContainer all);
+  .fxs_aspectRatio_media(16, 9);
   display: inline-block;
 	float: left;
   margin-right: 1rem;
@@ -227,28 +228,31 @@
 
 .fxs_floatingMedia_textBody { overflow: hidden; }
 
-// Avatar images
-.fxs_avatar_circleImage {
-  &:extend(.fxs_floatingMedia_imageContainer);
+// AVATAR IMAGES
+.fxs_avatar_circleImage, .fxs_avatar_circleImage_s,
+.fxs_avatar_circleImage_m, .fxs_avatar_circleImage_l {
+  .fxs_aspectRatio_media(1, 1);
+  display: inline-block;
 	border-radius: 50%;
 	vertical-align: middle;
 }
 
 .fxs_avatar_circleImage_s {
-  &:extend(.fxs_avatar_circleImage);
 	width: @avatar_s;
 	height: @avatar_s;
-	margin-bottom: 0;
 }
 
 .fxs_avatar_circleImage_m {
-  &:extend(.fxs_avatar_circleImage);
 	width: @avatar_m;
 	height: @avatar_m;
-	margin-bottom: 0;
 }
 
-////////// Dropdowns //////////
+.fxs_avatar_circleImage_l {
+  width: @avatar_l;
+  height: @avatar_l;
+}
+
+/// DROPDOWNS
 .fxs_dropdown_generic {
   .animation(slide-from-top-and-appear 0.35s ease-in);
 	display: none;
@@ -307,7 +311,7 @@
   font-size: @txt_size_xsmall;
 }
 
-//////// Variant dropdown //////
+// Variants dropdown
 .fxs_btnGroup_dropdownList {
 	background-color: @dark_2_clr;
 	&:extend(.fxs_dropdown_generic all);
@@ -340,7 +344,7 @@
     &:hover { .opacity(.75); }
 }
 
-////////// Tables ////////////
+/// TABLES
 .fxs_table {
 	width: 100%;
  	max-width: 100%;
@@ -371,7 +375,7 @@ caption {
 	text-align: left;
 }
 
-////////// Loaders //////////
+// LOADERS
 .fxs_feedbackLoading_msg {
   .animation(just-appear 0.5s ease-in);
   padding: 1em;
@@ -391,8 +395,9 @@ caption {
   }     
 }
 
-////////// Social media objects //////////
-// General
+// MISCELLANEOUS
+
+///////////////// Social media objects /////////////
 .fxs_shareOptions_boxed {
   display: inline-block;
   white-space: nowrap;
@@ -404,7 +409,7 @@ caption {
   vertical-align: middle;
 }
 
-// Spescific for Header title block in detail pages
+// Social media objects - Spescific for Header title block in detail pages
 .fxs_shareContent_holder {
   display: none;
   position: absolute;
@@ -421,7 +426,7 @@ caption {
   }
 }
 
-// Spescific for sidebar botton nav
+// Social media object - Spescific for sidebar botton nav
 .fxs_shareContent_sidebar_nav{
   padding: 1rem 10px;
   .fxs_btn_icon {
@@ -433,12 +438,56 @@ caption {
   }
 }
 
-// Spescific for subscribe social media widget
+// Social media object - Spescific for subscribe social media widget
 .fxs_suscribeSocialBtn {
   li { margin: 0 0.5rem 0 0; }
   .fxs_btn_icon {
     background-color: @lightest_clr;
     color: @dark_2_clr;
     &:hover { .opacity(.75); }
+  }
+}
+
+// Entry meta info: date, author, company
+.fxs_entry_metaInfo {
+  font-size: @txt_size_xsmall;
+  time{ color: @light_2_clr; }
+}
+
+// Entry related content: related content in colums for detail pages
+.fxs_relatedContent_holder {
+  .make-row();
+  overflow: hidden;
+  letter-spacing: -1em;
+  margin-right: -1rem;
+  @media (min-width: @screen-m) { margin-right: -0.5rem; }
+}
+
+.fxs_relatedItem {
+  &:extend(.fxs_transition);
+  padding-bottom: 1rem;
+  min-height: 175px;
+  @media (min-width: @screen-m) { min-height: 230px; }
+  @media (min-width: @screen-xl) { min-height: 280px; }
+  &:hover {
+    cursor: pointer;
+    border-bottom: 4px solid @highlight_clr;
+    a { color: @highlight_clr; }
+    .fxs_entryFeatured_img { opacity: 0.8; }
+  }
+}
+
+.fxs_relatedContentSlot_x3_cols {
+  &:extend(.fxs_relatedContentSlot all);
+  .make-sm-column(4); 
+  .fxs_entryHeadline {
+    &:extend(.fxs_headline_from_nano_to_small all);
+  }
+}
+.fxs_relatedContentSlot_x4_cols {
+  &:extend(.fxs_relatedContentSlot all);
+  .make-sm-column(3);
+  .fxs_entryHeadline {
+    &:extend(.fxs_headline_from_nano_to_tiny all);
   }
 }
