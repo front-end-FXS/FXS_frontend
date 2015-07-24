@@ -55,7 +55,7 @@ $(document).ready(function () {
     });
 
     $('.fxs_btn_dd').click(function(evt) {
-        $('.fxs_btn_group').toggleClass("active");
+        $(this).parent('.fxs_btn_group').toggleClass("active");
         evt.stopPropagation();
     });
 

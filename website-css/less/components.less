@@ -60,41 +60,24 @@
 
 // Button variants
 .fxs_btn_default {
-  background: @brand_highlight_clr;
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@brand_highlight_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@brand_highlight_clr, 15%); }
+  .fxs-button-variants(@lightest_clr; @brand_highlight_clr; @brand_highlight_clr);
 }
 
 .fxs_btn_cta {
-  background: @highlight_clr;
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@highlight_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@highlight_clr, 15%); }
+  .fxs-button-variants(@lightest_clr; @highlight_clr; @highlight_clr);
 }
 
 .fxs_btn_functional {
-  background: @dark_1_clr;
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@dark_1_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@dark_1_clr, 15%); }
+  .fxs-button-variants(@lightest_clr; @dark_1_clr; @dark_1_clr);
 }
 
 .fxs_btn_danger {
-  background: @error_clr; 
-  color: @lightest_clr;
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus { background: fade(@error_clr, 80%); }
-  &.active, .active > &.fxs_btn_dd, &:active, &:focus { border-color: darken(@error_clr, 15%); }
+  .fxs-button-variants(@lightest_clr; @error_clr; @error_clr);
 }
 
 .fxs_btn_line {
-  border-color: @dark_1_clr;
-  color: @dark_1_clr;  
-  &:hover, &.active, .active > &.fxs_btn_dd, &:active, &:focus {
-      background: fade(@dark_1_clr, 15%);
-      border-color: darken(@dark_1_clr, 10%);
-      color: darken(@dark_1_clr, 10%);
-  }
+  .fxs-button-variants(@dark_1_clr; @dark_1_clr; @dark_1_clr);
+  &.inverse, .fxs_pageSidebar & { .fxs-button-variants(@lightest_clr; @lightest_clr; @lightest_clr); }
 }
 
 // Labels
@@ -147,11 +130,11 @@
 .fxs_alert {
   &:extend(.fxs_wideContent_bordered all);
   .animation(grow-and-show 0.5s ease-in-out);
-  padding: 0.5rem;
+  border-bottom: 5px solid @light_4_clr;
+  font-size: @txt_size_small;
   line-height: @txt_lineheight_reset;
-  font-size: @txt_size_small; 
-  overflow: hidden;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
   .fxs_alertText { margin-bottom: 0; }
   a {
     text-decoration: underline;
@@ -440,12 +423,12 @@ caption {
 
 // Spescific for sidebar botton nav
 .fxs_shareContent_sidebar_nav{
-  padding:2rem 0 0 10px;
+  padding: 1rem 10px;
   .fxs_btn_icon {
     color: @light_1_clr;
     &:hover{
-        background-color: @dark_3_clr;
-        color: @lightest_clr;
+      background-color: @dark_3_clr;
+      color: @lightest_clr;
     }
   }
 }

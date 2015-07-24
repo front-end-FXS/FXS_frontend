@@ -73,7 +73,7 @@
       visibility: visible;
       .opacity(1);
     }
-    .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_show_timezoneHours { .translate(-@slide_sidebar_space); }
+    .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_show_timezoneHours { .translate(-@slide_sidebar_space)!important; }
   }
 }
 
@@ -570,12 +570,13 @@
   left: -100%;
   .fxs_isParent_section & { left: auto; }
   @media (min-width: @screen-m){ left: -(@left_rail_space + 5px)!important; }
-  @media (min-width: @screen-l) { left: auto!important; transform: none!important; }
+  @media (min-width: @screen-l) { left: auto!important; }
   &.cbp-spmenu-open {
-      .translateX(100%);
-      @media (min-width: @screen-m){
-          .translateX(@left_rail_space + 5px);
-      }
+    .translateX(100%);
+    @media (min-width: @screen-m){
+      .translateX(@left_rail_space + 5px);
+    }
+    @media (min-width: @screen-l) { .translate(0); }
   }
 }
 
@@ -627,28 +628,28 @@
 }
 
 .fxs_listView_item, .fxs_listView_adContiner {
-    padding: 10px 1rem;
-    border-bottom: 3px solid @light_5_clr;
-    background-color: @lightest_clr;
-    cursor: pointer;
-    position: relative;
-    &:hover, &.listView_item_active {
-      &::before{
-        display: block;
-        position: absolute;
-        width: 5px;
-        height: 100%;
-        background-color: @highlight_clr;
-        left: 0;
-        top: 0;
-        content: " ";
-      }
+  padding: 10px 1rem;
+  border-bottom: 3px solid @light_5_clr;
+  background-color: @lightest_clr;
+  cursor: pointer;
+  position: relative;
+  &:hover, &.listView_item_active {
+    &::before{
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      background-color: @highlight_clr;
+      left: 0;
+      top: 0;
+      content: " ";
     }
-    &:hover { a{ color: @highlight_clr; } }
-    &.listView_item_active{
-        background-color: @dark_2_clr;
-        * { color: @lightest_clr; }
-    }
+  }
+  &:hover { a{ color: @highlight_clr; } }
+  &.listView_item_active{
+    background-color: @dark_2_clr;
+    * { color: @lightest_clr; }
+  }
 }
 
 // Ads in listView
