@@ -2345,17 +2345,11 @@ width:calc(100% - 320px);
   color: #ffffff;
 }
 .fxs_header .fxs_nav_menu {
-  display: none;
   border-bottom: 1px solid #2e2e32;
-  margin: 0 0 1rem 0.7rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
   height: 45px;
-}
-@media (min-width: 1180px) {
-  .fxs_header .fxs_nav_menu {
-    display: inline-block;
-    float: left;
-    white-space: nowrap;
-  }
+  display: none;
 }
 .fxs_header .fxs_nav_menu li {
   display: inline-block;
@@ -2366,83 +2360,36 @@ width:calc(100% - 320px);
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.75rem;
   text-decoration: none;
-  padding: 0 0.63rem;
-  line-height: 40px;
+  padding: 0 0.4rem;
+  line-height: 45px;
   height: 45px;
 }
 .fxs_header .fxs_nav_menu li a:hover {
-  border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.4);
   background-color: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
 }
 .fxs_header .fxs_nav_menu li a.active {
   border-bottom: 5px solid #e4871b;
   color: #ffffff;
 }
-/*.fxs_nav_menu { 
-    > ul > li a {
-        .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr, @txt_size_small, @light_2_clr, block, 10px 1rem 10px 1rem);
-        &:hover{
-            background-color:@dark_3_clr;
-            color:@lightest_clr;
-        }
-    }
-       
-    .fxs_header & {
-        display: none;
-        @media (min-width: @screen-xl) {
-            display: inline-block;
-            float: left;
-            white-space: nowrap;
-            margin: 0 2%;
-        }
-        ul, li {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 0;
-        }
-        li {
-            &:first-child{ display: none; }
-            a {
-                height: @main_header_height;
-                line-height: @main_header_height;
-                padding: 0 0.63rem;
-                color: @light_4_clr;
-                font-size: @txt_size_xsmall;
-                &:hover{ background-color: @brand_highlight_clr; }
-                &.active { border-bottom: 5px solid @highlight_clr; }
-            }
-        }
-    }
+.fxs_header .fxs_nav_menu li:first-child {
+  display: none;
 }
-*/
-/*.fxs_menuList {
-    border-bottom: 1px solid @dark_3_clr;
-    padding: 1rem 0;
-    li{
-       
-        a{
-            .fxs_main_nav_rules( none, none, @txt_size_xsmall, @light_2_clr, block, 10px 1rem 10px 1rem);
-            &:hover{
-                color:@lightest_clr;
-                background-color:@dark_3_clr;
-            }
-        }
-    }
-    .fxs_menuList_header {
-        &:extend(.fxs_styledIndicator_label);
-        &:extend(.fxs_boldAntialised_style);
-        color: @light_1_clr;
-        font-size: @txt_size_small;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-    }
+.fxs_header .fxs_nav_menu a:hover {
+  background-color: transparent;
 }
-
-*/
+@media (min-width: 1180px) {
+  .fxs_header .fxs_nav_menu {
+    display: inline-block;
+    float: left;
+    white-space: nowrap;
+  }
+}
 .fxs_tabs_nav {
   border-bottom: 1px solid #2e2e32;
-  margin: 0 0 1rem 0.7rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
   height: 45px;
 }
 .fxs_tabs_nav li {
@@ -2454,14 +2401,14 @@ width:calc(100% - 320px);
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.75rem;
   text-decoration: none;
-  padding: 0 0.63rem;
-  line-height: 40px;
+  padding: 0 0.4rem;
+  line-height: 45px;
   height: 45px;
 }
 .fxs_tabs_nav li a:hover {
-  border-bottom: 5px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.4);
   background-color: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
 }
 .fxs_tabs_nav li a.active {
   border-bottom: 5px solid #e4871b;
@@ -3328,8 +3275,8 @@ width:calc(100% - 320px);
 }
 .sf_1col_1_100 {
   min-height: 1px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   position: relative;
 }
 .sf_3cols_3_33,

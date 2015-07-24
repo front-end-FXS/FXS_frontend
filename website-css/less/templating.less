@@ -158,106 +158,41 @@
 
 // Main Navigation MENUS
 .fxs_nav_menu { 
-    a{
-        .fxs_main_nav(uppercase, 1px solid @dark_3_clr, 25px, @txt_size_small);
-    }    
-    .fxs_header & {
-        display: none;
-        @media (min-width: @screen-xl) {
-            display: inline-block;
-            float: left;
-            white-space: nowrap;
-        }
-        .fxs_tab_item(); // mixin to load the main nav in big resolution
+  a{
+    .fxs_main_nav(uppercase, 1px solid @dark_3_clr, 25px, @txt_size_small);
+  }    
+  .fxs_header & {
+    .fxs_tab_item(); // mixin to load the main nav in big resolution
+    display: none;
+    li:first-child { display: none; }
+    a:hover{ background-color: transparent; }
+    @media (min-width: @screen-xl) {
+      display: inline-block;
+      float: left;
+      white-space: nowrap;
     }
-    
+  }  
 }
 
-// Main Navigation MENUS
-/*.fxs_nav_menu { 
-    > ul > li a {
-        .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr, @txt_size_small, @light_2_clr, block, 10px 1rem 10px 1rem);
-        &:hover{
-            background-color:@dark_3_clr;
-            color:@lightest_clr;
-        }
-    }
-       
-    .fxs_header & {
-        display: none;
-        @media (min-width: @screen-xl) {
-            display: inline-block;
-            float: left;
-            white-space: nowrap;
-            margin: 0 2%;
-        }
-        ul, li {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 0;
-        }
-        li {
-            &:first-child{ display: none; }
-            a {
-                height: @main_header_height;
-                line-height: @main_header_height;
-                padding: 0 0.63rem;
-                color: @light_4_clr;
-                font-size: @txt_size_xsmall;
-                &:hover{ background-color: @brand_highlight_clr; }
-                &.active { border-bottom: 5px solid @highlight_clr; }
-            }
-        }
-    }
-}
-*/
-// clase para la navegacion del usuario barra lateral responsive
-
-/*.fxs_menuList {
-    border-bottom: 1px solid @dark_3_clr;
-    padding: 1rem 0;
-    li{
-       
-        a{
-            .fxs_main_nav_rules( none, none, @txt_size_xsmall, @light_2_clr, block, 10px 1rem 10px 1rem);
-            &:hover{
-                color:@lightest_clr;
-                background-color:@dark_3_clr;
-            }
-        }
-    }
-    .fxs_menuList_header {
-        &:extend(.fxs_styledIndicator_label);
-        &:extend(.fxs_boldAntialised_style);
-        color: @light_1_clr;
-        font-size: @txt_size_small;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-    }
-}
-
-*/
+//
 .fxs_tabs_nav{
-    .fxs_tab_item();
+  .fxs_tab_item();
 }
+
+// Pablo, esta clase tiene un nombre muy excluyente y se usa en 2 sitios !!!!!!
 .fxs_user_list {
-    border-bottom: 1px solid @dark_3_clr;
-    padding: 1rem 0;
-    a{
-        .fxs_main_nav(none, none, 25px, @txt_size_xsmall);            
-    }
-    .fxs_menuList_header {
-        &:extend(.fxs_styledIndicator_label);
-        &:extend(.fxs_boldAntialised_style);
-        color: @light_1_clr;
-        font-size: @txt_size_small;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-    }
+  border-bottom: 1px solid @dark_3_clr;
+  padding: 1rem 0;
+  a{ .fxs_main_nav(none, none, 25px, @txt_size_xsmall); }
+  .fxs_menuList_header {
+      &:extend(.fxs_styledIndicator_label);
+      &:extend(.fxs_boldAntialised_style);
+      color: @light_1_clr;
+      font-size: @txt_size_small;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+  }
 }
-// nota:
-// se debe crear un mixin ya que ambas clases son muy similares
-// clase para la navegacion del usuario cuando está logeado
 
 .fxs_menuList_user {
     border-bottom: 1px solid @dark_3_clr;
@@ -913,8 +848,8 @@
 }
 .sf_1col_1_100{
   min-height: 1px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   position: relative;
 }
 
