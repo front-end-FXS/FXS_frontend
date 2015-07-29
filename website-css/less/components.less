@@ -6,10 +6,44 @@
 /// LIST MENUS
 
 // Lista que pone Pablo
-//
+// Main Navigation MENUS
+.fxs_nav_menu { 
+    a{
+       .fxs_main_nav(uppercase, 1px solid @dark_3_clr, 25px, @txt_size_small, @main_header_height);
+    }    
+    .fxs_header & {
+        display: none;
+        @media (min-width: @screen-xl) {
+            display: inline-block;
+            float: left;
+            white-space: nowrap;
+        }
+        .fxs_tab_item(); 
+    }
+    
+}
 
 // La otra lista que pone Pablo
-//
+
+// items nav list
+.fxs_user_list {
+    border-bottom: 1px solid @dark_3_clr;
+    padding: 1rem 0;
+    a{
+        .fxs_main_nav(none, none, 25px, @txt_size_small, @main_header_height);           
+    }
+    .fxs_menuList_header {
+        .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_small);
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+// clase general para los tabs item
+.fxs_tabs_nav{
+    .fxs_tab_item();
+}
+
 
 // Mini-menu: barra topics (.fxs_content_subnav) y footer
 .fxs_subnavInlined_list {

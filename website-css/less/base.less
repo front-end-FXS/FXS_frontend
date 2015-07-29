@@ -476,9 +476,8 @@ h4 { font-size: @txt_size_large;}
 
 // tabs items
 .fxs_tab_item(){
-    border-bottom: 1px solid @dark_3_clr;
-    margin-bottom: 1rem;
-    padding: 0 0.5rem;
+    border-bottom:1px solid @dark_3_clr;
+    margin:0 0 1rem 0.7rem;
     height: @main_header_height;
     li{
         display:inline-block;
@@ -488,14 +487,14 @@ h4 { font-size: @txt_size_large;}
             color: fade(@lightest_clr, 80%);
             font-size: @txt_size_xsmall;
             text-decoration: none;
-            padding: 0 0.4rem;
-            line-height: @main_header_height;
+            padding: 0 0.63rem;
+            line-height:40px;
             height:45px;
             &:extend(.fxs_transition);
             &:hover{
-                border-bottom: 5px solid fade(@lightest_clr,40%);
-                background-color: none;
-                color: @lightest_clr;
+                border-bottom: 5px solid fade(@lightest_clr, 80%);
+                background-color:none;
+                color: fade(@lightest_clr, 80%);
             }
             &.active{
                 border-bottom: 5px solid @highlight_clr;
@@ -507,10 +506,9 @@ h4 { font-size: @txt_size_large;}
 
 
 // mixin base styles nav
-
-.fxs_main_nav(@textTransform; @borderBottom; @lineHeight; @fontSize){
+.fxs_main_nav(@textTransform; @borderBottom; @lineHeight; @fontSize; @itemHeight){
     display: block;
-    height:@main_header_height;
+    height:@itemHeight;
     border-bottom:@borderBottom;
     text-transform: @textTransform;
     line-height:@lineHeight;

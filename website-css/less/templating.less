@@ -156,43 +156,7 @@
   }
 }
 
-// Main Navigation MENUS
-.fxs_nav_menu { 
-  a{
-    .fxs_main_nav(uppercase, 1px solid @dark_3_clr, 25px, @txt_size_small);
-  }    
-  .fxs_header & {
-    .fxs_tab_item(); // mixin to load the main nav in big resolution
-    display: none;
-    li:first-child { display: none; }
-    a:hover{ background-color: transparent; }
-    @media (min-width: @screen-xl) {
-      display: inline-block;
-      float: left;
-      white-space: nowrap;
-    }
-  }  
-}
 
-//
-.fxs_tabs_nav{
-  .fxs_tab_item();
-}
-
-// Pablo, esta clase tiene un nombre muy excluyente y se usa en 2 sitios !!!!!!
-.fxs_user_list {
-  border-bottom: 1px solid @dark_3_clr;
-  padding: 1rem 0;
-  a{ .fxs_main_nav(none, none, 25px, @txt_size_xsmall); }
-  .fxs_menuList_header {
-      &:extend(.fxs_styledIndicator_label);
-      &:extend(.fxs_boldAntialised_style);
-      color: @light_1_clr;
-      font-size: @txt_size_small;
-      margin-bottom: 1rem;
-      padding: 0 1rem;
-  }
-}
 
 .fxs_menuList_user {
     border-bottom: 1px solid @dark_3_clr;
@@ -265,97 +229,76 @@
 
 .fxs_sidebar_user {
     .fxs_nav_login_form, .fxs_timezone_hours, .fxs_login_form_content, .fxs_signup_form_content { width: @slide_sidebar_space; }
-    // Esto será la clase genérica de tabs
-  .fxs_nav_login_form {
-    border-bottom:1px solid @dark_3_clr;
-    margin-bottom:1rem;
-    height: @main_header_height;
-    a {
-      .fxs_main_nav_rules(uppercase, none, @txt_size_small,  @light_1_clr, inline-block, 10px 1rem 10px 1rem);
-      margin:10px 10px 0;
-      padding:0;
-      &.active {
-        border-bottom: 5px solid @highlight_clr; 
-        color: @lightest_clr;
-      }
-      &:hover {
-        border-bottom: 5px solid @highlight_clr; 
-        color: @lightest_clr;
-      }
-    }
-  }
-
-  .fxs_signup_form_content{ display:none; }
-
-  .fxs_login_form_content, .fxs_signup_form_content{ 
-    margin-bottom: @main_header_height;
-    font-size: @txt_size_xsmall;
-    .fxs_signup_form {
-      margin:0 10px 1rem;
-      .fxs_signup_conditions {
-        margin-left: 1.5rem;
-        display: block;
-      }
-    }
-    // rules for divider
-    .fxs_sidebar_divider {
-        margin:10px 0 10px 0;
-        text-align: center;
-        position:relative;
-        span {
-            display: inline-block;
-            text-transform:uppercase;
-            color:@light_1_clr; 
-            font-style:italic;
-            font-size:@txt_size_small;
-            &:before,
-            &:after {
-                border-top: 1px solid  @dark_3_clr;
-                display: block;
-                height: 1px;
-                content: " ";
-                width: 45%;
-                position: absolute;
-                left: 0;
-                top: 0.7rem;
+    .fxs_signup_form_content{ display:none; }
+    .fxs_login_form_content, .fxs_signup_form_content{ 
+        margin-bottom: @main_header_height;
+        font-size: @txt_size_xsmall;
+        .fxs_signup_form {
+            margin:0 10px 1rem;
+            .fxs_signup_conditions {
+            margin-left: 1.5rem;
+            display: block;
             }
-            &:after {
-                right: 0;  
-                left: auto; 
+        }
+        // rules for divider
+        .fxs_sidebar_divider {
+            margin:10px 0 10px 0;
+            text-align: center;
+            position:relative;
+            span {
+                display: inline-block;
+                text-transform:uppercase;
+                color:@light_1_clr; 
+                font-style:italic;
+                font-size:@txt_size_small;
+                &:before,
+                &:after {
+                    border-top: 1px solid  @dark_3_clr;
+                    display: block;
+                    height: 1px;
+                    content: " ";
+                    width: 45%;
+                    position: absolute;
+                    left: 0;
+                    top: 0.7rem;
+                }
+                &:after {
+                    right: 0;  
+                    left: auto; 
+                }
+            }
+        }
+        //
+        .fxs_social_sidebar_nav{
+            padding:10px;
+            .fxs_btn {
+            text-align: left;
+            i { padding-right: 30px; }
+            }
+        }
+        .fxs_login_message{
+            background-color:@dark_3_clr;
+            color:@light_2_clr;
+            padding:10px 1rem 10px 1rem;
+            margin-top:30px;
+            p{
+                font-style:italic;
+                text-transform:uppercase;
+                margin:0;
             }
         }
     }
-    //
-    .fxs_social_sidebar_nav{
-      padding:10px;
-      .fxs_btn {
-        text-align: left;
-        i { padding-right: 30px; }
-      }
-    }
-    .fxs_login_message{
-      background-color:@dark_3_clr;
-      color:@light_2_clr;
-      padding:10px 1rem 10px 1rem;
-      margin-top:30px;
-      p{
-          font-style:italic;
-          text-transform:uppercase;
-          margin:0;
-      }
-    }
-  }
    
   .fxs_timezone_btn{
-    .fxs_main_nav_rules(uppercase; none; @txt_size_small; @lightest_clr; inline-block; 10px 1rem 10px 1rem);
+    .fxs_main_nav(none, none, 25px, @txt_size_small, @main_header_height);
     background-color: @dark_1_clr;
     border-top: 1px solid @dark_3_clr;
     bottom: 0;
     position: fixed;
     width:100%;   
     time{ padding-left: 1rem; }
-    i{ padding-left: 2rem; }
-  }
+        i{ padding-left: 2rem; }
+      }
 }
 
 // Timezone menu
@@ -365,40 +308,34 @@
   z-index:99;
 }
 
+// wrapper timezone and items
 .fxs_timezone_hours {
-  &:extend(.fxs_scrollableContent all);
-  position: absolute;
-  top: @main_header_height;
-  .calc(height, ~'100% - @{main_header_height}');
-  &:hover, .fxs_touch & { overflow-y: auto; }
-  #selectable .ui-selected {
-    background-color:@dark_3_clr;
-    span{
-        &:after {
-          content:"\f00c";
-          position:absolute;
-          margin-top: -3px;
-          font-family: FontAwesome;
-          text-decoration: inherit;
-          color:@lightest_clr;
-          font-size: @txt_size_small;
-          padding-left: 10px;
-      }
-    }  
-  }
-  ol {
-    li {
-      .fxs_main_nav_rules(uppercase, 1px solid @dark_3_clr,  @txt_size_small, @light_1_clr, block, 10px 1rem 10px 1rem);
-      cursor:pointer;
-      &:hover{ background-color:@dark_3_clr; }
-      p {
-        margin:0;
-        padding:0;
-      }
-      span { color:@lightest_clr; }
-      p { color:@light_2_clr; }
+    &:extend(.fxs_scrollableContent all);
+    position: absolute;
+    top: @main_header_height;
+    .calc(height, ~'100% - @{main_header_height}');
+    &:hover, .fxs_touch & { overflow-y: auto; }
+    .ui-selected {
+        background-color:@dark_3_clr;
+        time{
+            &:after {
+                content:"\f00c";
+                position:absolute;
+                margin-top: -3px;
+                font-family: FontAwesome;
+                text-decoration: inherit;
+                color:@lightest_clr;
+                font-size: @txt_size_small;
+                padding-left: 10px;
+            }
+        }  
     }
-  }
+
+    a { 
+        .fxs_main_nav(uppercase, 1px solid @dark_3_clr,20px, @txt_size_small, 60px);    
+        span { color:@light_2_clr; display:block;  }
+    }
+
 }
 
 .fxs_timezone_nav {
@@ -456,7 +393,7 @@
   }
 }
 //
-// end sidebar user
+
 
 ////////// CONTENT //////// 
 .fxs_contentView {
