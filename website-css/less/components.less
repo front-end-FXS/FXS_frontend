@@ -3,55 +3,52 @@
 ////// Elements that function as a unit and can be mixed to build widgets /////////
 //////////////////////////////////////////////////////////////////////////////////
 
-/// LIST MENUS
+/// NAVIGATION MENUS
 
-// Lista que pone Pablo
-// Main Navigation MENUS
+// Main Navigation MENU (1st level navigation)
 .fxs_nav_menu { 
-    a{
-       .fxs_main_nav(uppercase, 1px solid @dark_3_clr, 25px, @txt_size_small, @main_header_height);
-    }    
-    .fxs_header & {
-        display: none;
-        @media (min-width: @screen-xl) {
-            display: inline-block;
-            float: left;
-            white-space: nowrap;
-        }
-        .fxs_tab_item(); 
-    }
-    
+  a{
+    .fxs_vertical_block_nav(1px solid @dark_3_clr, 25px, @txt_size_small, @main_header_height);
+  }    
+  .fxs_header & {
+    .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr);
+    display: none;
+    li:first-child { display: none; }
+    @media (min-width: @screen-xl) {
+      display: inline-block;
+      float: left;
+      white-space: nowrap;
+    } 
+  } 
 }
 
-// La otra lista que pone Pablo
-
-// items nav list
-.fxs_user_list {
-    border-bottom: 1px solid @dark_3_clr;
-    padding: 1rem 0;
-    a{
-        .fxs_main_nav(none, none, 25px, @txt_size_small, @main_header_height);           
-    }
-    .fxs_menuList_header {
-        .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_small);
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-    }
+// items nav list (2nd level navigations)
+.fxs_items_list_nav {
+  border-bottom: 1px solid @dark_3_clr;
+  li{
+    a { .fxs_list_nav(@txt_size_small, @light_3_clr, 0.72rem 1rem); }
+  }
+  .fxs_menuList_header {
+    .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall);
+    padding: 1.38rem 1rem 0.75rem;
+  }
 }
 
-// clase general para los tabs item
-.fxs_tabs_nav{
-    .fxs_tab_item();
-}
-
-
-// Mini-menu: barra topics (.fxs_content_subnav) y footer
+// Mini-menu: barra topics (3rd level navigation)
 .fxs_subnavInlined_list {
   display: none;
   @media (min-width: @screen-l) { display: inline-block; }
   li {
     display: inline-block;
     padding-right: 5px;
+  }
+}
+
+// Tabs navigation (overall nav options)
+.fxs_tabs_nav{
+  .fxs_tab_item(1px solid @light_3_clr; @light_2_clr; @light_3_clr);
+  .fxs_pageSidebar & {
+    .fxs_tab_item(1px solid @dark_4_clr; @light_2_clr; @dark_4_clr);
   }
 }
 

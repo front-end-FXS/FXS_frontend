@@ -29,7 +29,7 @@
 }
 
 .fxs_pageSidebar {
-  &:extend(.fxs_transition, .fxs_scrollableContent all);
+  &:extend(.fxs_scrollableContent all, .fxs_transition);
   background-color: @dark_1_clr;
   color: @lightest_clr;
   width: @slide_sidebar_space;
@@ -134,7 +134,6 @@
       .calc(width, ~'100% - @{left_rail_space}'); 
   }
   .fxs_toggleList {
-    &:extend(.fxs_transition);
     display: inline-block;
     cursor: pointer;
     height: @base_module_size;
@@ -156,48 +155,18 @@
   }
 }
 
-
-
-.fxs_menuList_user {
-    border-bottom: 1px solid @dark_3_clr;
-    li{
-         position:relative;
-         .fxs_avatar_badge{
-             top:12px;
-             right:10px;
-         }
-        a{
-            .fxs_main_nav_rules( none, none, @txt_size_small, @lightest_clr, block, 10px 1rem 10px 1rem);
-            &:hover{
-                background-color:@dark_3_clr;
-            }
-        }
-    }
-    .fxs_menuList_header {
-        &:extend(.fxs_styledIndicator_label, .fxs_boldAntialised_style);
-        color: @light_1_clr;
-        font-size: @txt_size_xsmall;
-        padding:10px 1rem 10px 1rem;
-    }
-    .fxs_item_logout{
-        border-top:1px solid @dark_3_clr;
-    }
-}
 // language sidebar
 .fxs_sidebar_language{
-    position:relative;
-    a{
-        background-color:@dark_3_clr;
+  position:relative;
+  a{
+    background-color:@dark_3_clr;
+  }
+  a, p, ul > li a{
+    .fxs_list_nav(@txt_size_small, @light_4_clr, 10px 1rem 10px 1rem);
+    &:hover{
+      color:@lightest_clr;
     }
-    a, p, ul > li a{
-        .fxs_main_nav_rules(lowercase, none, @txt_size_small, @light_4_clr, block, 10px 1rem 10px 1rem);  
-        &:first-letter{
-            text-transform:capitalize;
-        }
-        &:hover{
-            color:@lightest_clr;
-        }
-    }
+  }
 }
 .fxs_lang_group{ 
     position:absolute;
@@ -290,7 +259,7 @@
     }
    
   .fxs_timezone_btn{
-    .fxs_main_nav(none, none, 25px, @txt_size_small, @main_header_height);
+    .fxs_vertical_block_nav(none, 25px, @txt_size_small, @main_header_height);
     background-color: @dark_1_clr;
     border-top: 1px solid @dark_3_clr;
     bottom: 0;
@@ -332,7 +301,7 @@
     }
 
     a { 
-        .fxs_main_nav(uppercase, 1px solid @dark_3_clr,20px, @txt_size_small, 60px);    
+        .fxs_vertical_block_nav(1px solid @dark_3_clr,20px, @txt_size_small, 60px);    
         span { color:@light_2_clr; display:block;  }
     }
 
@@ -525,7 +494,6 @@
 }
 
 .fxs_listView_newItemsAlert {
-  &:extend(.fxs_transition all);
   display: block;
   text-align: center;
   font-size: @txt_size_small;
