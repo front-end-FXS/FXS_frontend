@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>News Home - FXStreet</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../ctpwidget-fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../website-css/fxs_screen.css">
+   
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="fxs_content">
+    <section class="fxs_detail">
+        <!-- header -->
+        <div class="sf_cols">
+            <div class="ctp_header">
+                <span class="ctp_pair_header"><i class="fa fa-arrow-down"></i>EUR/USD</span>
+                <div class="ctp_pair_header_value">
+                    1.27<strong>688/56</strong>7 <span class="ctp_red_mark">0.0026 (-0.12%)</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ctp_line_divider"></div>
+
+        <!-- content -->
+        <div class="ctp_main_content">
+            <div class="sf_cols">
+                <div class="ctp_fixed_size_column">
+                    <div class="ctp_donut_wrapper">
+                        <div class="ctp_donut_title">
+                            <div class="ctp_align_title">
+                                <span class="ctp_top_cell">Sell</span>
+                                <span class="ctp_bearish">40%</span>
+                            </div>
+
+                            <span class="ctp_highchart_divider ctp_align_title"></span>
+
+                            <div class="ctp_align_title">
+                                <span class="ctp_top_buy">Buy</span>
+                                <span class="ctp_bullish">60%</span>
+                            </div>
+                        </div>
+                        <!--<div id='chart'></div>-->
+                        <div id="donut_chart" class="c3" style="width: 100%; height: 200px"></div>
+                    </div>
+                </div>
+
+
+                <div class="ctp_cols_avg">
+                    <span class="ctp_small_info_size">Avg Sell Price</span>
+                    <span class="ctp_avg_sell">1.3380</span>
+                </div>
+
+                <div class="ctp_cols_avg">
+                    <span class="ctp_small_info_size">Avg Buy Price</span>
+                    <span class="ctp_avg_buy">1.3380</span>
+                </div>
+
+            </div>
+            <div class="ctp_line_divider"></div>
+            <!-- ctp barras -->
+            <div class="sf_cols">
+                
+                    <span class="ctp_distribution">Liquidity Distribution</span>
+                
+                
+                    <div class="ctp_orders">
+                        <span class="ctp_icon_buy">Buy Orders</span>
+                        <span class="ctp_icon_sell">Sell Orders</span>
+                    </div>
+               
+                <div class="fxs_swipeContent_slider">
+                    <div id="orders_chart" class="c3" style="width: 100%; height: 300px"></div>
+                </div>
+            </div>
+        </div><!-- main content -->
+
+        <div class="ctp_line_divider"></div>
+
+        <!-- footer -->
+
+        <div class="sf_cols">           
+            <span class="ctp_small_info_size ctp_info_align"><date>updated FEB 10, 00:00 GMT</date></span>
+            <a type="submit" class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>          
+        </div>
+    </section>
+</div>
+
+<script src="../ctpwidget-js/jquery-1.11.3.min.js"></script>
+<script src="../ctpwidget-js/c3.js"></script>
+<script src="../ctpwidget-js/d3.min.js"></script>
+<script src="../ctpwidget-js/scripts.js"></script>
+<script>
+     
+
+// donut chart
+
+var donut_chart = c3.generate({
+    bindto: '#donut_chart',
+           
+    data: {
+        columns: [
+        ['SELL', 100],
+        ['BUY', 60]
+        ],
+        type: 'gauge',
+        //onclick: function (d, i) { console.log("onclick", d, i); },
+        //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+        labels: {
+            format: {
+                y: d3.format("")
+                //y: function (v, id) { return "Custom Format: " + id; }
+            }
+        }
+    },
+            
+    zoom: {
+        enabled:false
+    },
+   
+    gauge: {
+        // label: {
+        // format: function(value, ratio) {
+        // return value;
+        // },
+        //show: false, // to turn off the min/max labels.
+        // },
+        // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+        // max: 100, // 100 is default
+        // units: ' %',
+        width: 6 // for adjusting arc thickness
+  
+    },
+    color: {
+        pattern: ['#328372', '#328372', '#CE4735', '#CE4735'], // the three color levels for the percentage values.
+        threshold: {
+            // unit: 'value', // percentage is default
+            // max: 200, // 100 is default
+            values: [0, 100]
+        }
+    },
+    size: {
+        height: 180
+    }
+});
+
+// bar chart
+
+var orders_chart = c3.generate({
+    bindto: '#orders_chart',
+    data: {
+        x: 'x',
+        columns: [
+        ['x', 1.0005, 1.0010, 1.0285, 1.0352, 1.0424, 1.05021, 1.0601, 1.0702, 1.0828, 1.0975, 1.1005, 1.1110, 1.1285, 1.1352, 1.1424, 1.15021, 1.1601, 1.1702, 1.1828, 1.1975],
+        ['SELL', 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
+        ['BUY', 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1]
+
+        ],
+        type: 'bar',
+        colors: {
+            SELL: '#328372',
+            BUY: '#CE4735'
+        },
+                
+    },
+    bar: {
+        /*width: {
+        ratio: 0.1 // this makes bar width 50% of length between ticks
+        }*/
+        // or
+        width: 2 // this makes bar width 100px
+    },
+    size: {
+        height: 100
+    }
+});
+</script>
+
+</body>
+
+</html>

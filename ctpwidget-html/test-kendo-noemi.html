@@ -1,0 +1,879 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="../ctpwidget-css/kendo/2014.3.1411/kendo.common.min.css" rel="stylesheet" />
+        <link href="../ctpwidget-css/kendo/2014.3.1411/kendo.dataviz.min.css" rel=" stylesheet" />
+        <link href="../ctpwidget-css/kendo/2014.3.1411/kendo.dataviz.default.min.css" rel="stylesheet" />
+        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../ctpwidget-fonts/font-awesome.min.css"  />
+        <link rel="stylesheet" href="../ctpwidget-css/styles.css">
+
+        <script src="../ctpwidget-js/kendo/2014.3.1411/jquery.min.js"></script>
+        <script src="../ctpwidget-js/kendo/2014.3.1411/kendo.all.min.js"></script>
+
+    </head>
+<body>
+    <div class="widget">
+        <div class="ctp_cols_row">
+            <div class="ctp_1_cols_66">
+                <span class="ctp_pair_header"><i class="fa fa-arrow-down"></i>EUR/USD</span>
+            </div>
+            <div class="ctp_1_cols_33">
+                <div class="ctp_pair_header_value">
+                    1.27<strong>688/56</strong>7 <span class="ctp_red_mark">0.0026 (-0.12%)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ctp_line_divider"></div>
+
+        <div class="widgetChart donut">
+            <div id="chart" style=""></div>
+            <script type="text/javascript">
+                function createChart() {
+                    $("#chart").kendoChart({
+                        title: {
+                            visible: false,
+                            position: "bottom",
+                            text: "tururu"
+                        },
+                        legend: {
+                            visible: false
+                        },
+                        plotArea: {
+                            padding: 0
+                        },
+                        chartArea: {
+                            background: ""
+                        },
+                        seriesDefaults: {
+                            type: "donut",
+                            startAngle: 180,
+                        },
+                        series: [{
+                            overlay: {
+                                gradient: "none"
+                            },
+                            highlight: {
+                                visible: false
+                            },
+                            size: 6,
+                            holeSize: 40,
+
+                            data: [{
+                                category: "Sell",
+                                value: 30.8,
+                                color: "#CE4735"
+                            }, {
+                                category: "Buy",
+                                value: 21.1,
+                                color: "#328372"
+                            }]
+                        }],
+                        tooltip: {
+                            visible: false,
+                            //template: "#= category # (#= series.name #): #= value #%"
+                        }
+                    });
+                }
+
+                $(document).ready(createChart);
+                $(document).bind("kendo:skinChange", createChart);
+            </script>
+            <div class="dataDonut">
+                <div class="sell">Sell<span>60%</span></div>
+                <div class="buy">Buy<span>40%</span></div>
+            </div>
+        </div>
+        <div class="widgetInfo">
+            <p class="infoS">Avrg. Price<br />Sell<span>1.1456</span></p>
+            <p class="infoB">Avrg. Price<br />Buy<span>1.1298</span></p>
+        </div>
+        <div class="clearB"></div>
+        <div class="divider"></div>
+
+        <div class="widgetChart barcode">
+            <div class="dataBarcode">
+                <ul>
+                    <li><span class="first">1.1256</span></li>
+                    <li><span>1.1351</span></li>
+                    <li><span>1.1355</span></li>
+                    <li><span>1.1451</span></li>
+                    <li><span>1.1561</span></li>
+                </ul>
+                <div class="clearB"></div>
+            </div>
+            <div id="chart2"></div>
+            <script>
+                var blogComments = [{
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "#CE4735"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "transparent"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }, {
+                    "value": 100,
+                    "userColor": "#328372"
+                }
+                ];
+
+                function createChart() {
+                    $("#chart2").kendoChart({
+                        dataSource: {
+                            data: blogComments
+                        },
+                        title: {
+                            visible: false
+                        },
+                        legend: {
+                            visible: false
+                        },
+                        seriesDefaults: {
+                            type: "column",
+                            spacing: 0,
+                            labels: {
+                                visible: false
+                            }
+                        },
+                        chartArea: {
+                            background: "transparent"
+                        },
+                        series: [{
+                            overlay: {
+                                gradient: "none"
+                            },
+                            highlight: {
+                                visible: false
+                            },
+                            field: "value",
+                            gap: 0,
+                            colorField: "userColor",
+                            border: {
+                                width: 0,
+                                color: "transparent"
+                            }
+                        }],
+                        valueAxis: {
+                            max: 28,
+                            majorGridLines: {
+                                visible: false
+                            },
+                            visible: false
+                        },
+                        axisDefaults: {
+                            visible: false
+                        },
+                        categoryAxis: {
+                            majorGridLines: {
+                                visible: false
+                            },
+                            line: {
+                                visible: false
+                            }
+                        }
+                    });
+                }
+
+                $(document).ready(createChart);
+                $(window).resize(createChart);
+                $(document).bind("kendo:skinChange", createChart);
+            </script>
+        </div>
+        <div class="clearB"></div>
+        <div class="divider"></div>
+        <div class="footerWidget">
+            <span>FEB 10, 00:00 GMT</span>
+        </div>
+    </div>
+    <div class="widget">
+        <div class="headerWidget" style="margin-top: 20px;">
+            <h5 class="widgetTitle">Forecast Poll</h5>
+            <div class="widgetMore"></div>
+        </div>
+        <ul class="forPoll">
+            <li class="first">
+                <div class="widgetChart donut">
+                    <div id="chartForPoll1" style=""></div>
+                    <script type="text/javascript">
+                        function createChart() {
+                            $("#chartForPoll1").kendoChart({
+                                title: {
+                                    visible: false,
+                                    position: "bottom",
+                                    text: "tururu"
+                                },
+                                legend: {
+                                    visible: false
+                                },
+                                plotArea: {
+                                    padding: 0
+                                },
+                                chartArea: {
+                                    background: ""
+                                },
+                                seriesDefaults: {
+                                    type: "donut",
+                                    startAngle: 150,
+                                },
+                                series: [{
+                                    overlay: {
+                                        gradient: "none"
+                                    },
+                                    highlight: {
+                                        visible: false
+                                    },
+                                    size: 6,
+                                    holeSize: 40,
+                                    data: [{
+                                        category: "Bullish",
+                                        value: 38.0,
+                                        color: "#CE4735"
+                                    }, {
+                                        category: "Sideways",
+                                        value: 12.0,
+                                        color: "#777777"
+                                    }, {
+                                        category: "Bearish",
+                                        value: 50.0,
+                                        color: "#328372"
+                                    }]
+                                }],
+                                tooltip: {
+                                    visible: false,
+                                }
+                            });
+                        }
+                        $(document).ready(createChart);
+                        $(document).bind("kendo:skinChange", createChart);
+                    </script>
+                    <div class="dataDonut">
+                        <div class="average">Avg.<br />Forecast<span>1.0321</span></div>
+                    </div>
+                </div>
+                <div class="widgetInfoForPoll">
+                    <p class="infoForPoll">
+                        <span class="greenWidgetFXS">38%</span>Bullish<br />
+                        <span class="grayWidgetFXS">12%</span>Sideways<br />
+                        <span class="redWidgetFXS">50%</span>Bearish<br />
+                    </p>
+                    <p class="resultForPoll">
+                        Biaf <span class="redWidgetFXS">Beearish</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="widgetChart donut">
+                    <div id="chartForPoll2" style=""></div>
+                    <script type="text/javascript">
+                        function createChart() {
+                            $("#chartForPoll2").kendoChart({
+                                title: {
+                                    visible: false,
+                                    position: "bottom",
+                                    text: "tururu"
+                                },
+                                legend: {
+                                    visible: false
+                                },
+                                plotArea: {
+                                    padding: 0
+                                },
+                                chartArea: {
+                                    background: ""
+                                },
+                                seriesDefaults: {
+                                    type: "donut",
+                                    startAngle: 150,
+                                },
+                                series: [{
+                                    overlay: {
+                                        gradient: "none"
+                                    },
+                                    highlight: {
+                                        visible: false
+                                    },
+                                    size: 6,
+                                    holeSize: 40,
+                                    data: [{
+                                        category: "Bullish",
+                                        value: 30.8,
+                                        color: "#CE4735"
+                                    }, {
+                                        category: "Sideways",
+                                        value: 21.1,
+                                        color: "#777777"
+                                    }, {
+                                        category: "Bearish",
+                                        value: 21.1,
+                                        color: "#328372"
+                                    }]
+                                }],
+                                tooltip: {
+                                    visible: false,
+                                }
+                            });
+                        }
+                        $(document).ready(createChart);
+                        $(document).bind("kendo:skinChange", createChart);
+                    </script>
+                    <div class="dataDonut">
+                        <div class="average">Avg.<br />Forecast<span>1.0321</span></div>
+                    </div>
+                </div>
+                <div class="widgetInfoForPoll">
+                    <p class="infoForPoll">
+                        <span class="greenWidgetFXS">38%</span>Bullish<br />
+                        <span class="grayWidgetFXS">12%</span>Sideways<br />
+                        <span class="redWidgetFXS">50%</span>Bearish<br />
+                    </p>
+                    <p class="resultForPoll">
+                        Biaf <span class="greenWidgetFXS">Bullish</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="widgetChart donut">
+                    <div id="chartForPoll3" style=""></div>
+                    <script type="text/javascript">
+                        function createChart() {
+                            $("#chartForPoll3").kendoChart({
+                                title: {
+                                    visible: false,
+                                    position: "bottom",
+                                    text: "tururu"
+                                },
+                                legend: {
+                                    visible: false
+                                },
+                                plotArea: {
+                                    padding: 0
+                                },
+                                chartArea: {
+                                    background: ""
+                                },
+                                seriesDefaults: {
+                                    type: "donut",
+                                    startAngle: 150,
+                                },
+                                series: [{
+                                    overlay: {
+                                        gradient: "none"
+                                    },
+                                    highlight: {
+                                        visible: false
+                                    },
+                                    size: 6,
+                                    holeSize: 40,
+                                    data: [{
+                                        category: "Bullish",
+                                        value: 30.8,
+                                        color: "#c33d3a"
+                                    }, {
+                                        category: "Sideways",
+                                        value: 21.1,
+                                        color: "#777777"
+                                    }, {
+                                        category: "Bearish",
+                                        value: 21.1,
+                                        color: "#87B93A"
+                                    }]
+                                }],
+                                tooltip: {
+                                    visible: false,
+                                }
+                            });
+                        }
+                        $(document).ready(createChart);
+                        $(document).bind("kendo:skinChange", createChart);
+                    </script>
+                    <div class="dataDonut">
+                        <div class="average">Avg.<br />Forecast<span>1.0321</span></div>
+                    </div>
+                </div>
+                <div class="widgetInfoForPoll">
+                    <p class="infoForPoll">
+                        <span class="greenWidgetFXS">38%</span>Bullish<br />
+                        <span class="grayWidgetFXS">12%</span>Sideways<br />
+                        <span class="redWidgetFXS">50%</span>Bearish<br />
+                    </p>
+                    <p class="resultForPoll">
+                        Biaf <span class="yellowWidgetFXS">Sideways</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <div class="clearB"></div>
+        <div class="divider"></div>
+        <div class="footerWidget">
+            <span>FEB 10, 00:00 GMT</span>
+        </div>
+    </div>
+</body>
+
+</html>
