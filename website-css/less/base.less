@@ -74,6 +74,12 @@
 // Helpers, generic margins, positions & displays
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
+.fxs_fLeft { float: left; }
+.fxs_fRight { float: right; }
+.fxs_marginBase_top { margin-top: 1rem; }
+.fxs_marginBase_right { margin-right: 1rem; }
+.fxs_marginBase_bottom { margin-bottom: 1rem; }
+.fxs_marginBase_left { margin-left: 1rem; }
 
 // Wide content containers
 .fxs_wideContent {
@@ -210,7 +216,7 @@ a{
 .fxs_mutedLink {
   color: #48484e;
   padding-right: 10px;
-  font-size: 11px;
+  // font-size: 11px;
 }
 
 /////////////////////////////////////////////////////////////
@@ -327,7 +333,7 @@ h4 { font-size: @txt_size_large;}
 
 // Swipe content in mobile
 .fxs_swipeContent_slider {
-  &:extend(.fxs_scrollableContent all, .fxs_clearfix all);
+  &:extend(.fxs_scrollableContent all);
   .calc(width, ~'100% + 0.5rem');
   padding: 0 0 1rem;
   white-space: nowrap;
