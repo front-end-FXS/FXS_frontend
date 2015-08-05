@@ -126,6 +126,8 @@ q:after {
 .fxs_clearfix::after,
 .fxs_wideContent::before,
 .fxs_wideContent::after,
+.fxs_swipeContent_slider::before,
+.fxs_swipeContent_slider::after,
 .fxs_divider_first::before,
 .fxs_divider_first::after,
 .fxs_divider_second::before,
@@ -167,6 +169,7 @@ q:after {
 }
 .fxs_clearfix::after,
 .fxs_wideContent::after,
+.fxs_swipeContent_slider::after,
 .fxs_divider_first::after,
 .fxs_divider_second::after,
 .fxs_divider_third::after,
@@ -1073,7 +1076,7 @@ input[type=submit] {
   display: block;
   color: #8b8c91;
   font-size: 0.75rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   padding: 1.38rem 1rem 0.75rem;
 }
 .fxs_subnavInlined_list {
@@ -1150,7 +1153,7 @@ input[type=submit] {
   display: inline-block;
   color: #2e2e32;
   font-size: 1rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
 }
 @media (min-width: 768px) {
   .fxs_sectionTitle_header {
@@ -1161,7 +1164,7 @@ input[type=submit] {
   display: inline-block;
   color: #48484e;
   font-size: 0.88rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   background-color: #dcddde;
   margin: 0 0 1rem -1rem;
   padding: 0 0.8rem;
@@ -1170,7 +1173,7 @@ input[type=submit] {
   display: inline-block;
   color: #48484e;
   font-size: 0.75rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   margin-bottom: 1rem;
   border-bottom: 3px solid #efeff0;
 }
@@ -1178,7 +1181,7 @@ input[type=submit] {
   display: inline-block;
   color: #48484e;
   font-size: 0.88rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   margin-right: 0.5rem;
 }
 .fxs_btn,
@@ -1710,7 +1713,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   display: inline-block;
   color: #48484e;
   font-size: 0.75rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   margin: 0 0.5rem 0 0;
   padding: 1px 0.4rem;
 }
@@ -1993,7 +1996,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   display: block;
   color: #a2a2a7;
   font-size: 0.75rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   line-height: 35px;
 }
 .fxs_dropdownList > li > a {
@@ -3193,7 +3196,7 @@ fieldset[disabled] .fxs_dismissQuery {
   display: block;
   color: #a2a2a7;
   font-size: 0.75rem;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   background-color: #ffffff;
   cursor: default;
   line-height: 17.5px;

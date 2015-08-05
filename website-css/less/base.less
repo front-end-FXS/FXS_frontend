@@ -327,7 +327,7 @@ h4 { font-size: @txt_size_large;}
 
 // Swipe content in mobile
 .fxs_swipeContent_slider {
-  &:extend(.fxs_scrollableContent all);
+  &:extend(.fxs_scrollableContent all, .fxs_clearfix all);
   .calc(width, ~'100% + 0.5rem');
   padding: 0 0 1rem;
   white-space: nowrap;
@@ -456,7 +456,7 @@ h4 { font-size: @txt_size_large;}
   display: @text-box-display;
   color: @text-color;
   font-size: @text-font-size;
-  letter-spacing: inherit;
+  letter-spacing: normal;
   &:extend(.fxs_styledIndicator_label, .fxs_boldAntialised_style);
 }
 
