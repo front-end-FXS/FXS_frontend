@@ -523,3 +523,89 @@ caption {
     &:extend(.fxs_headline_from_nano_to_tiny all);
   }
 }
+
+// ############################################ widgets
+
+.ctp_distribution, .ctp_orders{
+    font-size:@txt_size_xsmall;
+}
+.ctp_orders{
+   float:right;
+    &:extend(.fxs_mini_widget);
+}
+
+.ctp_icon_sell{
+   border-left:5px solid @error_clr;
+   padding-left: 2px;
+   vertical-align:middle;
+   &:extend(.fxs_mini_widget);
+
+}
+
+.ctp_icon_buy{
+   border-left:5px solid @success_clr;
+   padding-left: 2px;
+   vertical-align:middle;
+   margin-right:10px;
+}
+
+// widget price module
+
+.fxs_widget_header_price{
+    &:extend(.fxs_widget_divider_module);
+}
+
+.fxs_widget_price{
+    float:right;
+     &:extend(.fxs_mini_widget);
+}
+
+.fxs_widget_price_red{
+    color:@error_clr;
+    &:extend(.fxs_mini_widget);
+}
+
+// widget donut module
+
+.fxs_widget_donut{
+    display:inline-block; 
+    max-width:200px;
+    position:relative;
+}
+
+
+
+// widget footer module
+
+.fxs_btn_line{
+    float:right;
+    &:extend(.fxs_mini_widget);
+}
+
+.ctp_info_align{
+    float:left;
+    &:extend(.fxs_mini_widget);
+}
+
+// extends
+.fxs_mini_widget{
+    @media (max-width:320px){
+        float:none;
+        display:block;
+    }
+}
+
+.fxs_widget_divider_module{
+    padding-bottom:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid @light_4_clr;
+}
+
+
+// disable plugin rules in c3.js
+.c3-tooltip-container{
+    display:none!important;
+}
+.c3-chart-arcs-gauge-max, .c3-chart-arcs-gauge-min, .c3-gauge-value, .domain, .c3-axis-y{
+    display:none;
+}

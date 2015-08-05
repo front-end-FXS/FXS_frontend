@@ -8,56 +8,21 @@
 
 // custom styles
 
-.ctp_red_mark{
-    color:@error_clr;
-}
-.ctp_line_divider{
-    background:url('../../../ctpwidget-img/ctp_divider.jpg');
-    background-repeat:repeat;
-    height:2px;
-    margin:15px 0 15px 0;
-    
-}
+
 .fa-arrow-down{
     color:@error_clr;
     padding-right:10px;
 }
 
-// cols avg values
-.ctp_cols_avg{
-    //padding:0;
-    padding-left:0;
-    float:none;
-    @media (min-width: @grid-float-breakpoint-small){
-        float:left;
-        padding-left:15px;
-    } 
-}
-
-.ctp_fluid{
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-// divider
-.ctp_line{
-    color:@light_3_clr;
-    margin-left:15px;
-    margin-right:15px;
-}
 
 /////////////////////// template
 
-.ctp_main_content{
-    padding:25px 0 25px 0;
-}
 
 .ctp_bullish{
    .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @success_clr;);
 }
 .ctp_bearish{
-    .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @error_clr);
+    .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @error_clr); 
 }
 .ctp_sideways{
     .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @dark_4_clr);
@@ -74,139 +39,65 @@
     padding-right:20px;
 }
 
-// ########################## used in footer and avg details
 
+// widget precent price sell and buy module
 
-.ctp_small_info_size{
-    display:block;
-    font-size:@txt_size_xsmall;
-    color:@light_2_clr;
-}
-
-
-// ######################## header
-
-
-.ctp_pair_header{
-    font-size:@txt_size_large;
-    font-weight:@txt_fontweight_bold;
-    float:none;
-    @media (min-width: @grid-float-breakpoint-small){
-        float:left;
-    } 
-}
-.ctp_pair_header_value{
-    float:none;
-    @media (min-width: @grid-float-breakpoint-small){
-        float:right;
-    } 
-}
-
-
-// ######################## main graphics content
-
-
-// donut  styles
-// it was necesary to use negative values because is very difficult to config this plugin styles
-#chart{
-    margin:-50px 0 -50px;
-}
-// donut column
-.ctp_fixed_size_column{
-    float:left;
-    max-width:300px;
-    width:210px;
-}
-.c3-legend-item{
-    display:none;
-}
-.ctp_donut_wrapper{
-    position:relative;
-}
-
-// donut inner text
 .ctp_donut_title{
     position:absolute;
-    top:115px;
-    left:55px;
+    top:35px;
+    left:57px;
     font-size:@txt_size_xsmall;
     //font-weight:
 }
-.ctp_align_title{
-    display:inline-block;
-    margin:0 5px 0 5px;
+.ctp_divider{
+    border-left: 2px solid #ccc;
+    padding-left:10px;
+}
+.ctp_sell_title{  
+     display:inline-block;
     span{
         display:block;
         padding:0;
         margin:0;
     }
 }
+.ctp_buy_title{
+    &:extend(.ctp_sell_title all);
+    padding-right:10px;
+}
 
 .ctp_top_cell, .ctp_top_buy{
     font-style:italic;
 }
-.ctp_highchart_divider{
-    background:url('../../../ctpwidget-img/ctp_divider.jpg');
-    background-repeat:repeat;
-    height:35px;
-    width:2px;
-}
-.highcharts-button{
-    display:none;
+
+.c3-legend-item{
+    display:none; // hide something that i don´t remember
 }
 
-// barras rules c3.js plugin
+// widget cols avg prices values
 
-#donut_chart{
-    margin-top:-90px;
+.fxs_widget_avg_price{
+    display:inline-block;
+    padding-bottom:10px;
+    width:40%;
 }
-
-// disable rules in c3.js
-.c3-tooltip-container{
-    display:none!important;
-}
-.c3-chart-arcs-gauge-max, .c3-chart-arcs-gauge-min, .c3-gauge-value, .domain, .c3-axis-y{
-    display:none;
+.fxs_module_cols_avg{
+    padding-left:20px;
+    float:left;
 }
 
-.ctp_distribution, .ctp_orders{
-    font-size:@txt_size_xsmall;
-}
-.ctp_orders{
-    float:none;
-     @media (min-width: @grid-float-breakpoint-small){
-        float:right;
-    }
+.widget_avg_small{
+    display:block;
 }
 
-.ctp_icon_sell{
-   border-left:5px solid @error_clr;
-   padding-left: 2px;
-   vertical-align:middle;
+
+// ######################## main graphics content
+
+.fxs_widget_content_module, .fxs_widget_bars_content{
+    &:extend(.fxs_widget_divider_module);
 }
 
-.ctp_icon_buy{
-   border-left:5px solid @success_clr;
-   padding-left: 2px;
-   vertical-align:middle;
-   margin-right:10px;
-}
 
-// ######################### footer
 
-.fxs_btn_line{
-    float:none;
-    @media (min-width: @grid-float-breakpoint-small){
-        float:right;
-    } 
-}
 
-.ctp_info_align{
-    float:none;
-    &:extend(.ctp_small_info_size);
-    @media (min-width: @grid-float-breakpoint-small){
-        float:left;
-    } 
-    
-}
 

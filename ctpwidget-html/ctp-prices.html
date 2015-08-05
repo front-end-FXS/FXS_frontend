@@ -5,7 +5,7 @@
     <title>News Home - FXStreet</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../ctpwidget-fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="../website-font/font-awesome.min.css" />
     <link rel="stylesheet" href="../website-css/fxs_screen.css">
    
     <!--[if lt IE 9]>
@@ -17,87 +17,76 @@
 
 <div class="fxs_content">
     <section class="fxs_detail">
-        <!-- header -->
-        <div class="sf_cols">
-            <div class="ctp_header">
-                <span class="ctp_pair_header"><i class="fa fa-arrow-down"></i>EUR/USD</span>
-                <div class="ctp_pair_header_value">
-                    1.27<strong>688/56</strong>7 <span class="ctp_red_mark">0.0026 (-0.12%)</span>
+        <!-- header price -->
+
+        <div class="fxs_widget_header_price">
+            <span class="fxs_widget_pair_price"><i class="fa fa-arrow-down"></i>EUR/USD</span>
+            <div class="fxs_widget_price">
+                1.27<strong>68<sup>8</sup>/56</strong><sup>7</sup> <span class="fxs_widget_price_red">0.0026 (-0.12%)</span>
+            </div>
+        </div>
+
+        <!-- price content -->
+        <div class="fxs_widget_content_module">
+            <div class="fxs_widget_donut">
+                <div class="ctp_donut_title">
+                    <div class="ctp_buy_title ">
+                        <span class="ctp_top_cell">Sell</span>
+                        <span class="ctp_bearish">40%</span>
+                    </div>
+
+                    <div class="ctp_sell_title ctp_divider">
+                        <span class="ctp_top_buy">Buy</span>
+                        <span class="ctp_bullish">60%</span>
+                    </div>
                 </div>
+
+                <div id="donut_chart" class="c3"></div>
+            </div>
+
+            <div class="fxs_widget_avg_price">
+                <div class="fxs_module_cols_avg">
+                    <small class="widget_avg_small">Avg Sell Price</small>
+                    <span class="ctp_avg_sell">1.3380</span>
+                </div>
+
+                <div class="fxs_module_cols_avg">
+                    <small class="widget_avg_small">Avg Buy Price</small>
+                    <span class="ctp_avg_buy">1.3380</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ctp barras content -->
+        <div class="fxs_widget_bars_content">
+            <span class="ctp_distribution">Liquidity Distribution</span>
+
+
+            <div class="ctp_orders">
+                <span class="ctp_icon_buy">Buy Orders</span>
+                <span class="ctp_icon_sell">Sell Orders</span>
+            </div>
+
+            <div class="fxs_swipeContent_slider">
+                <div id="orders_chart" class="c3" style="width: 100%; height: 300px"></div>
             </div>
 
         </div>
 
-        <div class="ctp_line_divider"></div>
 
-        <!-- content -->
-        <div class="ctp_main_content">
-            <div class="sf_cols">
-                <div class="ctp_fixed_size_column">
-                    <div class="ctp_donut_wrapper">
-                        <div class="ctp_donut_title">
-                            <div class="ctp_align_title">
-                                <span class="ctp_top_cell">Sell</span>
-                                <span class="ctp_bearish">40%</span>
-                            </div>
-
-                            <span class="ctp_highchart_divider ctp_align_title"></span>
-
-                            <div class="ctp_align_title">
-                                <span class="ctp_top_buy">Buy</span>
-                                <span class="ctp_bullish">60%</span>
-                            </div>
-                        </div>
-                        <!--<div id='chart'></div>-->
-                        <div id="donut_chart" class="c3" style="width: 100%; height: 200px"></div>
-                    </div>
-                </div>
-
-
-                <div class="ctp_cols_avg">
-                    <span class="ctp_small_info_size">Avg Sell Price</span>
-                    <span class="ctp_avg_sell">1.3380</span>
-                </div>
-
-                <div class="ctp_cols_avg">
-                    <span class="ctp_small_info_size">Avg Buy Price</span>
-                    <span class="ctp_avg_buy">1.3380</span>
-                </div>
-
-            </div>
-            <div class="ctp_line_divider"></div>
-            <!-- ctp barras -->
-            <div class="sf_cols">
-                
-                    <span class="ctp_distribution">Liquidity Distribution</span>
-                
-                
-                    <div class="ctp_orders">
-                        <span class="ctp_icon_buy">Buy Orders</span>
-                        <span class="ctp_icon_sell">Sell Orders</span>
-                    </div>
-               
-                <div class="fxs_swipeContent_slider">
-                    <div id="orders_chart" class="c3" style="width: 100%; height: 300px"></div>
-                </div>
-            </div>
-        </div><!-- main content -->
-
-        <div class="ctp_line_divider"></div>
 
         <!-- footer -->
 
-        <div class="sf_cols">           
-            <span class="ctp_small_info_size ctp_info_align"><date>updated FEB 10, 00:00 GMT</date></span>
-            <a type="submit" class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>          
+        <div class="fxs_widget_footer">
+            <small ctp_info_align"><date>updated FEB 10, 00:00 GMT</date></small>
+            <a type="submit" class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
         </div>
     </section>
 </div>
 
-<script src="../ctpwidget-js/jquery-1.11.3.min.js"></script>
+<script src="../website-js/jquery-1.11.3.min.js"></script>
 <script src="../ctpwidget-js/c3.js"></script>
 <script src="../ctpwidget-js/d3.min.js"></script>
-<script src="../ctpwidget-js/scripts.js"></script>
 <script>
      
 
@@ -149,7 +138,7 @@ var donut_chart = c3.generate({
         }
     },
     size: {
-        height: 180
+        height: 90
     }
 });
 
