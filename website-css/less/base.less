@@ -71,16 +71,6 @@
   margin-bottom: 1rem;
 }
 
-// Helpers, generic margins, positions & displays
-.fxs_relativePositioning { position: relative; }
-.fxs_iBlock { display: inline-block; }
-.fxs_fLeft { float: left; }
-.fxs_fRight { float: right; }
-.fxs_marginBase_top { margin-top: 1rem; }
-.fxs_marginBase_right { margin-right: 1rem; }
-.fxs_marginBase_bottom { margin-bottom: 1rem; }
-.fxs_marginBase_left { margin-left: 1rem; }
-
 // Wide content containers
 .fxs_wideContent {
   &:extend(.fxs_clearfix all);
@@ -95,6 +85,20 @@
 .fxs_wideContent_bordered {
   &:extend(.fxs_wideContent all);
   border-top: 5px solid @light_4_clr;
+}
+
+// Helpers, generic margins, positions & displays
+.fxs_relativePositioning { position: relative; }
+.fxs_iBlock { display: inline-block; }
+.fxs_fLeft { float: left; }
+.fxs_fRight { float: right; }
+.fxs_marginBase_top { margin-top: 1rem; }
+.fxs_marginBase_right { margin-right: 1rem; }
+.fxs_marginBase_bottom { margin-bottom: 1rem; }
+.fxs_marginBase_left { margin-left: 1rem; }
+.fxs_resetRow_margin {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 ////////////////////////////////////////////////
@@ -156,6 +160,8 @@ small {
   color: @light_1_clr;
 }
 
+sub, sup { font-size: @txt_size_xsmall; }
+
 hr {
   border: 0;
   background-color: @dark_4_clr;
@@ -216,7 +222,6 @@ a{
 .fxs_mutedLink {
   color: #48484e;
   padding-right: 10px;
-  // font-size: 11px;
 }
 
 /////////////////////////////////////////////////////////////

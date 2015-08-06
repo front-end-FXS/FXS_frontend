@@ -31,8 +31,6 @@ s,
 samp,
 small,
 strike,
-sub,
-sup,
 tt,
 var,
 b,
@@ -140,8 +138,6 @@ q:after {
 .fxs_detail::after,
 .sf_cols::before,
 .sf_cols::after,
-.fxs_row::before,
-.fxs_row::after,
 .fxs_article_body::before,
 .fxs_article_body::after,
 .fxs_suscribeForm::before,
@@ -176,7 +172,6 @@ q:after {
 .fxs_relatedContent_holder::after,
 .fxs_detail::after,
 .sf_cols::after,
-.fxs_row::after,
 .fxs_article_body::after,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::after,
@@ -281,30 +276,6 @@ label,
   background-color: #efeff0;
   margin-bottom: 1rem;
 }
-.fxs_relativePositioning {
-  position: relative;
-}
-.fxs_iBlock {
-  display: inline-block;
-}
-.fxs_fLeft {
-  float: left;
-}
-.fxs_fRight {
-  float: right;
-}
-.fxs_marginBase_top {
-  margin-top: 1rem;
-}
-.fxs_marginBase_right {
-  margin-right: 1rem;
-}
-.fxs_marginBase_bottom {
-  margin-bottom: 1rem;
-}
-.fxs_marginBase_left {
-  margin-left: 1rem;
-}
 .fxs_wideContent,
 .fxs_wideContent_bordered,
 .fxs_divider_wide,
@@ -333,6 +304,34 @@ label,
 .fxs_sexy_banner,
 .fxs_entriesList_carousel {
   border-top: 5px solid #efeff0;
+}
+.fxs_relativePositioning {
+  position: relative;
+}
+.fxs_iBlock {
+  display: inline-block;
+}
+.fxs_fLeft {
+  float: left;
+}
+.fxs_fRight {
+  float: right;
+}
+.fxs_marginBase_top {
+  margin-top: 1rem;
+}
+.fxs_marginBase_right {
+  margin-right: 1rem;
+}
+.fxs_marginBase_bottom {
+  margin-bottom: 1rem;
+}
+.fxs_marginBase_left {
+  margin-left: 1rem;
+}
+.fxs_resetRow_margin {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .fxs_transition,
 a,
@@ -454,6 +453,10 @@ blockquote footer {
 small {
   font-size: 11px;
   color: #8b8c91;
+}
+sub,
+sup {
+  font-size: 0.75rem;
 }
 hr {
   border: 0;
@@ -2277,7 +2280,9 @@ caption {
   }
 }
 .fxs_widget_divider_module,
-.fxs_widget_header_price {
+.fxs_widget_header_price,
+.fxs_widget_content_module,
+.fxs_widget_bars_content {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #efeff0;
@@ -3351,8 +3356,7 @@ width:calc(100% - 320px);
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
-.sf_1col_1_100,
-.fxs_col_12 {
+.sf_1col_1_100 {
   min-height: 1px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -3424,10 +3428,6 @@ width:calc(100% - 320px);
   .sf_disable_cols {
     display: block;
   }
-}
-.fxs_row {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
 }
 .fxs_article_header {
   padding: 0 0 0.5rem 0;
@@ -3741,5 +3741,80 @@ height:calc(100% - 4rem);
   display: none;
 }
 .fxs_inVisualField .fxs_leaderboard_sponsor {
+  display: block;
+}
+.fa-arrow-down {
+  color: #ce4735;
+  padding-right: 10px;
+}
+.ctp_bullish {
+  font-size: 16px;
+  font-weight: 700;
+  color: #328372;
+}
+.ctp_bearish {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ce4735;
+}
+.ctp_sideways {
+  font-size: 16px;
+  font-weight: 700;
+  color: #48484e;
+}
+.ctp_avg_sell {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ce4735;
+}
+.ctp_avg_buy {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #328372;
+}
+.ctp_avg_buy,
+.ctp_avg_sell {
+  padding-right: 20px;
+}
+.ctp_donut_title {
+  position: absolute;
+  top: 35px;
+  left: 57px;
+  font-size: 0.75rem;
+}
+.ctp_divider {
+  border-left: 2px solid #ccc;
+  padding-left: 10px;
+}
+.ctp_sell_title,
+.ctp_buy_title {
+  display: inline-block;
+}
+.ctp_sell_title span,
+.ctp_buy_title span {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.ctp_buy_title {
+  padding-right: 10px;
+}
+.ctp_top_cell,
+.ctp_top_buy {
+  font-style: italic;
+}
+.c3-legend-item {
+  display: none;
+}
+.fxs_widget_avg_price {
+  display: inline-block;
+  padding-bottom: 10px;
+  width: 40%;
+}
+.fxs_module_cols_avg {
+  padding-left: 20px;
+  float: left;
+}
+.widget_avg_small {
   display: block;
 }
