@@ -419,6 +419,18 @@ caption {
 	text-align: left;
 }
 
+.fxs_tableHover {
+  tbody {
+    &:hover tr {
+      .opacity(.6);
+      &:hover {
+        .opacity(1);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 // LOADERS
 .fxs_feedbackLoading_msg {
   .animation(just-appear 0.5s ease-in);

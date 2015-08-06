@@ -2112,6 +2112,21 @@ caption {
   padding: 0.5rem 0;
   text-align: left;
 }
+.fxs_tableHover tbody:hover tr {
+  zoom: 1;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.fxs_tableHover tbody:hover tr:hover {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  cursor: pointer;
+}
 .fxs_feedbackLoading_msg {
   -webkit-animation: just-appear 0.5s ease-in;
   -moz-animation: just-appear 0.5s ease-in;
