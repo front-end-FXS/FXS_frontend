@@ -26,6 +26,11 @@
   @media (min-width: @screen-l) {
     margin-left: @left_rail_space;
   }
+  &.fxs_content_wide{
+    @media (min-width: @screen-l) {
+      margin-left: 0;
+    }
+  }
 }
 
 .fxs_pageSidebar {
@@ -794,20 +799,6 @@
         display:block;
     }
 }
- // end cols pablo 
-
-
-////////////////// Tabla widgets: Esto irá en components
-
-// Contributor boxes
-.fxs_article_author {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-// CTP Table
-.fxs_ctpTable_contributor { width: 20%; }
-.fxs_ctpTable_order { width: 15%; }
 
 /////////////////////////STYCKY/////////////////////////////
 // .stickem-container{ position: relative; }

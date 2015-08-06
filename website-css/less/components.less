@@ -298,6 +298,27 @@
   height: @avatar_l;
 }
 
+// Contributor boxes
+.fxs_contributorBox { white-space: nowrap; }
+.fxs_contributorBox, .fxs_article_author {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.fxs_contributorBox_nano {
+  font-size: @txt_size_small;
+  .fxs_avatar_circleImage_s {
+    margin-right: 0.25rem;
+    display: none;
+  }
+  .fxs_article_author { white-space: normal; }
+  @media (min-width: @screen-m) {
+    .fxs_avatar_circleImage_s { display: inline-block; }
+    .fxs_article_author { white-space: nowrap; }
+  }
+
+}
+
 /// DROPDOWNS
 .fxs_dropdown_generic {
   .animation(slide-from-top-and-appear 0.35s ease-in);
@@ -390,7 +411,7 @@
     &:hover { .opacity(.75); }
 }
 
-/// TABLES
+/// TABLES FOR CONTENT AND WIDGETS
 .fxs_table {
 	width: 100%;
  	max-width: 100%;
@@ -407,25 +428,39 @@
  		text-align: left;
  	}
   tbody tr td, tbody tr th {
+    text-align: left;
     vertical-align: middle;
+    white-space: normal;
+  }
+  caption {
+    font-size: @txt_size_small;
+    color: @light_1_clr;
+    padding: 0.5rem 0;
     text-align: left;
   }
 }
 
-caption {
-	font-size: @txt_size_small;
-	color: @light_1_clr;
-	padding: 0.5rem 0;
-	text-align: left;
-}
-
 .fxs_tableHover {
   tbody {
-    &:hover tr {
-      .opacity(.6);
-      &:hover {
-        .opacity(1);
-        cursor: pointer;
+    tr td:last-child {
+      width: @base_module_size;
+      text-align: right;
+      .fxs_btn_icon { color: @light_3_clr; }
+    }
+    &:hover {
+      background-color: lighten(@light_5_clr, 2%);
+      tr {
+        .opacity(.5);
+        &:hover {
+          &:extend(.fxs_transition);
+          .opacity(1);
+          background-color: @lightest_clr;
+          cursor: pointer;
+          .fxs_btn_icon {
+            color: @dark_4_clr;
+            padding-left: 0.5rem;
+          }
+        }
       }
     }
   }
