@@ -39,7 +39,6 @@
   top: 0;
   overflow-x: hidden;
   visibility: hidden;
-  &:hover, .fxs_touch & { overflow-y: auto; }
   &.fxs_sidebar_nav  { left: 0; }
   &.fxs_sidebar_user { right: 0; }
   .fxs_helperLabel_title { color:@light_2_clr; }
@@ -283,7 +282,6 @@
     position: absolute;
     top: @main_header_height;
     .calc(height, ~'100% - @{main_header_height}');
-    &:hover, .fxs_touch & { overflow-y: auto; }
     .ui-selected {
         background-color:@dark_3_clr;
         time{
@@ -466,7 +464,6 @@
   top: @base_module_size;
   width: 100%;
   .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
-  &:hover, .fxs_touch & { overflow-y: auto; }
 }
 
 // Absolute dimension spaces in layout
@@ -803,7 +800,14 @@
 ////////////////// Tabla widgets: Esto irá en components
 
 // Contributor boxes
+.fxs_article_author {
+  display: inline-block;
+  vertical-align: middle;
+}
 
+// CTP Table
+.fxs_ctpTable_contributor { width: 20%; }
+.fxs_ctpTable_order { width: 15%; }
 
 /////////////////////////STYCKY/////////////////////////////
 // .stickem-container{ position: relative; }

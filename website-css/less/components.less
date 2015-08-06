@@ -215,6 +215,19 @@
   .fxs_alert_warning & { color: @dark_1_clr; }
 }
 
+// TEXT CONTEXTUAL COLORS
+.fxs_txt_success {
+  .fxs_txt_color_variants(@success_clr);
+}
+
+.fxs_txt_danger {
+  .fxs_txt_color_variants(@error_clr);
+}
+
+.fxs_txt_neutral {
+  .fxs_txt_color_variants(@light_1_clr);
+}
+
 // DIVIDERS
 .fxs_divider_wide {
   &:extend(.fxs_divider_base, .fxs_wideContent all);
@@ -382,23 +395,21 @@
 	width: 100%;
  	max-width: 100%;
  	font-size: @txt_size_small;
- 	> thead > tr > th{ vertical-align: bottom; }
- 	> tbody > tr > td,
- 	> tbody > tr > th,
- 	> tfoot > tr > td,
- 	> tfoot > tr > th,
- 	> thead > tr > td,
- 	> thead > tr > th  {
- 		padding: 8px;
-  		line-height: 1.42857143;
-  		vertical-align: top;
-  		border-bottom: 1px solid @light_3_clr;
+ 	tbody tr td, tbody tr th, tfoot tr td,
+  tfoot tr th, thead tr td, thead tr th  {
+ 		padding: 0.5rem;
+		line-height: @txt_lineheight_reset;
+		border-bottom: 1px solid @light_3_clr;
  	}
+  thead tr th { vertical-align: bottom; }
  	th {
-    &:extend(.fxs_boldAntialised_style);
- 		color: @light_2_clr;
- 		text-align: left; 
+    .fxs_stiled_text_variants(table-cell; @light_1_clr; @txt_size_xsmall);
+ 		text-align: left;
  	}
+  tbody tr td, tbody tr th {
+    vertical-align: middle;
+    text-align: left;
+  }
 }
 
 caption {

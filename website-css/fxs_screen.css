@@ -249,6 +249,7 @@ label,
 .fxs_label,
 .fxs_alertLabel,
 .fxs_dropdownHeader,
+.fxs_table th,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a:hover,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a:focus,
@@ -512,7 +513,7 @@ a:hover {
 }
 .fxs_mutedLink {
   color: #48484e;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 h1,
 h2,
@@ -618,8 +619,8 @@ h4 {
 .fxs_timezone_hours,
 .fxs_listViewRail {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 @media (min-width: 1024px) {
   .fxs_scrollableContent,
@@ -703,10 +704,6 @@ width:calc(100% + 0.5rem);
   padding: 0 0 1rem;
   white-space: nowrap;
   display: inline-block;
-}
-.fxs_swipeContent_slider:hover,
-.fxs_touch .fxs_swipeContent_slider {
-  overflow-x: auto;
 }
 @media (min-width: 768px) {
   .fxs_swipeContent_slider {
@@ -1743,7 +1740,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   color: #ffffff;
 }
 .fxs_label_success {
-  background-color: #328372;
+  background-color: #338473;
   color: #ffffff;
 }
 .fxs_label_info {
@@ -1815,7 +1812,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   color: #ffffff;
 }
 .fxs_alert_success {
-  background-color: #328372;
+  background-color: #338473;
   color: #ffffff;
 }
 .fxs_alert_success a {
@@ -1847,6 +1844,24 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
 }
 .fxs_alert_warning .fxs_alertLabel {
   color: #1b1c23;
+}
+.fxs_txt_success {
+  color: #338473;
+}
+.fxs_txt_success a {
+  color: #255f53;
+}
+.fxs_txt_danger {
+  color: #ce4735;
+}
+.fxs_txt_danger a {
+  color: #a73829;
+}
+.fxs_txt_neutral {
+  color: #8b8c91;
+}
+.fxs_txt_neutral a {
+  color: #717278;
 }
 .fxs_divider_wide {
   height: 5px;
@@ -2066,22 +2081,29 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   max-width: 100%;
   font-size: 0.88rem;
 }
-.fxs_table > thead > tr > th {
-  vertical-align: bottom;
-}
-.fxs_table > tbody > tr > td,
-.fxs_table > tbody > tr > th,
-.fxs_table > tfoot > tr > td,
-.fxs_table > tfoot > tr > th,
-.fxs_table > thead > tr > td,
-.fxs_table > thead > tr > th {
-  padding: 8px;
-  line-height: 1.42857143;
-  vertical-align: top;
+.fxs_table tbody tr td,
+.fxs_table tbody tr th,
+.fxs_table tfoot tr td,
+.fxs_table tfoot tr th,
+.fxs_table thead tr td,
+.fxs_table thead tr th {
+  padding: 0.5rem;
+  line-height: normal;
   border-bottom: 1px solid #dcddde;
 }
+.fxs_table thead tr th {
+  vertical-align: bottom;
+}
 .fxs_table th {
-  color: #a2a2a7;
+  display: table-cell;
+  color: #8b8c91;
+  font-size: 0.75rem;
+  letter-spacing: normal;
+  text-align: left;
+}
+.fxs_table tbody tr td,
+.fxs_table tbody tr th {
+  vertical-align: middle;
   text-align: left;
 }
 caption {
@@ -2245,7 +2267,7 @@ caption {
   vertical-align: middle;
 }
 .ctp_icon_buy {
-  border-left: 5px solid #328372;
+  border-left: 5px solid #338473;
   padding-left: 2px;
   vertical-align: middle;
   margin-right: 10px;
@@ -2339,10 +2361,6 @@ caption {
   top: 0;
   overflow-x: hidden;
   visibility: hidden;
-}
-.fxs_pageSidebar:hover,
-.fxs_touch .fxs_pageSidebar {
-  overflow-y: auto;
 }
 .fxs_pageSidebar.fxs_sidebar_nav {
   left: 0;
@@ -2735,10 +2753,6 @@ height:-moz-calc(100% - 45px);
 height:calc(100% - 45px);
 ;
 }
-.fxs_timezone_hours:hover,
-.fxs_touch .fxs_timezone_hours {
-  overflow-y: auto;
-}
 .fxs_timezone_hours .ui-selected {
   background-color: #2e2e32;
 }
@@ -2982,10 +2996,6 @@ height:-webkit-calc(100% - 35px - 45px);
 height:-moz-calc(100% - 35px - 45px);
 height:calc(100% - 35px - 45px);
 ;
-}
-.fxs_listViewRail:hover,
-.fxs_touch .fxs_listViewRail {
-  overflow-y: auto;
 }
 @media (min-width: 768px) {
   .fxs_listView,
@@ -3429,6 +3439,16 @@ width:calc(100% - 320px);
     display: block;
   }
 }
+.fxs_article_author {
+  display: inline-block;
+  vertical-align: middle;
+}
+.fxs_ctpTable_contributor {
+  width: 20%;
+}
+.fxs_ctpTable_order {
+  width: 15%;
+}
 .fxs_article_header {
   padding: 0 0 0.5rem 0;
   border-bottom: 3px solid #efeff0;
@@ -3750,7 +3770,7 @@ height:calc(100% - 4rem);
 .ctp_bullish {
   font-size: 16px;
   font-weight: 700;
-  color: #328372;
+  color: #338473;
 }
 .ctp_bearish {
   font-size: 16px;
@@ -3770,7 +3790,7 @@ height:calc(100% - 4rem);
 .ctp_avg_buy {
   font-size: 1.25rem;
   font-weight: 300;
-  color: #328372;
+  color: #338473;
 }
 .ctp_avg_buy,
 .ctp_avg_sell {

@@ -221,7 +221,7 @@ a{
 
 .fxs_mutedLink {
   color: #48484e;
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 /////////////////////////////////////////////////////////////
@@ -308,8 +308,8 @@ h4 { font-size: @txt_size_large;}
 // Scrollable content
 .fxs_scrollableContent {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
   @media (min-width: @screen-l) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
@@ -343,7 +343,6 @@ h4 { font-size: @txt_size_large;}
   padding: 0 0 1rem;
   white-space: nowrap;
   display: inline-block;
-  &:hover, .fxs_touch & { overflow-x: auto; }
   @media (min-width: @screen-m) {
     width: 100%;
   }
@@ -482,6 +481,12 @@ h4 { font-size: @txt_size_large;}
   background-color: @alert-background;
   color: @alert-textColor;
   a { color: @alert-textColor; }
+}
+
+// CONTEXTUAL TEXT COLORS
+.fxs_txt_color_variants(@txt-color) {
+  color: @txt-color;
+  a { color: darken(@txt-color, 10%); }
 }
 
 // mixin base styles nav
