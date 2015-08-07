@@ -32,12 +32,12 @@
                 <div class="ctp_custom_content">
                     <div class="ctp_price_percent_sell">
                         <small class="widget_avg_small">Sell</small>
-                        <span class="fxs_txt_danger fxs_txt_custom">40%</span>
+                        <span class="fxs_txt_danger fxs_txt_custom">70%</span>
                     </div>
 
                     <div class="ctp_price_percent_buy ctp_divider">
                         <small class="widget_avg_small">Buy</small>
-                        <span class="fxs_txt_success fxs_txt_custom">60%</span>
+                        <span class="fxs_txt_success fxs_txt_custom">30%</span>
                     </div>
                 </div>
 
@@ -97,8 +97,8 @@ var donut_chart = c3.generate({
            
     data: {
         columns: [
-        ['SELL', 40],
-        ['BUY', 60]
+        ['SELL', 100],
+        ['BUY', 80]
         ],
         type: 'gauge',
         //onclick: function (d, i) { console.log("onclick", d, i); },
@@ -130,7 +130,7 @@ var donut_chart = c3.generate({
   
     },
     color: {
-        pattern: ['#328372', '#328372', '#CE4735', '#CE4735'], // the three color levels for the percentage values.
+        pattern: ['#CE4735', '#CE4735', '#328372', '#328372'], // the three color levels for the percentage values.
         threshold: {
             // unit: 'value', // percentage is default
             // max: 200, // 100 is default
