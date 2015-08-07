@@ -152,3 +152,30 @@
         width:30%;
     }
 }
+
+// CTP Table 
+.fxs_ctp_table {
+  tbody, thead, tfoot {
+    >tr >td, >tr >th {
+      &:not(:nth-child(-n+3)) { display: none; }
+      &:last-child { display: table-cell; }
+      @media (min-width: @screen-m){
+        &:nth-child(n+4):nth-child(-n+5) { display: table-cell; }
+      }
+      @media (min-width: @screen-l){
+        &:nth-child(n+5) { display: table-cell; }
+      }
+    }
+  }
+  .fxs_ctpTable_order {
+    a:extend(.fxs_clearfix all) {}
+    @media (min-width: @screen-m){
+      a {
+        &::before, &::after {
+          content: none;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
