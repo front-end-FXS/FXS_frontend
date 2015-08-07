@@ -18,16 +18,6 @@
 /////////////////////// template
 
 
-.ctp_bullish{
-   .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @success_clr;);
-}
-.ctp_bearish{
-    .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @error_clr); 
-}
-.ctp_sideways{
-    .ctp_values_rules(@txt_defaultsize_px; @txt_fontweight_bold; @dark_4_clr);
-}
-
 // info values avg
 .ctp_avg_sell{
     .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light; @error_clr);
@@ -39,10 +29,16 @@
     padding-right:20px;
 }
 
+.ctp_custom_avg_price{
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding-right: 20px;
+}
+
 
 // widget precent price sell and buy module
 
-.ctp_donut_title{
+.ctp_custom_content{
     position:absolute;
     top:35px;
     left:57px;
@@ -53,17 +49,28 @@
     border-left: 2px solid #ccc;
     padding-left:10px;
 }
-.ctp_sell_title{  
-     display:inline-block;
-    span{
+
+
+// this is new for TEXT CONTEXTUAL COLORS
+
+.ctp_price_precent{
+    display:inline-block;
+    span, .widget_avg_small{
         display:block;
         padding:0;
         margin:0;
     }
 }
-.ctp_buy_title{
-    &:extend(.ctp_sell_title all);
-    padding-right:10px;
+.fxs_txt_custom{
+    font-size:@txt_size_xlarge;
+    font-weight:@txt_fontweight_bold;
+}
+.ctp_price_percent_sell{  
+     &:extend(.ctp_price_precent all);
+}
+.ctp_price_percent_buy{
+     &:extend(.ctp_price_precent all);
+    padding-right:5px;
 }
 
 .ctp_top_cell, .ctp_top_buy{
@@ -80,10 +87,11 @@
     display:inline-block;
     padding-bottom:10px;
     width:40%;
+    vertical-align:15px;
 }
 .fxs_module_cols_avg{
     padding-left:20px;
-    float:left;
+    display:inline-block;
 }
 
 .widget_avg_small{
@@ -91,11 +99,66 @@
 }
 
 
-// ######################## main graphics content
+// ######################## graphics main content
 
-.fxs_widget_content_module, .fxs_widget_bars_content{
+.fxs_widget_content_module_single, .fxs_widget_bars_content{
     &:extend(.fxs_widget_divider_module);
 }
+.ctp_asset_label{
+    font-weight:@txt_fontweight_bold;
+}
+
+// widget muti asset
+
+
+.fxs_mutliasset_title{
+    &:extend(.fxs_widget_divider_module);
+}
+
+.tick{
+    display:none;
+}
+
+// size block percent and align buy percent
+
+.ctp_custom_buy_sell_percent{
+    max-width:175px;
+}
+.ctp_custom_sell_title{
+    float:right;
+}
+
+
+
+.ctp_custom_multiasset{
+    display:block;
+    @media (min-width: @screen-m) {
+        display:inline-block;
+        vertical-align:40px;
+        width:20%;
+    }
+}
+
+.ctp_wrapper_avg_graphic{
+    display:block;
+     @media (min-width: @screen-m) {
+        display:inline-block;
+        width:30%;
+    }
+}
+.ctp_custom_price{ 
+    display:block;
+    width:100%;
+    @media (min-width: @screen-m) {
+        vertical-align:40px;
+        display:inline-block;
+        width:30%;
+    }
+}
+
+
+
+
 
 
 

@@ -799,11 +799,11 @@
 
 // widget price module
 
-.fxs_widget_header_price{
+.fxs_widget_price{
     &:extend(.fxs_widget_divider_module);
 }
 
-.fxs_widget_price{
+.fxs_widget_price_value{
     float:right;
      &:extend(.fxs_mini_widget);
 }
@@ -815,7 +815,7 @@
 
 // widget donut module
 
-.fxs_widget_donut{
+.ctp_graphic_container{
     display:inline-block; 
     max-width:200px;
     position:relative;
@@ -825,22 +825,22 @@
 
 // widget footer module
 
+
 .fxs_btn_line{
     float:right;
-    &:extend(.fxs_mini_widget);
+    &.fxs_ctp_widget_mini{
+
+    }
 }
 
 .ctp_info_align{
     float:left;
-    &:extend(.fxs_mini_widget);
 }
 
 // extends
-.fxs_mini_widget{
-    @media (max-width:320px){
-        float:none;
-        display:block;
-    }
+.fxs_ctp_widget_mini{    
+    float:none;
+    display:block;    
 }
 
 .fxs_widget_divider_module{

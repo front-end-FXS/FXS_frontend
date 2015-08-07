@@ -5,8 +5,8 @@
     <title>News Home - FXStreet</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../website-font/font-awesome.min.css" />
-    <link rel="stylesheet" href="../website-css/fxs_screen.css">
+    <link rel="stylesheet" href="../../website-font/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../website-css/fxs_screen.css">
    
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -19,25 +19,25 @@
     <section class="fxs_detail">
         <!-- header price -->
 
-        <div class="fxs_widget_header_price">
-            <span class="fxs_widget_pair_price"><i class="fa fa-arrow-down"></i>EUR/USD</span>
-            <div class="fxs_widget_price">
-                1.27<strong>68<sup>8</sup>/56</strong><sup>7</sup> <span class="fxs_widget_price_red">0.0026 (-0.12%)</span>
+        <div class="fxs_widget_price">
+            <span class="fxs_headline_small"><i class="fa fa-arrow-down"></i>EUR/USD</span>
+            <div class="fxs_widget_price_value">
+                1.27<strong>68</strong><sup>8</sup><strong>/56</strong><sup>7</sup> <span class="fxs_widget_price_red">0.0026 (-0.12%)</span>
             </div>
         </div>
 
         <!-- price content -->
-        <div class="fxs_widget_content_module">
-            <div class="fxs_widget_donut">
-                <div class="ctp_donut_title">
-                    <div class="ctp_buy_title ">
-                        <span class="ctp_top_cell">Sell</span>
-                        <span class="ctp_bearish">40%</span>
+        <div class="fxs_widget_content_module_single">
+            <div class="ctp_graphic_container">
+                <div class="ctp_custom_content">
+                    <div class="ctp_price_percent_sell">
+                        <small class="widget_avg_small">Sell</small>
+                        <span class="fxs_txt_danger fxs_txt_custom">40%</span>
                     </div>
 
-                    <div class="ctp_sell_title ctp_divider">
-                        <span class="ctp_top_buy">Buy</span>
-                        <span class="ctp_bullish">60%</span>
+                    <div class="ctp_price_percent_buy ctp_divider">
+                        <small class="widget_avg_small">Buy</small>
+                        <span class="fxs_txt_success fxs_txt_custom">60%</span>
                     </div>
                 </div>
 
@@ -47,12 +47,12 @@
             <div class="fxs_widget_avg_price">
                 <div class="fxs_module_cols_avg">
                     <small class="widget_avg_small">Avg Sell Price</small>
-                    <span class="ctp_avg_sell">1.3380</span>
+                    <span class="fxs_txt_danger ctp_custom_avg_price">1.3380</span>
                 </div>
 
                 <div class="fxs_module_cols_avg">
                     <small class="widget_avg_small">Avg Buy Price</small>
-                    <span class="ctp_avg_buy">1.3380</span>
+                    <span class="fxs_txt_success ctp_custom_avg_price">1.3380</span>
                 </div>
             </div>
         </div>
@@ -85,8 +85,8 @@
 </div>
 
 <script src="../website-js/jquery-1.11.3.min.js"></script>
-<script src="../ctpwidget-js/c3.js"></script>
-<script src="../ctpwidget-js/d3.min.js"></script>
+<script src="../../website-js/widget/c3.js"></script>
+<script src="../../website-js/widget/d3.min.js"></script>
 <script>
      
 
@@ -97,7 +97,7 @@ var donut_chart = c3.generate({
            
     data: {
         columns: [
-        ['SELL', 100],
+        ['SELL', 40],
         ['BUY', 60]
         ],
         type: 'gauge',
@@ -126,7 +126,7 @@ var donut_chart = c3.generate({
         // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
         // max: 100, // 100 is default
         // units: ' %',
-        width: 6 // for adjusting arc thickness
+        width: 10 // for adjusting arc thickness
   
     },
     color: {
@@ -138,7 +138,7 @@ var donut_chart = c3.generate({
         }
     },
     size: {
-        height: 90
+        height: 100
     }
 });
 
