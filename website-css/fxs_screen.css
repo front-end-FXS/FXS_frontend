@@ -130,6 +130,8 @@ q:after {
 .fxs_ctp_table .fxs_ctpTable_order a::after,
 .fxs_relatedContent_holder::before,
 .fxs_relatedContent_holder::after,
+.fxs_widget_summary::before,
+.fxs_widget_summary::after,
 .fxs_detail::before,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::before,
@@ -169,6 +171,7 @@ q:after {
 .fxs_dateIndicator_divider::after,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
 .fxs_relatedContent_holder::after,
+.fxs_widget_summary::after,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::after,
@@ -2424,7 +2427,7 @@ fieldset[disabled] .fxs_dismissQuery {
   text-align: right;
 }
 .fxs_tableHover tbody > tr > td:last-child .fxs_btn_icon {
-  color: #dcddde;
+  color: #a2a2a7;
 }
 .fxs_tableHover tbody:hover {
   background-color: #fcfcfc;
@@ -2634,6 +2637,9 @@ fieldset[disabled] .fxs_dismissQuery {
     width: 25%;
   }
 }
+.fxs_widget_summary {
+  margin-bottom: 1rem;
+}
 .ctp_distribution,
 .ctp_orders {
   font-size: 0.75rem;
@@ -2652,16 +2658,19 @@ fieldset[disabled] .fxs_dismissQuery {
   vertical-align: middle;
   margin-right: 10px;
 }
-.fxs_widget_price {
+.fxs_widget_price_value {
   float: right;
 }
 .fxs_widget_price_red {
   color: #ce4735;
 }
-.fxs_widget_donut {
+.ctp_graphic_container {
   display: inline-block;
   max-width: 200px;
   position: relative;
+}
+.ctp_graphic_container tspan {
+  display: none;
 }
 .fxs_btn_line {
   float: right;
@@ -2669,22 +2678,15 @@ fieldset[disabled] .fxs_dismissQuery {
 .ctp_info_align {
   float: left;
 }
-@media (max-width: 320px) {
-  .fxs_mini_widget,
-  .ctp_orders,
-  .ctp_icon_sell,
-  .fxs_widget_price,
-  .fxs_widget_price_red,
-  .fxs_btn_line,
-  .ctp_info_align {
-    float: none;
-    display: block;
-  }
+.fxs_ctp_widget_mini {
+  float: none;
+  display: block;
 }
 .fxs_widget_divider_module,
-.fxs_widget_header_price,
-.fxs_widget_content_module,
-.fxs_widget_bars_content {
+.fxs_widget_price,
+.fxs_widget_content_module_single,
+.fxs_widget_bars_content,
+.fxs_mutliasset_title {
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #efeff0;
@@ -3944,21 +3946,6 @@ height:calc(100% - 4rem);
   color: #ce4735;
   padding-right: 10px;
 }
-.ctp_bullish {
-  font-size: 16px;
-  font-weight: 700;
-  color: #338473;
-}
-.ctp_bearish {
-  font-size: 16px;
-  font-weight: 700;
-  color: #ce4735;
-}
-.ctp_sideways {
-  font-size: 16px;
-  font-weight: 700;
-  color: #48484e;
-}
 .ctp_avg_sell {
   font-size: 1.25rem;
   font-weight: 300;
@@ -3973,7 +3960,12 @@ height:calc(100% - 4rem);
 .ctp_avg_sell {
   padding-right: 20px;
 }
-.ctp_donut_title {
+.ctp_custom_avg_price {
+  font-size: 1.25rem;
+  font-weight: 300;
+  padding-right: 20px;
+}
+.ctp_custom_content {
   position: absolute;
   top: 35px;
   left: 57px;
@@ -3983,18 +3975,27 @@ height:calc(100% - 4rem);
   border-left: 2px solid #ccc;
   padding-left: 10px;
 }
-.ctp_sell_title,
-.ctp_buy_title {
+.ctp_price_precent,
+.ctp_price_percent_sell,
+.ctp_price_percent_buy {
   display: inline-block;
 }
-.ctp_sell_title span,
-.ctp_buy_title span {
+.ctp_price_precent span,
+.ctp_price_precent .widget_avg_small,
+.ctp_price_percent_sell span,
+.ctp_price_percent_sell .widget_avg_small,
+.ctp_price_percent_buy span,
+.ctp_price_percent_buy .widget_avg_small {
   display: block;
   padding: 0;
   margin: 0;
 }
-.ctp_buy_title {
-  padding-right: 10px;
+.fxs_txt_custom {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.ctp_price_percent_buy {
+  padding-right: 5px;
 }
 .ctp_top_cell,
 .ctp_top_buy {
@@ -4007,11 +4008,51 @@ height:calc(100% - 4rem);
   display: inline-block;
   padding-bottom: 10px;
   width: 40%;
+  vertical-align: 15px;
 }
 .fxs_module_cols_avg {
   padding-left: 20px;
-  float: left;
+  display: inline-block;
 }
 .widget_avg_small {
   display: block;
+}
+.fxs_asset_label {
+  font-weight: 700;
+}
+.ctp_custom_buy_sell_percent {
+  max-width: 175px;
+}
+.ctp_custom_sell_title {
+  float: right;
+}
+.ctp_custom_multiasset {
+  display: block;
+}
+@media (min-width: 680px) {
+  .ctp_custom_multiasset {
+    display: inline-block;
+    vertical-align: 40px;
+    width: 20%;
+  }
+}
+.ctp_wrapper_avg_graphic {
+  display: block;
+}
+@media (min-width: 680px) {
+  .ctp_wrapper_avg_graphic {
+    display: inline-block;
+    width: 30%;
+  }
+}
+.ctp_custom_price {
+  display: block;
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .ctp_custom_price {
+    vertical-align: 40px;
+    display: inline-block;
+    width: 30%;
+  }
 }

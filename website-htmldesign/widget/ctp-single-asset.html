@@ -17,10 +17,10 @@
 
 <div class="fxs_content">
     <section class="fxs_detail">
+        
         <!-- header price -->
-
         <div class="fxs_widget_price">
-            <span class="ctp_asset_label"><i class="fa fa-arrow-down"></i>EUR/USD</span>
+            <span class="fxs_asset_label"><i class="fa fa-arrow-down"></i>EUR/USD</span>
             <div class="fxs_widget_price_value">
                 1.27<strong>68</strong><sup>8</sup><strong>/56</strong><sup>7</sup> <span class="fxs_txt_danger">0.0026 (-0.12%)</span>
             </div>
@@ -72,15 +72,12 @@
             </div>
 
         </div>
-
-
-
         <!-- footer -->
-
-        <div class="fxs_widget_footer">
-            <small ctp_info_align"><date>updated FEB 10, 00:00 GMT</date></small>
+        <footer class="fxs_widget_footer">
+            <small class="ctp_info_align"><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
             <a type="submit" class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-        </div>
+        </footer>
+
     </section>
 </div>
 
@@ -88,8 +85,6 @@
 <script src="../../website-js/widget/c3.js"></script>
 <script src="../../website-js/widget/d3.min.js"></script>
 <script>
-     
-
 // donut chart
 
 var donut_chart = c3.generate({

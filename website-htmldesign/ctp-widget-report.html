@@ -199,7 +199,67 @@
 
                         <!-- Report goes here -->
                         <article class="fxs_detailInfo_page">
-                            
+                            <section class="fxs_widget_summary">
+                                <!-- header price -->
+                                <div class="fxs_widget_price">
+                                    <span class="fxs_asset_label"><i class="fa fa-arrow-down"></i>EUR/USD</span>
+                                    <div class="fxs_widget_price_value">
+                                        1.27<strong>68</strong><sup>8</sup><strong>/56</strong><sup>7</sup> <span class="fxs_txt_danger">0.0026 (-0.12%)</span>
+                                    </div>
+                                </div>
+
+                                <!-- price content -->
+                                <div class="fxs_widget_content_module_single">
+                                    <div class="ctp_graphic_container">
+                                        <div class="ctp_custom_content">
+                                            <div class="ctp_price_percent_sell">
+                                                <small class="widget_avg_small">Sell</small>
+                                                <span class="fxs_txt_danger fxs_txt_custom">70%</span>
+                                            </div>
+
+                                            <div class="ctp_price_percent_buy ctp_divider">
+                                                <small class="widget_avg_small">Buy</small>
+                                                <span class="fxs_txt_success fxs_txt_custom">30%</span>
+                                            </div>
+                                        </div>
+
+                                        <div id="donut_chart" class="c3"></div>
+                                    </div>
+
+                                    <div class="fxs_widget_avg_price">
+                                        <div class="fxs_module_cols_avg">
+                                            <small class="widget_avg_small">Avg Sell Price</small>
+                                            <span class="fxs_txt_danger ctp_custom_avg_price">1.3380</span>
+                                        </div>
+
+                                        <div class="fxs_module_cols_avg">
+                                            <small class="widget_avg_small">Avg Buy Price</small>
+                                            <span class="fxs_txt_success ctp_custom_avg_price">1.3380</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ctp barras content -->
+                                <div class="fxs_widget_bars_content">
+                                    <span class="ctp_distribution">Liquidity Distribution</span>
+
+
+                                    <div class="ctp_orders">
+                                        <span class="ctp_icon_buy">Buy Orders</span>
+                                        <span class="ctp_icon_sell">Sell Orders</span>
+                                    </div>
+
+                                    <div class="fxs_swipeContent_slider">
+                                        <div id="orders_chart" class="c3" style="width: 100%; height: 300px"></div>
+                                    </div>
+
+                                </div>
+                                <!-- footer -->
+                                <footer class="fxs_widget_footer">
+                                    <small class="ctp_info_align"><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                </footer>
+                            </section>
+
                             <!-- Dinamic auto report -->
                             <div class="fxs_entryPlain_txt">
                                 <p>
@@ -727,7 +787,6 @@
                 </a>
             </div>
             <!-- /Sidebar right -->
-
         </div>
         <!-- /The wrapper -->
         
@@ -766,6 +825,93 @@
                 $('.fxs_signup_form_content').show();
                 $(this).addClass('active');
                 $('#fxs_login_btn').removeClass('active');
+            });
+        </script>
+
+        <script src="../website-js/widget/c3.js"></script>
+        <script src="../website-js/widget/d3.min.js"></script>
+        <script>
+            // donut chart
+
+            var donut_chart = c3.generate({
+                bindto: '#donut_chart',
+                       
+                data: {
+                    columns: [
+                    ['SELL', 100],
+                    ['BUY', 80]
+                    ],
+                    type: 'gauge',
+                    //onclick: function (d, i) { console.log("onclick", d, i); },
+                    //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                    //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                    labels: {
+                        format: {
+                            y: d3.format("")
+                            //y: function (v, id) { return "Custom Format: " + id; }
+                        }
+                    }
+                },
+                        
+                zoom: {
+                    enabled:false
+                },
+               
+                gauge: {
+                    // label: {
+                    // format: function(value, ratio) {
+                    // return value;
+                    // },
+                    //show: false, // to turn off the min/max labels.
+                    // },
+                    // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+                    // max: 100, // 100 is default
+                    // units: ' %',
+                    width: 10 // for adjusting arc thickness
+              
+                },
+                color: {
+                    pattern: ['#CE4735', '#CE4735', '#328372', '#328372'], // the three color levels for the percentage values.
+                    threshold: {
+                        // unit: 'value', // percentage is default
+                        // max: 200, // 100 is default
+                        values: [0, 100]
+                    }
+                },
+                size: {
+                    height: 100
+                }
+            });
+
+            // bar chart
+
+            var orders_chart = c3.generate({
+                bindto: '#orders_chart',
+                data: {
+                    x: 'x',
+                    columns: [
+                    ['x', 1.0005, 1.0010, 1.0285, 1.0352, 1.0424, 1.05021, 1.0601, 1.0702, 1.0828, 1.0975, 1.1005, 1.1110, 1.1285, 1.1352, 1.1424, 1.15021, 1.1601, 1.1702, 1.1828, 1.1975],
+                    ['SELL', 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1],
+                    ['BUY', 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1]
+
+                    ],
+                    type: 'bar',
+                    colors: {
+                        SELL: '#328372',
+                        BUY: '#CE4735'
+                    },
+                            
+                },
+                bar: {
+                    /*width: {
+                    ratio: 0.1 // this makes bar width 50% of length between ticks
+                    }*/
+                    // or
+                    width: 2 // this makes bar width 100px
+                },
+                size: {
+                    height: 100
+                }
             });
         </script>
 
