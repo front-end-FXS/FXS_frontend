@@ -1,71 +1,5 @@
 $(document).ready(function () {
 
-    // Layout - Menu 
-
-    var menuLeft = document.getElementById('cbp-spmenu-s1'),
-        menuRight = document.getElementById('cbp-spmenu-s2'),
-        listView = document.getElementById('cbp-spmenu-s3'),
-        showLeftPush = document.getElementById('showLeftPush'),
-        showRightPush = document.getElementById('showRightPush'),
-        showLeft = document.getElementById('showLeft'),
-        body = document.body;
-
-    showLeftPush.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(body, 'cbp-spmenu-push-toright');
-        classie.toggle(menuLeft, 'cbp-spmenu-open');
-        $('.fxs_listView').removeClass('cbp-spmenu-open');
-        $('.fxs_toggleList').removeClass('active');
-        disableOther('showLeftPush');
-    };
-    showRightPush.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(body, 'cbp-spmenu-push-toleft');
-        classie.toggle(menuRight, 'cbp-spmenu-open');
-        $('.fxs_listView').removeClass('cbp-spmenu-open');
-        $('.fxs_toggleList').removeClass('active');
-        disableOther('showRightPush');
-    };
-    showLeft.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(listView, 'cbp-spmenu-open');
-        disableOther('showLeft');
-    };
-
-    function disableOther(button) {
-        if (button !== 'showLeftPush') {
-            classie.toggle(showLeftPush, 'disabled');
-        }
-        if (button !== 'showRightPush') {
-            classie.toggle(showRightPush, 'disabled');
-        }
-        if (button !== 'showLeft') {
-            classie.toggle(showLeft, 'disabled');
-        }
-    }
-
-    ////////// Stick'em ////////// Se activará para anuncios fijos en layout
-    // $('.fxs_listView').stickem({offset:80});
-
-    ////////// Buttons active state //////////
-    // Esto ESTÁ METIDO A SACO para que funcione el trigger de los botones
-    $('.fxs_overflowOptions').click(function(evt) {
-        $(this).toggleClass("active");
-        evt.stopPropagation();
-    });
-
-    $('.fxs_btn_dd').click(function(evt) {
-        $(this).parent('.fxs_btn_group').toggleClass("active");
-        evt.stopPropagation();
-    });
-
-        // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA DEL BOTÓN
-        $(document).click(function() {
-            $('.fxs_overflowOptions').removeClass("active");
-            $('.fxs_btn_group').removeClass("active");
-        });
-
-    
     ///////////////////////////////////////////
     /////////////// TYPE AHEAD ///////////////
     /////////////////////////////////////////
@@ -169,5 +103,71 @@ $(document).ready(function () {
         // ESTO YA ES DE PENA PERO EJEMPLIFICA BIEN: ACTIVAR LA CLASE DEL FILTRO CON QUERY SELECCIONADA
         $('.fxs_content_subnav').click(function() {
             $('.fxs_queryResults').addClass("fxs_selectedQuery");
+        });
+
+    
+    // Layout - Menu 
+
+    var menuLeft = document.getElementById('cbp-spmenu-s1'),
+        menuRight = document.getElementById('cbp-spmenu-s2'),
+        listView = document.getElementById('cbp-spmenu-s3'),
+        showLeftPush = document.getElementById('showLeftPush'),
+        showRightPush = document.getElementById('showRightPush'),
+        showLeft = document.getElementById('showLeft'),
+        body = document.body;
+
+    showLeftPush.onclick = function () {
+        classie.toggle(this, 'active');
+        classie.toggle(body, 'cbp-spmenu-push-toright');
+        classie.toggle(menuLeft, 'cbp-spmenu-open');
+        $('.fxs_listView').removeClass('cbp-spmenu-open');
+        $('.fxs_toggleList').removeClass('active');
+        disableOther('showLeftPush');
+    };
+    showRightPush.onclick = function () {
+        classie.toggle(this, 'active');
+        classie.toggle(body, 'cbp-spmenu-push-toleft');
+        classie.toggle(menuRight, 'cbp-spmenu-open');
+        $('.fxs_listView').removeClass('cbp-spmenu-open');
+        $('.fxs_toggleList').removeClass('active');
+        disableOther('showRightPush');
+    };
+    showLeft.onclick = function () {
+        classie.toggle(this, 'active');
+        classie.toggle(listView, 'cbp-spmenu-open');
+        disableOther('showLeft');
+    };
+
+    function disableOther(button) {
+        if (button !== 'showLeftPush') {
+            classie.toggle(showLeftPush, 'disabled');
+        }
+        if (button !== 'showRightPush') {
+            classie.toggle(showRightPush, 'disabled');
+        }
+        if (button !== 'showLeft') {
+            classie.toggle(showLeft, 'disabled');
+        }
+    }
+
+    ////////// Stick'em ////////// Se activará para anuncios fijos en layout
+    // $('.fxs_listView').stickem({offset:80});
+
+    ////////// Buttons active state //////////
+    // Esto ESTÁ METIDO A SACO para que funcione el trigger de los botones
+    $('.fxs_overflowOptions').click(function(evt) {
+        $(this).toggleClass("active");
+        evt.stopPropagation();
+    });
+
+    $('.fxs_btn_dd').click(function(evt) {
+        $(this).parent('.fxs_btn_group').toggleClass("active");
+        evt.stopPropagation();
+    });
+
+        // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA DEL BOTÓN
+        $(document).click(function() {
+            $('.fxs_overflowOptions').removeClass("active");
+            $('.fxs_btn_group').removeClass("active");
         });
 });

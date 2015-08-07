@@ -20,8 +20,8 @@
             <nav class="fxs_nav_menu" role="navigation">
                 <ul>
                     <li><a href="" title="">Home</a></li>
-                    <li><a href="" title="">Rates & Charts</a></li>
-                    <li><a href="" title="" class="active">News</a></li>
+                    <li><a href="" title="" class="active">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
                     <li><a href="" title="">Analysis</a></li>
                     <li><a href="" title="">Economic Calendar</a></li>
                     <li><a href="" title="">Live Video</a></li>
@@ -40,8 +40,8 @@
                 <nav class="fxs_nav_menu" role="navigation">
                     <ul>
                         <li><a href="" title="">Home</a></li>
-                        <li><a href="" title="">Rates & Charts</a></li>
-                        <li><a href="" title="" class="active">News</a></li>
+                        <li><a href="" title="" class="active">Rates & Charts</a></li>
+                        <li><a href="" title="">News</a></li>
                         <li><a href="" title="">Analysis</a></li>
                         <li><a href="" title="">Economic Calendar</a></li>
                         <li><a href="" title="">Live Video</a></li>
@@ -146,266 +146,301 @@
             </div>
             <!-- /Sidebar left -->
 
-            <nav class="fxs_content_subnav">
-                <a id="showLeft" class="fxs_toggleList"><i class="fa fa-chevron-left"></i> All News</a>
-            </nav>
-
             <div class="fxs_content fxs_content_wide" id="fxs_content">
 
                 <!-- The content rail -->
                 <div class="fxs_contentView">
 
                     <div class="fxs_leaderboard">
-                        
+                        <!-- Leaderboard -->
                     </div>
 
                     <!-- Main Section -->
+                    <header class="fxs_sectionTitle">
+                        <div class="fxs_search_title_holder">
+                            <h1 class="fxs_sectionTitle_header">EUR/USD Trading Positions</h1>
+                            <div class="fxs_filter">
+                                <form>
+                                    <div class="fxs_typeaheadContainer">
+                                        <label for="q" class="fxs_btn_filter" title="Search in news">
+                                            <i class="fa fa-search"></i>
+                                            <span class="fxs_skip">Search pair</span>
+                                        </label>
+                                        <div class="fxs_queryResults">
+                                            <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                                        </div>
+                                        <div class="fxs_typeaheadField">
+                                            <div class="fxs_typeaheadQuery">
+                                                <input id="q" name="q" type="search" placeholder="Search pair" autocomplete="on">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                            <div class="fxs_overflowOptions">
+                                <span class="fxs_btn_icon" title="Share options"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                                <ul class="fxs_btnGroup_dropdownList">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+
                     <section class="fxs_detail" role="main">
-                        
 
                         <!-- Report goes here -->
-                        <article class="">
-                            <header class="fxs_article_header">
-                                
-                            </header>
-                            <div class="">
+                        <article class="fxs_detailInfo_page">
+                            
+                            <!-- Dinamic auto report -->
+                            <div class="fxs_entryPlain_txt">
                                 <p>
                                     The latest data for the <a href="/">EUR/USD</a> <strong>Trading Positions</strong>, released by <strong>FXStreet</strong> on <strong>Friday the 3rd</strong> shows a distribution of <strong>60.33%</strong> short-term Bearish among the 15 participants.
                                 </p>
                                 <p>
                                     <a class="fxs_mutedLink" href="#about_study">About this study <i class="fa fa-long-arrow-down"></i></a>
                                 </p>
-
-                                <!-- Tabla desglozada de CTPs por contributor -->
-                                <div class="fxs_swipeContent_slider">
-                                    <table class="fxs_table fxs_tableHover fxs_ctp_table">
-                                        <thead>
-                                            <tr>
-                                                <th>Contributor</th>
-                                                <th>Order</th>
-                                                <th>Entry</th>
-                                                <th>Stop Loss</th>
-                                                <th>Take Profit 1</th>
-                                                <th>Take Profit 2</th>
-                                                <th>Take Profit 3</th>
-                                                <th>Date</th>
-                                                <th>&nbsp;</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                        <div class="fxs_avatar_circleImage_s">
-                                                            <a href="/">
-                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                            </a>
-                                                        </div>
-                                                        <cite class="fxs_article_author">
-                                                            <a href="/" rel="author">
-                                                                Admiral Markets
-                                                            </a>
-                                                        </cite>
-                                                        <script type="application/ld+json">
-                                                        // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                        </script>
-                                                    </address>
-                                                </td>
-                                                <td>
-                                                    <span class="fxs_ctpTable_order fxs_txt_success">Long <a href="/">Limit Order</a></span>
-                                                </td>
-                                                <td>1.1113</td>
-                                                <td>1.1180</td>
-                                                <td>1.0920</td>
-                                                <td>1.0875</td>
-                                                <td>1.0780</td>
-                                                <td>
-                                                    <time pubdate="" datetime="2015-07-27 09:34">Jul 27</time>
-                                                </td>
-                                                <td>
-                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                        <div class="fxs_avatar_circleImage_s">
-                                                            <a href="/">
-                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                            </a>
-                                                        </div>
-                                                        <cite class="fxs_article_author">
-                                                            <a href="/" rel="author">
-                                                                Danske Bank A/S
-                                                            </a>
-                                                        </cite>
-                                                        <script type="application/ld+json">
-                                                        // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                        </script>
-                                                    </address>
-                                                </td>
-                                                <td>
-                                                    <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
-                                                </td>
-                                                <td>≈1.1012</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
-                                                </td>
-                                                <td>
-                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                        <div class="fxs_avatar_circleImage_s">
-                                                            <a href="/">
-                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                            </a>
-                                                        </div>
-                                                        <cite class="fxs_article_author">
-                                                            <a href="/" rel="author">
-                                                                DeltaStock.com
-                                                            </a>
-                                                        </cite>
-                                                        <script type="application/ld+json">
-                                                        // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                        </script>
-                                                    </address>
-                                                </td>
-                                                <td>
-                                                    <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
-                                                </td>
-                                                <td>&gt;1.0955</td>
-                                                <td>1.0850</td>
-                                                <td>1.1216</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
-                                                </td>
-                                                <td>
-                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                        <div class="fxs_avatar_circleImage_s">
-                                                            <a href="/">
-                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                            </a>
-                                                        </div>
-                                                        <cite class="fxs_article_author">
-                                                            <a href="/" rel="author">
-                                                                ElliottWaveForex
-                                                            </a>
-                                                        </cite>
-                                                        <script type="application/ld+json">
-                                                        // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                        </script>
-                                                    </address>
-                                                </td>
-                                                <td>
-                                                    <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Market Order</a></span>
-                                                </td>
-                                                <td>1.0968</td>
-                                                <td>1.1130</td>
-                                                <td>1.0722</td>
-                                                <td>1.0470</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
-                                                </td>
-                                                <td>
-                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                        <div class="fxs_avatar_circleImage_s">
-                                                            <a href="/">
-                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                            </a>
-                                                        </div>
-                                                        <cite class="fxs_article_author">
-                                                            <a href="/" rel="author">
-                                                                Growth Aces
-                                                            </a>
-                                                        </cite>
-                                                        <script type="application/ld+json">
-                                                        // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                        </script>
-                                                    </address>
-                                                </td>
-                                                <td>
-                                                    <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Latent Interest</a></span>
-                                                </td>
-                                                <td>1.1060</td>
-                                                <td>1.0726</td>
-                                                <td>1.0810</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
-                                                </td>
-                                                <td>
-                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                        <div class="fxs_avatar_circleImage_s">
-                                                            <a href="/">
-                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                            </a>
-                                                        </div>
-                                                        <cite class="fxs_article_author">
-                                                            <a href="/" rel="author">
-                                                                Mind Vision Traders
-                                                            </a>
-                                                        </cite>
-                                                        <script type="application/ld+json">
-                                                        // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                        </script>
-                                                    </address>
-                                                </td>
-                                                <td>
-                                                    <span class="fxs_ctpTable_order fxs_txt_danger">Sell <a href="/">Latent Interest</a></span>
-                                                </td>
-                                                <td>&lt;1.0757</td>
-                                                <td>1.1078</td>
-                                                <td>1.0875</td>
-                                                <td>-</td>
-                                                <td>-</td>
-                                                <td>
-                                                    <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
-                                                </td>
-                                                <td>
-                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /Tabla desglozada de CTPs por contributor -->
-
-                                <div id="about_study" class="fxs_marginBase_bottom">
-                                    <header class="fxs_marginBase_bottom">
-                                        <h2 class="fxs_helperLabel_title">About this study</h2>
-                                    </header>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.The latest data for the <a href="/">Trading Positions</a>, released by FXStreet on Friday the 3rd shows a distribution short-term Bearish among the 15 participants.
-                                    </p>
-                                </div>
-
                             </div>
+                            <!-- /Dinamic auto report -->
+                            
+
+                            <!-- Tabla desglozada de CTPs por contributor -->
+                            <div class="fxs_swipeContent_slider">
+                                <table class="fxs_table fxs_tableHover fxs_ctp_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Contributor</th>
+                                            <th>Order</th>
+                                            <th>Entry</th>
+                                            <th>Stop Loss</th>
+                                            <th>Take Profit 1</th>
+                                            <th>Take Profit 2</th>
+                                            <th>Take Profit 3</th>
+                                            <th>Date</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <cite class="fxs_article_author">
+                                                        <a href="/" rel="author">
+                                                            Admiral Markets
+                                                        </a>
+                                                    </cite>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_success">Long <a href="/">Limit Order</a></span>
+                                            </td>
+                                            <td>1.1113</td>
+                                            <td>1.1180</td>
+                                            <td>1.0920</td>
+                                            <td>1.0875</td>
+                                            <td>1.0780</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-07-27 09:34">Jul 27</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <cite class="fxs_article_author">
+                                                        <a href="/" rel="author">
+                                                            Danske Bank A/S
+                                                        </a>
+                                                    </cite>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
+                                            </td>
+                                            <td>≈1.1012</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <cite class="fxs_article_author">
+                                                        <a href="/" rel="author">
+                                                            DeltaStock.com
+                                                        </a>
+                                                    </cite>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
+                                            </td>
+                                            <td>&gt;1.0955</td>
+                                            <td>1.0850</td>
+                                            <td>1.1216</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <cite class="fxs_article_author">
+                                                        <a href="/" rel="author">
+                                                            ElliottWaveForex
+                                                        </a>
+                                                    </cite>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Market Order</a></span>
+                                            </td>
+                                            <td>1.0968</td>
+                                            <td>1.1130</td>
+                                            <td>1.0722</td>
+                                            <td>1.0470</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <cite class="fxs_article_author">
+                                                        <a href="/" rel="author">
+                                                            Growth Aces
+                                                        </a>
+                                                    </cite>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Latent Interest</a></span>
+                                            </td>
+                                            <td>1.1060</td>
+                                            <td>1.0726</td>
+                                            <td>1.0810</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <cite class="fxs_article_author">
+                                                        <a href="/" rel="author">
+                                                            Mind Vision Traders
+                                                        </a>
+                                                    </cite>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_danger">Sell <a href="/">Latent Interest</a></span>
+                                            </td>
+                                            <td>&lt;1.0757</td>
+                                            <td>1.1078</td>
+                                            <td>1.0875</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /Tabla desglozada de CTPs por contributor -->
+
+                            <!-- About plain txt -->
+                            <div id="about_study" class="fxs_entryPlain_txt">
+                                <h2 class="fxs_helperLabel_title">About this study</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.The latest data for the <a href="/">Trading Positions</a>, released by FXStreet on Friday the 3rd shows a distribution short-term Bearish among the 15 participants.
+                                </p>
+                            </div>
+                            <!-- /About plain txt -->
+
 
                         </article>
                         <!-- //Report ends here -->
@@ -459,14 +494,6 @@
                         <!-- //Related content -->
                     </section>
                     <!-- //Main Section -->
-
-                    <div class="fxs_feedbackLoading_msg">
-                        <i class="fa fa-refresh fa-spin"></i>
-                        <span class="fxs_loadingStatus">Loading More content</span>
-                    </div>
-                    <div class="fxs_feedbackLoading_msg">
-                        <span class="fxs_loadingStatus">No more content to load</span>
-                    </div>
 
                 </div>
                 <!-- /The content rail -->
@@ -703,7 +730,6 @@
 
         </div>
         <!-- /The wrapper -->
-
         
         <script src="../website-js/jquery-1.11.3.min.js"></script>
         <script src="../website-js/jquery-ui.min.js"></script>

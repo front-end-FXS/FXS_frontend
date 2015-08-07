@@ -392,6 +392,9 @@ h4 { font-size: @txt_size_large;}
 
 .fxs_entryPlain_txt {
   .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
+  @media (min-width: @screen-m) {
+    .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
+  }
 }
 
 .fxs_entryPlain_txt_large {
