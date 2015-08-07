@@ -126,6 +126,8 @@ q:after {
 .fxs_divider_third::after,
 .fxs_dateIndicator_divider::before,
 .fxs_dateIndicator_divider::after,
+.fxs_ctp_table .fxs_ctpTable_order a::before,
+.fxs_ctp_table .fxs_ctpTable_order a::after,
 .fxs_relatedContent_holder::before,
 .fxs_relatedContent_holder::after,
 .fxs_detail::before,
@@ -163,6 +165,7 @@ q:after {
 .fxs_divider_second::after,
 .fxs_divider_third::after,
 .fxs_dateIndicator_divider::after,
+.fxs_ctp_table .fxs_ctpTable_order a::after,
 .fxs_relatedContent_holder::after,
 .fxs_detail::after,
 .sf_cols::after,
@@ -2102,12 +2105,12 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   max-width: 100%;
   font-size: 0.88rem;
 }
-.fxs_table tbody tr td,
-.fxs_table tbody tr th,
-.fxs_table tfoot tr td,
-.fxs_table tfoot tr th,
-.fxs_table thead tr td,
-.fxs_table thead tr th {
+.fxs_table tbody > tr > td,
+.fxs_table thead > tr > td,
+.fxs_table tfoot > tr > td,
+.fxs_table tbody > tr > th,
+.fxs_table thead > tr > th,
+.fxs_table tfoot > tr > th {
   padding: 0.5rem;
   line-height: normal;
   border-bottom: 1px solid #dcddde;
@@ -2134,11 +2137,11 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   padding: 0.5rem 0;
   text-align: left;
 }
-.fxs_tableHover tbody tr td:last-child {
+.fxs_tableHover tbody > tr > td:last-child {
   width: 35px;
   text-align: right;
 }
-.fxs_tableHover tbody tr td:last-child .fxs_btn_icon {
+.fxs_tableHover tbody > tr > td:last-child .fxs_btn_icon {
   color: #dcddde;
 }
 .fxs_tableHover tbody:hover {
@@ -2163,6 +2166,49 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
 .fxs_tableHover tbody:hover tr:hover .fxs_btn_icon {
   color: #48484e;
   padding-left: 0.5rem;
+}
+.fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),
+.fxs_ctp_table thead > tr > td:not( :nth-child(-n+3)),
+.fxs_ctp_table tfoot > tr > td:not( :nth-child(-n+3)),
+.fxs_ctp_table tbody > tr > th:not( :nth-child(-n+3)),
+.fxs_ctp_table thead > tr > th:not( :nth-child(-n+3)),
+.fxs_ctp_table tfoot > tr > th:not( :nth-child(-n+3)) {
+  display: none;
+}
+.fxs_ctp_table tbody > tr > td:last-child,
+.fxs_ctp_table thead > tr > td:last-child,
+.fxs_ctp_table tfoot > tr > td:last-child,
+.fxs_ctp_table tbody > tr > th:last-child,
+.fxs_ctp_table thead > tr > th:last-child,
+.fxs_ctp_table tfoot > tr > th:last-child {
+  display: table-cell;
+}
+@media (min-width: 680px) {
+  .fxs_ctp_table tbody > tr > td:nth-child(n+4):nth-child(-n+5),
+  .fxs_ctp_table thead > tr > td:nth-child(n+4):nth-child(-n+5),
+  .fxs_ctp_table tfoot > tr > td:nth-child(n+4):nth-child(-n+5),
+  .fxs_ctp_table tbody > tr > th:nth-child(n+4):nth-child(-n+5),
+  .fxs_ctp_table thead > tr > th:nth-child(n+4):nth-child(-n+5),
+  .fxs_ctp_table tfoot > tr > th:nth-child(n+4):nth-child(-n+5) {
+    display: table-cell;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_ctp_table tbody > tr > td:nth-child(n+5),
+  .fxs_ctp_table thead > tr > td:nth-child(n+5),
+  .fxs_ctp_table tfoot > tr > td:nth-child(n+5),
+  .fxs_ctp_table tbody > tr > th:nth-child(n+5),
+  .fxs_ctp_table thead > tr > th:nth-child(n+5),
+  .fxs_ctp_table tfoot > tr > th:nth-child(n+5) {
+    display: table-cell;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_ctp_table .fxs_ctpTable_order a::before,
+  .fxs_ctp_table .fxs_ctpTable_order a::after {
+    content: none;
+    display: inline-block;
+  }
 }
 .fxs_feedbackLoading_msg {
   -webkit-animation: just-appear 0.5s ease-in;

@@ -416,12 +416,13 @@
 	width: 100%;
  	max-width: 100%;
  	font-size: @txt_size_small;
- 	tbody tr td, tbody tr th, tfoot tr td,
-  tfoot tr th, thead tr td, thead tr th  {
- 		padding: 0.5rem;
-		line-height: @txt_lineheight_reset;
-		border-bottom: 1px solid @light_3_clr;
- 	}
+  tbody, thead, tfoot {
+    >tr >td, >tr >th {
+      padding: 0.5rem;
+      line-height: @txt_lineheight_reset;
+      border-bottom: 1px solid @light_3_clr;
+    }
+  }
   thead tr th { vertical-align: bottom; }
  	th {
     .fxs_stiled_text_variants(table-cell; @light_1_clr; @txt_size_xsmall);
@@ -442,7 +443,7 @@
 
 .fxs_tableHover {
   tbody {
-    tr td:last-child {
+    >tr >td:last-child {
       width: @base_module_size;
       text-align: right;
       .fxs_btn_icon { color: @light_3_clr; }
@@ -460,6 +461,33 @@
             color: @dark_4_clr;
             padding-left: 0.5rem;
           }
+        }
+      }
+    }
+  }
+}
+
+// CTP Table ESTO VA EN WIDGET CTP
+.fxs_ctp_table {
+  tbody, thead, tfoot {
+    >tr >td, >tr >th {
+      &:not(:nth-child(-n+3)) { display: none; }
+      &:last-child { display: table-cell; }
+      @media (min-width: @screen-m){
+        &:nth-child(n+4):nth-child(-n+5) { display: table-cell; }
+      }
+      @media (min-width: @screen-l){
+        &:nth-child(n+5) { display: table-cell; }
+      }
+    }
+  }
+  .fxs_ctpTable_order {
+    a:extend(.fxs_clearfix all) {}
+    @media (min-width: @screen-m){
+      a {
+        &::before, &::after {
+          content: none;
+          display: inline-block;
         }
       }
     }
