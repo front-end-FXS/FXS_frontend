@@ -2659,6 +2659,7 @@ fieldset[disabled] .fxs_dismissQuery {
   display: inline-block;
   max-width: 200px;
   position: relative;
+  vertical-align: middle;
 }
 .ctp_graphic_container tspan {
   display: none;
@@ -3993,12 +3994,11 @@ height:calc(100% - 4rem);
 }
 .fxs_widget_avg_price {
   display: inline-block;
-  padding-bottom: 10px;
-  width: 40%;
-  vertical-align: 15px;
+  width: 50%;
+  vertical-align: middle;
+  margin-left: 1rem;
 }
 .fxs_module_cols_avg {
-  padding-left: 20px;
   display: inline-block;
 }
 .widget_avg_small {
@@ -4021,23 +4021,26 @@ height:calc(100% - 4rem);
   }
 }
 .ctp_wrapper_avg_graphic {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  max-height: 90px;
+  overflow: hidden;
 }
 @media (min-width: 680px) {
   .ctp_wrapper_avg_graphic {
-    display: inline-block;
-    width: 30%;
+    width: 33%;
   }
 }
 .ctp_custom_price {
-  display: block;
+  display: inline-block;
   width: 100%;
+  vertical-align: top;
 }
 @media (min-width: 680px) {
   .ctp_custom_price {
-    vertical-align: 40px;
-    display: inline-block;
-    width: 30%;
+    width: 33%;
+    padding-left: 2rem;
   }
 }
 .fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),
