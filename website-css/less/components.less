@@ -785,17 +785,27 @@
   vertical-align: bottom;
 }
 
-.fxs_widget_price_value {
-  float:right;
-}
-
 .fxs_asset_label{
   &:extend(.fxs_boldAntialised_style);
   font-size: @txt_size_large;
 }
 
-.fxs_price_big_figure {
-  font-size: @txt_size_xlarge;
+.fxs_widget_price_value {
+  float:right;
+  text-align: right;
+  max-width: 60%;
+  .fxs_txt_danger {
+    white-space: nowrap;
+  }
+}
+
+.fxs_price_bidask {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: -0.25rem;
+  .fxs_price_big_figure {
+    font-size: @txt_size_xlarge;
+  }
 }
 
 // widget donut module
@@ -804,9 +814,9 @@
   display:inline-block; 
   max-width:200px;
   position:relative;
-  // tspan{
-  //     display:none; // hide default 0 - 100 numbers in pugin
-  // }
+  tspan{
+    display:none; // hide default 0 - 100 numbers in pugin
+  }
 }
 
 
@@ -832,9 +842,10 @@
 }
 
 .fxs_widget_divider_module{
-    padding-bottom:10px;
-    margin-bottom:10px;
-    border-bottom:1px solid @light_4_clr;
+  &:extend(.fxs_clearfix all);
+  padding-bottom:10px;
+  margin-bottom:10px;
+  border-bottom:1px solid @light_4_clr;
 }
 
 

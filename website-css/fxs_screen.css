@@ -130,6 +130,8 @@ q:after {
 .fxs_relatedContent_holder::after,
 .fxs_widget_summary::before,
 .fxs_widget_summary::after,
+.fxs_widget_divider_module::before,
+.fxs_widget_divider_module::after,
 .fxs_detail::before,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::before,
@@ -152,6 +154,14 @@ q:after {
 .fxs_wideContent_bordered::after,
 .fxs_divider_wide::before,
 .fxs_divider_wide::after,
+.fxs_widget_price::before,
+.fxs_widget_price::after,
+.fxs_widget_content_module_single::before,
+.fxs_widget_content_module_single::after,
+.fxs_widget_bars_content::before,
+.fxs_widget_bars_content::after,
+.fxs_mutliasset_title::before,
+.fxs_mutliasset_title::after,
 .fxs_alert::before,
 .fxs_alert::after,
 .fxs_suscribe::before,
@@ -171,6 +181,7 @@ q:after {
 .fxs_dateIndicator_divider::after,
 .fxs_relatedContent_holder::after,
 .fxs_widget_summary::after,
+.fxs_widget_divider_module::after,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::after,
@@ -182,6 +193,10 @@ q:after {
 .fxs_ctp_table .fxs_ctpTable_order a::after,
 .fxs_wideContent_bordered::after,
 .fxs_divider_wide::after,
+.fxs_widget_price::after,
+.fxs_widget_content_module_single::after,
+.fxs_widget_bars_content::after,
+.fxs_mutliasset_title::after,
 .fxs_alert::after,
 .fxs_suscribe::after,
 .fxs_sexy_banner::after,
@@ -2621,19 +2636,32 @@ fieldset[disabled] .fxs_dismissQuery {
   display: inline-block;
   vertical-align: bottom;
 }
-.fxs_widget_price_value {
-  float: right;
-}
 .fxs_asset_label {
   font-size: 1.125rem;
 }
-.fxs_price_big_figure {
+.fxs_widget_price_value {
+  float: right;
+  text-align: right;
+  max-width: 60%;
+}
+.fxs_widget_price_value .fxs_txt_danger {
+  white-space: nowrap;
+}
+.fxs_price_bidask {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: -0.25rem;
+}
+.fxs_price_bidask .fxs_price_big_figure {
   font-size: 1.25rem;
 }
 .ctp_graphic_container {
   display: inline-block;
   max-width: 200px;
   position: relative;
+}
+.ctp_graphic_container tspan {
+  display: none;
 }
 .fxs_btn_line {
   float: right;
@@ -3904,10 +3932,6 @@ height:calc(100% - 4rem);
 }
 .fxs_inVisualField .fxs_leaderboard_sponsor {
   display: block;
-}
-.fa-arrow-down {
-  color: #ce4735;
-  padding-right: 10px;
 }
 .ctp_avg_sell {
   font-size: 1.25rem;
