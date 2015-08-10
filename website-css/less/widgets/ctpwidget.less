@@ -23,13 +23,13 @@
   border-left:5px solid @error_clr;
   padding-left: 2px;
   vertical-align:middle;
+  margin-right:10px;
 }
 
 .ctp_icon_buy{
   border-left:5px solid @success_clr;
   padding-left: 2px;
   vertical-align:middle;
-  margin-right:10px;
 }
 
 // info values avg
@@ -90,17 +90,19 @@
 
 .ctp_top_cell, .ctp_top_buy{ font-style:italic; }
 
+
 // widget cols avg prices values
 
 .fxs_widget_avg_price{
   display:inline-block;
-  width:50%;
   vertical-align: middle;
   margin-left: 1rem;
 }
 .fxs_module_cols_avg{
+  @media (min-width: @screen-m) {
+    margin-left: 2rem;
     display:inline-block;
-    @media (min-width: @screen-m) { margin-left: 1rem; }
+  }
 }
 
 .widget_avg_small{
@@ -133,7 +135,7 @@
 .ctp_wrapper_avg_graphic{
     display:inline-block;
     vertical-align: top;
-    width: 100%;
+    width: 60%;
     max-height: 86px;
     overflow:hidden;
      @media (min-width: @screen-m) {
@@ -142,13 +144,23 @@
 }
 .ctp_custom_price{ 
     display:inline-block;
-    width:100%;
+    width:38%;
     vertical-align: top;
     margin-left: 0;
+    padding-left: 1rem;
     @media (min-width: @screen-m) {
-      width:33%;
-      padding-left: 1rem;
+      width:40%;
     }
+}
+
+// Reset translates C3
+.fxs_widget_bars {
+  >svg {
+    padding-top: 0.5rem;
+    >g:nth-child(2) {
+      @media (min-width: @screen-s) { transform: translateX(1.5rem); }
+    }
+  }
 }
 
 // CTP Table 

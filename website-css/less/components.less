@@ -800,8 +800,9 @@
 
 // Widget Legends
 .fxs_widget_legend {
-  font-size: @txt_size_xsmall;
   color: @dark_4_clr;
+  font-size: @txt_size_xsmall;
+  display: inline-block;
 }
 
 // c3.js overrides //
@@ -809,11 +810,8 @@
   &:extend(.fxs_widget_legend);
 }
 
-.c3-tooltip-container{
-    display:none!important;
-}
-.c3-chart-arcs-gauge-max, .c3-chart-arcs-gauge-min, .c3-gauge-value, .domain, .c3-axis-y{
-  display:none;
-}
+// Hide plugin legends
+.c3-legend-item, .c3-tooltip-container, .c3-chart-arcs-gauge-max,
+.c3-chart-arcs-gauge-min, .c3-gauge-value, .domain, .c3-axis-y{ display:none!important; }
 
 

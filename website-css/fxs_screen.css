@@ -2643,18 +2643,18 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_legend,
 .c3-axis,
 .c3-legend-item {
-  font-size: 0.75rem;
   color: #48484e;
+  font-size: 0.75rem;
+  display: inline-block;
 }
-.c3-tooltip-container {
-  display: none!important;
-}
+.c3-legend-item,
+.c3-tooltip-container,
 .c3-chart-arcs-gauge-max,
 .c3-chart-arcs-gauge-min,
 .c3-gauge-value,
 .domain,
 .c3-axis-y {
-  display: none;
+  display: none!important;
 }
 .fxs_header {
   background-color: #2a3545;
@@ -3910,12 +3910,12 @@ height:calc(100% - 4rem);
   border-left: 5px solid #ce4735;
   padding-left: 2px;
   vertical-align: middle;
+  margin-right: 10px;
 }
 .ctp_icon_buy {
   border-left: 5px solid #338473;
   padding-left: 2px;
   vertical-align: middle;
-  margin-right: 10px;
 }
 .ctp_avg_sell {
   font-size: 1.25rem;
@@ -3975,16 +3975,13 @@ height:calc(100% - 4rem);
 }
 .fxs_widget_avg_price {
   display: inline-block;
-  width: 50%;
   vertical-align: middle;
   margin-left: 1rem;
 }
-.fxs_module_cols_avg {
-  display: inline-block;
-}
 @media (min-width: 680px) {
   .fxs_module_cols_avg {
-    margin-left: 1rem;
+    margin-left: 2rem;
+    display: inline-block;
   }
 }
 .widget_avg_small {
@@ -4009,7 +4006,7 @@ height:calc(100% - 4rem);
 .ctp_wrapper_avg_graphic {
   display: inline-block;
   vertical-align: top;
-  width: 100%;
+  width: 60%;
   max-height: 86px;
   overflow: hidden;
 }
@@ -4020,14 +4017,22 @@ height:calc(100% - 4rem);
 }
 .ctp_custom_price {
   display: inline-block;
-  width: 100%;
+  width: 38%;
   vertical-align: top;
   margin-left: 0;
+  padding-left: 1rem;
 }
 @media (min-width: 680px) {
   .ctp_custom_price {
-    width: 33%;
-    padding-left: 1rem;
+    width: 40%;
+  }
+}
+.fxs_widget_bars > svg {
+  padding-top: 0.5rem;
+}
+@media (min-width: 320px) {
+  .fxs_widget_bars > svg > g:nth-child(2) {
+    transform: translateX(1.5rem);
   }
 }
 .fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),
