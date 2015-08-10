@@ -754,54 +754,59 @@
 }
 
 .ctp_distribution, .ctp_orders{
-    font-size:@txt_size_xsmall;
+  font-size:@txt_size_xsmall;
 }
 
 .ctp_orders{
-   float:right;
-    &:extend(.fxs_mini_widget);
+  float:right;
 }
 
 .ctp_icon_sell{
-   border-left:5px solid @error_clr;
-   padding-left: 2px;
-   vertical-align:middle;
-   &:extend(.fxs_mini_widget);
-
+  border-left:5px solid @error_clr;
+  padding-left: 2px;
+  vertical-align:middle;
 }
 
 .ctp_icon_buy{
-   border-left:5px solid @success_clr;
-   padding-left: 2px;
-   vertical-align:middle;
-   margin-right:10px;
+  border-left:5px solid @success_clr;
+  padding-left: 2px;
+  vertical-align:middle;
+  margin-right:10px;
 }
 
 // widget price module
 
 .fxs_widget_price{
-    &:extend(.fxs_widget_divider_module);
+  &:extend(.fxs_widget_divider_module);
 }
 
-.fxs_widget_price_value{
-    float:right;
-     &:extend(.fxs_mini_widget);
+.fxs_asset_label, .fxs_widget_price_value {
+  display: inline-block;
+  vertical-align: bottom;
 }
 
-.fxs_widget_price_red{
-    color:@error_clr;
-    &:extend(.fxs_mini_widget);
+.fxs_widget_price_value {
+  float:right;
+}
+
+.fxs_asset_label{
+  &:extend(.fxs_boldAntialised_style);
+  font-size: @txt_size_large;
+}
+
+.fxs_price_big_figure {
+  font-size: @txt_size_xlarge;
 }
 
 // widget donut module
 
 .ctp_graphic_container{
-    display:inline-block; 
-    max-width:200px;
-    position:relative;
-    tspan{
-        display:none; // hide default 0 - 100 numbers in pugin
-    }
+  display:inline-block; 
+  max-width:200px;
+  position:relative;
+  // tspan{
+  //     display:none; // hide default 0 - 100 numbers in pugin
+  // }
 }
 
 

@@ -235,6 +235,7 @@ label,
 .fxs_dropdownHeader,
 .fxs_dropdownList > li > a,
 .fxs_table th,
+.fxs_asset_label,
 .fxs_show_navmenu,
 .fxs_show_usermenu,
 .fxs_suscribeText span {
@@ -2615,19 +2616,24 @@ fieldset[disabled] .fxs_dismissQuery {
   vertical-align: middle;
   margin-right: 10px;
 }
+.fxs_asset_label,
+.fxs_widget_price_value {
+  display: inline-block;
+  vertical-align: bottom;
+}
 .fxs_widget_price_value {
   float: right;
 }
-.fxs_widget_price_red {
-  color: #ce4735;
+.fxs_asset_label {
+  font-size: 1.125rem;
+}
+.fxs_price_big_figure {
+  font-size: 1.25rem;
 }
 .ctp_graphic_container {
   display: inline-block;
   max-width: 200px;
   position: relative;
-}
-.ctp_graphic_container tspan {
-  display: none;
 }
 .fxs_btn_line {
   float: right;
@@ -3973,9 +3979,6 @@ height:calc(100% - 4rem);
 }
 .widget_avg_small {
   display: block;
-}
-.fxs_asset_label {
-  font-weight: 700;
 }
 .ctp_custom_buy_sell_percent {
   max-width: 175px;
