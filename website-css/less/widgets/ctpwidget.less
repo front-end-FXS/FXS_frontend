@@ -1,20 +1,43 @@
 ﻿
 // mixins
 .ctp_values_rules(@fontSize, @fontWeight, @fontColor){
-    font-size:@fontSize;
-    font-weight:@fontWeight;
-    color:@fontColor;
+  font-size:@fontSize;
+  font-weight:@fontWeight;
+  color:@fontColor;
 }
 
 /////////////////////// template
 
+// widget donut module
+.ctp_graphic_container{
+  display:inline-block; 
+  max-width:200px;
+  position:relative;
+  vertical-align: middle;
+  tspan{
+    display:none; // hide default 0 - 100 numbers in pugin
+  }
+}
+
+.ctp_icon_sell{
+  border-left:5px solid @error_clr;
+  padding-left: 2px;
+  vertical-align:middle;
+}
+
+.ctp_icon_buy{
+  border-left:5px solid @success_clr;
+  padding-left: 2px;
+  vertical-align:middle;
+  margin-right:10px;
+}
 
 // info values avg
 .ctp_avg_sell{
-    .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light; @error_clr);
+  .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light; @error_clr);
 }
 .ctp_avg_buy{
-    .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light;  @success_clr);
+  .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light;  @success_clr);
 }
 .ctp_avg_buy, .ctp_avg_sell{
     padding-right:20px;
@@ -34,11 +57,12 @@
     top:35px;
     left:57px;
     font-size:@txt_size_xsmall;
-    //font-weight:
 }
+
 .ctp_divider{
-    border-left: 2px solid #ccc;
-    padding-left:10px;
+  border-left: 2px solid #ccc;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 
@@ -60,24 +84,18 @@
      &:extend(.ctp_price_precent all);
 }
 .ctp_price_percent_buy{
-     &:extend(.ctp_price_precent all);
+    &:extend(.ctp_price_precent all);
     padding-right:5px;
 }
 
-.ctp_top_cell, .ctp_top_buy{
-    font-style:italic;
-}
-
-.c3-legend-item{
-    display:none; // hide something that i don´t remember
-}
+.ctp_top_cell, .ctp_top_buy{ font-style:italic; }
 
 // widget cols avg prices values
 
 .fxs_widget_avg_price{
   display:inline-block;
-  width:60%;
-  vertical-align:middle;
+  width:50%;
+  vertical-align: middle;
   margin-left: 1rem;
 }
 .fxs_module_cols_avg{
@@ -107,7 +125,7 @@
     display:block;
     @media (min-width: @screen-m) {
         display:inline-block;
-        vertical-align:40px;
+        vertical-align: top;
         width:20%;
     }
 }
@@ -116,7 +134,7 @@
     display:inline-block;
     vertical-align: top;
     width: 100%;
-    max-height: 90px;
+    max-height: 86px;
     overflow:hidden;
      @media (min-width: @screen-m) {
         width:33%;

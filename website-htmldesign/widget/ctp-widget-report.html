@@ -200,7 +200,7 @@
                         <!-- Report goes here -->
                         <article class="fxs_detailInfo_page">
                             <section class="fxs_widget_summary">
-                                <!-- header price -->
+                                <!-- widget price -->
                                 <div class="fxs_widget_price">
                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
                                         <i class="fa fa-arrow-down fxs_txt_danger"></i> EUR/USD
@@ -210,56 +210,60 @@
                                         <span class="fxs_txt_danger">0.0026 (-0.12%)</span>
                                     </div>
                                 </div>
+                                <!-- /widget price -->
 
-                                <!-- price content -->
-                                <div class="fxs_widget_divider_module">
-                                    <div class="ctp_graphic_container">
-                                        <div class="ctp_custom_content">
-                                            <div class="ctp_price_percent_sell">
-                                                <small class="widget_avg_small">Sell</small>
-                                                <span class="fxs_txt_danger fxs_txt_custom">70%</span>
+                                <!-- ctp widget -->
+                                <div class="fxs_ctp_widget ctp_widget_default">
+                                    <div class="fxs_widget_divider_module">
+                                        <div class="ctp_graphic_container">
+                                            <div class="ctp_custom_content">
+                                                <div class="ctp_price_percent_sell">
+                                                    <small class="widget_avg_small">Sell</small>
+                                                    <span class="fxs_txt_danger fxs_txt_custom">70%</span>
+                                                </div>
+
+                                                <div class="ctp_price_percent_buy ctp_divider">
+                                                    <small class="widget_avg_small">Buy</small>
+                                                    <span class="fxs_txt_success fxs_txt_custom">30%</span>
+                                                </div>
                                             </div>
 
-                                            <div class="ctp_price_percent_buy ctp_divider">
-                                                <small class="widget_avg_small">Buy</small>
-                                                <span class="fxs_txt_success fxs_txt_custom">30%</span>
+                                            <div id="donut_chart" class="c3"></div>
+                                        </div>
+
+                                        <div class="fxs_widget_avg_price">
+                                            <div class="fxs_module_cols_avg">
+                                                <small class="widget_avg_small">Avg Sell Price</small>
+                                                <span class="fxs_txt_danger ctp_custom_avg_price">1.3380</span>
+                                            </div>
+
+                                            <div class="fxs_module_cols_avg">
+                                                <small class="widget_avg_small">Avg Buy Price</small>
+                                                <span class="fxs_txt_success ctp_custom_avg_price">1.3380</span>
                                             </div>
                                         </div>
-
-                                        <div id="donut_chart" class="c3"></div>
                                     </div>
+                                    <!-- ctp barras content -->
+                                    <div class="fxs_widget_divider_module">
+                                        <span class="fxs_widget_legend">Liquidity Distribution</span>
 
-                                    <div class="fxs_widget_avg_price">
-                                        <div class="fxs_module_cols_avg">
-                                            <small class="widget_avg_small">Avg Sell Price</small>
-                                            <span class="fxs_txt_danger ctp_custom_avg_price">1.3380</span>
+                                        <div class="fxs_widget_legend fxs_fRight">
+                                            <span class="ctp_icon_buy">Buy Orders</span>
+                                            <span class="ctp_icon_sell">Sell Orders</span>
                                         </div>
 
-                                        <div class="fxs_module_cols_avg">
-                                            <small class="widget_avg_small">Avg Buy Price</small>
-                                            <span class="fxs_txt_success ctp_custom_avg_price">1.3380</span>
-                                        </div>
+                                        <div id="orders_chart" class="c3" style="width: 100%;"></div>
+
                                     </div>
+                                    <!-- /ctp barras content -->
+
+                                    <!-- widget footer -->
+                                    <footer class="fxs_widget_footer">
+                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                    </footer>
+                                    <!-- /widget footer -->
                                 </div>
-
-                                <!-- ctp barras content -->
-                                <div class="fxs_widget_divider_module">
-                                    <span class="ctp_distribution">Liquidity Distribution</span>
-
-                                    <div class="ctp_orders">
-                                        <span class="ctp_icon_buy">Buy Orders</span>
-                                        <span class="ctp_icon_sell">Sell Orders</span>
-                                    </div>
-
-                                    <div class="fxs_swipeContent_slider">
-                                        <div id="orders_chart" class="c3" style="width: 100%; height: 300px"></div>
-                                    </div>
-
-                                </div>
-                                <!-- footer -->
-                                <footer class="fxs_widget_footer">
-                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                </footer>
+                                <!-- /ctp widget -->
                             </section>
 
                             <!-- Dinamic auto report -->
