@@ -116,6 +116,8 @@ q:after {
 }
 .fxs_clearfix::before,
 .fxs_clearfix::after,
+.fxs_widget_divider_module::before,
+.fxs_widget_divider_module::after,
 .fxs_wideContent::before,
 .fxs_wideContent::after,
 .fxs_divider_first::before,
@@ -130,8 +132,8 @@ q:after {
 .fxs_relatedContent_holder::after,
 .fxs_widget_summary::before,
 .fxs_widget_summary::after,
-.fxs_widget_divider_module::before,
-.fxs_widget_divider_module::after,
+.fxs_widget_footer::before,
+.fxs_widget_footer::after,
 .fxs_detail::before,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::before,
@@ -156,12 +158,6 @@ q:after {
 .fxs_divider_wide::after,
 .fxs_widget_price::before,
 .fxs_widget_price::after,
-.fxs_widget_content_module_single::before,
-.fxs_widget_content_module_single::after,
-.fxs_widget_bars_content::before,
-.fxs_widget_bars_content::after,
-.fxs_mutliasset_title::before,
-.fxs_mutliasset_title::after,
 .fxs_alert::before,
 .fxs_alert::after,
 .fxs_suscribe::before,
@@ -174,6 +170,7 @@ q:after {
   display: table;
 }
 .fxs_clearfix::after,
+.fxs_widget_divider_module::after,
 .fxs_wideContent::after,
 .fxs_divider_first::after,
 .fxs_divider_second::after,
@@ -181,7 +178,7 @@ q:after {
 .fxs_dateIndicator_divider::after,
 .fxs_relatedContent_holder::after,
 .fxs_widget_summary::after,
-.fxs_widget_divider_module::after,
+.fxs_widget_footer::after,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::after,
@@ -194,9 +191,6 @@ q:after {
 .fxs_wideContent_bordered::after,
 .fxs_divider_wide::after,
 .fxs_widget_price::after,
-.fxs_widget_content_module_single::after,
-.fxs_widget_bars_content::after,
-.fxs_mutliasset_title::after,
 .fxs_alert::after,
 .fxs_suscribe::after,
 .fxs_sexy_banner::after,
@@ -295,6 +289,12 @@ label,
 .fxs_dateIndicator_divider {
   background-color: #efeff0;
   margin-bottom: 1rem;
+}
+.fxs_widget_divider_module,
+.fxs_widget_price {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #efeff0;
 }
 .fxs_wideContent,
 .fxs_wideContent_bordered,
@@ -2664,24 +2664,12 @@ fieldset[disabled] .fxs_dismissQuery {
 .ctp_graphic_container tspan {
   display: none;
 }
-.fxs_btn_line {
+.fxs_widget_footer .fxs_btn {
   float: right;
-}
-.ctp_info_align {
-  float: left;
 }
 .fxs_ctp_widget_mini {
   float: none;
   display: block;
-}
-.fxs_widget_divider_module,
-.fxs_widget_price,
-.fxs_widget_content_module_single,
-.fxs_widget_bars_content,
-.fxs_mutliasset_title {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #efeff0;
 }
 .c3-tooltip-container {
   display: none!important;
@@ -3994,12 +3982,17 @@ height:calc(100% - 4rem);
 }
 .fxs_widget_avg_price {
   display: inline-block;
-  width: 50%;
+  width: 60%;
   vertical-align: middle;
   margin-left: 1rem;
 }
 .fxs_module_cols_avg {
   display: inline-block;
+}
+@media (min-width: 680px) {
+  .fxs_module_cols_avg {
+    margin-left: 1rem;
+  }
 }
 .widget_avg_small {
   display: block;
@@ -4023,7 +4016,7 @@ height:calc(100% - 4rem);
 .ctp_wrapper_avg_graphic {
   display: inline-block;
   vertical-align: top;
-  width: auto;
+  width: 100%;
   max-height: 90px;
   overflow: hidden;
 }
@@ -4036,11 +4029,12 @@ height:calc(100% - 4rem);
   display: inline-block;
   width: 100%;
   vertical-align: top;
+  margin-left: 0;
 }
 @media (min-width: 680px) {
   .ctp_custom_price {
     width: 33%;
-    padding-left: 2rem;
+    padding-left: 1rem;
   }
 }
 .fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),

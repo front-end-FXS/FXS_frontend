@@ -823,17 +823,9 @@
 
 
 // widget footer module
-
-
-.fxs_btn_line{
-    float:right;
-    &.fxs_ctp_widget_mini{
-
-    }
-}
-
-.ctp_info_align{
-    float:left;
+.fxs_widget_footer {
+  &:extend(.fxs_clearfix all);
+  .fxs_btn { float: right; }
 }
 
 // extends
@@ -841,14 +833,6 @@
     float:none;
     display:block;    
 }
-
-.fxs_widget_divider_module{
-  &:extend(.fxs_clearfix all);
-  padding-bottom:10px;
-  margin-bottom:10px;
-  border-bottom:1px solid @light_4_clr;
-}
-
 
 // disable plugin rules in c3.js
 

@@ -76,12 +76,13 @@
 
 .fxs_widget_avg_price{
   display:inline-block;
-  width:50%;
+  width:60%;
   vertical-align:middle;
   margin-left: 1rem;
 }
 .fxs_module_cols_avg{
     display:inline-block;
+    @media (min-width: @screen-m) { margin-left: 1rem; }
 }
 
 .widget_avg_small{
@@ -91,22 +92,10 @@
 
 // ######################## graphics main content
 
-.fxs_widget_content_module_single, .fxs_widget_bars_content{
-    &:extend(.fxs_widget_divider_module);
-}
-
-// widget muti asset
-
-
-.fxs_mutliasset_title{
-    &:extend(.fxs_widget_divider_module);
-}
-
-
 // size block percent and align buy percent
 
 .ctp_custom_buy_sell_percent{
-    max-width:175px;
+  max-width:175px;
 }
 .ctp_custom_sell_title{
     float:right;
@@ -126,7 +115,7 @@
 .ctp_wrapper_avg_graphic{
     display:inline-block;
     vertical-align: top;
-    width: auto;
+    width: 100%;
     max-height: 90px;
     overflow:hidden;
      @media (min-width: @screen-m) {
@@ -137,9 +126,10 @@
     display:inline-block;
     width:100%;
     vertical-align: top;
+    margin-left: 0;
     @media (min-width: @screen-m) {
       width:33%;
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 }
 
