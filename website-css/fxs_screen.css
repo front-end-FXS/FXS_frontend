@@ -1,4 +1,5 @@
-@import "less/widgets/c3.min.css";
+@import "../website-font/font-awesome.min.css";
+@import "../widgets/core/css/c3.min.css";
 html,
 body,
 div,
@@ -245,8 +246,7 @@ label,
 .fxs_table th,
 .fxs_show_navmenu,
 .fxs_show_usermenu,
-.fxs_suscribeText span,
-.ctp_price_precent .widget_custom_data_lable {
+.fxs_suscribeText span {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -3950,6 +3950,12 @@ height:calc(100% - 4rem);
   display: inline-block;
   text-align: left;
 }
+.ctp_price_precent .widget_custom_data_lable {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  font-weight: 700;
+}
 .fxs_widget_avg_price {
   display: inline-block;
   vertical-align: bottom;
@@ -4028,6 +4034,9 @@ height:calc(100% - 4rem);
 .fxs_ctp_widget_multi.fxs_widget_mini .fxs_widget_cell_col:first-child {
   display: block;
   width: 100%;
+}
+.fxs_ctp_widget_multi.fxs_widget_mini .fxs_module_cols_avg {
+  margin-right: 0.25rem;
 }
 .fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),
 .fxs_ctp_table thead > tr > td:not( :nth-child(-n+3)),

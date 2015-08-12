@@ -1,4 +1,8 @@
-﻿////////////////////////////////////////////////
+﻿
+// Application variables
+@import "../../../website-css/less/vars.less";
+
+////////////////////////////////////////////////
 //////////// Widget Gauge module //////////////
 //////////////////////////////////////////////
 
@@ -20,7 +24,10 @@
   display: inline-block;
   text-align: left;
   .widget_custom_data_lable {
-    &:extend(.fxs_boldAntialised_style);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    font-weight: @txt_fontweight_bold;
   }
 }
 
@@ -106,6 +113,7 @@
       display: block;
       width: 100%;
     }
+    .fxs_module_cols_avg { margin-right: 0.25rem; }
   }
 }
 
