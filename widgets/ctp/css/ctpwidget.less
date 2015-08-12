@@ -1,5 +1,4 @@
-﻿
-// Application variables
+﻿// Application variables
 @import "../../../website-css/less/vars.less";
 
 ////////////////////////////////////////////////
@@ -69,7 +68,7 @@
 // General
 .fxs_widget_cell_col {
   display: table-cell;
-  vertical-align: top;
+  vertical-align: middle;
   .fxs_asset_label { font-size: @txt_defaultsize_rem; }
 }
 
@@ -90,8 +89,13 @@
   .fxs_widget_avg_price {
     margin: 0;
     padding: 0;
+    display: block;
+    text-align: center;
   }
-  .fxs_module_cols_avg { display: inline-block; }
+  .fxs_module_cols_avg {
+    display: inline-block;
+    text-align: left;
+  }
 
   // Big widget values & media queries
   &.fxs_widget_big {
@@ -102,18 +106,20 @@
         margin-top: -@base_module_size;
       }
     }
-    @media (min-width: @screen-xxl) {
-      .fxs_module_cols_avg { margin-left: 0.5rem; }
+    @media (min-width: @screen-xl) {
+      .fxs_module_cols_avg { margin-right: 0.5rem; }
     }
   }
 
   // Mini widget values & media queries
   &.fxs_widget_mini {
-    .fxs_widget_cell_col, .fxs_widget_cell_col:first-child {
-      display: block;
-      width: 100%;
+    @media (min-width: @screen-m) {
+      .fxs_widget_cell_col, .fxs_widget_cell_col:first-child {
+        display: block;
+        width: 100%;
+      }
+      .fxs_widget_avg_price { text-align: left; }
     }
-    .fxs_module_cols_avg { margin-right: 0.25rem; }
   }
 }
 

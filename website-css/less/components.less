@@ -784,6 +784,12 @@
 .fxs_widget_footer {
   &:extend(.fxs_clearfix all);
   .fxs_btn { float: right; }
+  &.fxs_widget_mini, .fxs_widget_mini & {
+    @media (min-width: @screen-m) {
+      .fxs_btn { float: none; }
+    }
+  }
+  small { margin-right: 1rem; }
 }
 
 // Widget data Lables
