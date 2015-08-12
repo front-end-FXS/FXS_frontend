@@ -228,7 +228,7 @@ a{
 //////////////////// Header styles /////////////////////////
 ///////////////////////////////////////////////////////////
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .fxs_asset_label {
   color: @dark_1_clr;
   letter-spacing: -0.03rem;
   &:extend(.fxs_boldAntialised_style);
@@ -402,6 +402,24 @@ h4 { font-size: @txt_size_large;}
   @media (min-width: @screen-m) { font-size: @txt_size_large; }
 }
 
+// TEXT CONTEXTUAL COLORS
+.fxs_txt_color_variants(@txt-color) {
+  color: @txt-color;
+  a { color: darken(@txt-color, 10%); }
+}
+
+.fxs_txt_success {
+  .fxs_txt_color_variants(@success_clr);
+}
+
+.fxs_txt_danger {
+  .fxs_txt_color_variants(@error_clr);
+}
+
+.fxs_txt_neutral {
+  .fxs_txt_color_variants(@light_1_clr);
+}
+
 // Button Generic
 .fxs_btn_properties(@btn-border; @btn-height; @btn-margin; @btn-padding) {
   &:extend(.fxs_boldAntialised_style, .fxs_transition);
@@ -486,12 +504,6 @@ h4 { font-size: @txt_size_large;}
   a { color: @alert-textColor; }
 }
 
-// CONTEXTUAL TEXT COLORS
-.fxs_txt_color_variants(@txt-color) {
-  color: @txt-color;
-  a { color: darken(@txt-color, 10%); }
-}
-
 // mixin base styles nav
 .fxs_vertical_block_nav(@borderBottom; @lineHeight; @fontSize; @itemHeight) {
   display: block;
@@ -570,7 +582,6 @@ h4 { font-size: @txt_size_large;}
     top: 0;
   }
 }
-
 
 // Pre space wide widgets
 .fxs_wideWidget_pre(@widget-padding-default: 1rem; @widget-padding-m: 2rem) {

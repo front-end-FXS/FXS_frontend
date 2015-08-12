@@ -1,166 +1,105 @@
-﻿
-// mixins
-.ctp_values_rules(@fontSize, @fontWeight, @fontColor){
-  font-size:@fontSize;
-  font-weight:@fontWeight;
-  color:@fontColor;
-}
+﻿////////////////////////////////////////////////
+//////////// Widget Gauge module //////////////
+//////////////////////////////////////////////
 
-/////////////////////// template
-
-// widget donut module
-.ctp_graphic_container{
-  display:inline-block; 
-  max-width:200px;
+// General components //
+.ctp_graphic_container {
+  display: inline-block; 
+  max-width: 200px;
   position:relative;
   vertical-align: middle;
-  tspan{
-    display:none; // hide default 0 - 100 numbers in pugin
-  }
-}
-
-.ctp_icon_sell{
-  border-left:5px solid @error_clr;
-  padding-left: 2px;
-  vertical-align:middle;
-  margin-right:10px;
-}
-
-.ctp_icon_buy{
-  border-left:5px solid @success_clr;
-  padding-left: 2px;
-  vertical-align:middle;
-}
-
-// info values avg
-.ctp_avg_sell{
-  .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light; @error_clr);
-}
-.ctp_avg_buy{
-  .ctp_values_rules(@txt_size_xlarge; @txt_fontweight_light;  @success_clr);
-}
-.ctp_avg_buy, .ctp_avg_sell{
-    padding-right:20px;
-}
-
-.ctp_custom_avg_price{
-    font-size: 1.25rem;
-    font-weight: 300;
-    padding-right: 20px;
-}
-
-
-// widget precent price sell and buy module
-
-.ctp_custom_content{
-    position:absolute;
-    top:35px;
-    left:57px;
-    font-size:@txt_size_xsmall;
 }
 
 .ctp_divider{
-  border-left: 2px solid #ccc;
-  padding-left: 0.5rem;
+  border-left: 1px solid #ccc;
+  padding-left: 0.58rem;
   margin-left: 0.5rem;
 }
 
-
-// this is new for TEXT CONTEXTUAL COLORS
-
-.ctp_price_precent{
-    display:inline-block;
-    span, .widget_avg_small{
-        display:block;
-        padding:0;
-        margin:0;
-    }
-}
-.fxs_txt_custom{
-    font-size:@txt_size_xlarge;
-    font-weight:@txt_fontweight_bold;
-}
-.ctp_price_percent_sell{  
-     &:extend(.ctp_price_precent all);
-}
-.ctp_price_percent_buy{
-    &:extend(.ctp_price_precent all);
-    padding-right:5px;
+.ctp_price_precent {
+  display: inline-block;
+  text-align: left;
+  .widget_custom_data_lable {
+    &:extend(.fxs_boldAntialised_style);
+  }
 }
 
-.ctp_top_cell, .ctp_top_buy{ font-style:italic; }
-
-
-// widget cols avg prices values
-
-.fxs_widget_avg_price{
-  display:inline-block;
-  vertical-align: middle;
+// Widget avg prices values
+.fxs_widget_avg_price {
+  display: inline-block;
+  vertical-align: bottom;
   margin-left: 1rem;
+  padding-bottom: 6px;
 }
-.fxs_module_cols_avg{
-  @media (min-width: @screen-m) {
-    margin-left: 2rem;
-    display:inline-block;
+
+.fxs_module_cols_avg {
+  margin-right: 1rem;
+  &:first-child {
+    margin-bottom: 0.5rem;
+    @media (min-width: @screen-m) {
+      margin-bottom: 0;
+    }
+  }
+}
+// Widget CTP modules
+.fxs_ctp_widget {
+  // Default widget values & media queries
+  &.fxs_widget_default {
+    .fxs_module_cols_avg {
+      @media (min-width: @screen-m) {
+        display: inline-block;
+        margin-left: 2.5rem;
+      }
+    }
+  }
+  // Mini widget values & media queries
+  &.fxs_widget_mini {
+    //
   }
 }
 
-.widget_avg_small{
-    display:block;
+//////// Widget multiasset //////////////
+// General
+.fxs_widget_cell_col {
+  display: table-cell;
+  vertical-align: top;
+  .fxs_asset_label { font-size: @txt_defaultsize_rem; }
 }
 
+.ctp_multi_percent_wrapper { padding-right: 10%; }
 
-// ######################## graphics main content
+.ctp_graphic_wrapper { overflow: hidden; }
 
-// size block percent and align buy percent
-
-.ctp_custom_buy_sell_percent{
-  max-width:175px;
-}
-.ctp_custom_sell_title{
-    float:right;
-}
-
-
-
-.ctp_custom_multiasset{
-    display:block;
-    @media (min-width: @screen-m) {
-        display:inline-block;
-        vertical-align: top;
-        width:20%;
-    }
-}
-
-.ctp_wrapper_avg_graphic{
-    display:inline-block;
-    vertical-align: top;
-    width: 60%;
-    max-height: 86px;
-    overflow:hidden;
-     @media (min-width: @screen-m) {
-        width:33%;
-    }
-}
-.ctp_custom_price{ 
-    display:inline-block;
-    width:38%;
-    vertical-align: top;
-    margin-left: 0;
-    padding-left: 1rem;
-    @media (min-width: @screen-m) {
-      width:40%;
-    }
-}
-
-// Reset translates C3
-.fxs_widget_bars {
-  >svg {
-    padding-top: 0.5rem;
-    >g:nth-child(2) {
-      @media (min-width: @screen-s) { transform: translateX(1.5rem); }
+.fxs_ctp_widget_multi {
+  display: table;
+  width: 100%;
+  > .fxs_widget_cell_col {
+    width: 35%;
+    &:first-child { width: 65%; }
+    > .fxs_widget_cell_col {
+      display: block;
+      margin-bottom: 0.5rem;
     }
   }
+  .c3-axis-x { display: none; }
+  .fxs_widget_avg_price {
+    margin: 0;
+    padding: 0;
+  }
+  .fxs_module_cols_avg { display: inline-block; }
+
+  // Default widget values & media queries
+  &.fxs_widget_default {
+    @media (min-width: @screen-m) {
+      > .fxs_widget_cell_col { vertical-align: bottom; }
+      .ctp_graphic_wrapper {
+        padding-left: 12%;
+        margin-top: -@base_module_size;
+      }
+      .fxs_module_cols_avg { margin-left: 1rem; }
+    }
+  }
+  //
 }
 
 // CTP Table 
@@ -188,4 +127,14 @@
       }
     }
   }
+}
+
+// Reset & overrides C3 library
+.ctp_graphic_container {
+  .c3-gauge-value {display: none; }
+}
+.fxs_widget_bars {
+  &.c3 {
+    path, line { stroke: @lightest_clr; }
+  } 
 }

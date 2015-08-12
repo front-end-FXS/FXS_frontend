@@ -215,19 +215,6 @@
   .fxs_alert_warning & { color: @dark_1_clr; }
 }
 
-// TEXT CONTEXTUAL COLORS
-.fxs_txt_success {
-  .fxs_txt_color_variants(@success_clr);
-}
-
-.fxs_txt_danger {
-  .fxs_txt_color_variants(@error_clr);
-}
-
-.fxs_txt_neutral {
-  .fxs_txt_color_variants(@light_1_clr);
-}
-
 // DIVIDERS
 .fxs_divider_wide {
   &:extend(.fxs_divider_base, .fxs_wideContent all);
@@ -749,31 +736,31 @@
 ///////////////////////////////////////////////////////////////
 ////////////////////// FXStreet WIDGETS //////////////////////
 
-// widget price & widget divider modules
-.fxs_widget_divider_module, .fxs_widget_price {
+// Widget divider modules
+.fxs_widget_divider_module {
   &:extend(.fxs_clearfix all);
   padding-bottom:0.5rem;
   margin-bottom:0.5rem;
   border-bottom:1px solid @light_4_clr;
 }
 
-// widget price module
 .fxs_asset_label, .fxs_widget_price_value {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 .fxs_asset_label{
-  &:extend(.fxs_boldAntialised_style);
   font-size: @txt_size_large;
+  a { display: inline-block; }
 }
 
 .fxs_widget_price_value {
   float: right;
   text-align: right;
   max-width: 60%;
-  .fxs_txt_danger {
+  .fxs_price_change {
     white-space: nowrap;
+    display: inline-block;
   }
 }
 
@@ -786,7 +773,7 @@
   }
 }
 
-// Widget container in report
+// Widget container
 .fxs_widget_summary {
   &:extend(.fxs_clearfix all);
   margin-bottom: 1rem;
@@ -798,6 +785,13 @@
   .fxs_btn { float: right; }
 }
 
+// Widget data Lables
+.widget_custom_data_lable {
+  font-size: @txt_size_xlarge;
+  font-weight: 300;
+  display:block;
+}
+
 // Widget Legends
 .fxs_widget_legend {
   color: @dark_4_clr;
@@ -805,13 +799,53 @@
   display: inline-block;
 }
 
-// c3.js overrides //
-.c3-axis, .c3-legend-item {
-  &:extend(.fxs_widget_legend);
+.widget_small { display: block; }
+
+// Absolute centered legend inside chart
+.fxs_insideChart_centered_legend {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  margin-left: -66px;
+  width: 140px;
+  height: 45px;
+  text-align: center;
 }
 
-// Hide plugin legends
-.c3-legend-item, .c3-tooltip-container, .c3-chart-arcs-gauge-max,
-.c3-chart-arcs-gauge-min, .c3-gauge-value, .domain, .c3-axis-y{ display:none!important; }
+// Widget Price module
+.fxs_widget_price {
+  .fxs_asset_label {
+    &::before {
+      display: inline-block;
+      vertical-align: top;
+      margin: 2px 2px 0 0;
+      content: " ";
+      font: normal normal normal 14px FontAwesome;
+    }
+  }
+  &.price_up {
+    .fxs_asset_label::before {
+      content: '\f062';
+      color: @success_clr;
+    }
+    .fxs_price_change { &:extend(.fxs_txt_success); }
+  }
+  &.price_down {
+    .fxs_asset_label::before {
+      content: '\f063';
+      color: @error_clr;
+    }
+    .fxs_price_change { &:extend(.fxs_txt_danger); }
+  }
+}
 
+// Reset & overrides C3 library General. USE IT WITH CAUTION!!
+.fxs_table {
+  .c3 svg { width: 100%; }
+}
+
+.c3-axis, .c3-legend-item {
+  &:extend(.fxs_widget_legend);
+  font-family: @txt_fontfamily;
+}
 
