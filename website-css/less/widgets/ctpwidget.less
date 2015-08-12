@@ -43,8 +43,8 @@
 }
 // Widget CTP modules
 .fxs_ctp_widget {
-  // Default widget values & media queries
-  &.fxs_widget_default {
+  // Big widget values & media queries
+  &.fxs_widget_big {
     .fxs_module_cols_avg {
       @media (min-width: @screen-m) {
         display: inline-block;
@@ -73,13 +73,11 @@
 .fxs_ctp_widget_multi {
   display: table;
   width: 100%;
+  line-height: @txt_lineheight_small;
   > .fxs_widget_cell_col {
-    width: 35%;
-    &:first-child { width: 65%; }
-    > .fxs_widget_cell_col {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
+    width: 38%;
+    &:first-child { width: 62%; }
+    > .fxs_widget_cell_col { display: block; }
   }
   .c3-axis-x { display: none; }
   .fxs_widget_avg_price {
@@ -88,18 +86,27 @@
   }
   .fxs_module_cols_avg { display: inline-block; }
 
-  // Default widget values & media queries
-  &.fxs_widget_default {
+  // Big widget values & media queries
+  &.fxs_widget_big {
     @media (min-width: @screen-m) {
       > .fxs_widget_cell_col { vertical-align: bottom; }
       .ctp_graphic_wrapper {
-        padding-left: 12%;
+        padding-left: 18%;
         margin-top: -@base_module_size;
       }
-      .fxs_module_cols_avg { margin-left: 1rem; }
+    }
+    @media (min-width: @screen-xxl) {
+      .fxs_module_cols_avg { margin-left: 0.5rem; }
     }
   }
-  //
+
+  // Mini widget values & media queries
+  &.fxs_widget_mini {
+    .fxs_widget_cell_col, .fxs_widget_cell_col:first-child {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 // CTP Table 

@@ -1279,9 +1279,9 @@ input[type=submit] {
   padding: 0 0.8rem;
 }
 .fxs_subtitle {
-  display: inline-block;
+  display: block;
   color: #49494f;
-  font-size: 0.75rem;
+  font-size: 0.88rem;
   letter-spacing: normal;
   margin-bottom: 1rem;
   border-bottom: 3px solid #efeff0;
@@ -2403,6 +2403,7 @@ fieldset[disabled] .fxs_dismissQuery {
   width: 100%;
   max-width: 100%;
   font-size: 0.88rem;
+  margin-bottom: 1rem;
 }
 .fxs_table tbody > tr > td,
 .fxs_table thead > tr > td,
@@ -3967,7 +3968,7 @@ height:calc(100% - 4rem);
   }
 }
 @media (min-width: 680px) {
-  .fxs_ctp_widget.fxs_widget_default .fxs_module_cols_avg {
+  .fxs_ctp_widget.fxs_widget_big .fxs_module_cols_avg {
     display: inline-block;
     margin-left: 2.5rem;
   }
@@ -3988,16 +3989,16 @@ height:calc(100% - 4rem);
 .fxs_ctp_widget_multi {
   display: table;
   width: 100%;
+  line-height: 1.25rem;
 }
 .fxs_ctp_widget_multi > .fxs_widget_cell_col {
-  width: 35%;
+  width: 38%;
 }
 .fxs_ctp_widget_multi > .fxs_widget_cell_col:first-child {
-  width: 65%;
+  width: 62%;
 }
 .fxs_ctp_widget_multi > .fxs_widget_cell_col > .fxs_widget_cell_col {
   display: block;
-  margin-bottom: 0.5rem;
 }
 .fxs_ctp_widget_multi .c3-axis-x {
   display: none;
@@ -4010,16 +4011,23 @@ height:calc(100% - 4rem);
   display: inline-block;
 }
 @media (min-width: 680px) {
-  .fxs_ctp_widget_multi.fxs_widget_default > .fxs_widget_cell_col {
+  .fxs_ctp_widget_multi.fxs_widget_big > .fxs_widget_cell_col {
     vertical-align: bottom;
   }
-  .fxs_ctp_widget_multi.fxs_widget_default .ctp_graphic_wrapper {
-    padding-left: 12%;
+  .fxs_ctp_widget_multi.fxs_widget_big .ctp_graphic_wrapper {
+    padding-left: 18%;
     margin-top: -35px;
   }
-  .fxs_ctp_widget_multi.fxs_widget_default .fxs_module_cols_avg {
-    margin-left: 1rem;
+}
+@media (min-width: 1300px) {
+  .fxs_ctp_widget_multi.fxs_widget_big .fxs_module_cols_avg {
+    margin-left: 0.5rem;
   }
+}
+.fxs_ctp_widget_multi.fxs_widget_mini .fxs_widget_cell_col,
+.fxs_ctp_widget_multi.fxs_widget_mini .fxs_widget_cell_col:first-child {
+  display: block;
+  width: 100%;
 }
 .fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),
 .fxs_ctp_table thead > tr > td:not( :nth-child(-n+3)),
