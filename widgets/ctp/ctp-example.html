@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>News Home - FXStreet</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../core/css/core.css">
+    <link rel="stylesheet" href="../core/css/c3.min.css">
+    <link rel="stylesheet" href="css/ctpwidget.css">
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+   
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="fxs_content">
+        <section class="fxs_detail">
+            <section class="fxs_widget_summary">
+                <div class="fxs_widget_divider_module">
+                    <!-- widget price -->
+                    <div class="fxs_widget_price price_up">
+                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                            <a href="/">EUR/USD</a>
+                        </abbr>
+                        <div class="fxs_widget_price_value">
+                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                            <span class="fxs_price_change">
+                                <span class="fxs_change_pips">0.0026</span>
+                                <span class="fxs_change_percent">(-0.12%)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /widget price -->
+                </div>
+                
+                <!-- ctp widget -->
+                <div class="fxs_ctp_widget fxs_widget_big">
+                    <div class="fxs_widget_divider_module">
+                        <div class="ctp_graphic_container">
+                            <div class="fxs_insideChart_centered_legend">
+                                <div class="ctp_price_precent">
+                                    <small class="widget_small">Sell</small>
+                                    <span class="fxs_txt_danger widget_custom_data_lable">70%</span>
+                                </div>
+
+                                <div class="ctp_price_precent ctp_divider">
+                                    <small class="widget_small">Buy</small>
+                                    <span class="fxs_txt_success widget_custom_data_lable">30%</span>
+                                </div>
+                            </div>
+
+                            <div id="gauge_chart" class="c3"></div>
+                        </div>
+
+                        <div class="fxs_widget_avg_price">
+                            <div class="fxs_module_cols_avg">
+                                <small class="widget_small">Avg Sell Price</small>
+                                <span class="fxs_txt_danger widget_custom_data_lable">1.3380</span>
+                            </div>
+
+                            <div class="fxs_module_cols_avg">
+                                <small class="widget_small">Avg Buy Price</small>
+                                <span class="fxs_txt_success widget_custom_data_lable">1.3380</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ctp barras content -->
+                    <div class="fxs_widget_divider_module">
+                        <span class="fxs_widget_legend">Liquidity Distribution</span>
+
+                        <div id="orders_chart" class="c3 fxs_widget_bars"></div>
+
+                    </div>
+                    <!-- /ctp barras content -->
+
+                    <!-- widget footer -->
+                    <footer class="fxs_widget_footer">
+                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                        <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                    </footer>
+                    <!-- /widget footer -->
+                </div>
+                <!-- /ctp widget -->
+            </section>
+
+        </section>
+    </div>
+
+    <script src="../../website-js/jquery-1.11.3.min.js"></script>
+    <script src="../core/js/c3.js"></script>
+    <script src="../core/js/d3.min.js"></script>
+    <script>
+        // Gauge chart
+        var gauge_chart = c3.generate({
+            bindto: '#gauge_chart',
+                   
+            data: {
+                columns: [
+                ['Buy', 100],
+                ['Sell', 70]
+                ],
+
+                type: 'gauge'
+                //onclick: function (d, i) { console.log("onclick", d, i); },
+                //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+            },
+                    
+            zoom: {
+                enabled:false
+            },
+           
+            gauge: {
+                label: {
+                    show: false
+                },
+                // },
+                // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+                // max: 100, // 100 is default
+                // units: ' %',
+                width: 6 // for adjusting arc thickness
+            },
+            color: {
+                pattern: ['#CE4735', '#CE4735', '#328372'], // the three color levels for the percentage values.
+                threshold: {
+                    // unit: 'value', // percentage is default
+                    // max: 200, // 100 is default
+                    values: [0, 100]
+                }
+            },
+            size: {
+                height: 100
+            },
+            tooltip: {
+              show: false
+            }
+        });
+
+        // bar chart
+
+        var orders_chart = c3.generate({
+            bindto: '#orders_chart',
+            data: {
+                x: 'x',
+                columns: [
+                ['x', 1.0005, 1.0010, 1.0028, 1.0035, 1.0042, 1.0051, 1.0061, 1.0072, 1.0088, 1.0097, 1.0105, 1.0111, 1.0128, 1.0135, 1.0142, 1.01501, 1.0160, 1.0170, 1.0182, 1.0197, 1.0203],
+                ['Sell', 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                ['Buy', 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+
+                ],
+                type: 'bar',
+                colors: {
+                    Sell: '#CE4735',
+                    Buy: '#338473'
+                },
+                        
+            },
+            bar: {
+                width: 5 // this makes bar width 3px
+            },
+            size: {
+                height: 105
+            },
+            tooltip: {
+                show: false
+            },
+            axis: {
+              y: {
+                show: false
+              },
+              x: {
+                tick: {
+                  culling: {
+                    max: 5
+                  }
+                }
+              } 
+            },
+            legend: {
+              position: 'right'
+            }
+        });
+    </script>
+
+</body>
+
+</html>

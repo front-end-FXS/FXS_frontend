@@ -751,6 +751,7 @@
 }
 
 .fxs_asset_label{
+  &:extend(.fxs_headline_base_rules all);
   font-size: @txt_size_large;
   a { display: inline-block; }
 }
@@ -789,7 +790,11 @@
       .fxs_btn { float: none; }
     }
   }
-  small { margin-right: 1rem; }
+  small {
+    margin-right: 1rem;
+    font-size: @txt_size_nano;
+    color: @light_1_clr;
+  }
 }
 
 // Widget data Lables

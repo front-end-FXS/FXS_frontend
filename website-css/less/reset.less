@@ -12,8 +12,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
-	vertical-align: baseline;
 }
 
 html {
@@ -23,11 +21,11 @@ html {
 
 body {
 	background-color: @dark_2_clr;
+	color: @dark_4_clr;
 	font-family: @txt_fontfamily;
 	font-size: @txt_defaultsize_rem;
-	height:100%;
+	height: 100%;
 	line-height: @txt_lineheight;
-	color: @dark_4_clr;
 }
 
 // HTML5 display-role reset for older browsers 
@@ -40,4 +38,110 @@ blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
+}
+
+/////////////////////////////////////////////////////////////
+///////////////// Basic html styles ////////////////////////
+///////////////////////////////////////////////////////////
+
+p { margin: 0 0 @txt_size_xsmall; }
+
+a {
+  color: @highlight_clr;
+  text-decoration: none;
+  &:extend(.fxs_boldAntialised_style, .fxs_transition);
+  &:hover{ text-decoration: underline; }
+}
+
+strong { &:extend(.fxs_boldAntialised_style); }
+
+h1, h2, h3, h4, h5 { &:extend(.fxs_headline_base_rules all); }
+
+h2 { font-size: @txt_size_xxlarge; }
+
+h3 { font-size: @txt_size_xlarge; }
+
+h4 { font-size: @txt_size_large;}
+
+blockquote {
+  padding: 0 0 0.5rem 2rem;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 1rem;
+  &:before, &:after { position: absolute; }
+  &:before{
+    display: block;
+    color: @light_4_clr;
+    font: normal normal normal 1.25rem FontAwesome;
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    left: 0;
+    content: "\f10d";
+  }
+  &:after{
+    content: " ";
+    width: 3rem;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+        background-color: @light_4_clr;
+    height: 3px;
+  }
+  footer {
+    font-size: @txt_size_small; 
+    color: @light_2_clr;
+  }
+}
+
+small {
+  font-size: @txt_size_nano;
+  color: @light_1_clr;
+}
+
+sub, sup { font-size: @txt_size_xsmall; }
+
+hr {
+  border: 0;
+  background-color: @dark_4_clr;
+  margin-left: 0;
+  height: 1px;
+}
+
+figcaption {
+  font-size: @txt_size_xsmall;
+  line-height: @txt_lineheight_xsmall;
+  font-weight: @txt_fontweight;
+  margin: 0.5rem 1rem;
+  small {
+    display: block;
+    padding-top: .25rem;
+  }
+  @media (min-width: @screen-m) { margin: 0.5rem 0; }
+}
+
+ol, ul { list-style: none; }
+
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+// Images
+img {
+  max-width: 100%;
+  min-width: 100%;
+  height: inherit;
+}
+
+// Tables
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Box model & typo rendering
+* {
+  .box-sizing(border-box);
+  text-rendering: optimizelegibility;
 }
