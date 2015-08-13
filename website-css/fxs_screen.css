@@ -3988,6 +3988,27 @@ height:calc(100% - 4rem);
     margin-left: 2.5rem;
   }
 }
+@media (min-width: 680px) {
+  .fxs_ctp_widget.fxs_widget_mini .ctp_graphic_container,
+  .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_price {
+    display: block;
+    max-width: inherit;
+  }
+  .fxs_ctp_widget.fxs_widget_mini .ctp_graphic_container {
+    margin-bottom: 0.5rem;
+  }
+  .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_price {
+    margin: 0;
+    text-align: center;
+  }
+  .fxs_ctp_widget.fxs_widget_mini .fxs_module_cols_avg {
+    display: inline-block;
+    margin-right: 0;
+  }
+  .fxs_ctp_widget.fxs_widget_mini .fxs_module_cols_avg:first-child {
+    margin-right: 1rem;
+  }
+}
 .fxs_widget_cell_col {
   display: table-cell;
   vertical-align: middle;

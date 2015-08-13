@@ -60,7 +60,22 @@
   }
   // Mini widget values & media queries
   &.fxs_widget_mini {
-    //
+    @media (min-width: @screen-m) {
+      .ctp_graphic_container, .fxs_widget_avg_price {
+        display: block;
+        max-width: inherit;
+      }
+      .ctp_graphic_container { margin-bottom: 0.5rem; }
+      .fxs_widget_avg_price {
+        margin: 0;
+        text-align: center;
+      }
+      .fxs_module_cols_avg {
+        display: inline-block;
+        margin-right: 0;
+        &:first-child { margin-right: 1rem; }
+      }
+    }
   }
 }
 
