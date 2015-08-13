@@ -791,7 +791,7 @@ table {
   text-transform: uppercase;
 }
 .fxs_mutedLink {
-  color: #48484e;
+  color: #49494f;
   padding-right: 5px;
 }
 .fxs_headline_large,
@@ -2404,7 +2404,6 @@ fieldset[disabled] .fxs_dismissQuery {
   width: 100%;
   max-width: 100%;
   font-size: 0.88rem;
-  margin-bottom: 1rem;
 }
 .fxs_table tbody > tr > td,
 .fxs_table thead > tr > td,
@@ -2625,6 +2624,11 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_asset_label a {
   display: inline-block;
+  text-decoration: none;
+}
+.fxs_asset_label a:hover {
+  text-decoration: underline;
+  color: #1b1c23;
 }
 .fxs_widget_price_value {
   float: right;

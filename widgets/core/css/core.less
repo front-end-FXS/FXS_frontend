@@ -9,3 +9,20 @@
 @import "../../../website-css/less/forms.less";  // Forms styles
 @import "../../../website-css/less/components.less";  // Molecular-combined components
 //
+
+// Forced styles for widgets
+.fxs_widget_summary {
+	font-family: @txt_fontfamily;
+	font-size: @txt_defaultsize_px;
+	line-height: @txt_lineheight;
+  // Box model & typo rendering
+  * {
+    .box-sizing(border-box);
+    text-rendering: optimizelegibility;
+  }
+	// Tables
+	table {
+	  border-collapse: collapse;
+	  border-spacing: 0;
+	}
+}

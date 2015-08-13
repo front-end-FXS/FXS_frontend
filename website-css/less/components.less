@@ -565,7 +565,6 @@
 	width: 100%;
  	max-width: 100%;
  	font-size: @txt_size_small;
-  margin-bottom: 1rem;
   tbody, thead, tfoot {
     >tr >td, >tr >th {
       padding: 0.5rem;
@@ -753,7 +752,14 @@
 .fxs_asset_label{
   &:extend(.fxs_headline_base_rules all);
   font-size: @txt_size_large;
-  a { display: inline-block; }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: @dark_1_clr;
+    }
+  }
 }
 
 .fxs_widget_price_value {

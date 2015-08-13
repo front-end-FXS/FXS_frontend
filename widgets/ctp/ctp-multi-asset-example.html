@@ -4,7 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>News Home - FXStreet</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../../website-css/fxs_screen.css">
+    <link rel="stylesheet" href="../core/css/core.css">
+    <link rel="stylesheet" href="../core/css/c3.min.css">
+    <link rel="stylesheet" href="css/ctpwidget.css">
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
    
@@ -233,227 +235,227 @@
 </section>
 </div>
 
-    <script src="../../../website-js/jquery-1.11.3.min.js"></script>
-    <script src="../../../widgets/core/js/c3.js"></script>
-    <script src="../../../widgets/core/js/d3.min.js"></script>
-<script>
-    
-    var ctp_horitzontal_bar = c3.generate({
-        bindto: '#ctp_bar_stacked_1',
-        data: {
-            columns: [
-                ['Sell',40],
-                ['Buy', 60]
-            ],
-            type: 'bar',
-            groups: [
-                ['Sell', 'Buy']
-            ],
-            order: 'null',
-            colors: {
-                Sell: '#CE4735',
-                Buy: '#328372',
-            }
-        },
-        padding: {
-            right: 0
-        },
-        axis: {
-            y: {
-                show: false
-             },
-            x: {
+    <script src="../../website-js/jquery-1.11.3.min.js"></script>
+    <script src="../core/js/c3.js"></script>
+    <script src="../core/js/d3.min.js"></script>
+    <script>
+        
+        var ctp_horitzontal_bar = c3.generate({
+            bindto: '#ctp_bar_stacked_1',
+            data: {
+                columns: [
+                    ['Sell',40],
+                    ['Buy', 60]
+                ],
+                type: 'bar',
+                groups: [
+                    ['Sell', 'Buy']
+                ],
+                order: 'null',
+                colors: {
+                    Sell: '#CE4735',
+                    Buy: '#328372',
+                }
+            },
+            padding: {
+                right: 0
+            },
+            axis: {
+                y: {
+                    show: false
+                 },
+                x: {
+                    show: false
+                },
+                rotated: true
+            },
+            bar: {
+                width: 6
+            },
+            size: {
+                height: 35
+            },
+            tooltip: {
                 show: false
             },
-            rotated: true
-        },
-        bar: {
-            width: 6
-        },
-        size: {
-            height: 35
-        },
-        tooltip: {
-            show: false
-        },
-        legend: {
-            show: false
-        }
-    });
-
-
-    var ctp_horitzontal_bar_2 = c3.generate({
-        bindto: '#ctp_bar_stacked_2',
-        data: {
-            columns: [
-                ['Sell', 70],
-                ['Buy', 30]
-            ],
-            type: 'bar',
-            groups: [
-                ['Sell', 'Buy']
-            ],
-            order: 'null',
-            colors: {
-                Sell: '#CE4735',
-                Buy: '#328372',
-            }
-        },
-        padding: {
-            right: 0
-        },
-        axis: {
-            y: {
+            legend: {
                 show: false
-             },
-            x: {
+            }
+        });
+
+
+        var ctp_horitzontal_bar_2 = c3.generate({
+            bindto: '#ctp_bar_stacked_2',
+            data: {
+                columns: [
+                    ['Sell', 70],
+                    ['Buy', 30]
+                ],
+                type: 'bar',
+                groups: [
+                    ['Sell', 'Buy']
+                ],
+                order: 'null',
+                colors: {
+                    Sell: '#CE4735',
+                    Buy: '#328372',
+                }
+            },
+            padding: {
+                right: 0
+            },
+            axis: {
+                y: {
+                    show: false
+                 },
+                x: {
+                    show: false
+                },
+                rotated: true
+            },
+            bar: {
+                width: 6
+            },
+            size: {
+                height: 35
+            },
+            tooltip: {
                 show: false
             },
-            rotated: true
-        },
-        bar: {
-            width: 6
-        },
-        size: {
-            height: 35
-        },
-        tooltip: {
-            show: false
-        },
-        legend: {
-            show: false
-        }
-    });
-
-    var ctp_horitzontal_bar_3 = c3.generate({
-        bindto: '#ctp_bar_stacked_3',
-        data: {
-            columns: [
-                ['Sell',10],
-                ['Buy', 90]
-            ],
-            type: 'bar',
-            groups: [
-                ['Sell', 'Buy']
-            ],
-            order: 'null',
-            colors: {
-                Sell: '#CE4735',
-                Buy: '#328372',
-            }
-        },
-        padding: {
-            right: 0
-        },
-        axis: {
-            y: {
+            legend: {
                 show: false
-             },
-            x: {
+            }
+        });
+
+        var ctp_horitzontal_bar_3 = c3.generate({
+            bindto: '#ctp_bar_stacked_3',
+            data: {
+                columns: [
+                    ['Sell',10],
+                    ['Buy', 90]
+                ],
+                type: 'bar',
+                groups: [
+                    ['Sell', 'Buy']
+                ],
+                order: 'null',
+                colors: {
+                    Sell: '#CE4735',
+                    Buy: '#328372',
+                }
+            },
+            padding: {
+                right: 0
+            },
+            axis: {
+                y: {
+                    show: false
+                 },
+                x: {
+                    show: false
+                },
+                rotated: true
+            },
+            bar: {
+                width: 6
+            },
+            size: {
+                height: 35
+            },
+            tooltip: {
                 show: false
             },
-            rotated: true
-        },
-        bar: {
-            width: 6
-        },
-        size: {
-            height: 35
-        },
-        tooltip: {
-            show: false
-        },
-        legend: {
-            show: false
-        }
-    });
-
-    var ctp_horitzontal_bar_4 = c3.generate({
-        bindto: '#ctp_bar_stacked_4',
-        data: {
-            columns: [
-                ['Sell',40],
-                ['Buy', 60]
-            ],
-            type: 'bar',
-            groups: [
-                ['Sell', 'Buy']
-            ],
-            order: 'null',
-            colors: {
-                Sell: '#CE4735',
-                Buy: '#328372',
-            }
-        },
-        padding: {
-            right: 0
-        },
-        axis: {
-            y: {
+            legend: {
                 show: false
-             },
-            x: {
+            }
+        });
+
+        var ctp_horitzontal_bar_4 = c3.generate({
+            bindto: '#ctp_bar_stacked_4',
+            data: {
+                columns: [
+                    ['Sell',40],
+                    ['Buy', 60]
+                ],
+                type: 'bar',
+                groups: [
+                    ['Sell', 'Buy']
+                ],
+                order: 'null',
+                colors: {
+                    Sell: '#CE4735',
+                    Buy: '#328372',
+                }
+            },
+            padding: {
+                right: 0
+            },
+            axis: {
+                y: {
+                    show: false
+                 },
+                x: {
+                    show: false
+                },
+                rotated: true
+            },
+            bar: {
+                width: 6
+            },
+            size: {
+                height: 35
+            },
+            tooltip: {
                 show: false
             },
-            rotated: true
-        },
-        bar: {
-            width: 6
-        },
-        size: {
-            height: 35
-        },
-        tooltip: {
-            show: false
-        },
-        legend: {
-            show: false
-        }
-    });
+            legend: {
+                show: false
+            }
+        });
 
 
-//     y este otro el de forecast multiasset (bullish, bearish y sideways):
-// <div id="forecast_horitzontal_bar" class="c3" style="width: 300px; height: 300px"></div>
-// <script>
+    //     y este otro el de forecast multiasset (bullish, bearish y sideways):
+    // <div id="forecast_horitzontal_bar" class="c3" style="width: 300px; height: 300px"></div>
+    // <script>
 
-// $(document).ready(function () {
+    // $(document).ready(function () {
 
-// var forecast_horitzontal_bar = c3.generate({
-// bindto: '#forecast_horitzontal_bar',
-// data: {
-// columns: [
-// ['Sideways', 40],
-// ['Bearish', 20],
-// ['Bullish', 30]
-// ],
-// type: 'bar',
-// groups: [
-// ['Sideways', 'Bearish', 'Bullish']
-// ],
-// colors: {
-// Bearish: '#FF5555',
-// Bullish: '#60B094',
-// Sideways: '#777777' 
-// }
-// },
-// bar: {
-// width: 10
-// },
-// axis: {
-// rotated: true,
-// x: {
-// show: false
-// },
-// y: {
-// show: false
-// }
-// }
-// });
+    // var forecast_horitzontal_bar = c3.generate({
+    // bindto: '#forecast_horitzontal_bar',
+    // data: {
+    // columns: [
+    // ['Sideways', 40],
+    // ['Bearish', 20],
+    // ['Bullish', 30]
+    // ],
+    // type: 'bar',
+    // groups: [
+    // ['Sideways', 'Bearish', 'Bullish']
+    // ],
+    // colors: {
+    // Bearish: '#FF5555',
+    // Bullish: '#60B094',
+    // Sideways: '#777777' 
+    // }
+    // },
+    // bar: {
+    // width: 10
+    // },
+    // axis: {
+    // rotated: true,
+    // x: {
+    // show: false
+    // },
+    // y: {
+    // show: false
+    // }
+    // }
+    // });
 
 
-// });
+    // });
 
-</script>
+    </script>
 
 </body>
 
