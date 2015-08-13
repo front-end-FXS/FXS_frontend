@@ -751,7 +751,7 @@
 
 .fxs_asset_label{
   &:extend(.fxs_headline_base_rules all);
-  font-size: @txt_size_large;
+  font-size: @txt_defaultsize_rem;
   a {
     display: inline-block;
     text-decoration: none;
@@ -765,7 +765,7 @@
 .fxs_widget_price_value {
   float: right;
   text-align: right;
-  max-width: 60%;
+  max-width: 58%;
   .fxs_price_change {
     white-space: nowrap;
     display: inline-block;
@@ -796,17 +796,12 @@
       .fxs_btn { float: none; }
     }
   }
-  small {
-    margin-right: 1rem;
-    font-size: @txt_size_nano;
-    color: @light_1_clr;
-  }
+  small { margin-right: 1rem; }
 }
 
 // Widget data Lables
 .widget_custom_data_lable {
   font-size: @txt_size_xlarge;
-  font-weight: 300;
   display:block;
 }
 
@@ -855,6 +850,12 @@
     }
     .fxs_price_change { &:extend(.fxs_txt_danger); }
   }
+}
+
+// Widget table fake cell items
+.fxs_widget_cell_col {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 // Reset & overrides C3 library General. USE IT WITH CAUTION!!

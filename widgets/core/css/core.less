@@ -15,14 +15,23 @@
 	font-family: @txt_fontfamily;
 	font-size: @txt_defaultsize_px;
 	line-height: @txt_lineheight;
+  
   // Box model & typo rendering
   * {
     .box-sizing(border-box);
     text-rendering: optimizelegibility;
   }
+
+  // Small tag
+  small {
+    font-size: @txt_size_nano;
+    color: @light_1_clr;
+  }
+
 	// Tables
 	table {
 	  border-collapse: collapse;
 	  border-spacing: 0;
 	}
+  
 }
