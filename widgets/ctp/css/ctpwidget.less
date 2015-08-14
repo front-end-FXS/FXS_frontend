@@ -5,14 +5,6 @@
 //////////// Widget Gauge module //////////////
 //////////////////////////////////////////////
 
-// General components //
-.ctp_graphic_container {
-  display: inline-block; 
-  max-width: 200px;
-  position:relative;
-  vertical-align: middle;
-}
-
 .ctp_divider{
   border-left: 1px solid #ccc;
   padding-left: 0.58rem;
@@ -22,20 +14,12 @@
 .ctp_price_precent {
   display: inline-block;
   text-align: left;
-  .widget_custom_data_lable {
+  .fxs_widget_custom_data_lable {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
     font-weight: @txt_fontweight_bold;
   }
-}
-
-// Widget avg prices values
-.fxs_widget_avg_price {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 1rem;
-  padding-bottom: 6px;
 }
 
 .fxs_module_cols_avg {
@@ -59,12 +43,12 @@
   // Mini widget values & media queries
   &.fxs_widget_mini {
     @media (min-width: @screen-m) {
-      .ctp_graphic_container, .fxs_widget_avg_price {
+      .fxs_gauge_container, .fxs_widget_avg_col {
         display: block;
         max-width: inherit;
       }
-      .ctp_graphic_container { margin-bottom: 0.5rem; }
-      .fxs_widget_avg_price {
+      .fxs_gauge_container { margin-bottom: 0.5rem; }
+      .fxs_widget_avg_col {
         margin: 0;
         text-align: center;
       }
@@ -92,8 +76,7 @@
     &:first-child { width: 62%; }
     > .fxs_widget_cell_col { display: block; }
   }
-  .c3-axis-x { display: none; }
-  .fxs_widget_avg_price {
+  .fxs_widget_avg_col {
     margin: 0;
     padding: 0;
     display: block;
@@ -125,7 +108,7 @@
         display: block;
         width: 100%;
       }
-      .fxs_widget_avg_price { text-align: left; }
+      .fxs_widget_avg_col { text-align: left; }
     }
   }
 }
@@ -158,11 +141,14 @@
 }
 
 // Reset & overrides C3 library
-.ctp_graphic_container {
+.fxs_gauge_container {
   .c3-gauge-value {display: none; }
 }
 .fxs_widget_bars {
   &.c3 {
     path, line { stroke: @lightest_clr; }
   } 
+}
+.fxs_ctp_widget_multi {
+  .c3-axis-x { display: none; }
 }

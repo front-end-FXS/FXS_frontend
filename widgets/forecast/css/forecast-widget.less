@@ -4,165 +4,27 @@
 ////////////////////////////////////////////////
 //////////// Widget Gauge module //////////////
 //////////////////////////////////////////////
-
-// General components //
-.ctp_graphic_container {
-  display: inline-block; 
-  max-width: 200px;
-  position:relative;
-  vertical-align: middle;
-}
-
-.ctp_divider{
-  border-left: 1px solid #ccc;
-  padding-left: 0.58rem;
-  margin-left: 0.5rem;
-}
-
-.ctp_price_precent {
-  display: inline-block;
-  text-align: left;
-  .widget_custom_data_lable {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-    font-weight: @txt_fontweight_bold;
-  }
-}
-
-// Widget avg prices values
-.fxs_widget_avg_price {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 1rem;
-  padding-bottom: 6px;
-}
-
-.fxs_module_cols_avg {
-  margin-right: 1rem;
-  &:first-child {
+.forecast_results_list {
+  li {
+    white-space: nowrap;
     margin-bottom: 0.5rem;
-    @media (min-width: @screen-m) {
-      margin-bottom: 0;
-    }
-  }
-}
-// Widget CTP modules
-.fxs_ctp_widget {
-  // Big widget values & media queries
-  &.fxs_widget_big {
-    .fxs_module_cols_avg {
-      @media (min-width: @screen-m) { display: inline-block; }
-      @media (min-width: @screen-xl) { margin-left: 2.5rem; }
-    }
-  }
-  // Mini widget values & media queries
-  &.fxs_widget_mini {
-    @media (min-width: @screen-m) {
-      .ctp_graphic_container, .fxs_widget_avg_price {
-        display: block;
-        max-width: inherit;
-      }
-      .ctp_graphic_container { margin-bottom: 0.5rem; }
-      .fxs_widget_avg_price {
-        margin: 0;
-        text-align: center;
-      }
-      .fxs_module_cols_avg {
-        display: inline-block;
-        margin-right: 0;
-        &:first-child { margin-right: 1rem; }
-      }
+    font-size: @txt_size_small;
+    .fxs_widget_custom_bold {
+      width: @base_module_size;
+      display: inline-block;
     }
   }
 }
 
-//////// Widget multiasset //////////////
-
-.ctp_multi_percent_wrapper { padding-right: 10%; }
-
-.ctp_graphic_wrapper { overflow: hidden; }
-
-.fxs_ctp_widget_multi {
-  display: table;
-  width: 100%;
-  line-height: @txt_lineheight_small;
-  > .fxs_widget_cell_col {
-    width: 38%;
-    &:first-child { width: 62%; }
-    > .fxs_widget_cell_col { display: block; }
-  }
-  .c3-axis-x { display: none; }
-  .fxs_widget_avg_price {
-    margin: 0;
-    padding: 0;
-    display: block;
-    text-align: center;
-  }
-  .fxs_module_cols_avg {
-    display: inline-block;
-    text-align: left;
-  }
-
-  // Big widget values & media queries
-  &.fxs_widget_big {
-    @media (min-width: @screen-m) {
-      > .fxs_widget_cell_col { vertical-align: bottom; }
-      .ctp_graphic_wrapper {
-        padding-left: 18%;
-        margin-top: -@base_module_size;
-      }
-    }
-    @media (min-width: @screen-xl) {
-      .fxs_module_cols_avg { margin-right: 0.5rem; }
-    }
-  }
-
-  // Mini widget values & media queries
-  &.fxs_widget_mini {
-    @media (min-width: @screen-m) {
-      .fxs_widget_cell_col, .fxs_widget_cell_col:first-child {
-        display: block;
-        width: 100%;
-      }
-      .fxs_widget_avg_price { text-align: left; }
-    }
-  }
+.forecast_result_txt {
+  &:extend(.fxs_txt_neutral);
+  display: inline-block;
 }
 
-// CTP Table 
-.fxs_ctp_table {
-  tbody, thead, tfoot {
-    >tr >td, >tr >th {
-      &:not(:nth-child(-n+3)) { display: none; }
-      &:last-child { display: table-cell; }
-      @media (min-width: @screen-m){
-        &:nth-child(n+4):nth-child(-n+5) { display: table-cell; }
-      }
-      @media (min-width: @screen-l){
-        &:nth-child(n+5) { display: table-cell; }
-      }
-    }
+.forecast_avg_result {
+  padding-top: 0.5rem;
+  border-top: 2px solid @light_1_clr;
+  .fxs_widget_custom_bold {
+    &:extend(.fxs_txt_neutral);
   }
-  .fxs_ctpTable_order {
-    a:extend(.fxs_clearfix all) {}
-    @media (min-width: @screen-m){
-      a {
-        &::before, &::after {
-          content: none;
-          display: inline-block;
-        }
-      }
-    }
-  }
-}
-
-// Reset & overrides C3 library
-.ctp_graphic_container {
-  .c3-gauge-value {display: none; }
-}
-.fxs_widget_bars {
-  &.c3 {
-    path, line { stroke: @lightest_clr; }
-  } 
 }

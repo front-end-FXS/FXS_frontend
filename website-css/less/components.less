@@ -744,6 +744,70 @@
   border-bottom:1px solid @light_4_clr;
 }
 
+// Widget container
+.fxs_widget_summary {
+  &:extend(.fxs_clearfix all);
+  margin-bottom: 1rem;
+}
+
+// widget footer module
+.fxs_widget_footer {
+  &:extend(.fxs_clearfix all);
+  .fxs_btn { float: right; }
+  &.fxs_widget_mini, .fxs_widget_mini & {
+    @media (min-width: @screen-m) {
+      .fxs_btn { float: none; }
+    }
+  }
+  small { margin-right: 1rem; }
+}
+
+// Widget data Lables
+.fxs_widget_custom_data_lable {
+  font-size: @txt_size_xlarge;
+  display:block;
+}
+
+// Eidget bold custom text
+.fxs_widget_custom_bold {
+  &:extend(.fxs_boldAntialised_style);
+}
+
+// Widget Legends
+.fxs_widget_legend {
+  color: @dark_4_clr;
+  font-size: @txt_size_xsmall;
+  display: inline-block;
+}
+
+.fxs_widget_small { display: block; }
+
+// Gauge chart container
+.fxs_gauge_container {
+  display: inline-block; 
+  max-width: 200px;
+  position:relative;
+  vertical-align: middle;
+}
+
+// Absolute centered legend inside chart
+.fxs_insideChart_centered_legend {
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+
+// Widget averages col
+.fxs_widget_avg_col {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 1rem;
+  padding-bottom: 6px;
+}
+
+// Widget Price module
 .fxs_asset_label, .fxs_widget_price_value {
   display: inline-block;
   vertical-align: top;
@@ -781,51 +845,6 @@
   }
 }
 
-// Widget container
-.fxs_widget_summary {
-  &:extend(.fxs_clearfix all);
-  margin-bottom: 1rem;
-}
-
-// widget footer module
-.fxs_widget_footer {
-  &:extend(.fxs_clearfix all);
-  .fxs_btn { float: right; }
-  &.fxs_widget_mini, .fxs_widget_mini & {
-    @media (min-width: @screen-m) {
-      .fxs_btn { float: none; }
-    }
-  }
-  small { margin-right: 1rem; }
-}
-
-// Widget data Lables
-.widget_custom_data_lable {
-  font-size: @txt_size_xlarge;
-  display:block;
-}
-
-// Widget Legends
-.fxs_widget_legend {
-  color: @dark_4_clr;
-  font-size: @txt_size_xsmall;
-  display: inline-block;
-}
-
-.widget_small { display: block; }
-
-// Absolute centered legend inside chart
-.fxs_insideChart_centered_legend {
-  position: absolute;
-  bottom: 6px;
-  left: 50%;
-  margin-left: -66px;
-  width: 140px;
-  height: 45px;
-  text-align: center;
-}
-
-// Widget Price module
 .fxs_widget_price {
   .fxs_asset_label {
     &::before {

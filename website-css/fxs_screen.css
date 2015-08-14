@@ -248,6 +248,7 @@ label,
 .fxs_dropdownHeader,
 .fxs_dropdownList > li > a,
 .fxs_table th,
+.fxs_widget_custom_bold,
 .fxs_show_navmenu,
 .fxs_show_usermenu,
 .fxs_suscribeText span,
@@ -276,7 +277,9 @@ h5,
 .fxs_txt_danger a {
   color: #a73829;
 }
-.fxs_txt_neutral {
+.fxs_txt_neutral,
+.forecast_result_txt,
+.forecast_avg_result .fxs_widget_custom_bold {
   color: #8b8c91;
 }
 .fxs_txt_neutral a {
@@ -2614,6 +2617,54 @@ fieldset[disabled] .fxs_dismissQuery {
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #efeff0;
 }
+.fxs_widget_summary {
+  margin-bottom: 1rem;
+}
+.fxs_widget_footer .fxs_btn {
+  float: right;
+}
+@media (min-width: 680px) {
+  .fxs_widget_footer.fxs_widget_mini .fxs_btn,
+  .fxs_widget_mini .fxs_widget_footer .fxs_btn {
+    float: none;
+  }
+}
+.fxs_widget_footer small {
+  margin-right: 1rem;
+}
+.fxs_widget_custom_data_lable {
+  font-size: 1.25rem;
+  display: block;
+}
+.fxs_widget_legend,
+.c3-axis,
+.c3-legend-item {
+  color: #49494f;
+  font-size: 0.75rem;
+  display: inline-block;
+}
+.fxs_widget_small {
+  display: block;
+}
+.fxs_gauge_container {
+  display: inline-block;
+  max-width: 200px;
+  position: relative;
+  vertical-align: middle;
+}
+.fxs_insideChart_centered_legend {
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+}
+.fxs_widget_avg_col {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 1rem;
+  padding-bottom: 6px;
+}
 .fxs_asset_label,
 .fxs_widget_price_value {
   display: inline-block;
@@ -2646,44 +2697,6 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_price_bidask .fxs_price_big_figure {
   font-size: 1.25rem;
-}
-.fxs_widget_summary {
-  margin-bottom: 1rem;
-}
-.fxs_widget_footer .fxs_btn {
-  float: right;
-}
-@media (min-width: 680px) {
-  .fxs_widget_footer.fxs_widget_mini .fxs_btn,
-  .fxs_widget_mini .fxs_widget_footer .fxs_btn {
-    float: none;
-  }
-}
-.fxs_widget_footer small {
-  margin-right: 1rem;
-}
-.widget_custom_data_lable {
-  font-size: 1.25rem;
-  display: block;
-}
-.fxs_widget_legend,
-.c3-axis,
-.c3-legend-item {
-  color: #49494f;
-  font-size: 0.75rem;
-  display: inline-block;
-}
-.widget_small {
-  display: block;
-}
-.fxs_insideChart_centered_legend {
-  position: absolute;
-  bottom: 6px;
-  left: 50%;
-  margin-left: -66px;
-  width: 140px;
-  height: 45px;
-  text-align: center;
 }
 .fxs_widget_price .fxs_asset_label::before {
   display: inline-block;
@@ -3952,12 +3965,6 @@ height:calc(100% - 4rem);
   border-left: 0 solid transparent;
   padding-left: 0;
 }
-.ctp_graphic_container {
-  display: inline-block;
-  max-width: 200px;
-  position: relative;
-  vertical-align: middle;
-}
 .ctp_divider {
   border-left: 1px solid #ccc;
   padding-left: 0.58rem;
@@ -3967,17 +3974,11 @@ height:calc(100% - 4rem);
   display: inline-block;
   text-align: left;
 }
-.ctp_price_precent .widget_custom_data_lable {
+.ctp_price_precent .fxs_widget_custom_data_lable {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-weight: 700;
-}
-.fxs_widget_avg_price {
-  display: inline-block;
-  vertical-align: bottom;
-  margin-left: 1rem;
-  padding-bottom: 6px;
 }
 .fxs_module_cols_avg {
   margin-right: 1rem;
@@ -4001,15 +4002,15 @@ height:calc(100% - 4rem);
   }
 }
 @media (min-width: 680px) {
-  .fxs_ctp_widget.fxs_widget_mini .ctp_graphic_container,
-  .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_price {
+  .fxs_ctp_widget.fxs_widget_mini .fxs_gauge_container,
+  .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_col {
     display: block;
     max-width: inherit;
   }
-  .fxs_ctp_widget.fxs_widget_mini .ctp_graphic_container {
+  .fxs_ctp_widget.fxs_widget_mini .fxs_gauge_container {
     margin-bottom: 0.5rem;
   }
-  .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_price {
+  .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_col {
     margin: 0;
     text-align: center;
   }
@@ -4041,10 +4042,7 @@ height:calc(100% - 4rem);
 .fxs_ctp_widget_multi > .fxs_widget_cell_col > .fxs_widget_cell_col {
   display: block;
 }
-.fxs_ctp_widget_multi .c3-axis-x {
-  display: none;
-}
-.fxs_ctp_widget_multi .fxs_widget_avg_price {
+.fxs_ctp_widget_multi .fxs_widget_avg_col {
   margin: 0;
   padding: 0;
   display: block;
@@ -4074,7 +4072,7 @@ height:calc(100% - 4rem);
     display: block;
     width: 100%;
   }
-  .fxs_ctp_widget_multi.fxs_widget_mini .fxs_widget_avg_price {
+  .fxs_ctp_widget_multi.fxs_widget_mini .fxs_widget_avg_col {
     text-align: left;
   }
 }
@@ -4121,10 +4119,29 @@ height:calc(100% - 4rem);
     display: inline-block;
   }
 }
-.ctp_graphic_container .c3-gauge-value {
+.fxs_gauge_container .c3-gauge-value {
   display: none;
 }
 .fxs_widget_bars.c3 path,
 .fxs_widget_bars.c3 line {
   stroke: #ffffff;
+}
+.fxs_ctp_widget_multi .c3-axis-x {
+  display: none;
+}
+.forecast_results_list li {
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+.forecast_results_list li .fxs_widget_custom_bold {
+  width: 35px;
+  display: inline-block;
+}
+.forecast_result_txt {
+  display: inline-block;
+}
+.forecast_avg_result {
+  padding-top: 0.5rem;
+  border-top: 2px solid #8b8c91;
 }
