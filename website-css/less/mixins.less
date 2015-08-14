@@ -178,8 +178,24 @@
   a { color: @alert-textColor; }
 }
 
-// mixin base styles nav
+// mixin first level nav
 .fxs_vertical_block_nav(@borderBottom; @lineHeight; @fontSize; @itemHeight) {
+  a {
+    display: block;
+    height:@itemHeight;
+    border-bottom:@borderBottom;
+    line-height:@lineHeight;
+    padding:10px 1rem 10px 1rem;
+    color:  @lightest_clr;
+    font-size: @fontSize;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover { background-color:@dark_4_clr; }
+  }
+  &.active a { background-color:@dark_3_clr; } 
+}
+
+.fxs_list_block_btn(@borderBottom; @lineHeight; @fontSize; @itemHeight) {
   display: block;
   height:@itemHeight;
   border-bottom:@borderBottom;
@@ -189,12 +205,11 @@
   font-size: @fontSize;
   text-decoration: none;
   text-transform: uppercase;
-  &:hover, &.active{ color:@lightest_clr; }
   &:hover { background-color:@dark_4_clr; }
   &.active { background-color:@dark_3_clr; }
 }
 
-// mixin base styles nav
+// mixin second level a
 .fxs_list_nav(@fontSize; @colorItems; @paddingParameters){
   padding: @paddingParameters;
   color: @colorItems;
@@ -208,33 +223,33 @@
 }
 
 // tabs items
-.fxs_tab_item(@tabs-container-border; @tab-link-color; @tab-link-hover-border){
+.fxs_tab_item(@tabs-container-border; @tab-link-color; @tab-link-hover-border; @tab-height){
   border-bottom: @tabs-container-border;
+  height: @tab-height;
   margin: 0 0 1rem;
   padding: 0 0.5rem;
-  height: @main_header_height;
-  li{
-      display:inline-block;
-      a{
-        display:block;
-        text-transform: uppercase;
-        color: fade(@tab-link-color, 75%);
-        font-size: @txt_size_xsmall;
-        text-decoration: none;
-        padding: 0 0.63rem;
-        line-height: @main_header_height;
-        height: @main_header_height;
-        &:hover{
-          border-bottom: 5px solid @tab-link-hover-border;
-          background-color: transparent;
-          color: @tab-link-color;
-        }
-        &.active{
-          border-bottom: 5px solid @highlight_clr;
-          background-color: transparent;
-          color:@tab-link-color!important;
-        }
+  li {
+    display:inline-block;
+    a {
+      display:block;
+      text-transform: uppercase;
+      color: fade(@tab-link-color, 75%);
+      font-size: @txt_size_xsmall;
+      text-decoration: none;
+      padding: 0 0.63rem;
+      line-height: @tab-height;
+      height: @tab-height;
+      &:hover {
+        border-bottom: 5px solid @tab-link-hover-border;
+        background-color: transparent;
+        color: @tab-link-color;
       }
+    }
+    &.active a {
+      border-bottom: 5px solid @highlight_clr;
+      background-color: transparent;
+      color:@tab-link-color!important;
+    }
   }   
 }
 

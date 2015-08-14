@@ -7,11 +7,11 @@
 
 // Main Navigation MENU (1st level navigation)
 .fxs_nav_menu { 
-  a{
+  li {
     .fxs_vertical_block_nav(1px solid @dark_3_clr, 25px, @txt_size_small, @main_header_height);
   }    
   .fxs_header & {
-    .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr);
+    .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr; @main_header_height);
     display: none;
     li:first-child { display: none; }
     @media (min-width: @screen-xl) {
@@ -48,9 +48,9 @@
 
 // Tabs navigation (overall nav options)
 .fxs_tabs_nav{
-  .fxs_tab_item(1px solid @light_3_clr; @light_2_clr; @light_3_clr);
+  .fxs_tab_item(1px solid @light_3_clr; @dark_4_clr; @light_3_clr; @base_module_size);
   .fxs_pageSidebar & {
-    .fxs_tab_item(1px solid @dark_4_clr; @light_2_clr; @dark_4_clr);
+    .fxs_tab_item(1px solid @dark_4_clr; @light_2_clr; @dark_4_clr; @main_header_height);
   }
 }
 
@@ -878,7 +878,7 @@
 }
 
 // Reset & overrides C3 library General. USE IT WITH CAUTION!!
-.fxs_table {
+.fxs_table, .fxs_gauge_container {
   .c3 svg { width: 100%; }
 }
 

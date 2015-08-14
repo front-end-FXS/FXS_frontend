@@ -264,14 +264,16 @@ h5,
   font-weight: 700;
 }
 .fxs_txt_success,
-.fxs_widget_price.price_up .fxs_price_change {
+.fxs_widget_price.price_up .fxs_price_change,
+.forecast_avg_result.result_bullish .fxs_widget_custom_bold {
   color: #338473;
 }
 .fxs_txt_success a {
   color: #255f53;
 }
 .fxs_txt_danger,
-.fxs_widget_price.price_down .fxs_price_change {
+.fxs_widget_price.price_down .fxs_price_change,
+.forecast_avg_result.result_bearish .fxs_widget_custom_bold {
   color: #ce4735;
 }
 .fxs_txt_danger a {
@@ -1108,7 +1110,7 @@ input[type=submit] {
     min-width: 320px;
   }
 }
-.fxs_nav_menu a {
+.fxs_nav_menu li a {
   display: block;
   height: 45px;
   border-bottom: 1px solid #2e2e32;
@@ -1119,21 +1121,17 @@ input[type=submit] {
   text-decoration: none;
   text-transform: uppercase;
 }
-.fxs_nav_menu a:hover,
-.fxs_nav_menu a.active {
-  color: #ffffff;
-}
-.fxs_nav_menu a:hover {
+.fxs_nav_menu li a:hover {
   background-color: #49494f;
 }
-.fxs_nav_menu a.active {
+.fxs_nav_menu li.active a {
   background-color: #2e2e32;
 }
 .fxs_header .fxs_nav_menu {
   border-bottom: 0 none transparent;
+  height: 45px;
   margin: 0 0 1rem;
   padding: 0 0.5rem;
-  height: 45px;
   display: none;
 }
 .fxs_header .fxs_nav_menu li {
@@ -1154,7 +1152,7 @@ input[type=submit] {
   background-color: transparent;
   color: #ffffff;
 }
-.fxs_header .fxs_nav_menu li a.active {
+.fxs_header .fxs_nav_menu li.active a {
   border-bottom: 5px solid #e4871b;
   background-color: transparent;
   color: #ffffff !important;
@@ -1206,9 +1204,9 @@ input[type=submit] {
 }
 .fxs_tabs_nav {
   border-bottom: 1px solid #dcddde;
+  height: 35px;
   margin: 0 0 1rem;
   padding: 0 0.5rem;
-  height: 45px;
 }
 .fxs_tabs_nav li {
   display: inline-block;
@@ -1216,28 +1214,28 @@ input[type=submit] {
 .fxs_tabs_nav li a {
   display: block;
   text-transform: uppercase;
-  color: rgba(162, 162, 167, 0.75);
+  color: rgba(73, 73, 79, 0.75);
   font-size: 0.75rem;
   text-decoration: none;
   padding: 0 0.63rem;
-  line-height: 45px;
-  height: 45px;
+  line-height: 35px;
+  height: 35px;
 }
 .fxs_tabs_nav li a:hover {
   border-bottom: 5px solid #dcddde;
   background-color: transparent;
-  color: #a2a2a7;
+  color: #49494f;
 }
-.fxs_tabs_nav li a.active {
+.fxs_tabs_nav li.active a {
   border-bottom: 5px solid #e4871b;
   background-color: transparent;
-  color: #a2a2a7 !important;
+  color: #49494f !important;
 }
 .fxs_pageSidebar .fxs_tabs_nav {
   border-bottom: 1px solid #49494f;
+  height: 45px;
   margin: 0 0 1rem;
   padding: 0 0.5rem;
-  height: 45px;
 }
 .fxs_pageSidebar .fxs_tabs_nav li {
   display: inline-block;
@@ -1257,7 +1255,7 @@ input[type=submit] {
   background-color: transparent;
   color: #a2a2a7;
 }
-.fxs_pageSidebar .fxs_tabs_nav li a.active {
+.fxs_pageSidebar .fxs_tabs_nav li.active a {
   border-bottom: 5px solid #e4871b;
   background-color: transparent;
   color: #a2a2a7 !important;
@@ -2717,7 +2715,8 @@ fieldset[disabled] .fxs_dismissQuery {
   display: table-cell;
   vertical-align: middle;
 }
-.fxs_table .c3 svg {
+.fxs_table .c3 svg,
+.fxs_gauge_container .c3 svg {
   width: 100%;
 }
 .c3-axis,
@@ -3134,10 +3133,6 @@ width:calc(100% - 320px);
   position: fixed;
   width: 100%;
 }
-.fxs_sidebar_user .fxs_timezone_btn:hover,
-.fxs_sidebar_user .fxs_timezone_btn.active {
-  color: #ffffff;
-}
 .fxs_sidebar_user .fxs_timezone_btn:hover {
   background-color: #49494f;
 }
@@ -3176,7 +3171,7 @@ height:calc(100% - 45px);
   font-size: 0.88rem;
   padding-left: 10px;
 }
-.fxs_timezone_hours a {
+.fxs_timezone_hours li a {
   display: block;
   height: 60px;
   border-bottom: 1px solid #2e2e32;
@@ -3187,17 +3182,13 @@ height:calc(100% - 45px);
   text-decoration: none;
   text-transform: uppercase;
 }
-.fxs_timezone_hours a:hover,
-.fxs_timezone_hours a.active {
-  color: #ffffff;
-}
-.fxs_timezone_hours a:hover {
+.fxs_timezone_hours li a:hover {
   background-color: #49494f;
 }
-.fxs_timezone_hours a.active {
+.fxs_timezone_hours li.active a {
   background-color: #2e2e32;
 }
-.fxs_timezone_hours a span {
+.fxs_timezone_hours li a span {
   color: #a2a2a7;
   display: block;
 }
@@ -3982,6 +3973,7 @@ height:calc(100% - 4rem);
 }
 .fxs_module_cols_avg {
   margin-right: 1rem;
+  text-align: left;
 }
 .fxs_module_cols_avg:first-child {
   margin-bottom: 0.5rem;
@@ -4050,7 +4042,6 @@ height:calc(100% - 4rem);
 }
 .fxs_ctp_widget_multi .fxs_module_cols_avg {
   display: inline-block;
-  text-align: left;
 }
 @media (min-width: 680px) {
   .fxs_ctp_widget_multi.fxs_widget_big > .fxs_widget_cell_col {
@@ -4144,4 +4135,18 @@ height:calc(100% - 4rem);
 .forecast_avg_result {
   padding-top: 0.5rem;
   border-top: 2px solid #8b8c91;
+}
+.forecast_avg_result.result_bullish {
+  border-top-color: #338473;
+}
+.forecast_avg_result.result_bearish {
+  border-top-color: #ce4735;
+}
+.fxs_forecast_widget .fxs_gauge_container,
+.fxs_forecast_widget .fxs_widget_avg_col {
+  vertical-align: top;
+}
+.fxs_forecast_widget .fxs_widget_avg_col {
+  margin-left: 0;
+  padding-top: 2px;
 }

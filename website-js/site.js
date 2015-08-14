@@ -165,9 +165,9 @@ $(document).ready(function () {
         evt.stopPropagation();
     });
 
-        // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA DEL BOTÓN
-        $(document).click(function() {
-            $('.fxs_overflowOptions').removeClass("active");
-            $('.fxs_btn_group').removeClass("active");
-        });
+    // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA DEL BOTÓN
+    $(document).click(function() {
+        $('.fxs_overflowOptions').removeClass("active");
+        $('.fxs_btn_group').removeClass("active");
+    });
 });

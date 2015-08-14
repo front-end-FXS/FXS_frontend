@@ -27,4 +27,26 @@
   .fxs_widget_custom_bold {
     &:extend(.fxs_txt_neutral);
   }
+
+  &.result_bullish {
+    border-top-color: @success_clr;
+    .fxs_widget_custom_bold {
+      &:extend(.fxs_txt_success);
+    }
+  }
+  &.result_bearish {
+    border-top-color: @error_clr;
+    .fxs_widget_custom_bold {
+      &:extend(.fxs_txt_danger);
+    }
+  }
+}
+
+// Single asset module
+.fxs_forecast_widget {
+  .fxs_gauge_container, .fxs_widget_avg_col { vertical-align: top; }
+  .fxs_widget_avg_col {
+    margin-left: 0;
+    padding-top: 2px;
+  }
 }
