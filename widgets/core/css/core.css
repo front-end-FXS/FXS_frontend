@@ -1,3 +1,43 @@
+@import "c3.min.css";
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  -moz-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  -moz-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
 .fxs_entryPlain_txt {
   font-size: 0.88rem;
   line-height: 1.25rem;
@@ -497,7 +537,7 @@ lesshat-selector {
 .fxs_scrollableContent,
 .fxs_swipeContent_slider {
   -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 @media (min-width: 1024px) {
@@ -547,6 +587,8 @@ lesshat-selector {
   }
 }
 .fxs_swipeContent_slider {
+  overflow-x: auto;
+  overflow-y: hidden;
   -lh-property: 0;
 width:-webkit-calc(100% + 0.5rem);
 width:-moz-calc(100% + 0.5rem);
@@ -712,9 +754,8 @@ input[type=submit] {
 }
 .fxs_nav_menu li a {
   display: block;
-  height: 45px;
   border-bottom: 1px solid #2e2e32;
-  line-height: 25px;
+  line-height: 24px;
   padding: 10px 1rem 10px 1rem;
   color: #ffffff;
   font-size: 0.88rem;
@@ -859,6 +900,12 @@ input[type=submit] {
   border-bottom: 5px solid #e4871b;
   background-color: transparent;
   color: #a2a2a7 !important;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
 }
 .fxs_sectionTitle_header {
   display: inline-block;
@@ -1674,9 +1721,11 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   top: 0;
   right: 0;
   width: 35px;
+  overflow: hidden;
 }
 .fxs_filter.active {
   width: 100%;
+  overflow: visible;
 }
 .fxs_filter.active .fxs_btn_filter {
   color: #a2a2a7;
@@ -1817,7 +1866,6 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_typeaheadField input[disabled] {
   cursor: not-allowed;
   background-color: #f7f7f7;
-  opacity: 1;
 }
 .fxs_typeaheadField input.typeahead-hint[readonly] {
   background-color: transparent;

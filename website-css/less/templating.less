@@ -20,7 +20,7 @@
   position: relative;
   background-color: @light_4_clr;
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
   @media (min-width: @screen-l) {
@@ -201,12 +201,10 @@
 // sidebar user
 
 .fxs_sidebar_user {
-    .fxs_nav_login_form, .fxs_timezone_hours, .fxs_login_form_content, .fxs_signup_form_content { width: @slide_sidebar_space; }
-    .fxs_signup_form_content{ display:none; }
-    .fxs_login_form_content, .fxs_signup_form_content{ 
+    .fxs_authentication_form_content{ 
         margin-bottom: @main_header_height;
         font-size: @txt_size_xsmall;
-        .fxs_signup_form {
+        .fxs_authentication_form {
             margin:0 10px 1rem;
             .fxs_signup_conditions {
             margin-left: 1.5rem;
@@ -224,8 +222,8 @@
                 color:@light_1_clr; 
                 font-style:italic;
                 font-size:@txt_size_small;
-                &:before,
-                &:after {
+                &::before,
+                &::after {
                     border-top: 1px solid  @dark_3_clr;
                     display: block;
                     height: 1px;
@@ -235,7 +233,7 @@
                     left: 0;
                     top: 0.7rem;
                 }
-                &:after {
+                &::after {
                     right: 0;  
                     left: auto; 
                 }
@@ -269,7 +267,7 @@
     bottom: 0;
     position: fixed;
     width:100%;   
-    time{ padding-left: 1rem; }
+    .fxs_timestamp{ padding-left: 1rem; }
         i{ padding-left: 2rem; }
       }
 }
@@ -283,31 +281,28 @@
 
 // wrapper timezone and items
 .fxs_timezone_hours {
-    &:extend(.fxs_scrollableContent all);
-    position: absolute;
-    top: @main_header_height;
-    .calc(height, ~'100% - @{main_header_height}');
-    .ui-selected {
-        background-color:@dark_3_clr;
-        time{
-            &:after {
-                content:"\f00c";
-                position:absolute;
-                margin-top: -3px;
-                font-family: FontAwesome;
-                text-decoration: inherit;
-                color:@lightest_clr;
-                font-size: @txt_size_small;
-                padding-left: 10px;
-            }
-        }  
-    }
-
-    li { 
-        .fxs_vertical_block_nav(1px solid @dark_3_clr,20px, @txt_size_small, 60px);    
-        a span { color:@light_2_clr; display:block;  }
-    }
-
+  &:extend(.fxs_scrollableContent all);
+  position: absolute;
+  top: @main_header_height;
+  width: @slide_sidebar_space;
+  .calc(height, ~'100% - @{main_header_height}');
+  .active {
+    .fxs_timestamp::after {
+      content:"\f00c";
+      position:absolute;
+      margin-top: -3px;
+      font-family: FontAwesome;
+      text-decoration: inherit;
+      color:@lightest_clr;
+      font-size: @txt_size_small;
+      padding-left: 10px;
+    }  
+  }
+  .fxs_timezone_item_location {
+    color:@light_2_clr;
+    display:block;
+    font-size: @txt_size_xsmall;
+  }
 }
 
 .fxs_timezone_nav {

@@ -105,6 +105,16 @@ $(document).ready(function () {
             $('.fxs_queryResults').addClass("fxs_selectedQuery");
         });
 
+    // Toggle timezone class to show menu (metido a saco)
+
+    $('.fxs_timezone_btn').click(function () {
+        $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
+    });
+
+    $('.fxs_timezone_close, .fxs_timezone_done').click(function () {         
+        $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
+    });
+
     
     // Layout - Menu 
 

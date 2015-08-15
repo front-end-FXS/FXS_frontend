@@ -8,7 +8,7 @@
 // Main Navigation MENU (1st level navigation)
 .fxs_nav_menu { 
   li {
-    .fxs_vertical_block_nav(1px solid @dark_3_clr, 25px, @txt_size_small, @main_header_height);
+    .fxs_vertical_block_nav(1px solid @dark_3_clr, 24px, @txt_size_small);
   }    
   .fxs_header & {
     .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr; @main_header_height);
@@ -51,6 +51,17 @@
   .fxs_tab_item(1px solid @light_3_clr; @dark_4_clr; @light_3_clr; @base_module_size);
   .fxs_pageSidebar & {
     .fxs_tab_item(1px solid @dark_4_clr; @light_2_clr; @dark_4_clr; @main_header_height);
+  }
+}
+
+// Tab panes (Imported from Bootstrap 3.3.5)
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
   }
 }
 
@@ -316,8 +327,10 @@
   top: 0;
   right: 0;
   width: @base_module_size; 
+  overflow: hidden;
   &.active {
     width: 100%;
+    overflow: visible;
     .fxs_btn_filter { color: @light_2_clr; }
     .fxs_typeaheadField {
       input {
@@ -406,7 +419,6 @@
     &.disabled, &[disabled] {
       cursor: not-allowed;
       background-color: @light_5_clr;
-      opacity: 1;
     }
     &.typeahead-hint[readonly] {
       background-color: transparent;

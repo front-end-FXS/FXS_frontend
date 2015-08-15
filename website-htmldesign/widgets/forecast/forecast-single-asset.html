@@ -46,7 +46,7 @@
                     </ul>
                     <div class="fxs_widget_divider_module tab-content">
 
-                        <div id="forecast_1w" class="fxs_widgetSlot_col_lg tab-pane fade in active">
+                        <div role="tabpanel" id="forecast_1w" class="tab-pane fade in active">
                             <!-- Timeframe -->
                             <div class="fxs_clearfix">
                                 <span class="fxs_label">1 Week</span>
@@ -90,7 +90,7 @@
                             <!-- /Results -->
                         </div>
 
-                        <div id="forecast_1m" class="fxs_widgetSlot_col_lg tab-pane fade in">
+                        <div role="tabpanel" id="forecast_1m" class="tab-pane fade">
                             <!-- Timeframe -->
                             <div class="fxs_clearfix">
                                 <span class="fxs_label">1 Month</span>
@@ -134,7 +134,7 @@
                             <!-- /Results -->
                         </div>
 
-                        <div id="forecast_1q" class="fxs_widgetSlot_col_lg tab-pane fade in">
+                        <div role="tabpanel" id="forecast_1q" class="tab-pane fade">
                             <!-- Timeframe -->
                             <div class="fxs_clearfix">
                                 <span class="fxs_label">1 Quarter</span>
@@ -196,9 +196,14 @@
     </div>
 
     <script src="../../../website-js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="../../../website-js/bootstrap.min.js"></script>
+
+    <!-- C3 library -->
     <script src="../../../widgets/core/js/c3.js"></script>
     <script src="../../../widgets/core/js/d3.min.js"></script>
-    <script src="../../../website-js/tab.js"></script>
+
     <script>
         // Gauge chart 1w
         var forecast_chart_1w = c3.generate({

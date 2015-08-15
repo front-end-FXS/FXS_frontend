@@ -159,7 +159,7 @@
 // Scrollable content
 .fxs_scrollableContent {
   -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
   @media (min-width: @screen-l) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
@@ -190,6 +190,8 @@
 // Swipe content in mobile
 .fxs_swipeContent_slider {
   &:extend(.fxs_scrollableContent all);
+  overflow-x: auto;
+  overflow-y: hidden;
   .calc(width, ~'100% + 0.5rem');
   padding: 0 0 1rem;
   white-space: nowrap;

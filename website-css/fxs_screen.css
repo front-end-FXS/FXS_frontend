@@ -1,4 +1,43 @@
 @import "../widgets/core/css/c3.min.css";
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  -moz-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  -moz-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
 .fxs_entryPlain_txt,
 .fxs_entryExcerpt {
   font-size: 0.88rem;
@@ -870,7 +909,7 @@ table {
 .fxs_timezone_hours,
 .fxs_listViewRail {
   -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 @media (min-width: 1024px) {
@@ -947,6 +986,8 @@ table {
   }
 }
 .fxs_swipeContent_slider {
+  overflow-x: auto;
+  overflow-y: hidden;
   -lh-property: 0;
 width:-webkit-calc(100% + 0.5rem);
 width:-moz-calc(100% + 0.5rem);
@@ -1112,9 +1153,8 @@ input[type=submit] {
 }
 .fxs_nav_menu li a {
   display: block;
-  height: 45px;
   border-bottom: 1px solid #2e2e32;
-  line-height: 25px;
+  line-height: 24px;
   padding: 10px 1rem 10px 1rem;
   color: #ffffff;
   font-size: 0.88rem;
@@ -1259,6 +1299,12 @@ input[type=submit] {
   border-bottom: 5px solid #e4871b;
   background-color: transparent;
   color: #a2a2a7 !important;
+}
+.tab-content > .tab-pane {
+  display: none;
+}
+.tab-content > .active {
+  display: block;
 }
 .fxs_sectionTitle_header {
   display: inline-block;
@@ -2084,9 +2130,11 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   top: 0;
   right: 0;
   width: 35px;
+  overflow: hidden;
 }
 .fxs_filter.active {
   width: 100%;
+  overflow: visible;
 }
 .fxs_filter.active .fxs_btn_filter {
   color: #a2a2a7;
@@ -2227,7 +2275,6 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_typeaheadField input[disabled] {
   cursor: not-allowed;
   background-color: #f7f7f7;
-  opacity: 1;
 }
 .fxs_typeaheadField input.typeahead-hint[readonly] {
   background-color: transparent;
@@ -2742,7 +2789,7 @@ fieldset[disabled] .fxs_dismissQuery {
   position: relative;
   background-color: #efeff0;
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
 }
@@ -3037,47 +3084,31 @@ width:calc(100% - 320px);
 .fxs_sidebar_language.active .fxs_lang_group {
   display: block;
 }
-.fxs_sidebar_user .fxs_nav_login_form,
-.fxs_sidebar_user .fxs_timezone_hours,
-.fxs_sidebar_user .fxs_login_form_content,
-.fxs_sidebar_user .fxs_signup_form_content {
-  width: 276px;
-}
-.fxs_sidebar_user .fxs_signup_form_content {
-  display: none;
-}
-.fxs_sidebar_user .fxs_login_form_content,
-.fxs_sidebar_user .fxs_signup_form_content {
+.fxs_sidebar_user .fxs_authentication_form_content {
   margin-bottom: 45px;
   font-size: 0.75rem;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_signup_form,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_signup_form {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_authentication_form {
   margin: 0 10px 1rem;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_signup_form .fxs_signup_conditions,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_signup_form .fxs_signup_conditions {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_authentication_form .fxs_signup_conditions {
   margin-left: 1.5rem;
   display: block;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_sidebar_divider,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_sidebar_divider {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_sidebar_divider {
   margin: 10px 0 10px 0;
   text-align: center;
   position: relative;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_sidebar_divider span,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_sidebar_divider span {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_sidebar_divider span {
   display: inline-block;
   text-transform: uppercase;
   color: #8b8c91;
   font-style: italic;
   font-size: 0.88rem;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_sidebar_divider span:before,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_sidebar_divider span:before,
-.fxs_sidebar_user .fxs_login_form_content .fxs_sidebar_divider span:after,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_sidebar_divider span:after {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_sidebar_divider span::before,
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_sidebar_divider span::after {
   border-top: 1px solid #2e2e32;
   display: block;
   height: 1px;
@@ -3087,32 +3118,26 @@ width:calc(100% - 320px);
   left: 0;
   top: 0.7rem;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_sidebar_divider span:after,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_sidebar_divider span:after {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_sidebar_divider span::after {
   right: 0;
   left: auto;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_social_sidebar_nav,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_social_sidebar_nav {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_social_sidebar_nav {
   padding: 10px;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_social_sidebar_nav .fxs_btn,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_social_sidebar_nav .fxs_btn {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_social_sidebar_nav .fxs_btn {
   text-align: left;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_social_sidebar_nav .fxs_btn i,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_social_sidebar_nav .fxs_btn i {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_social_sidebar_nav .fxs_btn i {
   padding-right: 30px;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_login_message,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_login_message {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_login_message {
   background-color: #2e2e32;
   color: #a2a2a7;
   padding: 10px 1rem 10px 1rem;
   margin-top: 30px;
 }
-.fxs_sidebar_user .fxs_login_form_content .fxs_login_message p,
-.fxs_sidebar_user .fxs_signup_form_content .fxs_login_message p {
+.fxs_sidebar_user .fxs_authentication_form_content .fxs_login_message p {
   font-style: italic;
   text-transform: uppercase;
   margin: 0;
@@ -3139,7 +3164,7 @@ width:calc(100% - 320px);
 .fxs_sidebar_user .fxs_timezone_btn.active {
   background-color: #2e2e32;
 }
-.fxs_sidebar_user .fxs_timezone_btn time {
+.fxs_sidebar_user .fxs_timezone_btn .fxs_timestamp {
   padding-left: 1rem;
 }
 .fxs_sidebar_user .fxs_timezone_btn i {
@@ -3152,16 +3177,14 @@ width:calc(100% - 320px);
 .fxs_timezone_hours {
   position: absolute;
   top: 45px;
+  width: 276px;
   -lh-property: 0;
 height:-webkit-calc(100% - 45px);
 height:-moz-calc(100% - 45px);
 height:calc(100% - 45px);
 ;
 }
-.fxs_timezone_hours .ui-selected {
-  background-color: #2e2e32;
-}
-.fxs_timezone_hours .ui-selected time:after {
+.fxs_timezone_hours .active .fxs_timestamp::after {
   content: "\f00c";
   position: absolute;
   margin-top: -3px;
@@ -3171,26 +3194,10 @@ height:calc(100% - 45px);
   font-size: 0.88rem;
   padding-left: 10px;
 }
-.fxs_timezone_hours li a {
-  display: block;
-  height: 60px;
-  border-bottom: 1px solid #2e2e32;
-  line-height: 20px;
-  padding: 10px 1rem 10px 1rem;
-  color: #ffffff;
-  font-size: 0.88rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.fxs_timezone_hours li a:hover {
-  background-color: #49494f;
-}
-.fxs_timezone_hours li.active a {
-  background-color: #2e2e32;
-}
-.fxs_timezone_hours li a span {
+.fxs_timezone_hours .fxs_timezone_item_location {
   color: #a2a2a7;
   display: block;
+  font-size: 0.75rem;
 }
 .fxs_timezone_nav {
   height: 45px;
