@@ -211,15 +211,12 @@
                    
             data: {
                 columns: [
-                ['Sideways', 100],
-                ['Bearish', 90],
-                ['Bullish', 40]
+                ['Sideways', 0],
+                ['Bearish', 0],
+                ['Bullish', 0]
                 ],
 
                 type: 'gauge'
-                //onclick: function (d, i) { console.log("onclick", d, i); },
-                //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
             },
                     
             zoom: {
@@ -230,27 +227,30 @@
                 label: {
                     show: false
                 },
-                // },
-                // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-                // max: 100, // 100 is default
-                // units: ' %',
+                units: ' %',
                 width: 6 // for adjusting arc thickness
             },
             color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-                threshold: {
-                    // unit: 'value', // percentage is default
-                    // max: 200, // 100 is default
-                    // values: [0, 60, 100]
-                }
+                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
             },
             size: {
-                height: 90
+                height: 90,
+                width: 200
             },
             tooltip: {
               show: false
-            }
+            },
         });
+        
+        setTimeout(function () {
+            forecast_chart_1w.load({
+                columns: [
+                ['Bullish', 40],
+                ['Bearish', 90],
+                ['Sideways', 100]
+                ]
+            });
+        }, 250);
 
         // Gauge chart 1M
         var forecast_chart_1m = c3.generate({
@@ -258,15 +258,12 @@
                    
             data: {
                 columns: [
-                ['Sideways', 100],
-                ['Bearish', 50],
-                ['Bullish', 25]
+                ['Sideways', 0],
+                ['Bearish', 0],
+                ['Bullish', 0]
                 ],
 
                 type: 'gauge'
-                //onclick: function (d, i) { console.log("onclick", d, i); },
-                //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
             },
                     
             zoom: {
@@ -277,30 +274,33 @@
                 label: {
                     show: false
                 },
-                // },
-                // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-                // max: 100, // 100 is default
-                // units: ' %',
+                units: ' %',
                 width: 6 // for adjusting arc thickness
             },
             color: {
                 pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-                threshold: {
-                    // unit: 'value', // percentage is default
-                    // max: 200, // 100 is default
-                    // values: [0, 60, 100]
-                }
             },
             size: {
-                height: 90
+                height: 90,
+                width: 200
             },
             tooltip: {
               show: false
             }
         });
+
+        setTimeout(function () {
+            forecast_chart_1m.load({
+                columns: [
+                ['Bullish', 25],
+                ['Bearish', 50],
+                ['Sideways', 100]
+                ]
+            });
+        }, 250);
         
-        // Gauge chart 1Q
-        var forecast_chart_1m = c3.generate({
+        // // Gauge chart 1Q
+        var forecast_chart_1q = c3.generate({
             bindto: '#forecast_chart_1q',
                    
             data: {
@@ -311,9 +311,6 @@
                 ],
 
                 type: 'gauge'
-                //onclick: function (d, i) { console.log("onclick", d, i); },
-                //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
             },
                     
             zoom: {
@@ -324,27 +321,30 @@
                 label: {
                     show: false
                 },
-                // },
-                // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-                // max: 100, // 100 is default
-                // units: ' %',
+                units: ' %',
                 width: 6 // for adjusting arc thickness
             },
             color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-                threshold: {
-                    // unit: 'value', // percentage is default
-                    // max: 200, // 100 is default
-                    // values: [0, 60, 100]
-                }
+                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
             },
             size: {
-                height: 90
+                height: 90,
+                width: 200
             },
             tooltip: {
               show: false
             }
         });
+
+        setTimeout(function () {
+            forecast_chart_1q.load({
+                columns: [
+                ['Bullish', 60],
+                ['Bearish', 90],
+                ['Sideways', 100]
+                ]
+            });
+        }, 250);
 
     </script>
 

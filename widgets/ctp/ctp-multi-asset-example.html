@@ -243,8 +243,8 @@
             bindto: '#ctp_bar_stacked_1',
             data: {
                 columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
+                    ['Sell',0],
+                    ['Buy', 0]
                 ],
                 type: 'bar',
                 groups: [
@@ -281,14 +281,23 @@
                 show: false
             }
         });
+
+        setTimeout(function () {
+            ctp_horitzontal_bar.load({
+                columns: [
+                ['Sell', 40],
+                ['Buy', 60]
+                ]
+            });
+        }, 250);
 
 
         var ctp_horitzontal_bar_2 = c3.generate({
             bindto: '#ctp_bar_stacked_2',
             data: {
                 columns: [
-                    ['Sell', 70],
-                    ['Buy', 30]
+                    ['Sell', 0],
+                    ['Buy', 0]
                 ],
                 type: 'bar',
                 groups: [
@@ -325,13 +334,22 @@
                 show: false
             }
         });
+
+        setTimeout(function () {
+            ctp_horitzontal_bar_2.load({
+                columns: [
+                ['Sell', 70],
+                ['Buy', 30]
+                ]
+            });
+        }, 250);
 
         var ctp_horitzontal_bar_3 = c3.generate({
             bindto: '#ctp_bar_stacked_3',
             data: {
                 columns: [
-                    ['Sell',10],
-                    ['Buy', 90]
+                    ['Sell',0],
+                    ['Buy', 0]
                 ],
                 type: 'bar',
                 groups: [
@@ -368,13 +386,22 @@
                 show: false
             }
         });
+
+        setTimeout(function () {
+            ctp_horitzontal_bar_3.load({
+                columns: [
+                ['Sell', 10],
+                ['Buy', 90]
+                ]
+            });
+        }, 250);
 
         var ctp_horitzontal_bar_4 = c3.generate({
             bindto: '#ctp_bar_stacked_4',
             data: {
                 columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
+                    ['Sell',0],
+                    ['Buy', 0]
                 ],
                 type: 'bar',
                 groups: [
@@ -412,47 +439,14 @@
             }
         });
 
-
-    //     y este otro el de forecast multiasset (bullish, bearish y sideways):
-    // <div id="forecast_horitzontal_bar" class="c3" style="width: 300px; height: 300px"></div>
-    // <script>
-
-    // $(document).ready(function () {
-
-    // var forecast_horitzontal_bar = c3.generate({
-    // bindto: '#forecast_horitzontal_bar',
-    // data: {
-    // columns: [
-    // ['Sideways', 40],
-    // ['Bearish', 20],
-    // ['Bullish', 30]
-    // ],
-    // type: 'bar',
-    // groups: [
-    // ['Sideways', 'Bearish', 'Bullish']
-    // ],
-    // colors: {
-    // Bearish: '#FF5555',
-    // Bullish: '#60B094',
-    // Sideways: '#777777' 
-    // }
-    // },
-    // bar: {
-    // width: 10
-    // },
-    // axis: {
-    // rotated: true,
-    // x: {
-    // show: false
-    // },
-    // y: {
-    // show: false
-    // }
-    // }
-    // });
-
-
-    // });
+        setTimeout(function () {
+            ctp_horitzontal_bar_4.load({
+                columns: [
+                ['Sell', 40],
+                ['Buy', 60]
+                ]
+            });
+        }, 250);
 
     </script>
 
