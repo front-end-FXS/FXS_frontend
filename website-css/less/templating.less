@@ -163,39 +163,38 @@
 .fxs_sidebar_language{
   position:relative;
   a{
-    background-color:@dark_3_clr;
-  }
-  a, p, ul > li a{
     .fxs_list_nav(@txt_size_small, @light_4_clr, 10px 1rem 10px 1rem);
+    background-color:@dark_3_clr;
     &:hover{
       color:@lightest_clr;
+      background-color: lighten(@dark_3_clr, 10%);
     }
   }
 }
+
 .fxs_lang_group{ 
     position:absolute;
-    bottom:2rem;
-    width:100%;
-    background-color:@dark_3_clr;
-    p{
-        font-style:italic;
-        margin:0;
-        color:@light_1_clr; 
-    }
-    a{
-        &:hover{
-            background-color: @dark_4_clr;
-        }
-    }
-    ul{
-        border-bottom:1px solid @dark_4_clr;
-    }
     display:none;
-}
 
-.fxs_sidebar_language.active .fxs_lang_group{
-    display:block;
+    // Esto es un dropdown, juntar los dropdowns con el componente de Bootsrap
+    // p{
+    //     font-style:italic;
+    //     margin:0;
+    //     color:@light_1_clr; 
+    // }
+    // a{
+    //     &:hover{
+    //         background-color: @dark_4_clr;
+    //     }
+    // }
+    // ul{
+    //     border-bottom:1px solid @dark_4_clr;
+    // }
 }
+// .fxs_sidebar_language.active .fxs_lang_group{
+//     display:block;
+// }
+
 // end language sidebar
 
 // sidebar user
