@@ -1,10 +1,22 @@
-﻿// Application variables
+﻿// Vendor imports
+@import "../../../website-css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables
 @import "../../../website-css/less/vars.less";
 
 ////////////////////////////////////////////////
 //////////// Widget Gauge module //////////////
 //////////////////////////////////////////////
+.forecast_timeframe_slot {
+  .fxs_widget_slot_label {
+    max-width: 200px;
+    text-align: center;
+    display: none;
+  }
+}
+
 .forecast_results_list {
+  text-align: left;
   li {
     white-space: nowrap;
     margin-bottom: 0.5rem;
@@ -24,6 +36,7 @@
 .forecast_avg_result {
   padding-top: 0.5rem;
   border-top: 2px solid @light_1_clr;
+  text-align: left;
   .fxs_widget_custom_bold {
     &:extend(.fxs_txt_neutral);
   }
@@ -49,4 +62,25 @@
     margin-left: 0;
     padding-top: 2px;
   }
+  @media (min-width: @screen-m) {
+    .forecast_timeframe_slot {
+      display: block;
+      .opacity(1);
+      .fxs_widget_slot_label { display: block; }
+    }
+    .fxs_tabs_nav { display: none; }
+    .fxs_widget_avg_col {
+      margin: 0 1rem;
+      text-align: center;
+      .calc(width, ~'100% - 210px - 2rem');
+      max-width: 200px;
+    }
+  }
+  // Big widget values & media queries
+  &.fxs_widget_big {
+    @media (min-width: @screen-m) {
+      // Hacer columnas!
+    }
+  }
 }
+//

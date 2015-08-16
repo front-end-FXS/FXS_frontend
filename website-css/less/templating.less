@@ -565,6 +565,12 @@
       float: left; 
       padding: 5px 5px 5px 1rem;
       .fxs_copyRight{ margin-right:5px; }
+      .fxs_subnavInlined_list {
+        display: none;
+        @media (min-width: @screen-xl) {
+          display: inline-block;
+        }
+      }
     }
     .fxs_btn_disclaimer{
       right:0;
