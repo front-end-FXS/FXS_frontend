@@ -484,186 +484,231 @@
                 </nav>
             </section>
             <!-- /ListView -->
+            
             <!-- Sidebar right -->
             <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
-                <nav class="fxs_nav_login_form">
-                    <a href="#" title="Login" id="fxs_login_btn" class="active">Log in</a>
-                    <a href="#" title="Sign up" id="fxs_signup_btn">Sign up</a>
-                </nav>
-                <div class="fxs_login_form_content">
-                    <form class="fxs_signup_form">
-                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                            <label class="fxs_btn_icon" title="Username" for="user-name">
-                                <i class="fa fa-user"></i>
-                                <span class="fxs_skip">Username</span>
-                            </label>
-                            <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
-                        </div>
-                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                            <label class="fxs_btn_icon" title="Password" for="password">
-                                <i class="fa fa-lock"></i>
-                                <span class="fxs_skip">Password</span>
-                            </label>
-                            <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
-                        </div>
-                        <div class="fxs_formGroup">
-                            <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
-                        </div>
-                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
-                        <a href="#" title="Forgot password">Forgot password</a>
-                    </form>
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
 
-                    <div class="fxs_sidebar_divider"><span>or</span></div>
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
 
-                    <div class="fxs_social_sidebar_nav">
-                        <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
-                        <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <p>I'm not an fxstreet member</p>
+                            <a href="#">Sign up</a>
+                        </div>
                     </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
 
-                    <div class="fxs_login_message">
-                        <p>I'm not an fxstreet member</p>
-                        <a href="#">Sign up</a>
-                    </div>
-                </div>
-                <div class="fxs_signup_form_content">
-                    <form class="fxs_signup_form">
-                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                            <label class="fxs_btn_icon" title="Enter your email address" for="email">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="fxs_skip">Enter your email address</span>
-                            </label>
-                            <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
                         </div>
-                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                            <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
-                                <i class="fa fa-user"></i>
-                                <span class="fxs_skip">Choose your username</span>
-                            </label>
-                            <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
-                        </div>
-                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                            <label class="fxs_btn_icon" title="Set your password" for="set-password">
-                                <i class="fa fa-lock"></i>
-                                <span class="fxs_skip">Set your password</span>
-                            </label>
-                            <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
-                        </div>
-                        <div class="fxs_formGroup">
-                            <label class="fxs_checkboxGroup">
-                                <input type="checkbox" id="terms" />
-                                I have read and accept the
-                            </label>
-                            <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
-                        </div>
-                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
-                    </form>
-                    
-                    <div class="fxs_sidebar_divider"><span>or</span></div>
 
-                    <div class="fxs_social_sidebar_nav">
-                        <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
-                        <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
-                    </div>
-
-                    <div class="fxs_login_message">
-                        <p>already an fxstreet member?</p>
-                        <a href="#" title="login">login</a>
+                        <div class="fxs_login_message">
+                            <p>already an fxstreet member?</p>
+                            <a href="#" title="login">login</a>
+                        </div>
                     </div>
                 </div>
                 <div class="fxs_timezone_items fxs_pageSidebar">
                     <nav class="fxs_timezone_nav">
                         <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
                     </nav>
-                    <div class="fxs_timezone_hours">
+                    <div class="fxs_nav_menu fxs_timezone_hours">
 
-                        <ol id="selectable">
-                            <li class="ui-widget-content">
-                                <span><time>10:20 (GMT+1:00) first</time></span>
-                                <p>hawaii</p>
-                            </li>
-                            <li class="ui-widget-content">
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
-                            </li>
-                            <li class="ui-widget-content">
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                                
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
                             <li>
-                                <span><time>10:20 (GMT+1:00)</time></span>
-                                <p>hawaii</p>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
                             </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            
                         </ol>
                     </div>
                     
                 </div>
                 <a class="fxs_timezone_btn" href="#" title="select timezone">
                     <span class="fxs_helperLabel_title">Timezone</span>
-                    <time>10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
                 </a>
             </div>
             <!-- /Sidebar right -->
@@ -692,39 +737,12 @@
             </div>
 
         <script src="../website-js/jquery-1.11.3.min.js"></script>
-        <script src="../website-js/jquery-ui.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../website-js/bootstrap.min.js"></script>
+
+        <script src="../website-js/classie.js"></script>
+        <script src="../website-js/jquery.typeahead.min.js"></script>
         <script src="../website-js/site.js"></script>
-        <script>
-            $('#fxs_lang_selected').click(function () {
-                $('.fxs_sidebar_language').toggleClass('active');
-            });
-
-            $('.fxs_timezone_btn').click(function () {
-                $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
-            })
-
-            $("#selectable").selectable();
-
-            $('.fxs_timezone_close, .fxs_timezone_done').click(function () {
-                $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
-            })
-
-
-            //$("#selectable").selectable();
-
-            $('#fxs_login_btn').click(function () {
-                $('.fxs_login_form_content').show();
-                $('.fxs_signup_form_content').hide();
-                $(this).addClass('active');
-                $('#fxs_signup_btn').removeClass('active');
-            });
-            $('#fxs_signup_btn').click(function () {
-                $('.fxs_login_form_content').hide();
-                $('.fxs_signup_form_content').show();
-                $(this).addClass('active');
-                $('#fxs_login_btn').removeClass('active');
-            });
-        </script>
 
     </body>
 </html>
