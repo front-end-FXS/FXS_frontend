@@ -49,6 +49,7 @@
 // Tabs navigation (overall nav options)
 .fxs_tabs_nav{
   .fxs_tab_item(1px solid @light_3_clr; @dark_4_clr; @light_3_clr; @base_module_size);
+  white-space: nowrap;
   .fxs_pageSidebar & {
     .fxs_tab_item(1px solid @dark_4_clr; @light_2_clr; @dark_4_clr; @main_header_height);
   }
@@ -883,6 +884,10 @@
 .c3-axis, .c3-legend-item {
   &:extend(.fxs_widget_legend);
   font-family: @txt_fontfamily;
+}
+
+.fxs_gauge_container {
+  .c3-gauge-value {display: none; }
 }
 
 

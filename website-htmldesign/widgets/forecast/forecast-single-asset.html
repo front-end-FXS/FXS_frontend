@@ -200,6 +200,8 @@
     <!-- Bootstrap -->
     <script src="../../../website-js/bootstrap.min.js"></script>
 
+    <script src="../../../website-js/site.js"></script>
+
     <!-- C3 library -->
     <script src="../../../widgets/core/js/c3.js"></script>
     <script src="../../../widgets/core/js/d3.min.js"></script>
@@ -345,6 +347,36 @@
                 ]
             });
         }, 250);
+
+        function checkSize() {
+            if ($(window).width() > 680) {
+                forecast_chart_1w.resize({
+                    height: 90,
+                    width: undefined
+                });
+                forecast_chart_1m.resize({
+                    height: 90,
+                    width: undefined
+                });
+                forecast_chart_1q.resize({
+                    height: 90,
+                    width: undefined
+                });
+            } else {
+                forecast_chart_1w.resize({
+                    height: 90,
+                    width: 200
+                });
+                forecast_chart_1m.resize({
+                    height: 90,
+                    width: 200
+                });
+                forecast_chart_1q.resize({
+                    height: 90,
+                    width: 200
+                });
+            }
+        };
 
     </script>
 

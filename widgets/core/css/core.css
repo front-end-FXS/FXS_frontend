@@ -771,8 +771,9 @@ input[type=submit] {
 .fxs_header .fxs_nav_menu {
   border-bottom: 0 none transparent;
   height: 45px;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   padding: 0 0.5rem;
+  font-size: 5px;
   display: none;
 }
 .fxs_header .fxs_nav_menu li {
@@ -841,8 +842,10 @@ input[type=submit] {
 .fxs_tabs_nav {
   border-bottom: 1px solid #dcddde;
   height: 35px;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   padding: 0 0.5rem;
+  font-size: 5px;
+  white-space: nowrap;
 }
 .fxs_tabs_nav li {
   display: inline-block;
@@ -870,8 +873,9 @@ input[type=submit] {
 .fxs_pageSidebar .fxs_tabs_nav {
   border-bottom: 1px solid #49494f;
   height: 45px;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   padding: 0 0.5rem;
+  font-size: 5px;
 }
 .fxs_pageSidebar .fxs_tabs_nav li {
   display: inline-block;
@@ -2335,6 +2339,9 @@ fieldset[disabled] .fxs_dismissQuery {
 .c3-legend-item {
   font-family: 'Fira Sans', Tahoma, sans-serif;
 }
+.fxs_gauge_container .c3-gauge-value {
+  display: none;
+}
 .tab-content > .tab-pane {
   display: none;
 }
@@ -2359,4 +2366,14 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_summary table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+.fxs_widget_summary .fxs_widget_divider_module ol,
+.fxs_widget_summary .fxs_widget_divider_module ul {
+  list-style: none;
+}
+.fxs_widget_summary .fxs_widget_divider_module ol,
+.fxs_widget_summary .fxs_widget_divider_module ul,
+.fxs_widget_summary .fxs_widget_divider_module li {
+  margin: 0;
+  padding: 0;
 }
