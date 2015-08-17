@@ -200,8 +200,6 @@
     <!-- Bootstrap -->
     <script src="../../../website-js/bootstrap.min.js"></script>
 
-    <script src="../../../website-js/site.js"></script>
-
     <!-- C3 library -->
     <script src="../../../widgets/core/js/c3.js"></script>
     <script src="../../../widgets/core/js/d3.min.js"></script>
@@ -347,6 +345,13 @@
                 ]
             });
         }, 250);
+
+        // Check window size
+        // run test on initial page load
+        checkSize();
+
+        // run test on resize of the window
+        $(window).resize(checkSize);
 
         function checkSize() {
             if ($(window).width() > 680) {

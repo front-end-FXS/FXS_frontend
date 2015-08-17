@@ -201,8 +201,6 @@
     <script src="../core/js/bootstrap.min.js"></script>
     <script src="../core/js/d3.min.js"></script>
     <script src="../core/js/c3.js"></script>
-
-    <script src="../../website-js/site.js"></script>
     
     <script>
         // Gauge chart 1w
@@ -345,6 +343,13 @@
                 ]
             });
         }, 250);
+
+
+        // run test on initial page load
+        checkSize();
+
+        // run test on resize of the window
+        $(window).resize(checkSize);
 
         function checkSize() {
             if ($(window).width() > 680) {
