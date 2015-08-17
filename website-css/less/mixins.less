@@ -31,65 +31,10 @@
   }
 }
 
-// Extendable text classes
-.fxs_entryPlain_txt {
-  .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
-  @media (min-width: @screen-m) {
-    .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
-  }
-}
-
-.fxs_entryPlain_txt_large {
-  .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
-  @media (min-width: @screen-m) { font-size: @txt_size_large; }
-}
-
-// Italic upercased labels
-.fxs_styledIndicator_label {
-  text-transform: uppercase;
-  font-style: italic;
-}
-
-// Bolds & strongs with smooth borders
-.fxs_boldAntialised_style {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
-  font-weight: @txt_fontweight_bold;
-}
-
 // TEXT CONTEXTUAL COLORS
 .fxs_txt_color_variants(@txt-color) {
   color: @txt-color;
   a { color: darken(@txt-color, 10%); }
-}
-
-.fxs_txt_success {
-  .fxs_txt_color_variants(@success_clr);
-}
-
-.fxs_txt_danger {
-  .fxs_txt_color_variants(@error_clr);
-}
-
-.fxs_txt_neutral {
-  .fxs_txt_color_variants(@light_1_clr);
-}
-
-// Header basic styles
-.fxs_headline_base_rules {
-  color: @dark_1_clr;
-  letter-spacing: -0.03rem;
-  &:extend(.fxs_boldAntialised_style);
-  // Headline link
-  a {
-    color: @dark_1_clr;
-    display: block;
-    &:hover{
-      color: @highlight_clr;
-      text-decoration: none;
-    }
-  }
 }
 
 ////////// BUTTONS, LABELS, ALERTS, NAVS ///////////
@@ -286,7 +231,6 @@
 // fxstreet grid breakpoints
 @grid-columns: 12;
 @grid-gutter-width: 1rem;
-@grid-float-breakpoint-small: @screen-s;
 @grid-float-breakpoint-medium: @screen-m;
 @grid-float-breakpoint-large: @screen-l;
 @grid-float-breakpoint-xlarge: @screen-xl;
@@ -310,21 +254,13 @@
   padding-right: (@gutter / 2);
 }
 
-// Generate the small columns 320
+// Generate the small columns (default, from mobile)
 .make-sm-column(@columns) {
   // Calculate width based on number of columns available
   float: left;
   width: percentage((@columns / @grid-columns));
 }
 
-// Generate the small columns 480
-.make-sm-column(@columns) {
-  // Calculate width based on number of columns available
-  @media(min-width:@grid-float-breakpoint-small){
-      float: left;
-      width: percentage((@columns / @grid-columns));
-  }
-}
 // Generate the medium columns 768
 .make-md-column(@columns) {
   // Calculate width based on number of columns available
@@ -352,16 +288,4 @@
   }
 }
 
-////////// TRANSITIONS & ANIMATIONS (extendable classes) ///////////
-
-// General transitions
-.fxs_transition { .transition(all .25s ease-in); }
-.fxs_pageSidebar_transition { .transition(transform .25s ease-in); }
-
-// Animations
-.keyframes(~'slide-from-top, from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}');
-.keyframes(~'slide-from-top-and-appear, from {top: 97%; opacity:0; visibility: hidden; } to {top: 100%; opacity:1; visibility: visible}');
-.keyframes(~'grow-and-show, from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;}');
-.keyframes(~'just-appear, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
-.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}');
 //

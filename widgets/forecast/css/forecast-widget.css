@@ -63,3 +63,27 @@ width:calc(100% - 210px - 2rem);
     max-width: 200px;
   }
 }
+@media (min-width: 680px) {
+  .fxs_forecast_widget.fxs_widget_big .fxs_widget_divider_module {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+  .fxs_forecast_widget.fxs_widget_big .forecast_timeframe_slot {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .fxs_forecast_widget.fxs_widget_big .fxs_widget_avg_col {
+    display: block;
+    width: auto;
+    max-width: 200px;
+    padding: 1rem;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_forecast_widget.fxs_widget_big .forecast_timeframe_slot {
+    float: left;
+    width: 33.33333333%;
+  }
+}

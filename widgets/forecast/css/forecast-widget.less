@@ -1,8 +1,9 @@
 ﻿// Vendor imports
 @import "../../../website-css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
 
-// Application variables
+// Application variables & mixins
 @import "../../../website-css/less/vars.less";
+@import "../../../website-css/less/mixins.less";
 
 ////////////////////////////////////////////////
 //////////// Widget Gauge module //////////////
@@ -79,7 +80,21 @@
   // Big widget values & media queries
   &.fxs_widget_big {
     @media (min-width: @screen-m) {
-      // Hacer columnas!
+      .fxs_widget_divider_module {
+        .make-row();
+      }
+      .forecast_timeframe_slot {
+        .column-default-parameters();
+      }
+      .fxs_widget_avg_col {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        padding: 1rem;
+      }
+    }
+    .forecast_timeframe_slot {
+      .make-md-column(4);
     }
   }
 }
