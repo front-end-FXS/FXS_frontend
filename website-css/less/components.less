@@ -53,17 +53,6 @@
   }
 }
 
-// Tab panes (Imported from Bootstrap 3.3.5)
-// Hide tabbable panes to start, show them when `.active`
-.tab-content {
-  > .tab-pane {
-    display: none;
-  }
-  > .active {
-    display: block;
-  }
-}
-
 // SECTION & SUBSECTION TITLES
 .fxs_sectionTitle_header {
   .fxs_stiled_text_variants(inline-block; @dark_3_clr; @txt_defaultsize_rem);
@@ -896,5 +885,21 @@
 .c3-axis, .c3-legend-item {
   &:extend(.fxs_widget_legend);
   font-family: @txt_fontfamily;
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
+//////////////////// (custom bootstrap snipets) ///////////////////////
+
+// Tab panes
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
 }
 
