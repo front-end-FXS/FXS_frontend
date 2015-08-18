@@ -57,7 +57,7 @@ textarea,
 .fxs_filter,
 .fxs_btn_filter,
 .fxs_dismissQuery,
-.fxs_tableHover tbody:hover tr:hover,
+.fxs_tableHover tbody:hover > tr:hover,
 .fxs_relatedItem {
   -webkit-transition: all 0.25s ease-in;
   -moz-transition: all 0.25s ease-in;
@@ -272,7 +272,9 @@ lesshat-selector {
 .fxs_typeaheadList > li.fxs_typeaheadGroup a:focus,
 .fxs_typeaheadList > li.fxs_typeaheadGroup.active a,
 .fxs_dropdownHeader,
-.fxs_table th {
+.fxs_table > thead > tr > th,
+.fxs_table > tbody > tr > th,
+.c3-tooltip th {
   text-transform: uppercase;
   font-style: italic;
 }
@@ -296,8 +298,10 @@ label,
 .fxs_typeaheadList > li.fxs_typeaheadGroup.active a,
 .fxs_dropdownHeader,
 .fxs_dropdownList > li > a,
-.fxs_table th,
+.fxs_table > thead > tr > th,
+.fxs_table > tbody > tr > th,
 .fxs_widget_custom_bold,
+.c3-tooltip th,
 .fxs_asset_label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2037,20 +2041,21 @@ fieldset[disabled] .fxs_dismissQuery {
   max-width: 100%;
   font-size: 0.88rem;
 }
-.fxs_table tbody > tr > td,
-.fxs_table thead > tr > td,
-.fxs_table tfoot > tr > td,
-.fxs_table tbody > tr > th,
-.fxs_table thead > tr > th,
-.fxs_table tfoot > tr > th {
+.fxs_table > tbody > tr > td,
+.fxs_table > thead > tr > td,
+.fxs_table > tfoot > tr > td,
+.fxs_table > tbody > tr > th,
+.fxs_table > thead > tr > th,
+.fxs_table > tfoot > tr > th {
   padding: 0.5rem;
   line-height: normal;
   border-bottom: 1px solid #dcddde;
 }
-.fxs_table thead tr th {
+.fxs_table > thead > tr > th {
   vertical-align: bottom;
 }
-.fxs_table th {
+.fxs_table > thead > tr > th,
+.fxs_table > tbody > tr > th {
   display: table-cell;
   color: #8b8c91;
   font-size: 0.75rem;
@@ -2076,14 +2081,14 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_tableHover tbody > tr > td:last-child .fxs_btn_icon {
   color: #a2a2a7;
 }
-.fxs_tableHover tbody:hover tr {
+.fxs_tableHover tbody:hover > tr {
   zoom: 1;
   filter: alpha(opacity=40);
   -webkit-opacity: 0.4;
   -moz-opacity: 0.4;
   opacity: 0.4;
 }
-.fxs_tableHover tbody:hover tr:hover {
+.fxs_tableHover tbody:hover > tr:hover {
   zoom: 1;
   filter: alpha(opacity=100);
   -webkit-opacity: 1;
@@ -2092,7 +2097,7 @@ fieldset[disabled] .fxs_dismissQuery {
   background-color: #ffffff;
   cursor: pointer;
 }
-.fxs_tableHover tbody:hover tr:hover .fxs_btn_icon {
+.fxs_tableHover tbody:hover > tr:hover .fxs_btn_icon {
   color: #49494f;
   padding-left: 0.5rem;
 }
@@ -2263,6 +2268,9 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_gauge_container {
   display: inline-block;
   max-width: 200px;
+  min-height: 1px;
+  min-width: 1px;
+  overflow: hidden;
   position: relative;
   vertical-align: middle;
 }
@@ -2341,6 +2349,12 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_gauge_container .c3-gauge-value {
   display: none;
+}
+.c3-tooltip th {
+  display: table-cell;
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: normal;
 }
 .tab-content > .tab-pane {
   display: none;

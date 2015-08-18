@@ -567,15 +567,15 @@
 	width: 100%;
  	max-width: 100%;
  	font-size: @txt_size_small;
-  tbody, thead, tfoot {
+  >tbody, >thead, >tfoot {
     >tr >td, >tr >th {
       padding: 0.5rem;
       line-height: @txt_lineheight_reset;
       border-bottom: 1px solid @light_3_clr;
     }
   }
-  thead tr th { vertical-align: bottom; }
- 	th {
+  >thead >tr >th { vertical-align: bottom; }
+ 	>thead >tr >th, >tbody >tr >th {
     .fxs_stiled_text_variants(table-cell; @light_1_clr; @txt_size_xsmall);
  		text-align: left;
  	}
@@ -600,7 +600,7 @@
       .fxs_btn_icon { color: @light_2_clr; }
     }
     &:hover {
-      tr {
+      > tr {
         .opacity(.4);
         &:hover {
           &:extend(.fxs_transition);
@@ -785,6 +785,9 @@
 .fxs_gauge_container {
   display: inline-block; 
   max-width: 200px;
+  min-height: 1px;
+  min-width: 1px;
+  overflow:hidden;
   position:relative;
   vertical-align: middle;
 }
@@ -888,6 +891,10 @@
 
 .fxs_gauge_container {
   .c3-gauge-value {display: none; }
+}
+
+.c3-tooltip {
+  th { .fxs_stiled_text_variants(table-cell; @lightest_clr; @txt_size_xsmall); }
 }
 
 

@@ -6,7 +6,7 @@
 @import "../../../website-css/less/mixins.less";
 
 ////////////////////////////////////////////////
-//////////// Widget Gauge module //////////////
+//////////// Widget Single asset //////////////
 //////////////////////////////////////////////
 .forecast_timeframe_slot {
   .fxs_widget_slot_label {
@@ -131,4 +131,54 @@
     }
   }
 }
+
 //
+////////////////////////////////////////////////
+//////////// Widget Multi asset ///////////////
+//////////////////////////////////////////////
+
+.fxs_forecast_widget_multi {
+  .fxs_table {
+    >thead, .forecast_timeframe { display: none; }
+
+    // Show '.forecast_timeframe' when `.active`
+    .forecast_timeframe {
+      &.active {
+        display: block;
+      }
+    }
+    @media (min-width: @screen-m){
+      >tbody >tr >td {
+        &:nth-child(n+2):nth-child(-n+4) { width: 28%; }// force width due to firefox awkward render
+      }
+    }
+  }
+  .fxs_widget_slot_label {
+    margin-bottom: -0.5rem;
+    .fxs_widget_small, .fxs_widget_custom_data_lable { display: inline-block; }
+  }
+  .forecast_avg_result {
+    border-top: 0 none;
+    padding-top: 0;
+  }
+
+  // Big widget values & media queries
+  &.fxs_widget_big {
+    @media (min-width: @screen-m) {
+      >thead { display: table-header-group; }
+    }
+    @media (min-width: @screen-xl) {
+      
+    }
+  }
+
+  // Mini widget values & media queries
+  &.fxs_widget_mini {
+    
+  }
+}
+
+// Reset & overrides C3 library
+.fxs_forecast_widget_multi {
+  .c3-axis-x { display: none; }
+}

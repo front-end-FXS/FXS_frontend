@@ -136,3 +136,34 @@ width:calc(100% - 210px - 2rem);
     border-top: 1px solid #dcddde;
   }
 }
+.fxs_forecast_widget_multi .fxs_table > thead,
+.fxs_forecast_widget_multi .fxs_table .forecast_timeframe {
+  display: none;
+}
+.fxs_forecast_widget_multi .fxs_table .forecast_timeframe.active {
+  display: block;
+}
+@media (min-width: 680px) {
+  .fxs_forecast_widget_multi .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+    width: 28%;
+  }
+}
+.fxs_forecast_widget_multi .fxs_widget_slot_label {
+  margin-bottom: -0.5rem;
+}
+.fxs_forecast_widget_multi .fxs_widget_slot_label .fxs_widget_small,
+.fxs_forecast_widget_multi .fxs_widget_slot_label .fxs_widget_custom_data_lable {
+  display: inline-block;
+}
+.fxs_forecast_widget_multi .forecast_avg_result {
+  border-top: 0 none;
+  padding-top: 0;
+}
+@media (min-width: 680px) {
+  .fxs_forecast_widget_multi.fxs_widget_big > thead {
+    display: table-header-group;
+  }
+}
+.fxs_forecast_widget_multi .c3-axis-x {
+  display: none;
+}

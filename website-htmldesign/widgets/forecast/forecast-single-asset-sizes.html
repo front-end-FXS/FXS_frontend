@@ -237,7 +237,7 @@
                                                             <span class="forecast_result_txt">Sideways</span>
                                                         </li>
                                                     </ul>
-                                                    <div class="forecast_avg_result result_bearish">
+                                                    <div class="forecast_avg_result result_sideways result_bearish">
                                                         <small>Bias</small>
                                                         <span class="fxs_widget_custom_bold">Bearish</span>
                                                     </div>
@@ -281,7 +281,7 @@
                                                             <span class="forecast_result_txt">Sideways</span>
                                                         </li>
                                                     </ul>
-                                                    <div class="forecast_avg_result">
+                                                    <div class="forecast_avg_result result_sideways">
                                                         <small>Bias</small>
                                                         <span class="fxs_widget_custom_bold">Sideways</span>
                                                     </div>
@@ -464,7 +464,7 @@
                                                             <span class="forecast_result_txt">Sideways</span>
                                                         </li>
                                                     </ul>
-                                                    <div class="forecast_avg_result">
+                                                    <div class="forecast_avg_result result_sideways">
                                                         <small>Bias</small>
                                                         <span class="fxs_widget_custom_bold">Sideways</span>
                                                     </div>
@@ -675,7 +675,7 @@
                                                             <span class="forecast_result_txt">Sideways</span>
                                                         </li>
                                                     </ul>
-                                                    <div class="forecast_avg_result">
+                                                    <div class="forecast_avg_result result_sideways">
                                                         <small>Bias</small>
                                                         <span class="fxs_widget_custom_bold">Sideways</span>
                                                     </div>
@@ -1588,7 +1588,7 @@
 
     // Widget Default
         // Gauge chart 1w
-        var forecast_chart_1w_default = c3.generate({
+        var forecast_chart_1w_d = c3.generate({
             bindto: '#forecast_chart_1w_default',
                    
             data: {
@@ -1625,7 +1625,7 @@
         });
 
         setTimeout(function () {
-            forecast_chart_1w_default.load({
+            forecast_chart_1w_d.load({
                 columns: [
                 ['Bullish', 40],
                 ['Bearish', 90],
@@ -1635,7 +1635,7 @@
         }, 250);
 
         // Gauge chart 1M
-        var forecast_chart_1m_default = c3.generate({
+        var forecast_chart_1m_d = c3.generate({
             bindto: '#forecast_chart_1m_default',
                    
             data: {
@@ -1672,7 +1672,7 @@
         });
 
         setTimeout(function () {
-            forecast_chart_1m_default.load({
+            forecast_chart_1m_d.load({
                 columns: [
                 ['Bullish', 25],
                 ['Bearish', 50],
@@ -1682,7 +1682,7 @@
         }, 250);
         
         // // Gauge chart 1Q
-        var forecast_chart_1q_default = c3.generate({
+        var forecast_chart_1q_d = c3.generate({
             bindto: '#forecast_chart_1q_default',
                    
             data: {
@@ -1720,7 +1720,7 @@
         });
 
         setTimeout(function () {
-            forecast_chart_1q_default.load({
+            forecast_chart_1q_d.load({
                 columns: [
                 ['Bullish', 60],
                 ['Bearish', 90],
@@ -1750,15 +1750,15 @@
                     width: undefined
                 });
                 //
-                forecast_chart_1w_default.resize({
+                forecast_chart_1w_d.resize({
                     height: 90,
                     width: undefined
                 });
-                forecast_chart_1m_default.resize({
+                forecast_chart_1m_d.resize({
                     height: 90,
                     width: undefined
                 });
-                forecast_chart_1q_default.resize({
+                forecast_chart_1q_d.resize({
                     height: 90,
                     width: undefined
                 });
@@ -1778,15 +1778,15 @@
                 });
                 //
 
-                forecast_chart_1w_default.resize({
+                forecast_chart_1w_d.resize({
                     height: 90,
                     width: 200
                 });
-                forecast_chart_1m_default.resize({
+                forecast_chart_1m_d.resize({
                     height: 90,
                     width: 200
                 });
-                forecast_chart_1q_default.resize({
+                forecast_chart_1q_d.resize({
                     height: 90,
                     width: 200
                 });
