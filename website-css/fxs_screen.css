@@ -1173,7 +1173,7 @@ input[type=submit] {
 .fxs_header .fxs_nav_menu {
   border-bottom: 0 none transparent;
   height: 45px;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
   display: none;
@@ -1244,7 +1244,7 @@ input[type=submit] {
 .fxs_tabs_nav {
   border-bottom: 1px solid #dcddde;
   height: 35px;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
   white-space: nowrap;
@@ -1275,7 +1275,7 @@ input[type=submit] {
 .fxs_pageSidebar .fxs_tabs_nav {
   border-bottom: 1px solid #49494f;
   height: 45px;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
 }
@@ -2675,12 +2675,17 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_gauge_container {
   display: inline-block;
-  max-width: 200px;
+  max-width: 190px;
   min-height: 1px;
   min-width: 1px;
   overflow: hidden;
   position: relative;
   vertical-align: middle;
+}
+@media (min-width: 680px) {
+  .fxs_gauge_container:nth-child(n+4):nth-child(-n+5) {
+    max-width: 200px;
+  }
 }
 .fxs_insideChart_centered_legend {
   position: absolute;
@@ -4250,13 +4255,14 @@ width:calc(100% - 210px - 2rem);
 .fxs_forecast_widget_multi .fxs_table .forecast_timeframe {
   display: none;
 }
+.fxs_forecast_widget_multi .fxs_table .forecast_timeframe {
+  padding-left: 0.5rem;
+}
 .fxs_forecast_widget_multi .fxs_table .forecast_timeframe.active {
   display: block;
 }
-@media (min-width: 680px) {
-  .fxs_forecast_widget_multi .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
-    width: 28%;
-  }
+.fxs_forecast_widget_multi .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+  padding: 0.5rem 0;
 }
 .fxs_forecast_widget_multi .fxs_widget_slot_label {
   margin-bottom: -0.5rem;
@@ -4265,13 +4271,44 @@ width:calc(100% - 210px - 2rem);
 .fxs_forecast_widget_multi .fxs_widget_slot_label .fxs_widget_custom_data_lable {
   display: inline-block;
 }
+.fxs_forecast_widget_multi .fxs_widget_slot_label,
+.fxs_forecast_widget_multi .forecast_avg_result {
+  white-space: nowrap;
+}
 .fxs_forecast_widget_multi .forecast_avg_result {
   border-top: 0 none;
   padding-top: 0;
 }
-@media (min-width: 680px) {
-  .fxs_forecast_widget_multi.fxs_widget_big > thead {
+@media (min-width: 1180px) {
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_tabs_nav {
+    display: none;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_table > thead {
     display: table-header-group;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_table .forecast_timeframe {
+    display: block;
+    padding-left: 0;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+    width: 28%;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_tabs_nav {
+    display: none;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_table > thead {
+    display: table-header-group;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_table .forecast_timeframe {
+    display: block;
+    padding-left: 0;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+    width: 28%;
+    padding: 0.5rem;
   }
 }
 .fxs_forecast_widget_multi .c3-axis-x {

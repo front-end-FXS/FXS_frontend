@@ -784,12 +784,15 @@
 // Gauge chart container
 .fxs_gauge_container {
   display: inline-block; 
-  max-width: 200px;
+  max-width: 190px;
   min-height: 1px;
   min-width: 1px;
   overflow:hidden;
   position:relative;
   vertical-align: middle;
+  @media (min-width: @screen-m){
+    &:nth-child(n+4):nth-child(-n+5) { max-width: 200px; }
+  }
 }
 
 // Absolute centered legend inside chart

@@ -2,9 +2,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Forecast multiasset - FXStreet</title>
+    <title>News Home - FXStreet</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../../website-css/fxs_screen.css">
+    <link rel="stylesheet" href="../core/css/core.min.css">
+    <link rel="stylesheet" href="../forecast/css/forecast-widget.min.css">
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
    
@@ -16,11 +17,12 @@
 <body>
 
 <div class="fxs_content">
+
     <section class="fxs_detail">
         
-        
+        <!-- header price -->
         <h3 class="fxs_subtitle">
-            Currencies Forecast Poll <i class="fa fa-info-circle"></i>
+            Current trading positions <i class="fa fa-info-circle"></i>
         </h3>
 
         <section class="fxs_widget_summary">
@@ -174,14 +176,17 @@
             <!-- /Widget big -->
         </section>
 
-</section>
+    </section>
+
 </div>
 
-    <script src="../../../website-js/jquery-1.11.3.min.js"></script>
-    <script src="../../../widgets/core/js/c3.js"></script>
-    <script src="../../../widgets/core/js/d3.min.js"></script>
+    <script src="../core/js/jquery-1.11.3.min.js"></script>
+    <script src="../core/js/bootstrap.min.js"></script>
+    <script src="../core/js/c3.js"></script>
+    <script src="../core/js/d3.min.js"></script>
     
     <script>
+
         var forecast_avg_levels_1w = c3.generate({
             bindto: '#forecast_bar_stacked_1w',
             data: {

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>CTP Multi-asset sizes - FXStreet</title>
+    <title>Forecast Multi-asset sizes - FXStreet</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../../../website-css/fxs_screen.css">
     <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic' rel='stylesheet' type='text/css'>
@@ -168,384 +168,316 @@
                     <div class="sf_cols">
                         <div class="sf_2cols_1_67">
                             <div id="fxs_detail_ctl00_C004_Col00">
+                                
                                 <h3 class="fxs_subtitle">
-                                    Current trading positions - Big <i class="fa fa-info-circle"></i>
+                                    Forecast poll - Big <i class="fa fa-info-circle"></i>
                                 </h3>
                                 <section class="fxs_widget_summary">
                                     <!-- Widget big -->
-                                    <table class="fxs_table fxs_tableHover">
-                                        <tbody>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_big">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">EUR/USD</a>
-                                                                </abbr>
+                                    <div class="fxs_forecast_widget_multi fxs_widget_big">
+                                        <ul class="fxs_tabs_nav fxs_table_tabs">
+                                            <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
+                                            <li class="active"><a id="tab_1" href="#">1 Week</a></li>
+                                            <li><a id="tab_2" href="#">1 Month</a></li>
+                                            <li><a id="tab_3" href="#">1 Quarter</a></li>
+                                        </ul>
+                                        <table class="fxs_table fxs_tableHover">
+                                            <thead>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>1 Week</th>
+                                                    <th>1 Month</th>
+                                                    <th>1 Quarter</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                            <a href="/">EUR/USD</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_1" class="c3" style="width: 100%;"></div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <!---->
-
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_big">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">USD/JPY</a>
-                                                                </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_2" class="c3" style="width: 100%;"></div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
                                                             </div>
                                                         </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">145.80</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">146.32</span>
-                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                                            <!---->
+                                                <!---->
 
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_big">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">GBP/USD</a>
-                                                                </abbr>
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">USD/JPY</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">10%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">90%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_2" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_3" class="c3" style="width: 100%;"></div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
                                                             </div>
                                                         </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_2" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <!---->
-
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_big">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">USD/CAD</a>
-                                                                </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_2" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_4" class="c3" style="width: 100%;"></div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
                                                             </div>
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                        <!-- footer -->
-                                        <tfoot>
-                                            <tr>
-                                                <td class="fxs_widget_footer" colspan="2">
-                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tfoot>
-                                        <!-- /footer -->
-                                    </table>
-                                    <!-- /widget big -->
+                                                
+                                            </tbody>
+                                            <!-- footer -->
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="fxs_widget_footer" colspan="5">
+                                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                        <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                            <!-- /footer -->
+                                        </table>
+                                    </div>
+                                    <!-- /Widget big -->
                                 </section>
                             </div>
                         </div>
                         <div class="sf_2cols_2_33">
                             <div id="fxs_detail_ctl00_C004_Col01">
                                 <h3 class="fxs_subtitle">
-                                    Current trading positions - Mini <i class="fa fa-info-circle"></i>
+                                    Forecast Poll - Mini <i class="fa fa-info-circle"></i>
                                 </h3>
                                 <section class="fxs_widget_summary">
                                     <!-- Widget mini -->
-                                    <table class="fxs_table fxs_tableHover">
-                                        <tbody>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_mini">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">EUR/USD</a>
-                                                                </abbr>
+                                    <div class="fxs_forecast_widget_multi fxs_widget_mini">
+                                        <ul class="fxs_tabs_nav fxs_table_tabs">
+                                            <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
+                                            <li class="active"><a id="tab_1_mini" href="#">1 Week</a></li>
+                                            <li><a id="tab_2_mini" href="#">1 Month</a></li>
+                                            <li><a id="tab_3_mini" href="#">1 Quarter</a></li>
+                                        </ul>
+                                        <table class="fxs_table fxs_tableHover">
+                                            <thead>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>1 Week</th>
+                                                    <th>1 Month</th>
+                                                    <th>1 Quarter</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                            <a href="/">EUR/USD</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_mini" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_mini_1" class="c3" style="width: 100%;"></div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <!---->
-
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_mini">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">USD/JPY</a>
-                                                                </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_mini" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_mini_2" class="c3" style="width: 100%;"></div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
                                                             </div>
                                                         </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">145.80</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">146.32</span>
-                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_mini" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                                            <!---->
+                                                <!---->
 
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi fxs_widget_mini">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">GBP/USD</a>
-                                                                </abbr>
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">USD/JPY</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">10%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">90%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_2_mini" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_mini_3" class="c3" style="width: 100%;"></div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
                                                             </div>
                                                         </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_2_mini" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_2_mini" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                                            <!---->
-
-                                        </tbody>
-                                        <!-- footer -->
-                                        <tfoot>
-                                            <tr>
-                                                <td class="fxs_widget_footer fxs_widget_mini" colspan="2">
-                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tfoot>
-                                        <!-- /footer -->
-                                    </table>
-                                    <!-- /widget mini -->
+                                                
+                                            </tbody>
+                                            <!-- footer -->
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="fxs_widget_footer" colspan="5">
+                                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                        <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                            <!-- /footer -->
+                                        </table>
+                                    </div>
+                                    <!-- /Widget mini -->
                                 </section>
                             </div>
                         </div>
@@ -580,121 +512,157 @@
                         <div class="sf_2cols_2_50">
                             <div id="fxs_detail_ctl05_C030_Col01">
                                 <h3 class="fxs_subtitle">
-                                    Current trading positions - Default <i class="fa fa-info-circle"></i>
+                                    Forecast Poll - Default <i class="fa fa-info-circle"></i>
                                 </h3>
                                 <section class="fxs_widget_summary">
                                     <!-- Widget default -->
-                                    <table class="fxs_table fxs_tableHover">
-                                        <tbody>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">EUR/USD</a>
-                                                                </abbr>
+                                    <div class="fxs_forecast_widget_multi fxs_widget_default">
+                                        <ul class="fxs_tabs_nav fxs_table_tabs">
+                                            <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
+                                            <li class="active"><a id="tab_1_default" href="#">1 Week</a></li>
+                                            <li><a id="tab_2_default" href="#">1 Month</a></li>
+                                            <li><a id="tab_3_default" href="#">1 Quarter</a></li>
+                                        </ul>
+                                        <table class="fxs_table fxs_tableHover">
+                                            <thead>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>1 Week</th>
+                                                    <th>1 Month</th>
+                                                    <th>1 Quarter</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                            <a href="/">EUR/USD</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_default" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_default_1" class="c3" style="width: 100%;"></div>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                                                </div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <!---->
-
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <div class="fxs_ctp_widget_multi">
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                    <a href="/">USD/JPY</a>
-                                                                </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
                                                             </div>
-                                                            <div class="ctp_multi_percent_wrapper">
-                                                                <div class="ctp_price_precent">
-                                                                    <small class="fxs_widget_small">Sell</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
-                                                                </div>
-
-                                                                <div class="ctp_price_precent fxs_fRight">
-                                                                    <small class="fxs_widget_small">Buy</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
-                                                                </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_default" class="c3"></div>
                                                             </div>
-
-                                                            <div class="ctp_graphic_wrapper">
-                                                                <div id="ctp_bar_stacked_default_2" class="c3" style="width: 100%;"></div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
                                                             </div>
                                                         </div>
-
-                                                        <div class="fxs_widget_cell_col">
-                                                            <div class="fxs_widget_avg_col">
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Sell Price</small>
-                                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">145.80</span>
-                                                                </div>
-
-                                                                <div class="fxs_module_cols_avg">
-                                                                    <small class="fxs_widget_small">Avg Buy Price</small>
-                                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">146.32</span>
-                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_default" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                                            <!---->
+                                                <!---->
 
-                                        </tbody>
-                                        <!-- footer -->
-                                        <tfoot>
-                                            <tr>
-                                                <td class="fxs_widget_footer" colspan="2">
-                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tfoot>
-                                        <!-- /footer -->
-                                    </table>
-                                    <!-- /widget default -->
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">USD/JPY</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_2_default" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_2_default" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_2_default" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
+
+                                                
+                                            </tbody>
+                                            <!-- footer -->
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="fxs_widget_footer" colspan="5">
+                                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                        <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                            <!-- /footer -->
+                                        </table>
+                                    </div>
+                                    <!-- /Widget default -->
                                 </section>
                             </div>
                         </div>
@@ -990,230 +958,232 @@
         </section>
         <!-- /ListView -->
         <!-- Sidebar right -->
-        <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
-            <ul class="fxs_tabs_nav">
-                <li><a href="#" title="Login" id="fxs_login_btn" class="active">Log in</a></li>
-                <li><a href="#" title="Sign up" id="fxs_signup_btn">Sign up</a></li>
-            </ul>
-            <div class="fxs_login_form_content">
-                <form class="fxs_signup_form">
-                    <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                        <label class="fxs_btn_icon" title="Username" for="user-name">
-                            <i class="fa fa-user"></i>
-                            <span class="fxs_skip">Username</span>
-                        </label>
-                        <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
-                    </div>
-                    <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                        <label class="fxs_btn_icon" title="Password" for="password">
-                            <i class="fa fa-lock"></i>
-                            <span class="fxs_skip">Password</span>
-                        </label>
-                        <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
-                    </div>
-                    <div class="fxs_formGroup">
-                        <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
-                    </div>
-                    <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
-                    <a href="#" title="Forgot password">Forgot password</a>
-                </form>
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
 
-                <div class="fxs_sidebar_divider"><span>or</span></div>
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
 
-                <div class="fxs_social_sidebar_nav">
-                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
-                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <p>I'm not an fxstreet member</p>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <p>already an fxstreet member?</p>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
                 </div>
+                <div class="fxs_timezone_items fxs_pageSidebar">
+                    <nav class="fxs_timezone_nav">
+                        <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
+                    </nav>
+                    <div class="fxs_nav_menu fxs_timezone_hours">
 
-                <div class="fxs_login_message">
-                    <p>I'm not an fxstreet member</p>
-                    <a href="#">Sign up</a>
+                        <ol>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                                
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                    <span class="fxs_timezone_item_location">hawaii</span>
+                                </a>
+                            </li>
+                            
+                        </ol>
+                    </div>
+                    
                 </div>
+                <a class="fxs_timezone_btn" href="#" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </a>
             </div>
-            <div class="fxs_signup_form_content">
-                <form class="fxs_signup_form">
-                    <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                        <label class="fxs_btn_icon" title="Enter your email address" for="email">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="fxs_skip">Enter your email address</span>
-                        </label>
-                        <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
-                    </div>
-                    <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                        <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
-                            <i class="fa fa-user"></i>
-                            <span class="fxs_skip">Choose your username</span>
-                        </label>
-                        <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
-                    </div>
-                    <div class="fxs_formGroup fxs_inputGroup_iconLabel">
-                        <label class="fxs_btn_icon" title="Set your password" for="set-password">
-                            <i class="fa fa-lock"></i>
-                            <span class="fxs_skip">Set your password</span>
-                        </label>
-                        <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
-                    </div>
-                    <div class="fxs_formGroup">
-                        <label class="fxs_checkboxGroup">
-                            <input type="checkbox" id="terms" />
-                            I have read and accept the
-                        </label>
-                        <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
-                    </div>
-                    <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
-                </form>
-
-                <div class="fxs_sidebar_divider"><span>or</span></div>
-
-                <div class="fxs_social_sidebar_nav">
-                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
-                    <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
-                </div>
-
-                <div class="fxs_login_message">
-                    <p>already an fxstreet member?</p>
-                    <a href="#" title="login">login</a>
-                </div>
-            </div>
-            <div class="fxs_timezone_items fxs_pageSidebar">
-                <nav class="fxs_timezone_nav">
-                    <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
-                </nav>
-                <div class="fxs_timezone_hours">
-
-                    <ol id="selectable">
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00) first</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <time>10:20 (GMT+1:00)</time>
-                                <span class="fxs_timezone_item_location">hawaii</span>
-                            </a>
-                        </li>
-
-                    </ol>
-                </div>
-
-            </div>
-            <a class="fxs_timezone_btn" href="#" title="select timezone">
-                <span class="fxs_helperLabel_title">Timezone</span>
-                <time>10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
-            </a>
-        </div>
-        <!-- /Sidebar right -->
+            <!-- /Sidebar right -->
         <!-- Site footer -->
         <footer class="fxs_footer">
 
@@ -1241,62 +1211,34 @@
 
 
     <script src="../../../website-js/jquery-1.11.3.min.js"></script>
-    <script src="../../../website-js/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../../website-js/bootstrap.min.js"></script>
+
     <script src="../../../website-js/classie.js"></script>
-    <!-- <script src="../website-js/jquery.stickem.js"></script> -->
     <script src="../../../website-js/jquery.typeahead.min.js"></script>
     <script src="../../../website-js/site.js"></script>
-    <script>
-        $('#fxs_lang_selected').click(function () {
-            $('.fxs_sidebar_language').toggleClass('active');
-        });
-
-        $('.fxs_timezone_btn').click(function () {
-            $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
-            $('.fxs_sidebar_user').css('overflow', 'hidden');
-        })
-
-        $("#selectable").selectable();
-
-        $('.fxs_timezone_close, .fxs_timezone_done').click(function () {
-            $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
-        })
-
-        $('#fxs_login_btn').click(function () {
-            $('.fxs_login_form_content').show();
-            $('.fxs_signup_form_content').hide();
-            $(this).addClass('active');
-            $('#fxs_signup_btn').removeClass('active');
-        });
-        $('#fxs_signup_btn').click(function () {
-            $('.fxs_login_form_content').hide();
-            $('.fxs_signup_form_content').show();
-            $(this).addClass('active');
-            $('#fxs_login_btn').removeClass('active');
-        });
-    </script>
-
 
     <!-- javascript widget mini -->
     <script src="../../../widgets/core/js/c3.js"></script>
     <script src="../../../widgets/core/js/d3.min.js"></script>
     <script>
-    
-        var ctp_horitzontal_bar = c3.generate({
-            bindto: '#ctp_bar_stacked_1',
+        var forecast_avg_levels_1w = c3.generate({
+            bindto: '#forecast_bar_stacked_1w',
             data: {
                 columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
+                    ['Bullish', 0],
+                    ['Bearish', 0],
+                    ['Sideways', 0]
                 ],
                 type: 'bar',
                 groups: [
-                    ['Sell', 'Buy']
+                    ['Bullish', 'Bearish', 'Sideways']
                 ],
                 order: 'null',
                 colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                    Bullish: '#338473',
+                    Bearish: '#CE4735',
+                    Sideways: '#8b8c91'
                 }
             },
             padding: {
@@ -1317,30 +1259,46 @@
             size: {
                 height: 35
             },
-            tooltip: {
-                show: false
-            },
             legend: {
                 show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (d) { return '1 Week'; },
+                    value: function (value, ratio, id) {
+                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                        return format(value);
+                    }
+                }
             }
         });
+        setTimeout(function () {
+            forecast_avg_levels_1w.load({
+                columns: [
+                    ['Bullish', 0.4],
+                    ['Bearish', 0.5],
+                    ['Sideways', 0.1]
+                ]
+            });
+        }, 250);
 
-
-        var ctp_horitzontal_bar_2 = c3.generate({
-            bindto: '#ctp_bar_stacked_2',
+        var forecast_avg_levels_1m = c3.generate({
+            bindto: '#forecast_bar_stacked_1m',
             data: {
                 columns: [
-                    ['Sell', 70],
-                    ['Buy', 30]
+                    ['Bullish', 0],
+                    ['Bearish', 0],
+                    ['Sideways', 0]
                 ],
                 type: 'bar',
                 groups: [
-                    ['Sell', 'Buy']
+                    ['Bullish', 'Bearish', 'Sideways']
                 ],
                 order: 'null',
                 colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                    Bullish: '#338473',
+                    Bearish: '#CE4735',
+                    Sideways: '#8b8c91'
                 }
             },
             padding: {
@@ -1361,29 +1319,46 @@
             size: {
                 height: 35
             },
-            tooltip: {
-                show: false
-            },
             legend: {
                 show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (d) { return '1 Month'; },
+                    value: function (value, ratio, id) {
+                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                        return format(value);
+                    }
+                }
             }
         });
+        setTimeout(function () {
+            forecast_avg_levels_1m.load({
+                columns: [
+                    ['Bullish', 0.6],
+                    ['Bearish', 0.3],
+                    ['Sideways', 0.1]
+                ]
+            });
+        }, 250);
 
-        var ctp_horitzontal_bar_3 = c3.generate({
-            bindto: '#ctp_bar_stacked_3',
+        var forecast_avg_levels_1q = c3.generate({
+            bindto: '#forecast_bar_stacked_1q',
             data: {
                 columns: [
-                    ['Sell',10],
-                    ['Buy', 90]
+                    ['Bullish', 0],
+                    ['Bearish', 0],
+                    ['Sideways', 0]
                 ],
                 type: 'bar',
                 groups: [
-                    ['Sell', 'Buy']
+                    ['Bullish', 'Bearish', 'Sideways']
                 ],
                 order: 'null',
                 colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                    Bullish: '#338473',
+                    Bearish: '#CE4735',
+                    Sideways: '#8b8c91'
                 }
             },
             padding: {
@@ -1404,29 +1379,49 @@
             size: {
                 height: 35
             },
-            tooltip: {
-                show: false
-            },
             legend: {
                 show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (d) { return '1 Quarter'; },
+                    value: function (value, ratio, id) {
+                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                        return format(value);
+                    }
+                }
             }
         });
+        setTimeout(function () {
+            forecast_avg_levels_1q.load({
+                columns: [
+                    ['Bullish', 0.25],
+                    ['Bearish', 0.25],
+                    ['Sideways', 0.5]
+                ]
+            });
+        }, 250);
 
-        var ctp_horitzontal_bar_4 = c3.generate({
-            bindto: '#ctp_bar_stacked_4',
+
+        //
+
+        var forecast_avg_levels_1w_2 = c3.generate({
+            bindto: '#forecast_bar_stacked_1w_2',
             data: {
                 columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
+                    ['Bullish', 0],
+                    ['Bearish', 0],
+                    ['Sideways', 0]
                 ],
                 type: 'bar',
                 groups: [
-                    ['Sell', 'Buy']
+                    ['Bullish', 'Bearish', 'Sideways']
                 ],
                 order: 'null',
                 colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                    Bullish: '#338473',
+                    Bearish: '#CE4735',
+                    Sideways: '#8b8c91'
                 }
             },
             padding: {
@@ -1447,32 +1442,46 @@
             size: {
                 height: 35
             },
-            tooltip: {
-                show: false
-            },
             legend: {
                 show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (d) { return '1 Week'; },
+                    value: function (value, ratio, id) {
+                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                        return format(value);
+                    }
+                }
             }
         });
+        setTimeout(function () {
+            forecast_avg_levels_1w_2.load({
+                columns: [
+                    ['Bullish', 0.4],
+                    ['Bearish', 0.5],
+                    ['Sideways', 0.1]
+                ]
+            });
+        }, 250);
 
-
-        // Mini widgets
-
-        var ctp_horitzontal_bar_mini = c3.generate({
-            bindto: '#ctp_bar_stacked_mini_1',
+        var forecast_avg_levels_1m_2 = c3.generate({
+            bindto: '#forecast_bar_stacked_1m_2',
             data: {
                 columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
+                    ['Bullish', 0],
+                    ['Bearish', 0],
+                    ['Sideways', 0]
                 ],
                 type: 'bar',
                 groups: [
-                    ['Sell', 'Buy']
+                    ['Bullish', 'Bearish', 'Sideways']
                 ],
                 order: 'null',
                 colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                    Bullish: '#338473',
+                    Bearish: '#CE4735',
+                    Sideways: '#8b8c91'
                 }
             },
             padding: {
@@ -1493,30 +1502,46 @@
             size: {
                 height: 35
             },
-            tooltip: {
-                show: false
-            },
             legend: {
                 show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (d) { return '1 Month'; },
+                    value: function (value, ratio, id) {
+                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                        return format(value);
+                    }
+                }
             }
         });
+        setTimeout(function () {
+            forecast_avg_levels_1m_2.load({
+                columns: [
+                    ['Bullish', 0.6],
+                    ['Bearish', 0.3],
+                    ['Sideways', 0.1]
+                ]
+            });
+        }, 250);
 
-
-        var ctp_horitzontal_bar_mini_2 = c3.generate({
-            bindto: '#ctp_bar_stacked_mini_2',
+        var forecast_avg_levels_1q_2 = c3.generate({
+            bindto: '#forecast_bar_stacked_1q_2',
             data: {
                 columns: [
-                    ['Sell', 70],
-                    ['Buy', 30]
+                    ['Bullish', 0],
+                    ['Bearish', 0],
+                    ['Sideways', 0]
                 ],
                 type: 'bar',
                 groups: [
-                    ['Sell', 'Buy']
+                    ['Bullish', 'Bearish', 'Sideways']
                 ],
                 order: 'null',
                 colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                    Bullish: '#338473',
+                    Bearish: '#CE4735',
+                    Sideways: '#8b8c91'
                 }
             },
             padding: {
@@ -1537,145 +1562,1009 @@
             size: {
                 height: 35
             },
-            tooltip: {
-                show: false
-            },
             legend: {
                 show: false
+            },
+            tooltip: {
+                format: {
+                    title: function (d) { return '1 Quarter'; },
+                    value: function (value, ratio, id) {
+                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                        return format(value);
+                    }
+                }
             }
         });
-
-        var ctp_horitzontal_bar_mini_3 = c3.generate({
-            bindto: '#ctp_bar_stacked_mini_3',
-            data: {
+        setTimeout(function () {
+            forecast_avg_levels_1q_2.load({
                 columns: [
-                    ['Sell',10],
-                    ['Buy', 90]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
+                    ['Bullish', 0.25],
+                    ['Bearish', 0.25],
+                    ['Sideways', 0.5]
+                ]
+            });
+        }, 250);
+
+        // Widget mini
+            var forecast_avg_levels_1w_mini = c3.generate({
+                bindto: '#forecast_bar_stacked_1w_mini',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35
+                },
+                legend: {
                     show: false
                 },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
-            }
-        });
-
-
-        // Default widgets
-
-        var ctp_horitzontal_bar_default = c3.generate({
-            bindto: '#ctp_bar_stacked_default_1',
-            data: {
-                columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Week'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
                 }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1w_mini.load({
+                    columns: [
+                        ['Bullish', 0.4],
+                        ['Bearish', 0.5],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1m_mini = c3.generate({
+                bindto: '#forecast_bar_stacked_1m_mini',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35
+                },
+                legend: {
                     show: false
                 },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
-            }
-        });
-
-
-        var ctp_horitzontal_bar_default_2 = c3.generate({
-            bindto: '#ctp_bar_stacked_default_2',
-            data: {
-                columns: [
-                    ['Sell', 70],
-                    ['Buy', 30]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Month'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
                 }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1m_mini.load({
+                    columns: [
+                        ['Bullish', 0.6],
+                        ['Bearish', 0.3],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1q_mini = c3.generate({
+                bindto: '#forecast_bar_stacked_1q_mini',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35
+                },
+                legend: {
                     show: false
                 },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
-            }
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Quarter'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1q_mini.load({
+                    columns: [
+                        ['Bullish', 0.25],
+                        ['Bearish', 0.25],
+                        ['Sideways', 0.5]
+                    ]
+                });
+            }, 250);
+
+
+            //
+
+            var forecast_avg_levels_1w_2_mini = c3.generate({
+                bindto: '#forecast_bar_stacked_1w_2_mini',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Week'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1w_2_mini.load({
+                    columns: [
+                        ['Bullish', 0.4],
+                        ['Bearish', 0.5],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1m_2_mini = c3.generate({
+                bindto: '#forecast_bar_stacked_1m_2_mini',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Month'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1m_2_mini.load({
+                    columns: [
+                        ['Bullish', 0.6],
+                        ['Bearish', 0.3],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1q_2_mini = c3.generate({
+                bindto: '#forecast_bar_stacked_1q_2_mini',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Quarter'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1q_2_mini.load({
+                    columns: [
+                        ['Bullish', 0.25],
+                        ['Bearish', 0.25],
+                        ['Sideways', 0.5]
+                    ]
+                });
+            }, 250);
+
+        ///////////////////
+        // Widget Default
+            var forecast_avg_levels_1w_default = c3.generate({
+                bindto: '#forecast_bar_stacked_1w_default',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 180
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Week'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1w_default.load({
+                    columns: [
+                        ['Bullish', 0.4],
+                        ['Bearish', 0.5],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1m_default = c3.generate({
+                bindto: '#forecast_bar_stacked_1m_default',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 180
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Month'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1m_default.load({
+                    columns: [
+                        ['Bullish', 0.6],
+                        ['Bearish', 0.3],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1q_default = c3.generate({
+                bindto: '#forecast_bar_stacked_1q_default',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 180
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Quarter'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1q_default.load({
+                    columns: [
+                        ['Bullish', 0.25],
+                        ['Bearish', 0.25],
+                        ['Sideways', 0.5]
+                    ]
+                });
+            }, 250);
+
+
+            //
+
+            var forecast_avg_levels_1w_2_default = c3.generate({
+                bindto: '#forecast_bar_stacked_1w_2_default',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 180
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Week'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1w_2_default.load({
+                    columns: [
+                        ['Bullish', 0.4],
+                        ['Bearish', 0.5],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1m_2_default = c3.generate({
+                bindto: '#forecast_bar_stacked_1m_2_default',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 180
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Month'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1m_2_default.load({
+                    columns: [
+                        ['Bullish', 0.6],
+                        ['Bearish', 0.3],
+                        ['Sideways', 0.1]
+                    ]
+                });
+            }, 250);
+
+            var forecast_avg_levels_1q_2_default = c3.generate({
+                bindto: '#forecast_bar_stacked_1q_2_default',
+                data: {
+                    columns: [
+                        ['Bullish', 0],
+                        ['Bearish', 0],
+                        ['Sideways', 0]
+                    ],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
+                    }
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
+                        show: false
+                     },
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 180
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Quarter'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
+                        }
+                    }
+                }
+            });
+            setTimeout(function () {
+                forecast_avg_levels_1q_2_default.load({
+                    columns: [
+                        ['Bullish', 0.25],
+                        ['Bearish', 0.25],
+                        ['Sideways', 0.5]
+                    ]
+                });
+            }, 250);
+
+        // run test on initial page load
+            checkSize();
+
+            // run test on resize of the window
+            $(window).resize(checkSize);
+
+            function checkSize() {
+                if ($(window).width() > 680) {
+                    forecast_avg_levels_1w.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1m.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1q.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    //
+                    forecast_avg_levels_1w_2.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1m_2.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1q_2.resize({
+                        height: 35,
+                        width: undefined
+                    });
+
+                    // mini
+
+                    forecast_avg_levels_1w_mini.resize({
+                        height: 35,
+                        width: 90
+                    });
+                    forecast_avg_levels_1m_mini.resize({
+                        height: 35,
+                        width: 90
+                    });
+                    forecast_avg_levels_1q_mini.resize({
+                        height: 35,
+                        width: 90
+                    });
+                    //
+                    forecast_avg_levels_1w_2_mini.resize({
+                        height: 35,
+                        width: 90
+                    });
+                    forecast_avg_levels_1m_2_mini.resize({
+                        height: 35,
+                        width: 90
+                    });
+                    forecast_avg_levels_1q_2_mini.resize({
+                        height: 35,
+                        width: 90
+                    });
+                    
+                } else {
+                    forecast_avg_levels_1w.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1m.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1q.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    //
+
+                    forecast_avg_levels_1w_2.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1m_2.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1q_2.resize({
+                        height: 35,
+                        width: 180
+                    });
+
+                    // mini
+                    forecast_avg_levels_1w_mini.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1m_mini.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1q_mini.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    //
+
+                    forecast_avg_levels_1w_2_mini.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1m_2_mini.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    forecast_avg_levels_1q_2_mini.resize({
+                        height: 35,
+                        width: 180
+                    });
+                    
+                }
+
+                //
+
+                if ($(window).width() > 1180) {
+                    // mini
+
+                    forecast_avg_levels_1w_mini.resize({
+                        height: 35,
+                        width: 120
+                    });
+                    forecast_avg_levels_1m_mini.resize({
+                        height: 35,
+                        width: 120
+                    });
+                    forecast_avg_levels_1q_mini.resize({
+                        height: 35,
+                        width: 120
+                    });
+                    //
+                    forecast_avg_levels_1w_2_mini.resize({
+                        height: 35,
+                        width: 120
+                    });
+                    forecast_avg_levels_1m_2_mini.resize({
+                        height: 35,
+                        width: 120
+                    });
+                    forecast_avg_levels_1q_2_mini.resize({
+                        height: 35,
+                        width: 120
+                    });
+
+                    // Default
+
+                    forecast_avg_levels_1w_default.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1m_default.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1q_default.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    //
+                    forecast_avg_levels_1w_2_default.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1m_2_default.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    forecast_avg_levels_1q_2_default.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                    
+                } 
+            };
+
+        // Toggle tabs (METIDOS A SACO)
+        $(document).ready(function () {
+           $('#tab_1').on('click', function(){
+                $('.avg_1w').addClass('active');
+                $('#tab_2, #tab_3').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1m, .avg_1q').removeClass('active');
+            });
+           $('#tab_2').on('click', function(){
+                $('.avg_1m').addClass('active');
+                $('#tab_1, #tab_3').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1q').removeClass('active');
+            });
+           $('#tab_3').on('click', function(){
+                $('.avg_1q').addClass('active');
+                $('#tab_1, #tab_2').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1m').removeClass('active');
+            });
+
+           // Mini
+
+           $('#tab_1_mini').on('click', function(){
+                $('.avg_1w').addClass('active');
+                $('#tab_2_mini, #tab_3_mini').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1m, .avg_1q').removeClass('active');
+            });
+           $('#tab_2_mini').on('click', function(){
+                $('.avg_1m').addClass('active');
+                $('#tab_1_mini, #tab_3_mini').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1q').removeClass('active');
+            });
+           $('#tab_3_mini').on('click', function(){
+                $('.avg_1q').addClass('active');
+                $('#tab_1_mini, #tab_2_mini').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1m').removeClass('active');
+            });
+
+           // Default
+
+           $('#tab_1_default').on('click', function(){
+                $('.avg_1w').addClass('active');
+                $('#tab_2_default, #tab_3_default').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1m, .avg_1q').removeClass('active');
+            });
+           $('#tab_2_default').on('click', function(){
+                $('.avg_1m').addClass('active');
+                $('#tab_1_default, #tab_3_default').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1q').removeClass('active');
+            });
+           $('#tab_3_default').on('click', function(){
+                $('.avg_1q').addClass('active');
+                $('#tab_1_default, #tab_2_default').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1m').removeClass('active');
+            });
+
         });
 
     </script>

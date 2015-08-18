@@ -775,7 +775,7 @@ input[type=submit] {
 .fxs_header .fxs_nav_menu {
   border-bottom: 0 none transparent;
   height: 45px;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
   display: none;
@@ -846,7 +846,7 @@ input[type=submit] {
 .fxs_tabs_nav {
   border-bottom: 1px solid #dcddde;
   height: 35px;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
   white-space: nowrap;
@@ -877,7 +877,7 @@ input[type=submit] {
 .fxs_pageSidebar .fxs_tabs_nav {
   border-bottom: 1px solid #49494f;
   height: 45px;
-  margin: 0 0 0.5rem;
+  margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
 }
@@ -2267,12 +2267,17 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_gauge_container {
   display: inline-block;
-  max-width: 200px;
+  max-width: 190px;
   min-height: 1px;
   min-width: 1px;
   overflow: hidden;
   position: relative;
   vertical-align: middle;
+}
+@media (min-width: 680px) {
+  .fxs_gauge_container:nth-child(n+4):nth-child(-n+5) {
+    max-width: 200px;
+  }
 }
 .fxs_insideChart_centered_legend {
   position: absolute;

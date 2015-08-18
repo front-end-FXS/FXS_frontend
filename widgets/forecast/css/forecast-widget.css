@@ -140,13 +140,14 @@ width:calc(100% - 210px - 2rem);
 .fxs_forecast_widget_multi .fxs_table .forecast_timeframe {
   display: none;
 }
+.fxs_forecast_widget_multi .fxs_table .forecast_timeframe {
+  padding-left: 0.5rem;
+}
 .fxs_forecast_widget_multi .fxs_table .forecast_timeframe.active {
   display: block;
 }
-@media (min-width: 680px) {
-  .fxs_forecast_widget_multi .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
-    width: 28%;
-  }
+.fxs_forecast_widget_multi .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+  padding: 0.5rem 0;
 }
 .fxs_forecast_widget_multi .fxs_widget_slot_label {
   margin-bottom: -0.5rem;
@@ -155,13 +156,44 @@ width:calc(100% - 210px - 2rem);
 .fxs_forecast_widget_multi .fxs_widget_slot_label .fxs_widget_custom_data_lable {
   display: inline-block;
 }
+.fxs_forecast_widget_multi .fxs_widget_slot_label,
+.fxs_forecast_widget_multi .forecast_avg_result {
+  white-space: nowrap;
+}
 .fxs_forecast_widget_multi .forecast_avg_result {
   border-top: 0 none;
   padding-top: 0;
 }
-@media (min-width: 680px) {
-  .fxs_forecast_widget_multi.fxs_widget_big > thead {
+@media (min-width: 1180px) {
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_tabs_nav {
+    display: none;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_table > thead {
     display: table-header-group;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_table .forecast_timeframe {
+    display: block;
+    padding-left: 0;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_default .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+    width: 28%;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_tabs_nav {
+    display: none;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_table > thead {
+    display: table-header-group;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_table .forecast_timeframe {
+    display: block;
+    padding-left: 0;
+  }
+  .fxs_forecast_widget_multi.fxs_widget_big .fxs_table > tbody > tr > td:nth-child(n+2):nth-child(-n+4) {
+    width: 28%;
+    padding: 0.5rem;
   }
 }
 .fxs_forecast_widget_multi .c3-axis-x {
