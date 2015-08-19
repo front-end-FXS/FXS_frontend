@@ -217,7 +217,8 @@
                 width: 6
             },
             size: {
-                height: 35
+                height: 35,
+                width: 180
             },
             legend: {
                 show: false
@@ -239,6 +240,10 @@
                     ['Bearish', 0.5],
                     ['Sideways', 0.1]
                 ]
+            });
+            forecast_avg_levels_1q_2.resize({
+                height: 35,
+                width: undefined
             });
         }, 250);
 
@@ -277,7 +282,8 @@
                 width: 6
             },
             size: {
-                height: 35
+                height: 35,
+                width: 180
             },
             legend: {
                 show: false
@@ -299,6 +305,10 @@
                     ['Bearish', 0.3],
                     ['Sideways', 0.1]
                 ]
+            });
+            forecast_avg_levels_1m.resize({
+                height: 35,
+                width: undefined
             });
         }, 250);
 
@@ -337,7 +347,8 @@
                 width: 6
             },
             size: {
-                height: 35
+                height: 35,
+                width: 180
             },
             legend: {
                 show: false
@@ -352,6 +363,18 @@
                 }
             }
         });
+        
+        // OMAR: CLASE PARA CONTROLAR ACTIVO Y DAR FLUSH
+        //$('.forecast_timeframe').hasClass('active')
+        //forecast_avg_levels_1q.flush();
+
+        setTimeout(function () {
+            forecast_avg_levels_1q.resize({
+                height: 35,
+                width: undefined
+            });
+        }, 200);
+
         setTimeout(function () {
             forecast_avg_levels_1q.load({
                 columns: [
@@ -400,7 +423,8 @@
                 width: 6
             },
             size: {
-                height: 35
+                height: 35,
+                width: 180
             },
             legend: {
                 show: false
@@ -422,6 +446,10 @@
                     ['Bearish', 0.5],
                     ['Sideways', 0.1]
                 ]
+            });
+            forecast_avg_levels_1w_2.resize({
+                height: 35,
+                width: undefined
             });
         }, 250);
 
@@ -460,7 +488,8 @@
                 width: 6
             },
             size: {
-                height: 35
+                height: 35,
+                width: 180
             },
             legend: {
                 show: false
@@ -482,6 +511,10 @@
                     ['Bearish', 0.3],
                     ['Sideways', 0.1]
                 ]
+            });
+            forecast_avg_levels_1m_2.resize({
+                height: 35,
+                width: undefined
             });
         }, 250);
 
@@ -520,7 +553,8 @@
                 width: 6
             },
             size: {
-                height: 35
+                height: 35,
+                width: 180
             },
             legend: {
                 show: false
@@ -543,72 +577,76 @@
                     ['Sideways', 0.5]
                 ]
             });
+            forecast_avg_levels_1q_2.resize({
+                height: 35,
+                width: undefined
+            });
         }, 250);
 
         // run test on initial page load
-            checkSize();
+            // checkSize();
 
             // run test on resize of the window
-            $(window).resize(checkSize);
+            // $(window).resize(checkSize);
 
-            function checkSize() {
-                if ($(window).width() > 680) {
-                    forecast_avg_levels_1w.resize({
-                        height: 35,
-                        width: undefined
-                    });
-                    forecast_avg_levels_1m.resize({
-                        height: 35,
-                        width: undefined
-                    });
-                    forecast_avg_levels_1q.resize({
-                        height: 35,
-                        width: undefined
-                    });
-                    //
-                    forecast_avg_levels_1w_2.resize({
-                        height: 35,
-                        width: undefined
-                    });
-                    forecast_avg_levels_1m_2.resize({
-                        height: 35,
-                        width: undefined
-                    });
-                    forecast_avg_levels_1q_2.resize({
-                        height: 35,
-                        width: undefined
-                    });
+            // function checkSize() {
+            //     if ($(window).width() > 680) {
+            //         forecast_avg_levels_1w.resize({
+            //             height: 35,
+            //             width: undefined
+            //         });
+            //         forecast_avg_levels_1m.resize({
+            //             height: 35,
+            //             width: undefined
+            //         });
+            //         forecast_avg_levels_1q.resize({
+            //             height: 35,
+            //             width: undefined
+            //         });
+            //         //
+            //         forecast_avg_levels_1w_2.resize({
+            //             height: 35,
+            //             width: undefined
+            //         });
+            //         forecast_avg_levels_1m_2.resize({
+            //             height: 35,
+            //             width: undefined
+            //         });
+            //         forecast_avg_levels_1q_2.resize({
+            //             height: 35,
+            //             width: undefined
+            //         });
                     
-                } else {
-                    forecast_avg_levels_1w.resize({
-                        height: 35,
-                        width: 180
-                    });
-                    forecast_avg_levels_1m.resize({
-                        height: 35,
-                        width: 180
-                    });
-                    forecast_avg_levels_1q.resize({
-                        height: 35,
-                        width: 180
-                    });
-                    //
+            //     } else {
+            //         forecast_avg_levels_1w.resize({
+            //             height: 35,
+            //             width: 180
+            //         });
+            //         forecast_avg_levels_1m.resize({
+            //             height: 35,
+            //             width: 180
+            //         });
+            //         forecast_avg_levels_1q.resize({
+            //             height: 35,
+            //             width: 180
+            //         });
+            //         //
 
-                    forecast_avg_levels_1w_2.resize({
-                        height: 35,
-                        width: 180
-                    });
-                    forecast_avg_levels_1m_2.resize({
-                        height: 35,
-                        width: 180
-                    });
-                    forecast_avg_levels_1q_2.resize({
-                        height: 35,
-                        width: 180
-                    });
+            //         forecast_avg_levels_1w_2.resize({
+            //             height: 35,
+            //             width: 180
+            //         });
+            //         forecast_avg_levels_1m_2.resize({
+            //             height: 35,
+            //             width: 180
+            //         });
+            //         forecast_avg_levels_1q_2.resize({
+            //             height: 35,
+            //             width: 180
+            //         });
                     
-                }
-            };
+            //     }
+            // };
 
         // Toggle tabs (METIDOS A SACO)
         $(document).ready(function () {
