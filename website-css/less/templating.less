@@ -23,11 +23,11 @@
   overflow-y: auto;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-m) {
     margin-left: @left_rail_space;
   }
   &.fxs_content_wide{
-    @media (min-width: @screen-l) {
+    @media (min-width: @screen-m) {
       margin-left: 0;
     }
   }
@@ -60,15 +60,15 @@
     &.fxs_isParent_section{
       .fxs_listView {
         .translate(@slide_sidebar_space);
-        @media (min-width: @screen-m) { .translate(0); }
+        @media (min-width: @screen-s) { .translate(0); }
       }
     }
-    @media (min-width: @screen-l) {
+    @media (min-width: @screen-m) {
       &.fxs_isParent_section .fxs_listView , .fxs_listView{
         .translate(@slide_sidebar_space);
       }
     }
-    @media (min-width: @screen-xl) {
+    @media (min-width: @screen-l) {
       .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer{ .translate(0)!important; }
     }
   }
@@ -93,7 +93,7 @@
   overflow: hidden;
   padding-top: 24px;
   margin: 10px 0.25rem;
-  @media (min-width: @screen-xl) { margin-left: 1rem; }
+  @media (min-width: @screen-l) { margin-left: 1rem; }
 }
 
 // Header buttons
@@ -108,7 +108,7 @@
 
 .fxs_show_navmenu {
   float: left;
-  @media (min-width: @screen-xl) { display: none; }
+  @media (min-width: @screen-l) { display: none; }
 }
 
 .fxs_show_usermenu {
@@ -132,7 +132,7 @@
   z-index: 2;
   width: 100%;
   border-bottom: 1px solid @light_5_clr;
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-m) {
       position: absolute;
       left: @left_rail_space;
       .calc(width, ~'100% - @{left_rail_space}'); 
@@ -155,7 +155,7 @@
         cursor: default;
         &:hover{ text-decoration: none; }
     }
-    @media (min-width: @screen-l) { display: none; }
+    @media (min-width: @screen-m) { display: none; }
   }
 }
 
@@ -364,11 +364,11 @@
 ////////// CONTENT //////// 
 .fxs_contentView {
   padding: @base_module_size+3px 3px;
-  @media (min-width: @screen-l) { padding: @base_module_size 5px; }
-  @media (min-width: @screen-xl) { padding: @base_module_size 1rem; }
+  @media (min-width: @screen-m) { padding: @base_module_size 5px; }
+  @media (min-width: @screen-l) { padding: @base_module_size 1rem; }
   .fxs_isParent_section & {
       display: none;
-      @media (min-width: @screen-m) { display: block; }
+      @media (min-width: @screen-s) { display: block; }
   }
   .fxs_feedbackLoading_msg {
       max-width: @content_rail_width;
@@ -382,11 +382,11 @@
   padding: 0.5rem 1rem;
   height: @base_module_size;
   position: relative;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     height: @main_header_height;
     padding: 0 2rem;
   }
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-m) {
     max-width: @content_rail_width;
     margin: 0 auto 5px;
   }
@@ -400,18 +400,18 @@
 .fxs_leaderboard {
   display: none;
   padding: 1rem 0;
-  @media (min-width: @screen-m) { display: block; }
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-s) { display: block; }
+  @media (min-width: @screen-m) {
     max-width: @content_rail_width;
     margin: 0 auto;
   }
   .fxs_add {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       width: 468px;
       min-height: 60px;
       margin: auto;
     }
-    @media (min-width: @screen-xl) {
+    @media (min-width: @screen-l) {
       width: 728px;
       min-height: 90px;
     }
@@ -423,10 +423,10 @@
   background-color: @lightest_clr;
   padding: 1rem;
   margin-bottom: 0.5rem;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     padding: 2rem 2rem 1rem;
   }
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-m) {
     max-width: @content_rail_width;
     margin: 0 auto 0.5rem;
   }
@@ -446,14 +446,14 @@
   top: @main_header_height;
   left: -100%;
   .fxs_isParent_section & { left: auto; }
-  @media (min-width: @screen-m){ left: -(@left_rail_space + 5px)!important; }
-  @media (min-width: @screen-l) { left: auto!important; }
+  @media (min-width: @screen-s){ left: -(@left_rail_space + 5px)!important; }
+  @media (min-width: @screen-m) { left: auto!important; }
   &.cbp-spmenu-open {
     .translateX(100%);
-    @media (min-width: @screen-m){
+    @media (min-width: @screen-s){
       .translateX(@left_rail_space + 5px);
     }
-    @media (min-width: @screen-l) { .translate(0); }
+    @media (min-width: @screen-m) { .translate(0); }
   }
 }
 
@@ -468,7 +468,7 @@
 
 // Absolute dimension spaces in layout
 .fxs_listView, .fxs_listViewRail {
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     width: @left_rail_space + 5px;
     padding-right: 5px;
   }
@@ -487,7 +487,7 @@
 
 .fxs_listView_blockWrapper {
     position: relative;
-    @media (min-width: @screen-m) { width: @left_rail_space; }
+    @media (min-width: @screen-s) { width: @left_rail_space; }
 }
 
 .fxs_listView_newItemsAlert {
@@ -499,7 +499,7 @@
   overflow: hidden;
   .animation(slide-from-top 0.45s ease-in);
   &:hover{ background-color: lighten(@highlight_clr, 35%); }
-  @media (min-width: @screen-m) { width: @left_rail_space; }
+  @media (min-width: @screen-s) { width: @left_rail_space; }
 }
 
 .fxs_listView_item, .fxs_listView_adContiner {
@@ -567,7 +567,7 @@
       .fxs_copyRight{ margin-right:5px; }
       .fxs_subnavInlined_list {
         display: none;
-        @media (min-width: @screen-xl) {
+        @media (min-width: @screen-l) {
           display: inline-block;
         }
       }
@@ -591,7 +591,7 @@
       padding:1rem;
   }
   .fxs_dropdownBlock.active{ display:block; }
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-m) {
       margin-left: @left_rail_space;
       .calc(width, ~'100% - @{left_rail_space}'); 
   }
@@ -602,7 +602,7 @@
   .fxs_entryPlain_txt {
     &:extend(.fxs_clearfix all);
     margin-bottom: 2rem;
-    @media (min-width: @screen-l) { max-width: 66.66%; }
+    @media (min-width: @screen-m) { max-width: 66.66%; }
   }
 }
 
@@ -654,7 +654,7 @@
 // special responsive rules
 .sf_disable_cols{
     display:none;
-    @media (min-width: @grid-float-breakpoint-xlarge){
+    @media (min-width: @grid-float-breakpoint-large){
         display:block;
     }
 }

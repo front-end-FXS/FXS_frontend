@@ -1149,7 +1149,7 @@ input[type=submit] {
     min-width: 250px;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_subscribeForm_group .fxs_textInput {
     min-width: 320px;
   }
@@ -1204,7 +1204,7 @@ input[type=submit] {
 .fxs_header .fxs_nav_menu li:first-child {
   display: none;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_header .fxs_nav_menu {
     display: inline-block;
     float: left;
@@ -2613,11 +2613,6 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 @media (min-width: 680px) {
   .fxs_relatedItem {
-    min-height: 230px;
-  }
-}
-@media (min-width: 1180px) {
-  .fxs_relatedItem {
     min-height: 280px;
   }
 }
@@ -2754,6 +2749,7 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_table .c3 svg,
 .fxs_gauge_container .c3 svg {
   width: 100%;
+  max-width: 100%;
 }
 .c3-axis,
 .c3-legend-item {
@@ -2875,7 +2871,7 @@ fieldset[disabled] .fxs_dismissQuery {
     transform: translate(276px);
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_content,
   .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_header,
   .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_listView,
@@ -2920,7 +2916,7 @@ fieldset[disabled] .fxs_dismissQuery {
   padding-top: 24px;
   margin: 10px 0.25rem;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_logo {
     margin-left: 1rem;
   }
@@ -2970,7 +2966,7 @@ fieldset[disabled] .fxs_show_usermenu {
 .fxs_show_navmenu {
   float: left;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_show_navmenu {
     display: none;
   }
@@ -3243,7 +3239,7 @@ height:calc(100% - 45px);
     padding: 35px 5px;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_contentView {
     padding: 35px 1rem;
   }
@@ -3306,7 +3302,7 @@ height:calc(100% - 45px);
     margin: auto;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_leaderboard .fxs_add {
     width: 728px;
     min-height: 90px;
@@ -3517,7 +3513,7 @@ height:calc(100% - 35px - 45px);
 .fxs_footer .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
   display: none;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_footer .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
     display: inline-block;
   }
@@ -3603,13 +3599,13 @@ width:calc(100% - 320px);
   }
 }
 /* 2 x 75% - 25% */
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .sf_2cols_1_75 {
     float: left;
     width: 75%;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .sf_2cols_1_25 {
     float: left;
     width: 25%;
@@ -3632,7 +3628,7 @@ width:calc(100% - 320px);
 .sf_disable_cols {
   display: none;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .sf_disable_cols {
     display: block;
   }
@@ -3860,7 +3856,7 @@ height:calc(100% - 4rem);
     margin: 0 -5px 0 0;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_sponsor_container {
     padding: 1rem;
     margin: 0 -1rem;
@@ -3916,7 +3912,7 @@ height:calc(100% - 4rem);
 .fxs_article_body {
   margin-bottom: 1rem;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1220px) {
   .fxs_article_body > * {
     max-width: 66.66%;
   }
@@ -3983,7 +3979,7 @@ height:calc(100% - 4rem);
     display: inline-block;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1220px) {
   .fxs_ctp_widget.fxs_widget_big .fxs_module_cols_avg {
     margin-left: 2.5rem;
   }
@@ -3992,10 +3988,9 @@ height:calc(100% - 4rem);
   .fxs_ctp_widget.fxs_widget_mini .fxs_gauge_container,
   .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_col {
     display: block;
-    max-width: inherit;
   }
   .fxs_ctp_widget.fxs_widget_mini .fxs_gauge_container {
-    margin-bottom: 0.5rem;
+    margin: 0 auto 0.5rem;
   }
   .fxs_ctp_widget.fxs_widget_mini .fxs_widget_avg_col {
     margin: 0;
@@ -4047,7 +4042,7 @@ height:calc(100% - 4rem);
     margin-top: -35px;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1220px) {
   .fxs_ctp_widget_multi.fxs_widget_big .fxs_module_cols_avg {
     margin-right: 0.5rem;
   }
@@ -4250,6 +4245,12 @@ width:calc(100% - 210px - 2rem);
     border-top: 1px solid #dcddde;
   }
 }
+.forecast_graphic_wrapper {
+  min-width: 1px;
+  min-height: 1px;
+  max-width: 240px;
+  position: relative;
+}
 .fxs_forecast_widget_multi .fxs_table > thead,
 .fxs_forecast_widget_multi .fxs_table .forecast_timeframe {
   display: none;
@@ -4278,7 +4279,7 @@ width:calc(100% - 210px - 2rem);
   border-top: 0 none;
   padding-top: 0;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1220px) {
   .fxs_forecast_widget_multi.fxs_widget_default .fxs_tabs_nav {
     display: none;
   }

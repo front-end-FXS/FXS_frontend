@@ -31,7 +31,7 @@
   text-align: left;
   &:first-child {
     margin-bottom: 0.5rem;
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       margin-bottom: 0;
     }
   }
@@ -41,18 +41,15 @@
   // Big widget values & media queries
   &.fxs_widget_big {
     .fxs_module_cols_avg {
-      @media (min-width: @screen-m) { display: inline-block; }
+      @media (min-width: @screen-s) { display: inline-block; }
       @media (min-width: @screen-xl) { margin-left: 2.5rem; }
     }
   }
   // Mini widget values & media queries
   &.fxs_widget_mini {
-    @media (min-width: @screen-m) {
-      .fxs_gauge_container, .fxs_widget_avg_col {
-        display: block;
-        max-width: inherit;
-      }
-      .fxs_gauge_container { margin-bottom: 0.5rem; }
+    @media (min-width: @screen-s) {
+      .fxs_gauge_container, .fxs_widget_avg_col { display: block; }
+      .fxs_gauge_container { margin: 0 auto 0.5rem; }
       .fxs_widget_avg_col {
         margin: 0;
         text-align: center;
@@ -91,7 +88,7 @@
 
   // Big widget values & media queries
   &.fxs_widget_big {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       > .fxs_widget_cell_col { vertical-align: bottom; }
       .ctp_graphic_wrapper {
         padding-left: 18%;
@@ -105,7 +102,7 @@
 
   // Mini widget values & media queries
   &.fxs_widget_mini {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       .fxs_widget_cell_col, .fxs_widget_cell_col:first-child {
         display: block;
         width: 100%;
@@ -121,17 +118,17 @@
     >tr >td, >tr >th {
       &:not(:nth-child(-n+3)) { display: none; }
       &:last-child { display: table-cell; }
-      @media (min-width: @screen-m){
+      @media (min-width: @screen-s){
         &:nth-child(n+4):nth-child(-n+5) { display: table-cell; }
       }
-      @media (min-width: @screen-l){
+      @media (min-width: @screen-m){
         &:nth-child(n+5) { display: table-cell; }
       }
     }
   }
   .fxs_ctpTable_order {
     a:extend(.fxs_clearfix all) {}
-    @media (min-width: @screen-m){
+    @media (min-width: @screen-s){
       a {
         &::before, &::after {
           content: none;

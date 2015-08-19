@@ -125,13 +125,20 @@
                 }
             },
             size: {
-                height: 100
+                height: 100,
+                width: 190
             },
             tooltip: {
               show: false
             }
         });
-        
+        setTimeout(function () {
+            gauge_chart.resize({
+                height: 100,
+                width: undefined
+            });
+        }, 100);
+
         setTimeout(function () {
             gauge_chart.load({
                 columns: [

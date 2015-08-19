@@ -1300,499 +1300,140 @@
     <script src="../../../widgets/core/js/c3.js"></script>
     <script src="../../../widgets/core/js/d3.min.js"></script>
     <script>
-    // Widget big
-        // Gauge chart 1w
-        var forecast_chart_1w_big = c3.generate({
-            bindto: '#forecast_chart_1w_big',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
 
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            },
-        });
 
-        setTimeout(function () {
-            forecast_chart_1w_big.load({
-                columns: [
-                ['Bullish', 40],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
+        // Omar A. 'nice' code (mixed with Omar P. 'chapuza' code)
 
-        // Gauge chart 1M
-        var forecast_chart_1m_big = c3.generate({
-            bindto: '#forecast_chart_1m_big',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
+        var forecastSpeedometerObj = function() {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
 
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            }
-        });
+            var setVars = function(initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
 
-        setTimeout(function () {
-            forecast_chart_1m_big.load({
-                columns: [
-                ['Bullish', 25],
-                ['Bearish', 50],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-        
-        // // Gauge chart 1Q
-        var forecast_chart_1q_big = c3.generate({
-            bindto: '#forecast_chart_1q_big',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            }
-
-        });
-
-        setTimeout(function () {
-            forecast_chart_1q_big.load({
-                columns: [
-                ['Bullish', 60],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-
-    // Widget mini
-        // Gauge chart 1w
-        var forecast_chart_1w_mini = c3.generate({
-            bindto: '#forecast_chart_1w_mini',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            },
-        });
-
-        setTimeout(function () {
-            forecast_chart_1w_mini.load({
-                columns: [
-                ['Bullish', 40],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-
-        // Gauge chart 1M
-        var forecast_chart_1m_mini = c3.generate({
-            bindto: '#forecast_chart_1m_mini',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            }
-        });
-
-        setTimeout(function () {
-            forecast_chart_1m_mini.load({
-                columns: [
-                ['Bullish', 25],
-                ['Bearish', 50],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-        
-        // // Gauge chart 1Q
-        var forecast_chart_1q_mini = c3.generate({
-            bindto: '#forecast_chart_1q_mini',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            }
-
-        });
-
-        setTimeout(function () {
-            forecast_chart_1q_mini.load({
-                columns: [
-                ['Bullish', 60],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-
-    // Widget Default
-        // Gauge chart 1w
-        var forecast_chart_1w_d = c3.generate({
-            bindto: '#forecast_chart_1w_default',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            },
-        });
-
-        setTimeout(function () {
-            forecast_chart_1w_d.load({
-                columns: [
-                ['Bullish', 40],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-
-        // Gauge chart 1M
-        var forecast_chart_1m_d = c3.generate({
-            bindto: '#forecast_chart_1m_default',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            }
-        });
-
-        setTimeout(function () {
-            forecast_chart_1m_d.load({
-                columns: [
-                ['Bullish', 25],
-                ['Bearish', 50],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-        
-        // // Gauge chart 1Q
-        var forecast_chart_1q_d = c3.generate({
-            bindto: '#forecast_chart_1q_default',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            }
-
-        });
-
-        setTimeout(function () {
-            forecast_chart_1q_d.load({
-                columns: [
-                ['Bullish', 60],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-
-        // run test on initial page load
-        checkSize();
-
-        // run test on resize of the window
-        $(window).resize(checkSize);
-
-        function checkSize() {
-            if ($(window).width() > 680) {
-                forecast_chart_1w_big.resize({
-                    height: 90,
-                    width: undefined
+            var initChart = function() {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Sideways', 0], ['Bearish', 0], ['Bullish', 0]],
+                        type: 'gauge'
+                    },
+                    zoom: { enabled: false },
+                    gauge: {
+                        label: { show: false },
+                        units: ' %',
+                        width: 6 // for adjusting arc thickness
+                    },
+                    color: {
+                        pattern: ['#8B8C91', '#CE4735', '#338473'] // the three color levels for the percentage values
+                    },
+                    size: {
+                        height: 90,
+                        width: 190
+                    },
+                    tooltip: {
+                        show: false
+                    }
                 });
-                forecast_chart_1m_big.resize({
-                    height: 90,
-                    width: undefined
-                });
-                forecast_chart_1q_big.resize({
-                    height: 90,
-                    width: undefined
-                });
-                //
-                forecast_chart_1w_d.resize({
-                    height: 90,
-                    width: undefined
-                });
-                forecast_chart_1m_d.resize({
-                    height: 90,
-                    width: undefined
-                });
-                forecast_chart_1q_d.resize({
-                    height: 90,
-                    width: undefined
-                });
-                
-            } else {
-                forecast_chart_1w_big.resize({
-                    height: 90,
-                    width: 190
-                });
-                forecast_chart_1m_big.resize({
-                    height: 90,
-                    width: 190
-                });
-                forecast_chart_1q_big.resize({
-                    height: 90,
-                    width: 190
-                });
-                //
+            };
 
-                forecast_chart_1w_d.resize({
-                    height: 90,
-                    width: 190
-                });
-                forecast_chart_1m_d.resize({
-                    height: 90,
-                    width: 190
-                });
-                forecast_chart_1q_d.resize({
-                    height: 90,
-                    width: 190
-                });
-                
-            }
+            var delayLoad = function() {
+                setTimeout(function() {
+                    chart.resize({
+                        height: 90,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function() {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function() {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe_slot").hasClass("active")) {
+                    chart.flush();
+                }
+            };
+
+            this.Init = function(initJson) {
+                setVars(initJson);
+                print();
+            };
         };
+
+        var forecastWidgetObj = function() {
+
+            var charts = [];
+
+            var manageRenderedHtml = function() {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function() {
+                $.each(charts, function (i, chart) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+                $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function(e) {
+                    notifyChartsActiveChange();
+                });
+            };
+
+            //#region Charts
+
+            var printCharts = function() {
+                // Widget big
+                instanciateSpeedometer("forecast_chart_1w_big", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1m_big", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1q_big", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
+
+                // Widget mini
+                instanciateSpeedometer("forecast_chart_1w_mini", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1m_mini", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1q_mini", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
+
+                // Widget default
+                instanciateSpeedometer("forecast_chart_1w_default", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1m_default", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1q_default", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
+            };
+
+            var instanciateSpeedometer = function(widgetId, colunms) {
+                var initJsonSpeedometer = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpSpeedometer = new forecastSpeedometerObj();
+                ctpSpeedometer.Init(initJsonSpeedometer);
+
+                charts.push(ctpSpeedometer);
+            };
+
+            //#endregion Charts
+
+            this.Init = function() {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
 
     </script>
 

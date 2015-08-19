@@ -203,183 +203,128 @@
     <script src="../core/js/c3.js"></script>
     
     <script>
-        // Gauge chart 1w
-        var forecast_chart_1w = c3.generate({
-            bindto: '#forecast_chart_1w',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
 
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 200
-            },
-            tooltip: {
-              show: false
-            },
-        });
-        
-        setTimeout(function () {
-            forecast_chart_1w.load({
-                columns: [
-                ['Bullish', 40],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
+        // Omar A. 'nice' code (mixed with Omar P. 'chapuza' code)
 
-        // Gauge chart 1M
-        var forecast_chart_1m = c3.generate({
-            bindto: '#forecast_chart_1m',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
+        var forecastSpeedometerObj = function() {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
 
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values.
-            },
-            size: {
-                height: 90,
-                width: 200
-            },
-            tooltip: {
-              show: false
-            }
-        });
+            var setVars = function(initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
 
-        setTimeout(function () {
-            forecast_chart_1m.load({
-                columns: [
-                ['Bullish', 25],
-                ['Bearish', 50],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-        
-        // // Gauge chart 1Q
-        var forecast_chart_1q = c3.generate({
-            bindto: '#forecast_chart_1q',
-                   
-            data: {
-                columns: [
-                ['Sideways', 0],
-                ['Bearish', 0],
-                ['Bullish', 0]
-                ],
-
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#8B8C91', '#CE4735', '#338473'], // the three color levels for the percentage values
-            },
-            size: {
-                height: 90,
-                width: 200
-            },
-            tooltip: {
-              show: false
-            }
-        });
-
-        setTimeout(function () {
-            forecast_chart_1q.load({
-                columns: [
-                ['Bullish', 60],
-                ['Bearish', 90],
-                ['Sideways', 100]
-                ]
-            });
-        }, 250);
-
-
-        // run test on initial page load
-        checkSize();
-
-        // run test on resize of the window
-        $(window).resize(checkSize);
-
-        function checkSize() {
-            if ($(window).width() > 680) {
-                forecast_chart_1w.resize({
-                    height: 90,
-                    width: undefined
+            var initChart = function() {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Sideways', 0], ['Bearish', 0], ['Bullish', 0]],
+                        type: 'gauge'
+                    },
+                    zoom: { enabled: false },
+                    gauge: {
+                        label: { show: false },
+                        units: ' %',
+                        width: 6 // for adjusting arc thickness
+                    },
+                    color: {
+                        pattern: ['#8B8C91', '#CE4735', '#338473'] // the three color levels for the percentage values
+                    },
+                    size: {
+                        height: 90,
+                        width: 190
+                    },
+                    tooltip: {
+                        show: false
+                    }
                 });
-                forecast_chart_1m.resize({
-                    height: 90,
-                    width: undefined
-                });
-                forecast_chart_1q.resize({
-                    height: 90,
-                    width: undefined
-                });
-            } else {
-                forecast_chart_1w.resize({
-                    height: 90,
-                    width: 200
-                });
-                forecast_chart_1m.resize({
-                    height: 90,
-                    width: 200
-                });
-                forecast_chart_1q.resize({
-                    height: 90,
-                    width: 200
-                });
-            }
+            };
+
+            var delayLoad = function() {
+                setTimeout(function() {
+                    chart.resize({
+                        height: 90,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function() {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function() {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe_slot").hasClass("active")) {
+                    chart.flush();
+                }
+            };
+
+            this.Init = function(initJson) {
+                setVars(initJson);
+                print();
+            };
         };
+
+        var forecastWidgetObj = function() {
+
+            var charts = [];
+
+            var manageRenderedHtml = function() {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function() {
+                $.each(charts, function (i, chart) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+                $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function(e) {
+                    notifyChartsActiveChange();
+                });
+            };
+
+            //#region Charts
+
+            var printCharts = function() {
+                instanciateSpeedometer("forecast_chart_1w", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1m", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1q", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
+            };
+
+            var instanciateSpeedometer = function(widgetId, colunms) {
+                var initJsonSpeedometer = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpSpeedometer = new forecastSpeedometerObj();
+                ctpSpeedometer.Init(initJsonSpeedometer);
+
+                charts.push(ctpSpeedometer);
+            };
+
+            //#endregion Charts
+
+            this.Init = function() {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
 
     </script>
 

@@ -6,12 +6,12 @@
 
 .fxs_suscribeForm {
   &:extend(.fxs_clearfix all);
-  @media (min-width: @screen-m) { float: left; }
+  @media (min-width: @screen-s) { float: left; }
 }
 
 .fxs_suscribeSocial {
   &:extend(.fxs_clearfix all);
-  @media (min-width: @screen-m) { float: right; }
+  @media (min-width: @screen-s) { float: right; }
 }
 
 .fxs_suscribeText {
@@ -45,7 +45,7 @@
   background-color: fade(@dark_2_clr, 80%);
   height: 82%;
   .calc(height, ~'100% - 2rem');
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     padding: 2rem;
     top: 2rem;
     left: 2rem;
@@ -55,19 +55,19 @@
   .fxs_entryHeadline, .fxs_entryHeadline a, .fxs_entryPlain_txt, .fxs_helperLabel_title, .fxs_entry_metaInfo { color: @lightest_clr; }
   header, .fxs_helperLabel_title{
       margin-bottom: 0.25rem;
-      @media (min-width: @screen-m) { margin-bottom: @txt_defaultsize_rem; }
+      @media (min-width: @screen-s) { margin-bottom: @txt_defaultsize_rem; }
   }
   .fxs_entryHeadline {
       font-size: @txt_defaultsize_rem;
       line-height: @txt_lineheight;
-      @media (min-width: @screen-m) {
+      @media (min-width: @screen-s) {
           font-size: @txt_size_huge;
           line-height: @txt_lineheight_large;
       }
   }
   .fxs_entryPlain_txt, .fxs_helperLabel_title {
       display: none;
-      @media (min-width: @screen-m) { 
+      @media (min-width: @screen-s) { 
           display: inherit;
       }
   }
@@ -77,7 +77,7 @@
   &:extend(.fxs_mediaContainer all);
   max-height: 150px;
   margin-bottom: 0;
-  @media (min-width: @screen-m) { max-height: 350px; }
+  @media (min-width: @screen-s) { max-height: 350px; }
 }
 
 // Entries list
@@ -155,7 +155,7 @@
     .fxs_entryHeadline {
         &:extend(.fxs_headline_medium all);
     }
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
         .fxs_entryPlain_txt { display: inherit; }
     }
 }
@@ -177,7 +177,7 @@
   .fxs_entryHeadline {
       &:extend(.fxs_headline_medium all);
   }
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
       .fxs_entryPlain_txt { display: inherit; }
   }
 }
@@ -189,11 +189,11 @@
   background-color: transparent;
   margin: 0 -3px;
   padding: 1rem 3px;
-  @media(min-width: @screen-l){
+  @media(min-width: @screen-m){
     padding: 1rem 5px;
     margin: 0 -5px 0 0;
   }
-  @media(min-width: @screen-xl){
+  @media(min-width: @screen-l){
     padding: 1rem;
     margin: 0 -1rem;
   }

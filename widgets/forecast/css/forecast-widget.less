@@ -66,7 +66,7 @@
 
   // Default & Big widget media queries
   &.fxs_widget_big, &.fxs_widget_default {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       .forecast_timeframe_slot {
         display: block;
         .opacity(1);
@@ -78,7 +78,7 @@
 
   // Default widget values & media queries
   &.fxs_widget_default {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       .fxs_widget_avg_col {
         margin: 0 1rem;
         text-align: center;
@@ -89,7 +89,7 @@
   }
   // Big widget values & media queries
   &.fxs_widget_big {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       .fxs_widget_slot_label { margin: 0 auto; }
       .fxs_gauge_container {
         display: block;
@@ -117,7 +117,7 @@
 
   // Mini widget values & media queries
   &.fxs_widget_mini {
-    @media (min-width: @screen-m) { 
+    @media (min-width: @screen-s) { 
       .fxs_gauge_container, .fxs_widget_avg_col {
         width: auto;
         display: block;
@@ -137,6 +137,12 @@
 //////////// Widget Multi asset ///////////////
 //////////////////////////////////////////////
 
+.forecast_graphic_wrapper {
+  min-width: 1px;
+  min-height: 1px;
+  max-width: 240px;
+  position: relative;
+}
 .fxs_forecast_widget_multi {
   .fxs_table {
     >thead, .forecast_timeframe { display: none; }
@@ -182,7 +188,7 @@
 
   // Big widget values & media queries
   &.fxs_widget_big {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       .fxs_tabs_nav { display: none; }
       .fxs_table {
         >thead { display: table-header-group; }

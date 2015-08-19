@@ -751,7 +751,7 @@ input[type=submit] {
     min-width: 250px;
   }
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_subscribeForm_group .fxs_textInput {
     min-width: 320px;
   }
@@ -806,7 +806,7 @@ input[type=submit] {
 .fxs_header .fxs_nav_menu li:first-child {
   display: none;
 }
-@media (min-width: 1180px) {
+@media (min-width: 1100px) {
   .fxs_header .fxs_nav_menu {
     display: inline-block;
     float: left;
@@ -2205,11 +2205,6 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 @media (min-width: 680px) {
   .fxs_relatedItem {
-    min-height: 230px;
-  }
-}
-@media (min-width: 1180px) {
-  .fxs_relatedItem {
     min-height: 280px;
   }
 }
@@ -2346,6 +2341,7 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_table .c3 svg,
 .fxs_gauge_container .c3 svg {
   width: 100%;
+  max-width: 100%;
 }
 .c3-axis,
 .c3-legend-item {

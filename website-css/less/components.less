@@ -15,7 +15,7 @@
     .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr; @main_header_height);
     display: none;
     li:first-child { display: none; }
-    @media (min-width: @screen-xl) {
+    @media (min-width: @screen-l) {
       display: inline-block;
       float: left;
       margin-left: 1%;
@@ -58,7 +58,7 @@
 // SECTION & SUBSECTION TITLES
 .fxs_sectionTitle_header {
   .fxs_stiled_text_variants(inline-block; @dark_3_clr; @txt_defaultsize_rem);
-  @media (min-width: @screen-m) { line-height: @main_header_height;  }
+  @media (min-width: @screen-s) { line-height: @main_header_height;  }
 }
 
 .fxs_subsectionTitle {
@@ -300,12 +300,14 @@
     display: none;
   }
   .fxs_article_author { white-space: normal; }
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     .fxs_avatar_circleImage_s { display: inline-block; }
     .fxs_article_author { white-space: nowrap; }
   }
 
 }
+
+// AUTHOR FEATURED QUOTES
 
 ///////////////////////////////////////////////////////////////
 ////////////////////// FXStreet FILTER ///////////////////////
@@ -381,10 +383,10 @@
 .fxs_search_title_holder {
   position: relative;
   padding-right: @base_module_size;
-  @media (min-width: @screen-m) { display: inline-block; }
+  @media (min-width: @screen-s) { display: inline-block; }
   .fxs_filter {
     margin-top: -0.5rem;
-    @media (min-width: @screen-m) { margin-top: 5px; }
+    @media (min-width: @screen-s) { margin-top: 5px; }
   }
 }
 
@@ -655,7 +657,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  @media (min-width: @screen-m){ display: block; }
+  @media (min-width: @screen-s){ display: block; }
   .fxs_shareOptions_boxed { background-color: @light_4_clr; }
   > ul > li > .fxs_btn_icon {
     color: @dark_2_clr;
@@ -700,15 +702,14 @@
   overflow: hidden;
   letter-spacing: -1em;
   margin-right: -1rem;
-  @media (min-width: @screen-m) { margin-right: -0.5rem; }
+  @media (min-width: @screen-s) { margin-right: -0.5rem; }
 }
 
 .fxs_relatedItem {
   &:extend(.fxs_transition);
   padding-bottom: 1rem;
   min-height: 175px;
-  @media (min-width: @screen-m) { min-height: 230px; }
-  @media (min-width: @screen-xl) { min-height: 280px; }
+  @media (min-width: @screen-s) { min-height: 280px; }
   &:hover {
     cursor: pointer;
     border-bottom: 4px solid @highlight_clr;
@@ -754,7 +755,7 @@
   &:extend(.fxs_clearfix all);
   .fxs_btn { float: right; }
   &.fxs_widget_mini, .fxs_widget_mini & {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-s) {
       .fxs_btn { float: none; }
     }
   }
@@ -789,7 +790,7 @@
   min-width: 1px;
   position:relative;
   vertical-align: middle;
-  @media (min-width: @screen-m){
+  @media (min-width: @screen-s){
     &:nth-child(n+4):nth-child(-n+5) { max-width: 200px; }
   }
 }
@@ -883,7 +884,7 @@
 
 // Reset & overrides C3 library General. USE IT WITH CAUTION!!
 .fxs_table, .fxs_gauge_container {
-  .c3 svg { width: 100%; }
+  .c3 svg { width: 100%; max-width: 100%; }
 }
 
 .c3-axis, .c3-legend-item {
@@ -892,7 +893,7 @@
 }
 
 .fxs_gauge_container {
-  .c3-gauge-value {display: none; }
+  .c3-gauge-value { display: none; }
 }
 
 .c3-tooltip {

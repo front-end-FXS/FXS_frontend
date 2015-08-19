@@ -13,7 +13,7 @@
   ul, ol {
     padding-top: @txt_size_xsmall;
     padding-left: 1rem;
-    @media (min-width: @screen-m) { padding-left: 2rem; }
+    @media (min-width: @screen-s) { padding-left: 2rem; }
     li { margin-bottom: @txt_size_xsmall; }
   }
   ul {
@@ -224,7 +224,7 @@
   padding: @widget-padding-default;
   margin-bottom: 1rem;
   &:extend(.fxs_wideContent_bordered);
-  @media (min-width: @screen-m) { padding: @widget-padding-m; }
+  @media (min-width: @screen-s) { padding: @widget-padding-m; }
 }
 
 ////////// GRID SYSTEMS ///////////
@@ -232,9 +232,9 @@
 // fxstreet grid breakpoints
 @grid-columns: 12;
 @grid-gutter-width: 1rem;
+@grid-float-breakpoint-small: @screen-s;
 @grid-float-breakpoint-medium: @screen-m;
 @grid-float-breakpoint-large: @screen-l;
-@grid-float-breakpoint-xlarge: @screen-xl;
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
@@ -262,19 +262,19 @@
   width: percentage((@columns / @grid-columns));
 }
 
-// Generate the medium columns 768
+// Generate the small columns 768
 .make-md-column(@columns) {
   // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-medium) {
+  @media (min-width: @grid-float-breakpoint-small) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the large columns 1024
+// Generate the medium columns 1024
 .make-lg-column(@columns) {
   // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-large) {
+  @media (min-width: @grid-float-breakpoint-medium) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
@@ -283,7 +283,7 @@
 // Generate the extra large columns 1180
 .make-xlg-column(@columns) {
   // Calculate width based on number of columns available
-  @media (min-width:@grid-float-breakpoint-xlarge) {
+  @media (min-width:@grid-float-breakpoint-large) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }

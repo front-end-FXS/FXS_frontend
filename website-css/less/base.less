@@ -19,14 +19,14 @@
 // Extendable text classes
 .fxs_entryPlain_txt {
   .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
   }
 }
 
 .fxs_entryPlain_txt_large {
   .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
-  @media (min-width: @screen-m) { font-size: @txt_size_large; }
+  @media (min-width: @screen-s) { font-size: @txt_size_large; }
 }
 
 // Italic upercased labels
@@ -109,7 +109,7 @@
   &:extend(.fxs_clearfix all);
   margin-left:-1rem;
   margin-right:-1rem;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
       margin-left:-2rem;
       margin-right:-2rem;
   }
@@ -174,7 +174,7 @@
   font-size: @txt_size_huge;
   line-height: @txt_lineheight_large;
   padding: 0.5rem 0;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     font-size: @txt_size_xhuge;
     line-height: @txt_lineheight_xlarge;
   }
@@ -184,7 +184,7 @@
   font-size: @txt_size_large;
   line-height: @txt_lineheight;
   padding: 0 0 0.25rem;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     font-size: @txt_size_huge;
     line-height: @txt_lineheight_large;
   }
@@ -208,14 +208,14 @@
 
 // Responsive headlines
 .fxs_headline_from_nano_to_small {
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     font-size: @txt_size_large;
     line-height: @txt_lineheight;
   }
 }
 
 .fxs_headline_from_nano_to_tiny {
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     font-size: @txt_defaultsize_rem;
     line-height: @txt_lineheight_small;
   }
@@ -230,7 +230,7 @@
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   overflow-y: auto;
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-m) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
       width: 5px;
@@ -265,7 +265,7 @@
   padding: 0 0 1rem;
   white-space: nowrap;
   display: inline-block;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-s) {
     width: 100%;
   }
 }

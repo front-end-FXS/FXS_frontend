@@ -58,9 +58,9 @@
                                     <div class="forecast_graphic_wrapper">
                                         <div id="forecast_bar_stacked_1w" class="c3"></div>
                                     </div>
-                                    <div class="forecast_avg_result result_bearish">
+                                    <div class="forecast_avg_result result_bullish">
                                         <small>Bias</small>
-                                        <span class="fxs_widget_custom_bold">Bearish</span>
+                                        <span class="fxs_widget_custom_bold">Bullish</span>
                                     </div>
                                 </div>
                             </td>
@@ -73,9 +73,9 @@
                                     <div class="forecast_graphic_wrapper">
                                         <div id="forecast_bar_stacked_1m" class="c3"></div>
                                     </div>
-                                    <div class="forecast_avg_result result_bullish">
+                                    <div class="forecast_avg_result result_sideways">
                                         <small>Bias</small>
-                                        <span class="fxs_widget_custom_bold">Bullish</span>
+                                        <span class="fxs_widget_custom_bold">Sideways</span>
                                     </div>
                                 </div>
                             </td>
@@ -88,7 +88,7 @@
                                     <div class="forecast_graphic_wrapper">
                                         <div id="forecast_bar_stacked_1q" class="c3"></div>
                                     </div>
-                                    <div class="forecast_avg_result result_sideways">
+                                    <div class="forecast_avg_result result_beari">
                                         <small>Bias</small>
                                         <span class="fxs_widget_custom_bold">Sideways</span>
                                     </div>
@@ -182,493 +182,175 @@
     <script src="../../../widgets/core/js/d3.min.js"></script>
     
     <script>
-        var forecast_avg_levels_1w = c3.generate({
-            bindto: '#forecast_bar_stacked_1w',
-            data: {
-                columns: [
-                    ['Bullish', 0],
-                    ['Bearish', 0],
-                    ['Sideways', 0]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Bullish', 'Bearish', 'Sideways']
-                ],
-                order: 'null',
-                colors: {
-                    Bullish: '#338473',
-                    Bearish: '#CE4735',
-                    Sideways: '#8b8c91'
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35,
-                width: 180
-            },
-            legend: {
-                show: false
-            },
-            tooltip: {
-                format: {
-                    title: function (d) { return '1 Week'; },
-                    value: function (value, ratio, id) {
-                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                        return format(value);
+
+
+        // Omar A. code
+
+        var forecastProgressBarObj = function () {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
+
+            var setVars = function (initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
+
+            var initChart = function () {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
+                        type: 'bar',
+                        groups: [
+                            ['Bullish', 'Bearish', 'Sideways']
+                        ],
+                        order: 'null',
+                        colors: {
+                            Bullish: '#338473',
+                            Bearish: '#CE4735',
+                            Sideways: '#8b8c91'
+                        }
+                    },
+                    padding: {
+                        right: 0
+                    },
+                    axis: {
+                        y: {
+                            show: false
+                        },
+                        x: {
+                            show: false
+                        },
+                        rotated: true
+                    },
+                    bar: {
+                        width: 6
+                    },
+                    size: {
+                        height: 35,
+                        width: 90
+                    },
+                    legend: {
+                        show: false
+                    },
+                    tooltip: {
+                        format: {
+                            title: function (d) { return '1 Week'; },
+                            value: function (value, ratio, id) {
+                                var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                                return format(value);
+                            }
+                        }
                     }
+                });
+            };
+
+            var delayLoad = function () {
+                setTimeout(function () {
+                    chart.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function () {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function () {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe").hasClass("active")) {
+                    chart.flush();
                 }
-            }
-        });
-        setTimeout(function () {
-            forecast_avg_levels_1w.load({
-                columns: [
-                    ['Bullish', 0.4],
-                    ['Bearish', 0.5],
-                    ['Sideways', 0.1]
-                ]
-            });
-            forecast_avg_levels_1q_2.resize({
-                height: 35,
-                width: undefined
-            });
-        }, 250);
+            };
 
-        var forecast_avg_levels_1m = c3.generate({
-            bindto: '#forecast_bar_stacked_1m',
-            data: {
-                columns: [
-                    ['Bullish', 0],
-                    ['Bearish', 0],
-                    ['Sideways', 0]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Bullish', 'Bearish', 'Sideways']
-                ],
-                order: 'null',
-                colors: {
-                    Bullish: '#338473',
-                    Bearish: '#CE4735',
-                    Sideways: '#8b8c91'
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35,
-                width: 180
-            },
-            legend: {
-                show: false
-            },
-            tooltip: {
-                format: {
-                    title: function (d) { return '1 Month'; },
-                    value: function (value, ratio, id) {
-                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                        return format(value);
-                    }
-                }
-            }
-        });
-        setTimeout(function () {
-            forecast_avg_levels_1m.load({
-                columns: [
-                    ['Bullish', 0.6],
-                    ['Bearish', 0.3],
-                    ['Sideways', 0.1]
-                ]
-            });
-            forecast_avg_levels_1m.resize({
-                height: 35,
-                width: undefined
-            });
-        }, 250);
+            this.Init = function (initJson) {
+                setVars(initJson);
+                print();
+            };
+        };
 
-        var forecast_avg_levels_1q = c3.generate({
-            bindto: '#forecast_bar_stacked_1q',
-            data: {
-                columns: [
-                    ['Bullish', 0],
-                    ['Bearish', 0],
-                    ['Sideways', 0]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Bullish', 'Bearish', 'Sideways']
-                ],
-                order: 'null',
-                colors: {
-                    Bullish: '#338473',
-                    Bearish: '#CE4735',
-                    Sideways: '#8b8c91'
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35,
-                width: 180
-            },
-            legend: {
-                show: false
-            },
-            tooltip: {
-                format: {
-                    title: function (d) { return '1 Quarter'; },
-                    value: function (value, ratio, id) {
-                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                        return format(value);
-                    }
-                }
-            }
-        });
-        
-        // OMAR: CLASE PARA CONTROLAR ACTIVO Y DAR FLUSH
-        //$('.forecast_timeframe').hasClass('active')
-        //forecast_avg_levels_1q.flush();
+        var forecastWidgetObj = function () {
 
-        setTimeout(function () {
-            forecast_avg_levels_1q.resize({
-                height: 35,
-                width: undefined
-            });
-        }, 200);
+            var charts = [];
 
-        setTimeout(function () {
-            forecast_avg_levels_1q.load({
-                columns: [
-                    ['Bullish', 0.25],
-                    ['Bearish', 0.25],
-                    ['Sideways', 0.5]
-                ]
-            });
-        }, 250);
+            var manageRenderedHtml = function () {
+                addTabOnClick();
+            };
 
+            var notifyChartsActiveChange = function () {
+                $.each(charts, function(i, chart) {
+                    chart.ActiveChange();
+                });
+            };
 
-        //
+            var addTabOnClick = function () {
+                $('#tab_1').on('click', function () {
+                    $('.avg_1w').addClass('active');
+                    $('#tab_2, #tab_3').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1m, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_2').on('click', function () {
+                    $('.avg_1m').addClass('active');
+                    $('#tab_1, #tab_3').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_3').on('click', function () {
+                    $('.avg_1q').addClass('active');
+                    $('#tab_1, #tab_2').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1m').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+            };
 
-        var forecast_avg_levels_1w_2 = c3.generate({
-            bindto: '#forecast_bar_stacked_1w_2',
-            data: {
-                columns: [
-                    ['Bullish', 0],
-                    ['Bearish', 0],
-                    ['Sideways', 0]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Bullish', 'Bearish', 'Sideways']
-                ],
-                order: 'null',
-                colors: {
-                    Bullish: '#338473',
-                    Bearish: '#CE4735',
-                    Sideways: '#8b8c91'
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35,
-                width: 180
-            },
-            legend: {
-                show: false
-            },
-            tooltip: {
-                format: {
-                    title: function (d) { return '1 Week'; },
-                    value: function (value, ratio, id) {
-                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                        return format(value);
-                    }
-                }
-            }
-        });
-        setTimeout(function () {
-            forecast_avg_levels_1w_2.load({
-                columns: [
-                    ['Bullish', 0.4],
-                    ['Bearish', 0.5],
-                    ['Sideways', 0.1]
-                ]
-            });
-            forecast_avg_levels_1w_2.resize({
-                height: 35,
-                width: undefined
-            });
-        }, 250);
+            //#region Charts
 
-        var forecast_avg_levels_1m_2 = c3.generate({
-            bindto: '#forecast_bar_stacked_1m_2',
-            data: {
-                columns: [
-                    ['Bullish', 0],
-                    ['Bearish', 0],
-                    ['Sideways', 0]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Bullish', 'Bearish', 'Sideways']
-                ],
-                order: 'null',
-                colors: {
-                    Bullish: '#338473',
-                    Bearish: '#CE4735',
-                    Sideways: '#8b8c91'
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35,
-                width: 180
-            },
-            legend: {
-                show: false
-            },
-            tooltip: {
-                format: {
-                    title: function (d) { return '1 Month'; },
-                    value: function (value, ratio, id) {
-                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                        return format(value);
-                    }
-                }
-            }
-        });
-        setTimeout(function () {
-            forecast_avg_levels_1m_2.load({
-                columns: [
-                    ['Bullish', 0.6],
-                    ['Bearish', 0.3],
-                    ['Sideways', 0.1]
-                ]
-            });
-            forecast_avg_levels_1m_2.resize({
-                height: 35,
-                width: undefined
-            });
-        }, 250);
+            var printCharts = function () {
+                instanciateProgressBar("forecast_bar_stacked_1w", [['Bullish', 0.5],['Bearish', 0.25],['Sideways', 0.25]]);
+                instanciateProgressBar("forecast_bar_stacked_1m", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+                instanciateProgressBar("forecast_bar_stacked_1q", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
 
-        var forecast_avg_levels_1q_2 = c3.generate({
-            bindto: '#forecast_bar_stacked_1q_2',
-            data: {
-                columns: [
-                    ['Bullish', 0],
-                    ['Bearish', 0],
-                    ['Sideways', 0]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Bullish', 'Bearish', 'Sideways']
-                ],
-                order: 'null',
-                colors: {
-                    Bullish: '#338473',
-                    Bearish: '#CE4735',
-                    Sideways: '#8b8c91'
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35,
-                width: 180
-            },
-            legend: {
-                show: false
-            },
-            tooltip: {
-                format: {
-                    title: function (d) { return '1 Quarter'; },
-                    value: function (value, ratio, id) {
-                        var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                        return format(value);
-                    }
-                }
-            }
-        });
-        setTimeout(function () {
-            forecast_avg_levels_1q_2.load({
-                columns: [
-                    ['Bullish', 0.25],
-                    ['Bearish', 0.25],
-                    ['Sideways', 0.5]
-                ]
-            });
-            forecast_avg_levels_1q_2.resize({
-                height: 35,
-                width: undefined
-            });
-        }, 250);
+                instanciateProgressBar("forecast_bar_stacked_1w_2", [['Bullish', 0.2], ['Bearish', 0.6], ['Sideways', 0.2]]);
+                instanciateProgressBar("forecast_bar_stacked_1m_2", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
+                instanciateProgressBar("forecast_bar_stacked_1q_2", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+            };
 
-        // run test on initial page load
-            // checkSize();
+            var instanciateProgressBar = function (widgetId, colunms) {
+                var initJsonProgressBar = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
 
-            // run test on resize of the window
-            // $(window).resize(checkSize);
+                var ctpProgressBar = new forecastProgressBarObj();
+                ctpProgressBar.Init(initJsonProgressBar);
 
-            // function checkSize() {
-            //     if ($(window).width() > 680) {
-            //         forecast_avg_levels_1w.resize({
-            //             height: 35,
-            //             width: undefined
-            //         });
-            //         forecast_avg_levels_1m.resize({
-            //             height: 35,
-            //             width: undefined
-            //         });
-            //         forecast_avg_levels_1q.resize({
-            //             height: 35,
-            //             width: undefined
-            //         });
-            //         //
-            //         forecast_avg_levels_1w_2.resize({
-            //             height: 35,
-            //             width: undefined
-            //         });
-            //         forecast_avg_levels_1m_2.resize({
-            //             height: 35,
-            //             width: undefined
-            //         });
-            //         forecast_avg_levels_1q_2.resize({
-            //             height: 35,
-            //             width: undefined
-            //         });
-                    
-            //     } else {
-            //         forecast_avg_levels_1w.resize({
-            //             height: 35,
-            //             width: 180
-            //         });
-            //         forecast_avg_levels_1m.resize({
-            //             height: 35,
-            //             width: 180
-            //         });
-            //         forecast_avg_levels_1q.resize({
-            //             height: 35,
-            //             width: 180
-            //         });
-            //         //
+                charts.push(ctpProgressBar);
+            };
 
-            //         forecast_avg_levels_1w_2.resize({
-            //             height: 35,
-            //             width: 180
-            //         });
-            //         forecast_avg_levels_1m_2.resize({
-            //             height: 35,
-            //             width: 180
-            //         });
-            //         forecast_avg_levels_1q_2.resize({
-            //             height: 35,
-            //             width: 180
-            //         });
-                    
-            //     }
-            // };
+            //#endregion Charts
 
-        // Toggle tabs (METIDOS A SACO)
-        $(document).ready(function () {
-           $('#tab_1').on('click', function(){
-                $('.avg_1w').addClass('active');
-                $('#tab_2, #tab_3').parent().removeClass('active');
-                $(this).parent().addClass('active');
-                $('.avg_1m, .avg_1q').removeClass('active');
-            });
-           $('#tab_2').on('click', function(){
-                $('.avg_1m').addClass('active');
-                $('#tab_1, #tab_3').parent().removeClass('active');
-                $(this).parent().addClass('active');
-                $('.avg_1w, .avg_1q').removeClass('active');
-            });
-           $('#tab_3').on('click', function(){
-                $('.avg_1q').addClass('active');
-                $('#tab_1, #tab_2').parent().removeClass('active');
-                $(this).parent().addClass('active');
-                $('.avg_1w, .avg_1m').removeClass('active');
-            });
-        });
+            this.Init = function () {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
 
     </script>
 
