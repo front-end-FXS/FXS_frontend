@@ -71,6 +71,7 @@
 .fxs_subtitle {
   .fxs_stiled_text_variants(block; @dark_4_clr; @txt_size_small);
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
   border-bottom: 3px solid @light_4_clr;
 }
 
@@ -308,6 +309,28 @@
 }
 
 // AUTHOR FEATURED QUOTES
+.fxs_featured_quote {
+  position: relative;
+  max-width: 680px;
+  margin: 1rem auto;
+  padding-left: @avatar_s + 40px;
+  @media (min-width: @screen-s) {
+    font-size: @txt_size_xlarge;
+    line-height: @txt_lineheight_large;
+    padding-left: @avatar_l + 48px;
+  }
+  .fxs_avatar_circleImage {
+    position: absolute;
+    left: 2rem;
+    width: @avatar_s;
+    height: @avatar_s;
+    @media (min-width: @screen-s) {
+      width: @avatar_l;
+      height: @avatar_l;
+    }
+  }
+  .fxs_list_table_item &::after { display: none; }
+}
 
 ///////////////////////////////////////////////////////////////
 ////////////////////// FXStreet FILTER ///////////////////////
@@ -562,6 +585,18 @@
     margin-top: -5px;
     font-size: @txt_size_large;
     &:hover { .opacity(.75); }
+}
+
+// LIST SPECIAL STYLES
+.fxs_list_table {
+  margin-bottom: 1rem;
+  .fxs_list_table_item {
+    display: table;
+    width: 100%;
+    padding: 0.5rem;
+    border-top: 1px solid @light_3_clr;
+    &:first-child { border-top: none; }
+  }
 }
 
 /// TABLES FOR CONTENT AND WIDGETS
