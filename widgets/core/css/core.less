@@ -17,7 +17,7 @@
 	font-family: @txt_fontfamily;
 	font-size: @txt_defaultsize_px;
 	line-height: @txt_lineheight;
-  
+
   // Box model & typo rendering
   * {
     .box-sizing(border-box);
@@ -30,12 +30,6 @@
     color: @light_1_clr;
   }
 
-	// Tables
-	table {
-	  border-collapse: collapse;
-	  border-spacing: 0;
-	}
-
   // lists
   .fxs_widget_divider_module {
     ol, ul { list-style: none; }
@@ -45,5 +39,21 @@
       padding: 0;
     }
   }
-  
+  a { &:extend(.fxs_boldAntialised_style, .fxs_transition); }
 }
+
+// Tables
+table {
+  &.fxs_table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: @txt_fontfamily;
+    a { &:extend(.fxs_boldAntialised_style, .fxs_transition);}
+    // Box model & typo rendering
+    * {
+      .box-sizing(border-box);
+      text-rendering: optimizelegibility;
+    }
+  }
+}
+//

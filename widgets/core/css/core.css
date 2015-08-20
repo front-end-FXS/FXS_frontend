@@ -58,7 +58,9 @@ textarea,
 .fxs_btn_filter,
 .fxs_dismissQuery,
 .fxs_tableHover tbody:hover > tr:hover,
-.fxs_relatedItem {
+.fxs_relatedItem,
+.fxs_widget_summary a,
+table.fxs_table a {
   -webkit-transition: all 0.25s ease-in;
   -moz-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;
@@ -302,6 +304,8 @@ label,
 .fxs_table > tbody > tr > th,
 .fxs_widget_custom_bold,
 .c3-tooltip th,
+.fxs_widget_summary a,
+table.fxs_table a,
 .fxs_asset_label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2468,10 +2472,6 @@ fieldset[disabled] .fxs_dismissQuery {
   font-size: 11px;
   color: #8b8c91;
 }
-.fxs_widget_summary table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 .fxs_widget_summary .fxs_widget_divider_module ol,
 .fxs_widget_summary .fxs_widget_divider_module ul {
   list-style: none;
@@ -2481,4 +2481,15 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_summary .fxs_widget_divider_module li {
   margin: 0;
   padding: 0;
+}
+table.fxs_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: 'Fira Sans', Tahoma, sans-serif;
+}
+table.fxs_table * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizelegibility;
 }
