@@ -287,15 +287,25 @@
   height: @avatar_l;
 }
 
-// Contributor boxes
+///////////////////////////////////////////////////////////////
+////////////////////// Author Boxes ///////////////////////
 .fxs_contributorBox { white-space: nowrap; }
 .fxs_contributorBox, .fxs_article_author {
   display: inline-block;
   vertical-align: middle;
 }
-
-.fxs_contributorBox_nano {
+.fxs_contributorBox {
   font-size: @txt_size_small;
+  line-height: @txt_lineheight_small;
+}
+
+.fxs_author_description {
+  display: block;
+  font-size: @txt_size_xsmall;
+}
+
+// Author box nano
+.fxs_contributorBox_nano {
   .fxs_avatar_circleImage_s {
     margin-right: 0.25rem;
     display: none;
@@ -305,7 +315,14 @@
     .fxs_avatar_circleImage_s { display: inline-block; }
     .fxs_article_author { white-space: nowrap; }
   }
+}
 
+// Author box small
+.fxs_contributorBox_small {
+  .fxs_avatar_circleImage_s {
+    margin-right: 0.25rem;
+    display: inline-block;
+  }
 }
 
 // AUTHOR FEATURED QUOTES
