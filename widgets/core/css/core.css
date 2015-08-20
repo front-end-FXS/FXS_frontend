@@ -2412,6 +2412,50 @@ fieldset[disabled] .fxs_dismissQuery {
 .tab-content > .active {
   display: block;
 }
+.fxs_modal_close {
+  position: fixed;
+  top: 45px;
+  right: 1rem;
+  margin-right: 0;
+  margin-top: 0;
+  border: none;
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_modal_close {
+    margin-right: 1rem;
+    display: block;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_modal_wrap {
+    margin-top: 45px;
+  }
+}
+.fxs_modal_content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 680px) {
+  .fxs_modal_content {
+    margin: 45px auto;
+  }
+}
+.fxs_modal_add {
+  background-color: #ccc;
+  margin-bottom: 0.5rem!important;
+}
+.modal {
+  padding-left: 0!important;
+}
+@media (min-width: 680px) {
+  .modal-backdrop {
+    top: 45px !important;
+  }
+}
+.fxs_blur {
+  -webkit-filter: blur(5px) grayscale(50%);
+}
 .fxs_widget_summary {
   font-family: 'Fira Sans', Tahoma, sans-serif;
   font-size: 16px;
