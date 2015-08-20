@@ -2412,24 +2412,29 @@ fieldset[disabled] .fxs_dismissQuery {
 .tab-content > .active {
   display: block;
 }
+.modal {
+  top: 45px;
+  padding: 3px!important;
+}
+@media (min-width: 1024px) {
+  .modal {
+    padding: 0 1rem;
+  }
+}
+.modal-backdrop {
+  top: 45px;
+}
 .fxs_modal_close {
   position: fixed;
   top: 45px;
   right: 1rem;
-  margin-right: 0;
-  margin-top: 0;
-  border: none;
+  margin: 0;
   display: none;
+  z-index: 9999;
 }
 @media (min-width: 680px) {
   .fxs_modal_close {
-    margin-right: 1rem;
-    display: block;
-  }
-}
-@media (min-width: 680px) {
-  .fxs_modal_wrap {
-    margin-top: 45px;
+    display: inline-block;
   }
 }
 .fxs_modal_content {
@@ -2441,17 +2446,9 @@ fieldset[disabled] .fxs_dismissQuery {
     margin: 45px auto;
   }
 }
-.fxs_modal_add {
-  background-color: #ccc;
-  margin-bottom: 0.5rem!important;
-}
-.modal {
-  padding-left: 0!important;
-}
-@media (min-width: 680px) {
-  .modal-backdrop {
-    top: 45px !important;
-  }
+.fxs_modal_add.fxs_leaderboard {
+  background-color: #dcddde;
+  margin-bottom: 0.5rem;
 }
 .fxs_blur {
   -webkit-filter: blur(5px) grayscale(50%);
