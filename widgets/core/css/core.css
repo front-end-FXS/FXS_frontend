@@ -2416,13 +2416,13 @@ fieldset[disabled] .fxs_dismissQuery {
 .tab-content > .active {
   display: block;
 }
-.modal {
+.fxs_modal_wrap {
   top: 45px;
   padding: 3px!important;
 }
-@media (min-width: 1024px) {
-  .modal {
-    padding: 0 1rem;
+@media (min-width: 680px) {
+  .fxs_modal_wrap {
+    padding: 0 1rem!important;
   }
 }
 .modal-backdrop {
@@ -2448,19 +2448,25 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 @media (min-width: 680px) {
   .fxs_modal_content {
-    margin: 45px auto;
+    margin: 45px auto 0;
   }
 }
 .fxs_modal_content .fxs_footer {
-  margin-left: 0!important;
+  margin-left: 0;
   width: 100%;
+}
+.fxs_modal_content .fxs_detail {
+  margin-bottom: 0;
 }
 .fxs_modal_add.fxs_leaderboard {
   background-color: #dcddde;
   margin-bottom: 0.5rem;
 }
 .fxs_blur {
-  -webkit-filter: blur(5px) grayscale(50%);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 .fxs_widget_summary {
   font-family: 'Fira Sans', Tahoma, sans-serif;

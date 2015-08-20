@@ -971,35 +971,35 @@
 // modal
 
 // overwrited styles
-.modal{
+.fxs_modal_wrap {
   top: @main_header_height;
   padding: 3px!important;
-  @media(min-width:@screen-m){ padding: 0 1rem; }
+  @media(min-width:@screen-s){ padding: 0 1rem!important; }
 }
-.modal-backdrop{ top: @main_header_height; }
+
+.modal-backdrop { top: @main_header_height; }
 
 .fxs_modal_close{
   position:fixed; 
   top: @main_header_height;
   right: 1rem;
   margin: 0;
-  display:none;
+  display: none;
   z-index: 9999;
   @media(min-width:@screen-s){ display: inline-block; }
 }
 
 .fxs_modal_content{
   position:relative;
-  max-width:1000px;
-  margin:0 auto;
-  @media(min-width:@screen-s){
-      margin:@main_header_height auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  @media(min-width:@screen-s){ margin: @main_header_height auto 0; }
+ // overwrited rules
+  .fxs_footer{
+    margin-left: 0;
+    width: 100%;
   }
-   // overwrited rules
-    .fxs_footer{
-        margin-left:0!important;
-        width:100%;
-    }
+  .fxs_detail { margin-bottom: 0; }
 }
 
 .fxs_modal_add.fxs_leaderboard {
@@ -1008,5 +1008,5 @@
 }
 
 // blur modal effect
-.fxs_blur { -webkit-filter: blur(5px) grayscale(50%); }
+.fxs_blur { .blur(5px); }
 //

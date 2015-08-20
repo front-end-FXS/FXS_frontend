@@ -49,7 +49,7 @@ tbody.collapse.in {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1111;
+  z-index: 1140;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -2943,13 +2943,13 @@ fieldset[disabled] .fxs_dismissQuery {
 .tab-content > .active {
   display: block;
 }
-.modal {
+.fxs_modal_wrap {
   top: 45px;
   padding: 3px!important;
 }
-@media (min-width: 1024px) {
-  .modal {
-    padding: 0 1rem;
+@media (min-width: 680px) {
+  .fxs_modal_wrap {
+    padding: 0 1rem!important;
   }
 }
 .modal-backdrop {
@@ -2975,19 +2975,25 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 @media (min-width: 680px) {
   .fxs_modal_content {
-    margin: 45px auto;
+    margin: 45px auto 0;
   }
 }
 .fxs_modal_content .fxs_footer {
-  margin-left: 0!important;
+  margin-left: 0;
   width: 100%;
+}
+.fxs_modal_content .fxs_detail {
+  margin-bottom: 0;
 }
 .fxs_modal_add.fxs_leaderboard {
   background-color: #dcddde;
   margin-bottom: 0.5rem;
 }
 .fxs_blur {
-  -webkit-filter: blur(5px) grayscale(50%);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 .fxs_header {
   background-color: #2a3545;
