@@ -989,11 +989,17 @@
 }
 
 .fxs_modal_content{
+  position:relative;
   max-width:1000px;
   margin:0 auto;
-   @media(min-width:@screen-s){
+  @media(min-width:@screen-s){
       margin:@main_header_height auto;
   }
+   // overwrited rules
+    .fxs_footer{
+        margin-left:0!important;
+        width:100%;
+    }
 }
 
 .fxs_modal_add.fxs_leaderboard {
