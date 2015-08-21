@@ -89,7 +89,8 @@
     &.active,
     .active > &.fxs_btn_dd,
     &:active, &:focus {
-      background-color: fade(@dark_1_clr, 15%);
+      background-color: @btn-bg-color;
+      color: @lightest_clr;
     }
     &.disabled, &[disabled], fieldset[disabled] & {
       &, &:hover, &:focus,
@@ -289,4 +290,25 @@
   }
 }
 
-//
+/////////////////////////////////////////////////////////////////////////
+////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
+//////////////////// (custom bootstrap mixins) ////////////////////////
+
+.reset-text() {
+  font-family: @txt_fontfamily;
+  // We deliberately do NOT reset font-size.
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: @txt_lineheight_reset;
+  text-align: left; // Fallback for where `start` is not supported
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}

@@ -304,12 +304,12 @@
                             <address class="fxs_contributorBox fxs_contributorBox_nano">
                                 <div class="fxs_avatar_circleImage_s">
                                     <a href="path/to/author" title="NOMBRE DEL AUTOR">
-                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                        <img src="http://www.ps4-magazin.de/wcf/images/avatars/avatar-3974.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
                                     </a>
                                 </div>
                                 <span class="fxs_article_author">
                                     <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                        Admiral Markets
+                                        Ezio Auditore da Firenze
                                     </a>
                                 </span>
                                 <script type="application/ld+json">
@@ -331,7 +331,7 @@
                                 </div>
                                 <span class="fxs_article_author">
                                     <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                        Admiral Markets
+                                        José Manuel Figueroa
                                     </a>
                                     <span class="fxs_author_description">
                                         Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
@@ -342,6 +342,59 @@
                                 </script>
                             </address>
                             <!-- /Author box small -->
+
+                        </div>
+
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_subtitle">Author box Medium</h3>
+
+                            <!-- Author box medium -->
+                            <address class="fxs_contributorBox fxs_contributorBox_medium">
+                                <div class="fxs_avatar_circleImage_s">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                    </a>
+                                </div>
+                                <span class="fxs_article_author">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                        Justin Timberlake
+                                    </a>
+                                    <span class="fxs_author_description">
+                                        Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
+                                    </span>
+                                </span>
+                                <script type="application/ld+json">
+                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                </script>
+                            </address>
+                            <!-- /Author box medium -->
+
+                        </div>
+
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_subtitle">Author box Big</h3>
+
+                            <!-- Author box medium -->
+                            <address class="fxs_contributorBox fxs_contributorBox_big">
+                                <div class="fxs_avatar_circleImage_s">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                        <img src="http://img.timeinc.net/time/daily/2009/0911/360_wmanny_1116.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                    </a>
+                                </div>
+                                <span class="fxs_article_author">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                        Manny Pacquiao
+                                    </a>
+                                    <span class="fxs_author_description">
+                                        Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
+                                    </span>
+                                    <a id="my_author" class="fxs_btn fxs_btn_line fxs_btn_small" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</a>
+                                </span>
+                                <script type="application/ld+json">
+                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                </script>
+                            </address>
+                            <!-- /Author box medium -->
 
                         </div>
                         
@@ -1007,6 +1060,19 @@
     <script src="../website-js/classie.js"></script>
     <script src="../website-js/jquery.typeahead.min.js"></script>
     <script src="../website-js/site.js"></script>
+
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        $(function() {                       //run when the DOM is ready
+          $("#my_author").click(function() {  //use a class, since your ID gets mangled
+            $(this).toggleClass("active");      //add the class to the clicked element
+          });
+        });
+
+    </script>
 
 </body>
 

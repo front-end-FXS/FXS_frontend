@@ -264,12 +264,18 @@
 .fxs_floatingMedia_textBody { overflow: hidden; }
 
 // AVATAR IMAGES
-.fxs_avatar_circleImage, .fxs_avatar_circleImage_s,
-.fxs_avatar_circleImage_m, .fxs_avatar_circleImage_l {
+.fxs_avatar_circleImage,
+.fxs_avatar_circleImage_s,
+.fxs_avatar_circleImage_m,
+.fxs_avatar_circleImage_l {
   .fxs_aspectRatio_media(1, 1);
   display: inline-block;
 	border-radius: 50%;
 	vertical-align: middle;
+  img {
+    min-height: 100%;
+    width: inherit;
+  }
 }
 
 .fxs_avatar_circleImage_s {
@@ -289,7 +295,6 @@
 
 ///////////////////////////////////////////////////////////////
 ////////////////////// Author Boxes ///////////////////////
-.fxs_contributorBox { white-space: nowrap; }
 .fxs_contributorBox, .fxs_article_author {
   display: inline-block;
   vertical-align: middle;
@@ -297,6 +302,8 @@
 .fxs_contributorBox {
   font-size: @txt_size_small;
   line-height: @txt_lineheight_small;
+  white-space: nowrap;
+  .fxs_avatar_circleImage_s { margin-right: 0.25rem; }
 }
 
 .fxs_author_description {
@@ -306,10 +313,7 @@
 
 // Author box nano
 .fxs_contributorBox_nano {
-  .fxs_avatar_circleImage_s {
-    margin-right: 0.25rem;
-    display: none;
-  }
+  .fxs_avatar_circleImage_s { display: none; }
   .fxs_article_author { white-space: normal; }
   @media (min-width: @screen-s) {
     .fxs_avatar_circleImage_s { display: inline-block; }
@@ -317,17 +321,41 @@
   }
 }
 
-// Author box small
-.fxs_contributorBox_small {
-  .fxs_avatar_circleImage_s {
-    margin-right: 0.25rem;
-    display: inline-block;
+// Author box small : Default styles
+
+// Author box medium
+.fxs_contributorBox_medium {
+   @media (min-width: @screen-s) {
+    .fxs_avatar_circleImage_s {
+      width: @avatar_m;
+      height: @avatar_m;
+    }
+  }
+}
+
+// Medium & big txt
+.fxs_contributorBox_medium, .fxs_contributorBox_big {
+   @media (min-width: @screen-s) {
+    font-size: @txt_defaultsize_rem;
+  }
+}
+
+// Author box medium
+.fxs_contributorBox_big {
+  .fxs_btn { display: none; }
+   @media (min-width: @screen-s) {
+    .fxs_avatar_circleImage_s {
+      width: @avatar_l;
+      height: @avatar_l;
+    }
+    .fxs_btn { display: inline-block; }
   }
 }
 
 // AUTHOR FEATURED QUOTES
 .fxs_featured_quote {
   position: relative;
+  font-weight: @txt_fontweight_light;
   max-width: 680px;
   margin: 1rem auto;
   padding-left: @avatar_s + 40px;

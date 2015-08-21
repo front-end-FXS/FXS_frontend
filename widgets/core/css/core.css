@@ -1042,7 +1042,8 @@ fieldset[disabled] .fxs_btn_default.active {
 .active > .fxs_btn_default.fxs_btn_line.fxs_btn_dd,
 .fxs_btn_default.fxs_btn_line:active,
 .fxs_btn_default.fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.15);
+  background-color: #2f4b6f;
+  color: #ffffff;
 }
 .fxs_btn_default.fxs_btn_line.disabled,
 .fxs_btn_default.fxs_btn_line[disabled],
@@ -1113,7 +1114,8 @@ fieldset[disabled] .fxs_btn_cta.active {
 .active > .fxs_btn_cta.fxs_btn_line.fxs_btn_dd,
 .fxs_btn_cta.fxs_btn_line:active,
 .fxs_btn_cta.fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.15);
+  background-color: #e4871b;
+  color: #ffffff;
 }
 .fxs_btn_cta.fxs_btn_line.disabled,
 .fxs_btn_cta.fxs_btn_line[disabled],
@@ -1184,7 +1186,8 @@ fieldset[disabled] .fxs_btn_functional.active {
 .active > .fxs_btn_functional.fxs_btn_line.fxs_btn_dd,
 .fxs_btn_functional.fxs_btn_line:active,
 .fxs_btn_functional.fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.15);
+  background-color: #1b1c23;
+  color: #ffffff;
 }
 .fxs_btn_functional.fxs_btn_line.disabled,
 .fxs_btn_functional.fxs_btn_line[disabled],
@@ -1255,7 +1258,8 @@ fieldset[disabled] .fxs_btn_danger.active {
 .active > .fxs_btn_danger.fxs_btn_line.fxs_btn_dd,
 .fxs_btn_danger.fxs_btn_line:active,
 .fxs_btn_danger.fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.15);
+  background-color: #ce4735;
+  color: #ffffff;
 }
 .fxs_btn_danger.fxs_btn_line.disabled,
 .fxs_btn_danger.fxs_btn_line[disabled],
@@ -1326,7 +1330,8 @@ fieldset[disabled] .fxs_btn_line.active {
 .active > .fxs_btn_line.fxs_btn_line.fxs_btn_dd,
 .fxs_btn_line.fxs_btn_line:active,
 .fxs_btn_line.fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.15);
+  background-color: #1b1c23;
+  color: #ffffff;
 }
 .fxs_btn_line.fxs_btn_line.disabled,
 .fxs_btn_line.fxs_btn_line[disabled],
@@ -1427,7 +1432,8 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .fxs_pageSidebar .fxs_btn_line.fxs_btn_line:active,
 .fxs_btn_line.inverse.fxs_btn_line:focus,
 .fxs_pageSidebar .fxs_btn_line.fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.15);
+  background-color: #ffffff;
+  color: #ffffff;
 }
 .fxs_btn_line.inverse.fxs_btn_line.disabled,
 .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled,
@@ -1676,6 +1682,13 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   left: 0;
   top: 0;
 }
+.fxs_avatar_circleImage img,
+.fxs_avatar_circleImage_s img,
+.fxs_avatar_circleImage_m img,
+.fxs_avatar_circleImage_l img {
+  min-height: 100%;
+  width: inherit;
+}
 .fxs_avatar_circleImage_s {
   width: 35px;
   height: 35px;
@@ -1688,9 +1701,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   width: 75px;
   height: 75px;
 }
-.fxs_contributorBox {
-  white-space: nowrap;
-}
 .fxs_contributorBox,
 .fxs_article_author {
   display: inline-block;
@@ -1699,13 +1709,16 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
 .fxs_contributorBox {
   font-size: 0.88rem;
   line-height: 1.25rem;
+  white-space: nowrap;
+}
+.fxs_contributorBox .fxs_avatar_circleImage_s {
+  margin-right: 0.25rem;
 }
 .fxs_author_description {
   display: block;
   font-size: 0.75rem;
 }
 .fxs_contributorBox_nano .fxs_avatar_circleImage_s {
-  margin-right: 0.25rem;
   display: none;
 }
 .fxs_contributorBox_nano .fxs_article_author {
@@ -1719,12 +1732,33 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
     white-space: nowrap;
   }
 }
-.fxs_contributorBox_small .fxs_avatar_circleImage_s {
-  margin-right: 0.25rem;
-  display: inline-block;
+@media (min-width: 680px) {
+  .fxs_contributorBox_medium .fxs_avatar_circleImage_s {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_contributorBox_medium,
+  .fxs_contributorBox_big {
+    font-size: 1rem;
+  }
+}
+.fxs_contributorBox_big .fxs_btn {
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_contributorBox_big .fxs_avatar_circleImage_s {
+    width: 75px;
+    height: 75px;
+  }
+  .fxs_contributorBox_big .fxs_btn {
+    display: inline-block;
+  }
 }
 .fxs_featured_quote {
   position: relative;
+  font-weight: 300;
   max-width: 680px;
   margin: 1rem auto;
   padding-left: 75px;

@@ -79,8 +79,9 @@
 ////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
 //////////////////// (custom bootstrap vars) ///////////////////////
 
-// bootstrap modal vars
+@border-radius-base: 0;
 
+// Bootstrap modal vars //
 @modal-content-bg: @lightest_clr;
 @zindex-modal: 1140;
 @modal-content-fallback-border-color: 0;
@@ -95,10 +96,26 @@
 @modal-title-line-height: 0;
 @modal-inner-padding: 0;
 @modal-footer-border-color: 0;
-
 // media queries
 @screen-sm-min: @screen-s;
 @modal-md: auto;
 @modal-sm: auto;
 @screen-md-min: @screen-m;
 @modal-lg: auto;
+
+// Bootstrap tooltip //
+@zindex-tooltip: 1070;
+//== Tooltip styles
+//** Tooltip max width
+@tooltip-max-width: 200px;
+//** Tooltip text color
+@tooltip-color: @lightest_clr;
+//** Tooltip txt size
+@font-size-small: @txt_size_nano;
+//** Tooltip background color
+@tooltip-bg: @dark_1_clr;
+@tooltip-opacity: .85;
+//** Tooltip arrow width
+@tooltip-arrow-width: 5px;
+//** Tooltip arrow color
+@tooltip-arrow-color: @tooltip-bg;
