@@ -212,6 +212,31 @@
   }
 }
 
+// forecast week prediction Table 
+.fxs_forecast_week_table {
+    thead{
+        display:none;
+    }
+    tbody, thead, tfoot {
+        >tr >td, >tr >th {
+            &:not(:nth-child(-n+2)) { display: none; }
+            &:last-child { display: table-cell; }
+
+            @media (min-width: @screen-s){
+            &:nth-child(n+3):nth-child(-n+4) { display: table-cell; }
+            }
+        }
+    }
+    @media(min-width:@screen-s){
+        thead{
+            display: table-header-group;
+        }
+    }
+}
+.fa-comment{
+    color:@dark_2_clr;
+}
+
 // Reset & overrides C3 library
 .fxs_forecast_widget_multi {
   .c3-axis-x { display: none; }
