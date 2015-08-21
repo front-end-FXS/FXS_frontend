@@ -364,8 +364,8 @@
 ////////// CONTENT //////// 
 .fxs_contentView {
   padding: @base_module_size+3px 3px;
-  @media (min-width: @screen-m) { padding: @base_module_size 5px; }
-  @media (min-width: @screen-l) { padding: @base_module_size 1rem; }
+  @media (min-width: @screen-m) { padding: @base_module_size+16px 5px; }
+  @media (min-width: @screen-l) { padding: @base_module_size+16px 1rem; }
   .fxs_isParent_section & {
       display: none;
       @media (min-width: @screen-s) { display: block; }
@@ -399,7 +399,7 @@
 
 .fxs_leaderboard {
   display: none;
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   @media (min-width: @screen-s) { display: block; }
   @media (min-width: @screen-m) {
     max-width: @content_rail_width;
@@ -453,6 +453,17 @@
 }
 
 .fxs_content_adContainer { margin: 0 auto; }
+
+.fxs_sponsored_content_row {
+  padding: 0 0 1rem;
+  .fxs_sponsor_img {
+    margin-right: 0.5rem;
+    max-width: @base_module_size*2;
+    @media (min-width: @screen-l) { max-width: inherit; }
+  }
+  .fxs_headline_tiny { margin-bottom: 0; }
+  @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
+}
 
 /////////////////////////////////////////////////
 ///////////////// LIST VIEW ////////////////////
@@ -558,17 +569,8 @@
 
 // Floating media objects in listView
 .fxs_listView_squareImage {
-  .fxs_aspectRatio_media(1, 1);
-  display: inline-block;
-  float: left;
-  margin-right: 0.5rem;
-  width: 70px;
-  height: 70px;
+  &:extend(.fxs_squareImage all);
   margin-bottom: 0.25rem;
-  img{
-      height: 100%;
-      max-width: inherit;
-  }
 }
 
 ////////////////////////////////////////////
