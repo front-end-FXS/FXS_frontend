@@ -980,7 +980,12 @@
                                                 <span>1.1180</span>
                                                 <span class="fxs_widget_custom_bold fxs_txt_neutral">Sideways</span>
                                             </td>
-                                            <td><a href="#comment_1"><i class="fa fa-comment"></i></a></td>
+                                            <td>
+                                                <a href="#comment_1" data-toggle="tooltip" data-placement="bottom" title="Author's Comment">
+                                                    <i class="fa fa-comment"></i>
+                                                    <span class="fxs_skip">Author's comment</span>
+                                                </a>
+                                            </td>
                                            
                                         </tr>
                                         <tr>
@@ -1014,7 +1019,12 @@
                                                 <span>1.1180</span>
                                                 <span class="fxs_widget_custom_bold fxs_txt_neutral">Sideways</span>
                                             </td>
-                                            <td><a href="#comment_2"><i class="fa fa-comment"></i></a></td>
+                                            <td>
+                                                <a href="#comment_2" data-toggle="tooltip" data-placement="bottom" title="Author's Comment">
+                                                    <i class="fa fa-comment"></i>
+                                                    <span class="fxs_skip">Author's comment</span>
+                                                </a>
+                                            </td>
                                             
                                         </tr>
                                         <tr>
@@ -1082,7 +1092,12 @@
                                                 <span>1.1180</span>
                                                 <span class="fxs_widget_custom_bold fxs_txt_neutral">Sideways</span>
                                             </td>
-                                            <td><a href="#comment_3"><i class="fa fa-comment"></i></a></td>
+                                            <td>
+                                                <a href="#comment_3" data-toggle="tooltip" data-placement="bottom" title="Author's Comment">
+                                                    <i class="fa fa-comment"></i>
+                                                    <span class="fxs_skip">Author's comment</span>
+                                                </a>
+                                            </td>
                                           
                                         </tr>
                                         <tr>
@@ -1306,6 +1321,10 @@
             $('.modal').on('hide.bs.modal', function () {
                 $('.fxs_content_subnav, .fxs_content, .fxs_pageSidebar, .fxs_listView').removeClass('fxs_blur');
             })
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
 
 
         </script>
