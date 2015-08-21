@@ -2398,6 +2398,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
   .fxs_contributorBox_big .fxs_avatar_circleImage_s {
     width: 75px;
     height: 75px;
+    margin-right: 0.5rem;
   }
   .fxs_contributorBox_big .fxs_btn {
     display: inline-block;
@@ -3703,6 +3704,33 @@ height:calc(100% - 45px);
     margin: 0 auto 0.5rem;
   }
 }
+.fxs_tableRow {
+  display: table;
+  width: 100%;
+}
+.fxs_flex_col {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.fxs_flex_col.fxs_flex_ad_col {
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_flex_col {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .fxs_flex_col.fxs_flex_ad_col {
+    display: table-cell;
+    text-align: center;
+    min-width: 320px;
+  }
+}
+.fxs_content_adContainer {
+  margin: 0 auto;
+}
 .fxs_listView {
   width: 100%;
   height: 100%;
@@ -3940,10 +3968,10 @@ width:calc(100% - 320px);
   margin-right: -0.5rem;
 }
 .sf_1col_1_100 {
+  position: relative;
   min-height: 1px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  position: relative;
 }
 .sf_3cols_3_33,
 .sf_2cols_1_67,

@@ -432,6 +432,28 @@
   }
 }
 
+// Flexible cols
+.fxs_tableRow {
+  display: table;
+  width: 100%;
+}
+
+.fxs_flex_col {
+  .column-default-parameters();
+  &.fxs_flex_ad_col { display: none; }
+  @media (min-width: @screen-s) {
+    display: table-cell;
+    vertical-align: top;
+    &.fxs_flex_ad_col {
+      display: table-cell;
+      text-align: center;
+      min-width: @left_rail_space;
+    }
+  }
+}
+
+.fxs_content_adContainer { margin: 0 auto; }
+
 /////////////////////////////////////////////////
 ///////////////// LIST VIEW ////////////////////
 ///////////////////////////////////////////////
@@ -613,10 +635,7 @@
   .make-row();
 }
 .sf_1col_1_100 {
-  min-height: 1px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  position: relative;
+  .column-default-parameters();
 }
 
 .sf_3cols_3_33, .sf_2cols_1_67, .sf_2cols_2_33, .sf_2cols_1_75, .sf_2cols_1_25, .sf_2cols_2_50, .sf_4cols_4_25{
