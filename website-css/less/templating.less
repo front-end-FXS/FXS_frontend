@@ -144,7 +144,7 @@
     line-height: @base_module_size;
     text-transform: uppercase;
     font-size: @txt_size_xsmall;
-    padding: 0 1rem 0 13px;
+    padding: 0 1rem 0 1rem;
     white-space: nowrap;
     position: absolute;
     left: 0;
@@ -156,6 +156,18 @@
         &:hover{ text-decoration: none; }
     }
     @media (min-width: @screen-m) { display: none; }
+  }
+}
+
+.fxs_topics_nav {
+  display: none;
+  @media (min-width: @screen-m) {
+    display: inline-block;
+    height: @base_module_size;
+    line-height: @base_module_size;
+    margin-left: 5px;
+    padding: 0 1rem 0 1rem;
+    white-space: nowrap;
   }
 }
 
