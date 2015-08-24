@@ -375,9 +375,9 @@
 
 ////////// CONTENT //////// 
 .fxs_contentView {
-  padding: @base_module_size+3px 3px;
-  @media (min-width: @screen-m) { padding: @base_module_size+16px 5px; }
-  @media (min-width: @screen-l) { padding: @base_module_size+16px 1rem; }
+  padding: @main_header_height 3px;
+  @media (min-width: @screen-m) { padding: @main_header_height 5px; }
+  @media (min-width: @screen-l) { padding: @main_header_height 1rem; }
   .fxs_isParent_section & {
       display: none;
       @media (min-width: @screen-s) { display: block; }
@@ -446,8 +446,10 @@
 
 // Flexible cols
 .fxs_tableRow {
-  display: table;
-  width: 100%;
+  @media (min-width: @screen-s) {
+    display: table;
+    min-width: 100%;
+  }
 }
 
 .fxs_flex_col {
@@ -620,12 +622,15 @@
     }
   }    
   .fxs_dropdownBlock{
-      display:none;
-      position:absolute;
-      bottom:100%;
-      background-color:@lightest_clr;
-      font-size:@txt_size_nano;
-      padding:1rem;
+    display:none;
+    position:absolute;
+    bottom: 100%;
+    border-top: 1px solid @light_5_clr;
+    background-color: @lightest_clr;
+    font-size: @txt_size_nano;
+    padding: 1rem;
+    max-height: 240px;
+    overflow-y: auto;
   }
   .fxs_dropdownBlock.active{ display:block; }
   @media (min-width: @screen-m) {
