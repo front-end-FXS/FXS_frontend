@@ -1,0 +1,80 @@
+﻿body{
+     &.sfPageEditor{
+         // body
+        overflow:auto!important;
+
+        // sitefinity template
+        .sfPageContainer{
+            width:auto!important;
+        }
+
+        // sitefinity editor
+        div.k-window .k-window-titlebar{
+            margin-top:-16px!important;
+            cursor:move;
+        }
+        .k-window-content{
+            padding:20px;
+            button{
+                margin-top:20px;
+                height:30px;
+            }
+            select{
+                min-width:121px;
+                min-height:30px;
+            }
+        }
+        .modal-body .k-editor-widget .k-editor-toolbar > li:last-child, .modal-body .k-editor-widget .k-editor-toolbar > li:nth-last-child(2){
+            position:relative;
+            right:auto;
+            top:auto;
+        }
+        .custom-tool .glyphicon {
+            padding-top:0!important;
+        }
+        .modal-body .k-editor-widget .k-editor-toolbar {
+            padding: 0 30px 10px 30px;
+        }
+        .k-window{
+            img{
+                padding:10px 0 10px 0;
+            }
+            label,button{
+                display:block;
+            }
+            button{
+                margin-top:10px;
+            }
+            input[type="text"], select, input[type="number"]{
+                width:100%;
+                font-size:14px;
+            }
+            .sf_custom_refresh{
+                input[type="text"]{
+                    width:80%;
+                }
+            }
+            input[type="number"]{
+                border:1px solid #ccc;
+            }
+        }
+        .field-group{
+            padding-bottom:10px;
+        }
+
+        // fxstreet dashboard rules
+        .fxs_content{
+            margin-left:0;
+        }
+        .fxs_wrapper{
+            padding-top:0;
+            overflow:visible;
+            height:auto;
+        }
+        .fxs_footer{
+            display:none;
+        }
+
+    }
+}
+
