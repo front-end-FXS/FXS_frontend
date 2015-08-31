@@ -174,13 +174,10 @@
 }
 
 // ALERTS
-.fxs_alert {
-  &:extend(.fxs_wideContent_bordered all);
+.fxs_alert, .fxs_contextual_alert, .fxs_general_alert {
   .animation(grow-and-show 0.5s ease-in-out);
-  border-bottom: 5px solid @light_4_clr;
+  .reset-text();
   font-size: @txt_size_small;
-  line-height: @txt_lineheight_reset;
-  margin-bottom: 2rem;
   padding: 0.5rem;
   .fxs_alertText { margin-bottom: 0; }
   a {
@@ -189,6 +186,21 @@
   }
 }
 
+// Wide content alert
+.fxs_alert {
+  &:extend(.fxs_wideContent_bordered all);
+  .animation(grow-and-show 0.5s ease-in-out);
+  border-bottom: 5px solid @light_4_clr;
+  margin-bottom: 2rem;
+}
+
+// Contextual alert
+.fxs_contextual_alert {
+  &:extend(.fxs_clearfix all);
+  margin-bottom: 1rem;
+}
+
+// Alert variants
 .fxs_alert_featured, .fxs_alert_live  {
   .fxs_alert_variants(@dark_2_clr; @lightest_clr);
 }
