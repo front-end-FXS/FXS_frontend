@@ -233,9 +233,6 @@
 // fxstreet grid breakpoints
 @grid-columns: 12;
 @grid-gutter-width: 1rem;
-@grid-float-breakpoint-small: @screen-s;
-@grid-float-breakpoint-medium: @screen-m;
-@grid-float-breakpoint-large: @screen-l;
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
@@ -256,35 +253,35 @@
   padding-right: (@gutter / 2);
 }
 
-// Generate the small columns (default, from mobile)
+// Generate the x-small columns (inside swipe content in mobile)
 .make-sm-column(@columns) {
-  // Calculate width based on number of columns available
-  float: left;
   width: percentage((@columns / @grid-columns));
+  min-width: 140px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  letter-spacing: normal;
 }
 
-// Generate the small columns 768
+// Generate the default columns 680
 .make-md-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-small) {
+  @media (min-width: @screen-s) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the medium columns 1024
+// Generate the large columns 1024
 .make-lg-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint-medium) {
+  @media (min-width: @screen-m) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }
 }
 
-// Generate the extra large columns 1180
+// Generate the extra large columns 1100
 .make-xlg-column(@columns) {
-  // Calculate width based on number of columns available
-  @media (min-width:@grid-float-breakpoint-large) {
+  @media (min-width: @screen-l) {
     float: left;
     width: percentage((@columns / @grid-columns));
   }

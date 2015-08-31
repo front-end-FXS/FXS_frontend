@@ -829,15 +829,18 @@
   }
 }
 
+.fxs_relatedContentSlot_x3_cols,
+.fxs_relatedContentSlot_x4_cols {
+  .column-default-parameters();
+}
+
 .fxs_relatedContentSlot_x3_cols {
-  &:extend(.fxs_relatedContentSlot all);
   .make-sm-column(4); 
   .fxs_entryHeadline {
     &:extend(.fxs_headline_from_nano_to_small all);
   }
 }
 .fxs_relatedContentSlot_x4_cols {
-  &:extend(.fxs_relatedContentSlot all);
   .make-sm-column(3);
   .fxs_entryHeadline {
     &:extend(.fxs_headline_from_nano_to_tiny all);

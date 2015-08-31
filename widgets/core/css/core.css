@@ -617,20 +617,6 @@ width:calc(100% + 0.5rem);
     width: 100%;
   }
 }
-.fxs_relatedContentSlot,
-.fxs_relatedContentSlot_x3_cols,
-.fxs_relatedContentSlot_x4_cols {
-  position: relative;
-  min-height: 1px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  display: inline-block;
-  float: none!important;
-  min-width: 140px;
-  vertical-align: top;
-  white-space: normal;
-  letter-spacing: normal;
-}
 button,
 input {
   border: 0;
@@ -2349,13 +2335,28 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_relatedItem:hover .fxs_entryFeatured_img {
   opacity: 0.8;
 }
+.fxs_relatedContentSlot_x3_cols,
+.fxs_relatedContentSlot_x4_cols {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .fxs_relatedContentSlot_x3_cols {
-  float: left;
   width: 33.33333333%;
+  min-width: 140px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  letter-spacing: normal;
 }
 .fxs_relatedContentSlot_x4_cols {
-  float: left;
   width: 25%;
+  min-width: 140px;
+  display: inline-block;
+  vertical-align: top;
+  white-space: normal;
+  letter-spacing: normal;
 }
 .fxs_widget_divider_module {
   padding-bottom: 0.5rem;

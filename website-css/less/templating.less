@@ -444,41 +444,6 @@
   }
 }
 
-// Flexible cols
-.fxs_tableRow {
-  @media (min-width: @screen-s) {
-    display: table;
-    min-width: 100%;
-  }
-}
-
-.fxs_flex_col {
-  .column-default-parameters();
-  &.fxs_flex_ad_col { display: none; }
-  @media (min-width: @screen-s) {
-    display: table-cell;
-    vertical-align: top;
-    &.fxs_flex_ad_col {
-      display: table-cell;
-      min-width: @left_rail_space;
-    }
-  }
-}
-
-.fxs_content_adContainer { margin: 0 auto; }
-
-.fxs_sponsored_content_row {
-  padding: 0 0 1rem;
-  clear: both;
-  .fxs_sponsor_img {
-    margin-right: 0.5rem;
-    max-width: @base_module_size*2;
-    @media (min-width: @screen-l) { max-width: inherit; }
-  }
-  .fxs_headline_tiny { margin-bottom: 0; }
-  @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
-}
-
 /////////////////////////////////////////////////
 ///////////////// LIST VIEW ////////////////////
 ///////////////////////////////////////////////
@@ -589,6 +554,7 @@
 
 ////////////////////////////////////////////
 ///////////////// FOOTER //////////////////
+//////////////////////////////////////////
 
 .fxs_footer {
   &:extend(.fxs_pageSidebar_transition);
@@ -647,7 +613,47 @@
   }
 }
 
-// custom sitefinity cols by pablo
+///////////////////////////////////////////////////////////
+/////////////// Layouts grid system //////////////////////
+/////////////////////////////////////////////////////////
+
+/////////////// Flexible cols ///////////////////
+.fxs_tableRow {
+  @media (min-width: @screen-s) {
+    display: table;
+    min-width: 100%;
+  }
+}
+
+.fxs_flex_col {
+  .column-default-parameters();
+  &.fxs_flex_ad_col { display: none; }
+  @media (min-width: @screen-s) {
+    display: table-cell;
+    vertical-align: top;
+    &.fxs_flex_ad_col {
+      display: table-cell;
+      min-width: @left_rail_space;
+    }
+  }
+}
+
+.fxs_content_adContainer { margin: 0 auto; }
+
+.fxs_sponsored_content_row {
+  padding: 0 0 1rem;
+  clear: both;
+  .fxs_sponsor_img {
+    margin-right: 0.5rem;
+    max-width: @base_module_size*2;
+    @media (min-width: @screen-l) { max-width: inherit; }
+  }
+  .fxs_headline_tiny { margin-bottom: 0; }
+  @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
+}
+
+
+/////////////// Custom Sitefinity cols ///////////////////
 
 // 12 columns 
 .sf_cols{
@@ -674,12 +680,10 @@
 }
 /* 2 x 75% - 25% */
 .sf_2cols_1_75{
-  .make-xlg-column(9);
+  .make-md-column(9);
 }
 .sf_2cols_1_25{
-
-  .make-xlg-column(3); // ad
-
+  .make-md-column(3); // ad
 }
 /* 2 x 50% */
 .sf_2cols_2_50{
@@ -689,15 +693,8 @@
 .sf_4cols_4_25{
   .make-md-column(3);
 }
-// special responsive rules
-.sf_disable_cols{
-    display:none;
-    @media (min-width: @grid-float-breakpoint-large){
-        display:block;
-    }
-}
 
-/////////////////////////STYCKY/////////////////////////////
+///////////////////////// STYCKY /////////////////////////////
 // .stickem-container{ position: relative; }
 // .stickit{
 //     position: fixed;
