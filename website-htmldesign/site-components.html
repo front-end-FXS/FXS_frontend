@@ -24,9 +24,9 @@
                 <li><a href="#atoms" title="">Atoms</a></li>
                 <li><a href="" title="">Molecules</a></li>
                 <li><a href="" title="">Organisms</a></li>
-                <li><a href="" title="">Widgets</a></li>
                 <li><a href="" title="">Templates</a></li>
                 <li><a href="" title="">Pages</a></li>
+                <li><a href="" title="">Widgets</a></li>
             </ul>
         </nav>
         <!-- /Main-nav -->
@@ -43,9 +43,9 @@
                     <li><a href="#atoms" title="">Atoms</a></li>
                     <li><a href="" title="">Molecules</a></li>
                     <li><a href="" title="">Organisms</a></li>
-                    <li><a href="" title="">Widgets</a></li>
                     <li><a href="" title="">Templates</a></li>
                     <li><a href="" title="">Pages</a></li>
+                    <li><a href="" title="">Widgets</a></li>
                 </ul>
             </nav>
             <!-- /Main-nav -->
@@ -177,11 +177,11 @@
                         Intro
                     </h2>
                     <div class="fxs_article_body">
-                        <p>This guide lists the components of <strong>FXStreet's</strong> main website (include variations in other languages).</p>
+                        <p>This guide lists the components of <strong>FXStreet's</strong> main website.</p>
                         <p>The project is built with <a href="http://lesscss.org/" target="_blank">LESS</a> and compiled into one single CSS file for the main site.</p>
-                        <p>Aside from the custom CSS framework built for the site, we also incorporate vendor components from <a href="http://getbootstrap.com/" target="_blank">Bootstrap v3.3.5</a>, LESS mixins from <a href="http://lesshat.madebysource.com/" target="_blank">Less Hat</a> and icons from <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Fontawesome</a>.</p>
+                        <p>Aside from the custom LESS files, we also incorporate vendor components from <a href="http://getbootstrap.com/" target="_blank">Bootstrap v3.3.5</a>, LESS mixins from <a href="http://lesshat.madebysource.com/" target="_blank">Less Hat</a> and icons from <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Fontawesome</a>.</p>
                         <p>In order to get started, you have to <strong>know the structure of the project</strong>, the LESS files and the compiled CSS files</p>
-                        <div class="fxs_marginBase_top fxs_marginBase_bottom">
+                        <div class="fxs_marginBase_bottom">
                             <a class="fxs_btn fxs_btn_default" href="https://github.com/PowellGuaglioneFXS/FXS_frontend.git" target="_blank">View the GitHub Project</a>
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                     </h2>
                     <div class="fxs_article_body">
                         <p>The components are divided with the <a href="http://patternlab.io/about.html" target="_blank">Atomic design</a> aproach.</p>
-                        <p>In order to ensure mantainance and scalability, each group of components are divided into different LESS files so we can import all into the final <strong>"fxs_screen.min.css"</strong> or use only the needed components in order to build third partie widgets.</p>
+                        <p>In order to ensure mantainance and scalability, each group of components are divided into different LESS files to import all into the final <strong>"fxs_screen.min.css"</strong> or use it separately in order to build third partie widgets.</p>
 
                         <h3 class="fxs_subtitle">Folder's structure</h3>
 
@@ -213,15 +213,33 @@
                                     <li>
                                         <strong>less:</strong> Less base styles & components folder
                                         <ul>
-                                            <li>vars.less</li>
-                                            <li>mixins.less</li>
-                                            <li>reset.less</li>
-                                            <li>base.less</li>
-                                            <li>forms.less</li>
-                                            <li>components.less</li>
-                                            <li>templating.less</li>
-                                            <li>featured-entries.less</li>
-                                            <li>post.less</li>
+                                            <li>
+                                                <strong>vars.less:</strong> All custom LESS variables (color, typo, dimensions, etc) and vendor vars overrides (bottom of file).
+                                            </li>
+                                            <li>
+                                                <strong>mixins.less:</strong> All custom mixins and vendor mixins overrides (bottom of file). <span class="fxs_txt_danger">Don't ad any output class in this file, <strong>just mixins</strong>.</span>
+                                            </li>
+                                            <li>
+                                                <strong>reset.less:</strong> HTML normalize fixes (use it with caution: add styles to a tag may cause unexpected results).
+                                            </li>
+                                            <li>
+                                                <strong>base.less:</strong> Basic text and single components styles: <strong>The atoms</strong>.
+                                            </li>
+                                            <li>
+                                                <strong>forms.less:</strong> Basic forms styles: form atoms
+                                            </li>
+                                            <li>
+                                                <strong>components.less:</strong> Complex objects, group of atoms: <strong>The molecules and organisms</strong>.
+                                            </li>
+                                            <li>
+                                                <strong>templating.less:</strong> Website layout, grid system, columns, etc.
+                                            </li>
+                                            <li>
+                                                <strong>featured-entries.less:</strong> Post entrie highlights for homes: news, analysis, video, education, ...
+                                            </li>
+                                            <li>
+                                                <strong>post.less:</strong> Post and final detail pages styles.
+                                            </li>
                                             <li>
                                                 <strong>vendor:</strong> Bootstrap LESS components, lesshat, all external plugin styles 
                                                 <p>
@@ -232,30 +250,40 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>website-font</li>
-                            <li>website-htmldesign</li>
-                            <li>website-img</li>
-                            <li>website-js</li>
                             <li>
-                                widgets
+                                <strong>website-font:</strong> Font awesome assets, other icon fonts.
+                                <div class="fxs_contextual_alert fxs_alert_info">
+                                    <p class="fxs_alertText">The main font of the website is "Fira Sans" and is imported via Google fonts (head)</p>
+                                </div>
+                            </li>
+                            <li><strong>website-htmldesign:</strong> Static HTML templates</li>
+                            <li><strong>website-img:</strong> Global site images</li>
+                            <li><strong>website-js:</strong> All js assets for the general site</li>
+                            <li>
+                                <strong>widgets:</strong> Assets and plain examples HTML (not layout) for each widget.
                                 <ul>
                                     <li>
-                                        core
+                                        <strong>core:</strong> The general assets that works for all widgets.
                                         <ul>
-                                            <li>css</li>
-                                            <li>js</li>
-                                            <li>website-font</li>
+                                            <li><strong>css:</strong> core.less => core.min.css</li>
+                                            <li><strong>js:</strong> general js: Bootstrap, jQuery and c3 (charts library).</li>
+                                            <li><strong>website-font:</strong> Font awesome</li>
                                         </ul>
                                     </li>
                                     <li>
-                                        widget
+                                        <strong>widget:</strong> Spescific widget assets
                                         <ul>
-                                            <li>css</li>
+                                            <li>
+                                                <strong>css:</strong> widget.less => widget.min.css
+                                                <div class="fxs_contextual_alert fxs_alert_info">
+                                                    <p class="fxs_alertText">This LESS will be imported from "fxs_screen.less" in order to have the same CSS. Avoid duplicity!.</p>
+                                                </div>
+                                            </li>
                                             <li>widget-example.html</li>
                                         </ul>
                                     </li>
                                     <li>
-                                        widgetmultiasset
+                                        <strong>widgetmultiasset:</strong> The multiasset version of each widget, the assets are called from the single asset widget.
                                         <ul>
                                             <li>widgetmultiasset-example.html</li>
                                         </ul>
@@ -277,7 +305,7 @@
 
                         <div class="fxs_contextual_alert fxs_alert_info">
                             <span class="fxs_alertLabel">Heads Up 3!</span>
-                            <p class="fxs_alertText">If the CMS needs style adjustments, then edit and (excepcionally) compile "fxs_sf_dashboard.less" => "fxs_sf_dashboard.min.css"</p>
+                            <p class="fxs_alertText">If the CMS needs style adjustments, then edit and compile "fxs_sf_dashboard.less" => "fxs_sf_dashboard.min.css"</p>
                         </div>
 
                     </div>
@@ -306,37 +334,315 @@
                 <section class="fxs_detail">
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
+                            Colors
+                        </h2>
+                        <div class="fxs_relatedContent_holder">
+                            <h3 class="fxs_helperLabel_title">Main colors</h3>
+                            <ul class="fxs_swipeContent_slider">
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #2A3646; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@corp_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#2A3646</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #304C70; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@brand_highlight_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#304C70</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #E4871B; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@highlight_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#E4871B</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fxs_relatedContent_holder">
+                            <h3 class="fxs_helperLabel_title">Grayscale dark</h3>
+                            <ul class="fxs_swipeContent_slider">
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #1B1C23; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@dark_1_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#1B1C23</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #25252B; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@dark_2_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#25252B</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #2F2F33; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@dark_3_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#2F2F33</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #49494F; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@dark_4_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#49494F</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fxs_relatedContent_holder">
+                            <h3 class="fxs_helperLabel_title">Grayscale light</h3>
+                            <ul class="fxs_swipeContent_slider">
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #8C8D91; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@light_1_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#8C8D91</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #A3A3A8; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@light_2_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#A3A3A8</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #DDDEDF; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@light_3_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#DDDEDF</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #F0F0F1; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@light_4_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#F0F0F1</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #F8F8F8; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@light_5_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#F8F8F8</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="fxs_relatedContent_holder">
+                            <h3 class="fxs_helperLabel_title">Feedback & support colors</h3>
+                            <ul class="fxs_swipeContent_slider">
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #338473; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@success_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#338473</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #CF4836; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@error_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#CF4836</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #FAEB4A; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@warning_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#FAEB4A</span>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x4_cols">
+                                    <span style="background: #58A3DD; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span class="fxs_label">@info_clr</span>
+                                    <br>
+                                    <span class="fxs_label">#58A3DD</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="fxs_divider_wide">
+                    </div>
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Plain Text
+                        </h2>
+
+                        <!-- Text large -->
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">.fxs_entryPlain_txt_large</h3>
+                            <div class="fxs_entryPlain_txt_large">
+                                <p>Following a short-lived recovery, EUR/USD came <em>under renewed</em> pressure and fell to fresh 14-month lows after <strong>Draghi’s speech</strong> before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.</p>
+                                
+                                <ul>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                </ul>
+
+                                <ol>
+                                    <li>Nunber List item</li>
+                                    <li>Nunber List item</li>
+                                </ol>
+
+                                <h2>I'm an H2</h2>
+                                <h3>I'm an H3</h3>
+                                <h4>I'm an H4</h4>
+
+                            </div>
+                        </div>
+                        <!-- /Text large -->
+
+                        <!-- Text default -->
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">.fxs_entryPlain_txt</h3>
+                            <div class="fxs_entryPlain_txt">
+                                <p>Following a short-lived recovery, EUR/USD came <em>under renewed</em> pressure and fell to fresh 14-month lows after <strong>Draghi’s speech</strong> before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.</p>
+
+                                <ul>
+                                    <li>List item</li>
+                                    <li>List item</li>
+                                </ul>
+
+                                <ol>
+                                    <li>Nunber List item</li>
+                                    <li>Nunber List item</li>
+                                </ol>
+
+                                <h2>I'm an H2</h2>
+                                <h3>I'm an H3</h3>
+                                <h4>I'm an H4</h4>
+
+                            </div>
+                        </div>
+                        <!-- /Text default -->
+
+                        <!-- Quote default -->
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Quote default</h3>
+                            <blockquote>
+                                <p>
+                                    Luke, you can destroy the Emperor. He has foreseen this. It is your destiny. Join me, and together we can rule the galaxy as father and son.
+                                </p>
+                            </blockquote>
+
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Quote with citation</h3>
+                            <blockquote>
+                                <p>
+                                    I know you're out there. I can feel you now. I know that you're afraid... you're afraid of us. You're afraid of change. I don't know the future. I didn't come here to tell you how this is going to end. I came here to tell you how it's going to begin.
+                                </p>
+                                <footer>Neo in <cite title="Source Title"><a href="http://www.imdb.com/title/tt0133093/?ref_=fn_al_tt_1" target="_blank">The Matrix</a></cite></footer>
+                            </blockquote>
+                        </div>
+                        <!-- /Quote default -->
+
+                        <!-- small tag -->
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Small</h3>
+                            <small>©2015 "FXStreet" All Rights Reserved</small>
+                        </div>
+                        <!-- /small tag -->
+
+                        <!-- links -->
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Links</h3>
+                            <a href="#">Link default</a>
+                            <a class="fxs_mutedLink" href="#">Link muted</a>
+                        </div>
+                        <!-- /links -->
+
+                        <hr class="fxs_divider_wide">
+                    </div>
+
+                    <div class="fxs_contextual_alert fxs_alert_info">
+                        <span class="fxs_alertLabel">Skip text</span>
+                        <p class="fxs_alertText">Visually hidden text yet accessible for <abbr title="Asistive Technology">AT</abbr>: <code>&lt;span class="fxs_skip"&gt;Descriptive text&lt;/span&gt;</code>. Used for hidden labels, icon buttons and the "Skip to main content" link (hit Tab and you'll see it). Never rely comprenhension on standalone icons.</p>
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
                             Headlines
                         </h2>
                         <div class="fxs_clearfix"></div>
                         <h2 class="fxs_headline_large">Headline large - for main titles in news</h2>
                         <h2 class="fxs_headline_medium">Headline Medium - for second level news</h2>
                         <h2 class="fxs_headline_small">Headline Small - for third level news</h2>
-                        <h2 class="fxs_headline_tiny">Headline Tiny - for related news</h2>
+                        <h2 class="fxs_headline_tiny">Headline Tiny - overall levels</h2>
+                        <h2 class="fxs_headline_from_nano_to_small">Headline from nano to small - overall levels</h2>
+                        <h2 class="fxs_headline_from_nano_to_tiny">Headline from nano to Tiny - overall levels</h2>
                         <hr class="fxs_divider_wide">
                     </div>
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
-                            Subtitles
+                            Page Headers
                         </h2>
-                        <div class="fxs_clearfix"></div>
+                        
+                        <!-- Main section header -->
+                        <header class="fxs_sectionTitle">
+                            <h1 class="fxs_sectionTitle_header">Main section header H1</h1>
+                            <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                                <div class="fxs_overflowOptions">
+                                    <span class="fxs_btn_icon" title="Share options"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                                    <ul class="fxs_btnGroup_dropdownList">
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                        </li>
+                                        <!--
+                                        -->
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </header>
+                        <!-- /Main section header -->
+
+                        <!-- Subheader -->
                         <h2 class="fxs_subsectionTitle">
-                            Subsection title
+                            Subheader section
                         </h2>
+                        <!-- /Subheader -->
+
                         <div class="fxs_clearfix"></div>
+
+                        <!-- Subtitle section -->
                         <h3 class="fxs_subtitle">
-                            Subtitle for related content
+                            Subtitle section
                         </h3>
+                        <!-- /Subtitle section -->
+
                         <div class="fxs_clearfix"></div>
+
+                        <!-- Helper label title -->
                         <h4 class="fxs_helperLabel_title">
                             Helper label title
-                        </h3>
+                        </h4>
+                        <!-- /Helper label title -->
                         <small>And this label is inline</small>
                         <hr class="fxs_divider_wide">
                     </div>
+
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
-                            Buttons
+                        Dividers
+                        </h2>
+                        <div class="fxs_clearfix"></div>
+                        <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Divider first level</h3>
+                        <hr class="fxs_divider_first">
+
+                        <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Divider second level</h3>
+                        <hr class="fxs_divider_second">
+
+                        <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Divider third level</h3>
+                        <hr class="fxs_divider_third">
+
+                        <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Divider wide</h3>
+                        <hr class="fxs_divider_wide">
+
+                        <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Divider date (~calendar)</h3>
+                        <div class="fxs_dateIndicator_divider">
+                            <time pubdate="" datetime="2015-09-14"><span>Today</span> Sept 14 2015</time>
+                        </div>
+
+                        <hr class="fxs_divider_wide">
+                    </div>
+
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Simple Buttons
                         </h2>
                         <div class="fxs_clearfix"></div>
                         <a type="submit" class="fxs_btn fxs_btn_cta">Button CTA</a>
@@ -344,6 +650,48 @@
                         <a type="submit" class="fxs_btn fxs_btn_default">Button Default</a>
                         <a type="submit" class="fxs_btn fxs_btn_line">Button Line</a>
                         <a type="submit" class="fxs_btn fxs_btn_danger">Dont do it!</a>
+
+                        <span class="fxs_label">Button icon</span>
+                        <button type="button" class="fxs_btn_icon fxs_btn_default">
+                            <i class="fa fa-hand-spock-o"></i>
+                            <span class="fxs_skip">Must have text!</span>
+                        </button>
+
+                        <div class="fxs_contextual_alert fxs_alert_warning">
+                            <span class="fxs_alertLabel">Heads Up!</span>
+                            <p class="fxs_alertText">Button icon <strong>must</strong> contain a <code>&lt;span class="fxs_skip"&gt;Descriptive text&lt;/span&gt;</code>. Marckup as follows:</p>
+<pre>
+    &lt;button type="button" class="fxs_btn_icon fxs_btn_default"&gt;
+        &lt;i class="fa fa-hand-spock-o"&gt;&lt;/i&gt;
+        &lt;span class="fxs_skip">Must have text!&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;span class="fxs_skip"&gt;Descriptive text&lt;/span&gt;
+</pre>
+                        </div>
+
+                        <div class="fxs_alert fxs_alert_live">
+                            <span class="fxs_label fxs_label_muted">Buttons in dark Bg</span>
+                            <a type="submit" class="fxs_btn fxs_btn_cta">Button CTA</a>
+                            <a type="submit" class="fxs_btn fxs_btn_functional">Button Functional</a>
+                            <a type="submit" class="fxs_btn fxs_btn_default">Button Default</a>
+                            <a type="submit" class="fxs_btn fxs_btn_line inverse">Button Line</a>
+                            <a type="submit" class="fxs_btn fxs_btn_danger">Dont do it!</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Main Section -->
+                <section class="fxs_detail">
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Advanced Buttons
+                        </h2>
+                        <div class="fxs_clearfix"></div>
+                        <div class="fxs_btn_group">
+                            <button type="submit" class="fxs_btn fxs_btn_line active">Item active</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line">Item inactive</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line">Item inactive</button>
+                        </div>
                         <div class="fxs_btn_group">
                             <button type="submit" class="fxs_btn fxs_btn_default">Split dropdown</button>
                             <button type="button" class="fxs_btn_icon fxs_btn_default fxs_btn_dd">
@@ -380,28 +728,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <hr class="fxs_divider_wide">
                     </div>
-                    <h2 class="fxs_subsectionTitle">
-                        Dividers
-                    </h2>
-                    <div class="fxs_clearfix"></div>
-                    <h3 class="fxs_subtitle">Divider first level</h3>
-                    <hr class="fxs_divider_first">
-                    <h3 class="fxs_subtitle">Divider second level</h3>
-                    <hr class="fxs_divider_second">
-                    <h3 class="fxs_subtitle">Divider third level</h3>
-                    <hr class="fxs_divider_third">
-                    <h3 class="fxs_subtitle">Divider wide</h3>
-                    <hr class="fxs_divider_wide">
-                    <h3 class="fxs_subtitle">Divider date (~calendar)</h3>
-                    <div class="fxs_dateIndicator_divider">
-                        <time pubdate="" datetime="2015-09-14"><span>Today</span> Sept 14 2015</time>
-                    </div>
-                </section>
 
-                <!-- Main Section -->
-                <section class="fxs_detail">
                     <div class="fxs_alert fxs_alert_live">
                         <span class="fxs_alertLabel">On air</span>
                         <a href="#" class="fxs_close"><i class="fa fa-close"></i></a>

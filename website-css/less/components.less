@@ -129,7 +129,7 @@
 
 // LABELS
 .fxs_label, .fxs_alertLabel {
-	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_xsmall);
+	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_nano);
   margin: 0 0.5rem 0 0;
   padding: 1px 0.4rem;
 }
@@ -824,8 +824,6 @@
   .make-row();
   overflow: hidden;
   letter-spacing: -1em;
-  margin-right: -1rem;
-  @media (min-width: @screen-s) { margin-right: -0.5rem; }
 }
 
 .fxs_relatedItem {
@@ -844,10 +842,11 @@
 .fxs_relatedContentSlot_x3_cols,
 .fxs_relatedContentSlot_x4_cols {
   .column-default-parameters();
+  min-width: @base_module_size*4;
 }
 
 .fxs_relatedContentSlot_x3_cols {
-  .make-sm-column(4); 
+  .make-sm-column(4);
   .fxs_entryHeadline {
     &:extend(.fxs_headline_from_nano_to_small all);
   }

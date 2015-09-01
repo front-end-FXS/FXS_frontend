@@ -1,9 +1,8 @@
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, tt, var,
-b, u, i, center,
+h1, h2, h3, h4, h5, h6, blockquote, a,
+acronym, address, big, cite, del, dfn,
+em, img, ins, kbd, q, s, samp,
+small, strike, tt, var, b, u, i, center,
 dl, dt, dd, fieldset, form, label, legend,
 table, caption, article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -97,6 +96,8 @@ blockquote {
 
 address, cite { font-style: normal; }
 
+em { font-weight: @txt_fontweight; }
+
 small {
   font-size: @txt_size_nano;
   color: @light_1_clr;
@@ -129,6 +130,17 @@ ol, ul, li {
   margin: 0;
   padding: 0;
 }
+
+code, pre {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  padding: 4px;
+  font-size: 90%;
+  color: @dark_2_clr;
+  background-color: fade(@light_3_clr, 40%);
+}
+
+abbr { cursor: help; }
+
 
 // Images
 img {
