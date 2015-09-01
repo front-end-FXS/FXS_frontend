@@ -22,11 +22,10 @@
             <ul>
                 <li><a href="#about-guide" title="">Intro</a></li>
                 <li><a href="#atoms" title="">Atoms</a></li>
-                <li><a href="" title="">Molecules</a></li>
+                <li><a href="#molecules" title="">Molecules</a></li>
                 <li><a href="" title="">Organisms</a></li>
                 <li><a href="" title="">Templates</a></li>
                 <li><a href="" title="">Pages</a></li>
-                <li><a href="" title="">Widgets</a></li>
             </ul>
         </nav>
         <!-- /Main-nav -->
@@ -41,11 +40,10 @@
                 <ul>
                     <li><a href="#about-guide" title="">Intro</a></li>
                     <li><a href="#atoms" title="">Atoms</a></li>
-                    <li><a href="" title="">Molecules</a></li>
+                    <li><a href="#molecules" title="">Molecules</a></li>
                     <li><a href="" title="">Organisms</a></li>
                     <li><a href="" title="">Templates</a></li>
                     <li><a href="" title="">Pages</a></li>
-                    <li><a href="" title="">Widgets</a></li>
                 </ul>
             </nav>
             <!-- /Main-nav -->
@@ -202,7 +200,7 @@
                                 <strong>website-css:</strong> LESS & compiled CSS for the site and the CMS overrides
                                 <ul>
                                     <li><strong>fxs_sf_dashboard.less:</strong> CMS overrides</li>
-                                    <li><strong>fxs_screen.less:</strong> The main compiler file for the site, we import all LESS files <strong>in the strict order</strong>:
+                                    <li><strong>fxs_screen.less:</strong> The main compiler file for the site, we import all LESS files <em>in the strict order</em>:
                                         <ul>
                                             <li><strong>Vendor imports</strong>: All external plugins & components styles (LESS if possible).</li>
                                             <li><strong>General application styles</strong>: LESS vars, LESS mixins, basic HTML styles, and application components.</li>
@@ -217,19 +215,23 @@
                                                 <strong>vars.less:</strong> All custom LESS variables (color, typo, dimensions, etc) and vendor vars overrides (bottom of file).
                                             </li>
                                             <li>
-                                                <strong>mixins.less:</strong> All custom mixins and vendor mixins overrides (bottom of file). <span class="fxs_txt_danger">Don't ad any output class in this file, <strong>just mixins</strong>.</span>
+                                                <strong>mixins.less:</strong> All custom mixins and vendor mixins overrides (bottom of file).
+                                                <div class="fxs_contextual_alert fxs_alert_warning">
+                                                    <span class="fxs_alertLabel">Heads Up!</span>
+                                                    <p class="fxs_alertText">Don't add any output class in this file.</p>
+                                                </div>
                                             </li>
                                             <li>
                                                 <strong>reset.less:</strong> HTML normalize fixes (use it with caution: add styles to a tag may cause unexpected results).
                                             </li>
                                             <li>
-                                                <strong>base.less:</strong> Basic text and single components styles: <strong>The atoms</strong>.
+                                                <strong>base.less:</strong> Basic text and single components styles, the atoms.
                                             </li>
                                             <li>
                                                 <strong>forms.less:</strong> Basic forms styles: form atoms
                                             </li>
                                             <li>
-                                                <strong>components.less:</strong> Complex objects, group of atoms: <strong>The molecules and organisms</strong>.
+                                                <strong>components.less:</strong> Complex objects, group of atoms, molecules and organizms.
                                             </li>
                                             <li>
                                                 <strong>templating.less:</strong> Website layout, grid system, columns, etc.
@@ -241,10 +243,11 @@
                                                 <strong>post.less:</strong> Post and final detail pages styles.
                                             </li>
                                             <li>
-                                                <strong>vendor:</strong> Bootstrap LESS components, lesshat, all external plugin styles 
-                                                <p>
-                                                    <span class="fxs_txt_danger">Don't edit directly from vendor files, override styles & vars into the FXS LESS files: vars, mixins, components, etc.</span>
-                                                </p>
+                                                <strong>vendor:</strong> Bootstrap LESS components, lesshat, all external plugin styles.
+                                                <div class="fxs_contextual_alert fxs_alert_error">
+                                                    <span class="fxs_alertLabel">Heads Up!</span>
+                                                    <p class="fxs_alertText">Don't edit directly from vendor files, override styles & vars into the FXS custom LESS files.</p>
+                                                </div>
                                             </li>
                                         </ul>
                                     </li>
@@ -253,6 +256,7 @@
                             <li>
                                 <strong>website-font:</strong> Font awesome assets, other icon fonts.
                                 <div class="fxs_contextual_alert fxs_alert_info">
+                                    <span class="fxs_alertLabel">Heads Up!</span>
                                     <p class="fxs_alertText">The main font of the website is "Fira Sans" and is imported via Google fonts (head)</p>
                                 </div>
                             </li>
@@ -276,7 +280,8 @@
                                             <li>
                                                 <strong>css:</strong> widget.less => widget.min.css
                                                 <div class="fxs_contextual_alert fxs_alert_info">
-                                                    <p class="fxs_alertText">This LESS will be imported from "fxs_screen.less" in order to have the same CSS. Avoid duplicity!.</p>
+                                                    <span class="fxs_alertLabel">Heads Up!</span>
+                                                    <p class="fxs_alertText">This LESS will be imported from "fxs_screen.less" in order to have the same CSS. Avoid duplicity!</p>
                                                 </div>
                                             </li>
                                             <li>widget-example.html</li>
@@ -293,18 +298,14 @@
                             </li>
                         </ul>
 
-                        <div class="fxs_contextual_alert fxs_alert_error">
+                        <div class="fxs_contextual_alert fxs_alert_warning">
                             <span class="fxs_alertLabel">Heads Up!</span>
                             <p class="fxs_alertText">For the general site, the only LESS file to compile is "fxs_screen.less" => "fxs_screen.min.css". <strong>Uncheck the rest of the less files</strong>.</p>
-                        </div>
-
-                        <div class="fxs_contextual_alert fxs_alert_warning">
-                            <span class="fxs_alertLabel">Heads Up 2!</span>
                             <p class="fxs_alertText">For the widgets, the LESS files to compile are "core.less" => "core.min.css" and (each) "widget.less" => "widget.min.css".</p>
                         </div>
 
                         <div class="fxs_contextual_alert fxs_alert_info">
-                            <span class="fxs_alertLabel">Heads Up 3!</span>
+                            <span class="fxs_alertLabel">Heads Up 2!</span>
                             <p class="fxs_alertText">If the CMS needs style adjustments, then edit and compile "fxs_sf_dashboard.less" => "fxs_sf_dashboard.min.css"</p>
                         </div>
 
@@ -313,6 +314,7 @@
                 </section>
                 <!-- /About guide -->
 
+                <!-- Atoms -->
                 <header id="atoms" class="fxs_sectionTitle">
                     <h1 class="fxs_sectionTitle_header">Atoms</h1>
                     <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
@@ -541,6 +543,20 @@
                         </div>
                         <!-- /links -->
 
+                        <!-- Contextual colors -->
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <h3 class="fxs_helperLabel_title fxs_marginBase_bottom">Text contextual colors</h3>
+                            <p class="fxs_txt_success">A success text (Yei!)</p>
+                            <p class="fxs_txt_danger">Danger/Error text (I'm so scarry)</p>
+                            <p class="fxs_txt_neutral">Neutral text (I'm so boring)</p>
+                        </div>
+
+                        <div class="fxs_contextual_alert fxs_alert_info">
+                            <span class="fxs_alertLabel">Heads up!</span>
+                            <p class="fxs_alertText">You can use contextual colors in any tag and combine with other classes</p>
+                        </div>
+                        <!-- /Contextual colors -->
+
                         <hr class="fxs_divider_wide">
                     </div>
 
@@ -550,6 +566,29 @@
                     </div>
 
                     <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Labels & Badges
+                        </h2>
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <span class="fxs_label">Label default</span>
+                            <span class="fxs_label fxs_label_featured">Label featured</span>
+                            <span class="fxs_label fxs_label_success">Label success</span>
+                            <span class="fxs_label fxs_label_info">Label info</span>
+                            <span class="fxs_label fxs_label_warning">Label warning</span>
+                            <span class="fxs_label fxs_label_error">Label error</span>
+                            <span class="fxs_label fxs_label_muted">Label muted</span>
+                        </div>
+
+                        <div class="fxs_clearfix">
+                            <span class="fxs_label">And the badge:</span>
+
+                            <span class="fxs_badge">5</span>
+                        </div>
+                        
+                        <hr class="fxs_divider_wide">
+                    </div>
 
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
@@ -615,6 +654,7 @@
                         <hr class="fxs_divider_wide">
                     </div>
 
+                    <!-- Dividers -->
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
                         Dividers
@@ -639,23 +679,57 @@
 
                         <hr class="fxs_divider_wide">
                     </div>
+                    <!-- /Dividers -->
 
+                    <!-- Simple Buttons -->
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
                             Simple Buttons
                         </h2>
-                        <div class="fxs_clearfix"></div>
-                        <a type="submit" class="fxs_btn fxs_btn_cta">Button CTA</a>
-                        <a type="submit" class="fxs_btn fxs_btn_functional">Button Functional</a>
-                        <a type="submit" class="fxs_btn fxs_btn_default">Button Default</a>
-                        <a type="submit" class="fxs_btn fxs_btn_line">Button Line</a>
-                        <a type="submit" class="fxs_btn fxs_btn_danger">Dont do it!</a>
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <a class="fxs_btn fxs_btn_cta" role="button">Button CTA</a>
+                            <a class="fxs_btn fxs_btn_functional" role="button">Button Functional</a>
+                            <button class="fxs_btn fxs_btn_default" type="submit">Button Default</button>
+                            <button class="fxs_btn fxs_btn_line" type="submit">Button Line</button>
+                            <button class="fxs_btn fxs_btn_danger" type="submit">Dont do it!</button>
+                            <span class="fxs_label fxs_marginBase_left">Button icon</span>
+                            <button class="fxs_btn_icon fxs_btn_default" type="submit">
+                                <i class="fa fa-hand-spock-o"></i>
+                                <span class="fxs_skip">Must have text!</span>
+                            </button>
+                        </div>
 
-                        <span class="fxs_label">Button icon</span>
-                        <button type="button" class="fxs_btn_icon fxs_btn_default">
-                            <i class="fa fa-hand-spock-o"></i>
-                            <span class="fxs_skip">Must have text!</span>
-                        </button>
+                        <h3 class="fxs_helperLabel_title">Buttons in dark Bg</h3>
+                        <div class="fxs_clearfix fxs_marginBase_bottom" style="padding:1rem; background-color:#25252B;">
+                            <div class="fxs_clearfix">
+                                <a class="fxs_btn fxs_btn_cta" role="button">Button CTA</a>
+                                <a class="fxs_btn fxs_btn_functional" role="button">Button Functional</a>
+                                <button class="fxs_btn fxs_btn_default" type="submit">Button Default</button>
+                                <button class="fxs_btn fxs_btn_line inverse" type="submit">Button Line</button>
+                                <button class="fxs_btn fxs_btn_danger" type="submit">Dont do it!</button>
+                                <span class="fxs_label fxs_label_muted fxs_marginBase_left">Button icon</span>
+                                <button class="fxs_btn_icon fxs_btn_default" type="submit">
+                                    <i class="fa fa-hand-spock-o"></i>
+                                    <span class="fxs_skip">Must have text!</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h3 class="fxs_helperLabel_title">Button small</h3>
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <div class="fxs_clearfix">
+                                <a class="fxs_btn fxs_btn_cta fxs_btn_small" role="button">Button CTA</a>
+                                <a class="fxs_btn fxs_btn_functional fxs_btn_small" role="button">Button Functional</a>
+                                <button class="fxs_btn fxs_btn_default fxs_btn_small" type="submit">Button Default</button>
+                                <button class="fxs_btn fxs_btn_line fxs_btn_small" type="submit">Button Line</button>
+                                <button class="fxs_btn fxs_btn_danger fxs_btn_small" type="submit">Dont do it!</button>
+                                <span class="fxs_label fxs_marginBase_left">Button icon</span>
+                                <button class="fxs_btn_icon fxs_btn_default fxs_btn_small" type="submit">
+                                    <i class="fa fa-hand-spock-o"></i>
+                                    <span class="fxs_skip">Must have text!</span>
+                                </button>
+                            </div>
+                        </div>
 
                         <div class="fxs_contextual_alert fxs_alert_warning">
                             <span class="fxs_alertLabel">Heads Up!</span>
@@ -669,18 +743,31 @@
 </pre>
                         </div>
 
-                        <div class="fxs_alert fxs_alert_live">
-                            <span class="fxs_label fxs_label_muted">Buttons in dark Bg</span>
-                            <a type="submit" class="fxs_btn fxs_btn_cta">Button CTA</a>
-                            <a type="submit" class="fxs_btn fxs_btn_functional">Button Functional</a>
-                            <a type="submit" class="fxs_btn fxs_btn_default">Button Default</a>
-                            <a type="submit" class="fxs_btn fxs_btn_line inverse">Button Line</a>
-                            <a type="submit" class="fxs_btn fxs_btn_danger">Dont do it!</a>
+                    </div>
+                    <!-- /Simple Buttons -->
+
+                </section>
+                <!-- /Atoms -->
+
+                <!-- Molecules -->
+                <header id="molecules" class="fxs_sectionTitle">
+                    <h1 class="fxs_sectionTitle_header">Molecules</h1>
+                    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                        <div class="fxs_overflowOptions">
+                            <span class="fxs_btn_icon" title="Share options"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <!--
+                                -->
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </section>
-
-                <!-- Main Section -->
+                </header>
                 <section class="fxs_detail">
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
