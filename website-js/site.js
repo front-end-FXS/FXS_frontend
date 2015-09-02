@@ -84,44 +84,6 @@ $(document).ready(function () {
         debug: true
     });
 
-    ////////// Estados del list filter //////////
-    // Esto ESTÁ METIDO A SACO para que funcione el trigger del filtro
-    $('.fxs_btn_filter').click(function(evt) {
-        $('.fxs_filter').addClass("active");
-        evt.stopPropagation();
-    });  
-
-        // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA
-        $('.fxs_dismissQuery').click(function() {
-            $('.fxs_filter').removeClass("active");
-            $('.fxs_typeaheadContainer').removeClass("result");
-            $('.fxs_typeaheadContainer').removeClass("hint");
-            $('.fxs_typeaheadContainer').removeClass("backdrop");
-            $('.fxs_queryResults').removeClass("fxs_selectedQuery");
-        });
-
-        // ESTO YA ES DE PENA PERO EJEMPLIFICA BIEN: ACTIVAR LA CLASE DEL FILTRO CON QUERY SELECCIONADA
-        $('.fxs_content_subnav').click(function() {
-            $('.fxs_queryResults').addClass("fxs_selectedQuery");
-        });
-
-    // Toggle timezone class to show menu (metido a saco)
-
-    $('.fxs_timezone_btn').click(function () {
-        $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
-    });
-
-    $('.fxs_timezone_close, .fxs_timezone_done').click(function () {         
-        $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
-    });
-
-    // Footer disclaimer (a saco)
-
-    // footer
-    $(".fxs_btn_disclaimer").click(function () {
-        $(".fxs_dropdownBlock").toggleClass("active");
-    });
-
     
     // Layout - Menu 
 
@@ -170,21 +132,70 @@ $(document).ready(function () {
     ////////// Stick'em ////////// Se activará para anuncios fijos en layout
     // $('.fxs_listView').stickem({offset:80});
 
+    ///////////////////////////////////////////
     ////////// Buttons active state //////////
+    /////////////////////////////////////////
+
+    ////////// Estados del list filter //////////
+    // METIDO A SACO para que funcione el trigger del filtro
+    $('.fxs_btn_filter').click(function(evt) {
+        $(this).closest('.fxs_filter').toggleClass("active");
+        evt.stopPropagation();
+    }); 
+
+        // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA
+        $('.fxs_dismissQuery').click(function() {
+            $('.fxs_filter').removeClass("active");
+            $('.fxs_typeaheadContainer').removeClass("result");
+            $('.fxs_typeaheadContainer').removeClass("hint");
+            $('.fxs_typeaheadContainer').removeClass("backdrop");
+            $('.fxs_queryResults').removeClass("fxs_selectedQuery");
+        });
+
+        // ESTO YA ES DE PENA PERO EJEMPLIFICA BIEN: ACTIVAR LA CLASE DEL FILTRO CON QUERY SELECCIONADA
+        $('.fxs_content_subnav').click(function() {
+            $('.fxs_queryResults').addClass("fxs_selectedQuery");
+        });
+
+    // Toggle timezone class to show menu (metido a saco)
+
+    $('.fxs_timezone_btn').click(function () {
+        $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
+    });
+
+    $('.fxs_timezone_close, .fxs_timezone_done').click(function () {         
+        $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
+    });
+
+    // Footer disclaimer (a saco)
+
+    // footer
+    $(".fxs_btn_disclaimer").click(function () {
+        $(".fxs_dropdownBlock").toggleClass("active");
+    });
+
     // Esto ESTÁ METIDO A SACO para que funcione el trigger de los botones
     $('.fxs_overflowOptions').click(function(evt) {
         $(this).toggleClass("active");
         evt.stopPropagation();
     });
 
-    $('.fxs_btn_dd').click(function(evt) {
-        $(this).parent('.fxs_btn_group').toggleClass("active");
-        evt.stopPropagation();
-    });
-
     // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA DEL BOTÓN
     $(document).click(function() {
         $('.fxs_overflowOptions').removeClass("active");
-        $('.fxs_btn_group').removeClass("active");
     });
+
+    //////////////////////////////////////////////
+    ///////// Global feedback alert /////////////
+
+    // METIDO A SACO PARA LANZAR LA ALERTA GLOBAL
+    $('#myGlobalAlert').click(function () {
+        $('#globalAlertExample').addClass('in');
+    });
+
+    // IDEM
+    $('#myGlobalNotification').click(function () {
+        $('#notificationExample').addClass('in');
+    });
+
 });

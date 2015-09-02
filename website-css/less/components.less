@@ -95,11 +95,11 @@
 }
 
 .fxs_btn_small {
-  height: @base_module_size - 9;
-  line-height: @base_module_size - 10;
+  height: @base_module_size - 8;
+  line-height: @base_module_size - 9;
   &.fxs_btn_icon {
     font-size: @txt_defaultsize_rem;
-    width: @base_module_size - 9;
+    width: @base_module_size - 8;
   }
 }
 
@@ -144,8 +144,8 @@
 .fxs_label, .fxs_alertLabel {
 	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_nano);
   line-height: @txt_lineheight_reset;
-  margin-right: 0.4rem;
-  padding: 1px 0.4rem;
+  margin: 1px 0.313rem 1px 0;
+  padding: 1px 0.313rem;
 }
 
 .fxs_label_featured  {
@@ -188,7 +188,7 @@
 }
 
 // ALERTS
-.fxs_alert, .fxs_contextual_alert, .fxs_general_alert {
+.fxs_alert, .fxs_contextual_alert, .fxs_global_alert {
   .animation(grow-and-show 0.5s ease-in-out);
   .reset-text();
   font-size: @txt_size_small;
@@ -200,6 +200,8 @@
   }
 }
 
+.fxs_contextual_alert, .fxs_global_alert { &:extend(.fxs_clearfix all); }
+
 // Wide content alert
 .fxs_alert {
   &:extend(.fxs_wideContent_bordered all);
@@ -209,9 +211,21 @@
 }
 
 // Contextual alert
-.fxs_contextual_alert {
-  &:extend(.fxs_clearfix all);
-  margin-bottom: 1rem;
+.fxs_contextual_alert { margin-bottom: 1rem; }
+
+// Global alert
+.fxs_global_alert {
+  display: none;
+  margin-top: @base_module_size;
+  padding-left: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  @media (min-width: @screen-m) { .calc(width, ~'100% - @{left_rail_space}'); }
+  &.in {
+    display: block;
+    & + .fxs_contentView { margin-top: @main_header_height; } 
+  }
 }
 
 // Alert variants
@@ -680,13 +694,13 @@
 
 // Close Icon
 .fxs_close {
-    display: block;
-    float: right;
-    color: @lightest_clr;
-    padding: 0 10px;
-    margin-top: -5px;
-    font-size: @txt_size_large;
-    &:hover { .opacity(.75); }
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -5px -2px -5px 0;
+  font-size: @txt_size_large;
+  &:hover { .opacity(.75); }
 }
 
 // LIST SPECIAL STYLES

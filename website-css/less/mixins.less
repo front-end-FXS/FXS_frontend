@@ -52,7 +52,7 @@
   vertical-align: middle;
   &, &:hover, &:hover { text-decoration: none!important; }
   &.disabled, &[disabled], fieldset[disabled] & {
-    cursor: disabled;
+    cursor: not-allowed;
     .opacity(.65);
   }
 }
@@ -121,7 +121,7 @@
 .fxs_alert_variants(@alert-background; @alert-textColor) {
   background-color: @alert-background;
   color: @alert-textColor;
-  a { color: @alert-textColor; }
+  a, .fxs_close { color: @alert-textColor; }
 }
 
 // mixin first level nav
