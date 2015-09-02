@@ -171,31 +171,7 @@ $(document).ready(function () {
 
     // footer
     $(".fxs_btn_disclaimer").click(function () {
-        $(".fxs_dropdownBlock").toggleClass("active");
-    });
-
-    // Esto ESTÁ METIDO A SACO para que funcione el trigger de los botones
-    $('.fxs_overflowOptions').click(function(evt) {
-        $(this).toggleClass("active");
-        evt.stopPropagation();
-    });
-
-    // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA DEL BOTÓN
-    $(document).click(function() {
-        $('.fxs_overflowOptions').removeClass("active");
-    });
-
-    //////////////////////////////////////////////
-    ///////// Global feedback alert /////////////
-
-    // METIDO A SACO PARA LANZAR LA ALERTA GLOBAL
-    $('#myGlobalAlert').click(function () {
-        $('#globalAlertExample').addClass('in');
-    });
-
-    // IDEM
-    $('#myGlobalNotification').click(function () {
-        $('#notificationExample').addClass('in');
+        $(".fxs_disclaimer_block").toggleClass("active");
     });
 
 });

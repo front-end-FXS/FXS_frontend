@@ -572,10 +572,10 @@ lesshat-selector {
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes grow-and-show{ from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;}}
-@-moz-keyframes grow-and-show{ from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;}}
-@-o-keyframes grow-and-show{ from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;}}
-@keyframes grow-and-show{ from {height:0; padding:0 8px; opacity:0;} to {height: auto; padding:8px; opacity:1;};
+@-webkit-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
+@-moz-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
+@-o-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
+@keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;};
 }
 lesshat-selector {
   -lh-property: 0; } 
@@ -1648,7 +1648,7 @@ fieldset[disabled] .fxs_btn_icon {
   border-color: rgba(48, 76, 112, 0.4);
 }
 .fxs_btn_default.active,
-.active > .fxs_btn_default.fxs_btn_dd,
+.open .fxs_btn_default.fxs_btn_dd,
 .fxs_btn_default:active,
 .fxs_btn_default:focus {
   background-color: rgba(48, 76, 112, 0.8);
@@ -1675,41 +1675,6 @@ fieldset[disabled] .fxs_btn_default.active {
   background-color: #304c70;
   border-color: #304c70;
 }
-.fxs_btn_default.fxs_btn_line {
-  background-color: rgba(48, 76, 112, 0);
-}
-.fxs_btn_default.fxs_btn_line:hover {
-  background-color: rgba(48, 76, 112, 0.15);
-  border-color: #304c70;
-}
-.fxs_btn_default.fxs_btn_line.active,
-.active > .fxs_btn_default.fxs_btn_line.fxs_btn_dd,
-.fxs_btn_default.fxs_btn_line:active,
-.fxs_btn_default.fxs_btn_line:focus {
-  background-color: #304c70;
-  color: #ffffff;
-}
-.fxs_btn_default.fxs_btn_line.disabled,
-.fxs_btn_default.fxs_btn_line[disabled],
-fieldset[disabled] .fxs_btn_default.fxs_btn_line,
-.fxs_btn_default.fxs_btn_line.disabled:hover,
-.fxs_btn_default.fxs_btn_line[disabled]:hover,
-fieldset[disabled] .fxs_btn_default.fxs_btn_line:hover,
-.fxs_btn_default.fxs_btn_line.disabled:focus,
-.fxs_btn_default.fxs_btn_line[disabled]:focus,
-fieldset[disabled] .fxs_btn_default.fxs_btn_line:focus,
-.fxs_btn_default.fxs_btn_line.disabled.focus,
-.fxs_btn_default.fxs_btn_line[disabled].focus,
-fieldset[disabled] .fxs_btn_default.fxs_btn_line.focus,
-.fxs_btn_default.fxs_btn_line.disabled:active,
-.fxs_btn_default.fxs_btn_line[disabled]:active,
-fieldset[disabled] .fxs_btn_default.fxs_btn_line:active,
-.fxs_btn_default.fxs_btn_line.disabled.active,
-.fxs_btn_default.fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_default.fxs_btn_line.active {
-  background-color: rgba(48, 76, 112, 0);
-  border-color: #304c70;
-}
 .fxs_btn_cta {
   color: #ffffff;
   background-color: #e4871b;
@@ -1720,7 +1685,7 @@ fieldset[disabled] .fxs_btn_default.fxs_btn_line.active {
   border-color: rgba(228, 135, 27, 0.4);
 }
 .fxs_btn_cta.active,
-.active > .fxs_btn_cta.fxs_btn_dd,
+.open .fxs_btn_cta.fxs_btn_dd,
 .fxs_btn_cta:active,
 .fxs_btn_cta:focus {
   background-color: rgba(228, 135, 27, 0.8);
@@ -1747,41 +1712,6 @@ fieldset[disabled] .fxs_btn_cta.active {
   background-color: #e4871b;
   border-color: #e4871b;
 }
-.fxs_btn_cta.fxs_btn_line {
-  background-color: rgba(228, 135, 27, 0);
-}
-.fxs_btn_cta.fxs_btn_line:hover {
-  background-color: rgba(228, 135, 27, 0.15);
-  border-color: #e4871b;
-}
-.fxs_btn_cta.fxs_btn_line.active,
-.active > .fxs_btn_cta.fxs_btn_line.fxs_btn_dd,
-.fxs_btn_cta.fxs_btn_line:active,
-.fxs_btn_cta.fxs_btn_line:focus {
-  background-color: #e4871b;
-  color: #ffffff;
-}
-.fxs_btn_cta.fxs_btn_line.disabled,
-.fxs_btn_cta.fxs_btn_line[disabled],
-fieldset[disabled] .fxs_btn_cta.fxs_btn_line,
-.fxs_btn_cta.fxs_btn_line.disabled:hover,
-.fxs_btn_cta.fxs_btn_line[disabled]:hover,
-fieldset[disabled] .fxs_btn_cta.fxs_btn_line:hover,
-.fxs_btn_cta.fxs_btn_line.disabled:focus,
-.fxs_btn_cta.fxs_btn_line[disabled]:focus,
-fieldset[disabled] .fxs_btn_cta.fxs_btn_line:focus,
-.fxs_btn_cta.fxs_btn_line.disabled.focus,
-.fxs_btn_cta.fxs_btn_line[disabled].focus,
-fieldset[disabled] .fxs_btn_cta.fxs_btn_line.focus,
-.fxs_btn_cta.fxs_btn_line.disabled:active,
-.fxs_btn_cta.fxs_btn_line[disabled]:active,
-fieldset[disabled] .fxs_btn_cta.fxs_btn_line:active,
-.fxs_btn_cta.fxs_btn_line.disabled.active,
-.fxs_btn_cta.fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_cta.fxs_btn_line.active {
-  background-color: rgba(228, 135, 27, 0);
-  border-color: #e4871b;
-}
 .fxs_btn_functional {
   color: #ffffff;
   background-color: #1b1c23;
@@ -1792,7 +1722,7 @@ fieldset[disabled] .fxs_btn_cta.fxs_btn_line.active {
   border-color: rgba(27, 28, 35, 0.4);
 }
 .fxs_btn_functional.active,
-.active > .fxs_btn_functional.fxs_btn_dd,
+.open .fxs_btn_functional.fxs_btn_dd,
 .fxs_btn_functional:active,
 .fxs_btn_functional:focus {
   background-color: rgba(27, 28, 35, 0.8);
@@ -1819,41 +1749,6 @@ fieldset[disabled] .fxs_btn_functional.active {
   background-color: #1b1c23;
   border-color: #1b1c23;
 }
-.fxs_btn_functional.fxs_btn_line {
-  background-color: rgba(27, 28, 35, 0);
-}
-.fxs_btn_functional.fxs_btn_line:hover {
-  background-color: rgba(27, 28, 35, 0.15);
-  border-color: #1b1c23;
-}
-.fxs_btn_functional.fxs_btn_line.active,
-.active > .fxs_btn_functional.fxs_btn_line.fxs_btn_dd,
-.fxs_btn_functional.fxs_btn_line:active,
-.fxs_btn_functional.fxs_btn_line:focus {
-  background-color: #1b1c23;
-  color: #ffffff;
-}
-.fxs_btn_functional.fxs_btn_line.disabled,
-.fxs_btn_functional.fxs_btn_line[disabled],
-fieldset[disabled] .fxs_btn_functional.fxs_btn_line,
-.fxs_btn_functional.fxs_btn_line.disabled:hover,
-.fxs_btn_functional.fxs_btn_line[disabled]:hover,
-fieldset[disabled] .fxs_btn_functional.fxs_btn_line:hover,
-.fxs_btn_functional.fxs_btn_line.disabled:focus,
-.fxs_btn_functional.fxs_btn_line[disabled]:focus,
-fieldset[disabled] .fxs_btn_functional.fxs_btn_line:focus,
-.fxs_btn_functional.fxs_btn_line.disabled.focus,
-.fxs_btn_functional.fxs_btn_line[disabled].focus,
-fieldset[disabled] .fxs_btn_functional.fxs_btn_line.focus,
-.fxs_btn_functional.fxs_btn_line.disabled:active,
-.fxs_btn_functional.fxs_btn_line[disabled]:active,
-fieldset[disabled] .fxs_btn_functional.fxs_btn_line:active,
-.fxs_btn_functional.fxs_btn_line.disabled.active,
-.fxs_btn_functional.fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_functional.fxs_btn_line.active {
-  background-color: rgba(27, 28, 35, 0);
-  border-color: #1b1c23;
-}
 .fxs_btn_danger {
   color: #ffffff;
   background-color: #cf4836;
@@ -1864,7 +1759,7 @@ fieldset[disabled] .fxs_btn_functional.fxs_btn_line.active {
   border-color: rgba(207, 72, 54, 0.4);
 }
 .fxs_btn_danger.active,
-.active > .fxs_btn_danger.fxs_btn_dd,
+.open .fxs_btn_danger.fxs_btn_dd,
 .fxs_btn_danger:active,
 .fxs_btn_danger:focus {
   background-color: rgba(207, 72, 54, 0.8);
@@ -1891,56 +1786,19 @@ fieldset[disabled] .fxs_btn_danger.active {
   background-color: #cf4836;
   border-color: #cf4836;
 }
-.fxs_btn_danger.fxs_btn_line {
-  background-color: rgba(207, 72, 54, 0);
-}
-.fxs_btn_danger.fxs_btn_line:hover {
-  background-color: rgba(207, 72, 54, 0.15);
-  border-color: #cf4836;
-}
-.fxs_btn_danger.fxs_btn_line.active,
-.active > .fxs_btn_danger.fxs_btn_line.fxs_btn_dd,
-.fxs_btn_danger.fxs_btn_line:active,
-.fxs_btn_danger.fxs_btn_line:focus {
-  background-color: #cf4836;
-  color: #ffffff;
-}
-.fxs_btn_danger.fxs_btn_line.disabled,
-.fxs_btn_danger.fxs_btn_line[disabled],
-fieldset[disabled] .fxs_btn_danger.fxs_btn_line,
-.fxs_btn_danger.fxs_btn_line.disabled:hover,
-.fxs_btn_danger.fxs_btn_line[disabled]:hover,
-fieldset[disabled] .fxs_btn_danger.fxs_btn_line:hover,
-.fxs_btn_danger.fxs_btn_line.disabled:focus,
-.fxs_btn_danger.fxs_btn_line[disabled]:focus,
-fieldset[disabled] .fxs_btn_danger.fxs_btn_line:focus,
-.fxs_btn_danger.fxs_btn_line.disabled.focus,
-.fxs_btn_danger.fxs_btn_line[disabled].focus,
-fieldset[disabled] .fxs_btn_danger.fxs_btn_line.focus,
-.fxs_btn_danger.fxs_btn_line.disabled:active,
-.fxs_btn_danger.fxs_btn_line[disabled]:active,
-fieldset[disabled] .fxs_btn_danger.fxs_btn_line:active,
-.fxs_btn_danger.fxs_btn_line.disabled.active,
-.fxs_btn_danger.fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_danger.fxs_btn_line.active {
-  background-color: rgba(207, 72, 54, 0);
-  border-color: #cf4836;
-}
 .fxs_btn_line {
   color: #1b1c23;
-  background-color: #1b1c23;
   border-color: #1b1c23;
+  background-color: transparent;
 }
 .fxs_btn_line:hover {
-  background-color: rgba(27, 28, 35, 0.8);
-  border-color: rgba(27, 28, 35, 0.4);
+  background-color: rgba(27, 28, 35, 0.15);
 }
 .fxs_btn_line.active,
-.active > .fxs_btn_line.fxs_btn_dd,
+.open .fxs_btn_line.fxs_btn_dd,
 .fxs_btn_line:active,
 .fxs_btn_line:focus {
-  background-color: rgba(27, 28, 35, 0.8);
-  border-color: #000000;
+  background-color: #1b1c23;
 }
 .fxs_btn_line.disabled,
 .fxs_btn_line[disabled],
@@ -1960,65 +1818,33 @@ fieldset[disabled] .fxs_btn_line:active,
 .fxs_btn_line.disabled.active,
 .fxs_btn_line[disabled].active,
 fieldset[disabled] .fxs_btn_line.active {
-  background-color: #1b1c23;
-  border-color: #1b1c23;
-}
-.fxs_btn_line.fxs_btn_line {
   background-color: rgba(27, 28, 35, 0);
 }
-.fxs_btn_line.fxs_btn_line:hover {
-  background-color: rgba(27, 28, 35, 0.15);
-  border-color: #1b1c23;
-}
-.fxs_btn_line.fxs_btn_line.active,
-.active > .fxs_btn_line.fxs_btn_line.fxs_btn_dd,
-.fxs_btn_line.fxs_btn_line:active,
-.fxs_btn_line.fxs_btn_line:focus {
-  background-color: #1b1c23;
+.fxs_btn_line.active,
+.open .fxs_btn_line.fxs_btn_dd,
+.fxs_btn_line:active,
+.fxs_btn_line:focus {
   color: #ffffff;
-}
-.fxs_btn_line.fxs_btn_line.disabled,
-.fxs_btn_line.fxs_btn_line[disabled],
-fieldset[disabled] .fxs_btn_line.fxs_btn_line,
-.fxs_btn_line.fxs_btn_line.disabled:hover,
-.fxs_btn_line.fxs_btn_line[disabled]:hover,
-fieldset[disabled] .fxs_btn_line.fxs_btn_line:hover,
-.fxs_btn_line.fxs_btn_line.disabled:focus,
-.fxs_btn_line.fxs_btn_line[disabled]:focus,
-fieldset[disabled] .fxs_btn_line.fxs_btn_line:focus,
-.fxs_btn_line.fxs_btn_line.disabled.focus,
-.fxs_btn_line.fxs_btn_line[disabled].focus,
-fieldset[disabled] .fxs_btn_line.fxs_btn_line.focus,
-.fxs_btn_line.fxs_btn_line.disabled:active,
-.fxs_btn_line.fxs_btn_line[disabled]:active,
-fieldset[disabled] .fxs_btn_line.fxs_btn_line:active,
-.fxs_btn_line.fxs_btn_line.disabled.active,
-.fxs_btn_line.fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_line.fxs_btn_line.active {
-  background-color: rgba(27, 28, 35, 0);
-  border-color: #1b1c23;
 }
 .fxs_btn_line.inverse,
 .fxs_pageSidebar .fxs_btn_line {
   color: #ffffff;
-  background-color: #ffffff;
   border-color: #ffffff;
+  background-color: transparent;
 }
 .fxs_btn_line.inverse:hover,
 .fxs_pageSidebar .fxs_btn_line:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .fxs_btn_line.inverse.active,
 .fxs_pageSidebar .fxs_btn_line.active,
-.active > .fxs_btn_line.inverse.fxs_btn_dd,
-.active > .fxs_pageSidebar .fxs_btn_line.fxs_btn_dd,
+.open .fxs_btn_line.inverse.fxs_btn_dd,
+.open .fxs_pageSidebar .fxs_btn_line.fxs_btn_dd,
 .fxs_btn_line.inverse:active,
 .fxs_pageSidebar .fxs_btn_line:active,
 .fxs_btn_line.inverse:focus,
 .fxs_pageSidebar .fxs_btn_line:focus {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: #d6d6d6;
+  background-color: #ffffff;
 }
 .fxs_btn_line.inverse.disabled,
 .fxs_pageSidebar .fxs_btn_line.disabled,
@@ -2056,67 +1882,32 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line:active,
 .fxs_pageSidebar .fxs_btn_line[disabled].active,
 fieldset[disabled] .fxs_btn_line.inverse.active,
 fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
-  background-color: #ffffff;
-  border-color: #ffffff;
-}
-.fxs_btn_line.inverse.fxs_btn_line,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line {
   background-color: rgba(255, 255, 255, 0);
 }
-.fxs_btn_line.inverse.fxs_btn_line:hover,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: #ffffff;
+.fxs_btn_line.inverse.active,
+.fxs_pageSidebar .fxs_btn_line.active,
+.open .fxs_btn_line.inverse.fxs_btn_dd,
+.open .fxs_pageSidebar .fxs_btn_line.fxs_btn_dd,
+.fxs_btn_line.inverse:active,
+.fxs_pageSidebar .fxs_btn_line:active,
+.fxs_btn_line.inverse:focus,
+.fxs_pageSidebar .fxs_btn_line:focus {
+  color: #1b1c23;
 }
-.fxs_btn_line.inverse.fxs_btn_line.active,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active,
-.active > .fxs_btn_line.inverse.fxs_btn_line.fxs_btn_dd,
-.active > .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.fxs_btn_dd,
-.fxs_btn_line.inverse.fxs_btn_line:active,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line:active,
-.fxs_btn_line.inverse.fxs_btn_line:focus,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line:focus {
-  background-color: #ffffff;
-  color: #ffffff;
+.fxs_close {
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -5px -2px -5px 0;
+  font-size: 1.125rem;
 }
-.fxs_btn_line.inverse.fxs_btn_line.disabled,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled,
-.fxs_btn_line.inverse.fxs_btn_line[disabled],
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line[disabled],
-fieldset[disabled] .fxs_btn_line.inverse.fxs_btn_line,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line,
-.fxs_btn_line.inverse.fxs_btn_line.disabled:hover,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled:hover,
-.fxs_btn_line.inverse.fxs_btn_line[disabled]:hover,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line[disabled]:hover,
-fieldset[disabled] .fxs_btn_line.inverse.fxs_btn_line:hover,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line:hover,
-.fxs_btn_line.inverse.fxs_btn_line.disabled:focus,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled:focus,
-.fxs_btn_line.inverse.fxs_btn_line[disabled]:focus,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line[disabled]:focus,
-fieldset[disabled] .fxs_btn_line.inverse.fxs_btn_line:focus,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line:focus,
-.fxs_btn_line.inverse.fxs_btn_line.disabled.focus,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled.focus,
-.fxs_btn_line.inverse.fxs_btn_line[disabled].focus,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line[disabled].focus,
-fieldset[disabled] .fxs_btn_line.inverse.fxs_btn_line.focus,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.focus,
-.fxs_btn_line.inverse.fxs_btn_line.disabled:active,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled:active,
-.fxs_btn_line.inverse.fxs_btn_line[disabled]:active,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line[disabled]:active,
-fieldset[disabled] .fxs_btn_line.inverse.fxs_btn_line:active,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line:active,
-.fxs_btn_line.inverse.fxs_btn_line.disabled.active,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line.disabled.active,
-.fxs_btn_line.inverse.fxs_btn_line[disabled].active,
-.fxs_pageSidebar .fxs_btn_line.fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_line.inverse.fxs_btn_line.active,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.fxs_btn_line.active {
-  background-color: rgba(255, 255, 255, 0);
-  border-color: #ffffff;
+.fxs_close:hover {
+  zoom: 1;
+  filter: alpha(opacity=75);
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
 }
 .fxs_label,
 .fxs_alertLabel {
@@ -2769,22 +2560,18 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_dropdown_generic,
 .fxs_dropdownList,
 .fxs_btnGroup_dropdownList {
-  -webkit-animation: slide-from-top-and-appear 0.35s ease-in;
-  -moz-animation: slide-from-top-and-appear 0.35s ease-in;
-  -o-animation: slide-from-top-and-appear 0.35s ease-in;
-  animation: slide-from-top-and-appear 0.35s ease-in;
+  -webkit-animation: slide-from-top-and-appear 0.3s ease-in;
+  -moz-animation: slide-from-top-and-appear 0.3s ease-in;
+  -o-animation: slide-from-top-and-appear 0.3s ease-in;
+  animation: slide-from-top-and-appear 0.3s ease-in;
   display: none;
   position: absolute;
   right: 0;
-  top: 98%;
   z-index: 10;
 }
-.fxs_overflowOptions:hover .fxs_dropdown_generic,
-.active > .fxs_dropdown_generic,
-.fxs_overflowOptions:hover .fxs_dropdownList,
-.active > .fxs_dropdownList,
-.fxs_overflowOptions:hover .fxs_btnGroup_dropdownList,
-.active > .fxs_btnGroup_dropdownList {
+.open > .fxs_dropdown_generic,
+.open > .fxs_dropdownList,
+.open > .fxs_btnGroup_dropdownList {
   display: block;
   top: 100%;
 }
@@ -2844,29 +2631,18 @@ fieldset[disabled] .fxs_dismissQuery {
   -moz-opacity: 0.75;
   opacity: 0.75;
 }
+.fxs_overflowOptions:hover .fxs_btnGroup_dropdownList {
+  display: block;
+  top: 100%;
+}
 .fxs_overflowOptions {
   position: relative;
   display: inline-block;
 }
 .fxs_overflowOptions:hover > [class^="fxs_btn"],
-.fxs_overflowOptions.active > [class^="fxs_btn"] {
+.fxs_overflowOptions.open > [class^="fxs_btn"] {
   background-color: #25252b;
   color: #ffffff;
-}
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: 1.125rem;
-}
-.fxs_close:hover {
-  zoom: 1;
-  filter: alpha(opacity=75);
-  -webkit-opacity: 0.75;
-  -moz-opacity: 0.75;
-  opacity: 0.75;
 }
 .fxs_list_table {
   margin-bottom: 1rem;
@@ -2972,7 +2748,7 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_disclaimer_block {
   border: 1px solid #f8f8f8;
   margin-bottom: 1rem;
-  max-height: 140px;
+  max-height: 157.5px;
   overflow-y: auto;
   padding: 0.5rem 1rem;
 }
@@ -2983,6 +2759,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_shareOptions_boxed {
   display: inline-block;
+  font-size: 5px;
   white-space: nowrap;
 }
 .fxs_shareOptions_boxed .fxs_btn_icon {
@@ -3938,10 +3715,10 @@ height:calc(100% - 35px - 45px);
   line-height: 35px;
   background-color: #fae7d1;
   overflow: hidden;
-  -webkit-animation: slide-from-top 0.45s ease-in;
-  -moz-animation: slide-from-top 0.45s ease-in;
-  -o-animation: slide-from-top 0.45s ease-in;
-  animation: slide-from-top 0.45s ease-in;
+  -webkit-animation: slide-from-top 0.33s ease-in;
+  -moz-animation: slide-from-top 0.33s ease-in;
+  -o-animation: slide-from-top 0.33s ease-in;
+  animation: slide-from-top 0.33s ease-in;
 }
 .fxs_listView_newItemsAlert:hover {
   background-color: #f7dbbb;
@@ -3998,9 +3775,19 @@ height:calc(100% - 35px - 45px);
   bottom: 0;
   width: 100%;
 }
+@media (min-width: 1024px) {
+  .fxs_footer {
+    margin-left: 320px;
+    -lh-property: 0;
+width:-webkit-calc(100% - 320px);
+width:-moz-calc(100% - 320px);
+width:calc(100% - 320px);
+;
+  }
+}
 .fxs_footer .fxs_copy_disclaimer {
   background-color: #f8f8f8;
-  overflow-y: hidden;
+  height: 35px;
 }
 .fxs_footer .fxs_copy_disclaimer .fxs_terms_nav {
   float: left;
@@ -4022,33 +3809,17 @@ height:calc(100% - 35px - 45px);
   position: absolute;
   background-color: #ffffff;
   font-size: 11px;
-  color: #1b1c23;
-  padding: 5px 1rem 5px 1rem;
-  vertical-align: middle;
+  margin: 0;
 }
-.fxs_footer .fxs_dropdownBlock {
+.fxs_footer .fxs_disclaimer_block {
   display: none;
   position: absolute;
   bottom: 100%;
-  border-top: 1px solid #f8f8f8;
+  margin-bottom: 0;
   background-color: #ffffff;
-  font-size: 11px;
-  padding: 1rem;
-  max-height: 240px;
-  overflow-y: auto;
 }
-.fxs_footer .fxs_dropdownBlock.active {
+.fxs_footer .fxs_disclaimer_block.active {
   display: block;
-}
-@media (min-width: 1024px) {
-  .fxs_footer {
-    margin-left: 320px;
-    -lh-property: 0;
-width:-webkit-calc(100% - 320px);
-width:-moz-calc(100% - 320px);
-width:calc(100% - 320px);
-;
-  }
 }
 .fxs_detailInfo_page .fxs_entryPlain_txt {
   margin-bottom: 2rem;

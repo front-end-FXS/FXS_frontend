@@ -66,9 +66,7 @@
     background-color: fade(@btn-bg-color, 80%);
     border-color: fade(@btn-border-color, 40%);
   }
-  &.active,
-  .active > &.fxs_btn_dd,
-  &:active, &:focus {
+  &.active, .open &.fxs_btn_dd, &:active, &:focus {
     background-color: fade(@btn-bg-color, 80%);
     border-color: darken(@btn-border-color, 16%);
   }
@@ -79,26 +77,17 @@
       border-color: @btn-border-color;
     }
   }
+}
 
-  &.fxs_btn_line {
-    background-color: fade(@btn-bg-color, 0%);
-    &:hover {
-      background-color: fade(@btn-bg-color, 15%);
-      border-color: @btn-border-color;
-    }
-    &.active,
-    .active > &.fxs_btn_dd,
-    &:active, &:focus {
-      background-color: @btn-bg-color;
-      color: @lightest_clr;
-    }
-    &.disabled, &[disabled], fieldset[disabled] & {
-      &, &:hover, &:focus,
-      &.focus, &:active, &.active {
-        background-color: fade(@btn-bg-color, 0%);
-        border-color: @btn-border-color;
-      }
-    }
+.fxs-btn-line-variants(@btn-txt-color; @btn-bg-color; @btn-border-color) {
+  color: @btn-txt-color;
+  border-color: @btn-border-color;
+  background-color: transparent;
+  &:hover { background-color: fade(@btn-bg-color, 15%); }
+  &.active, .open &.fxs_btn_dd, &:active, &:focus { background-color: @btn-bg-color; }
+  &.disabled, &[disabled], fieldset[disabled] & {
+    &, &:hover, &:focus,
+    &.focus, &:active, &.active { background-color: fade(@btn-bg-color, 0%); }
   }
 }
 

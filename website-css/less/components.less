@@ -136,8 +136,23 @@
 }
 
 .fxs_btn_line {
-  .fxs-button-variants(@dark_1_clr; @dark_1_clr; @dark_1_clr);
-  &.inverse, .fxs_pageSidebar & { .fxs-button-variants(@lightest_clr; @lightest_clr; @lightest_clr); }
+  .fxs-btn-line-variants(@dark_1_clr; @dark_1_clr; @dark_1_clr);
+  &.active, .open &.fxs_btn_dd, &:active, &:focus { color: @lightest_clr; }
+  &.inverse, .fxs_pageSidebar & {
+    .fxs-btn-line-variants(@lightest_clr; @lightest_clr; @lightest_clr);
+    &.active, .open &.fxs_btn_dd, &:active, &:focus { color: @dark_1_clr; }
+  }
+}
+
+// Close button
+.fxs_close {
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -5px -2px -5px 0;
+  font-size: @txt_size_large;
+  &:hover { .opacity(.75); }
 }
 
 // LABELS
@@ -613,13 +628,12 @@
 
 /// DROPDOWNS
 .fxs_dropdown_generic {
-  .animation(slide-from-top-and-appear 0.35s ease-in);
+  .animation(slide-from-top-and-appear 0.3s ease-in);
 	display: none;
 	position: absolute;
 	right: 0;
-	top: 98%;
 	z-index: 10;
-	.fxs_overflowOptions:hover &, .active > & {
+	.open > & {
 		display: block;
 		top: 100%;
 	}
@@ -672,35 +686,28 @@
 
 // Variants dropdown
 .fxs_btnGroup_dropdownList {
+  &:extend(.fxs_dropdown_generic all);
 	background-color: @dark_2_clr;
-	&:extend(.fxs_dropdown_generic all);
 	[class^="fxs_btn"] {
 		color: @lightest_clr;
 		&:hover { .opacity(.75); }
 	}
+  .fxs_overflowOptions:hover & {
+    display: block;
+    top: 100%;
+  }
 }
 
 // trigger/holder btn Group dd
 .fxs_overflowOptions {
 	position: relative;
   display: inline-block;
-	&:hover, &.active {
+	&:hover, &.open {
 		> [class^="fxs_btn"] {
 			background-color: @dark_2_clr;
 			color: @lightest_clr;
 		}
 	}
-}
-
-// Close Icon
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: @txt_size_large;
-  &:hover { .opacity(.75); }
 }
 
 // LIST SPECIAL STYLES
@@ -794,7 +801,7 @@
 .fxs_disclaimer_block {
   border: 1px solid @light_5_clr;
   margin-bottom: 1rem;
-  max-height: @base_module_size*4;
+  max-height: @base_module_size*4.5;
   overflow-y: auto;
   padding: 0.5rem 1rem;
   * {
@@ -807,6 +814,7 @@
 ///////////////// Social media objects /////////////
 .fxs_shareOptions_boxed {
   display: inline-block;
+  font-size: 5px;
   white-space: nowrap;
   .fxs_btn_icon { margin: 0; }
 }

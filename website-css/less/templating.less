@@ -509,7 +509,7 @@
   line-height: @base_module_size;
   background-color: lighten(@highlight_clr, 40%);
   overflow: hidden;
-  .animation(slide-from-top 0.45s ease-in);
+  .animation(slide-from-top 0.33s ease-in);
   &:hover{ background-color: lighten(@highlight_clr, 35%); }
   @media (min-width: @screen-s) { width: @left_rail_space; }
 }
@@ -562,9 +562,13 @@
   z-index: 1;
   bottom: 0;
   width: 100%;
+  @media (min-width: @screen-m) {
+    margin-left: @left_rail_space;
+    .calc(width, ~'100% - @{left_rail_space}'); 
+  }
   .fxs_copy_disclaimer{ // capa contenedora navegación copyright y disclaimer
     background-color: @light_5_clr;
-    overflow-y: hidden; 
+    height: @base_module_size;
     .fxs_terms_nav{  
       float: left; 
       padding: 5px 5px 5px 1rem;
@@ -581,27 +585,17 @@
       position:absolute;
       background-color:@lightest_clr;
       font-size:@txt_size_nano;
-      color:@dark_1_clr;
-      padding:5px 1rem 5px 1rem;
-      vertical-align: middle;
+      margin: 0;
     }
   }    
-  .fxs_dropdownBlock{
+  .fxs_disclaimer_block{
     display:none;
     position:absolute;
     bottom: 100%;
-    border-top: 1px solid @light_5_clr;
+    margin-bottom: 0;
     background-color: @lightest_clr;
-    font-size: @txt_size_nano;
-    padding: 1rem;
-    max-height: 240px;
-    overflow-y: auto;
   }
-  .fxs_dropdownBlock.active{ display:block; }
-  @media (min-width: @screen-m) {
-      margin-left: @left_rail_space;
-      .calc(width, ~'100% - @{left_rail_space}'); 
-  }
+  .fxs_disclaimer_block.active{ display:block; }
 }
 
 // FINAL DETAIL INFO PAGE (WIDGETS, CALENDAR EVENTS, ...)
