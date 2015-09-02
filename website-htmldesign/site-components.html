@@ -1067,7 +1067,9 @@
                             Author boxes
                         </h2>
                         <div class="fxs_clearfix fxs_marginBase_bottom">
-                            <h3 class="fxs_helperLabel_title">Author box nano</h3>
+                            <div class="fxs_clearfix fxs_marginBase_bottom">
+                                <h3 class="fxs_helperLabel_title">Author box nano</h3>
+                            </div>
 
                             <!-- Author box nano --><!-- For dev -->
                             <address class="fxs_contributorBox fxs_contributorBox_nano">
@@ -1088,9 +1090,12 @@
                             <!-- /Author box nano -->
                         </div>
 
-                        <div class="fxs_clearfix fxs_marginBase_bottom">
-                            <h3 class="fxs_helperLabel_title">Author box small</h3>
+                        <hr class="fxs_divider_third">
 
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <div class="fxs_clearfix fxs_marginBase_bottom">
+                                <h3 class="fxs_helperLabel_title">Author box small</h3>
+                            </div>
                             <!-- Author box small --><!-- For dev -->
                             <address class="fxs_contributorBox fxs_contributorBox_small">
                                 <div class="fxs_avatar_circleImage_s">
@@ -1114,9 +1119,12 @@
 
                         </div>
 
-                        <div class="fxs_clearfix fxs_marginBase_bottom">
-                            <h3 class="fxs_helperLabel_title">Author box Medium</h3>
+                        <hr class="fxs_divider_third">
 
+                        <div class="fxs_clearfix fxs_marginBase_bottom">
+                            <div class="fxs_clearfix fxs_marginBase_bottom">
+                                <h3 class="fxs_helperLabel_title">Author box Medium</h3>
+                            </div>
                             <!-- Author box medium --><!-- For dev -->
                             <address class="fxs_contributorBox fxs_contributorBox_medium">
                                 <div class="fxs_avatar_circleImage_s">
@@ -1140,8 +1148,12 @@
 
                         </div>
 
+                        <hr class="fxs_divider_third">
+
                         <div class="fxs_clearfix fxs_marginBase_bottom">
-                            <h3 class="fxs_helperLabel_title">Author box Big</h3>
+                            <div class="fxs_clearfix fxs_marginBase_bottom">
+                                <h3 class="fxs_helperLabel_title">Author box Big</h3>
+                            </div>
 
                             <!-- Author box Big --><!-- For dev -->
                             <address class="fxs_contributorBox fxs_contributorBox_big">
@@ -1157,7 +1169,9 @@
                                     <span class="fxs_author_description">
                                         Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
                                     </span>
-                                    <a id="my_author" class="fxs_btn fxs_btn_line fxs_btn_small" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</a>
+                                    <button type="button" id="my_author" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
+                                        <span data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                    </button>
                                 </span>
                                 <script type="application/ld+json">
                                 // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
@@ -1811,16 +1825,12 @@
           $('[data-toggle="tooltip"]').tooltip()
         });
 
+
+        /////////////////////////////////////////////
         // METIDO A SACO PARA EJEMPLOS DE STYLETILES
-
-        //Author follow
-        $(function() {                       //run when the DOM is ready
-          $("#my_author").click(function() {  //use a class, since your ID gets mangled
-            $(this).toggleClass("active");      //add the class to the clicked element
-          });
-        });
-
-        ///////// Global alerts/notifications
+        //////////////////////////////////
+        
+        // Global alerts/notifications
         $('#myGlobalAlert').click(function () {
             $('#globalAlertExample').addClass('in');
         });
