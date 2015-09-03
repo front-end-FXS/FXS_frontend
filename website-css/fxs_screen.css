@@ -1572,6 +1572,7 @@ input[type=submit] {
 }
 .fxs_btn,
 .fxs_btn_icon {
+  background-color: transparent;
   border: 1px solid transparent;
   height: 35px;
   margin: 2px 0;
@@ -1652,7 +1653,6 @@ fieldset[disabled] .fxs_btn_icon {
   background-color: #49494f;
 }
 .fxs_btn_content_toggle {
-  background-color: transparent;
   border-top: 1px solid #a3a3a8;
   color: #8c8d91;
   font-size: 0.75rem;
@@ -1681,7 +1681,6 @@ fieldset[disabled] .fxs_btn_icon {
   font-size: inherit;
   margin: 0;
   padding: 0 0.5rem;
-  background-color: transparent;
 }
 .fxs_btn_phantom:hover,
 .fxs_btn_phantom.active,
@@ -3270,6 +3269,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_show_navmenu,
 .fxs_show_usermenu {
+  background-color: transparent;
   border: none;
   height: 45px;
   margin: 0;
@@ -3539,6 +3539,13 @@ height:calc(100% - 45px);
   width: 70px;
   position: relative;
   cursor: pointer;
+}
+.fxs_user_area_content .form_group label:hover {
+  zoom: 1;
+  filter: alpha(opacity=75);
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
 }
 .fxs_user_area_content .form_group label .custom-file-input {
   height: 0;
@@ -3829,6 +3836,7 @@ width:calc(100% - 320px);
 }
 .fxs_copy_disclaimer .fxs_terms_nav .fxs_copyRight {
   margin-right: 0.5rem;
+  line-height: 35px;
 }
 .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
   display: none;

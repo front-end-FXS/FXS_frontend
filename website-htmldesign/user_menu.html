@@ -15,7 +15,10 @@
 <body class="cbp-spmenu-push fxs_isParent_section">
     <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
     <header class="fxs_header">
-        <a id="showLeftPush" class="fxs_show_navmenu"><i class="fa fa-bars"></i></a>
+        <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
         <a class="fxs_logo" href="#" title="FXStreet">FXStreet</a>
         <nav class="fxs_nav_menu" role="navigation">
             <ul>
@@ -30,12 +33,13 @@
             </ul>
         </nav>
         
-        <a id="showRightPush" class="fxs_show_usermenu">
-            <div class="fxs_badge">1</div>
+        <button type="button" id="showRightPush" class="fxs_show_usermenu">
+            <span class="fxs_badge">1</span>
             <span class="fxs_avatar_circleImage_s">
                 <img src="../website-img/user_avatar.jpg">
             </span>
-        </a>
+            <span class="fxs_skip">User Settings</span>
+        </button>
 
     </header>
 
@@ -459,43 +463,11 @@
     <!-- /The wrapper -->
 
     <script src="../website-js/jquery-1.11.3.min.js"></script>
-    <script src="../website-js/jquery-ui.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../website-js/bootstrap.min.js"></script>
     <script src="../website-js/classie.js"></script>
     <script src="../website-js/jquery.typeahead.min.js"></script>
     <script src="../website-js/site.js"></script>
-    <script>
-        $('#fxs_lang_selected').click(function () {
-            $('.fxs_sidebar_language').toggleClass('active');
-        });
-
-        $('#fxs_timezone_btn').click(function () {
-            $('.fxs_timezone_items').addClass('fxs_pageSidebar_transition');
-            $('.fxs_timezone_items').css('right', '0');
-
-        })
-
-        $("#selectable").selectable();
-
-        $('#fxs_timezone_close, #fxs_timezone_done').click(function () {
-            $('.fxs_timezone_items').css('right', '-276px');
-        })
-
-
-        //$("#selectable").selectable();
-
-        $('#fxs_login_btn').click(function () {
-            $('.fxs_login_form_content').show();
-            $('.fxs_signup_form_content').hide();
-            $(this).addClass('active');
-            $('#fxs_signup_btn').removeClass('active');
-        });
-        $('#fxs_signup_btn').click(function () {
-            $('.fxs_login_form_content').hide();
-            $('.fxs_signup_form_content').show();
-            $(this).addClass('active');
-            $('#fxs_login_btn').removeClass('active');
-        });
-    </script>
 
 </body>
 

@@ -296,11 +296,12 @@
   border-bottom:1px solid @dark_3_clr;
   padding:1rem 2rem 1rem 1rem;
   .form_group {
-    float:left;
+    float: left;
     label {
       width: 70px;
       position:relative;
       cursor:pointer;
+      &:hover { .opacity(.75); }
       .custom-file-input{ height: 0; }
       .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
@@ -530,7 +531,10 @@
     display: inline-block;
     padding: 0 1rem;
     vertical-align: middle;
-    .fxs_copyRight{ margin-right:0.5rem; }
+    .fxs_copyRight{
+      margin-right: 0.5rem;
+      line-height: @base_module_size;
+    }
     .fxs_subnavInlined_list {
       display: none;
       @media (min-width: @screen-l) { display: inline-block; }
