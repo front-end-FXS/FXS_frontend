@@ -42,7 +42,6 @@
   height: 100%;
   .opacity(0);
   top: 0;
-  overflow-x: hidden;
   visibility: hidden;
   &.fxs_sidebar_nav  { left: 0; }
   &.fxs_sidebar_user { right: 0; }
@@ -115,8 +114,8 @@
   float: right;
   position:relative;
   .fxs_badge{
-    bottom:2px;
-    right:1px;
+    top: 1px;
+    right: 1px;
     margin: 0;
     position:absolute;
     z-index: 1;
@@ -299,11 +298,10 @@
   .form_group {
     float:left;
     label {
-      width:70px;
+      width: 70px;
       position:relative;
-      margin-bottom:none;
       cursor:pointer;
-      .custom-file-input{ height:0; }
+      .custom-file-input{ height: 0; }
       .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
         width:0;
@@ -324,10 +322,6 @@
     .fxs_profile_data {
       color:@light_2_clr;
       font-size: @txt_size_small;
-      span {
-          color:@error_clr;
-          font-size: @txt_size_small;
-      }
     }
   }
 }
@@ -533,12 +527,17 @@
   background-color: @light_5_clr;
   height: @base_module_size;
   .fxs_terms_nav {  
-    float: left; 
-    padding: 5px 5px 5px 1rem;
-    .fxs_copyRight{ margin-right:5px; }
+    display: inline-block;
+    padding: 0 1rem;
+    vertical-align: middle;
+    .fxs_copyRight{ margin-right:0.5rem; }
     .fxs_subnavInlined_list {
       display: none;
       @media (min-width: @screen-l) { display: inline-block; }
+    }
+    .fxs_dropdownList {
+      &:extend(.fxs_scrollableContent all);
+      max-height: @main_header_height*8;
     }
   }
   .fxs_disclaimer_block {

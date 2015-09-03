@@ -40,7 +40,7 @@
 .fxs_subnavInlined_list {
   font-size: @txt_size_nano;
   display: inline-block;
-  li {
+  > li {
     display: inline-block;
     padding-right: 5px;
   }
@@ -82,7 +82,7 @@
 
 // BUTTONS
 .fxs_btn, .fxs_btn_icon {
-  .fxs_btn_properties(1px solid transparent; @base_module_size; 0.25rem 0; 0 1rem);
+  .fxs_btn_properties(1px solid transparent; @base_module_size; 2px 0; 0 1rem);
   line-height: @base_module_size - 1;
 }
 
@@ -136,6 +136,26 @@
   &:hover, &.active { color: @dark_4_clr; }
 }
 
+// Close button
+.fxs_close {
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -5px -2px -5px 0;
+  font-size: @txt_size_large;
+  &:hover { .opacity(.75); }
+}
+
+// Button phantom
+.fxs_btn_phantom {
+  font-size: inherit;
+  margin: 0;
+  padding: 0 0.5rem;
+  background-color: transparent;
+  &:hover, &.active, .open > & { background-color: @light_3_clr; }
+}
+
 // Button variants
 .fxs_btn_default {
   .fxs-button-variants(@lightest_clr; @brand_highlight_clr; @brand_highlight_clr);
@@ -162,17 +182,6 @@
   }
 }
 
-// Close button
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: @txt_size_large;
-  &:hover { .opacity(.75); }
-}
-
 // Togle text in buttons
 .fxs_togglebtn_txt {
   display: block;
@@ -185,7 +194,8 @@
   }
 }
 
-// LABELS
+//////////////////////////
+//////// LABELS //////////
 .fxs_label, .fxs_alertLabel {
 	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_nano);
   line-height: @txt_lineheight_reset;
@@ -225,7 +235,7 @@
   display: inline-block;
   font-size: @txt_size_nano;
   line-height: 1rem;
-  margin-right: 0.4rem;
+  margin: 0 0.33rem;
   min-width: 1rem;
   text-align:center;
   vertical-align: middle;
@@ -658,7 +668,7 @@
 
 /// DROPDOWNS
 .fxs_dropdown_generic {
-  .animation(just-appear 0.3s ease-in);
+  .animation(just-appear 0.25s ease-in);
 	display: none;
 	position: absolute;
 	right: 0;
@@ -698,8 +708,6 @@
 	border-bottom-color: @dark_3_clr;
   }
   &.dropup {
-    margin-bottom: 2px;
-    margin-top: 0;
     &::after { display: none; }
   }
   .fxs_divider_third {

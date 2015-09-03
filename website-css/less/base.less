@@ -231,7 +231,6 @@
 // Scrollable content
 .fxs_scrollableContent {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
   overflow-y: auto;
   @media (min-width: @screen-m) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
@@ -252,9 +251,6 @@
         display: none;
       }
       scrollbar-base-color: transparent;
-      scrollbar-3dlight-color: @lightest_clr;
-      scrollbar-highlight-color: @lightest_clr;
-      scrollbar-track-color: @light_4_clr;
       -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }

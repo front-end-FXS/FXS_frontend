@@ -550,16 +550,12 @@ table.fxs_table a,
 .fxs_scrollableContent,
 .fxs_swipeContent_slider {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 @media (min-width: 1024px) {
   .fxs_scrollableContent,
   .fxs_swipeContent_slider {
     scrollbar-base-color: transparent;
-    scrollbar-3dlight-color: #ffffff;
-    scrollbar-highlight-color: #ffffff;
-    scrollbar-track-color: #f0f0f1;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
   .fxs_scrollableContent::-webkit-scrollbar,
@@ -824,7 +820,7 @@ input[type=submit] {
   font-size: 11px;
   display: inline-block;
 }
-.fxs_subnavInlined_list li {
+.fxs_subnavInlined_list > li {
   display: inline-block;
   padding-right: 5px;
 }
@@ -929,7 +925,7 @@ input[type=submit] {
 .fxs_btn_icon {
   border: 1px solid transparent;
   height: 35px;
-  margin: 0.25rem 0;
+  margin: 2px 0;
   padding: 0 1rem;
   cursor: pointer;
   display: inline-block;
@@ -1016,6 +1012,32 @@ fieldset[disabled] .fxs_btn_icon {
 .fxs_btn_content_toggle:hover,
 .fxs_btn_content_toggle.active {
   color: #49494f;
+}
+.fxs_close {
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -5px -2px -5px 0;
+  font-size: 1.125rem;
+}
+.fxs_close:hover {
+  zoom: 1;
+  filter: alpha(opacity=75);
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
+.fxs_btn_phantom {
+  font-size: inherit;
+  margin: 0;
+  padding: 0 0.5rem;
+  background-color: transparent;
+}
+.fxs_btn_phantom:hover,
+.fxs_btn_phantom.active,
+.open > .fxs_btn_phantom {
+  background-color: #dddedf;
 }
 .fxs_btn_default {
   color: #ffffff;
@@ -1267,21 +1289,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .fxs_pageSidebar .fxs_btn_line:active {
   color: #1b1c23;
 }
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: 1.125rem;
-}
-.fxs_close:hover {
-  zoom: 1;
-  filter: alpha(opacity=75);
-  -webkit-opacity: 0.75;
-  -moz-opacity: 0.75;
-  opacity: 0.75;
-}
 .fxs_togglebtn_txt {
   display: block;
   margin: 0 -1rem;
@@ -1341,7 +1348,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   display: inline-block;
   font-size: 11px;
   line-height: 1rem;
-  margin-right: 0.4rem;
+  margin: 0 0.33rem;
   min-width: 1rem;
   text-align: center;
   vertical-align: middle;
@@ -1932,10 +1939,10 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_dropdown_generic,
 .fxs_dropdownList,
 .fxs_btnGroup_dropdownList {
-  -webkit-animation: just-appear 0.3s ease-in;
-  -moz-animation: just-appear 0.3s ease-in;
-  -o-animation: just-appear 0.3s ease-in;
-  animation: just-appear 0.3s ease-in;
+  -webkit-animation: just-appear 0.25s ease-in;
+  -moz-animation: just-appear 0.25s ease-in;
+  -o-animation: just-appear 0.25s ease-in;
+  animation: just-appear 0.25s ease-in;
   display: none;
   position: absolute;
   right: 0;
@@ -1976,10 +1983,6 @@ fieldset[disabled] .fxs_dismissQuery {
   right: 14px;
   border: 4px solid transparent;
   border-bottom-color: #2f2f33;
-}
-.fxs_dropdownList.dropup {
-  margin-bottom: 2px;
-  margin-top: 0;
 }
 .fxs_dropdownList.dropup::after {
   display: none;

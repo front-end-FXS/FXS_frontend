@@ -1160,9 +1160,9 @@ h5 a:hover,
 .fxs_swipeContent_slider,
 .fxs_pageSidebar,
 .fxs_timezone_hours,
-.fxs_listViewRail {
+.fxs_listViewRail,
+.fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 @media (min-width: 1024px) {
@@ -1170,11 +1170,9 @@ h5 a:hover,
   .fxs_swipeContent_slider,
   .fxs_pageSidebar,
   .fxs_timezone_hours,
-  .fxs_listViewRail {
+  .fxs_listViewRail,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList {
     scrollbar-base-color: transparent;
-    scrollbar-3dlight-color: #ffffff;
-    scrollbar-highlight-color: #ffffff;
-    scrollbar-track-color: #f0f0f1;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
   .fxs_scrollableContent::-webkit-scrollbar,
@@ -1196,14 +1194,19 @@ h5 a:hover,
   .fxs_listViewRail::-webkit-scrollbar,
   .fxs_listViewRail::-webkit-scrollbar-track,
   .fxs_listViewRail::-webkit-scrollbar-corner,
-  .fxs_listViewRail::-webkit-scrollbar-button {
+  .fxs_listViewRail::-webkit-scrollbar-button,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-track,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-corner,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-button {
     background-color: transparent;
   }
   .fxs_scrollableContent::-webkit-scrollbar,
   .fxs_swipeContent_slider::-webkit-scrollbar,
   .fxs_pageSidebar::-webkit-scrollbar,
   .fxs_timezone_hours::-webkit-scrollbar,
-  .fxs_listViewRail::-webkit-scrollbar {
+  .fxs_listViewRail::-webkit-scrollbar,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar {
     width: 5px;
     height: 5px;
     border-radius: 5px;
@@ -1212,7 +1215,8 @@ h5 a:hover,
   .fxs_swipeContent_slider::-webkit-scrollbar-track,
   .fxs_pageSidebar::-webkit-scrollbar-track,
   .fxs_timezone_hours::-webkit-scrollbar-track,
-  .fxs_listViewRail::-webkit-scrollbar-track {
+  .fxs_listViewRail::-webkit-scrollbar-track,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
     -moz-box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
     box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
@@ -1221,7 +1225,8 @@ h5 a:hover,
   .fxs_swipeContent_slider::-webkit-scrollbar-thumb,
   .fxs_pageSidebar::-webkit-scrollbar-thumb,
   .fxs_timezone_hours::-webkit-scrollbar-thumb,
-  .fxs_listViewRail::-webkit-scrollbar-thumb {
+  .fxs_listViewRail::-webkit-scrollbar-thumb,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
     -moz-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
     box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
@@ -1232,7 +1237,8 @@ h5 a:hover,
   .fxs_swipeContent_slider::-webkit-scrollbar-button,
   .fxs_pageSidebar::-webkit-scrollbar-button,
   .fxs_timezone_hours::-webkit-scrollbar-button,
-  .fxs_listViewRail::-webkit-scrollbar-button {
+  .fxs_listViewRail::-webkit-scrollbar-button,
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-button {
     width: 0;
     height: 0;
     display: none;
@@ -1463,7 +1469,7 @@ input[type=submit] {
   font-size: 11px;
   display: inline-block;
 }
-.fxs_subnavInlined_list li {
+.fxs_subnavInlined_list > li {
   display: inline-block;
   padding-right: 5px;
 }
@@ -1568,7 +1574,7 @@ input[type=submit] {
 .fxs_btn_icon {
   border: 1px solid transparent;
   height: 35px;
-  margin: 0.25rem 0;
+  margin: 2px 0;
   padding: 0 1rem;
   cursor: pointer;
   display: inline-block;
@@ -1655,6 +1661,32 @@ fieldset[disabled] .fxs_btn_icon {
 .fxs_btn_content_toggle:hover,
 .fxs_btn_content_toggle.active {
   color: #49494f;
+}
+.fxs_close {
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -5px -2px -5px 0;
+  font-size: 1.125rem;
+}
+.fxs_close:hover {
+  zoom: 1;
+  filter: alpha(opacity=75);
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
+.fxs_btn_phantom {
+  font-size: inherit;
+  margin: 0;
+  padding: 0 0.5rem;
+  background-color: transparent;
+}
+.fxs_btn_phantom:hover,
+.fxs_btn_phantom.active,
+.open > .fxs_btn_phantom {
+  background-color: #dddedf;
 }
 .fxs_btn_default {
   color: #ffffff;
@@ -1906,21 +1938,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .fxs_pageSidebar .fxs_btn_line:active {
   color: #1b1c23;
 }
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: 1.125rem;
-}
-.fxs_close:hover {
-  zoom: 1;
-  filter: alpha(opacity=75);
-  -webkit-opacity: 0.75;
-  -moz-opacity: 0.75;
-  opacity: 0.75;
-}
 .fxs_togglebtn_txt {
   display: block;
   margin: 0 -1rem;
@@ -1980,7 +1997,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   display: inline-block;
   font-size: 11px;
   line-height: 1rem;
-  margin-right: 0.4rem;
+  margin: 0 0.33rem;
   min-width: 1rem;
   text-align: center;
   vertical-align: middle;
@@ -2586,10 +2603,10 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_dropdown_generic,
 .fxs_dropdownList,
 .fxs_btnGroup_dropdownList {
-  -webkit-animation: just-appear 0.3s ease-in;
-  -moz-animation: just-appear 0.3s ease-in;
-  -o-animation: just-appear 0.3s ease-in;
-  animation: just-appear 0.3s ease-in;
+  -webkit-animation: just-appear 0.25s ease-in;
+  -moz-animation: just-appear 0.25s ease-in;
+  -o-animation: just-appear 0.25s ease-in;
+  animation: just-appear 0.25s ease-in;
   display: none;
   position: absolute;
   right: 0;
@@ -2630,10 +2647,6 @@ fieldset[disabled] .fxs_dismissQuery {
   right: 14px;
   border: 4px solid transparent;
   border-bottom-color: #2f2f33;
-}
-.fxs_dropdownList.dropup {
-  margin-bottom: 2px;
-  margin-top: 0;
 }
 .fxs_dropdownList.dropup::after {
   display: none;
@@ -3150,7 +3163,6 @@ fieldset[disabled] .fxs_dismissQuery {
   -moz-opacity: 0;
   opacity: 0;
   top: 0;
-  overflow-x: hidden;
   visibility: hidden;
 }
 .fxs_pageSidebar.fxs_sidebar_nav {
@@ -3311,7 +3323,7 @@ fieldset[disabled] .fxs_show_usermenu {
   position: relative;
 }
 .fxs_show_usermenu .fxs_badge {
-  bottom: 2px;
+  top: 1px;
   right: 1px;
   margin: 0;
   position: absolute;
@@ -3526,7 +3538,6 @@ height:calc(100% - 45px);
 .fxs_user_area_content .form_group label {
   width: 70px;
   position: relative;
-  margin-bottom: none;
   cursor: pointer;
 }
 .fxs_user_area_content .form_group label .custom-file-input {
@@ -3550,10 +3561,6 @@ height:calc(100% - 45px);
 }
 .fxs_user_area_content .fxs_user_info .fxs_profile_data {
   color: #a3a3a8;
-  font-size: 0.88rem;
-}
-.fxs_user_area_content .fxs_user_info .fxs_profile_data span {
-  color: #cf4836;
   font-size: 0.88rem;
 }
 .fxs_contentView {
@@ -3816,11 +3823,12 @@ width:calc(100% - 320px);
   height: 35px;
 }
 .fxs_copy_disclaimer .fxs_terms_nav {
-  float: left;
-  padding: 5px 5px 5px 1rem;
+  display: inline-block;
+  padding: 0 1rem;
+  vertical-align: middle;
 }
 .fxs_copy_disclaimer .fxs_terms_nav .fxs_copyRight {
-  margin-right: 5px;
+  margin-right: 0.5rem;
 }
 .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
   display: none;
@@ -3829,6 +3837,9 @@ width:calc(100% - 320px);
   .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
     display: inline-block;
   }
+}
+.fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList {
+  max-height: 360px;
 }
 .fxs_copy_disclaimer .fxs_disclaimer_block {
   display: none;
