@@ -103,19 +103,37 @@
   }
 }
 
-.fxs_btn_block {
-  display: block;
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
 .fxs_btn_group {
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  > [class^="fxs_btn"] { float: left; }
+  > [class^="fxs_btn"]:not(.fxs_btn_block) { float: left; }
   > [class^="fxs_btn"]:not(:first-child):not(.fxs_btn_dd) { margin-left: -1px; }
   > .fxs_btn_dd:not(:first-child) { margin-left: 1px; }
+}
+
+.fxs_btn_block {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  &.fxs_sidebar_language { margin: 0; }
+}
+
+.fxs_lang_btn {
+  margin: 0;
+  background-color: @dark_3_clr;
+  color: @lightest_clr;
+  text-align: left;
+  &:hover, .open & { background-color:@dark_4_clr; }
+}
+
+.fxs_btn_content_toggle {
+  background-color: transparent;
+  border-top: 1px solid @light_2_clr;
+  color: @light_1_clr;
+  font-size: @txt_size_xsmall;
+  text-transform: uppercase;
+  &:hover, &.active { color: @dark_4_clr; }
 }
 
 // Button variants
@@ -640,7 +658,7 @@
 
 /// DROPDOWNS
 .fxs_dropdown_generic {
-  .animation(slide-from-top-and-appear 0.3s ease-in);
+  .animation(just-appear 0.3s ease-in);
 	display: none;
 	position: absolute;
 	right: 0;
@@ -648,15 +666,20 @@
 	.open > & {
 		display: block;
 		top: 100%;
+    &.dropup {
+      bottom: 100%;      
+      top: auto;
+    }
 	}
 }
 // Dropdown list
 .fxs_dropdownList {
   &:extend(.fxs_dropdown_generic all);
 	background-color: @dark_3_clr;
-	margin-top: 0.25rem;
-	min-width: 170px;
+	margin-top: 2px;
+	min-width: @base_module_size*4;
   width: 100%;
+  padding-bottom: 2px;
   > li {
     > a {
       color: @lightest_clr;
@@ -665,7 +688,7 @@
       &:hover{ background-color: @dark_4_clr; }
     }
   }
-  &:after{
+  &::after{
 	content: " ";
 	display: block;
 	position: absolute;
@@ -674,8 +697,13 @@
 	border: 4px solid transparent;
 	border-bottom-color: @dark_3_clr;
   }
+  &.dropup {
+    margin-bottom: 2px;
+    margin-top: 0;
+    &::after { display: none; }
+  }
   .fxs_divider_third {
-  	margin: 0.5rem 0;
+  	margin: 0 0 2px;
   	background-color: @dark_4_clr;
   }
 }
@@ -687,7 +715,7 @@
 
 .fxs_dropdownHeader {
   .fxs_stiled_text_variants(block; @light_2_clr; @txt_size_xsmall;);
-  line-height: @base_module_size;
+  margin: 0.5rem 0;
 }
 
 .fxs_dropdownList > li > a {
@@ -1100,6 +1128,19 @@
   }
   > .active {
     display: block;
+  }
+}
+
+// Radio toggle buttons
+[data-toggle="buttons"] {
+  > .btn,
+  > .fxs_btn_group > .btn {
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
   }
 }
 
