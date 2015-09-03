@@ -566,45 +566,46 @@
     margin-left: @left_rail_space;
     .calc(width, ~'100% - @{left_rail_space}'); 
   }
-  .fxs_copy_disclaimer{ // capa contenedora navegación copyright y disclaimer
-    background-color: @light_5_clr;
-    height: @base_module_size;
-    .fxs_terms_nav{  
-      float: left; 
-      padding: 5px 5px 5px 1rem;
-      .fxs_copyRight{ margin-right:5px; }
-      .fxs_subnavInlined_list {
-        display: none;
-        @media (min-width: @screen-l) {
-          display: inline-block;
-        }
-      }
+}
+
+.fxs_copy_disclaimer { // capa contenedora navegación copyright y disclaimer
+  background-color: @light_5_clr;
+  height: @base_module_size;
+  .fxs_terms_nav {  
+    float: left; 
+    padding: 5px 5px 5px 1rem;
+    .fxs_copyRight{ margin-right:5px; }
+    .fxs_subnavInlined_list {
+      display: none;
+      @media (min-width: @screen-l) { display: inline-block; }
     }
-    .fxs_btn_disclaimer{
-      right:0;
-      position:absolute;
-      background-color:@lightest_clr;
-      font-size:@txt_size_nano;
-      margin: 0;
-    }
-  }    
-  .fxs_disclaimer_block{
+  }
+  .fxs_disclaimer_block {
     display:none;
     position:absolute;
     bottom: 100%;
     margin-bottom: 0;
     background-color: @lightest_clr;
-    max-height: @base_module_size*6.5; 
+    max-height: @base_module_size*6.5;
   }
-  .fxs_disclaimer_block.active{ display:block; }
+  &.open .fxs_disclaimer_block { display:block; }
 }
 
-// FINAL DETAIL INFO PAGE (WIDGETS, CALENDAR EVENTS, ...)
+.fxs_btn_disclaimer {
+  position:absolute;
+  right:0;
+  top: 0;
+  background-color:@lightest_clr;
+  font-size:@txt_size_nano;
+  margin: 0;
+}
+
+// FINAL DETAIL INFO PAGE CONTAINER (WIDGETS, CALENDAR EVENTS, ...)
 .fxs_detailInfo_page {
   .fxs_entryPlain_txt {
     &:extend(.fxs_clearfix all);
     margin-bottom: 2rem;
-    @media (min-width: @screen-m) { max-width: 66.66%; }
+    @media (min-width: @screen-m) { max-width: 75%; }
   }
 }
 

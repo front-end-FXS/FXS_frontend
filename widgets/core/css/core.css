@@ -1265,6 +1265,20 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   -moz-opacity: 0.75;
   opacity: 0.75;
 }
+.fxs_togglebtn_txt {
+  display: block;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+.fxs_togglebtn_txt.toggled_txt {
+  display: none;
+}
+.active .fxs_togglebtn_txt.init_txt {
+  display: none;
+}
+.active .fxs_togglebtn_txt.toggled_txt {
+  display: block;
+}
 .fxs_label,
 .fxs_alertLabel {
   display: inline-block;
@@ -1367,7 +1381,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 }
 .fxs_global_alert {
   display: none;
-  margin-top: 35px;
+  margin-top: 34px;
   padding-left: 1rem;
   position: fixed;
   width: 100%;
@@ -2385,6 +2399,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_modal_content .fxs_detail {
   margin-bottom: 0;
+  padding-bottom: 70px;
 }
 .fxs_modal_add.fxs_leaderboard {
   background-color: #dddedf;

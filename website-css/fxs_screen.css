@@ -1904,6 +1904,20 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   -moz-opacity: 0.75;
   opacity: 0.75;
 }
+.fxs_togglebtn_txt {
+  display: block;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+.fxs_togglebtn_txt.toggled_txt {
+  display: none;
+}
+.active .fxs_togglebtn_txt.init_txt {
+  display: none;
+}
+.active .fxs_togglebtn_txt.toggled_txt {
+  display: block;
+}
 .fxs_label,
 .fxs_alertLabel {
   display: inline-block;
@@ -2006,7 +2020,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 }
 .fxs_global_alert {
   display: none;
-  margin-top: 35px;
+  margin-top: 34px;
   padding-left: 1rem;
   position: fixed;
   width: 100%;
@@ -3039,6 +3053,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_modal_content .fxs_detail {
   margin-bottom: 0;
+  padding-bottom: 70px;
 }
 .fxs_modal_add.fxs_leaderboard {
   background-color: #dddedf;
@@ -3780,33 +3795,26 @@ width:calc(100% - 320px);
 ;
   }
 }
-.fxs_footer .fxs_copy_disclaimer {
+.fxs_copy_disclaimer {
   background-color: #f8f8f8;
   height: 35px;
 }
-.fxs_footer .fxs_copy_disclaimer .fxs_terms_nav {
+.fxs_copy_disclaimer .fxs_terms_nav {
   float: left;
   padding: 5px 5px 5px 1rem;
 }
-.fxs_footer .fxs_copy_disclaimer .fxs_terms_nav .fxs_copyRight {
+.fxs_copy_disclaimer .fxs_terms_nav .fxs_copyRight {
   margin-right: 5px;
 }
-.fxs_footer .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
+.fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
   display: none;
 }
 @media (min-width: 1100px) {
-  .fxs_footer .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
+  .fxs_copy_disclaimer .fxs_terms_nav .fxs_subnavInlined_list {
     display: inline-block;
   }
 }
-.fxs_footer .fxs_copy_disclaimer .fxs_btn_disclaimer {
-  right: 0;
-  position: absolute;
-  background-color: #ffffff;
-  font-size: 11px;
-  margin: 0;
-}
-.fxs_footer .fxs_disclaimer_block {
+.fxs_copy_disclaimer .fxs_disclaimer_block {
   display: none;
   position: absolute;
   bottom: 100%;
@@ -3814,15 +3822,23 @@ width:calc(100% - 320px);
   background-color: #ffffff;
   max-height: 227.5px;
 }
-.fxs_footer .fxs_disclaimer_block.active {
+.fxs_copy_disclaimer.open .fxs_disclaimer_block {
   display: block;
+}
+.fxs_btn_disclaimer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #ffffff;
+  font-size: 11px;
+  margin: 0;
 }
 .fxs_detailInfo_page .fxs_entryPlain_txt {
   margin-bottom: 2rem;
 }
 @media (min-width: 1024px) {
   .fxs_detailInfo_page .fxs_entryPlain_txt {
-    max-width: 66.66%;
+    max-width: 75%;
   }
 }
 @media (min-width: 680px) {

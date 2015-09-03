@@ -167,11 +167,4 @@ $(document).ready(function () {
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
     });
 
-    // Footer disclaimer (a saco)
-
-    // footer
-    $(".fxs_btn_disclaimer").click(function () {
-        $(".fxs_disclaimer_block").toggleClass("active");
-    });
-
 });

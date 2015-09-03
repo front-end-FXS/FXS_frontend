@@ -155,6 +155,18 @@
   &:hover { .opacity(.75); }
 }
 
+// Togle text in buttons
+.fxs_togglebtn_txt {
+  display: block;
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  &.toggled_txt { display: none; }
+  .active & {
+    &.init_txt { display: none; }
+    &.toggled_txt { display: block; }
+  }
+}
+
 // LABELS
 .fxs_label, .fxs_alertLabel {
 	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_nano);
@@ -231,7 +243,7 @@
 // Global alert
 .fxs_global_alert {
   display: none;
-  margin-top: @base_module_size;
+  margin-top: @base_module_size - 1px;
   padding-left: 1rem;
   position: fixed;
   width: 100%;
@@ -1112,7 +1124,7 @@
   @media(min-width:@screen-s){ display: inline-block; }
 }
 
-.fxs_modal_content{
+.fxs_modal_content {
   position:relative;
   max-width: 1000px;
   margin: 0 auto;
@@ -1122,7 +1134,10 @@
     margin-left: 0;
     width: 100%;
   }
-  .fxs_detail { margin-bottom: 0; }
+  .fxs_detail {
+    margin-bottom: 0;
+    padding-bottom: @base_module_size*2;
+  }
 }
 
 .fxs_modal_add.fxs_leaderboard {
