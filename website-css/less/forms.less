@@ -7,20 +7,20 @@ button, input {
 
 // Text inputs & fields
 input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
-    &:extend(.fxs_transition);
-    -webkit-appearance: none; // Reset para safari y iOS
-    height: @base_module_size;
-    background-color: @lightest_clr;
-    border: 1px solid @dark_3_clr;
-    color: @dark_4_clr;
-    font-size: @txt_size_small;
-    padding: 5px 1rem;
-    &:hover { border-color: @light_2_clr; }
-    &:focus {
-        outline: 0;
-        border-color: @highlight_clr;
-    }
-    &:invalid, &.fxs_hasError { border-color: @error_clr; }
+  &:extend(.fxs_transition);
+  -webkit-appearance: none; // Reset para safari y iOS
+  height: @base_module_size;
+  background-color: @lightest_clr;
+  border: 1px solid @dark_3_clr;
+  color: @dark_4_clr;
+  font-size: @txt_size_small;
+  padding: 5px 1rem;
+  &:hover { border-color: @light_2_clr; }
+  &:focus {
+    outline: 0;
+    border-color: @highlight_clr;
+  }
+  &:invalid, .fxs_hasError & { border-color: @error_clr; }
 }
 
 input[type="search"]{
@@ -30,64 +30,50 @@ input[type="search"]{
     &::-webkit-search-results-decoration { display: none; }
 }
 
-input[type=checkbox]{
-    -webkit-appearance: checkbox; // default state don't display checkbox ??
-    vertical-align:top;
-    margin-right: 0.5rem;
+input[type=checkbox], input[type=radio] {
+  vertical-align: top;
+  margin: 5px;
 }
 
 label {
-    &:extend(.fxs_boldAntialised_style);
-    display: inline-block;
-    margin-bottom: 0.5rem;
+  &:extend(.fxs_boldAntialised_style);
+  display: inline-block;
+  margin-bottom: 5px;
+  .fxs_hasError &, .fxs_hasError &.fxs_btn_icon { color: @error_clr; }
 }
 
-///////////////////////////////////////////////////////
-//////////////// Buttons basic styles ////////////////
-// BTN
+// Buttons basic styles
 button, input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
+// Fieldset styles
+.fxs_fieldset {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #DDDEDF;
+  legend { .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall;); }
+}
 ///////////////////////////////////////////////////////////
 ////////// Forms grouped layouts & input groups //////////
 .fxs_formGroup {
-    margin-bottom: 0.75rem;
-    .fxs_textInput { width: 100%; }
+  margin-bottom: 1rem;
+  .fxs_textInput { width: 100%; }
 }
 
-.fxs_checkboxGroup {
-    font-size: @txt_size_xsmall;
-    margin-bottom: 0;
-}
+.fxs_checkboxGroup { font-size: @txt_size_small; }
 
 .fxs_inputGroup_iconLabel {
-    position: relative;
-    .fxs_btn_icon {
-        color: @light_3_clr;
-        left: 0;
-        margin: 0;
-        position: absolute;
-        top: 0;
-        z-index: 1;
-    }
-    .fxs_textInput { padding-left: @base_module_size;}
-}
-
-.fxs_subscribeForm_group {
-  margin-bottom: 1rem;
-  display: inline-block;
-  > * { margin-bottom: 0.5rem; }
-  @media (min-width: @screen-s) { width: auto; }
-  .fxs_textInput {
-    vertical-align: middle;
-    width: 100%;
-    display: inline-block;
-    @media (min-width: @screen-s) {
-        width: auto;
-        min-width: 250px;
-    }
-    @media (min-width: @screen-l) { min-width: 320px; }
+  position: relative;
+  .fxs_btn_icon {
+    color: @light_3_clr;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
   }
+  .fxs_textInput { padding-left: @base_module_size;}
 }
+//

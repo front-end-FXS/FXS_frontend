@@ -172,65 +172,57 @@
 
 // sidebar user
 .fxs_sidebar_user {
-    .fxs_authentication_form_content{ 
-        margin-bottom: @main_header_height;
-        font-size: @txt_size_xsmall;
-        .fxs_authentication_form {
-            margin:0 10px 1rem;
-            .fxs_signup_conditions {
-            margin-left: 1.5rem;
-            display: block;
-            }
-        }
-        // rules for divider
-        .fxs_sidebar_divider {
-            margin:10px 0 10px 0;
-            text-align: center;
-            position:relative;
-            span {
-                display: inline-block;
-                text-transform:uppercase;
-                color:@light_1_clr; 
-                font-style:italic;
-                font-size:@txt_size_small;
-                &::before,
-                &::after {
-                    border-top: 1px solid  @dark_3_clr;
-                    display: block;
-                    height: 1px;
-                    content: " ";
-                    width: 45%;
-                    position: absolute;
-                    left: 0;
-                    top: 0.7rem;
-                }
-                &::after {
-                    right: 0;  
-                    left: auto; 
-                }
-            }
-        }
-        //
-        .fxs_social_sidebar_nav{
-            padding:10px;
-            .fxs_btn {
-            text-align: left;
-            i { padding-right: 30px; }
-            }
-        }
-        .fxs_login_message{
-            background-color:@dark_3_clr;
-            color:@light_2_clr;
-            padding:10px 1rem 10px 1rem;
-            margin-top:30px;
-            p{
-                font-style:italic;
-                text-transform:uppercase;
-                margin:0;
-            }
-        }
+  .fxs_authentication_form_content { 
+    margin-bottom: @main_header_height;
+    font-size: @txt_size_xsmall;
+    .fxs_authentication_form { margin:0 10px 1rem; }
+    .fxs_signup_conditions {
+      margin-left: 1.5rem;
+      display: block;
     }
-   
+    // rules for divider
+    .fxs_sidebar_divider {
+      margin:10px 0 10px 0;
+      text-align: center;
+      position:relative;
+      span {
+        display: inline-block;
+        text-transform:uppercase;
+        color:@light_1_clr; 
+        font-style:italic;
+        font-size:@txt_size_small;
+        &::before,
+        &::after {
+          border-top: 1px solid  @dark_3_clr;
+          display: block;
+          height: 1px;
+          content: " ";
+          width: 45%;
+          position: absolute;
+          left: 0;
+          top: 0.7rem;
+        }
+        &::after {
+          right: 0;  
+          left: auto; 
+        }
+      }
+    }
+    //
+    .fxs_social_sidebar_nav{
+      padding: 10px;
+      .fxs_btn {
+        text-align: left;
+        i { padding-right: @base_module_size; }
+      }
+    }
+    .fxs_login_message{
+      background-color: @dark_3_clr;
+      padding: 0.5rem 1rem;
+      margin-top: @base_module_size;
+    }
+  }
+ 
   .fxs_timezone_btn{
     .fxs_list_block_btn(none, 25px, @txt_size_small, @main_header_height);
     background-color: @dark_1_clr;
@@ -239,8 +231,8 @@
     position: fixed;
     width:100%;   
     .fxs_timestamp{ padding-left: 1rem; }
-      i{ padding-left: 2rem; }
-    }
+    i{ padding-left: 2rem; }
+  }
 }
 
 // Timezone menu

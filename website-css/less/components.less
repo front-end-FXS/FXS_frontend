@@ -195,7 +195,7 @@
 //////////////////////////
 //////// LABELS //////////
 .fxs_label, .fxs_alertLabel {
-	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_nano);
+	.fxs_stiled_text_variants(inline-block; @light_1_clr; @txt_size_nano);
   line-height: @txt_lineheight_reset;
   margin: 1px 0.313rem 1px 0;
   padding: 1px 0.313rem;
@@ -925,8 +925,7 @@
 .fxs_relatedItem {
   &:extend(.fxs_transition);
   padding-bottom: 1rem;
-  min-height: 175px;
-  @media (min-width: @screen-s) { min-height: 280px; }
+  min-height: @base_module_size*6;
   &:hover {
     cursor: pointer;
     border-bottom: 4px solid @highlight_clr;
@@ -943,8 +942,11 @@
 
 .fxs_relatedContentSlot_x3_cols {
   .make-sm-column(4);
+  .fxs_relatedItem {
+    @media (min-width: @screen-s) { min-height: @base_module_size*8; }
+  }
   .fxs_entryHeadline {
-    &:extend(.fxs_headline_from_nano_to_small all);
+    &:extend(.fxs_headline_from_tiny_to_small all);
   }
 }
 .fxs_relatedContentSlot_x4_cols {

@@ -93,57 +93,18 @@
   }
 }
 
-// Carousel: Not working quite well
-// .fxs_entriesList_carousel {
-//   .fxs_wideWidget_pre(@widget-padding-default: 1rem 2rem; @widget-padding-m: 2rem 3rem);
-//   position:relative;
-//   overflow:hidden;
-//   .carousel {
-//       position: relative;
-//       visibility: hidden;
-//       left: -5000px;
-//       float: left;
-//       li {
-//           width: 31%;
-//           article { padding: 0.5rem 1rem; }
-//       }
-//   }
-//   .fxs_carousel_wrapper{
-//       overflow:hidden;
-//       max-width:100%;
-//   }
-//   .fxs_prev, .fxs_next {
-//       display: block;
-//       position:absolute;
-//       margin: 12px 0 0 0;
-//       font-size: @txt_size_xhuge;
-//       color: @light_1_clr;
-//       text-decoration: none;
-//       margin-top:-76px;
-//   }
-//   .fxs_prev{
-//       left:1rem;
-//   }
-//   .fxs_next{
-//       right:1rem;
-//   }
-//   .fxs_entryHeadline {
-//       &:extend(.fxs_headline_from_nano_to_tiny all);
-//   }
-// }
-
 // Entries featured
 .fxs_entryFeatured {
   margin-bottom: 1rem;
     header { margin-bottom: 0.5rem; }
     &:hover {
-        cursor: pointer;
-        .fxs_entryFeatured_img { .opacity(.75); }
+      cursor: pointer;
+      .fxs_entryFeatured_img { .opacity(.75); }
     }
 }
 
 .fxs_entryFeatured_img {
-    &:extend(.fxs_mediaContainer all);
+  &:extend(.fxs_mediaContainer all);
 }
 
 .fxs_entryFeatured_big {
@@ -152,24 +113,20 @@
 }
 
 .fxs_entryFeatured_med {
-    .fxs_entryPlain_txt { display: none; }
-    .fxs_entryHeadline {
-        &:extend(.fxs_headline_medium all);
-    }
-    @media (min-width: @screen-s) {
-        .fxs_entryPlain_txt { display: inherit; }
-    }
+  .fxs_entryHeadline {
+      &:extend(.fxs_headline_medium all);
+  }
 }
 
 .fxs_entryFeatured_reduced {
-    .fxs_entryHeadline {
-        &:extend(.fxs_headline_from_nano_to_small all);
-    }
+  .fxs_entryHeadline {
+      &:extend(.fxs_headline_from_tiny_to_small all);
+  }
 }
 
 .fxs_entryFeatured_imgSide {
   &:extend(.fxs_clearfix all);
-  .fxs_entryPlain_txt { display: none; }
+  .fxs_entryExcerpt { display: none; }
   .fxs_entryFeatured_img {
       &:extend(.fxs_floatingMedia_imageContainer);
       margin-bottom: 0;
@@ -179,7 +136,7 @@
       &:extend(.fxs_headline_medium all);
   }
   @media (min-width: @screen-s) {
-      .fxs_entryPlain_txt { display: inherit; }
+    .fxs_entryExcerpt { display: inherit; }
   }
 }
 
