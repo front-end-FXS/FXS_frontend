@@ -26,9 +26,8 @@
                 <li><a href="#about-guide" title="">Intro</a></li>
                 <li><a href="#atoms" title="">Atoms</a></li>
                 <li><a href="#molecules" title="">Molecules</a></li>
-                <li><a href="" title="">Organisms</a></li>
-                <li><a href="" title="">Templates</a></li>
-                <li><a href="" title="">Pages</a></li>
+                <li><a href="#organisms" title="">Organisms</a></li>
+                <li><a href="#templates" title="">Templates</a></li>
             </ul>
         </nav>
         <!-- /Main-nav -->
@@ -47,9 +46,8 @@
                     <li><a href="#about-guide" title="">Intro</a></li>
                     <li><a href="#atoms" title="">Atoms</a></li>
                     <li><a href="#molecules" title="">Molecules</a></li>
-                    <li><a href="" title="">Organisms</a></li>
-                    <li><a href="" title="">Templates</a></li>
-                    <li><a href="" title="">Pages</a></li>
+                    <li><a href="#organisms" title="">Organisms</a></li>
+                    <li><a href="#templates" title="">Templates</a></li>
                 </ul>
             </nav>
             <!-- /Main-nav -->
@@ -446,10 +444,10 @@
                                     <span class="fxs_label">#CF4836</span>
                                 </li>
                                 <li class="fxs_relatedContentSlot_x4_cols">
-                                    <span style="background: #FAEB4A; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
+                                    <span style="background: #F5C861; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
                                     <span class="fxs_label">@warning_clr</span>
                                     <br>
-                                    <span class="fxs_label">#FAEB4A</span>
+                                    <span class="fxs_label">#F5C861</span>
                                 </li>
                                 <li class="fxs_relatedContentSlot_x4_cols">
                                     <span style="background: #58A3DD; display: block; height: 4rem; margin-bottom: 0.5rem;"></span>
@@ -1309,9 +1307,40 @@
                     <hr class="fxs_divider_wide">
 
                     <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            Author's quote
+                        </h2>
+                        <div class="fxs_clearfix">
+
+                            <!-- Quote module -->
+                            <blockquote class="fxs_featured_quote">
+                                <div class="fxs_avatar_circleImage">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                    </a>
+                                </div>
+                                <p>
+                                    If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                    <footer>
+                                        <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                        <address class="fxs_entry_metaInfo">
+                                            <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                            <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                        </address>
+                                    </footer>
+                                </p>
+                            </blockquote>
+                            <!-- /Quote module -->
+
+                        </div>
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
 
                         <h2 class="fxs_subsectionTitle">
-                            Forms elements
+                            Form elements
                         </h2>
                         
                         <!-- Basic form -->
@@ -1321,13 +1350,13 @@
 
                                 <div class="fxs_formGroup">
                                     <label title="name" for="example-name">
-                                        Your Name
+                                        <abbr title="Required">*</abbr> Your Name
                                     </label>
                                     <input type="text" class="fxs_textInput" placeholder="Please write your complete name" id="example-name">
                                 </div>
                                 <div class="fxs_formGroup">
                                     <label title="Password" for="example-email">
-                                        Your Email
+                                        <abbr title="Required">*</abbr> Your Email
                                     </label>
                                     <input type="email" class="fxs_textInput" placeholder="Your daily used email" id="example-email">
                                 </div>
@@ -1335,6 +1364,17 @@
                                     <label class="fxs_checkboxGroup">
                                         <input type="checkbox" id="terms"> Check me out
                                     </label>
+                                </div>
+
+                                <div class="fxs_formGroup">
+                                  <label class="fxs_checkboxGroup">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Choose this option
+                                  </label>
+                                  <label class="fxs_checkboxGroup">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Or this other option
+                                  </label>
                                 </div>
 
                                 <button type="submit" class="fxs_btn fxs_btn_default">Send this thing</button>
@@ -1350,33 +1390,752 @@
 
                                 <div class="fxs_formGroup">
                                     <label title="name" for="example-name2">
-                                        Your Name
+                                        <abbr title="Required">*</abbr> Your Name
                                     </label>
                                     <input type="text" class="fxs_textInput" placeholder="Please write your complete name" id="example-name2">
                                 </div>
                                 <div class="fxs_formGroup fxs_hasError">
                                     <label title="Password" for="example-email2">
-                                        Your Email
+                                        <abbr title="Required">*</abbr> Your Email
                                     </label>
-                                    <input type="email" class="fxs_textInput" placeholder="Your daily used email" id="example-email2">
+                                    <input type="email" class="fxs_textInput" placeholder="Your daily used email" id="example-email2" required>
                                     <div class="fxs_contextual_alert fxs_alert_error">
                                         <span class="fxs_alertLabel">Oops!</span>
-                                        <p class="fxs_alertText">Bro, this is not your Email</p>
+                                        <p class="fxs_alertText">Bro, this is not your Email (and you know it)</p>
                                     </div>
                                 </div>
-                                <div class="fxs_formGroup">
+                                <div class="fxs_formGroup fxs_hasWarning">
+                                    <label title="Password" for="example-password2">
+                                        <abbr title="Required">*</abbr> Set yoyr password
+                                    </label>
+                                    <input type="password" class="fxs_textInput" placeholder="Set yoyr password" id="example-password2">
+                                    <div class="fxs_contextual_alert fxs_alert_warning">
+                                        <span class="fxs_alertLabel">Careful!</span>
+                                        <p class="fxs_alertText">Your password it's too weak</p>
+                                    </div>
+                                </div>
+                                <div class="fxs_formGroup fxs_hasError">
                                     <label class="fxs_checkboxGroup">
                                         <input type="checkbox" id="terms"> Check me out
                                     </label>
+                                    <div class="fxs_contextual_alert fxs_alert_error">
+                                        <span class="fxs_alertLabel">Sorry!</span>
+                                        <p class="fxs_alertText">Whether you like it or not, you have to accept the terms and conditions</p>
+                                    </div>
                                 </div>
 
-                                <button type="submit" class="fxs_btn fxs_btn_default">Send this thing</button>
+                                <button type="submit" class="fxs_btn fxs_btn_default" disabled="disabled">Send this thing</button>
 
                             </fieldset>
                         </form>
                         <!-- /Form with feedbacks -->
 
+                        <!-- Form with hidden labels -->
+                        <form>
+                            <fieldset class="fxs_fieldset">
+                                <legend>Form with hidden labels</legend>
+
+                                <div class="fxs_formGroup">
+                                    <label title="name" for="example-name3" class="fxs_skip">
+                                        <abbr title="Required">*</abbr> Your Name
+                                    </label>
+                                    <input type="text" class="fxs_textInput" placeholder="Please write your complete name" id="example-name3">
+                                </div>
+                                <div class="fxs_formGroup">
+                                    <label title="Password" for="example-email3" class="fxs_skip">
+                                        <abbr title="Required">*</abbr> Your Email
+                                    </label>
+                                    <input type="email" class="fxs_textInput" placeholder="Your daily used email" id="example-email3">
+                                </div>
+                                <div class="fxs_formGroup">
+                                    <label title="Password" for="example-password3" class="fxs_skip">
+                                        <abbr title="Required">*</abbr> Set yoyr password
+                                    </label>
+                                    <input type="password" class="fxs_textInput" placeholder="Set yoyr password" id="example-password3">
+                                </div>
+                                
+                                <div class="fxs_contextual_alert fxs_alert_info">
+                                    <span class="fxs_alertLabel">Heads Up!</span>
+                                    <p class="fxs_alertText">Must have label anyway, label <code>class="fxs_skip"</code>. Never leave any input without label!</p>
+                                </div>
+
+                            </fieldset>
+
+                        </form>
+                        <!-- /Form with hidden labels -->
+
+                        <!-- Form with icon labels -->
+                        <form>
+                            <fieldset class="fxs_fieldset">
+                                <legend>Form with icon labels</legend>
+
+                                <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                    <label class="fxs_btn_icon" title="Username" for="user-name-example">
+                                        <i class="fa fa-user"></i>
+                                        <span class="fxs_skip">Username</span>
+                                    </label>
+                                    <input type="text" class="fxs_textInput" placeholder="Username" id="user-name-example">
+                                </div>
+                                <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                    <label class="fxs_btn_icon" title="Password" for="password-example">
+                                        <i class="fa fa-lock"></i>
+                                        <span class="fxs_skip">Password</span>
+                                    </label>
+                                    <input type="password" class="fxs_textInput" placeholder="Password" id="password-example">
+                                </div>
+                                
+                                <button type="submit" class="fxs_btn fxs_btn_default">Send this thing</button>
+
+                            </fieldset>
+
+                            <div class="fxs_contextual_alert fxs_alert_info">
+                                <span class="fxs_alertLabel">Heads Up!</span>
+                                <p class="fxs_alertText">Must have <code>&lt;span class="fxs_skip"&gt;Label text&lt;/span&gt;</code>. An icon it's not enough!</p>
+                            </div>
+                        </form>
+                        <!-- /Form with icon labels -->
+
                     </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
+
+                        <h2 class="fxs_subsectionTitle">
+                            Responsible tables
+                        </h2>
+                        <!-- Simple responsive table -->
+                        <div class="fxs_swipeContent_slider">
+                            <table class="fxs_table">
+                                <caption>Simple responsive table.</caption>
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>EUR/USD</th>
+                                    <th>AUD/USD</th>
+                                    <th>USD/JPY</th>
+                                    <th>EUR/USD</th>
+                                    <th>AUD/USD</th>
+                                    <th>USD/JPY</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1W</th>
+                                    <td>97,66%</td>
+                                    <td>65,52%</td>
+                                    <td>43,66%</td>
+                                    <td>97,66%</td>
+                                    <td>65,52%</td>
+                                    <td>43,66%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1M</th>
+                                    <td>65,52%</td>
+                                    <td>97,66%</td>
+                                    <td>65,52%</td>
+                                    <td>43,66%</td>
+                                    <td>97,66%</td>
+                                    <td>65,52%</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3M</th>
+                                    <td>43,66%</td>
+                                    <td>97,66%</td>
+                                    <td>65,52%</td>
+                                    <td>97,66%</td>
+                                    <td>65,52%</td>
+                                    <td>43,66%</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /Simple responsive table -->
+
+                        <!-- Link blocks table -->
+                        <div class="fxs_swipeContent_slider">
+                            <table class="fxs_table fxs_tableHover fxs_ctp_table">
+                                <caption>Link blocks table</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Contributor</th>
+                                        <th>Order</th>
+                                        <th>Entry</th>
+                                        <th>Stop Loss</th>
+                                        <th>Take Profit 1</th>
+                                        <th>Take Profit 2</th>
+                                        <th>Take Profit 3</th>
+                                        <th>Date</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr onclick="todo">
+                                        <td>
+                                            <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                <div class="fxs_avatar_circleImage_s">
+                                                    <a href="/">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                    </a>
+                                                </div>
+                                                <span class="fxs_article_author">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                        Admiral Markets
+                                                    </a>
+                                                </span>
+                                                <script type="application/ld+json">
+                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                </script>
+                                            </address>
+                                        </td>
+                                        <td>
+                                            <span class="fxs_ctpTable_order fxs_txt_success">Long <a href="/">Limit Order</a></span>
+                                        </td>
+                                        <td>1.1113</td>
+                                        <td>1.1180</td>
+                                        <td>1.0920</td>
+                                        <td>1.0875</td>
+                                        <td>1.0780</td>
+                                        <td>
+                                            <time pubdate="" datetime="2015-07-27 09:34">Jul 27</time>
+                                        </td>
+                                        <td>
+                                            <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                        </td>
+                                    </tr>
+                                    <tr onclick="todo">
+                                        <td>
+                                            <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                <div class="fxs_avatar_circleImage_s">
+                                                    <a href="/">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                    </a>
+                                                </div>
+                                                <span class="fxs_article_author">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                        Danske Bank A/S
+                                                    </a>
+                                                </span>
+                                                <script type="application/ld+json">
+                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                </script>
+                                            </address>
+                                        </td>
+                                        <td>
+                                            <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
+                                        </td>
+                                        <td>≈1.1012</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>
+                                            <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                        </td>
+                                        <td>
+                                            <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                        </td>
+                                    </tr>
+                                    <tr onclick="todo">
+                                        <td>
+                                            <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                <div class="fxs_avatar_circleImage_s">
+                                                    <a href="/">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                    </a>
+                                                </div>
+                                                <span class="fxs_article_author">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                        DeltaStock.com
+                                                    </a>
+                                                </span>
+                                                <script type="application/ld+json">
+                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                </script>
+                                            </address>
+                                        </td>
+                                        <td>
+                                            <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
+                                        </td>
+                                        <td>&gt;1.0955</td>
+                                        <td>1.0850</td>
+                                        <td>1.1216</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>
+                                            <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
+                                        </td>
+                                        <td>
+                                            <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /Link blocks table -->
+
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
+
+                        <h2 class="fxs_subsectionTitle">
+                            List table-like
+                        </h2>
+                                
+                        <!-- list table -->
+                        <ul class="fxs_list_table">
+                            <li class="fxs_list_table_item">
+                                <!-- Quote module -->
+                                <blockquote class="fxs_featured_quote">
+                                    <div class="fxs_avatar_circleImage">
+                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                        <footer>
+                                            <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                                <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                            </address>
+                                        </footer>
+                                    </p>
+                                </blockquote>
+                                <!-- /Quote module -->
+                            </li>
+                            <li class="fxs_list_table_item">
+                                <!-- Quote module -->
+                                <blockquote class="fxs_featured_quote">
+                                    <div class="fxs_avatar_circleImage">
+                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                        <footer>
+                                            <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="path/to/author">Eduardo Oliveira</a></span> |
+                                                <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                            </address>
+                                        </footer>
+                                    </p>
+                                </blockquote>
+                                <!-- /Quote module -->
+                            </li>
+                            <li class="fxs_list_table_item">
+                                <!-- Quote module -->
+                                <blockquote class="fxs_featured_quote">
+                                    <div class="fxs_avatar_circleImage">
+                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                            <img src="http://www.ps4-magazin.de/wcf/images/avatars/avatar-3974.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                        </a>
+                                    </div>
+                                    <p>
+                                        If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                        <footer>
+                                            <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                                <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                            </address>
+                                        </footer>
+                                    </p>
+                                </blockquote>
+                                <!-- /Quote module -->
+                            </li>
+                        </ul>
+                        <!-- /list table -->
+
+                        <div class="fxs_contextual_alert fxs_alert_info">
+                            <span class="fxs_alertLabel">Heads Up!</span>
+                            <p class="fxs_alertText">This kind of list is very usefull for widgets that looks like table but they aren't (due to the responsive necessities). Each <code>&lt;li&gt;</code> can contain elements with <code>display: table-cell;</code>.</p>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- /Molecules -->
+                
+                <!-- Organisms -->
+                <header id="organisms" class="fxs_sectionTitle">
+                    <h1 class="fxs_sectionTitle_header">Organisms</h1>
+                    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                        <div class="fxs_overflowOptions">
+                            <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <!--
+                                -->
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <section class="fxs_detail">
+
+                    <h2 class="fxs_subsectionTitle">
+                        News post header
+                    </h2>
+
+                    <div class="clearfix">
+
+                        <!-- News post header -->
+                        <header class="fxs_article_header">
+                            <aside class="fxs_entry_metaInfo">
+                                <a class="fxs_entry_sectionlink" href="/">News</a> | <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time>
+                            </aside>
+                            <h1 class="fxs_headline_large">EUR/USD Forecast: Shy upward correction underway</h1>
+                            <address class="fxs_entry_metaInfo">
+                                <span class="fxs_article_author">By <a href="#">Forex Trading.TV</a></span>
+                            </address>
+
+                            <!-- Social Media share widget -->
+                            <div class="fxs_shareContent_holder">
+                                <span class="fxs_helperLabel_title">Share</span>
+                                 <ul class="fxs_shareOptions_boxed">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_overflowOptions">
+                                        <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                                        <ul class="fxs_btnGroup_dropdownList">
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                            </li>
+                                            <!--
+                                            -->
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <!-- /News post header -->
+
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <h2 class="fxs_subsectionTitle">
+                        Analysis/video/education post header
+                    </h2>
+
+                    <div class="clearfix">
+
+                        <!-- Analysis/video/education post header -->
+                        <header class="fxs_article_header">
+                            <aside class="fxs_entry_metaInfo">
+                                <a class="fxs_entry_sectionlink" href="/">Analysis</a> | <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time>
+                            </aside>
+                            <h1 class="fxs_headline_large">GBP/USD Forecast: bullish above 1.5630</h1>
+                            <!-- Author box Big -->
+                            <address class="fxs_contributorBox fxs_contributorBox_big">
+                                <div class="fxs_avatar_circleImage_s">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                        <img src="http://img.timeinc.net/time/daily/2009/0911/360_wmanny_1116.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                    </a>
+                                </div>
+                                <span class="fxs_article_author">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                        Manny Pacquiao
+                                    </a>
+                                    <span class="fxs_author_description">
+                                        Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
+                                    </span>
+                                    <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
+                                        <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                        <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
+                                    </button>
+                                </span>
+                                <script type="application/ld+json">
+                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                </script>
+                            </address>
+                            <!-- /Author box Big -->
+
+                            <!-- Social Media share widget -->
+                            <div class="fxs_shareContent_holder">
+                                <span class="fxs_helperLabel_title">Share</span>
+                                 <ul class="fxs_shareOptions_boxed">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_overflowOptions">
+                                        <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                                        <ul class="fxs_btnGroup_dropdownList">
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                            </li>
+                                            <!--
+                                            -->
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <!-- Analysis/video/education post header -->
+
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <h2 class="fxs_subsectionTitle">
+                        News Featured entries
+                    </h2>
+
+                    <div class="clearfix">
+
+                        <!-- Featured entry Big -->
+                        <div class="fxs_entryFeatured">
+                            <article class="fxs_entryFeatured_big">
+                                <header>
+                                    <h2 class="fxs_entryHeadline">
+                                        <a href="/">US durable goods orders strong than expected in October</a>
+                                    </h2>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                    </address>
+                                </header>
+                                <div class="fxs_entryFeatured_img">
+                                    <img src="http://placekitten.com/g/500/350" />
+                                </div>
+                                <div class="fxs_entryExcerpt">
+                                    <p>
+                                        Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- /Featured entry Big -->
+
+                        <!-- Featured entry Medium -->
+                        <div class="fxs_entryFeatured">
+                            <article class="fxs_entryFeatured_med">
+                                <div class="fxs_entryFeatured_img"><!-- tener en cuenta esta clase (fxs_entryFeatured_img) crea una más cara sobre la imagen-->
+                                    <img src="http://placekitten.com/g/500/350" />
+                                </div>
+                                <header>
+                                    <h3 class="fxs_entryHeadline">
+                                        <a href="/">US durable goods orders strong than expected in October</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                    </address>
+                                </header>
+                                <div class="fxs_entryExcerpt">
+                                    <p>
+                                        Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- /Featured entry Medium -->
+
+                        <!-- Featured entry Reduced -->
+                        <div class="fxs_entryFeatured">
+                            <article class="fxs_entryFeatured_reduced">
+                                <div class="fxs_entryFeatured_img">
+                                    <img src="http://placekitten.com/g/500/350" />
+                                </div>
+                                <header>
+                                    <h3 class="fxs_entryHeadline">
+                                        <a href="/">US durable goods orders strong than expected in October</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                    </address>
+                                </header>
+                            </article>
+                        </div>
+                        <!-- /Featured entry Reduced -->
+
+                        <!-- Featured entry Image sided -->
+                        <div class="fxs_entryFeatured">
+                            <article class="fxs_entryFeatured_imgSide">
+                                <div class="fxs_entryFeatured_img">
+                                    <img src="http://placekitten.com/g/500/350" />
+                                </div>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <header>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                        <address class="fxs_entry_metaInfo">
+                                            <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                        </address>
+                                    </header>
+                                    <div class="fxs_entryExcerpt">
+                                        <p>
+                                            Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                            <!-- Sponsored content -->
+                            <div class="fxs_entryFeatured">
+                                <article class="fxs_entryFeatured_imgSide">
+                                    <div class="fxs_entryFeatured_img">
+                                        <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="" />
+                                    </div>
+                                    <div class="fxs_floatingMedia_textBody">
+                                        <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                        <header>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October</a>
+                                            </h3>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                            </address>
+                                        </header>
+                                        <div class="fxs_entryExcerpt">
+                                            <p>
+                                                Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- /Sponsored content -->
+
+                        <!-- /Featured entry Image sided -->
+
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
+                        <h2 class="fxs_subsectionTitle">
+                            News list
+                        </h2>
+
+                        <div class="fxs_clearfix">
+
+                            <!-- News list -->
+                            <aside class="fxs_entriesList">
+                                <ol>
+                                    <li>
+                                        <article>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="" title="">Soft US payrolls data wont affect this year's rate hike plan</a>
+                                            </h3>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
+                                            </address>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="" title="">EUR/USD: Greece and EZ deflation keeping the downside favored</a>
+                                            </h3>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                            </address>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article>
+                                            <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-question-circle"></i></span>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="" title="">New record lows for European sovereign yields</a>
+                                            </h3>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                            </address>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="" title="">Credit Agricole: New rules to limit US corporate tax inversions boost USD European sovereign</a>
+                                            </h3>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                            </address>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="" title="">EUR/USD tests 1.0800 post</a>
+                                            </h3>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                            </address>
+                                        </article>
+                                    </li>
+                                </ol>
+                            </aside>
+                            <!-- /News list -->
+
+                        </div>
+
+                    </div>
+
+                    <hr class="fxs_divider_wide">
+
+                    <div class="fxs_clearfix">
+
+                        <h2 class="fxs_subsectionTitle">
+                            Widget Sexy banner
+                        </h2>
+
+                        <!-- Widget Sexy banner -->
+                        <article class="fxs_sexy_banner">
+                            <div class="fxs_sexy_bannerText">
+                                <!-- This element must have an onClick function, ask Noe -->
+                                <span class="fxs_helperLabel_title">Special event</span>
+                                <header>
+                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="Text that explain sponsored content"></i></span>
+                                    <h3 class="fxs_entryHeadline">
+                                        <a href="">Nonfarm Payrolls live coverage with Valeria Bednarik</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span>
+                                    </address>
+                                </header>
+                                <div class="fxs_entryPlain_txt">
+                                    <p>Don't miss out on a great opportunity to learn keys to trade this economic report and ask questions while the market is moving!</p>
+                                </div>
+                            </div>
+                            <figure class="fxs_sexy_bannerImg">
+                                <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="fxstreet" width="800" height="450" />
+                            </figure>
+                        </article>
+                        <!-- /Widget Sexy banner -->
+                    </div>
+
+                    <hr class="fxs_divider_wide">
 
                     <div class="fxs_clearfix">
 
@@ -1439,6 +2198,31 @@
                     </div>
 
                     <hr class="fxs_divider_wide">
+                    
+                </section>
+                <!-- /Organisms -->
+
+                <!-- Templates -->
+                <header id="templates" class="fxs_sectionTitle">
+                    <h1 class="fxs_sectionTitle_header">Templates</h1>
+                    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                        <div class="fxs_overflowOptions">
+                            <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <!--
+                                -->
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+                <section class="fxs_detail">
+
 
                     <!-- Post goes here -->
                     <article class="fxs_article">
@@ -1593,8 +2377,10 @@
                         </ul>
                     </aside>
                     <!-- //Related content -->
+                    
                 </section>
-                <!-- //Main Section -->
+                <!-- /Templates -->
+
             </div>
             <!-- /The content rail -->
         </div>
