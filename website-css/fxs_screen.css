@@ -2009,16 +2009,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   background-color: #8c8d91;
   color: #ffffff;
 }
-.fxs_miniLabel_video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 0 0.25rem;
-  display: block;
-  font-size: 0.75rem;
-  color: #ffffff;
-  background-color: rgba(47, 47, 51, 0.9);
-}
 .fxs_badge {
   border-radius: 50%;
   background-color: #cf4836;
@@ -4190,6 +4180,24 @@ height:calc(100% - 4rem);
 }
 .fxs_inVisualField .fxs_leaderboard_sponsor {
   display: block;
+}
+.fxs_isVideo_content .fxs_entryHeadline a::before,
+.fxs_isVideo_content [class*="fxs_headline_"] a::before {
+  display: inline-block;
+  content: "\f01d";
+  font: normal normal normal 1.1rem FontAwesome;
+  margin-right: 2px;
+  color: #e4871b;
+}
+.fxs_miniLabel_video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 0.25rem;
+  display: block;
+  font-size: 0.75rem;
+  color: #ffffff;
+  background-color: rgba(47, 47, 51, 0.9);
 }
 .fxs_article_header {
   padding: 0 0 0.5rem 0;

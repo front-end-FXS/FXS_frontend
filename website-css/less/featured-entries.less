@@ -174,4 +174,29 @@
   display: none;
   .fxs_inVisualField & { display: block; }
 }
+
+// Featured Video content
+
+.fxs_isVideo_content {
+  .fxs_entryHeadline, [class*="fxs_headline_"] {
+    a::before {
+      display: inline-block;
+      content: "\f01d";
+      font: normal normal normal 1.1rem FontAwesome;
+      margin-right: 2px;
+      color: @highlight_clr;
+    }
+  }
+}
+
+.fxs_miniLabel_video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 0.25rem;
+  display: block;
+  font-size: @txt_size_xsmall;
+  color: @lightest_clr;
+  background-color: fade(@dark_3_clr, 90%);
+}
     
