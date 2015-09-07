@@ -574,7 +574,8 @@
 .fxs_tableRow {
   @media (min-width: @screen-s) {
     display: table;
-    min-width: 100%;
+    width: 100%;
+    .calc(width, ~'100% + 1rem');
   }
 }
 
@@ -586,7 +587,7 @@
     vertical-align: top;
     &.fxs_flex_ad_col {
       display: table-cell;
-      min-width: @left_rail_space;
+      width: @left_rail_space;
     }
   }
 }

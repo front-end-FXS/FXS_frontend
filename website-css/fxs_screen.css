@@ -988,8 +988,7 @@ h5,
 .fxs_divider_wide,
 .fxs_divider_first,
 .fxs_divider_second,
-.fxs_divider_third,
-.fxs_dateIndicator_divider {
+.fxs_divider_third {
   background-color: #f0f0f1;
   margin-bottom: 1rem;
 }
@@ -2165,6 +2164,7 @@ width:calc(100% - 320px);
   height: 1px;
 }
 .fxs_dateIndicator_divider {
+  background-color: #f0f0f1;
   color: #49494f;
   font-size: 0.75rem;
   padding: 0.25rem 1rem;
@@ -2886,7 +2886,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_relatedItem {
   padding-bottom: 1rem;
-  min-height: 227.5px;
+  min-height: 245px;
 }
 .fxs_relatedItem:hover {
   cursor: pointer;
@@ -3883,7 +3883,12 @@ width:calc(100% - 320px);
 @media (min-width: 680px) {
   .fxs_tableRow {
     display: table;
-    min-width: 100%;
+    width: 100%;
+    -lh-property: 0;
+width:-webkit-calc(100% + 1rem);
+width:-moz-calc(100% + 1rem);
+width:calc(100% + 1rem);
+;
   }
 }
 .fxs_flex_col {
@@ -3902,7 +3907,7 @@ width:calc(100% - 320px);
   }
   .fxs_flex_col.fxs_flex_ad_col {
     display: table-cell;
-    min-width: 320px;
+    width: 320px;
   }
 }
 .fxs_content_adContainer {
@@ -4181,8 +4186,7 @@ height:calc(100% - 4rem);
 .fxs_inVisualField .fxs_leaderboard_sponsor {
   display: block;
 }
-.fxs_isVideo_content .fxs_entryHeadline a::before,
-.fxs_isVideo_content [class*="fxs_headline_"] a::before {
+.fxs_isVideo_content .fxs_entryHeadline a::before {
   display: inline-block;
   content: "\f01d";
   font: normal normal normal 1.1rem FontAwesome;
