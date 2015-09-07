@@ -21,8 +21,8 @@
         </button>
         <a class="fxs_logo" href="#about-guide" title="FXStreet">FXStreet</a>
         <!-- Main-nav -->
-        <nav class="fxs_nav_menu" role="navigation">
-            <ul>
+        <nav id="fxs-stylesNav" class="fxs_nav_menu navbar" role="navigation">
+            <ul class="nav navbar-nav">
                 <li><a href="#about-guide" title="">Intro</a></li>
                 <li><a href="#atoms" title="">Atoms</a></li>
                 <li><a href="#molecules" title="">Molecules</a></li>
@@ -130,7 +130,7 @@
         </nav>
         <!-- /Topics subnav -->
 
-        <div class="fxs_content" id="fxs_content">
+        <div class="fxs_content" id="fxs_content" data-spy="scroll" data-target="#fxs-stylesNav" data-offset="45">
 
             <!-- Global Alerts & Notifications --><!-- For dev -->
             <div id="globalAlertExample" class="fxs_global_alert fxs_alert_success alert alert-dismissible fade" role="alert">
@@ -4183,6 +4183,10 @@
         $('.modal').on('hide.bs.modal', function () {
             $('.fxs_content_subnav, .fxs_content, .fxs_pageSidebar, .fxs_listView').removeClass('fxs_blur');
         });
+        //
+
+        // Offset for #targets ??
+
     </script>
 
 </body>

@@ -2072,7 +2072,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 }
 .fxs_global_alert {
   display: none;
-  margin-top: 34px;
   padding-left: 1rem;
   position: fixed;
   width: 100%;
@@ -3143,9 +3142,15 @@ fieldset[disabled] .fxs_dismissQuery {
   position: relative;
   background-color: #f0f0f1;
   height: 100%;
+  -lh-property: 0;
+height:-webkit-calc(100% - 35px);
+height:-moz-calc(100% - 35px);
+height:calc(100% - 35px);
+;
   overflow-y: auto;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
+  margin-top: 35px;
 }
 @media (min-width: 1024px) {
   .fxs_content {
@@ -3572,16 +3577,16 @@ height:calc(100% - 45px);
   font-size: 0.88rem;
 }
 .fxs_contentView {
-  padding: 40px 3px;
+  padding: 5px 3px 35px;
 }
 @media (min-width: 1024px) {
   .fxs_contentView {
-    padding: 40px 5px;
+    padding: 5px 5px 35px;
   }
 }
 @media (min-width: 1100px) {
   .fxs_contentView {
-    padding: 40px 1rem;
+    padding: 5px 1rem 35px;
   }
 }
 .fxs_isParent_section .fxs_contentView {

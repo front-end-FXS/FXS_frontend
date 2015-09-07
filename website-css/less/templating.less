@@ -20,9 +20,11 @@
   position: relative;
   background-color: @light_4_clr;
   height: 100%;
+  .calc(height, ~'100% - @{base_module_size}');
   overflow-y: auto;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
+  margin-top: @base_module_size;
   @media (min-width: @screen-m) {
     margin-left: @left_rail_space;
   }
@@ -323,9 +325,9 @@
 
 ////////// CONTENT //////// 
 .fxs_contentView {
-  padding: @base_module_size+5px 3px;
-  @media (min-width: @screen-m) { padding: @base_module_size+5px 5px; }
-  @media (min-width: @screen-l) { padding: @base_module_size+5px 1rem; }
+  padding: 5px 3px @base_module_size;
+  @media (min-width: @screen-m) { padding: 5px 5px @base_module_size; }
+  @media (min-width: @screen-l) { padding: 5px 1rem @base_module_size; }
   .fxs_isParent_section & {
       display: none;
       @media (min-width: @screen-s) { display: block; }
