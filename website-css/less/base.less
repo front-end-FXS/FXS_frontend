@@ -230,19 +230,20 @@
 // Scrollable content
 .fxs_scrollableContent {
   -webkit-overflow-scrolling: touch;
+  overflow: hidden;
   overflow-y: auto;
   @media (min-width: @screen-m) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
       width: 5px;
       height: 5px;
-      border-radius: 5px;
+      border-radius: 0;
     }
       &::-webkit-scrollbar-track { .box-shadow(inset 0 -2px 4px rgba(255, 255, 255, 0.33)); }
       &::-webkit-scrollbar-thumb {
         .box-shadow(inset 0 0 2px rgba(255, 255, 255, 0.75));
           background-color: rgba(120, 121, 122, 0.4);
-          border-radius: 5px;
+          border-radius: 0;
       }
       &::-webkit-scrollbar-button {
         width: 0;

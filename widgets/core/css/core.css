@@ -550,6 +550,7 @@ table.fxs_table a,
 .fxs_scrollableContent,
 .fxs_swipeContent_slider {
   -webkit-overflow-scrolling: touch;
+  overflow: hidden;
   overflow-y: auto;
 }
 @media (min-width: 1024px) {
@@ -572,7 +573,7 @@ table.fxs_table a,
   .fxs_swipeContent_slider::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-    border-radius: 5px;
+    border-radius: 0;
   }
   .fxs_scrollableContent::-webkit-scrollbar-track,
   .fxs_swipeContent_slider::-webkit-scrollbar-track {
@@ -586,7 +587,7 @@ table.fxs_table a,
     -moz-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
     box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
     background-color: rgba(120, 121, 122, 0.4);
-    border-radius: 5px;
+    border-radius: 0;
   }
   .fxs_scrollableContent::-webkit-scrollbar-button,
   .fxs_swipeContent_slider::-webkit-scrollbar-button {
@@ -772,7 +773,7 @@ input[type=submit] {
   background-color: #49494f;
 }
 .fxs_nav_menu li.active a {
-  background-color: #2f2f33;
+  background-color: #39393e;
 }
 .fxs_header .fxs_nav_menu {
   border-bottom: 0 none transparent;
@@ -1443,7 +1444,7 @@ width:calc(100% - 320px);
   display: block;
 }
 .fxs_global_alert.in + .fxs_contentView {
-  margin-top: 45px;
+  margin-top: 35px;
 }
 .fxs_alert_featured,
 .fxs_alert_live {
@@ -1516,7 +1517,7 @@ width:calc(100% - 320px);
   height: 1px;
 }
 .fxs_dateIndicator_divider {
-  background-color: #f0f0f1;
+  background-color: #f8f8f8;
   color: #49494f;
   font-size: 0.75rem;
   padding: 0.25rem 1rem;

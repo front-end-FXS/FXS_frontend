@@ -108,6 +108,7 @@ $(document).ready(function () {
         classie.toggle(body, 'cbp-spmenu-push-toleft');
         classie.toggle(menuRight, 'cbp-spmenu-open');
         $('.fxs_listView').removeClass('cbp-spmenu-open');
+        $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
         $('.fxs_toggleList').removeClass('active');
         disableOther('showRightPush');
     };

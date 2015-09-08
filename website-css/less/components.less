@@ -276,7 +276,7 @@
   @media (min-width: @screen-m) { .calc(width, ~'100% - @{left_rail_space}'); }
   &.in {
     display: block;
-    & + .fxs_contentView { margin-top: @main_header_height; } 
+    & + .fxs_contentView { margin-top: @base_module_size; } 
   }
 }
 
@@ -334,7 +334,7 @@
 
 .fxs_dateIndicator_divider {
   &:extend(.fxs_clearfix all);
-  background-color: @light_4_clr;
+  background-color: @light_5_clr;
   color: @dark_4_clr;
   font-size: @txt_size_xsmall;
   padding: 0.25rem 1rem;
