@@ -821,8 +821,6 @@ label,
 .fxs_helperLabel_title,
 .fxs_btn,
 .fxs_btn_icon,
-.fxs_label,
-.fxs_alertLabel,
 .fxs_btn_filter,
 .fxs_dismissQuery,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a,
@@ -1487,6 +1485,7 @@ input[type=submit] {
 .fxs_subnavInlined_list {
   font-size: 11px;
   display: inline-block;
+  vertical-align: middle;
 }
 .fxs_subnavInlined_list > li {
   display: inline-block;
@@ -1622,6 +1621,13 @@ fieldset[disabled] .fxs_btn_icon {
   -webkit-opacity: 0.65;
   -moz-opacity: 0.65;
   opacity: 0.65;
+}
+.fxs_btn .fxs_badge,
+.fxs_btn_icon .fxs_badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 .fxs_btn {
   font-size: 0.88rem;
@@ -1971,14 +1977,22 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   display: block;
 }
 .fxs_label,
-.fxs_alertLabel {
+.fxs_alertLabel,
+.fxs_badge {
   display: inline-block;
-  color: #8c8d91;
   font-size: 11px;
   letter-spacing: normal;
   line-height: normal;
-  margin: 1px 0.313rem 1px 0;
-  padding: 1px 0.313rem;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.fxs_label,
+.fxs_alertLabel {
+  color: #8c8d91;
+  font-weight: 500;
+  margin: 1px 5px 0 0;
+  padding: 1px 5px;
 }
 .fxs_label_featured {
   background-color: #e4871b;
@@ -2012,14 +2026,9 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   border-radius: 50%;
   background-color: #cf4836;
   color: #ffffff;
-  display: inline-block;
-  font-size: 11px;
   line-height: 1rem;
-  margin: 0 0.33rem;
+  margin: 1px 2px;
   min-width: 1rem;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
 }
 .fxs_alert,
 .fxs_contextual_alert,
@@ -2453,6 +2462,13 @@ fieldset[disabled] .fxs_dismissQuery {
   -webkit-opacity: 0.65;
   -moz-opacity: 0.65;
   opacity: 0.65;
+}
+.fxs_btn_filter .fxs_badge,
+.fxs_dismissQuery .fxs_badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 .fxs_btn_filter:hover,
 .fxs_dismissQuery:hover {
@@ -3301,6 +3317,13 @@ fieldset[disabled] .fxs_show_usermenu {
   -moz-opacity: 0.65;
   opacity: 0.65;
 }
+.fxs_show_navmenu .fxs_badge,
+.fxs_show_usermenu .fxs_badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
 .fxs_show_navmenu:hover,
 .fxs_show_usermenu:hover,
 .fxs_show_navmenu.active,
@@ -3318,13 +3341,6 @@ fieldset[disabled] .fxs_show_usermenu {
 .fxs_show_usermenu {
   float: right;
   position: relative;
-}
-.fxs_show_usermenu .fxs_badge {
-  top: 1px;
-  right: 1px;
-  margin: 0;
-  position: absolute;
-  z-index: 1;
 }
 .fxs_content_subnav {
   height: 35px;

@@ -40,6 +40,7 @@
 .fxs_subnavInlined_list {
   font-size: @txt_size_nano;
   display: inline-block;
+  vertical-align: middle;
   > li {
     display: inline-block;
     padding-right: 5px;
@@ -192,13 +193,24 @@
   }
 }
 
-//////////////////////////
-//////// LABELS //////////
-.fxs_label, .fxs_alertLabel {
-	.fxs_stiled_text_variants(inline-block; @light_1_clr; @txt_size_nano);
+////////////////////////////////////
+//////// LABELS & badges //////////
+.fxs_label, .fxs_alertLabel, .fxs_badge {
+  display: inline-block;
+  font-size: @txt_size_nano;
+  letter-spacing: normal;
   line-height: @txt_lineheight_reset;
-  margin: 1px 0.313rem 1px 0;
-  padding: 1px 0.313rem;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.fxs_label, .fxs_alertLabel {
+  &:extend(.fxs_styledIndicator_label);
+  color: @light_1_clr;
+  font-weight: @txt_fontweight_semiBold;
+  margin: 1px 5px 0 0;
+  padding: 1px 5px;
 }
 
 .fxs_label_featured  {
@@ -225,19 +237,14 @@
   .fxs_label_variants(@light_1_clr; @lightest_clr);
 }
 
-// BADGES
+// BADGE
 .fxs_badge {
-  border-radius:50%;
-  background-color:@error_clr;
-  color:@lightest_clr;
-  display: inline-block;
-  font-size: @txt_size_nano;
+  border-radius: 50%;
+  background-color: @error_clr;
+  color: @lightest_clr;
   line-height: 1rem;
-  margin: 0 0.33rem;
+  margin: 1px 2px;
   min-width: 1rem;
-  text-align:center;
-  vertical-align: middle;
-  white-space: nowrap;
 }
 
 // ALERTS
@@ -372,9 +379,6 @@
   overflow: hidden;
   padding-top: 3px;
 }
-
-// Contextual labeling in media objects
-// Omar: Falta imagen square con label de vídeo
 
 // AVATAR IMAGES
 .fxs_avatar_circleImage,
