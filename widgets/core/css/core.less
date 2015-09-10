@@ -56,4 +56,38 @@ table {
     }
   }
 }
+
+.fxs_list_table {
+  blockquote {
+    padding: 0 0 0.5rem 2rem;
+    font-style: italic;
+    position: relative;
+    margin-bottom: 1rem;
+    &:before, &:after { position: absolute; }
+    &:before{
+      display: block;
+      color: @light_4_clr;
+      font: normal normal normal 1.25rem FontAwesome;
+      width: 2rem;
+      height: 2rem;
+      top: 0;
+      left: 0;
+      content: "\f10d";
+    }
+    &:after{
+      content: " ";
+      width: 3rem;
+      bottom: 0;
+      left: 0;
+      margin-bottom: 0;
+          background-color: @light_4_clr;
+      height: 3px;
+    }
+    footer {
+      color: @light_2_clr;
+      font-size: @txt_size_small;
+      line-height: @txt_lineheight_small;
+    }
+  }
+}
 //
