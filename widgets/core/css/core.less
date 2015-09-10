@@ -2,11 +2,11 @@
 @import "c3.min.css"; // c3 Graphics BASE library FOR ALL WIDGETS CHARTS. AVOID OTHER LIBRARIES!!
 @import "../../../website-css/less/vendor/lesshat.less";  // lesshat - LESS Mixins
 @import "../../../website-css/less/vendor/component-animations.less";  // Bootstrap 3.3.5 component animations
+@import "../../../website-css/less/vendor/tooltip.less"; // Bootstrap Tooltip
 
 // IMPORTS GENERAL APLICATION
 @import "../../../website-css/less/vars.less"; // Application variables
 @import "../../../website-css/less/mixins.less"; // Application mixins & extendible classes
-// @import "../../../website-css/less/reset.less";  // Reset stylesheet GENERAL HTML TAGS, DO NOT USE IT FOR 3RD PARTY!!
 @import "../../../website-css/less/base.less";  // basic-atomic Classes
 @import "../../../website-css/less/forms.less";  // Forms styles
 @import "../../../website-css/less/components.less";  // Molecular-combined components
@@ -19,10 +19,7 @@
 	line-height: @txt_lineheight;
 
   // Box model & typo rendering
-  * {
-    .box-sizing(border-box);
-    text-rendering: optimizelegibility;
-  }
+  * { .box-sizing(border-box); }
 
   // Small tag
   small {
@@ -43,27 +40,32 @@
 }
 
 // Tables
-table {
-  &.fxs_table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-family: @txt_fontfamily;
-    a { &:extend(.fxs_boldAntialised_style, .fxs_transition);}
-    // Box model & typo rendering
-    * {
-      .box-sizing(border-box);
-      text-rendering: optimizelegibility;
-    }
+.fxs_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: @txt_fontfamily;
+  a { &:extend(.fxs_boldAntialised_style, .fxs_transition);}
+  // Box model & typo rendering
+  * { .box-sizing(border-box); }
+}
+
+[class^="fxs_avatar_circleImage"] {
+  * { .box-sizing(border-box); }
+  img {
+    max-width: 100%;
+    min-width: 100%;
   }
 }
 
 .fxs_list_table {
+  margin: 0;
+  padding: 0;
+  * { .box-sizing(border-box); }
+  li { list-style: none; }
   blockquote {
-    padding: 0 0 0.5rem 2rem;
     font-style: italic;
     position: relative;
-    margin-bottom: 1rem;
-    &:before, &:after { position: absolute; }
+    &:before { position: absolute; }
     &:before{
       display: block;
       color: @light_4_clr;
@@ -73,15 +75,6 @@ table {
       top: 0;
       left: 0;
       content: "\f10d";
-    }
-    &:after{
-      content: " ";
-      width: 3rem;
-      bottom: 0;
-      left: 0;
-      margin-bottom: 0;
-          background-color: @light_4_clr;
-      height: 3px;
     }
     footer {
       color: @light_2_clr;
