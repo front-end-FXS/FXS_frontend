@@ -22,11 +22,11 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
   }
   &:invalid, .fxs_hasError & {
     border-color: @error_clr;
-    background-color: fade(@error_clr, 5%);
+    background-color: lighten(@error_clr, 45%);
   }
   .fxs_hasWarning & {
     border-color: @warning_clr;
-    background-color: fade(@warning_clr, 10%);
+    background-color: lighten(@warning_clr, 30%);
   } 
 }
 
