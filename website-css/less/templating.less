@@ -613,25 +613,29 @@
   .column-default-parameters();
 }
 
-// 33% //
-.sf_3cols_3_33, .sf_2cols_2_33{
-  .make-md-column(4); 
-}
-// 66% //
-.sf_2cols_1_67{
-  .make-md-column(8);
+// 100% //
+.sf_1col_1_100 {
+  &:extend(.fxs_clearfix all);
 }
 // 75% //
-.sf_2cols_1_75{
+.sf_2cols_1_75 {
   .make-md-column(9);
+}
+// 66% //
+.sf_2cols_1_67 {
+  .make-md-column(8);
+}
+// 50% //
+.sf_2cols_2_50 {
+  .make-md-column(6);
+}
+// 33% //
+.sf_3cols_3_33, .sf_2cols_2_33 {
+  .make-md-column(4); 
 }
 // 25% //
 .sf_2cols_1_25, .sf_4cols_4_25 {
   .make-md-column(3); // ad
-}
-// 50% //
-.sf_2cols_2_50{
-  .make-md-column(6);
 }
 
 ///////////////////////// STYCKY /////////////////////////////
