@@ -573,12 +573,10 @@
 
 .fxs_flex_col {
   .column-default-parameters();
-  &.fxs_flex_ad_col { display: none; }
-  @media (min-width: @screen-s) {
+  @media (min-width: @screen-l) {
     display: table-cell;
     vertical-align: top;
     &.fxs_flex_ad_col {
-      display: table-cell;
       width: @left_rail_space;
     }
   }
@@ -619,7 +617,7 @@
 }
 // 75% //
 .sf_2cols_1_75 {
-  .make-md-column(9);
+  .make-xlg-column(9);
 }
 // 66% //
 .sf_2cols_1_67 {
@@ -634,8 +632,13 @@
   .make-md-column(4); 
 }
 // 25% //
-.sf_2cols_1_25, .sf_4cols_4_25 {
-  .make-md-column(3); // ad
+.sf_2cols_1_25 {
+  display: none;
+  @media (min-width: @screen-l) { display: block;}
+  .make-xlg-column(3);
+}
+.sf_4cols_4_25 {
+  .make-md-column(3);
 }
 
 ///////////////////////// STYCKY /////////////////////////////
