@@ -954,10 +954,13 @@
 
 // Widget divider modules
 .fxs_widget_divider_module {
+  &.fxs_widget_divider_clean{
+      border-bottom:none;
+  }
   &:extend(.fxs_clearfix all);
   padding-bottom:0.5rem;
   margin-bottom:0.5rem;
-  border-bottom:1px solid @light_4_clr;
+  border-bottom:1px solid @light_4_clr;  
 }
 
 // Widget container
@@ -1037,6 +1040,9 @@
 
 .fxs_asset_label{
   &:extend(.fxs_headline_base_rules all);
+  &.fxs_asset_label_big{
+      font-size:@txt_size_huge;
+  }
   font-size: @txt_defaultsize_rem;
   a {
     display: inline-block;
@@ -1057,7 +1063,9 @@
     display: inline-block;
   }
 }
-
+.fxs_widget_price_value_big{
+    font-size:@txt_size_xxlarge;
+}
 .fxs_price_bidask {
   display: inline-block;
   white-space: nowrap;
@@ -1068,6 +1076,16 @@
 }
 
 .fxs_widget_price {
+    .fxs_widget_price_pair{
+        float:left;
+    }
+    .fxs_price_change_block{
+        display:block;
+        padding-left:1rem;
+    }
+    .fxs_widget_price_text_big{
+        font-size:@txt_size_small;
+    }
   .fxs_asset_label {
     &::before {
       display: inline-block;
@@ -1082,7 +1100,9 @@
       content: '\f062';
       color: @success_clr;
     }
-    .fxs_price_change { &:extend(.fxs_txt_success); }
+    .fxs_price_change { 
+        &:extend(.fxs_txt_success); 
+     }
   }
   &.price_down {
     .fxs_asset_label::before {
