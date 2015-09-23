@@ -218,9 +218,18 @@
 
 // Pre space wide widgets
 .fxs_wideWidget_pre(@widget-padding-default: 1rem; @widget-padding-m: 2rem) {
-  padding: @widget-padding-default;
+  &:extend(.fxs_wideContent all);
+  border-top: 5px solid @light_4_clr;
   margin-bottom: 1rem;
-  &:extend(.fxs_wideContent_bordered);
+  padding: @widget-padding-default;
+  @media (min-width: @screen-s) { padding: @widget-padding-m; }
+}
+
+.fxs_wideWidget_pre_header_item(@widget-padding-default: 1rem; @widget-padding-m: 2rem) {
+  &:extend(.fxs_wideContent all);
+  border-bottom: 5px solid @light_4_clr;
+  margin-bottom: 1rem;
+  padding: @widget-padding-default;
   @media (min-width: @screen-s) { padding: @widget-padding-m; }
 }
 

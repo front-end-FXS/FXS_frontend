@@ -264,8 +264,9 @@
 
 // Wide content alert
 .fxs_alert {
-  &:extend(.fxs_wideContent_bordered all);
   .animation(grow-and-show 0.5s ease-in-out);
+  &:extend(.fxs_wideContent all);
+  border-top: 5px solid @light_4_clr;
   border-bottom: 5px solid @light_4_clr;
   margin-bottom: 2rem;
 }
