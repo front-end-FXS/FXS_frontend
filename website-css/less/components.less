@@ -792,6 +792,32 @@
 }
 
 .fxs_tableHover {
+  // table prices
+  &.fxs_table_prices, &.fxs_table_price_mini{
+    .fxs_widget_price_value{
+      max-width:100%;
+    }
+    td{
+      vertical-align: top;
+    }
+  }
+  &.fxs_table_price{
+    td:last-child{
+        width:auto;
+    }
+    td:nth-child(2){
+      text-align: center;
+    }
+  }
+  // table mini rules
+  &.fxs_table_price_mini{
+    td:nth-child(3){
+      display:none;
+    }
+    td:nth-child(2){
+      text-align: right;
+    }
+  }
   tbody {
     >tr >td:last-child {
       width: @base_module_size;
@@ -1078,21 +1104,19 @@
 }
 
 .fxs_widget_price {
-    // rules for widget prices header 
+    // rules for widget prices header     
     .fxs_widget_header_text{
         display:none;
     }
     &.fxs_widget_price_header{
-        .fxs_price_change,.fxs_price_bidask{
-            float:right;
-        }
-        .fxs_price_bidask{
-            padding-right:1rem;
-        }
-    }
-    @media(min-width:@screen-m){
-        &.fxs_widget_price_header{
-            padding:1rem 0 1rem 0;
+      .fxs_wideWidget_pre();
+      .fxs_price_change,.fxs_price_bidask{
+          float:right;
+      }
+      .fxs_price_bidask{
+          padding-right:1rem;
+      }
+      @media(min-width:@screen-m){
             .fxs_price_bidask{
                 padding-right:0;
                 padding-bottom:0.5rem;
@@ -1132,9 +1156,10 @@
                     clear:both;
                     font-size:@txt_size_small;
                 }
-            }
+            }        
         }
-    } 
+    }
+     
 
     // rules for widget prices menu
     &.fxs_widget_price_menu{

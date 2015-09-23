@@ -1,4 +1,4 @@
-﻿@import "../widgets/core/css/c3.min.css";
+@import "../widgets/core/css/c3.min.css";
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
@@ -928,6 +928,8 @@ h5,
 .fxs_divider_wide::after,
 .fxs_alert::before,
 .fxs_alert::after,
+.fxs_widget_price.fxs_widget_price_header::before,
+.fxs_widget_price.fxs_widget_price_header::after,
 .fxs_suscribe::before,
 .fxs_suscribe::after,
 .fxs_sexy_banner::before,
@@ -960,6 +962,7 @@ h5,
 .fxs_wideContent_bordered::after,
 .fxs_divider_wide::after,
 .fxs_alert::after,
+.fxs_widget_price.fxs_widget_price_header::after,
 .fxs_suscribe::after,
 .fxs_sexy_banner::after {
   clear: both;
@@ -996,6 +999,7 @@ h5,
 .fxs_wideContent_bordered,
 .fxs_divider_wide,
 .fxs_alert,
+.fxs_widget_price.fxs_widget_price_header,
 .fxs_suscribe,
 .fxs_sexy_banner {
   margin-left: -1rem;
@@ -1006,6 +1010,7 @@ h5,
   .fxs_wideContent_bordered,
   .fxs_divider_wide,
   .fxs_alert,
+  .fxs_widget_price.fxs_widget_price_header,
   .fxs_suscribe,
   .fxs_sexy_banner {
     margin-left: -2rem;
@@ -1014,6 +1019,7 @@ h5,
 }
 .fxs_wideContent_bordered,
 .fxs_alert,
+.fxs_widget_price.fxs_widget_price_header,
 .fxs_suscribe,
 .fxs_sexy_banner {
   border-top: 5px solid #f0f0f1;
@@ -2769,6 +2775,26 @@ fieldset[disabled] .fxs_dismissQuery {
   padding: 0.5rem 0;
   text-align: left;
 }
+.fxs_tableHover.fxs_table_prices .fxs_widget_price_value,
+.fxs_tableHover.fxs_table_price_mini .fxs_widget_price_value {
+  max-width: 100%;
+}
+.fxs_tableHover.fxs_table_prices td,
+.fxs_tableHover.fxs_table_price_mini td {
+  vertical-align: top;
+}
+.fxs_tableHover.fxs_table_price td:last-child {
+  width: auto;
+}
+.fxs_tableHover.fxs_table_price td:nth-child(2) {
+  text-align: center;
+}
+.fxs_tableHover.fxs_table_price_mini td:nth-child(3) {
+  display: none;
+}
+.fxs_tableHover.fxs_table_price_mini td:nth-child(2) {
+  text-align: right;
+}
 .fxs_tableHover tbody > tr > td:last-child {
   width: 35px;
   text-align: right;
@@ -3049,6 +3075,15 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_price .fxs_widget_header_text {
   display: none;
 }
+.fxs_widget_price.fxs_widget_price_header {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 680px) {
+  .fxs_widget_price.fxs_widget_price_header {
+    padding: 2rem;
+  }
+}
 .fxs_widget_price.fxs_widget_price_header .fxs_price_change,
 .fxs_widget_price.fxs_widget_price_header .fxs_price_bidask {
   float: right;
@@ -3057,9 +3092,6 @@ fieldset[disabled] .fxs_dismissQuery {
   padding-right: 1rem;
 }
 @media (min-width: 1024px) {
-  .fxs_widget_price.fxs_widget_price_header {
-    padding: 1rem 0 1rem 0;
-  }
   .fxs_widget_price.fxs_widget_price_header .fxs_price_bidask {
     padding-right: 0;
     padding-bottom: 0.5rem;
@@ -3354,7 +3386,7 @@ height:calc(100% - 35px);
   float: left;
   width: 98px;
   height: 0;
-  background: url("website-img/fxs_logo.png") 0 0 no-repeat;
+  background: url("../website-img/fxs_logo.png") 0 0 no-repeat;
   font-size: 16px;
   overflow: hidden;
   padding-top: 24px;
@@ -4490,12 +4522,12 @@ height:calc(100% - 4rem);
     text-align: left;
   }
 }
-.fxs_ctp_table tbody > tr > td:not(:nth-child(-n+3)),
-.fxs_ctp_table thead > tr > td:not(:nth-child(-n+3)),
-.fxs_ctp_table tfoot > tr > td:not(:nth-child(-n+3)),
-.fxs_ctp_table tbody > tr > th:not(:nth-child(-n+3)),
-.fxs_ctp_table thead > tr > th:not(:nth-child(-n+3)),
-.fxs_ctp_table tfoot > tr > th:not(:nth-child(-n+3)) {
+.fxs_ctp_table tbody > tr > td:not( :nth-child(-n+3)),
+.fxs_ctp_table thead > tr > td:not( :nth-child(-n+3)),
+.fxs_ctp_table tfoot > tr > td:not( :nth-child(-n+3)),
+.fxs_ctp_table tbody > tr > th:not( :nth-child(-n+3)),
+.fxs_ctp_table thead > tr > th:not( :nth-child(-n+3)),
+.fxs_ctp_table tfoot > tr > th:not( :nth-child(-n+3)) {
   display: none;
 }
 .fxs_ctp_table tbody > tr > td:last-child,
@@ -4746,12 +4778,12 @@ width:calc(100% - 210px - 2rem);
 .fxs_forecast_week_table thead {
   display: none;
 }
-.fxs_forecast_week_table tbody > tr > td:not(:nth-child(-n+2)),
-.fxs_forecast_week_table thead > tr > td:not(:nth-child(-n+2)),
-.fxs_forecast_week_table tfoot > tr > td:not(:nth-child(-n+2)),
-.fxs_forecast_week_table tbody > tr > th:not(:nth-child(-n+2)),
-.fxs_forecast_week_table thead > tr > th:not(:nth-child(-n+2)),
-.fxs_forecast_week_table tfoot > tr > th:not(:nth-child(-n+2)) {
+.fxs_forecast_week_table tbody > tr > td:not( :nth-child(-n+2)),
+.fxs_forecast_week_table thead > tr > td:not( :nth-child(-n+2)),
+.fxs_forecast_week_table tfoot > tr > td:not( :nth-child(-n+2)),
+.fxs_forecast_week_table tbody > tr > th:not( :nth-child(-n+2)),
+.fxs_forecast_week_table thead > tr > th:not( :nth-child(-n+2)),
+.fxs_forecast_week_table tfoot > tr > th:not( :nth-child(-n+2)) {
   display: none;
 }
 .fxs_forecast_week_table tbody > tr > td:last-child,
