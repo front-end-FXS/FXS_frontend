@@ -1076,6 +1076,7 @@
   a {
     display: inline-block;
     text-decoration: none;
+    padding-left:1rem;
     &:hover {
       text-decoration: underline;
       color: @dark_1_clr;
@@ -1109,8 +1110,8 @@
     .fxs_widget_header_text{
         display:none;
     }
-    &.fxs_widget_price_header{
-      .fxs_wideWidget_pre();
+    &.fxs_widget_price_header{     
+      .fxs_wideWidget_pre_header_item();
       .fxs_price_change,.fxs_price_bidask{
           float:right;
       }
@@ -1131,6 +1132,9 @@
                     float:left;
                 }
                 .fxs_asset_label{
+                    a{
+                      padding-left:1.5rem;
+                    }
                     font-size:@txt_size_huge;
                     padding-bottom:0.5rem;
                     &::before{
@@ -1189,9 +1193,9 @@
         }
     }
   .fxs_asset_label {
+    position:relative;
     &::before {
-      display: inline-block;
-      vertical-align: top;
+      position:absolute;
       margin: 2px 2px 0 0;
       content: " ";
       font: normal normal normal 14px FontAwesome;
