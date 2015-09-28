@@ -2496,6 +2496,7 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_asset_label a {
   display: inline-block;
   text-decoration: none;
+  padding-left: 1rem;
 }
 .fxs_asset_label a:hover {
   text-decoration: underline;
@@ -2525,13 +2526,13 @@ fieldset[disabled] .fxs_dismissQuery {
   display: none;
 }
 .fxs_widget_price.fxs_widget_price_header {
-  border-top: 5px solid #f0f0f1;
+  border-bottom: 5px solid #f0f0f1;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem;
 }
 @media (min-width: 680px) {
   .fxs_widget_price.fxs_widget_price_header {
-    padding: 2rem;
+    padding: 0 2rem 2rem;
   }
 }
 .fxs_widget_price.fxs_widget_price_header .fxs_price_change,
@@ -2559,6 +2560,9 @@ fieldset[disabled] .fxs_dismissQuery {
   .fxs_widget_price.fxs_widget_price_header .fxs_asset_label_header .fxs_asset_label {
     font-size: 1.63rem;
     padding-bottom: 0.5rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_asset_label_header .fxs_asset_label a {
+    padding-left: 1.5rem;
   }
   .fxs_widget_price.fxs_widget_price_header .fxs_asset_label_header .fxs_asset_label::before {
     font: normal normal normal 20px FontAwesome;
@@ -2601,9 +2605,11 @@ fieldset[disabled] .fxs_dismissQuery {
   display: block;
   padding-left: 1rem;
 }
+.fxs_widget_price .fxs_asset_label {
+  position: relative;
+}
 .fxs_widget_price .fxs_asset_label::before {
-  display: inline-block;
-  vertical-align: top;
+  position: absolute;
   margin: 2px 2px 0 0;
   content: " ";
   font: normal normal normal 14px FontAwesome;
