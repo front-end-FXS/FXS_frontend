@@ -802,6 +802,14 @@
       vertical-align: top;
     }
   }
+  &.fxs_table_price_mini{
+    td:nth-child(3){
+      display:none;
+    }
+    td:nth-child(2){
+      text-align: right;
+    }
+  }
   &.fxs_table_price{
     td:last-child{
         width:auto;
@@ -811,14 +819,6 @@
     }
   }
   // table mini rules
-  &.fxs_table_price_mini{
-    td:nth-child(3){
-      display:none;
-    }
-    td:nth-child(2){
-      text-align: right;
-    }
-  }
   tbody {
     >tr >td:last-child {
       width: @base_module_size;
