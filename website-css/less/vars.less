@@ -10,7 +10,7 @@
 
 //////////// Colors ////////////
 ///////////////////////////////
-@corp_clr:            #2A3646; // FXS blue
+@corp_clr:            #242D38; // FXS blue
 @brand_highlight_clr: #304C70; // FXS Blue highlighted
 @highlight_clr:       #E4871B; // FXS Orange
 
@@ -30,12 +30,12 @@
 @success_clr: #338473; // Succes, Buy, price up
 @error_clr:   #CF4836; // Error, Sell, price down
 @warning_clr: #F5C861; // Moderate alert, caution
-@info_clr:    #58A3DD; // General info, feedback
+@info_clr:    lighten(@corp_clr, 10%); // General info, feedback
 
 ////////// Typo Stuff //////////
 ///////////////////////////////
 // Base
-@txt_fontfamily: 'Fira Sans', Tahoma, sans-serif;
+@txt_fontfamily: 'Roboto', sans-serif;
 @txt_defaultsize_px: 16px;
 @txt_defaultsize_rem: 1rem;
 
@@ -59,7 +59,7 @@
 @txt_lineheight_xxlarge: @txt_defaultsize_rem * 3.57;
 @txt_lineheight_xlarge: @txt_defaultsize_rem * 2.75;
 @txt_lineheight_large: @txt_defaultsize_rem * 1.75;
-@txt_lineheight_reset: normal;
+@txt_lineheight_reset: 1.55em;
 @txt_lineheight_small: @txt_defaultsize_rem * 1.25;
 @txt_lineheight_xsmall: @txt_defaultsize_rem * 1.063;
 // Icons
