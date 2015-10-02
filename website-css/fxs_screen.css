@@ -3055,6 +3055,14 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_price_ohl span:first-child {
   display: none;
 }
+.fxs_widget_price::before,
+.fxs_widget_price::after {
+  content: " ";
+  display: table;
+}
+.fxs_widget_price::after {
+  clear: both;
+}
 .fxs_widget_price .fxs_asset_label {
   position: relative;
 }
@@ -3133,6 +3141,9 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_price.fxs_widget_price_header .fxs_price_ohl,
 .fxs_widget_price.fxs_widget_price_listView .fxs_price_ohl {
   display: block;
+}
+.fxs_widget_price.fxs_widget_price_listView {
+  padding: 0.5rem 0;
 }
 @media (min-width: 680px) {
   .fxs_widget_price.fxs_widget_mini .fxs_widget_price_value {
