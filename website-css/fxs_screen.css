@@ -924,8 +924,8 @@ h5,
 .fxs_alert::after,
 .fxs_divider_wide::before,
 .fxs_divider_wide::after,
-.fxs_widget_price.fxs_widget_price_header::before,
-.fxs_widget_price.fxs_widget_price_header::after,
+.fxs_widget_price_header::before,
+.fxs_widget_price_header::after,
 .fxs_suscribe::before,
 .fxs_suscribe::after,
 .fxs_sexy_banner::before,
@@ -957,7 +957,7 @@ h5,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
 .fxs_alert::after,
 .fxs_divider_wide::after,
-.fxs_widget_price.fxs_widget_price_header::after,
+.fxs_widget_price_header::after,
 .fxs_suscribe::after,
 .fxs_sexy_banner::after {
   clear: both;
@@ -993,7 +993,7 @@ h5,
 .fxs_wideContent,
 .fxs_alert,
 .fxs_divider_wide,
-.fxs_widget_price.fxs_widget_price_header,
+.fxs_widget_price_header,
 .fxs_suscribe,
 .fxs_sexy_banner {
   margin-left: -1rem;
@@ -1003,7 +1003,7 @@ h5,
   .fxs_wideContent,
   .fxs_alert,
   .fxs_divider_wide,
-  .fxs_widget_price.fxs_widget_price_header,
+  .fxs_widget_price_header,
   .fxs_suscribe,
   .fxs_sexy_banner {
     margin-left: -2rem;
@@ -3094,16 +3094,6 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_price.price_down .fxs_price_change a {
   color: #aa3828;
 }
-.fxs_widget_price.fxs_widget_price_header {
-  border-bottom: 5px solid #f0f0f1;
-  margin-bottom: 1rem;
-  padding: 0 1rem 1rem;
-}
-@media (min-width: 680px) {
-  .fxs_widget_price.fxs_widget_price_header {
-    padding: 0 2rem 2rem;
-  }
-}
 @media (min-width: 680px) {
   .fxs_widget_price.fxs_widget_price_header .fxs_asset_label_block .fxs_price_change {
     padding-left: 1.5rem;
@@ -3175,6 +3165,9 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_table_prices .fxs_widget_price_value {
   max-width: inherit;
+}
+.fxs_table_prices .fxs_price_change {
+  display: block;
 }
 @media (min-width: 680px) {
   .fxs_table_prices.fxs_widget_default tbody tr td,
@@ -3885,6 +3878,16 @@ height:calc(100% - 45px);
   height: 45px;
   line-height: 45px;
   width: 45px;
+}
+.fxs_widget_price_header {
+  border-bottom: 5px solid #f0f0f1;
+  margin-bottom: 1rem;
+  padding: 0 1rem 1rem;
+}
+@media (min-width: 680px) {
+  .fxs_widget_price_header {
+    padding: 0 2rem 2rem;
+  }
 }
 .fxs_leaderboard {
   display: none;
