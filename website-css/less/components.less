@@ -1227,6 +1227,44 @@
   }
 }
 
+// override chart widget
+
+// widget asset
+.fxs_widget_chart_container{
+  .fxs_tabs_nav{
+    margin:0;
+  }
+  .fxs_widget_default{
+    height:350px;
+    &.fxs_widget_mini{
+      .fxs_tabs_nav{
+        display:none;
+      }
+      height:250px;
+    }
+    @media(min-width:@screen-s){
+      &.fxs_widget_big{
+        height:580px;
+      }
+    }
+    .tt_chartContainer{
+    background-color:#fff;
+    border:none;
+    padding-top:0!important;
+    }
+    .tt_copyrightSign, .tt_symbolTitle{
+      display:none;
+    }
+    .tt_panelDiv{
+      border:none!important;
+      height:555px!important;
+      svg{
+        border:1px solid #fff;
+      }
+    }
+  }
+}
+
 /////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!
 
@@ -1321,4 +1359,42 @@
 
 // blur modal effect
 .fxs_blur { .blur(5px); }
-//
+
+
+// widget asset
+.fxs_widget_chart_container{
+  .fxs_tabs_nav{
+    margin:0;
+  }
+  .fxs_widget_default{
+    height:350px;
+    &.fxs_widget_mini{
+      .fxs_tabs_nav{
+        display:none;
+      }
+      height:250px;
+    }
+    @media(min-width:@screen-s){
+      &.fxs_widget_big{
+        height:580px;
+      }
+    }
+    .tt_chartContainer{
+      background-color:#fff;
+      border:none;
+      padding-top:0!important;
+    }
+    .tt_copyrightSign, .tt_symbolTitle{
+      display:none;
+    }
+    .tt_panelDiv{
+      border:none!important;
+      height:555px!important;
+      svg{
+        border:1px solid #fff;
+      }
+    }
+  }
+  /*
+  */
+}
