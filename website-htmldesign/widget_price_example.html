@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Cols layouts - FXStreet</title>
+        <title>Widget Price example - FXStreet</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="../website-css/fxs_screen.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -171,58 +171,129 @@
 
                 <section class="fxs_detail">
 
-                     <!-- este elemento forma parte del template y no como un widget con lo que no necesita de los columnas del grid  de sitefinity -->                                         
-                    <div class="fxs_widget_price_header fxs_widget_price price_down">
-                        <span class="fxs_asset_label_header">
+                    <!-- este elemento forma parte del template con lo que no necesita de las columnas del grid  de sitefinity -->                                         
+                    
+                    <!-- Widget prices header -->
+                    <div class="fxs_widget_price fxs_widget_price_header price_down">
+                        <div class="fxs_asset_label_block">
                             <abbr class="fxs_asset_label" title="Euro - US Dollar">
                                 <a href="/">EUR/USD</a>
                             </abbr>
-
                             <span class="fxs_price_change">
                                 <span class="fxs_change_pips">0.0026</span>
                                 <span class="fxs_change_percent">(-0.12%)</span>
                             </span>
-                        </span>
-
-                        <span class="fxs_price_bidask_text">
-                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup class="fxs_sup_price_bidask">8</sup>/<strong class="fxs_price_big_figure">56</strong><sup class="fxs_sup_price_bidask">7</sup></span>
-
-                            <small class="fxs_widget_header_text">Open 1.1872  High 1.1872  Low 1.1810</small>
-                        </span>
+                        </div>
+                        <div class="fxs_widget_price_value">
+                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                            <small class="fxs_price_ohl">
+                                <span>Open 1.1872</span>
+                                <span>High 1.1872</span>
+                                <span>Low 1.1810</span>
+                            </small>
+                        </div>
                     </div>
+                   <!-- /Widget prices header -->
 
                     <!-- 8 - 4 -->
 
                     <div class="sf_cols">
-                        <div class="sf_2cols_1_67">
+                        <div class="sf_2cols_1_75">
                             <div id="fxs_detail_ctl00_C004_Col00">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_big">
-                                                <header>
-                                                    <h2 class="fxs_entryHeadline">
-                                                        <a href="/">O nefo. Spli brufrtyes fividito binsiz fivepp.</a>
-                                                    </h2><address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="sopiiayinticingli">E Clin.</a></span> |
-                                                        <time pubdate="" datetime="&lt;!--TODO--&gt;">2 minutes ago</time>
-                                                    </address>
-                                                </header><div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/borsa.xl.jpg"></div><div class="fxs_entryExcerpt">
-                                                    <p>
-                                                        EN-Spiil pra fimadrox frufeema clledais oneinba chawhtrka cat. Bral ediv istuap nelsl wicag wwobloniz etesyw wisiefilo sisor ten eivirn fefia w brmfti setcever. Chepbome b wibess shilss wwop. On.
-                                                    </p>
-                                                </div>
-                                            </article>
+
+                                <h3 class="fxs_subtitle">
+                                    Widget price default
+                                </h3>
+                                
+                                <!-- Widget prices default -->
+
+                                <!-- widget price - price up -->
+                                <div class="fxs_widget_divider_module">
+                                    <div class="fxs_widget_price price_up">
+                                        <abbr class="fxs_asset_label price_down_big" title="Euro - US Dollar">
+                                            <a href="/">EUR/USD</a>
+                                        </abbr>
+                                        <div class="fxs_widget_price_value">
+                                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                            <span class="fxs_price_change">
+                                                <span class="fxs_change_pips">0.0026</span>
+                                                <span class="fxs_change_percent">(-0.12%)</span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- /widget price - price up -->
+
+                                <!-- /Widget prices default -->
+
+                                <!-- Article example -->
+                                <div class="fxs_entryFeatured">
+                                    <article class="fxs_entryFeatured_big">
+                                        <header>
+                                            <h2 class="fxs_entryHeadline">
+                                                <a href="/">EUR/USD Forecast: bullish above 1.5630</a>
+                                            </h2>
+
+                                            <!-- Author box medium -->
+                                            <address class="fxs_contributorBox fxs_contributorBox_medium">
+                                                <div class="fxs_avatar_circleImage_s">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                    </a>
+                                                </div>
+                                                <span class="fxs_article_author">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                        Justin Timberlake
+                                                    </a>
+                                                    <span class="fxs_author_description">
+                                                        Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
+                                                    </span>
+                                                </span>
+                                                <script type="application/ld+json">
+                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                </script>
+                                            </address>
+                                            <!-- /Author box medium -->
+
+                                        </header>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://i.telegraph.co.uk/multimedia/archive/02423/bull_2423808b.jpg">
+                                        </div>
+
+                                        <div class="fxs_entryExcerpt">
+                                            <p>
+                                                EN-Spiil pra fimadrox frufeema clledais oneinba chawhtrka cat. Bral ediv istuap nelsl wicag wwobloniz etesyw wisiefilo sisor ten eivirn fefia w brmfti setcever. Chepbome b wibess shilss wwop. On.
+                                            </p>
+                                        </div>
+
+                                    </article>
+                                </div>
+                                <!-- /Article example -->
 
                             </div>
                         </div>
-                        <div class="sf_2cols_2_33">
+
+                        <div class="sf_2cols_1_25">
                             <div id="fxs_detail_ctl00_C004_Col01">
 
                                 <div id="postlistvertical_c97e1441-abe8-44e7-8750-9e7af4f441b6">
+
+                                    <!-- Widget prices mini -->
+                                    <div class="fxs_widget_divider_module">
+                                        <div class="fxs_widget_price fxs_widget_mini price_down">
+                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                <a href="/">EUR/USD</a>
+                                            </abbr>                              
+                                            <div class="fxs_widget_price_value">
+                                                <span class="fxs_price_change">
+                                                    <span class="fxs_change_pips">0.0026</span>
+                                                    <span class="fxs_change_percent">(-0.12%)</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Widget prices mini -->
+
                                     <aside class="fxs_entriesList">
                                         <ol>
                                             <li>
@@ -261,14 +332,36 @@
                                                     </address>
                                                 </article>
                                             </li>
+                                        </ol>
+                                    </aside>
+
+
+                                    <!-- Widget prices mini -->
+                                    <div class="fxs_widget_divider_module">
+                                        <div class="fxs_widget_price fxs_widget_mini price_up">
+                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                <a href="/">GBP/USD</a>
+                                            </abbr>                              
+                                            <div class="fxs_widget_price_value">
+                                                <span class="fxs_price_change">
+                                                    <span class="fxs_change_pips">0.0026</span>
+                                                    <span class="fxs_change_percent">(0.12%)</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /Widget prices mini -->
+
+                                    <aside class="fxs_entriesList">
+                                        <ol>
                                             <li>
                                                 <article>
                                                     <h3 class="fxs_entryHeadline">
-                                                        <a title="O nefo. Spli brufrtyes fividito binsiz fivepp." href="O-nefo-Spli-brufrtyes-fividito-binsiz-fivepp-201507041117">O nefo. Spli brufrtyes fividito binsiz fivepp.</a>
+                                                        <a title="Promo n f ein th il." href="Promo-n-f-ein-th-il-201506250917">Promo n f ein th il.</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
                                                         <span class="fxs_article_author">
-                                                            By <a href="sopiiayinticingli">E Clin.</a>
+                                                            By <a href="gryodidibinslyb">Sonne Asm.</a>
                                                         </span> | <time datetime="" pubdate="">JUL 21, 15:17 GMT</time>
                                                     </address>
                                                 </article>
@@ -276,11 +369,23 @@
                                             <li>
                                                 <article>
                                                     <h3 class="fxs_entryHeadline">
-                                                        <a title="Selthlyio soduan codls binge grekom thepo nara br pucostare gerluc ive." href="Selthlyio-soduan-codls-binge-grekom-thepo-nara-br-pucostare-gerluc-ive-201506280317">Selthlyio soduan codls binge grekom thepo nara br pucostare gerluc ive.</a>
+                                                        <a title="Sefi tughie witonbr chiiomy bru oft pobb onckit b." href="Sefi-tughie-witonbr-chiiomy-bru-oft-pobb-onckit-b-201507191217">Sefi tughie witonbr chiiomy bru oft pobb onckit b.</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
                                                         <span class="fxs_article_author">
-                                                            By <a href="guilsfucellybed">S Neicyly.</a>
+                                                            By <a href="fitceetengkingrg">Tielyl Erile.</a>
+                                                        </span> | <time datetime="" pubdate="">JUL 21, 15:17 GMT</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a title="Gotthusor otcyefig of ungu osckno bymass byprorfl." href="Gotthusor-otcyefig-of-ungu-osckno-bymass-byprorfl-201507091117">Gotthusor otcyefig of ungu osckno bymass byprorfl.</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">
+                                                            By <a href="coyicighesshetatesr">Olepene Ni.</a>
                                                         </span> | <time datetime="" pubdate="">JUL 21, 15:17 GMT</time>
                                                     </address>
                                                 </article>
@@ -288,10 +393,6 @@
                                         </ol>
                                     </aside>
                                 </div>
-                                <script>
-                                    FXStreet.Util.createObject("PostListVertical", { "Category": "cd2597a1-302d-6b5e-8090-ff000071ccd5", "Take": 5, "HtmlTemplateFile": "postlist_vertical.html", "PostListType": "Vertical", "CultureName": "en", "JsName": "PostListVertical", "ContainerId": "postlistvertical_c97e1441-abe8-44e7-8750-9e7af4f441b6" });
-                                </script>
-
 
                             </div>
                         </div>
@@ -300,19 +401,45 @@
                     <hr class="fxs_divider_wide">
 
 
-                    <!--  New template required!!!!! -->
+                    <!--  Flex cols -->
                     <div class="sf_cols fxs_tableRow">
 
                         <div class="fxs_flex_col">
 
-                            <!-- Featured entry Big -->
-                            <section class="fxs_widget_summary">
+                            <div class="fxs_widget_summary">
                                 <h3 class="fxs_subtitle">
-                                    MOST TREADED PAIRS <i class="fa fa-info-circle"></i>
+                                    Most traded pairs (default)
                                 </h3>
-                                <table class="fxs_table_price fxs_table fxs_tableHover">
+
+                                <!-- Table default size -->
+                                <table class="fxs_table fxs_table_prices fxs_widget_default fxs_tableHover">
                                     
                                     <tbody>
+                                        <tr onclick="todo" class="fxs_widget_price price_up">
+                                            <td>
+                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                    <a href="/">EUR/USD</a>
+                                                </abbr>
+                                            </td>
+                                            <td>
+                                                <div class="fxs_widget_price_value">
+                                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                    <span class="fxs_price_change">
+                                                        <span class="fxs_change_pips">0.0026</span>
+                                                        <span class="fxs_change_percent">(0.12%)</span>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <small class="fxs_price_ohl">
+                                                    <span>Open 1.1872</span>
+                                                    <span>High 1.1872</span>
+                                                    <span>Low 1.1810</span>
+                                                </small>
+                                            </td>
+
+                                        </tr>
+
                                         <tr onclick="todo" class="fxs_widget_price price_down">
                                             <td>
                                                 <abbr class="fxs_asset_label" title="Euro - US Dollar">
@@ -320,13 +447,46 @@
                                                 </abbr>
                                             </td>
                                             <td>
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
+                                                <div class="fxs_widget_price_value">
+                                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                    <span class="fxs_price_change">
+                                                        <span class="fxs_change_pips">0.0026</span>
+                                                        <span class="fxs_change_percent">(-0.12%)</span>
+                                                    </span>
+                                                </div>
                                             </td>
-                                            <td><small>High 1.1324  Low 1.237</small></td>
+                                            <td>
+                                                <small class="fxs_price_ohl">
+                                                    <span>Open 1.1872</span>
+                                                    <span>High 1.1872</span>
+                                                    <span>Low 1.1810</span>
+                                                </small>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr onclick="todo" class="fxs_widget_price price_down">
+                                            <td>
+                                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                    <a href="/">EUR/USD</a>
+                                                </abbr>
+                                            </td>
+                                            <td>
+                                                <div class="fxs_widget_price_value">
+                                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                    <span class="fxs_price_change">
+                                                        <span class="fxs_change_pips">0.0026</span>
+                                                        <span class="fxs_change_percent">(-0.12%)</span>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <small class="fxs_price_ohl">
+                                                    <span>Open 1.1872</span>
+                                                    <span>High 1.1872</span>
+                                                    <span>Low 1.1810</span>
+                                                </small>
+                                            </td>
 
                                         </tr>
 
@@ -337,36 +497,53 @@
                                                 </abbr>
                                             </td>
                                             <td>
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
+                                                <div class="fxs_widget_price_value">
+                                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                    <span class="fxs_price_change">
+                                                        <span class="fxs_change_pips">0.0026</span>
+                                                        <span class="fxs_change_percent">(0.12%)</span>
+                                                    </span>
+                                                </div>
                                             </td>
-                                            <td><small>High 1.1324  Low 1.237</small></td>
+                                            <td>
+                                                <small class="fxs_price_ohl">
+                                                    <span>Open 1.1872</span>
+                                                    <span>High 1.1872</span>
+                                                    <span>Low 1.1810</span>
+                                                </small>
+                                            </td>
 
                                         </tr>
 
-                                        <tr onclick="todo" class="fxs_widget_price price_down">
+                                        <tr onclick="todo" class="fxs_widget_price price_up">
                                             <td>
                                                 <abbr class="fxs_asset_label" title="Euro - US Dollar">
                                                     <a href="/">EUR/USD</a>
                                                 </abbr>
                                             </td>
                                             <td>
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
+                                                <div class="fxs_widget_price_value">
+                                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                    <span class="fxs_price_change">
+                                                        <span class="fxs_change_pips">0.0026</span>
+                                                        <span class="fxs_change_percent">(0.12%)</span>
+                                                    </span>
+                                                </div>
                                             </td>
-                                            <td><small>High 1.1324  Low 1.237</small></td>
+                                            <td>
+                                                <small class="fxs_price_ohl">
+                                                    <span>Open 1.1872</span>
+                                                    <span>High 1.1872</span>
+                                                    <span>Low 1.1810</span>
+                                                </small>
+                                            </td>
 
                                         </tr>
 
                                     </tbody>
                                 </table>
-                            </section>
+                                <!-- /Table default size -->
+                            </div>
                             
 
                         </div>
@@ -376,7 +553,7 @@
 
                             <!-- Content Ad container -->
                             <div class="fxs_content_adContainer">
-                                <iframe frameborder="0" scrolling="no" id="creativeIframe573517059" src="https://s1.2mdn.net/4133302/1442006366860/300x600-SWH.html" width="300" height="600" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
+                                <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
                             </div>
                             <!-- Content Ad container -->
 
@@ -389,730 +566,96 @@
 
                     <hr class="fxs_divider_wide">
                     <div class="sf_cols">
-                        <div class="sf_3cols_3_33">
+                        <div class="sf_1col_1_100">
                             <div id="fxs_detail_ctl07_C037_Col00">
-                                <div class="fxs_widget_summary">
-                                    <h3 class="fxs_subtitle">
-                                        INDICES <i class="fa fa-info-circle"></i>
-                                    </h3>
-                                    <table class="fxs_table_price_mini fxs_table fxs_tableHover">
-                            
-                                        <tbody>
-                                            <tr onclick="todo" class="fxs_widget_price price_down">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">Gold Spot</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value"> 
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <small>High 1.1324  Low 1.237</small>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr onclick="todo" class="fxs_widget_price price_up">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">Crude Oil (WTI)</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value"> 
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <small>High 1.1324  Low 1.237</small>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr onclick="todo" class="fxs_widget_price price_down">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">COMEX Silver with a long text</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value">  
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td><small>High 1.1324  Low 1.237</small></td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sf_3cols_3_33">
-                            <div id="fxs_detail_ctl07_C037_Col00">
-                                <div class="fxs_widget_summary">
-                                    <h3 class="fxs_subtitle">
-                                        COMMODITIES <i class="fa fa-info-circle"></i>
-                                    </h3>
-                                    <table class="fxs_table_price_mini fxs_table fxs_tableHover">
                                 
-                                        <tbody>
-                                            <tr onclick="todo" class="fxs_widget_price price_down">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">Gold Spot</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value"> 
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <small>High 1.1324  Low 1.237</small>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr onclick="todo" class="fxs_widget_price price_up">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">Crude Oil (WTI)</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value"> 
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <small>High 1.1324  Low 1.237</small>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr onclick="todo" class="fxs_widget_price price_down">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">COMEX Silver with a long text</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value">  
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td><small>High 1.1324  Low 1.237</small></td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- tabla para contenido de widget version mini -->
-
-                        <div class="sf_3cols_3_33">
-                             <div id="fxs_detail_ctl07_C037_Col00">
                                 <div class="fxs_widget_summary">
                                     <h3 class="fxs_subtitle">
-                                        INDICES <i class="fa fa-info-circle"></i>
+                                        Today's gainers (big)
                                     </h3>
-                                    <table class="fxs_table_price_mini fxs_table fxs_tableHover">                                          
+
+                                    <!-- Table prices big size -->
+                                    <table class="fxs_table fxs_table_prices fxs_widget_big fxs_tableHover">
+                                        
                                         <tbody>
-                                            <tr onclick="todo" class="fxs_widget_price price_down">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">Gold Spot</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value"> 
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <small>High 1.1324  Low 1.237</small>
-                                                </td>
-
-                                            </tr>
-
                                             <tr onclick="todo" class="fxs_widget_price price_up">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">Crude Oil (WTI)</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value"> 
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <small>High 1.1324  Low 1.237</small>
-                                                </td>
-
-                                            </tr>
-
-                                            <tr onclick="todo" class="fxs_widget_price price_down">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">COMEX Silver with a long text</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="fxs_widget_price_value">  
-                                                        <span class="fxs_price_bidask">1.27688</span>
-                                                        <span class="fxs_price_change">
-                                                            <span class="fxs_change_pips">0.0026</span>
-                                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                                <td><small>High 1.1324  Low 1.237</small></td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>                                 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sf_cols">
-                        <div class="sf_colsOut sf_1col_1_100">
-                            <div class="sf_colsIn sf_1col_1in_100" id="fxs_detail_ctl00_C108_Col00">
-
-                                <div id="alert_99b5fc73-aa2e-4e53-89fc-3cf635833be6">
-                                    <div class="fxs_alert fxs_alert_live">
-                                        <span class="fxs_alertLabel">dsfsdfsdf</span>
-                                        <a class="fxs_close" href="#"><i class="fa fa-close"></i></a>
-                                        <p class="fxs_alertText"><a href="http://google.es">sdfsdfdsf</a></p>
-                                    </div>
-                                </div>
-                                <script>
-                                    FXStreet.Util.createObject("Alert", { "Summary": "sdfsdfdsf", "Url": "http://google.es", "Title": "dsfsdfsdf", "HtmlTemplateFile": "staticalert_href.html", "AlertType": "Live", "JsName": "Alert", "ContainerId": "alert_99b5fc73-aa2e-4e53-89fc-3cf635833be6" });
-                                </script>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--  New template required!!!!! -->
-                    <div class="sf_cols fxs_tableRow">
-
-                        <!-- Ad col inside -->
-                        <div class="fxs_flex_col fxs_flex_ad_col">
-
-                            <!-- Content Ad container -->
-                            <div class="fxs_content_adContainer">
-                                <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
-                            </div>
-                            <!-- Content Ad container -->
-
-                        </div>
-                        <!-- /Ad col inside -->
-
-                        <div class="fxs_flex_col">
-
-                            <h3 class="fxs_subtitle">
-                                Forecast Poll <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Text that explains widget"></i>
-                            </h3>
-
-                            <section class="fxs_widget_summary">
-
-                                <!-- Widget default -->
-                                <div class="fxs_forecast_widget_multi fxs_widget_default">
-                                    <ul class="fxs_tabs_nav fxs_table_tabs">
-                                        <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
-                                        <li class="active"><a id="tab_1_mini" href="#">1 Week</a></li>
-                                        <li><a id="tab_2_mini" href="#">1 Month</a></li>
-                                        <li><a id="tab_3_mini" href="#">1 Quarter</a></li>
-                                    </ul>
-                                    <table class="fxs_table fxs_tableHover">
-                                        <thead>
-                                            <tr>
-                                                <th>&nbsp;</th>
-                                                <th>1 Week</th>
-                                                <th>1 Month</th>
-                                                <th>1 Quarter</th>
-                                                <th>&nbsp;</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr onclick="todo">
                                                 <td>
                                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
                                                         <a href="/">EUR/USD</a>
                                                     </abbr>
                                                 </td>
                                                 <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_mini" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bearish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bearish</span>
-                                                        </div>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_mini" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
                                                 </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_mini" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
+
                                             </tr>
 
-                                            <!---->
-
-                                            <tr onclick="todo">
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
                                                 <td>
-                                                    <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
-                                                        <a href="/">USD/JPY</a>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">EUR/USD</a>
                                                     </abbr>
                                                 </td>
                                                 <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_2_mini" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bearish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bearish</span>
-                                                        </div>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_2_mini" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
                                                 </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_2_mini" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
+
                                             </tr>
 
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">EUR/USD</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
 
                                         </tbody>
-                                        <!-- footer -->
-                                        <tfoot>
-                                            <tr>
-                                                <td class="fxs_widget_footer" colspan="5">
-                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                                                </td>
-                                            </tr>
-                                        </tfoot>
-                                        <!-- /footer -->
                                     </table>
-                                </div>
-                                <!-- /Widget default -->
-
-                            </section>
-
-                        </div>
-
-                    </div>
-                    <!--  /New template required!!!!! -->
-
-                    <hr class="fxs_divider_wide">
-                    <!-- 1 = 100% -->
-
-                    <div class="sf_cols">
-                        <div class="sf_1col_1_100">
-                            <div id="fxs_detail_ctl02_C013_Col00">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_imgSide">
-                                                <div class="fxs_entryFeatured_img"><img width="" height="" src="http://editorial.blob.core.windows.net/images/borsa.s.jpg" alt=""></div><div class="fxs_floatingMedia_textBody">
-                                                    <header>
-                                                        <h3 class="fxs_entryHeadline">
-                                                            <a href="/">Awallind ca naco oumagnake. Otchalise.</a>
-                                                        </h3><address class="fxs_entry_metaInfo">
-                                                            <span class="fxs_article_author">By <a href="acscunatorenetat">Nislinen. Biagehier.</a></span> |
-                                                            <time pubdate="" datetime="">24 minutes ago</time>
-                                                        </address>
-                                                    </header><div class="fxs_entryExcerpt">
-                                                        <p>
-                                                            EN-Wescus ebs tuckst wh pampwse ixitoti ovtiigen. Ed oryw e onbltnor cldnt unm il weanki n ou. Spo twontc coppbayis fea oshamoupg eiitri.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr class="fxs_divider_second">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sf_cols">
-                        <div class="sf_1col_1_100">
-                            <div id="fxs_detail_ctl02_C013_Col00">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_imgSide">
-                                                <div class="fxs_entryFeatured_img"><img width="" height="" src="http://editorial.blob.core.windows.net/images/borsa.s.jpg" alt=""></div><div class="fxs_floatingMedia_textBody">
-                                                    <header>
-                                                        <h3 class="fxs_entryHeadline">
-                                                            <a href="/">Awallind ca naco oumagnake. Otchalise.</a>
-                                                        </h3><address class="fxs_entry_metaInfo">
-                                                            <span class="fxs_article_author">By <a href="acscunatorenetat">Nislinen. Biagehier.</a></span> |
-                                                            <time pubdate="" datetime="">24 minutes ago</time>
-                                                        </address>
-                                                    </header><div class="fxs_entryExcerpt">
-                                                        <p>
-                                                            EN-Wescus ebs tuckst wh pampwse ixitoti ovtiigen. Ed oryw e onbltnor cldnt unm il weanki n ou. Spo twontc coppbayis fea oshamoupg eiitri.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr class="fxs_divider_second">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sf_cols">
-                        <div class="sf_1col_1_100">
-                            <div id="fxs_detail_ctl02_C013_Col00">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_imgSide">
-                                                <div class="fxs_entryFeatured_img"><img width="" height="" src="http://editorial.blob.core.windows.net/images/borsa.s.jpg" alt=""></div><div class="fxs_floatingMedia_textBody">
-                                                    <header>
-                                                        <h3 class="fxs_entryHeadline">
-                                                            <a href="/">Awallind ca naco oumagnake. Otchalise.</a>
-                                                        </h3><address class="fxs_entry_metaInfo">
-                                                            <span class="fxs_article_author">By <a href="acscunatorenetat">Nislinen. Biagehier.</a></span> |
-                                                            <time pubdate="" datetime="">24 minutes ago</time>
-                                                        </address>
-                                                    </header><div class="fxs_entryExcerpt">
-                                                        <p>
-                                                            EN-Wescus ebs tuckst wh pampwse ixitoti ovtiigen. Ed oryw e onbltnor cldnt unm il weanki n ou. Spo twontc coppbayis fea oshamoupg eiitri.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="fxs_divider_wide">
-
-                    <!-- 9 - 3 -->
-
-                    <div class="sf_cols">
-                        <div class="sf_2cols_1_75">
-                            <div id="fxs_detail_ctl04_ctl03_C024_Col00">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_imgSide">
-                                                <div class="fxs_entryFeatured_img"><img width="" height="" src="http://editorial.blob.core.windows.net/images/Markets/Currencies/Majors/EURUSD/fidelcastro.s.jpg" alt=""></div><div class="fxs_floatingMedia_textBody">
-                                                    <header>
-                                                        <h3 class="fxs_entryHeadline">
-                                                            <a href="/">Pord bypons byshs su temem oreri nattrm spo unonedess fobadit.</a>
-                                                        </h3><address class="fxs_entry_metaInfo">
-                                                            <span class="fxs_article_author">By <a href="twitrsmesshhess">Imi Tami.</a></span> |
-                                                            <time pubdate="" datetime="">36 minutes ago</time>
-                                                        </address>
-                                                    </header><div class="fxs_entryExcerpt">
-                                                        <p>
-                                                            EN-Eice onomaysi g whievict byp sopet erokele thienowit twamenig ut evto awidstu. Isethsd ugalot o siidgon podnhs clourtia partsfbl nee es aco brm ovie g. N exiiaye wwopwwian plsashtut fomsla genk pun. Nacli.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-
-                                        <hr class="fxs_divider_second">
-                                    </div>
-                                </div>
-                                <div class="sf_cols">
-                                    <div class="sf_1col_1_100">
-                                        <div id="fxs_detail_ctl04_ctl03_ctl05_C026_Col00">
-                                            <div>
-                                                <div>
-                                                    <div class="fxs_entryFeatured">
-                                                        <article class="fxs_entryFeatured_imgSide">
-                                                            <div class="fxs_entryFeatured_img"><img width="" height="" src="http://editorial.blob.core.windows.net/images/Markets/Currencies/Majors/EURUSD/fidelcastro.s.jpg" alt=""></div><div class="fxs_floatingMedia_textBody">
-                                                                <header>
-                                                                    <h3 class="fxs_entryHeadline">
-                                                                        <a href="/">Pord bypons byshs su temem oreri nattrm spo unonedess fobadit.</a>
-                                                                    </h3><address class="fxs_entry_metaInfo">
-                                                                        <span class="fxs_article_author">By <a href="twitrsmesshhess">Imi Tami.</a></span> |
-                                                                        <time pubdate="" datetime="">38 minutes ago</time>
-                                                                    </address>
-                                                                </header><div class="fxs_entryExcerpt">
-                                                                    <p>
-                                                                        EN-Eice onomaysi g whievict byp sopet erokele thienowit twamenig ut evto awidstu. Isethsd ugalot o siidgon podnhs clourtia partsfbl nee es aco brm ovie g. N exiiaye wwopwwian plsashtut fomsla genk pun. Nacli.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <hr class="fxs_divider_second">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sf_cols">
-                                    <div class="sf_1col_1_100">
-                                        <div id="fxs_detail_ctl04_ctl03_ctl06_C027_Col00">
-                                            <div>
-                                                <div>
-                                                    <div class="fxs_entryFeatured">
-                                                        <article class="fxs_entryFeatured_imgSide">
-                                                            <div class="fxs_entryFeatured_img"><img width="" height="" src="http://editorial.blob.core.windows.net/images/Markets/Currencies/Majors/EURUSD/fidelcastro.s.jpg" alt=""></div><div class="fxs_floatingMedia_textBody">
-                                                                <header>
-                                                                    <h3 class="fxs_entryHeadline">
-                                                                        <a href="/">Pord bypons byshs su temem oreri nattrm spo unonedess fobadit.</a>
-                                                                    </h3><address class="fxs_entry_metaInfo">
-                                                                        <span class="fxs_article_author">By <a href="twitrsmesshhess">Imi Tami.</a></span> |
-                                                                        <time pubdate="" datetime="">39 minutes ago</time>
-                                                                    </address>
-                                                                </header><div class="fxs_entryExcerpt">
-                                                                    <p>
-                                                                        EN-Eice onomaysi g whievict byp sopet erokele thienowit twamenig ut evto awidstu. Isethsd ugalot o siidgon podnhs clourtia partsfbl nee es aco brm ovie g. N exiiaye wwopwwian plsashtut fomsla genk pun. Nacli.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="sf_2cols_1_25">
-                            <div id="fxs_detail_ctl04_ctl03_C024_Col01">
-
-                                <div class="fxs_entryFeatured">
-                                    <article class="fxs_entryFeatured_reduced">
-                                        <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
-                                            <h3 class="fxs_entryHeadline">
-                                                <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
-                                            </h3><address class="fxs_entry_metaInfo">
-                                                <span class="fxs_article_author">By <a href="inhasurloorgingli">Imesidan Ade.</a></span> |
-                                                <time pubdate="" datetime="">JUL 21, 15:17 GMT</time>
-                                            </address>
-                                        </header>
-                                    </article>
-                                </div>
-
-                                <hr class="fxs_divider_third">
-
-                                <div class="fxs_entryFeatured">
-                                    <article class="fxs_entryFeatured_reduced">
-                                        <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
-                                            <h3 class="fxs_entryHeadline">
-                                                <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
-                                            </h3><address class="fxs_entry_metaInfo">
-                                                <span class="fxs_article_author">By <a href="inhasurloorgingli">Imesidan Ade.</a></span> |
-                                                <time pubdate="" datetime="">JUL 21, 15:17 GMT</time>
-                                            </address>
-                                        </header>
-                                    </article>
-                                </div>
-
-                                <hr class="fxs_divider_third">
-
-                                <div class="fxs_entryFeatured">
-                                    <article class="fxs_entryFeatured_reduced">
-                                        <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
-                                            <h3 class="fxs_entryHeadline">
-                                                <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
-                                            </h3><address class="fxs_entry_metaInfo">
-                                                <span class="fxs_article_author">By <a href="inhasurloorgingli">Imesidan Ade.</a></span> |
-                                                <time pubdate="" datetime="">JUL 21, 15:17 GMT</time>
-                                            </address>
-                                        </header>
-                                    </article>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <hr class="fxs_divider_wide">
-
-                    <!-- 6 - 6 -->
-
-                    <div class="sf_cols">
-                        <div class="sf_2cols_2_50">
-                            <div id="fxs_detail_ctl05_C030_Col00">
-                                <div>
-                                    <div>
-                                        <!-- Featured entry Medium -->
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_med">
-                                                <div class="fxs_entryFeatured_img">
-                                                    <!-- tener en cuenta esta clase (fxs_entryFeatured_img) crea una más cara sobre la imagen-->
-                                                    <img src="http://placekitten.com/g/500/350" />
-                                                </div>
-                                                <header>
-                                                    <h3 class="fxs_entryHeadline">
-                                                        <a href="/">US durable goods orders strong than expected in October</a>
-                                                    </h3>
-                                                    <address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
-                                                    </address>
-                                                </header>
-                                                <div class="fxs_entryExcerpt">
-                                                    <p>
-                                                        Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
-                                                    </p>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <!-- /Featured entry Medium -->
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="sf_2cols_2_50">
-                            <div id="fxs_detail_ctl05_C030_Col01">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_med">
-                                                <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
-                                                    <h3 class="fxs_entryHeadline">
-                                                        <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
-                                                    </h3><address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="inhasurloorgingli">Imesidan Ade.</a></span> |
-                                                        <time pubdate="" datetime="">JUL 21, 15:17 GMT</time>
-                                                    </address>
-                                                </header>
-                                                <div class="fxs_entryExcerpt">
-                                                    <p>
-                                                        Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
-                                                    </p>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
+                                    <!-- /Table prices big size -->
                                 </div>
 
                             </div>
@@ -1126,42 +669,191 @@
                     <div class="sf_cols">
                         <div class="sf_3cols_3_33 ">
                             <div id="fxs_detail_ctl07_C037_Col00">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_reduced">
-                                                <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
-                                                    <h3 class="fxs_entryHeadline">
-                                                        <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
-                                                    </h3><address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="inhasurloorgingli">Imesidan Ade.</a></span> |
-                                                        <time pubdate="" datetime="">JUL 21, 15:17 GMT</time>
-                                                    </address>
-                                                </header>
-                                            </article>
-                                        </div>
-                                    </div>
+                                
+                                <div class="fxs_widget_summary">
+                                    <h3 class="fxs_subtitle">
+                                        Commodities (mini)
+                                    </h3>
+
+                                    <!-- Table mini -->
+                                    <table class="fxs_table fxs_table_prices fxs_tableHover">
+                                        
+                                        <tbody>
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Crude Oil (WTI)">
+                                                        <a href="/">Crude Oil (WTI)</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27688</span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">Gold Spot</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.1256</span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">COMEX Silver</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">112.56</span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <!-- /Table mini -->
+
                                 </div>
+
 
                             </div>
                         </div>
                         <div class="sf_3cols_3_33">
                             <div id="fxs_detail_ctl07_C037_Col01">
-                                <div>
-                                    <div>
-                                        <div class="fxs_entryFeatured">
-                                            <article class="fxs_entryFeatured_reduced">
-                                                <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
-                                                    <h3 class="fxs_entryHeadline">
-                                                        <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
-                                                    </h3><address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="inhasurloorgingli">Imesidan Ade.</a></span> |
-                                                        <time pubdate="" datetime="">JUL 21, 15:17 GMT</time>
-                                                    </address>
-                                                </header>
-                                            </article>
-                                        </div>
-                                    </div>
+                                
+                                <div class="fxs_widget_summary">
+                                    <h3 class="fxs_subtitle">
+                                        Indices (mini)
+                                    </h3>
+
+                                    <!-- Table mini -->
+                                    <table class="fxs_table fxs_table_prices fxs_tableHover">
+                                        
+                                        <tbody>
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Crude Oil (WTI)">
+                                                        <a href="/">DB ATX Futures</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27688</span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">DB DAX Futures</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.1256</span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">DB EURO STOXX 50 Futures</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">112.56</span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <!-- /Table mini -->
+
                                 </div>
 
                             </div>
@@ -1172,7 +864,7 @@
                                     <div>
                                         <div class="fxs_entryFeatured">
                                             <article class="fxs_entryFeatured_reduced">
-                                                <div class="fxs_entryFeatured_img"><img src="http://editorial.blob.core.windows.net/images/money.m.jpg"></div><header>
+                                                <div class="fxs_entryFeatured_img"><img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg"></div><header>
                                                     <h3 class="fxs_entryHeadline">
                                                         <a href="/">Fibug wivuss caviize chin plmanbar it turlilact.</a>
                                                     </h3><address class="fxs_entry_metaInfo">
