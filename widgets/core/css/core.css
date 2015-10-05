@@ -2732,7 +2732,8 @@ fieldset[disabled] .fxs_dismissQuery {
   -moz-opacity: 0;
   opacity: 0;
 }
-.c3 .domain {
+.c3 .domain,
+.c3 .c3-grid line {
   stroke: #dddedf;
 }
 .fxs_table .c3 svg,
@@ -2742,6 +2743,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .c3-axis,
 .c3-legend-item {
+  fill: #8c8d91;
   font-family: 'Roboto', sans-serif;
 }
 .fxs_gauge_container .c3-gauge-value {
@@ -2752,6 +2754,10 @@ fieldset[disabled] .fxs_dismissQuery {
   color: #ffffff;
   font-size: 0.75rem;
   letter-spacing: normal;
+}
+.c3-axis-y .domain,
+.c3-axis-x .domain {
+  stroke: #fff;
 }
 .tab-content > .tab-pane {
   display: none;
