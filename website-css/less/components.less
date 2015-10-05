@@ -1237,10 +1237,24 @@
   }
 }
 
+// table indexes
+
+.fxs_indexes_tabpanel{
+  .fxs_label{
+    padding-left:0;
+  }
+  .fxs_txt_danger, .fxs_txt_normal, .fxs_txt_neutral, .fxs_txt_success{
+    display:block;
+    padding-bottom:0.5rem;
+  }
+}
+
 // override chart widget
 
-// widget asset
 .fxs_widget_chart_container{
+  & *{
+    .box-sizing(content-box);
+  }
   .fxs_tabs_nav{
     margin:0;
   }
@@ -1258,9 +1272,9 @@
       }
     }
     .tt_chartContainer{
-    background-color:#fff;
-    border:none;
-    padding-top:0!important;
+      background-color:#fff;
+      border:none;
+      padding-top:0!important;
     }
     .tt_copyrightSign, .tt_symbolTitle{
       display:none;

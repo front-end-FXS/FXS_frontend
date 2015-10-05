@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script src="TTChart.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no" />
+    <title>TeleTrader HTML5 Chart</title>
+    <link rel="stylesheet" href="../../../website-css/fxs_screen.css">
+    <style>
+        #text1 {
+            overflow: auto;
+            font: 1em Trebuchet MS, sans-serif;
+        }
+
+        body {
+            -ms-touch-action: none;
+        }
+    </style>
+    <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js"></script>
+
+</head>
+<body>
+    <div id="chartDiv" style="height: 580px; width: 90%; padding: 10px">
+    </div>
+    <script type="text/javascript">
+
+
+        var strSymbolname = "tts-3212164";
+        var strLabelname = "Intel Corporation";
+
+        var chart = TTChart.create({ id: "chartDiv" });
+        chart.setOptions({
+            "global.locale": "en",
+            "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+            "data.period": 'DAILY',
+            "data.numberOfBars": 510,
+            'data.dateRange': '3Y',
+            "main.chartType": 'ohlc',
+            "volume.show": false,
+            "history.show": true,
+            "dataInfo.show": true,
+            "toolbar.top.show": true,
+            "toolbar.left.show": true,
+            "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+            "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+            "contextMenu.show": false,
+            //"data.usePush": true,
+            "panel.background.color": "#ffffff",
+            "global.verticalAxisZoom": true,
+            "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+            'zoom.dateRange': '1y',
+            'dialogs.limitingElementId': 'chartDiv'
+        });
+
+
+        chart.setOption("toolbar.comparisons", [['*|search|*', ''],
+            ['Dow Jones', 'tts-3212165'],
+            ['Nasdaq 100', 'tts-751307'],
+            ['SP100', 'tts-898976'],
+            ['SP500', 'tts-898974'],
+            ['Nikkei', 'tts-955000'],
+            ['DAX', 'tts-514562'],
+            ['TecDAX', 'tts-457683'],
+            ['SMI', 'tts-675717'],
+            ['FTSE 100', 'tts-402482'],
+            ['Gold', 'tts-3230110']]);
+
+        chart.setOption("toolbar.symbols", [['*|search|*', ''],
+            ['EUR/USD Spot', 'tts-949843'],
+            ['EUR/JPY Spot', 'tts-949832'],
+            ['EUR/CHF Spot', 'tts-949825'],
+            ['ADIDAS AG', 'tts-458757'],
+            ['DAX', 'tts-514562'],
+            ['VOLKSWAGEN AG', 'tts-459213'],
+            ['OMV AG', 'tts-399915'],
+            ['VOESTALPINE AG', 'tts-399995'],
+            ['Intel Corporation', 'tts-829352'],
+            ['Google Inc.', 'tts-1947579']]);
+
+        chart.setOption("toolbar.dateRanges", [
+            ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+                ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+                ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+                ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+                ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+                ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+            ]],
+            ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+            ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+            ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+            ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+            ['*|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+            ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+            ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+            ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+            ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+        ]);
+
+        chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+            ['*|menu_save|*', 'save'],
+            ['*|menu_quick_load|*', 'quickLoad'],
+            ['*|menu_quick_save|*', 'quickSave'],
+            ['*|Load Template|*', 'loadTemplate'],
+            ['*|Save Template|*', 'saveTemplate'],
+            ['*|Save Default|*', 'saveDefault']
+        ]);
+
+        chart.symbols.setMainSymbol(strSymbolname, strLabelname);
+        chart.symbols.addIndicator("macd");
+
+        chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+            ['*|menu_save|*', 'save'],
+            ['*|menu_quick_load|*', 'quickLoad'],
+            ['*|menu_quick_save|*', 'quickSave'],
+            ['*|Load Template|*', 'loadTemplate'],
+            ['*|Save Template|*', 'saveTemplate'],
+            ['*|Save Default|*', 'saveDefault']
+        ]);
+
+        chart.display();
+
+        function addIndicator(objValue) {
+            if (objValue != "") {
+                chart.symbols.addIndicator(objValue);
+                chart.display();
+            }
+        }
+    </script>
+</body>
+</html>
