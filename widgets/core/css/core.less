@@ -13,20 +13,12 @@
 //
 
 // Forced styles for widgets
-.fxs_widget_summary {
-	font-family: @txt_fontfamily;
-	font-size: @txt_defaultsize_px;
-	line-height: @txt_lineheight;
-
+[class^="fxs_widget_"] {
+  font-family: @txt_fontfamily;
+  font-size: @txt_defaultsize_px;
+  line-height: @txt_lineheight;
   // Box model & typo rendering
   * { .box-sizing(border-box); }
-
-  // Small tag
-  small {
-    font-size: @txt_size_nano;
-    color: @light_1_clr;
-  }
-
   // lists
   .fxs_widget_divider_module {
     ol, ul { list-style: none; }
@@ -37,6 +29,11 @@
     }
   }
   a { &:extend(.fxs_boldAntialised_style, .fxs_transition); }
+  // Small tag
+  small {
+    font-size: @txt_size_nano;
+    color: @light_1_clr;
+  }
 }
 
 // Tables
