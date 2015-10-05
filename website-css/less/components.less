@@ -1278,6 +1278,11 @@
 /////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!
 
+.c3 {
+  .tick line { .opacity(0); }
+  .domain { stroke: @light_3_clr; }
+}
+
 .fxs_table, .fxs_gauge_container {
   .c3 svg { width: 100%; max-width: 100%; }
 }
