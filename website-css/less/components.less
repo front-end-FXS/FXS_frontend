@@ -1249,27 +1249,13 @@
   }
 }
 
-// override chart widget
+// override teletrader chart widget
 
 .fxs_widget_chart_container{
-  & *{
-    .box-sizing(content-box);
-  }
-  .fxs_tabs_nav{
-    margin:0;
-  }
-  .fxs_widget_default{
-    height:350px;
-    &.fxs_widget_mini{
-      .fxs_tabs_nav{
-        display:none;
-      }
-      height:250px;
-    }
-    @media(min-width:@screen-s){
-      &.fxs_widget_big{
-        height:580px;
-      }
+  .fxs_widget_chart{
+    
+    .fxs_tabs_nav{
+      margin:0;
     }
     .tt_chartContainer{
       background-color:#fff;
@@ -1280,14 +1266,39 @@
       display:none;
     }
     .tt_panelDiv{
-      border:none!important;
-      height:555px!important;
       svg{
         border:1px solid #fff;
       }
     }
-  }
+
+    // default
+    &.fxs_widget_default{
+      height:250px;
+    }
+
+    // mini
+    &.fxs_widget_mini{
+      .tt_panelDiv{
+        height: 150px!important; // capa contenedora
+      }
+      .fxs_tabs_nav{
+        display:none;
+      }
+      height:150px!important;
+    }
+
+    // big    
+    &.fxs_widget_big{
+      height:580px;
+    }
+    &.fxs_custom_box_sizing{ // regla que se aplica a fxs_widget_big para mantener los estilos por defecto del grafico
+      *{
+        .box-sizing(content-box);
+      }
+    }
+  } 
 }
+
 
 /////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!
@@ -1385,40 +1396,4 @@
 .fxs_blur { .blur(5px); }
 
 
-// widget asset
-.fxs_widget_chart_container{
-  .fxs_tabs_nav{
-    margin:0;
-  }
-  .fxs_widget_default{
-    height:350px;
-    &.fxs_widget_mini{
-      .fxs_tabs_nav{
-        display:none;
-      }
-      height:250px;
-    }
-    @media(min-width:@screen-s){
-      &.fxs_widget_big{
-        height:580px;
-      }
-    }
-    .tt_chartContainer{
-      background-color:#fff;
-      border:none;
-      padding-top:0!important;
-    }
-    .tt_copyrightSign, .tt_symbolTitle{
-      display:none;
-    }
-    .tt_panelDiv{
-      border:none!important;
-      height:555px!important;
-      svg{
-        border:1px solid #fff;
-      }
-    }
-  }
-  /*
-  */
-}
+
