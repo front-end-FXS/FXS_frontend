@@ -952,11 +952,9 @@
 
 // Widget divider modules
 .fxs_widget_divider_module {
-    &.fxs_widget_divider_header{
-        @media(min-width:@screen-m){
-            padding:0 0 1rem 0;
-        }       
-    }
+  &.fxs_widget_divider_header{
+    @media(min-width:@screen-m){ padding:0 0 0.5rem 0; }       
+  }
   &:extend(.fxs_clearfix all);
   padding-bottom:0.5rem;
   margin-bottom:0.5rem;
@@ -1093,58 +1091,6 @@
     &:first-child { display: none; }
   }
 }
-
-//////////////////////////////////////////////////////////
-////////// override teletrader chart widget /////////////
-
-.fxs_widget_chart_container{
-  .fxs_widget_chart{
-    
-    .fxs_tabs_nav{
-      margin:0;
-    }
-    .tt_chartContainer{
-      background-color:#fff;
-      border:none;
-      padding-top:0!important;
-    }
-    .tt_copyrightSign, .tt_symbolTitle{
-      display:none;
-    }
-    .tt_panelDiv{
-      svg{
-        border:1px solid #fff;
-      }
-    }
-
-    // default
-    &.fxs_widget_default{
-      height:250px;
-    }
-
-    // mini
-    &.fxs_widget_mini{
-      .tt_panelDiv{
-        height: 150px!important; // capa contenedora
-      }
-      .fxs_tabs_nav{
-        display:none;
-      }
-      height:150px!important;
-    }
-
-    // big    
-    &.fxs_widget_big{
-      height:580px;
-    }
-    &.fxs_custom_box_sizing{ // regla que se aplica a fxs_widget_big para mantener los estilos por defecto del grafico
-      *{
-        .box-sizing(content-box);
-      }
-    }
-  } 
-}
-
 
 /////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!

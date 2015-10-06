@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Widget Price - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+         <link rel="stylesheet" href="../core/css/core.min.css">
+        <link rel="stylesheet" href="css/chartwidget.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+         <div class="fxs_content">
+            <section class="fxs_detail">
+                <section class="fxs_widget_summary">
+                    <div class="fxs_widget_divider_module">
+                        <!-- bloque widget chart default -->
+                        <div class="fxs_widget_chart_container">                            
+                            <ul class="fxs_tabs_nav">
+                                <li class="active"><a data-toggle="tab" href="#myTab1" title="My tab">1d</a></li>
+                                <li><a data-toggle="tab" href="#myTab2" title="My tab">1w</a></li>
+                                <li><a data-toggle="tab" href="#myTab3" title="My tab">1m</a></li>
+                                <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
+                            </ul>
+                            <div class="fxs_indexes_tabpanel tab-content">
+                               <div id="chartDiv" class="fxs_widget_default fxs_widget_chart" style="width:100%"></div>
+                            </div>                                                       
+                        </div>
+                        <!-- bloque widget chart -->
+                    </div>
+                    <footer class="fxs_widget_footer">                              
+                        <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                    </footer> 
+                </section>
+            </section>
+        </div>
+        <script src="../core/js/jquery-1.11.3.min.js"></script>
+        <script src="../core/js/bootstrap.min.js"></script>
+        
+    
+        <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js">
+        </script>
+
+        <script>
+
+            //var canvasElem = document.querySelector('canvas');
+            //var canvasContext = canvasElem.getContext('2d');
+            //canvasContext.fillStyle = "#fff";
+            //canvasContext.strokeStyle = "#fff";
+
+            var d = Date.now();
+
+            var strSymbolname = "tts-3212164";
+            var strLabelname = "EUR/USD";
+            var strLocale = "en";
+
+            //symbolname, labelname, daterange & locale definition through query string     
+            var strquery = document.URL.split('?')[1];
+            if (strquery)
+                strquery = strquery.split('&');
+            for (var y in strquery) {
+                var z = strquery[y].toString().split('=');
+                if (z.length == 2) {
+                    if (z[0].toLowerCase() == "lang") {
+                        strLocale = z[1];
+                    }
+                    else if (z[0].toLowerCase() == "symbolname") {
+                        strSymbolname = z[1];
+                    }
+                    else if (z[0].toLowerCase() == "labelname") {
+                        strLabelname = z[1];
+                    }
+                }
+            }
+
+
+            var chart = TTChart.create({ id: "chartDiv" });
+
+            chart.setOptions({
+                "global.locale": "en",
+                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+                "data.period": 'INTRADAY 60',
+                "data.numberOfBars": 1000,           
+                // grid
+                "grid.show":true,
+                // custom graph
+                "main.chartType": 'mountain',
+                // colors values down
+                //"main.lineColor": "rgba(51, 132, 115, 1)",
+                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+                // colors value up
+                "main.lineColor": "rgba(206, 71, 53, 1)",
+                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
+
+                // custom tootlbars and history
+                "volume.show": false,
+                "history.show": false,
+                "history.sliderBorderColor": "#fff",
+                "dataInfo.show": false,
+                "toolbar.top.show": false,
+                "toolbar.left.show": false,
+                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+                "contextMenu.show": false,
+                "data.usePush": false,
+                // custom panel
+                "panel.background.color": "#F7F7F7",
+                "global.verticalAxisZoom": true,
+                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+                "data.maxAdditionalBars": 1000,
+                'data.dynamicHistoryLoading': true,
+                'zoom.dateRange': '1d',
+                'dialogs.limitingElementId': 'chartDiv'
+            });
+
+            chart.setOption("toolbar.symbols", [['*|search|*', ''],
+                ['EUR/USD', 'tts-3212164'],
+                ['USD/JPY', 'tts-3212155'],
+                ['GBP/USD', 'tts-3212166'],
+                ['USD/CHF', 'tts-3212167'],
+                ['USD/CAD', 'tts-3212172'],
+                ['NZD/USD', 'tts-3212173'],
+                ['AUD/USD', 'tts-3212322'],
+                ['USD/HKD', 'tts-3212406'],
+                ['USD/SGD', 'tts-3215241'],
+                ['EUR/AUD', 'tts-3212169'],
+                ['EUR/CHF', 'tts-3212215'],
+                ['EUR/JPY', 'tts-3212165'],
+                ['EUR/GBP', 'tts-3212168'],
+                ['GBP/CHF', 'tts-3212158'],
+                ['GBP/JPY', 'tts-3212160'],
+                ['CAD/JPY', 'tts-3212163'],
+                ['CHF/JPY', 'tts-3212200'],
+                ['NZD/JPY', 'tts-3212268'],
+                ['AUD/CAD', 'tts-3212182'],
+                ['AUD/JPY', 'tts-3212171'],
+                ['AUD/NZD', 'tts-3212259'],
+                ['AUD/SGD', 'tts-3212321'],
+                ['AUD/CHF', 'tts-3212170'],
+                ['AUD/EUR', 'tts-3212510'],
+                //['XAU/USD', 'tts-396017'],
+                //['XAG/USD', 'tts-395119'],
+                ['Dow Jones', 'tts-3212165'],
+                ['Nasdaq 100', 'tts-751307'],
+                ['SP100', 'tts-898976'],
+                ['SP500', 'tts-898974'],
+                //['Nikkei', 'tts-955000'],
+                ['DAX', 'tts-514562'],
+                ['TecDAX', 'tts-457683'],
+                //['SMI', 'tts-675717'],
+                ['FTSE 100', 'tts-402482'],
+                ['Nikkei 225', 'tts-18922968'],
+                ['Gold', 'tts-3230110']]);
+
+            chart.setOption("toolbar.comparisons", [['*|search|*', ''],
+                ['EUR/USD', 'tts-3212164'],
+                ['USD/JPY', 'tts-3212155'],
+                ['GBP/USD', 'tts-3212166'],
+                ['USD/CHF', 'tts-3212167'],
+                ['USD/CAD', 'tts-3212172'],
+                ['NZD/USD', 'tts-3212173'],
+                ['AUD/USD', 'tts-3212322'],
+                ['USD/HKD', 'tts-3212406'],
+                ['USD/SGD', 'tts-3215241'],
+                ['EUR/AUD', 'tts-3212169'],
+                ['EUR/CHF', 'tts-3212215'],
+                ['EUR/JPY', 'tts-3212165'],
+                ['EUR/GBP', 'tts-3212168'],
+                ['GBP/CHF', 'tts-3212158'],
+                ['GBP/JPY', 'tts-3212160'],
+                ['CAD/JPY', 'tts-3212163'],
+                ['CHF/JPY', 'tts-3212200'],
+                ['NZD/JPY', 'tts-3212268'],
+                ['AUD/CAD', 'tts-3212182'],
+                ['AUD/JPY', 'tts-3212171'],
+                ['AUD/NZD', 'tts-3212259'],
+                ['AUD/SGD', 'tts-3212321'],
+                ['AUD/CHF', 'tts-3212170'],
+                ['AUD/EUR', 'tts-3212510'],
+                //['XAU/USD', 'tts-396017'],
+                //['XAG/USD', 'tts-395119'],
+                ['Dow Jones', 'tts-3212165'],
+                ['Nasdaq 100', 'tts-751307'],
+                ['SP100', 'tts-898976'],
+                ['SP500', 'tts-898974'],
+                //['Nikkei', 'tts-955000'],
+                ['DAX', 'tts-514562'],
+                ['TecDAX', 'tts-457683'],
+                //['SMI', 'tts-675717'],
+                ['FTSE 100', 'tts-402482'],            
+                ['Nikkei 225', 'tts-18922968'],
+                ['Gold', 'tts-3230110']]);
+
+            chart.setOption("toolbar.dateRanges", [
+                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+                ]],
+                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+            ]);
+
+            chart.symbols.setMainSymbol(strSymbolname, strLabelname);
+
+            chart.resize();
+
+            chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+                //['*|Quick Save|*', 'quickSave'],
+                ['*|menu_save|*', 'save'],
+                //['*|menu_quick_load|*', 'quickLoad'],
+                ['*|Load Template|*', 'loadTemplate'],
+                ['*|Save Template|*', 'saveTemplate'],
+                ['*|Save Default|*', 'saveDefault']
+            ]);
+            chart.display();
+            function addIndicator(objValue) {
+                if (objValue != "") {
+                    chart.symbols.addIndicator(objValue);
+                    chart.display();
+                }
+            }   
+        </script>   
+
+    </body>
+</html>
