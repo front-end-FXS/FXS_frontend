@@ -160,21 +160,10 @@
 
                     <section class="fxs_detail" role="main">
                         <!-- bloque widget chart default -->
-                        <div class="fxs_widget_chart_container">
-                            <div class="fxs_widget_divider_module"> 
-                                <ul class="fxs_tabs_nav">
-                                    <li class="active"><a data-toggle="tab" href="#myTab1" title="My tab">1d</a></li>
-                                    <li><a data-toggle="tab" href="#myTab2" title="My tab">1w</a></li>
-                                    <li><a data-toggle="tab" href="#myTab3" title="My tab">1m</a></li>
-                                    <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
-                                </ul>
-                               <div class="fxs_indexes_tabpanel tab-content">
-                                   <div id="chartDiv" class="fxs_widget_default fxs_widget_chart" style="width:100%"></div>
-                               </div> 
-                           </div>
-                           <footer class="fxs_widget_footer">                              
-                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                            </footer>                                                       
+                        <div class="fxs_widget_chart_container fxs_custom_box_sizing">
+                           <div class="fxs_widget_divider_module">   
+                               <div id="chartDiv" class="fxs_widget_big fxs_custom_box_sizing fxs_widget_chart" style="width:100%"></div>
+                            </div>                                                           
                         </div>
                         <!-- bloque widget chart -->
                     </section>
@@ -430,6 +419,8 @@
         <script src="../../../website-js/jquery.typeahead.min.js"></script>
         <script src="../../../website-js/site.js"></script>
         <script>
+
+
             var d = Date.now();
 
             var strSymbolname = "tts-3212164";
@@ -466,22 +457,24 @@
                 // grid
                 "grid.show":true,
                 // custom graph
-                "main.chartType": 'mountain',
+                "main.chartType": 'candle',
+
                 // colors values down
                 //"main.lineColor": "rgba(51, 132, 115, 1)",
                 //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+
                 // colors value up
                 "main.lineColor": "rgba(206, 71, 53, 1)",
                 "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
 
                 // custom tootlbars and history
                 "volume.show": false,
-                "history.show": false,
+                "history.show": true,
                 "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+                "dataInfo.show": true,
+                "toolbar.top.show": true,
+                "toolbar.left.show": true,
+                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", 'reload' , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'fullscreen'],
                 "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
                 "contextMenu.show": false,
                 "data.usePush": false,
@@ -491,7 +484,7 @@
                 "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
                 "data.maxAdditionalBars": 1000,
                 'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
+                'zoom.dateRange': '1m',
                 'dialogs.limitingElementId': 'chartDiv'
             });
 
@@ -604,6 +597,7 @@
                 ['*|Save Template|*', 'saveTemplate'],
                 ['*|Save Default|*', 'saveDefault']
             ]);
+
             chart.display();
             function addIndicator(objValue) {
                 if (objValue != "") {

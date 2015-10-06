@@ -1250,13 +1250,14 @@
 }
 
 // override teletrader chart widget
-
+.fxs_custom_top{ // rule to override 'fxs_modal_wrap' behavior
+  top:0!important;
+}
 .fxs_widget_chart_container{
-  .fxs_widget_chart{
-    
-    .fxs_tabs_nav{
+  .fxs_tabs_nav{
       margin:0;
-    }
+  }
+  .fxs_widget_chart{    
     .tt_chartContainer{
       background-color:#fff;
       border:none;
@@ -1265,26 +1266,24 @@
     .tt_copyrightSign, .tt_symbolTitle{
       display:none;
     }
-    .tt_panelDiv{
-      svg{
-        border:1px solid #fff;
-      }
-    }
 
     // default
     &.fxs_widget_default{
-      height:250px;
+      height:250px!important;
+      .tt_panelDiv{
+        height: 225px!important; // capa contenedora
+      }
     }
 
     // mini
     &.fxs_widget_mini{
+      height:150px!important;
       .tt_panelDiv{
-        height: 150px!important; // capa contenedora
+        height: 125px!important; // capa contenedora 
       }
       .fxs_tabs_nav{
         display:none;
       }
-      height:150px!important;
     }
 
     // big    

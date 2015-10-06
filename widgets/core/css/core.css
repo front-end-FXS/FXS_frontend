@@ -2690,7 +2690,10 @@ fieldset[disabled] .fxs_dismissQuery {
   display: block;
   padding-bottom: 0.5rem;
 }
-.fxs_widget_chart_container .fxs_widget_chart .fxs_tabs_nav {
+.fxs_custom_top {
+  top: 0!important;
+}
+.fxs_widget_chart_container .fxs_tabs_nav {
   margin: 0;
 }
 .fxs_widget_chart_container .fxs_widget_chart .tt_chartContainer {
@@ -2702,17 +2705,17 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_chart_container .fxs_widget_chart .tt_symbolTitle {
   display: none;
 }
-.fxs_widget_chart_container .fxs_widget_chart .tt_panelDiv svg {
-  border: 1px solid #fff;
-}
 .fxs_widget_chart_container .fxs_widget_chart.fxs_widget_default {
-  height: 250px;
+  height: 250px!important;
+}
+.fxs_widget_chart_container .fxs_widget_chart.fxs_widget_default .tt_panelDiv {
+  height: 225px!important;
 }
 .fxs_widget_chart_container .fxs_widget_chart.fxs_widget_mini {
   height: 150px!important;
 }
 .fxs_widget_chart_container .fxs_widget_chart.fxs_widget_mini .tt_panelDiv {
-  height: 150px!important;
+  height: 125px!important;
 }
 .fxs_widget_chart_container .fxs_widget_chart.fxs_widget_mini .fxs_tabs_nav {
   display: none;

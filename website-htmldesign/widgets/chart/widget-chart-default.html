@@ -159,16 +159,24 @@
                     </header>
 
                     <section class="fxs_detail" role="main">
-                    
-                        
                         <!-- bloque widget chart default -->
-                        <div class="fxs_widget_chart_container fxs_custom_box_sizing">
-                           
-                               <div id="chartDiv" class="fxs_widget_big fxs_custom_box_sizing fxs_widget_chart" style="width:100%"></div>
-                                                                              
+                        <div class="fxs_widget_chart_container">
+                            <div class="fxs_widget_divider_module"> 
+                                <ul class="fxs_tabs_nav">
+                                    <li class="active"><a data-toggle="tab" href="#myTab1" title="My tab">1d</a></li>
+                                    <li><a data-toggle="tab" href="#myTab2" title="My tab">1w</a></li>
+                                    <li><a data-toggle="tab" href="#myTab3" title="My tab">1m</a></li>
+                                    <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
+                                </ul>
+                               <div class="fxs_indexes_tabpanel tab-content">
+                                   <div id="chartDiv" class="fxs_widget_default fxs_widget_chart" style="width:100%"></div>
+                               </div> 
+                           </div>
+                           <footer class="fxs_widget_footer">                              
+                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                            </footer>                                                       
                         </div>
                         <!-- bloque widget chart -->
-
                     </section>
                 </div>
                 <!-- /The content rail -->
@@ -422,6 +430,12 @@
         <script src="../../../website-js/jquery.typeahead.min.js"></script>
         <script src="../../../website-js/site.js"></script>
         <script>
+
+            //var canvasElem = document.querySelector('canvas');
+            //var canvasContext = canvasElem.getContext('2d');
+            //canvasContext.fillStyle = "#fff";
+            //canvasContext.strokeStyle = "#fff";
+
             var d = Date.now();
 
             var strSymbolname = "tts-3212164";
@@ -470,9 +484,9 @@
                 "volume.show": false,
                 "history.show": false,
                 "history.sliderBorderColor": "#fff",
-                "dataInfo.show": true,
-                "toolbar.top.show": true,
-                "toolbar.left.show": true,
+                "dataInfo.show": false,
+                "toolbar.top.show": false,
+                "toolbar.left.show": false,
                 "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
                 "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
                 "contextMenu.show": false,

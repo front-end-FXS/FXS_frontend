@@ -1,0 +1,59 @@
+// Vendor imports
+@import "../../../website-css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website-css/less/vars.less";
+@import "../../../website-css/less/mixins.less";
+
+////////////////////////////////////////////////
+//////////// Widget Gauge module //////////////
+//////////////////////////////////////////////
+
+// override teletrader chart widget
+.fxs_custom_top{ // rule to override 'fxs_modal_wrap' behavior
+  top:0!important;
+}
+.fxs_widget_chart_container{
+  .fxs_tabs_nav{
+      margin:0;
+  }
+  .fxs_widget_chart{    
+    .tt_chartContainer{
+      background-color:#fff;
+      border:none;
+      padding-top:0!important;
+    }
+    .tt_copyrightSign, .tt_symbolTitle{
+      display:none;
+    }
+
+    // default
+    &.fxs_widget_default{
+      height:250px!important;
+      .tt_panelDiv{
+        height: 225px!important; // capa contenedora
+      }
+    }
+
+    // mini
+    &.fxs_widget_mini{
+      height:150px!important;
+      .tt_panelDiv{
+        height: 125px!important; // capa contenedora 
+      }
+      .fxs_tabs_nav{
+        display:none;
+      }
+    }
+
+    // big    
+    &.fxs_widget_big{
+      height:580px;
+    }
+    &.fxs_custom_box_sizing{ // regla que se aplica a fxs_widget_big para mantener los estilos por defecto del grafico
+      *{
+        .box-sizing(content-box);
+      }
+    }
+  } 
+}
