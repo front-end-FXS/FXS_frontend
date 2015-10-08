@@ -1092,6 +1092,30 @@
   }
 }
 
+// COT WIDGET
+.fxs_widget_cot{
+  .fxs_widget_cot_wrapper{
+    white-space: nowrap;
+  }
+  .fxs_widget_cot_wrapper:first-child{
+    border-bottom: 1px solid #ccc;
+  }
+  .fxs_widget_cot_box, .fxs_widget_cot_graph{
+    display:inline-block;
+    white-space: normal;
+  }
+  .fxs_widget_cot_graph{
+    .calc(width, ~'100% - 180px');
+  }
+  .fxs_widget_cot_box{
+    width:90px;
+    text-align: center;
+    vertical-align: middle;
+    height:60px;
+  } 
+}
+
+
 /////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!
 
