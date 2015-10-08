@@ -136,17 +136,6 @@
   &:hover, &.active { color: @dark_4_clr; }
 }
 
-// Close button
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: @txt_size_large;
-  &:hover { .opacity(.75); }
-}
-
 // Button phantom
 .fxs_btn_phantom {
   font-size: inherit;
@@ -252,11 +241,22 @@
   .animation(grow-and-show 0.5s ease-in-out);
   .reset-text();
   font-size: @txt_size_small;
-  padding: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  &.alert-dismissible { padding: 0.75rem 2rem 0.75rem 0.5rem; }
   .fxs_alertText { margin-bottom: 0; }
   a {
     text-decoration: underline;
     &:hover { text-decoration: none; }
+  }
+  // Close button in alert
+  .fxs_close {
+    background: transparent;
+    display: block;
+    float: right;
+    padding: 1px 0.5rem;
+    margin: -2px -1.5rem 0 0;
+    font-size: @txt_size_large;
+    &:hover { .opacity(.75); }
   }
 }
 
@@ -264,7 +264,6 @@
 
 // Wide content alert
 .fxs_alert {
-  .animation(grow-and-show 0.5s ease-in-out);
   &:extend(.fxs_wideContent all);
   border-top: 5px solid @light_4_clr;
   border-bottom: 5px solid @light_4_clr;
@@ -277,7 +276,6 @@
 // Global alert
 .fxs_global_alert {
   display: none;
-  padding-left: 1rem;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -286,6 +284,7 @@
     display: block;
     & + .fxs_contentView { margin-top: @base_module_size; } 
   }
+  &, &.alert-dismissible { padding-left: 1rem; }
 }
 
 // Alert variants

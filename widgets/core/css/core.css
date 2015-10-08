@@ -1121,21 +1121,6 @@ fieldset[disabled] .fxs_btn_icon {
 .fxs_btn_content_toggle.active {
   color: #49494f;
 }
-.fxs_close {
-  background: transparent;
-  display: block;
-  float: right;
-  padding: 1px 0.5rem;
-  margin: -5px -2px -5px 0;
-  font-size: 1.125rem;
-}
-.fxs_close:hover {
-  zoom: 1;
-  filter: alpha(opacity=75);
-  -webkit-opacity: 0.75;
-  -moz-opacity: 0.75;
-  opacity: 0.75;
-}
 .fxs_btn_phantom {
   font-size: inherit;
   margin: 0;
@@ -1483,7 +1468,12 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   word-spacing: normal;
   word-wrap: normal;
   font-size: 0.88rem;
-  padding: 0.5rem;
+  padding: 0.75rem 0.5rem;
+}
+.fxs_alert.alert-dismissible,
+.fxs_contextual_alert.alert-dismissible,
+.fxs_global_alert.alert-dismissible {
+  padding: 0.75rem 2rem 0.75rem 0.5rem;
 }
 .fxs_alert .fxs_alertText,
 .fxs_contextual_alert .fxs_alertText,
@@ -1500,9 +1490,26 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .fxs_global_alert a:hover {
   text-decoration: none;
 }
+.fxs_alert .fxs_close,
+.fxs_contextual_alert .fxs_close,
+.fxs_global_alert .fxs_close {
+  background: transparent;
+  display: block;
+  float: right;
+  padding: 1px 0.5rem;
+  margin: -2px -1.5rem 0 0;
+  font-size: 1.125rem;
+}
+.fxs_alert .fxs_close:hover,
+.fxs_contextual_alert .fxs_close:hover,
+.fxs_global_alert .fxs_close:hover {
+  zoom: 1;
+  filter: alpha(opacity=75);
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
 .fxs_alert {
-  -webkit-animation: grow-and-show 0.5s ease-in-out;
-  animation: grow-and-show 0.5s ease-in-out;
   border-top: 5px solid #f0f0f1;
   border-bottom: 5px solid #f0f0f1;
   margin-bottom: 2rem;
@@ -1512,7 +1519,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 }
 .fxs_global_alert {
   display: none;
-  padding-left: 1rem;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -1529,6 +1535,10 @@ width:calc(100% - 320px);
 }
 .fxs_global_alert.in + .fxs_contentView {
   margin-top: 35px;
+}
+.fxs_global_alert,
+.fxs_global_alert.alert-dismissible {
+  padding-left: 1rem;
 }
 .fxs_alert_featured,
 .fxs_alert_live {
