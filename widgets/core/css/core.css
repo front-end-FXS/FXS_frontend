@@ -477,6 +477,8 @@ label,
 .fxs_widget_summary::after,
 .fxs_widget_footer::before,
 .fxs_widget_footer::after,
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_title::before,
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_title::after,
 .fxs_alert::before,
 .fxs_alert::after,
 .fxs_divider_wide::before,
@@ -496,6 +498,7 @@ label,
 .fxs_widget_divider_module::after,
 .fxs_widget_summary::after,
 .fxs_widget_footer::after,
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_title::after,
 .fxs_alert::after,
 .fxs_divider_wide::after {
   clear: both;
@@ -2522,29 +2525,51 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_price_ohl span:first-child {
   display: none;
 }
+.fxs_widget_cot .fxs_widget_divider_module {
+  padding-bottom: 0;
+}
 .fxs_widget_cot .fxs_widget_cot_wrapper {
   white-space: nowrap;
+  padding: 1rem;
 }
 .fxs_widget_cot .fxs_widget_cot_wrapper:first-child {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #dddedf;
 }
-.fxs_widget_cot .fxs_widget_cot_box,
-.fxs_widget_cot .fxs_widget_cot_graph {
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_box,
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_graph {
   display: inline-block;
   white-space: normal;
 }
-.fxs_widget_cot .fxs_widget_cot_graph {
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_graph {
   -lh-property: 0;
 width:-webkit-calc(100% - 180px);
 width:-moz-calc(100% - 180px);
 width:calc(100% - 180px);
 ;
 }
-.fxs_widget_cot .fxs_widget_cot_box {
+.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_box {
   width: 90px;
   text-align: center;
   vertical-align: middle;
   height: 60px;
+}
+@media (min-width: 1100px) {
+  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_big {
+    width: 50%;
+    float: left;
+  }
+  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_big:first-child {
+    border-bottom: none;
+    border-right: 1px solid #dddedf;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_mini {
+    float: none;
+  }
+  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_mini:first-child {
+    border-bottom: 1px solid #dddedf;
+  }
 }
 .c3 .tick line {
   zoom: 1;

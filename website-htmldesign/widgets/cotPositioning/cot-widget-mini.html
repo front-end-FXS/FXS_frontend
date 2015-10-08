@@ -21,7 +21,7 @@
 			<div class="fxs_contentView">
 				<!-- Main Section -->
 				<header class="fxs_sectionTitle">                 
-				    <h1 class="fxs_sectionTitle_header">COT chart</h1>
+				    <h1 class="fxs_sectionTitle_header">COT POSITIONING</h1>
 				    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
 				        <div class="fxs_overflowOptions">
 				            <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
@@ -43,14 +43,15 @@
 				    <section class="fxs_widget_summary">
 				    	<div class="fxs_widget_cot">						
 					        <div class="fxs_widget_divider_module">
-								<div class="fxs_widget_cot_wrapper">
-									<div class="fxs_clearfix">
+
+								<div class="fxs_widget_cot_mini fxs_widget_cot_wrapper">
+									<div class="fxs_widget_cot_title">
 										<span class="fxs_label">Non-Commercial</span>
 									</div>
 						        	
-						        	<div class="fxs_widget_cot_box">
-						        		<strong class="fxs_widget_custom_data_lable">324.2k</strong>
-						        		<small>JAN 21</small>
+						        	<div class="fxs_widget_cot_box">						        		
+							        	<strong class="fxs_widget_custom_data_lable">324.2k</strong>
+							        	<small>JAN 21</small>
 						        	</div>
 
 						        	<div class="fxs_widget_cot_graph">
@@ -63,8 +64,8 @@
 					      		</div>
 								
 
-								<div class="fxs_widget_cot_wrapper">
-									<div class="fxs_clearfix">
+								<div class="fxs_widget_cot_mini fxs_widget_cot_wrapper">
+									<div class="fxs_widget_cot_title">
 										<span class="fxs_label">Commercial</span>
 									</div>
 						        	
@@ -108,11 +109,14 @@
 				x: 'x',
 				columns: [
 					['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04'],
-				    ['NONCOMMERCIAL', 200, 150, 150, 100]
+				    ['noncommercial', 200, 150, 150, 100]
 				],
 				colors: {
-				    NONCOMMERCIAL: '#CE4735'
-				}			
+				    noncommercial: '#CE4735'
+				},
+                names:{
+                    noncommercial: 'NON-COMMERCIAL'
+                }			
 			},
 			axis: {
 				x: {
@@ -142,10 +146,13 @@
 				x: 'x',
 			    columns: [
 			    	['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04'],
-			        ['COMMERCIAL', 100, 150, 150, 200]
+			        ['commercial', 100, 150, 150, 200]
 			    ],
 			    colors: {
-				    COMMERCIAL: '#328372'
+				    commercial: '#328372'
+				},
+				names:{
+					commercial: "COMMERCIAL"
 				}
 			},
 			axis: {

@@ -1095,29 +1095,55 @@
   }
 }
 
-// COT WIDGET
+/////////////////////////////
+// COT POSITIONING WIDGET //
+
 .fxs_widget_cot{
+  .fxs_widget_divider_module{
+    padding-bottom:0;
+  }
   .fxs_widget_cot_wrapper{
     white-space: nowrap;
-  }
-  .fxs_widget_cot_wrapper:first-child{
-    border-bottom: 1px solid #ccc;
-  }
-  .fxs_widget_cot_box, .fxs_widget_cot_graph{
-    display:inline-block;
-    white-space: normal;
-  }
-  .fxs_widget_cot_graph{
-    .calc(width, ~'100% - 180px');
-  }
-  .fxs_widget_cot_box{
-    width:90px;
-    text-align: center;
-    vertical-align: middle;
-    height:60px;
-  } 
+    padding:1rem;
+    .fxs_widget_cot_title{
+      &:extend(.fxs_clearfix all);
+    }
+    &:first-child{
+      border-bottom: 1px solid @light_3_clr;
+    }
+    .fxs_widget_cot_box, .fxs_widget_cot_graph{
+      display:inline-block;
+      white-space: normal;
+    }
+    .fxs_widget_cot_graph{
+      .calc(width, ~'100% - 180px');
+    }
+    .fxs_widget_cot_box{
+      width:90px;
+      text-align: center;
+      vertical-align: middle;
+      height:60px;
+    }
+    &.fxs_widget_cot_big{
+      @media(min-width:@screen-l){
+        width:50%;
+        float:left;
+        &:first-child{
+          border-bottom:none;
+          border-right:1px solid @light_3_clr;
+        }
+      }
+    }
+    &.fxs_widget_cot_mini{
+      @media(min-width:@screen-s){
+        float:none;
+        &:first-child{
+          border-bottom:1px solid @light_3_clr;
+        }
+      }
+    }   
+  }   
 }
-
 
 /////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!

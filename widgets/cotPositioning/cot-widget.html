@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Widget Price - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+         <link rel="stylesheet" href="../core/css/core.min.css">
+        <link rel="stylesheet" href="css/cotPositioning.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+         <div class="fxs_content">
+            <section class="fxs_detail">
+                <section class="fxs_widget_summary">
+                    <div class="fxs_widget_cot">             
+                        <div class="fxs_widget_divider_module">
+                            <div class="fxs_widget_cot_wrapper">
+                                <div class="fxs_widget_cot_title">
+                                    <span class="fxs_label">Non-Commercial</span>
+                                </div>
+                                <div class="fxs_widget_cot_box">                                        
+                                    <strong class="fxs_widget_custom_data_lable">324.2k</strong>
+                                    <small>JAN 21</small>
+                                </div>
+
+                                <div class="fxs_widget_cot_graph">
+                                    <div id="non_commercial" class="c3"></div>
+                                </div>
+                                <div class="fxs_widget_cot_box">
+                                    <strong class="fxs_widget_custom_data_lable fxs_txt_danger">-45k</strong>
+                                    <small>Last</small>
+                                </div>       
+                            </div>
+                            
+
+                            <div class="fxs_widget_cot_wrapper">
+                                <div class="fxs_widget_cot_title">
+                                    <span class="fxs_label">Commercial</span>
+                                </div>
+                                
+                                <div class="fxs_widget_cot_box">
+                                    <strong class="fxs_widget_custom_data_lable">100k</strong>
+                                    <small>JAN 21</small>
+                                </div>
+                                <div class="fxs_widget_cot_graph">
+                                    <div id="commercial" class="c3"></div>
+                                </div>
+                                <div class="fxs_widget_cot_box">
+                                    <strong class="fxs_widget_custom_data_lable fxs_txt_success">50k</strong>
+                                    <small>Last</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- widget footer -->
+                        <footer class="fxs_widget_footer">
+                            <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                            <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                        </footer>
+                    </div>
+                    <!-- /widget footer -->
+                </section>
+            </section>
+        </div>
+        <script src="../core/js/jquery-1.11.3.min.js"></script>
+        <script src="../core/js/bootstrap.min.js"></script>
+        <script src="../core/js/c3.min.js"></script>
+        <script src="../core/js/d3.min.js"></script>
+        <script>
+             // Gauge chart
+            var non_commercial = c3.generate({
+                bindto: '#non_commercial',                 
+                data: {
+                    x: 'x',
+                    columns: [
+                        ['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04'],
+                        ['noncommercial', 200, 150, 150, 100]
+                    ],
+                    colors: {
+                        noncommercial: '#CE4735'
+                    },
+                    names:{
+                        noncommercial: 'NON-COMMERCIAL'
+                    }           
+                },
+                axis: {
+                    x: {
+                        show: false,
+                        type: 'timeseries',
+                        tick: {
+                            format: '%Y-%m-%d'
+                        }
+                    },
+                    y: {
+                        show: false
+                    }
+                },
+                legend: {
+                    show: false
+                },
+                size:{
+                    height:40
+                },
+                point: {
+                    show:true,
+                    focus: {
+                        expand: {
+                            enabled:true
+                        }
+                    }, 
+                }
+            });
+            non_commercial.select(['noncommercial'], [3]);
+            
+            var commercial = c3.generate({
+                bindto: '#commercial',                 
+                data: {
+                    x: 'x',
+                    columns: [
+                        ['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04'],
+                        ['commercial', 100, 150, 150, 200]
+                    ],
+                    colors: {
+                        commercial: '#328372'
+                    },
+                    names:{
+                        commercial: "COMMERCIAL"
+                    }
+                },
+                axis: {
+                    x: {
+                        show: false,
+                        type: 'timeseries',
+                        tick: {
+                            format: '%Y-%m-%d'
+                        }
+                    },
+                    y: {
+                        show: false
+                    }
+                },
+                legend: {
+                    show: false
+                },
+                size:{
+                    height:40
+                },
+                point: {
+                    show: false
+                }
+            });
+        </script>  
+
+    </body>
+</html>
