@@ -1095,6 +1095,51 @@
   }
 }
 
+// Bullish percentage index
+.fxs_widget_bullishPercentage {
+  .fxs_list_table { margin-bottom: 0; }
+  .fxs_widget_cell_col {
+    width: 33.33%;
+    padding: 5px;
+    &:last-child { text-align: right; }
+  }
+  .fxs_widget_custom_data_lable, .fxs_index_date {
+    display: inline-block;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+  }
+  .fxs_index_date { display: block; }
+  .fxs_index_icon {
+    text-align: center;
+    &::before {
+      display: inline-block;
+      content: '\f062';
+      font: normal normal normal 26px FontAwesome;
+    }
+  }
+  .fxs_index_up {
+    .fxs_index_last, .fxs_index_icon { color: @success_clr; }
+  }
+  .fxs_index_down {
+    .fxs_index_last, .fxs_index_icon { color: @error_clr; }
+    .fxs_index_icon::before { content: '\f063'; }
+  }
+
+  // Default rules
+  &.fxs_widget_default {
+    @media(min-width:@screen-s) {
+      .fxs_list_table_item {
+        float: left;
+        display: block;
+        width: 50%;
+        border-top: none;
+        &:first-child { border-right: 1px solid @light_3_clr; }
+      }
+      // .fxs_index_date { display: inline-block; }
+    }
+  }
+}
+
 // COT WIDGET
 .fxs_widget_cot{
   .fxs_widget_cot_wrapper{
