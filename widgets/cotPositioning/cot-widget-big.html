@@ -84,6 +84,9 @@
                     },
                     names:{
                         noncommercial: 'NON-COMMERCIAL'
+                    },
+                     selection: {
+                        enabled: true
                     }          
                 },
                 axis: {
@@ -102,7 +105,7 @@
                     show: false
                 },
                 size:{
-                    height:40
+                    height:60
                 },
                 point: {
                 show:true,
@@ -113,6 +116,8 @@
                     }, 
                 }
             });
+            non_commercial.select(['noncommercial'], [3]);
+
             var commercial = c3.generate({
                 bindto: '#commercial',                 
                 data: {
@@ -144,7 +149,7 @@
                     show: false
                 },
                 size:{
-                    height:40
+                    height:60
                 },
                 point: {
                     show: false
