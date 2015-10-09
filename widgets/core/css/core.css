@@ -2529,24 +2529,18 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_bullishPercentage .fxs_list_table {
   margin-bottom: 0;
 }
+.fxs_widget_bullishPercentage .fxs_list_table .fxs_list_table_item {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
 .fxs_widget_bullishPercentage .fxs_widget_cell_col {
   width: 33.33%;
   padding: 5px;
 }
-.fxs_widget_bullishPercentage .fxs_widget_cell_col:last-child {
-  text-align: right;
-}
 .fxs_widget_bullishPercentage .fxs_widget_custom_data_lable,
 .fxs_widget_bullishPercentage .fxs_index_date {
-  display: inline-block;
-  margin-right: 0.5rem;
-  white-space: nowrap;
-}
-.fxs_widget_bullishPercentage .fxs_index_date {
   display: block;
-}
-.fxs_widget_bullishPercentage .fxs_index_icon {
-  text-align: center;
+  white-space: nowrap;
 }
 .fxs_widget_bullishPercentage .fxs_index_icon::before {
   display: inline-block;
@@ -2565,14 +2559,23 @@ fieldset[disabled] .fxs_dismissQuery {
   content: '\f063';
 }
 @media (min-width: 680px) {
-  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item {
+  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item,
+  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_list_table_item {
     float: left;
     display: block;
     width: 50%;
     border-top: none;
   }
-  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item:first-child {
+  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item:first-child,
+  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_list_table_item:first-child {
     border-right: 1px solid #dddedf;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_widget_custom_data_lable,
+  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_index_date {
+    display: inline-block;
+    margin-left: 0.5rem;
   }
 }
 .c3 .tick line {
