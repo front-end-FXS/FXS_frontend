@@ -920,8 +920,6 @@ h5,
 .fxs_article_body::after,
 .fxs_ctp_table .fxs_ctpTable_order a::before,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_title::before,
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_title::after,
 .fxs_alert::before,
 .fxs_alert::after,
 .fxs_divider_wide::before,
@@ -957,7 +955,6 @@ h5,
 .fxs_sponsor_container::after,
 .fxs_article_body::after,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_title::after,
 .fxs_alert::after,
 .fxs_divider_wide::after,
 .fxs_widget_price_header::after,
@@ -3074,56 +3071,20 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_price_ohl span:first-child {
   display: none;
 }
-.fxs_widget_bullishPercentage .fxs_list_table {
+.fxs_list_table_item_split_widget {
   margin-bottom: 0;
 }
-.fxs_widget_bullishPercentage .fxs_list_table .fxs_list_table_item {
-  padding: 0.5rem 1rem;
-  text-align: center;
-}
-.fxs_widget_bullishPercentage .fxs_widget_cell_col {
-  width: 33.33%;
-  padding: 5px;
-}
-.fxs_widget_bullishPercentage .fxs_widget_custom_data_lable,
-.fxs_widget_bullishPercentage .fxs_index_date {
-  display: block;
-  white-space: nowrap;
-}
-.fxs_widget_bullishPercentage .fxs_index_icon::before {
-  display: inline-block;
-  content: '\f062';
-  font: normal normal normal 26px FontAwesome;
-}
-.fxs_widget_bullishPercentage .fxs_index_up .fxs_index_last,
-.fxs_widget_bullishPercentage .fxs_index_up .fxs_index_icon {
-  color: #338473;
-}
-.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_last,
-.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_icon {
-  color: #cf4836;
-}
-.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_icon::before {
-  content: '\f063';
-}
 @media (min-width: 680px) {
-  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item,
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_list_table_item {
+  .fxs_widget_default .fxs_list_table_item_split_widget .fxs_list_table_item,
+  .fxs_widget_big .fxs_list_table_item_split_widget .fxs_list_table_item {
     float: left;
     display: block;
     width: 50%;
     border-top: none;
   }
-  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item:first-child,
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_list_table_item:first-child {
+  .fxs_widget_default .fxs_list_table_item_split_widget .fxs_list_table_item:first-child,
+  .fxs_widget_big .fxs_list_table_item_split_widget .fxs_list_table_item:first-child {
     border-right: 1px solid #dddedf;
-  }
-}
-@media (min-width: 1024px) {
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_widget_custom_data_lable,
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_index_date {
-    display: inline-block;
-    margin-left: 0.5rem;
   }
 }
 .c3 .tick line {
@@ -5057,49 +5018,58 @@ width:calc(100% - 210px - 2rem);
     vertical-align: middle;
   }
 }
-.fxs_widget_cot .fxs_widget_divider_module {
-  padding-bottom: 0;
+.fxs_widget_cot .fxs_list_table_item {
+  display: block;
+  letter-spacing: -1rem;
 }
-.fxs_widget_cot .fxs_widget_cot_wrapper {
-  white-space: nowrap;
-  padding: 1rem;
-}
-.fxs_widget_cot .fxs_widget_cot_wrapper:first-child {
-  border-bottom: 1px solid #dddedf;
-}
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_box,
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_graph {
+.fxs_widget_cot .fxs_list_table_item .fxs_widget_cot_box {
   display: inline-block;
-  white-space: normal;
-}
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_graph {
-  -lh-property: 0;
-width:-webkit-calc(100% - 180px);
-width:-moz-calc(100% - 180px);
-width:calc(100% - 180px);
-;
-}
-.fxs_widget_cot .fxs_widget_cot_wrapper .fxs_widget_cot_box {
-  width: 90px;
+  height: 60px;
+  padding: 0.5rem 2px;
   text-align: center;
   vertical-align: middle;
-  height: 60px;
+  letter-spacing: normal;
+  width: 70px;
+}
+.fxs_widget_cot .fxs_list_table_item .fxs_widget_cot_box.fxs_widget_cot_graph {
+  -lh-property: 0;
+width:-webkit-calc(100% - 140px);
+width:-moz-calc(100% - 140px);
+width:calc(100% - 140px);
+;
+}
+.fxs_widget_bullishPercentage .fxs_list_table .fxs_list_table_item {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.fxs_widget_bullishPercentage .fxs_widget_cell_col {
+  width: 33.33%;
+  padding: 5px;
+}
+.fxs_widget_bullishPercentage .fxs_widget_custom_data_lable,
+.fxs_widget_bullishPercentage .fxs_index_date {
+  display: block;
+}
+.fxs_widget_bullishPercentage .fxs_index_icon::before {
+  display: inline-block;
+  content: '\f062';
+  font: normal normal normal 26px FontAwesome;
+}
+.fxs_widget_bullishPercentage .fxs_index_up .fxs_index_last,
+.fxs_widget_bullishPercentage .fxs_index_up .fxs_index_icon {
+  color: #338473;
+}
+.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_last,
+.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_icon {
+  color: #cf4836;
+}
+.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_icon::before {
+  content: '\f063';
 }
 @media (min-width: 1100px) {
-  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_big {
-    width: 50%;
-    float: left;
-  }
-  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_big:first-child {
-    border-bottom: none;
-    border-right: 1px solid #dddedf;
-  }
-}
-@media (min-width: 680px) {
-  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_mini {
-    float: none;
-  }
-  .fxs_widget_cot .fxs_widget_cot_wrapper.fxs_widget_cot_mini:first-child {
-    border-bottom: 1px solid #dddedf;
+  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_widget_custom_data_lable,
+  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_index_date {
+    display: inline-block;
+    margin-left: 0.5rem;
   }
 }

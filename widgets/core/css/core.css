@@ -2526,56 +2526,20 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_price_ohl span:first-child {
   display: none;
 }
-.fxs_widget_bullishPercentage .fxs_list_table {
+.fxs_list_table_item_split_widget {
   margin-bottom: 0;
 }
-.fxs_widget_bullishPercentage .fxs_list_table .fxs_list_table_item {
-  padding: 0.5rem 1rem;
-  text-align: center;
-}
-.fxs_widget_bullishPercentage .fxs_widget_cell_col {
-  width: 33.33%;
-  padding: 5px;
-}
-.fxs_widget_bullishPercentage .fxs_widget_custom_data_lable,
-.fxs_widget_bullishPercentage .fxs_index_date {
-  display: block;
-  white-space: nowrap;
-}
-.fxs_widget_bullishPercentage .fxs_index_icon::before {
-  display: inline-block;
-  content: '\f062';
-  font: normal normal normal 26px FontAwesome;
-}
-.fxs_widget_bullishPercentage .fxs_index_up .fxs_index_last,
-.fxs_widget_bullishPercentage .fxs_index_up .fxs_index_icon {
-  color: #338473;
-}
-.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_last,
-.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_icon {
-  color: #cf4836;
-}
-.fxs_widget_bullishPercentage .fxs_index_down .fxs_index_icon::before {
-  content: '\f063';
-}
 @media (min-width: 680px) {
-  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item,
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_list_table_item {
+  .fxs_widget_default .fxs_list_table_item_split_widget .fxs_list_table_item,
+  .fxs_widget_big .fxs_list_table_item_split_widget .fxs_list_table_item {
     float: left;
     display: block;
     width: 50%;
     border-top: none;
   }
-  .fxs_widget_bullishPercentage.fxs_widget_default .fxs_list_table_item:first-child,
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_list_table_item:first-child {
+  .fxs_widget_default .fxs_list_table_item_split_widget .fxs_list_table_item:first-child,
+  .fxs_widget_big .fxs_list_table_item_split_widget .fxs_list_table_item:first-child {
     border-right: 1px solid #dddedf;
-  }
-}
-@media (min-width: 1024px) {
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_widget_custom_data_lable,
-  .fxs_widget_bullishPercentage.fxs_widget_big .fxs_index_date {
-    display: inline-block;
-    margin-left: 0.5rem;
   }
 }
 .c3 .tick line {
@@ -2678,7 +2642,6 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 [class^="fxs_widget_"] {
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   line-height: 1.38rem;
 }
 [class^="fxs_widget_"] * {
