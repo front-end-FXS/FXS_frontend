@@ -1,0 +1,40 @@
+// Vendor imports
+@import "../../../website-css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website-css/less/vars.less";
+@import "../../../website-css/less/mixins.less";
+
+// generating heatmap columns //
+
+.fxs_widget_heatmap {
+  .fxs_widget_price{
+    *, .fxs_asset_label::before {
+      color: @lightest_clr;
+    }
+  }
+  .fxs_heatmap_price_down { 
+    background-color: @error_clr; 
+    padding:0.5rem; 
+  }
+  .fxs_heatmap_price_down_plus { background-color: lighten(@error_clr, 20%); padding:0.5rem; }
+  .fxs_heatmap_price_up { background-color: @success_clr; padding:0.5rem; }
+  .fxs_heatmap_price_up_plus { background-color: lighten(@success_clr, 10%); padding:0.5rem; }
+  .fxs_heatmap_price_neutral { background-color: @light_2_clr; padding:0.5rem; }
+
+  .fxs_widget_heatmap_column {
+    float:left;
+    width:50%;
+    .widget-column-default-parameters();
+  }
+  &.fxs_widget_default{
+    .fxs_widget_heatmap_column {
+      .widget_md_column(3);
+    }
+  }
+  &.fxs_widget_big {
+    .fxs_widget_heatmap_column {
+      .widget_xlg_column(2);
+    }
+  }
+}
