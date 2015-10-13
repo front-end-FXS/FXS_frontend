@@ -288,6 +288,39 @@
   }
 }
 
+
+//////////////////////// fxs_widget_heatmap columns /////////////////////
+
+// heatmap grid breakpoints
+@widget-grid-columns: 12;
+@widget-grid-gutter-width: 0.5rem;
+
+
+// default 
+.widget-column-default-parameters(@gutter: @widget-grid-gutter-width) {
+  position: relative;
+  padding-left:  (@gutter / 2);
+  padding-right: (@gutter / 2);
+  padding-bottom: 0.5rem;
+  &:extend(.fxs_clearfix all);
+}
+
+// Generate the default columns 680
+.widget_md_column(@columns) {
+  @media (min-width: @screen-s) {
+    float: left;
+    width: percentage((@columns / @widget-grid-columns));
+  }
+}
+
+// Generate the extra large columns 1100
+.widget_xlg_column(@columns) {
+  @media (min-width: @screen-l) {
+    float: left;
+    width: percentage((@columns / @widget-grid-columns));
+  }
+}
+
 /////////////////////////////////////////////////////////////////////////
 ////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
 //////////////////// (custom bootstrap mixins) ////////////////////////

@@ -920,6 +920,8 @@ h5,
 .fxs_article_body::after,
 .fxs_ctp_table .fxs_ctpTable_order a::before,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
+.fxs_widget_heatmap .fxs_widget_heatmap_column::before,
+.fxs_widget_heatmap .fxs_widget_heatmap_column::after,
 .fxs_alert::before,
 .fxs_alert::after,
 .fxs_divider_wide::before,
@@ -955,6 +957,7 @@ h5,
 .fxs_sponsor_container::after,
 .fxs_article_body::after,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
+.fxs_widget_heatmap .fxs_widget_heatmap_column::after,
 .fxs_alert::after,
 .fxs_divider_wide::after,
 .fxs_suscribe::after,
@@ -5178,5 +5181,49 @@ width:calc(100% - 140px);
   .fxs_widget_bullishPercentage.fxs_widget_big .fxs_index_date {
     display: inline-block;
     margin-left: 0.5rem;
+  }
+}
+.fxs_widget_heatmap .fxs_widget_price *,
+.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label::before {
+  color: #ffffff;
+}
+.fxs_widget_heatmap .fxs_heatmap_price_down {
+  background-color: #cf4836;
+  padding: 0.5rem;
+}
+.fxs_widget_heatmap .fxs_heatmap_price_down_plus {
+  background-color: #e39388;
+  padding: 0.5rem;
+}
+.fxs_widget_heatmap .fxs_heatmap_price_up {
+  background-color: #338473;
+  padding: 0.5rem;
+}
+.fxs_widget_heatmap .fxs_heatmap_price_up_plus {
+  background-color: #41a993;
+  padding: 0.5rem;
+}
+.fxs_widget_heatmap .fxs_heatmap_price_neutral {
+  background-color: #a3a3a8;
+  padding: 0.5rem;
+}
+.fxs_widget_heatmap .fxs_widget_heatmap_column {
+  float: left;
+  width: 50%;
+  position: relative;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 680px) {
+  .fxs_widget_heatmap.fxs_widget_default .fxs_widget_heatmap_column {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 1100px) {
+  .fxs_widget_heatmap.fxs_widget_big .fxs_widget_heatmap_column {
+    float: left;
+    width: 16.66666667%;
   }
 }
