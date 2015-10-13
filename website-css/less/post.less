@@ -2,9 +2,9 @@
   padding: 0 0 0.5rem 0;
   border-bottom: 3px solid @light_4_clr;
   position: relative;
-  margin-bottom:1rem;
-  @media (min-width: @screen-s) {
-    margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  @media (min-width: @screen-l) {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -31,10 +31,11 @@
 
 .fxs_article_mainMedia {
   margin: 0 -1rem 1rem;
+  @media (min-width: @screen-s) { margin: 0 0 1rem; }
   @media (min-width: @screen-l) {
-    width: 66.66%;
     float: right;
-    margin: 0 0 1rem 2rem;
+    margin-left: 2rem;
+    width: 66.66%;
   }
 }
 

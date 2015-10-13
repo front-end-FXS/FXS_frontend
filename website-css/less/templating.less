@@ -26,9 +26,8 @@
   z-index: 2;
   -webkit-overflow-scrolling: touch;
   margin-top: @base_module_size;
-  @media (min-width: @screen-m) {
-    margin-left: @left_rail_space;
-  }
+  @media (min-width: @screen-m) { margin-left: @left_rail_space_reduced; }
+  @media (min-width: @screen-l) { margin-left: @left_rail_space; }
   .fxs_content_wide &{
     @media (min-width: @screen-m) {
       margin-left: 0;
@@ -122,9 +121,13 @@
   width: 100%;
   border-bottom: 1px solid @light_5_clr;
   @media (min-width: @screen-m) {
-      position: absolute;
-      left: @left_rail_space;
-      .calc(width, ~'100% - @{left_rail_space}'); 
+    position: absolute;
+    left: @left_rail_space_reduced;
+    .calc(width, ~'100% - @{left_rail_space_reduced}'); 
+  }
+  @media (min-width: @screen-l) {
+    left: @left_rail_space;
+    .calc(width, ~'100% - @{left_rail_space}'); 
   }
   .fxs_content_wide &{
     @media (min-width: @screen-m) {
@@ -144,7 +147,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    &.active { .translateX(@left_rail_space); }
+    &.active { .translateX(@left_rail_space_reduced); }
     &.disabled {
         .opacity(.5);
         cursor: default;
@@ -323,9 +326,9 @@
 
 ////////// CONTENT //////// 
 .fxs_contentView {
-  padding: 5px 3px @base_module_size;
-  @media (min-width: @screen-s) { padding: 5px 1rem @base_module_size; }
-  // @media (min-width: @screen-l) { padding: 5px 1rem @base_module_size; }
+  padding: 5px 0.25rem @base_module_size;
+  @media (min-width: @screen-s) { padding: 5px 0.5rem @base_module_size; }
+  @media (min-width: @screen-l) { padding: 5px 1rem @base_module_size; }
   .fxs_isParent_section & {
       display: none;
       @media (min-width: @screen-s) { display: block; }
@@ -357,14 +360,13 @@
   }
 }
 
-.fxs_widget_price_header {
-  .fxs_wideWidget_pre_header_item();
-}
-
 .fxs_leaderboard {
   display: none;
   padding: 1rem 0;
-  .fxs_detail & { padding: 0 0 0.5rem; }
+  .fxs_detail & {
+    padding: 0 0 0.5rem;
+    @media (min-width: @screen-s) { margin: 0 -2rem; }
+  }
   @media (min-width: @screen-s) { display: block; }
   @media (min-width: @screen-m) {
     max-width: @content_rail_width;
@@ -372,13 +374,9 @@
   }
   .fxs_add {
     @media (min-width: @screen-s) {
-      width: 468px;
-      min-height: 60px;
-      margin: auto;
-    }
-    @media (min-width: @screen-l) {
       width: 728px;
       min-height: 90px;
+      margin: auto;
     }
   }
 }
@@ -411,12 +409,12 @@
   top: @main_header_height;
   left: -100%;
   .fxs_isParent_section & { left: auto; }
-  @media (min-width: @screen-s){ left: -(@left_rail_space + 5px)!important; }
+  @media (min-width: @screen-s){ left: -(@left_rail_space_reduced + 5px)!important; }
   @media (min-width: @screen-m) { left: auto!important; }
   &.cbp-spmenu-open {
     .translateX(100%);
     @media (min-width: @screen-s){
-      .translateX(@left_rail_space + 5px);
+      .translateX(@left_rail_space_reduced + 5px);
     }
     @media (min-width: @screen-m) { .translate(0); }
   }
@@ -430,13 +428,18 @@
   width: 100%;
   .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
   .fxs_dateIndicator_divider, .fxs_feedbackLoading_msg, .fxs_listView_blockWrapper {
-    @media (min-width: @screen-s) { width: @left_rail_space; }
+    @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
+    @media (min-width: @screen-l) { width: @left_rail_space; }
   }
 }
 
 // Absolute dimension spaces in layout
 .fxs_listView, .fxs_listViewRail {
   @media (min-width: @screen-s) {
+    width: @left_rail_space_reduced + 5px;
+    padding-right: 5px;
+  }
+  @media (min-width: @screen-l) {
     width: @left_rail_space + 5px;
     padding-right: 5px;
   }
@@ -464,7 +467,8 @@
   overflow: hidden;
   .animation(slide-from-top 0.33s ease-in);
   &:hover{ background-color: lighten(@highlight_clr, 35%); }
-  @media (min-width: @screen-s) { width: @left_rail_space; }
+  @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
+  @media (min-width: @screen-l) { width: @left_rail_space; }
 }
 
 .fxs_listView_item, .fxs_listView_adContiner {
@@ -495,7 +499,7 @@
 .fxs_listView_adContiner{
   background-color: @light_3_clr;
   text-align: center;
-  padding-left:10px;
+  padding: 10px;
 }
 
 // Floating media objects in listView
@@ -515,6 +519,10 @@
   bottom: 0;
   width: 100%;
   @media (min-width: @screen-m) {
+    margin-left: @left_rail_space_reduced;
+    .calc(width, ~'100% - @{left_rail_space_reduced}'); 
+  }
+  @media (min-width: @screen-l) {
     margin-left: @left_rail_space;
     .calc(width, ~'100% - @{left_rail_space}'); 
   }

@@ -40,6 +40,7 @@
     
   // Widget prices header
   &.fxs_widget_price_header {
+    .fxs_wideWidget_pre_header_item();
     @media(min-width:@screen-s) {
       .fxs_asset_label_block {
           .fxs_price_change{ padding-left: 1.5rem; }
@@ -67,15 +68,29 @@
   }
 
   // rules for widget prices listView
-  &.fxs_widget_price_listView { padding: 0.5rem 0; }
+  &.fxs_widget_price_listView {
+    padding: 0.5rem 0;
+    .fxs_asset_label_block { max-width: 45%; }
+    .fxs_price_ohl {
+      margin-top: 0.25rem;
+      span {  margin-left: 0.12rem; }
+    }
+  }
+
+  // rules for widget prices listView & mini
+  &.fxs_widget_price_listView, &.fxs_widget_mini {
+    .fxs_widget_price_value, .fxs_price_change {
+      font-size: @txt_size_small;
+      line-height: @txt_lineheight_small;
+    }
+  }
 
   // rules for widget prices mini
   &.fxs_widget_mini {
     @media(min-width:@screen-s) {
-      .fxs_widget_price_value{
+      .fxs_widget_price_value, .fxs_asset_label {
         display: block;
         float: none;
-        font-size: @txt_size_small;
         text-align: left;
       }
     }
@@ -99,7 +114,8 @@
     }
   }
 
-  .fxs_widget_price_value{ max-width: inherit; }
+  .fxs_asset_label { font-size: @txt_size_small; }
+  .fxs_widget_price_value { max-width: inherit; }
   .fxs_price_change { display: block; }
 
   &.fxs_widget_default, &.fxs_widget_big {

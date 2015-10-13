@@ -763,10 +763,10 @@
 	width: 100%;
  	max-width: 100%;
  	font-size: @txt_size_small;
+  line-height: @txt_lineheight_small;
   >tbody, >thead, >tfoot {
     >tr >td, >tr >th {
       padding: 0.5rem;
-      line-height: @txt_lineheight_reset;
       border-bottom: 1px solid @light_3_clr;
     }
   }
@@ -813,7 +813,7 @@
   }
 }
 
-// LOADERS
+// LOADERS & FEEDBACK
 .fxs_feedbackLoading_msg {
   .animation(just-appear 0.5s ease-in);
   padding: 1em;
@@ -830,7 +830,8 @@
   i {
     font-size: @icon_defaultsize * 1.455;
     margin-bottom: 1rem; 
-  }     
+  }
+  &.load_next_page { display: block; }    
 }
 
 // LEGAL DISCLAIMER BLOCK
@@ -1062,7 +1063,7 @@
 .fxs_widget_price_value {
   float: right;
   text-align: right;
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .fxs_price_change {

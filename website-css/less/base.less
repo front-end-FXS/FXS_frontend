@@ -128,9 +128,30 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+
 // Mobile helpers
+// hidden in small, visible in big screens
+.fxs_hidden_xs {
+  display: none;
+  @media (min-width: @screen-s) { display: block; }
+}
+.fxs_hidden_s {
+  display: none;
+  @media (min-width: @screen-m) { display: block; }
+}
+.fxs_hidden_m {
+  display: none;
+  @media (min-width: @screen-l) { display: block; }
+}
+// visible in small, hidden in big screens
 .fxs_visible_xs {
   @media (min-width: @screen-s) { display: none; }
+}
+.fxs_visible_s {
+  @media (min-width: @screen-m) { display: none; }
+}
+.fxs_visible_m {
+  @media (min-width: @screen-l) { display: none; }
 }
 
 /////////////////////////////////////////////////////////////
@@ -228,7 +249,7 @@
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
   overflow-y: auto;
-  @media (min-width: @screen-m) {
+  @media (min-width: @screen-l) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
       width: 5px;
