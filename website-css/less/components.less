@@ -910,13 +910,14 @@
 .fxs_relatedContent_holder {
   .make-row();
   overflow: hidden;
-  letter-spacing: -1em;
+  font-size: 0;
 }
 
 .fxs_relatedItem {
   &:extend(.fxs_transition);
   padding-bottom: 1rem;
   min-height: @base_module_size*7;
+  font-size: @txt_defaultsize_rem;
   &:hover {
     cursor: pointer;
     border-bottom: 4px solid @highlight_clr;
