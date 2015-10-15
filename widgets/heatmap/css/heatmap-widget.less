@@ -22,6 +22,10 @@
 
 // heatmap default properties and columns //
 .fxs_widget_heatmap {
+  .fxs_tabs_nav{
+    margin: 0 0 1rem 0;
+    padding: 0 0.5rem;
+  }
   .fxs_widget_price {
     *, .fxs_asset_label::before {
       color: @lightest_clr;
@@ -63,18 +67,13 @@
 .fxs_widget_heatmap_gradient {
     margin-top:1rem;
     padding-left:0.5rem;
-  .fxs_widget_heatmap_high, .fxs_widget_heatmap_low, .fxs_widget_heatmap_gradient_wrapper {
-    display: block;
-    @media(min-width:@screen-s) {
-      display:inline-block;
-    }
+  .fxs_widget_heatmap_high, .fxs_widget_heatmap_low {
+      float:left;
   }
   .fxs_widget_heatmap_gradient_wrapper {
-    padding:0;
-    @media(min-width:@screen-s) {
       padding-left:0.5rem;
       padding-right:0.5rem;
-    }
+      float:left;
   }
   .fxs_heatmap_gradient_item {
     float:left;

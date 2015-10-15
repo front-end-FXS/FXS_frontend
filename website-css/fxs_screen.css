@@ -5206,6 +5206,10 @@ width:calc(100% - 140px);
 .fxs_heatmap_price_neutral .fxs_price_change {
   padding-left: 0;
 }
+.fxs_widget_heatmap .fxs_tabs_nav {
+  margin: 0 0 1rem 0;
+  padding: 0 0.5rem;
+}
 .fxs_widget_heatmap .fxs_widget_price *,
 .fxs_widget_heatmap .fxs_widget_price .fxs_asset_label::before {
   color: #ffffff;
@@ -5246,25 +5250,13 @@ width:calc(100% - 140px);
   padding-left: 0.5rem;
 }
 .fxs_widget_heatmap_gradient .fxs_widget_heatmap_high,
-.fxs_widget_heatmap_gradient .fxs_widget_heatmap_low,
-.fxs_widget_heatmap_gradient .fxs_widget_heatmap_gradient_wrapper {
-  display: block;
-}
-@media (min-width: 680px) {
-  .fxs_widget_heatmap_gradient .fxs_widget_heatmap_high,
-  .fxs_widget_heatmap_gradient .fxs_widget_heatmap_low,
-  .fxs_widget_heatmap_gradient .fxs_widget_heatmap_gradient_wrapper {
-    display: inline-block;
-  }
+.fxs_widget_heatmap_gradient .fxs_widget_heatmap_low {
+  float: left;
 }
 .fxs_widget_heatmap_gradient .fxs_widget_heatmap_gradient_wrapper {
-  padding: 0;
-}
-@media (min-width: 680px) {
-  .fxs_widget_heatmap_gradient .fxs_widget_heatmap_gradient_wrapper {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  float: left;
 }
 .fxs_widget_heatmap_gradient .fxs_heatmap_gradient_item {
   float: left;
