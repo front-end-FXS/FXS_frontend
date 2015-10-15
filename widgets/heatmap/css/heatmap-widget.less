@@ -5,27 +5,47 @@
 @import "../../../website-css/less/vars.less";
 @import "../../../website-css/less/mixins.less";
 
-// generating heatmap columns //
+// heatmap rules colors //
+.fxs_heatmap_price_down_plus { background-color: lighten(@error_clr, 20%); padding:0.5rem; }
+.fxs_heatmap_price_up { background-color: @success_clr; padding:0.5rem; }
+.fxs_heatmap_price_up_plus { background-color: lighten(@success_clr, 10%); padding:0.5rem; }
+.fxs_heatmap_price_neutral { 
+  background-color: @light_2_clr; 
+  padding:0.5rem; 
+  .fxs_asset_label::before {
+      display:none;
+  }
+  .fxs_asset_label a, .fxs_price_change {
+    padding-left:0;
+  }
+}
 
+// heatmap default properties and columns //
 .fxs_widget_heatmap {
-  .fxs_widget_price{
+  .fxs_widget_price {
     *, .fxs_asset_label::before {
       color: @lightest_clr;
+    }
+  }
+  .fxs_asset_label a {
+    &:hover{
+      color:@lightest_clr;
+      text-decoration: none;
     }
   }
   .fxs_heatmap_price_down { 
     background-color: @error_clr; 
     padding:0.5rem; 
   }
-  .fxs_heatmap_price_down_plus { background-color: lighten(@error_clr, 20%); padding:0.5rem; }
-  .fxs_heatmap_price_up { background-color: @success_clr; padding:0.5rem; }
-  .fxs_heatmap_price_up_plus { background-color: lighten(@success_clr, 10%); padding:0.5rem; }
-  .fxs_heatmap_price_neutral { background-color: @light_2_clr; padding:0.5rem; }
-
   .fxs_widget_heatmap_column {
     float:left;
     width:50%;
     .widget-column-default-parameters();
+  }
+  &.fxs_widget_mini{
+    .fxs_widget_heatmap_column {
+      width:100%;
+    }
   }
   &.fxs_widget_default{
     .fxs_widget_heatmap_column {
@@ -36,5 +56,31 @@
     .fxs_widget_heatmap_column {
       .widget_xlg_column(2);
     }
+  }
+}
+
+// heatmap gradient
+.fxs_widget_heatmap_gradient {
+    margin-top:1rem;
+    padding-left:0.5rem;
+  .fxs_widget_heatmap_high, .fxs_widget_heatmap_low, .fxs_widget_heatmap_gradient_wrapper {
+    display: block;
+    @media(min-width:@screen-s) {
+      display:inline-block;
+    }
+  }
+  .fxs_widget_heatmap_gradient_wrapper {
+    padding:0;
+    @media(min-width:@screen-s) {
+      padding-left:0.5rem;
+      padding-right:0.5rem;
+    }
+  }
+  .fxs_heatmap_gradient_item {
+    float:left;
+    width:1rem;
+    height:1rem;
+    padding:0;
+    margin-right:1px;
   }
 }
