@@ -575,22 +575,23 @@
 
 /////////////// Flexible cols ///////////////////
 .fxs_tableRow {
-  @media (min-width: @screen-l) {
-    display: table;
-    width: 100%;
-    .calc(width, ~'100% + 1rem');
-  }
+  //
 }
 
 .fxs_flex_col {
   .column-default-parameters();
-  @media (min-width: @screen-l) {
+  @media (min-width: @screen-s) {
     float: left;
     position: relative;
-    .calc(width, ~'100% - @{left_rail_space}');
+    .calc(width, ~'100% - @{left_rail_space_reduced}');
     &.fxs_flex_ad_col {
-      width: @left_rail_space;
+      width: @left_rail_space_reduced;
+      overflow: hidden;
     }
+  }
+  @media (min-width: @screen-l) {
+    .calc(width, ~'100% - @{left_rail_space}');
+    &.fxs_flex_ad_col { width: @left_rail_space; }
   }
 }
 
