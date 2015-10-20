@@ -6,10 +6,11 @@
 @import "../../../website-css/less/mixins.less";
 
 .fxs_spreads_table {
-	// default widget rules
+	// default spreads widget rules
 	>thead, tbody> tr> td {
 		// custom the two first rows
 		&:first-child { border-bottom: none; width:50px; }
+		// custom row and style broker
 		&:nth-child(2) {
 			width:150px;
 			padding-left:0;
@@ -34,10 +35,7 @@
 		padding-top:0.5rem;
 		font-weight: @txt_fontweight_bold;
 		font-size: @txt_size_large;
-		&.fxs_widget_spreads_item_lower {
-			background-color: lighten(@spreads_clr, 50%);
-			color:@spreads_clr;
-		}
+		&.fxs_widget_spreads_item_lower { background-color: lighten(@spreads_clr, 50%); color:@spreads_clr; }
 	}
 	// rules for spreads mini widget
 	&.fxs_widget_spreads_mini {
@@ -74,17 +72,17 @@
 	// rules for spreads big widget
 	&.fxs_widget_spreads_big {
 		@media(min-width:@screen-l) {
-			td,th{ display: table-cell; }
+			td,th { display: table-cell; }
 		}
 	}
 	// nano size
 	&.fxs_widget_spreads_nano {
 		// hide second row and since sixth and so on
-		>thead, tbody> tr> td{
+		>thead, tbody> tr> td {
 			&:nth-child(-n+3) {
 				display:table-cell;
-				width:60px;
-				height:60px;
+				width:4rem;
+				height:4rem;
 				border-bottom: none;
 				font-weight: @txt_fontweight_bold;
 				font-size: @txt_size_large;
