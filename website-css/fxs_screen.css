@@ -1010,83 +1010,6 @@ h5,
     margin-right: -2rem;
   }
 }
-.fxs_relativePositioning {
-  position: relative;
-}
-.fxs_iBlock {
-  display: inline-block;
-}
-.fxs_dTable {
-  display: table;
-  width: 100%;
-}
-.fxs_fLeft {
-  float: left;
-}
-.fxs_fRight {
-  float: right;
-}
-.fxs_marginBase_top {
-  margin-top: 1rem;
-}
-.fxs_marginHalf_top {
-  margin-top: 0.5rem;
-}
-.fxs_marginBase_right {
-  margin-right: 1rem;
-}
-.fxs_marginBase_bottom {
-  margin-bottom: 1rem;
-}
-.fxs_marginHalf_bottom {
-  margin-bottom: 0.5rem;
-}
-.fxs_marginBase_left {
-  margin-left: 1rem;
-}
-.fxs_resetRow_margin {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.fxs_hidden_xs {
-  display: none;
-}
-@media (min-width: 680px) {
-  .fxs_hidden_xs {
-    display: block;
-  }
-}
-.fxs_hidden_s {
-  display: none;
-}
-@media (min-width: 1024px) {
-  .fxs_hidden_s {
-    display: block;
-  }
-}
-.fxs_hidden_m {
-  display: none;
-}
-@media (min-width: 1100px) {
-  .fxs_hidden_m {
-    display: block;
-  }
-}
-@media (min-width: 680px) {
-  .fxs_visible_xs {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .fxs_visible_s {
-    display: none;
-  }
-}
-@media (min-width: 1100px) {
-  .fxs_visible_m {
-    display: none;
-  }
-}
 .fxs_entry_sectionlink {
   display: inline-block;
   padding: 0 2px;
@@ -3227,6 +3150,83 @@ fieldset[disabled] .fxs_dismissQuery {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
+.fxs_relativePositioning {
+  position: relative;
+}
+.fxs_iBlock {
+  display: inline-block;
+}
+.fxs_dTable {
+  display: table;
+  width: 100%;
+}
+.fxs_fLeft {
+  float: left;
+}
+.fxs_fRight {
+  float: right;
+}
+.fxs_marginBase_top {
+  margin-top: 1rem;
+}
+.fxs_marginHalf_top {
+  margin-top: 0.5rem;
+}
+.fxs_marginBase_right {
+  margin-right: 1rem;
+}
+.fxs_marginBase_bottom {
+  margin-bottom: 1rem;
+}
+.fxs_marginHalf_bottom {
+  margin-bottom: 0.5rem;
+}
+.fxs_marginBase_left {
+  margin-left: 1rem;
+}
+.fxs_resetRow_margin {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.fxs_hidden_xs {
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_hidden_xs {
+    display: block;
+  }
+}
+.fxs_hidden_s {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fxs_hidden_s {
+    display: block;
+  }
+}
+.fxs_hidden_m {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .fxs_hidden_m {
+    display: block;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_visible_xs {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_visible_s {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  .fxs_visible_m {
+    display: none;
+  }
+}
 .fxs_header {
   background-color: #242d38;
   height: 45px;
@@ -3777,7 +3777,7 @@ height:calc(100% - 45px);
 }
 @media (min-width: 680px) {
   .fxs_detail {
-    padding: 2rem 2rem 1rem;
+    padding: 1.5rem 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -4465,14 +4465,6 @@ height:calc(100% - 4rem);
 .fxs_widget_price.price_up .fxs_price_change a {
   color: #255f53;
 }
-.fxs_widget_price.price_up.fxs_heatmap {
-  background-color: #338473;
-  padding: 0.5rem;
-}
-.fxs_widget_price.price_up.fxs_heatmap_plus {
-  background-color: #41a993;
-  padding: 0.5rem;
-}
 .fxs_widget_price.price_down .fxs_asset_label::before {
   content: '\f063';
   color: #cf4836;
@@ -4483,24 +4475,8 @@ height:calc(100% - 4rem);
 .fxs_widget_price.price_down .fxs_price_change a {
   color: #aa3828;
 }
-.fxs_widget_price.price_down.fxs_heatmap {
-  background-color: #cf4836;
-  padding: 0.5rem;
-}
-.fxs_widget_price.price_down.fxs_heatmap_plus {
-  background-color: #e39388;
-  padding: 0.5rem;
-}
 .fxs_widget_price.price_neutral .fxs_asset_label::before {
-  display: none;
-}
-.fxs_widget_price.price_neutral .fxs_asset_label a,
-.fxs_widget_price.price_neutral .fxs_price_change {
-  padding-left: 0;
-}
-.fxs_widget_price.price_neutral.fxs_heatmap {
-  background-color: #a3a3a8;
-  padding: 0.5rem;
+  content: "\f068";
 }
 .fxs_widget_price.fxs_widget_price_header {
   border-bottom: 5px solid #f0f0f1;
@@ -5215,22 +5191,48 @@ width:calc(100% - 140px);
   }
 }
 .fxs_widget_column {
-  float: left;
-  width: 50%;
   position: relative;
-  padding-left: 2.5px;
-  padding-right: 2.5px;
-  padding-bottom: 5px;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  float: left;
+  padding-bottom: 0.25rem;
+  width: 50%;
 }
-.fxs_widget_heatmap .fxs_widget_price *,
-.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label::before,
+.fxs_widget_heatmap .fxs_widget_price {
+  padding: 0.22rem 0.5rem;
+}
+.fxs_widget_heatmap .fxs_widget_price.price_up {
+  background-color: #41a993;
+}
+.fxs_widget_heatmap .fxs_widget_price.price_up.price_up_plus {
+  background-color: #338473;
+}
+.fxs_widget_heatmap .fxs_widget_price.price_down {
+  background-color: #e39388;
+}
+.fxs_widget_heatmap .fxs_widget_price.price_down.price_down_plus {
+  background-color: #cf4836;
+}
+.fxs_widget_heatmap .fxs_widget_price.price_neutral {
+  background-color: #a3a3a8;
+}
+.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label {
+  font-size: 0.88rem;
+}
+.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label,
 .fxs_widget_heatmap .fxs_widget_price .fxs_asset_label a,
 .fxs_widget_heatmap .fxs_widget_price .fxs_asset_label a:hover {
-  color: #ffffff;
-  font-size: 0.88rem;
-  text-decoration: none;
   cursor: pointer;
 }
+.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label::before {
+  margin-top: 0.25rem;
+}
+.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label::before,
+.fxs_widget_heatmap .fxs_widget_price .fxs_price_change,
+.fxs_widget_heatmap .fxs_widget_price .fxs_asset_label a {
+  color: #ffffff;
+}
+.fxs_widget_heatmap .fxs_widget_price .fxs_price_change,
 .fxs_widget_heatmap .fxs_widget_price .fxs_asset_label::before {
   font-size: 0.75rem;
 }
@@ -5238,8 +5240,10 @@ width:calc(100% - 140px);
   opacity: 0.75;
   cursor: pointer;
 }
-.fxs_widget_heatmap.fxs_widget_mini .fxs_widget_column {
-  width: 100%;
+@media (min-width: 680px) {
+  .fxs_widget_heatmap.fxs_widget_mini .fxs_widget_column {
+    width: 100%;
+  }
 }
 @media (min-width: 680px) {
   .fxs_widget_heatmap.fxs_widget_default .fxs_widget_column {
@@ -5247,9 +5251,14 @@ width:calc(100% - 140px);
     width: 25%;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 680px) {
   .fxs_widget_heatmap.fxs_widget_big .fxs_widget_column {
     float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 1220px) {
+  .fxs_widget_heatmap.fxs_widget_big .fxs_widget_column {
     width: 16.66666667%;
   }
 }
