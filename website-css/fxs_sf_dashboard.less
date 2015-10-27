@@ -74,7 +74,43 @@
         .fxs_footer{
             display:none;
         }
+        // Sitefinity widgets thumbnailç
 
+        /*
+        Se agrega la regla important para sobreescribir la imagen en sprite que se pinta en cada widget
+        cuando se realize el refactor definitivo del ccs se debe eliminar el backgraund por defecto de 
+        cada widget y eliminar el important
+        */
+        .fxs_widget_thumb {
+            padding: 10px 0 0 59px;
+            height: 29px;
+            width: auto;
+            text-indent: 0;
+            border-top-width: 1px;
+            border-left-width: 1px;
+            border-top-style: solid;
+            border-top-color: #f1f1f1;
+            border-left-style: solid;
+            border-left-color: #f1f1f1;
+            color: #333;
+
+            &.fxs_add_thumb { background: url('../website-img/ad.jpg') no-repeat 3px 0 !important; }
+            &.fxs_dynamicAlert_thumb { background: url('../website-img/alertdinamic.jpg') no-repeat 3px 0!important; }
+            &.fxs_staticAlert_thumb { background: url('../website-img/alert.jpg') no-repeat 3px 0px!important; }
+            &.fxs_subscribeNewsletter_thumb { background: url('../website-img/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_subsectionTitle_thumb { background: url('../website-img/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_textOverCI_thumb { background:url('../website-img/textover.jpg') no-repeat 3px 0!important; }
+            &.fxs_single_ctp_thumb { background:url('../website-img/CTPsingle.jpg') no-repeat 3px 0!important; }
+            &.fxs_multi_ctp_thumb { background:url('../website-img/CTPmulti.jpg') no-repeat 3px 0!important; }
+            &.fxs_ctp_contributors_thumb{ background:url('../website-img/CTPcon.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_single_thumb{ background:url('../website-img/forecastsingle.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_multi_thumb{ background:url('../website-img/forecastmulti.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_contributors_thumb{ background:url('../website-img/forecastcon.jpg') no-repeat 3px 0!important; }
+            &.fxs_priceStats_thumb{ background:url('../website-img/pricestats.jpg') no-repeat 3px 0!important; }
+            &.fxs_newsList_thumb{ background:url('../website-img/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_postList_thumb{ background:url('../website-img/postlist.jpg') no-repeat 3px 0!important; }
+        }
     }
 }
+
 
