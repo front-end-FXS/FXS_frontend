@@ -169,6 +169,7 @@ textarea,
 .fxs_entryFeatured_img,
 .fxs_floatingMedia_imageContainer,
 .fxs_squareImage,
+.fxs_squareImage_s,
 .fxs_avatar_circleImage,
 .fxs_avatar_circleImage_s,
 .fxs_avatar_circleImage_m,
@@ -1653,34 +1654,22 @@ width:calc(100% - 320px);
   left: 0;
   top: 0;
 }
-.fxs_squareImage {
+.fxs_floatingMedia_textBody {
   overflow: hidden;
-  display: inline-block;
+}
+.fxs_squareImage {
   float: left;
   position: relative;
   margin-right: 0.5rem;
   width: 70px;
   height: 70px;
 }
-.fxs_squareImage::before {
-  display: block;
-  content: " ";
-  width: 100%;
-  padding-top: 100%;
-}
-.fxs_squareImage img {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
 .fxs_squareImage img {
   height: 100%;
   max-width: inherit;
 }
-.fxs_floatingMedia_textBody {
-  overflow: hidden;
-}
+.fxs_squareImage,
+.fxs_squareImage_s,
 .fxs_avatar_circleImage,
 .fxs_avatar_circleImage_s,
 .fxs_avatar_circleImage_m,
@@ -1688,9 +1677,9 @@ width:calc(100% - 320px);
   position: relative;
   overflow: hidden;
   display: inline-block;
-  border-radius: 50%;
-  vertical-align: middle;
 }
+.fxs_squareImage::before,
+.fxs_squareImage_s::before,
 .fxs_avatar_circleImage::before,
 .fxs_avatar_circleImage_s::before,
 .fxs_avatar_circleImage_m::before,
@@ -1700,6 +1689,8 @@ width:calc(100% - 320px);
   width: 100%;
   padding-top: 100%;
 }
+.fxs_squareImage img,
+.fxs_squareImage_s img,
 .fxs_avatar_circleImage img,
 .fxs_avatar_circleImage_s img,
 .fxs_avatar_circleImage_m img,
@@ -1709,6 +1700,13 @@ width:calc(100% - 320px);
   left: 0;
   top: 0;
 }
+.fxs_avatar_circleImage,
+.fxs_avatar_circleImage_s,
+.fxs_avatar_circleImage_m,
+.fxs_avatar_circleImage_l {
+  border-radius: 50%;
+  vertical-align: middle;
+}
 .fxs_avatar_circleImage img,
 .fxs_avatar_circleImage_s img,
 .fxs_avatar_circleImage_m img,
@@ -1716,7 +1714,8 @@ width:calc(100% - 320px);
   min-height: 100%;
   width: inherit;
 }
-.fxs_avatar_circleImage_s {
+.fxs_avatar_circleImage_s,
+.fxs_squareImage_s {
   width: 35px;
   height: 35px;
 }
@@ -1735,7 +1734,7 @@ width:calc(100% - 320px);
 }
 .fxs_contributorBox {
   font-size: 0.88rem;
-  line-height: 1.25rem;
+  line-height: 1.063rem;
   white-space: nowrap;
 }
 .fxs_contributorBox .fxs_avatar_circleImage_s {

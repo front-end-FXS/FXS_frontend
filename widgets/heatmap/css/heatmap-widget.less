@@ -9,14 +9,14 @@
 .fxs_widget_column {
   .column-default-parameters(@grid-gutter-width-xs);
   float: left;
-  padding-bottom: 0.25rem;
+  padding-bottom: @grid-gutter-width-xs;
   width: 50%;
 }
 
 // Properties & variants
 .fxs_widget_heatmap {
   .fxs_widget_price {
-    padding: 0.22rem 0.5rem;
+    padding: 0.25rem 0.5rem;
     &.price_up {
       background-color: lighten(@success_clr, 10%);
       &.price_up_plus { background-color: @success_clr; }
@@ -30,7 +30,7 @@
     .fxs_asset_label {
       font-size: @txt_size_small;
       &, a, a:hover { cursor: pointer; }
-      &::before { margin-top: 0.25rem; }
+      &::before { margin-top: 0.3rem; }
     }
 
     .fxs_asset_label::before, .fxs_price_change, .fxs_asset_label a { color: @lightest_clr; }
