@@ -169,6 +169,7 @@ textarea,
 .fxs_entryFeatured_img,
 .fxs_floatingMedia_imageContainer,
 .fxs_squareImage,
+.fxs_squareImage_s,
 .fxs_avatar_circleImage,
 .fxs_avatar_circleImage_s,
 .fxs_avatar_circleImage_m,
@@ -540,83 +541,6 @@ label,
   .fxs_divider_wide {
     margin-left: -2rem;
     margin-right: -2rem;
-  }
-}
-.fxs_relativePositioning {
-  position: relative;
-}
-.fxs_iBlock {
-  display: inline-block;
-}
-.fxs_dTable {
-  display: table;
-  width: 100%;
-}
-.fxs_fLeft {
-  float: left;
-}
-.fxs_fRight {
-  float: right;
-}
-.fxs_marginBase_top {
-  margin-top: 1rem;
-}
-.fxs_marginHalf_top {
-  margin-top: 0.5rem;
-}
-.fxs_marginBase_right {
-  margin-right: 1rem;
-}
-.fxs_marginBase_bottom {
-  margin-bottom: 1rem;
-}
-.fxs_marginHalf_bottom {
-  margin-bottom: 0.5rem;
-}
-.fxs_marginBase_left {
-  margin-left: 1rem;
-}
-.fxs_resetRow_margin {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.fxs_hidden_xs {
-  display: none;
-}
-@media (min-width: 680px) {
-  .fxs_hidden_xs {
-    display: block;
-  }
-}
-.fxs_hidden_s {
-  display: none;
-}
-@media (min-width: 1024px) {
-  .fxs_hidden_s {
-    display: block;
-  }
-}
-.fxs_hidden_m {
-  display: none;
-}
-@media (min-width: 1100px) {
-  .fxs_hidden_m {
-    display: block;
-  }
-}
-@media (min-width: 680px) {
-  .fxs_visible_xs {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .fxs_visible_s {
-    display: none;
-  }
-}
-@media (min-width: 1100px) {
-  .fxs_visible_m {
-    display: none;
   }
 }
 .fxs_entry_sectionlink {
@@ -1730,34 +1654,22 @@ width:calc(100% - 320px);
   left: 0;
   top: 0;
 }
-.fxs_squareImage {
+.fxs_floatingMedia_textBody {
   overflow: hidden;
-  display: inline-block;
+}
+.fxs_squareImage {
   float: left;
   position: relative;
   margin-right: 0.5rem;
   width: 70px;
   height: 70px;
 }
-.fxs_squareImage::before {
-  display: block;
-  content: " ";
-  width: 100%;
-  padding-top: 100%;
-}
-.fxs_squareImage img {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
 .fxs_squareImage img {
   height: 100%;
   max-width: inherit;
 }
-.fxs_floatingMedia_textBody {
-  overflow: hidden;
-}
+.fxs_squareImage,
+.fxs_squareImage_s,
 .fxs_avatar_circleImage,
 .fxs_avatar_circleImage_s,
 .fxs_avatar_circleImage_m,
@@ -1765,9 +1677,9 @@ width:calc(100% - 320px);
   position: relative;
   overflow: hidden;
   display: inline-block;
-  border-radius: 50%;
-  vertical-align: middle;
 }
+.fxs_squareImage::before,
+.fxs_squareImage_s::before,
 .fxs_avatar_circleImage::before,
 .fxs_avatar_circleImage_s::before,
 .fxs_avatar_circleImage_m::before,
@@ -1777,6 +1689,8 @@ width:calc(100% - 320px);
   width: 100%;
   padding-top: 100%;
 }
+.fxs_squareImage img,
+.fxs_squareImage_s img,
 .fxs_avatar_circleImage img,
 .fxs_avatar_circleImage_s img,
 .fxs_avatar_circleImage_m img,
@@ -1786,6 +1700,13 @@ width:calc(100% - 320px);
   left: 0;
   top: 0;
 }
+.fxs_avatar_circleImage,
+.fxs_avatar_circleImage_s,
+.fxs_avatar_circleImage_m,
+.fxs_avatar_circleImage_l {
+  border-radius: 50%;
+  vertical-align: middle;
+}
 .fxs_avatar_circleImage img,
 .fxs_avatar_circleImage_s img,
 .fxs_avatar_circleImage_m img,
@@ -1793,7 +1714,8 @@ width:calc(100% - 320px);
   min-height: 100%;
   width: inherit;
 }
-.fxs_avatar_circleImage_s {
+.fxs_avatar_circleImage_s,
+.fxs_squareImage_s {
   width: 35px;
   height: 35px;
 }
@@ -1812,7 +1734,7 @@ width:calc(100% - 320px);
 }
 .fxs_contributorBox {
   font-size: 0.88rem;
-  line-height: 1.25rem;
+  line-height: 1.063rem;
   white-space: nowrap;
 }
 .fxs_contributorBox .fxs_avatar_circleImage_s {
@@ -2445,7 +2367,7 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_widget_divider_module {
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
-  border-bottom: 3px solid #f0f0f1;
+  border-bottom: 1px solid #f0f0f1;
 }
 @media (min-width: 1024px) {
   .fxs_widget_divider_module.fxs_widget_divider_header {
@@ -2469,7 +2391,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_table tfoot .fxs_widget_footer {
   border-bottom: none;
-  border-top: 3px solid #f0f0f1;
+  border-top: 1px solid #f0f0f1;
 }
 .fxs_widget_custom_data_lable {
   font-size: 1.25rem;
@@ -2682,6 +2604,83 @@ fieldset[disabled] .fxs_dismissQuery {
   -ms-filter: blur(5px);
   filter: blur(5px);
 }
+.fxs_relativePositioning {
+  position: relative;
+}
+.fxs_iBlock {
+  display: inline-block;
+}
+.fxs_dTable {
+  display: table;
+  width: 100%;
+}
+.fxs_fLeft {
+  float: left;
+}
+.fxs_fRight {
+  float: right;
+}
+.fxs_marginBase_top {
+  margin-top: 1rem;
+}
+.fxs_marginHalf_top {
+  margin-top: 0.5rem;
+}
+.fxs_marginBase_right {
+  margin-right: 1rem;
+}
+.fxs_marginBase_bottom {
+  margin-bottom: 1rem;
+}
+.fxs_marginHalf_bottom {
+  margin-bottom: 0.5rem;
+}
+.fxs_marginBase_left {
+  margin-left: 1rem;
+}
+.fxs_resetRow_margin {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.fxs_hidden_xs {
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_hidden_xs {
+    display: block;
+  }
+}
+.fxs_hidden_s {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fxs_hidden_s {
+    display: block;
+  }
+}
+.fxs_hidden_m {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .fxs_hidden_m {
+    display: block;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_visible_xs {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_visible_s {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  .fxs_visible_m {
+    display: none;
+  }
+}
 [class^="fxs_widget_"] {
   font-family: 'Roboto', sans-serif;
   line-height: 1.38rem;
@@ -2704,6 +2703,28 @@ fieldset[disabled] .fxs_dismissQuery {
 [class^="fxs_widget_"] small {
   font-size: 11px;
   color: #8c8d91;
+}
+[class^="fxs_widget_"] .fxs_marginBase_top {
+  margin-top: 1rem;
+}
+[class^="fxs_widget_"] .fxs_marginHalf_top {
+  margin-top: 0.5rem;
+}
+[class^="fxs_widget_"] .fxs_marginBase_right {
+  margin-right: 1rem;
+}
+[class^="fxs_widget_"] .fxs_marginBase_bottom {
+  margin-bottom: 1rem;
+}
+[class^="fxs_widget_"] .fxs_marginHalf_bottom {
+  margin-bottom: 0.5rem;
+}
+[class^="fxs_widget_"] .fxs_marginBase_left {
+  margin-left: 1rem;
+}
+[class^="fxs_widget_"] .fxs_resetRow_margin {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 .fxs_table {
   border-collapse: collapse;
