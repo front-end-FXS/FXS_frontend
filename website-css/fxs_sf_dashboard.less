@@ -9,7 +9,7 @@
         }
 
         // sitefinity editor
-        div.k-window .k-window-titlebar{
+        .k-window .k-window-titlebar{
             margin-top:-16px!important;
             cursor:move;
         }
@@ -36,40 +36,65 @@
             padding: 0 30px 10px 30px;
         }
         .k-window{
-            img{
-                padding:10px 0 10px 0;
-            }
-            label,button{
-                display:block;
-            }
-            button{
-                margin-top:10px;
-            }
-            input[type="text"], select, input[type="number"]{
-                width:100%;
-                font-size:14px;
-            }
-            .sf_custom_refresh{
-                input[type="text"]{
-                    width:80%;
+            border:1px;
+            .field-group{
+                img{
+                    padding:10px 0 10px 0;
                 }
+                label,button{
+                    display:block;
+                }
+                button{
+                    margin-top:10px;
+                }
+                input{
+                    padding:2px;
+                    box-sizing:border-box;
+                    width:100%;
+                    border:1px solid #a9a9a9;
+                }
+                select{
+                    width:100%;
+                }
+            } 
+            .k-header{
+                background-color: #999999;
             }
-            input[type="number"]{
-                border:1px solid #ccc;
+            .dropdown-menu{
+                overflow-y:scroll;
+                height:300px;
+                margin-top:5px;
+                li a{
+                    color:#8C8D91;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 300;
+                    strong{
+                        color:#e4871b;
+                    }
+                    &:hover{                       
+                        color:#49494F;
+                        text-decoration: none;
+                    }
+                }
             }
         }
         .field-group{
             padding-bottom:10px;
+            input{
+                padding:0;
+            }
         }
 
         // fxstreet dashboard rules
-        .fxs_content{
-            margin-left:0;
-        }
         .fxs_wrapper{
             padding-top:0;
             overflow:visible;
             height:auto;
+        }
+        // override sidebar widget
+        .fxs_listView{
+            top:140px;
         }
         .fxs_footer{
             display:none;
@@ -94,21 +119,44 @@
             border-left-color: #f1f1f1;
             color: #333;
 
-            &.fxs_add_thumb { background: url('../website-img/ad.jpg') no-repeat 3px 0 !important; }
-            &.fxs_dynamicAlert_thumb { background: url('../website-img/alertdinamic.jpg') no-repeat 3px 0!important; }
-            &.fxs_staticAlert_thumb { background: url('../website-img/alert.jpg') no-repeat 3px 0px!important; }
-            &.fxs_subscribeNewsletter_thumb { background: url('../website-img/newsletter.jpg') no-repeat 3px 0!important; }
-            &.fxs_subsectionTitle_thumb { background: url('../website-img/newsletter.jpg') no-repeat 3px 0!important; }
-            &.fxs_textOverCI_thumb { background:url('../website-img/textover.jpg') no-repeat 3px 0!important; }
-            &.fxs_single_ctp_thumb { background:url('../website-img/CTPsingle.jpg') no-repeat 3px 0!important; }
-            &.fxs_multi_ctp_thumb { background:url('../website-img/CTPmulti.jpg') no-repeat 3px 0!important; }
-            &.fxs_ctp_contributors_thumb{ background:url('../website-img/CTPcon.jpg') no-repeat 3px 0!important; }
-            &.fxs_forecast_single_thumb{ background:url('../website-img/forecastsingle.jpg') no-repeat 3px 0!important; }
-            &.fxs_forecast_multi_thumb{ background:url('../website-img/forecastmulti.jpg') no-repeat 3px 0!important; }
-            &.fxs_forecast_contributors_thumb{ background:url('../website-img/forecastcon.jpg') no-repeat 3px 0!important; }
-            &.fxs_priceStats_thumb{ background:url('../website-img/pricestats.jpg') no-repeat 3px 0!important; }
-            &.fxs_newsList_thumb{ background:url('../website-img/newsletter.jpg') no-repeat 3px 0!important; }
-            &.fxs_postList_thumb{ background:url('../website-img/postlist.jpg') no-repeat 3px 0!important; }
+            &.fxs_add_thumb { background: url('../website-img/widget-thumbnails/ad.jpg') no-repeat 3px 0 !important; }
+            &.fxs_dynamicAlert_thumb { background: url('../website-img/widget-thumbnails/alertdinamic.jpg') no-repeat 3px 0!important; }
+            &.fxs_staticAlert_thumb { background: url('../website-img/widget-thumbnails/alert.jpg') no-repeat 3px 0px!important; }
+            &.fxs_subscribeNewsletter_thumb { background: url('../website-img/widget-thumbnails/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_subsectionTitle_thumb { background: url('../website-img/widget-thumbnails/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_textOverCI_thumb { background:url('../website-img/widget-thumbnails/textover.jpg') no-repeat 3px 0!important; }
+            &.fxs_single_ctp_thumb { background:url('../website-img/widget-thumbnails/CTPsingle.jpg') no-repeat 3px 0!important; }
+            &.fxs_multi_ctp_thumb { background:url('../website-img/widget-thumbnails/CTPmulti.jpg') no-repeat 3px 0!important; }
+            &.fxs_ctp_contributors_thumb{ background:url('../website-img/widget-thumbnails/CTPcon.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_single_thumb{ background:url('../website-img/widget-thumbnails/forecastsingle.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_multi_thumb{ background:url('../website-img/widget-thumbnails/forecastmulti.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_contributors_thumb{ background:url('../website-img/widget-thumbnails/forecastcon.jpg') no-repeat 3px 0!important; }
+            &.fxs_priceStats_thumb{ background:url('../website-img/widget-thumbnails/pricestats.jpg') no-repeat 3px 0!important; }
+            &.fxs_newsList_thumb{ background:url('../website-img/widget-thumbnails/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_postList_thumb{ background:url('../website-img/widget-thumbnails/postlist.jpg') no-repeat 3px 0!important; }
+        }
+        .fxs_icon_editor{
+            width:16px;
+            height:16px;
+            vertical-align: middle;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            font-size: 0;
+            line-height: 0;
+            text-align: center;
+            display: inline-block;
+            &.fxs_icon_editor_ad{
+                opacity: .5;
+                background-image: url('../website-img/editor-thumbnails/adcontent.jpg')
+            }
+            &.fxs_icon_editor_post{
+                opacity: .5;
+                background-image: url('../website-img/editor-thumbnails/postlist.jpg')
+            }
+            &.fxs_icon_editor_cdn{
+                opacity: .5;
+                background-image: url('../website-img/editor-thumbnails/cdn.jpg')
+            }
         }
     }
 }
