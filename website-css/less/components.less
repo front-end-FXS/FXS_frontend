@@ -45,6 +45,7 @@
     display: inline-block;
     padding-right: 5px;
   }
+  .fxs_btn_group { margin-top: -1px; }
 }
 
 // Tabs navigation (overall nav options)
@@ -139,6 +140,7 @@
 // Button phantom
 .fxs_btn_phantom {
   font-size: inherit;
+  color: @dark_1_clr;
   margin: 0;
   padding: 0 0.5rem;
   &:hover, &.active, .open > & { background-color: @light_3_clr; }
@@ -242,8 +244,12 @@
   .reset-text();
   font-size: @txt_size_small;
   padding: 0.75rem 0.5rem;
-  &.alert-dismissible { padding: 0.75rem 2rem 0.75rem 0.5rem; }
-  .fxs_alertText { margin-bottom: 0; }
+  &.alert-dismissible { padding-right: 2rem; }
+  .fxs_alertText {
+    margin-bottom: 0;
+    padding-left: 5px;
+    overflow: hidden;
+  }
   a {
     text-decoration: underline;
     &:hover { text-decoration: none; }
@@ -276,15 +282,19 @@
 // Global alert
 .fxs_global_alert {
   display: none;
+  margin-top: -1px;
+  padding-left: 1rem;
   position: fixed;
   width: 100%;
   z-index: 999;
-  @media (min-width: @screen-m) { .calc(width, ~'100% - @{left_rail_space}'); }
+  @media (min-width: @screen-m) { .calc(width, ~'100% - @{left_rail_space_reduced}'); }
+  @media (min-width: @screen-l) { .calc(width, ~'100% - @{left_rail_space}'); }
+  .fxs_content_wide & { width: 100%; }
   &.in {
     display: block;
     & + .fxs_contentView { margin-top: @base_module_size; } 
   }
-  &, &.alert-dismissible { padding-left: 1rem; }
+  .cbp-spmenu-push-toleft &, .cbp-spmenu-push-toright & { display: none; }
 }
 
 // Alert variants

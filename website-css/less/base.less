@@ -216,19 +216,14 @@
       height: 5px;
       border-radius: 0;
     }
-      &::-webkit-scrollbar-track { .box-shadow(inset 0 -2px 4px rgba(255, 255, 255, 0.33)); }
-      &::-webkit-scrollbar-thumb {
-        .box-shadow(inset 0 0 2px rgba(255, 255, 255, 0.75));
-          background-color: rgba(120, 121, 122, 0.4);
-          border-radius: 0;
-      }
-      &::-webkit-scrollbar-button {
-        width: 0;
-        height: 0;
-        display: none;
-      }
-      scrollbar-base-color: transparent;
-      -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar-track { .box-shadow(inset 0 -2px 4px rgba(255, 255, 255, 0.33)); }
+    &::-webkit-scrollbar-thumb {
+      .box-shadow(inset 0 0 2px rgba(255, 255, 255, 0.75));
+        background-color: rgba(120, 121, 122, 0.4);
+        border-radius: 0;
+    }
+    &::-webkit-scrollbar-button { display: none; }
+    -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }
 
