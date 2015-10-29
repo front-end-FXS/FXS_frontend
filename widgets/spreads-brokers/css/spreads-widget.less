@@ -33,8 +33,8 @@
     // default spreads table rules
     >thead tr> th, tbody> tr> td {
       // custom the two first rows
+      &:first-child { width: @base_module_size; }
       &:first-child, &:nth-child(2) { padding-left: 0; }
-      &:first-child { width: 50px; }
       &:nth-child(2) { display: none; }
       &:nth-child(n+6) { display: none; }
       &:last-child { display: table-cell; }
@@ -54,7 +54,7 @@
         // custom row and style broker name
         &:nth-child(2) {
           display: table-cell;
-          width: @base_module_size*3;
+          width: @base_module_size*3.3;
         }
 
         &:nth-child(n+6):nth-child(-n+8) { display: table-cell; }
