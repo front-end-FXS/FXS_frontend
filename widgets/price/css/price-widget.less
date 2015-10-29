@@ -20,21 +20,17 @@
     position:relative;
     a { padding-left: 1rem; }
     &::before {
-      position:absolute;
+      position: absolute;
       margin: 2px 2px 0 0;
       content: '\f062';
       font: normal normal normal 14px FontAwesome;
     }
   }
+
+  // Asset label color & icon variants
   &.price_up {
     .fxs_asset_label::before { color: @success_clr; }
     .fxs_price_change { .fxs_txt_color_variants(@success_clr); }
-    &.fxs_heatmap{
-      background-color: @success_clr; padding:0.5rem;
-    }
-    &.fxs_heatmap_plus{
-      background-color: lighten(@success_clr, 10%); padding:0.5rem;
-    }
   }
   &.price_down {
     .fxs_asset_label::before {
@@ -42,19 +38,9 @@
       color: @error_clr;
     }
     .fxs_price_change { .fxs_txt_color_variants(@error_clr); }
-    &.fxs_heatmap{
-      background-color: @error_clr; padding:0.5rem;
-    }
-    &.fxs_heatmap_plus{
-      background-color: lighten(@error_clr, 20%); padding:0.5rem;
-    }
   }
-  &.price_neutral{
-    .fxs_asset_label::before { display:none; }
-    .fxs_asset_label a, .fxs_price_change { padding-left:0; }
-    &.fxs_heatmap{
-      background-color: @light_2_clr; padding:0.5rem;
-    }
+  &.price_neutral {
+    .fxs_asset_label::before { content: "\f068" }
   }
     
   // Widget prices header

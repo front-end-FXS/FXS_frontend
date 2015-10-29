@@ -1,86 +1,92 @@
 // Vendor imports
 @import "../../../website-css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
-
 // Application variables & mixins
 @import "../../../website-css/less/vars.less";
 @import "../../../website-css/less/mixins.less";
 
 
-// heatmap default properties and columns //
+// heatmap layout
+.fxs_widget_column {
+  .column-default-parameters(@grid-gutter-width-xs);
+  float: left;
+  padding-bottom: @grid-gutter-width-xs;
+  width: 50%;
+}
+
+// Properties & variants
 .fxs_widget_heatmap {
-  .fxs_tabs_nav{
-    margin: 0 0 1rem 0;
-    padding: 0 0.5rem;
-  }
   .fxs_widget_price {
-    cursor:pointer;
-    *, .fxs_asset_label::before {
-      color: @lightest_clr;
+    padding: 0.25rem 0.5rem;
+    &.price_up {
+      background-color: lighten(@success_clr, 10%);
+      &.price_up_plus { background-color: @success_clr; }
     }
+    &.price_down {
+      background-color: lighten(@error_clr, 20%);
+      &.price_down_plus { background-color: @error_clr; }
+    }
+    &.price_neutral { background-color: @light_2_clr; }
+
+    .fxs_asset_label {
+      font-size: @txt_size_small;
+      &, a, a:hover { cursor: pointer; }
+      &::before { margin-top: 0.3rem; }
+    }
+
+    .fxs_asset_label::before, .fxs_price_change, .fxs_asset_label a { color: @lightest_clr; }
+    
+    .fxs_price_change, .fxs_asset_label::before { font-size: @txt_size_xsmall; }
+
     &:hover{
-      opacity: 0.5;
+      opacity: 0.75;
+      cursor: pointer;
     }
   }
-  .fxs_asset_label a {
-    &:hover{
-      color:@lightest_clr;
-      text-decoration: none;
-    }
-  }
-  .fxs_widget_column {
-    float:left;
-    width:50%;
-    .widget-column-default-parameters();
-  }
+
+  // Widget sizes variants
   &.fxs_widget_mini{
-    .fxs_widget_column {
-      width:100%;
+    @media (min-width: @screen-s) {
+      .fxs_widget_column { width:100%; }
     }
   }
   &.fxs_widget_default{
     .fxs_widget_column {
-      .widget_md_column(3);
+      .make-s-column(3);
     }
   }
   &.fxs_widget_big {
     .fxs_widget_column {
-      .widget_xlg_column(2);
+      .make-s-column(3);
+      .make_xl_column(2);
     }
   }
 }
 
-// heatmap gradient
-.fxs_widget_heatmap_gradient {
-    margin-top:1rem;
-    padding-left:0.5rem;
+// heatmap gradient legend
+.fxs_widget_heatmap_legend,
+.fxs_widget_heatmap_gradient_linear {
+  display:inline-block;
+  vertical-align: middle;
 }
-.fxs_widget_heatmap_high, .fxs_widget_heatmap_low, .fxs_widget_heatmap_gradient_linear {
-    display:inline-block;
-}
+
 .fxs_widget_heatmap_gradient_linear{
-  background-image: repeating-linear-gradient(
-      to right, 
-      @success_clr 0px, 
-      @success_clr 14px, 
-      #fff 15px, 
-      lighten(@success_clr, 10%) 16px, 
-      lighten(@success_clr, 10%) 30px, 
-      #fff 31px,
-      @light_2_clr 32px,
-      @light_2_clr 46px,
-      #fff 47px,
-      lighten(@error_clr, 20%) 48px,
-      lighten(@error_clr, 20%) 62px,
-      #fff 63px,
-      @error_clr 64px,
-      @error_clr 78px
-    );
-  width:78px;
-  height:18px;
-}
-.fxs_widget_heatmap_gradient_linear:before{
-  content: "";
-  display: inline-block;
-  height: 6px;
-  width: 4px;
+  .background-image(linear-gradient(
+    to right,
+    @success_clr 0px,
+    @success_clr 20px,
+    @lightest_clr 21px,
+    lighten(@success_clr, 10%) 22px,
+    lighten(@success_clr, 10%) 40px,
+    @lightest_clr 21px,
+    @light_2_clr 42px,
+    @light_2_clr 60px,
+    @lightest_clr 61px,
+    lighten(@error_clr, 20%) 62px,
+    lighten(@error_clr, 20%) 80px,
+    @lightest_clr 81px,
+    @error_clr 82px,
+    @error_clr 100px
+    ));
+  width: 100px;
+  height: 18px;
 }
