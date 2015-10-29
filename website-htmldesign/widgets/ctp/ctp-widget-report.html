@@ -872,7 +872,16 @@
                     height: 105
                 },
                 tooltip: {
-                    show: false
+                    show: true,
+                    format: {
+                      title: function (d) { return d; },
+                      value: function (value, ratio, id) {
+                          return ratio;
+                      }             
+                    }
+                },
+                padding:{
+                    left:15
                 },
                 axis: {
                   y: {
@@ -880,9 +889,7 @@
                   },
                   x: {
                     tick: {
-                      culling: {
-                        max: 5
-                      }
+                        values: ['1.0005', '1.0105', '1.0203']
                     }
                   } 
                 },
