@@ -609,12 +609,18 @@
   [class$="_67"]:not(.sf_colsIn) { .make-s-column(8); }
   // 50% //
   [class$="_50"]:not(.sf_colsIn) { .make-s-column(6); }
+  [class*="3cols"][class$="_50"]:not(.sf_colsIn) { .make-m-column(6); }
   // ~33%-34% //
   [class$="_33"]:not(.sf_colsIn), [class$="_34"]:not(.sf_colsIn) { .make-s-column(4); }
   // 25% //
   [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
     display: none;
     @media (min-width: @screen-l) { display: block;}
+    .make-l-column(3);
+  }
+  [class*="3cols"][class$="_25"]:not(.sf_colsIn) {
+    display: none;
+    @media (min-width: @screen-m) { display: block;}
     .make-l-column(3);
   }
   [class*="4cols"][class$="_25"]:not(.sf_colsIn) { .make-s-column(3); }
