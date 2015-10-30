@@ -907,8 +907,8 @@ h5,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::before,
 .sf_cols::after,
-.sf_cols .sf_1col_1_100::before,
-.sf_cols .sf_1col_1_100::after,
+.sf_cols .sf_1col_1_100:not(.sf_colsIn)::before,
+.sf_cols .sf_1col_1_100:not(.sf_colsIn)::after,
 .fxs_suscribeForm::before,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::before,
@@ -949,7 +949,7 @@ h5,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::after,
-.sf_cols .sf_1col_1_100::after,
+.sf_cols .sf_1col_1_100:not(.sf_colsIn)::after,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::after,
 .fxs_entryFeatured_imgSide::after,
@@ -4085,53 +4085,53 @@ width:calc(100% - 320px);
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
-.sf_cols [class^="sf"][class*="col"],
+.sf_cols [class^="sf"][class*="col"]:not(.sf_colsIn),
 .sf_cols .fxs_flex_col {
   position: relative;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 @media (min-width: 1100px) {
-  .sf_cols [class$="_75"] {
+  .sf_cols [class$="_75"]:not(.sf_colsIn) {
     float: left;
     width: 75%;
   }
 }
 @media (min-width: 680px) {
-  .sf_cols [class$="_67"] {
+  .sf_cols [class$="_67"]:not(.sf_colsIn) {
     float: left;
     width: 66.66666667%;
   }
 }
 @media (min-width: 680px) {
-  .sf_cols [class$="_50"] {
+  .sf_cols [class$="_50"]:not(.sf_colsIn) {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 680px) {
-  .sf_cols [class$="_33"],
-  .sf_cols [class$="_34"] {
+  .sf_cols [class$="_33"]:not(.sf_colsIn),
+  .sf_cols [class$="_34"]:not(.sf_colsIn) {
     float: left;
     width: 33.33333333%;
   }
 }
-.sf_cols [class*="2cols"][class$="_25"] {
+.sf_cols [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
   display: none;
 }
 @media (min-width: 1100px) {
-  .sf_cols [class*="2cols"][class$="_25"] {
+  .sf_cols [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
     display: block;
   }
 }
 @media (min-width: 1100px) {
-  .sf_cols [class*="2cols"][class$="_25"] {
+  .sf_cols [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
     float: left;
     width: 25%;
   }
 }
 @media (min-width: 680px) {
-  .sf_cols [class*="4cols"][class$="_25"] {
+  .sf_cols [class*="4cols"][class$="_25"]:not(.sf_colsIn) {
     float: left;
     width: 25%;
   }

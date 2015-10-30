@@ -600,24 +600,24 @@
 
 .sf_cols {
   .make-row();
-  [class^="sf"][class*="col"], .fxs_flex_col { .column-default-parameters(); }
+  [class^="sf"][class*="col"]:not(.sf_colsIn), .fxs_flex_col { .column-default-parameters(); }
   // 100% //
-  .sf_1col_1_100 { &:extend(.fxs_clearfix all); }
+  .sf_1col_1_100:not(.sf_colsIn) { &:extend(.fxs_clearfix all); }
   // 75% //
-  [class$="_75"] { .make-l-column(9); }
+  [class$="_75"]:not(.sf_colsIn) { .make-l-column(9); }
   // 67% //
-  [class$="_67"] { .make-s-column(8); }
+  [class$="_67"]:not(.sf_colsIn) { .make-s-column(8); }
   // 50% //
-  [class$="_50"] { .make-s-column(6); }
+  [class$="_50"]:not(.sf_colsIn) { .make-s-column(6); }
   // ~33%-34% //
-  [class$="_33"], [class$="_34"] { .make-s-column(4); }
+  [class$="_33"]:not(.sf_colsIn), [class$="_34"]:not(.sf_colsIn) { .make-s-column(4); }
   // 25% //
-  [class*="2cols"][class$="_25"] {
+  [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
     display: none;
     @media (min-width: @screen-l) { display: block;}
     .make-l-column(3);
   }
-  [class*="4cols"][class$="_25"] { .make-s-column(3); }
+  [class*="4cols"][class$="_25"]:not(.sf_colsIn) { .make-s-column(3); }
 }
 
 /////////////// Flexible cols //
