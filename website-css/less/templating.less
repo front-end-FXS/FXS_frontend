@@ -600,7 +600,7 @@
 
 .sf_cols {
   .make-row();
-  [class^="sf"][class*="col"], [class$="_col"] { .column-default-parameters(); }
+  [class^="sf"][class*="col"], .fxs_flex_col { .column-default-parameters(); }
   // 100% //
   .sf_1col_1_100 { &:extend(.fxs_clearfix all); }
   // 75% //
@@ -621,7 +621,6 @@
 }
 
 /////////////// Flexible cols //
-
 .fxs_flex_col {
   @media (min-width: @screen-s) {
     float: left;
@@ -637,6 +636,7 @@
     &.fxs_flex_ad_col { width: @left_rail_space; }
   }
 }
+//
 
 .fxs_content_adContainer { margin: 0 auto; }
 
