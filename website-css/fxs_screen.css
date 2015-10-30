@@ -4085,7 +4085,8 @@ width:calc(100% - 320px);
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 }
-.sf_cols [class*="col"] {
+.sf_cols [class^="sf"][class*="col"],
+.sf_cols [class$="_col"] {
   position: relative;
   padding-left: 0.5rem;
   padding-right: 0.5rem;

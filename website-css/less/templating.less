@@ -600,8 +600,7 @@
 
 .sf_cols {
   .make-row();
-  // Default parameters
-  [class*="col"] { .column-default-parameters(); }
+  [class^="sf"][class*="col"], [class$="_col"] { .column-default-parameters(); }
   // 100% //
   .sf_1col_1_100 { &:extend(.fxs_clearfix all); }
   // 75% //
@@ -621,7 +620,7 @@
   [class*="4cols"][class$="_25"] { .make-s-column(3); }
 }
 
-/////////////// Flexible cols ///////////////////
+/////////////// Flexible cols //
 
 .fxs_flex_col {
   @media (min-width: @screen-s) {
