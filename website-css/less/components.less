@@ -6,24 +6,6 @@
 ///////////////////////////////////////////////////////////
 /////////////////// NAVIGATION MENUS /////////////////////
 
-// Main Navigation MENU (1st level navigation)
-.fxs_nav_menu { 
-  li {
-    .fxs_vertical_block_nav(1px solid @dark_3_clr, 24px, @txt_size_small);
-  }    
-  .fxs_header & {
-    .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr; @main_header_height);
-    display: none;
-    li:first-child { display: none; }
-    @media (min-width: @screen-l) {
-      display: inline-block;
-      float: left;
-      margin-left: 1%;
-      white-space: nowrap;
-    } 
-  } 
-}
-
 // items nav list (2nd level navigations)
 .fxs_items_list_nav {
   border-bottom: 1px solid @dark_3_clr;
@@ -49,7 +31,7 @@
 }
 
 // Tabs navigation (overall nav options)
-.fxs_tabs_nav{
+.fxs_tabs_nav {
   .fxs_tab_item(1px solid @light_3_clr; @dark_4_clr; @light_3_clr; @base_module_size);
   white-space: nowrap;
   .fxs_pageSidebar & {
@@ -689,9 +671,7 @@
 .fxs_dropdownList {
   &:extend(.fxs_dropdown_generic all);
 	background-color: @dark_3_clr;
-	margin-top: 2px;
 	min-width: @base_module_size*4;
-  width: 100%;
   padding-bottom: 2px;
   > li {
     > a {
@@ -743,10 +723,6 @@
 		color: @lightest_clr;
 		&:hover { .opacity(.75); }
 	}
-  .fxs_overflowOptions:hover & {
-    display: block;
-    top: 100%;
-  }
 }
 
 // trigger/holder btn Group dd
@@ -759,6 +735,12 @@
 			color: @lightest_clr;
 		}
 	}
+  &:hover {
+    [class*="dropdownList"] {
+      display: block;
+      top: 100%;
+    }
+  }
 }
 
 // LIST SPECIAL STYLES
@@ -876,7 +858,7 @@
   vertical-align: middle;
 }
 
-// Social media objects - Spescific for Header title block in detail pages
+// Social media object - Spescific for Header title block in detail pages
 .fxs_shareContent_holder {
   display: none;
   position: absolute;
@@ -893,14 +875,27 @@
   }
 }
 
-// Social media object - Spescific for sidebar botton nav
-.fxs_shareContent_sidebar_nav{
+// Social media object - Spescific for social channels nav (header & sidebar left)
+.fxs_socialLinks_nav {
   padding: 1rem 10px;
   .fxs_btn_icon {
-    color: @light_1_clr;
+    color: @light_2_clr;
     &:hover{
       background-color: @dark_3_clr;
       color: @lightest_clr;
+    }
+  }
+  .fxs_header & {
+    padding: 0;
+    position: absolute;
+    right: @main_header_height;
+    .fxs_btn_icon {
+      height: @main_header_height;
+      line-height: @main_header_height;
+      &:hover { background-color: @brand_highlight_clr; }
+    }
+    .fxs_overflowOptions {
+      &.open > .fxs_btn_icon, &:hover .fxs_btn_icon { background-color: @brand_highlight_clr; }
     }
   }
 }
@@ -909,7 +904,7 @@
 .fxs_suscribeSocialBtn {
   li { margin: 0 0.5rem 0 0; }
   .fxs_btn_icon {
-    background-color: @lightest_clr;
+    background-color: @light_3_clr;
     color: @dark_2_clr;
     &:hover { .opacity(.75); }
   }
@@ -1241,6 +1236,7 @@
 .fxs_marginBase_top { margin-top: 1rem; }
 .fxs_marginHalf_top { margin-top: 0.5rem; }
 .fxs_marginBase_right { margin-right: 1rem; }
+.fxs_marginHalf_right { margin-right: 0.5rem; }
 .fxs_marginBase_bottom { margin-bottom: 1rem; }
 .fxs_marginHalf_bottom { margin-bottom: 0.5rem; }
 .fxs_marginBase_left { margin-left: 1rem; }
