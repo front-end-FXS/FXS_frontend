@@ -595,13 +595,39 @@
 /////////////// Layouts grid system //////////////////////
 /////////////////////////////////////////////////////////
 
-/////////////// Flexible cols ///////////////////
-.fxs_tableRow {
-  //
+/////////// Sitefinity cols overrrides //
+//////////// 12 columns based system ///
+
+.sf_cols {
+  .make-row();
+  [class^="sf"][class*="col"]:not(.sf_colsIn), .fxs_flex_col { .column-default-parameters(); }
+  // 100% //
+  .sf_1col_1_100:not(.sf_colsIn) { &:extend(.fxs_clearfix all); }
+  // 75% //
+  [class$="_75"]:not(.sf_colsIn) { .make-l-column(9); }
+  // 67% //
+  [class$="_67"]:not(.sf_colsIn) { .make-s-column(8); }
+  // 50% //
+  [class$="_50"]:not(.sf_colsIn) { .make-s-column(6); } 
+  [class*="3cols"][class$="_50"]:not(.sf_colsIn) { .make-m-column(6); }
+  // ~33%-34% //
+  [class$="_33"]:not(.sf_colsIn), [class$="_34"]:not(.sf_colsIn) { .make-s-column(4); }
+  // 25% //
+  [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
+    display: none;
+    @media (min-width: @screen-l) { display: block;}
+    .make-l-column(3);
+  }
+  [class*="3cols"][class$="_25"]:not(.sf_colsIn) {
+    display: none;
+    @media (min-width: @screen-m) { display: block;}
+    .make-l-column(3);
+  }
+  [class*="4cols"][class$="_25"]:not(.sf_colsIn) { .make-s-column(3); }
 }
 
+/////////////// Flexible cols //
 .fxs_flex_col {
-  .column-default-parameters();
   @media (min-width: @screen-s) {
     float: left;
     position: relative;
@@ -616,6 +642,7 @@
     &.fxs_flex_ad_col { width: @left_rail_space; }
   }
 }
+//
 
 .fxs_content_adContainer { margin: 0 auto; }
 
@@ -632,48 +659,6 @@
   }
   .fxs_headline_tiny { margin-bottom: 0; }
   @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
-}
-
-
-/////////////// Custom Sitefinity cols ///////////////////
-
-// 12 columns 
-.sf_cols{
-  .make-row();
-}
-
-.sf_1col_1_100, .sf_3cols_3_33, .sf_2cols_1_67, .sf_2cols_2_33, .sf_2cols_1_75, .sf_2cols_1_25, .sf_2cols_2_50, .sf_4cols_4_25{
-  .column-default-parameters();
-}
-
-// 100% //
-.sf_1col_1_100 {
-  &:extend(.fxs_clearfix all);
-}
-// 75% //
-.sf_2cols_1_75 {
-  .make-l-column(9);
-}
-// 66% //
-.sf_2cols_1_67 {
-  .make-s-column(8);
-}
-// 50% //
-.sf_2cols_2_50 {
-  .make-s-column(6);
-}
-// 33% //
-.sf_3cols_3_33, .sf_2cols_2_33 {
-  .make-s-column(4); 
-}
-// 25% //
-.sf_2cols_1_25 {
-  display: none;
-  @media (min-width: @screen-l) { display: block;}
-  .make-l-column(3);
-}
-.sf_4cols_4_25 {
-  .make-s-column(3);
 }
 
 ///////////////////////// STYCKY /////////////////////////////

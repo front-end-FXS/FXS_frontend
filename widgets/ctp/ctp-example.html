@@ -129,7 +129,7 @@
                 width: 190
             },
             tooltip: {
-              show: false
+              show: false,
             },
             interaction: { enabled: false }
         });
@@ -177,17 +177,27 @@
             tooltip: {
                 show: false
             },
+            padding:{
+                left:5
+            },
             axis: {
               y: {
                 show: false
               },
               x: {
                 tick: {
-                  culling: {
-                    max: 5
-                  }
+                    values: ['1.0005', '1.0097', '1.0203']
                 }
               } 
+            },
+            tooltip: {
+              show: true,
+              format: {
+                  title: function (d) { return d; },
+                  value: function (value, ratio, id) {
+                      return ratio;
+                  }             
+              }
             },
             legend: {
               position: 'right'

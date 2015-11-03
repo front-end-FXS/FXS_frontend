@@ -869,10 +869,10 @@ h5,
 .fxs_mutedContent_label,
 .fxs_queryResults_label {
   font-size: 0.8rem;
+  line-height: 1.063rem;
   color: #a3a3a8;
   font-style: italic;
   display: block;
-  margin-top: -0.25rem;
 }
 .fxs_mutedContent_label i {
   font-size: 0.92rem;
@@ -907,8 +907,8 @@ h5,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::before,
 .sf_cols::after,
-.sf_1col_1_100::before,
-.sf_1col_1_100::after,
+.sf_cols .sf_1col_1_100:not(.sf_colsIn)::before,
+.sf_cols .sf_1col_1_100:not(.sf_colsIn)::after,
 .fxs_suscribeForm::before,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::before,
@@ -949,7 +949,7 @@ h5,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .sf_cols::after,
-.sf_1col_1_100::after,
+.sf_cols .sf_1col_1_100:not(.sf_colsIn)::after,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::after,
 .fxs_entryFeatured_imgSide::after,
@@ -4081,10 +4081,80 @@ width:calc(100% - 320px);
     max-width: 75%;
   }
 }
-.fxs_flex_col {
+.sf_cols {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+.sf_cols [class^="sf"][class*="col"]:not(.sf_colsIn),
+.sf_cols .fxs_flex_col {
   position: relative;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+@media (min-width: 1100px) {
+  .sf_cols [class$="_75"]:not(.sf_colsIn) {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 680px) {
+  .sf_cols [class$="_67"]:not(.sf_colsIn) {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+@media (min-width: 680px) {
+  .sf_cols [class$="_50"]:not(.sf_colsIn) {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .sf_cols [class*="3cols"][class$="_50"]:not(.sf_colsIn) {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 680px) {
+  .sf_cols [class$="_33"]:not(.sf_colsIn),
+  .sf_cols [class$="_34"]:not(.sf_colsIn) {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.sf_cols [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .sf_cols [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
+    display: block;
+  }
+}
+@media (min-width: 1100px) {
+  .sf_cols [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
+    float: left;
+    width: 25%;
+  }
+}
+.sf_cols [class*="3cols"][class$="_25"]:not(.sf_colsIn) {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .sf_cols [class*="3cols"][class$="_25"]:not(.sf_colsIn) {
+    display: block;
+  }
+}
+@media (min-width: 1100px) {
+  .sf_cols [class*="3cols"][class$="_25"]:not(.sf_colsIn) {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 680px) {
+  .sf_cols [class*="4cols"][class$="_25"]:not(.sf_colsIn) {
+    float: left;
+    width: 25%;
+  }
 }
 @media (min-width: 680px) {
   .fxs_flex_col {
@@ -4137,67 +4207,6 @@ width:calc(100% - 320px);
 @media (min-width: 680px) {
   .fxs_sponsored_content_row {
     padding: 0 1rem 1rem;
-  }
-}
-.sf_cols {
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
-}
-.sf_1col_1_100,
-.sf_3cols_3_33,
-.sf_2cols_1_67,
-.sf_2cols_2_33,
-.sf_2cols_1_75,
-.sf_2cols_1_25,
-.sf_2cols_2_50,
-.sf_4cols_4_25 {
-  position: relative;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-@media (min-width: 1100px) {
-  .sf_2cols_1_75 {
-    float: left;
-    width: 75%;
-  }
-}
-@media (min-width: 680px) {
-  .sf_2cols_1_67 {
-    float: left;
-    width: 66.66666667%;
-  }
-}
-@media (min-width: 680px) {
-  .sf_2cols_2_50 {
-    float: left;
-    width: 50%;
-  }
-}
-@media (min-width: 680px) {
-  .sf_3cols_3_33,
-  .sf_2cols_2_33 {
-    float: left;
-    width: 33.33333333%;
-  }
-}
-.sf_2cols_1_25 {
-  display: none;
-}
-@media (min-width: 1100px) {
-  .sf_2cols_1_25 {
-    display: block;
-  }
-}
-@media (min-width: 1100px) {
-  .sf_2cols_1_25 {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 680px) {
-  .sf_4cols_4_25 {
-    float: left;
-    width: 25%;
   }
 }
 .fxs_suscribe {
@@ -4425,6 +4434,12 @@ height:calc(100% - 4rem);
   border-bottom: 3px solid #f0f0f1;
   position: relative;
   margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .fxs_article_header .fxs_headline_large,
+  .fxs_article_header .fxs_entryFeatured_big .fxs_entryHeadline {
+    margin-right: 70px;
+  }
 }
 @media (min-width: 1100px) {
   .fxs_article_header {
