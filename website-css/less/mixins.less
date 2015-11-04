@@ -9,22 +9,7 @@
   font-size: @txt-font-size;
   line-height: @txt-line-height;
   font-weight: @txt_fontweight_light;
-  > p, ul, ol, > table, > blockquote { margin-bottom: @txt_size_large; }
-  ul, ol {
-    padding-top: @txt_size_xsmall;
-    padding-left: 1rem;
-    @media (min-width: @screen-s) { padding-left: 2rem; }
-    li { margin-bottom: @txt_size_xsmall; }
-  }
-  ul {
-    list-style-type: disc;
-    ul {
-      list-style-type: circle;
-      ul { list-style-type: square; }
-    }
-  }
-  ol { list-style-type: decimal; }
-  > h2, > h3, > h4 { margin-bottom: @txt_defaultsize_rem; }
+  > h2, > h3, > h4 { margin-bottom: 0.5rem; }
   > img, > .fxs_mediaContainer img {
     min-width: inherit;
     max-width: 100%;
@@ -122,54 +107,47 @@
 
 // mixin first level nav
 .fxs_vertical_block_nav(@borderBottom; @lineHeight; @fontSize) {
+  &, ul, ol { &:extend(.fxs_list_unstyled); }
   a {
+    border-bottom: @borderBottom;
+    color: @lightest_clr;
     display: block;
-    border-bottom:@borderBottom;
-    line-height:@lineHeight;
-    padding:10px 1rem 10px 1rem;
-    color:  @lightest_clr;
     font-size: @fontSize;
+    line-height: @lineHeight;
+    padding: 10px 1rem 10px 1rem;
     text-decoration: none;
     text-transform: uppercase;
     &:hover { background-color:@dark_4_clr; }
   }
-  &.active a { background-color: lighten(@dark_3_clr, 4%); } 
-}
-
-.fxs_list_block_btn(@borderBottom; @lineHeight; @fontSize; @itemHeight) {
-  display: block;
-  height:@itemHeight;
-  border-bottom:@borderBottom;
-  line-height:@lineHeight;
-  padding:10px 1rem 10px 1rem;
-  color:  @lightest_clr;
-  font-size: @fontSize;
-  text-decoration: none;
-  text-transform: uppercase;
-  &:hover { background-color:@dark_4_clr; }
-  &.active { background-color:@dark_3_clr; }
+  .active a { background-color: lighten(@dark_3_clr, 4%); }
 }
 
 // mixin second level a
-.fxs_list_nav(@fontSize; @colorItems; @paddingParameters){
-  padding: @paddingParameters;
-  color: @colorItems;
-  font-size: @fontSize;
-  text-decoration: none;
-  display: block;
-  &:hover {
-    background-color:@dark_3_clr;
-    color:@lightest_clr;
+.fxs_list_nav(@fontSize; @colorItems; @paddingParameters) {
+  &:extend(.fxs_list_unstyled);
+  border-bottom: 1px solid @dark_3_clr;
+  a {
+    display: block;
+    color: @colorItems;
+    font-size: @fontSize;
+    padding: @paddingParameters;
+    text-decoration: none;
+    &:hover {
+      background-color:@dark_3_clr;
+      color:@lightest_clr;
+    }
   }
 }
 
 // tabs items
-.fxs_tab_item(@tabs-container-border; @tab-link-color; @tab-link-hover-border; @tab-height){
+.fxs_tab_item(@tabs-container-border; @tab-link-color; @tab-link-hover-border; @tab-height) {
+  list-style: none;
   border-bottom: @tabs-container-border;
   height: @tab-height;
   margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
+  ul { &:extend(.fxs_list_unstyled); }
   li {
     display:inline-block;
     a {
@@ -246,15 +224,15 @@
 .make-row(@gutter: @grid-gutter-width) {
   // Then clear the floated columns
   &:extend(.fxs_clearfix all);
-  margin-left:  (@gutter / -2);
-  margin-right: (@gutter / -2);
+  margin-left:  (@gutter / -1.6);
+  margin-right: (@gutter / -1.6);
 }
 
 // default 
 .column-default-parameters(@gutter: @grid-gutter-width) {
   position: relative;
-  padding-left:  (@gutter / 2);
-  padding-right: (@gutter / 2);
+  padding-left:  (@gutter / 1.6);
+  padding-right: (@gutter / 1.6);
 }
 
 // Generate the x-small columns (inside swipe content in mobile)

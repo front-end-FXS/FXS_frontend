@@ -8,10 +8,7 @@
 
 // items nav list (2nd level navigations)
 .fxs_items_list_nav {
-  border-bottom: 1px solid @dark_3_clr;
-  li{
-    a { .fxs_list_nav(@txt_size_small, @light_3_clr, 0.72rem 1rem); }
-  }
+  .fxs_list_nav(@txt_size_small, @light_3_clr, 0.72rem 1rem);
   .fxs_menuList_header {
     .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall);
     padding: 1.38rem 1rem 0.75rem;
@@ -20,6 +17,7 @@
 
 // Mini-menu: barra topics (3rd level navigation)
 .fxs_subnavInlined_list {
+  &:extend(.fxs_list_unstyled);
   font-size: @txt_size_nano;
   display: inline-block;
   vertical-align: middle;
@@ -227,15 +225,6 @@
   font-size: @txt_size_small;
   padding: 0.75rem 0.5rem;
   &.alert-dismissible { padding-right: 2rem; }
-  .fxs_alertText {
-    margin-bottom: 0;
-    padding-left: 5px;
-    overflow: hidden;
-  }
-  a {
-    text-decoration: underline;
-    &:hover { text-decoration: none; }
-  }
   // Close button in alert
   .fxs_close {
     background: transparent;
@@ -245,6 +234,16 @@
     margin: -2px -1.5rem 0 0;
     font-size: @txt_size_large;
     &:hover { .opacity(.75); }
+  }
+}
+
+.fxs_alertText {
+  padding-left: 5px;
+  overflow: hidden;
+  &:last-child { margin-bottom: 0; }
+  a {
+    text-decoration: underline;
+    &:hover { text-decoration: none; }
   }
 }
 
@@ -607,13 +606,13 @@
 
 // Typeahead results list
 .fxs_typeaheadList {
+  &:extend(.fxs_list_unstyled);
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 10;
   width: 100%;
   font-size: @txt_size_small;
-  text-align: left;
   background-color: @lightest_clr;
   border: 1px solid @light_5_clr;
   > li {
@@ -669,7 +668,7 @@
 }
 // Dropdown list
 .fxs_dropdownList {
-  &:extend(.fxs_dropdown_generic all);
+  &:extend(.fxs_list_unstyled, .fxs_dropdown_generic all);
 	background-color: @dark_3_clr;
 	min-width: @base_module_size*4;
   padding-bottom: 2px;
@@ -681,7 +680,7 @@
       &:hover{ background-color: @dark_4_clr; }
     }
   }
-  &::after{
+  &::after {
 	content: " ";
 	display: block;
 	position: absolute;
@@ -717,7 +716,7 @@
 
 // Variants dropdown
 .fxs_btnGroup_dropdownList {
-  &:extend(.fxs_dropdown_generic all);
+  &:extend(.fxs_list_unstyled, .fxs_dropdown_generic all);
 	background-color: @dark_2_clr;
 	[class^="fxs_btn"] {
 		color: @lightest_clr;
@@ -725,26 +724,9 @@
 	}
 }
 
-// trigger/holder btn Group dd
-.fxs_overflowOptions {
-	position: relative;
-  display: inline-block;
-	&:hover, &.open {
-		> [class^="fxs_btn"] {
-			background-color: @dark_2_clr;
-			color: @lightest_clr;
-		}
-	}
-  &:hover {
-    [class*="dropdownList"] {
-      display: block;
-      top: 100%;
-    }
-  }
-}
-
 // LIST SPECIAL STYLES
 .fxs_list_table {
+  &:extend(.fxs_list_unstyled);
   margin-bottom: 1rem;
   .fxs_list_table_item {
     display: table;
@@ -847,24 +829,38 @@
 
 ///////////////// Social media objects /////////////
 .fxs_shareOptions_boxed {
-  display: inline-block;
+  &:extend(.fxs_list_unstyled);
   font-size: 5px;
   white-space: nowrap;
   .fxs_btn_icon { margin: 0; }
 }
 
-.fxs_socialMedia_item {
-  display: inline-block;
-  vertical-align: middle;
+// trigger/holder btn Group dd
+.fxs_overflowOptions {
+  position: relative;
+  &:hover, &.open {
+    > [class^="fxs_btn"] {
+      background-color: @dark_2_clr;
+      color: @lightest_clr;
+    }
+  }
+  &:hover {
+    [class*="dropdownList"] {
+      display: block;
+      top: 100%;
+    }
+  }
 }
+
+.fxs_shareOptions_boxed,
+.fxs_overflowOptions, .fxs_socialMedia_item { display: inline-block; }
 
 // Social media object - Spescific for Header title block in detail pages
 .fxs_shareContent_holder {
-  display: none;
+  &:extend(.fxs_hidden_xs all);
   position: absolute;
   bottom: 0;
   right: 0;
-  @media (min-width: @screen-s){ display: block; }
   .fxs_shareOptions_boxed { background-color: @light_4_clr; }
   > ul > li > .fxs_btn_icon {
     color: @dark_2_clr;
@@ -902,6 +898,7 @@
 
 // Social media object - Spescific for subscribe social media widget
 .fxs_suscribeSocialBtn {
+  &:extend(.fxs_list_unstyled);
   li { margin: 0 0.5rem 0 0; }
   .fxs_btn_icon {
     background-color: @light_3_clr;
@@ -921,6 +918,7 @@
   .make-row();
   overflow: hidden;
   font-size: 0;
+  .fxs_swipeContent_slider { &:extend(.fxs_list_unstyled); }
 }
 
 .fxs_relatedItem {
