@@ -83,6 +83,7 @@
 // Entries list
 .fxs_entriesList {
   margin-bottom: 1rem;
+  ol { &:extend(.fxs_list_unstyled); }
   li {
       padding: 0.5rem 0 1rem;
       border-bottom: 1px solid @light_4_clr;
@@ -176,19 +177,6 @@
 }
 
 // Featured Video content
-
-.fxs_isVideo_content {
-  .fxs_entryHeadline //,[class*="fxs_headline_"]
-  {
-    a::before {
-      display: inline-block;
-      content: "\f01d";
-      font: normal normal normal 1.1rem FontAwesome;
-      margin-right: 2px;
-      color: @highlight_clr;
-    }
-  }
-}
 
 .fxs_miniLabel_video {
   position: absolute;

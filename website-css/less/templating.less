@@ -93,17 +93,12 @@
 }
 
 // Main Navigation MENU (1st level navigation)
-.fxs_nav_menu { 
-  li {
-    .fxs_vertical_block_nav(1px solid @dark_3_clr, 24px, @txt_size_small);
-  }    
+.fxs_nav_menu {
+  .fxs_vertical_block_nav(1px solid @dark_3_clr, 24px, @txt_size_small);    
   .fxs_header & {
     .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr; @main_header_height);
     li:first-child { display: none; }
-    @media (min-width: @screen-l) {
-      float: left;
-      margin-left: 1%;
-    } 
+    a { border-bottom-color: transparent; } 
   } 
 }
 
@@ -112,6 +107,10 @@
   .fxs_nav_menu, .fxs_socialLinks_nav { display: none; }
   @media (min-width: @screen-l) {
     .fxs_nav_menu, .fxs_socialLinks_nav { display: inline-block; }
+    .fxs_nav_menu {
+      float: left;
+      margin-left: 1%;
+    }
     .fxs_show_navmenu { display: none; }
   }
 }
@@ -234,30 +233,35 @@
       }
     }
     //
-    .fxs_social_sidebar_nav{
+    .fxs_social_sidebar_nav {
       padding: 10px;
       .fxs_btn {
         text-align: left;
         i { padding-right: @base_module_size; }
       }
     }
-    .fxs_login_message{
+    .fxs_login_message {
       background-color: @dark_3_clr;
       padding: 0.5rem 1rem;
       margin-top: @base_module_size;
     }
   }
- 
-  .fxs_timezone_btn{
-    .fxs_list_block_btn(none, 25px, @txt_size_small, @main_header_height);
-    background-color: @dark_1_clr;
-    border-top: 1px solid @dark_3_clr;
-    bottom: 0;
-    position: fixed;
-    width: @slide_sidebar_space;   
-    .fxs_timestamp{ padding-left: 0.5rem; }
-    i{ padding-left: 1rem; }
-  }
+}
+
+// Timezone trigger btn
+.fxs_timezone_btn {
+  background-color: @dark_1_clr;
+  border-top: 1px solid @dark_3_clr;
+  bottom: 0;
+  color: @lightest_clr;
+  display: block;
+  font-size: @txt_size_small;
+  height: @main_header_height;
+  position: fixed;
+  width: @slide_sidebar_space;   
+  .fxs_timestamp { padding-left: 0.5rem; }
+  i { padding-left: 1rem; }
+  &:hover { background-color:@dark_4_clr; }
 }
 
 // Timezone menu
@@ -314,27 +318,31 @@
 //
 // User area
 .fxs_user_area_content {
-  border-bottom:1px solid @dark_3_clr;
-  padding:1rem 2rem 1rem 1rem;
+  border-bottom: 1px solid @dark_3_clr;
+  overflow: hidden;
+  padding: 1rem;
   .form_group {
     float: left;
+    height: @avatar_m;
     label {
-      width: 70px;
-      position:relative;
-      cursor:pointer;
+      cursor: pointer;
+      height: @avatar_m;
+      margin: 0 1rem 0 0;
+      position: relative;
+      width: @avatar_m;
       &:hover { .opacity(.75); }
       .custom-file-input{ height: 0; }
       .custom-file-input::-webkit-file-upload-button {
         visibility: hidden;
-        width:0;
+        width: 0;
       }
       .custom-file-input::before {
         content:  "\f030";
         font-family: FontAwesome;
-        left:0;
-        bottom:20px;
+        left: 0;
+        bottom: 0;
         position:absolute;
-        color:@lightest_clr;
+        color: @lightest_clr;
         cursor: pointer;
       }
     }
@@ -495,7 +503,10 @@
   .fxs_helperLabel_title { line-height: @base_module_size; }
 }
 
-.fxs_listView_blockWrapper { position: relative; }
+.fxs_listView_blockWrapper {
+  &:extend(.fxs_list_unstyled);
+  position: relative;
+}
 
 .fxs_listView_newItemsAlert {
   display: block;
