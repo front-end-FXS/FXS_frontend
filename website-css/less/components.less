@@ -368,21 +368,16 @@
 
 // SQUARE & AVATAR IMAGES
 .fxs_squareImage, .fxs_squareImage_s,
-.fxs_avatar_circleImage,
-.fxs_avatar_circleImage_s,
-.fxs_avatar_circleImage_m,
-.fxs_avatar_circleImage_l {
+[class*="fxs_avatar_circleImage"] {
   .fxs_aspectRatio_media(1, 1);
   display: inline-block;
 }
 
-.fxs_avatar_circleImage,
-.fxs_avatar_circleImage_s,
-.fxs_avatar_circleImage_m,
-.fxs_avatar_circleImage_l {
+[class*="fxs_avatar_circleImage"] {
 	border-radius: 50%;
 	vertical-align: middle;
   img {
+    border-radius: 50%;
     min-height: 100%;
     width: inherit;
   }
@@ -419,6 +414,7 @@
 .fxs_author_description {
   display: block;
   font-size: @txt_size_xsmall;
+  padding: 0.25rem 0;
 }
 
 // Author box Nano
