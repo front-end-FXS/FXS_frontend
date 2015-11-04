@@ -3,6 +3,9 @@
   border-bottom: 3px solid @light_4_clr;
   position: relative;
   margin-bottom: 1rem;
+  @media (min-width: @screen-m) {
+    .fxs_headline_large { margin-right: @base_module_size*2; }
+  }
   @media (min-width: @screen-l) {
     margin-bottom: 1.5rem;
   }
@@ -46,6 +49,7 @@
   border-bottom: 3px solid @light_4_clr;
   vertical-align: middle;
   ul {
+    &:extend(.fxs_list_unstyled);
     display: inline-block;
     li {
       display: inline;
