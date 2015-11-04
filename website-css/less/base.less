@@ -139,7 +139,8 @@
 /////////////////////////////////////////////////////////////
 //////////////////// Header styles /////////////////////////
 ///////////////////////////////////////////////////////////
-// Header basic
+
+//Helper!! Omar
 .fxs_headline_base_rules {
   color: @dark_1_clr;
   letter-spacing: -0.02rem;
@@ -155,54 +156,55 @@
   }
 }
 
-.fxs_headline_medium, .fxs_headline_tiny,
-.fxs_headline_from_tiny_to_small {
+.fxs_headline {
   font-size: @txt_defaultsize_rem;
   line-height: @txt_lineheight_small;
+  padding-bottom: 0.5rem;
 }
+//
 
 // Headlines in context
-.fxs_headline_large {
-  font-size: @txt_size_huge;
-  line-height: @txt_lineheight_large;
-  padding: 0.5rem 0;
-  @media (min-width: @screen-s) {
-    font-size: @txt_size_xhuge;
-    line-height: @txt_lineheight_xlarge;
-  }
-}
-
-.fxs_headline_medium {
-  padding: 0 0 0.25rem;
-  @media (min-width: @screen-s) {
-    font-size: @txt_size_huge;
-    line-height: @txt_lineheight_large;
-  }
-}
-
-.fxs_headline_small {
-  font-size: @txt_size_large;
-  line-height: @txt_lineheight;
-  padding: 0 0 0.25rem;
-}
-
-.fxs_headline_nano, .fxs_headline_from_nano_to_tiny {
+.fxs_headline_nano {
   font-size: @txt_size_small;
   line-height: @txt_lineheight_small;
 }
 
-// Responsive headlines
+.fxs_headline_from_nano_to_tiny {
+  &:extend(.fxs_headline_nano);
+  @media (min-width: @screen-s) {
+    font-size: @txt_defaultsize_rem;
+    line-height: @txt_lineheight_small;
+  }
+}
+
+.fxs_headline_tiny {
+  &:extend(.fxs_headline);
+  padding-bottom: 0.15rem;
+}
+
 .fxs_headline_from_tiny_to_small {
+  &:extend(.fxs_headline);
   @media (min-width: @screen-s) {
     font-size: @txt_size_large;
     line-height: @txt_lineheight;
   }
 }
 
-.fxs_headline_from_nano_to_tiny {
+.fxs_headline_medium {
+  &:extend(.fxs_headline);
   @media (min-width: @screen-s) {
-    font-size: @txt_defaultsize_rem;
-    line-height: @txt_lineheight_small;
+    font-size: @txt_size_huge;
+    line-height: @txt_lineheight_large;
+  }
+}
+
+.fxs_headline_large {
+  font-size: @txt_size_huge;
+  line-height: @txt_lineheight_large;
+  padding-bottom: 0.5rem;
+  @media (min-width: @screen-s) {
+    font-size: @txt_size_xhuge;
+    line-height: @txt_lineheight_xlarge;
   }
 }
 
@@ -213,7 +215,7 @@
 // Scrollable content
 .fxs_scrollableContent {
   -webkit-overflow-scrolling: touch;
-  overflow-y: auto;
+  overflow-y: scroll;
   @media (min-width: @screen-l) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
