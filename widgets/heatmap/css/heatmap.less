@@ -1,0 +1,92 @@
+// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+
+// heatmap layout
+.fxs_widget_column {
+  .column-default-parameters(@grid-gutter-width-xs);
+  float: left;
+  padding-bottom: @grid-gutter-width-xs;
+  width: 50%;
+}
+
+// Properties & variants
+.fxs_widget_heatmap {
+  .fxs_widget_price {
+    padding: 0.25rem 0.5rem;
+    &.price_up {
+      background-color: lighten(@success_clr, 10%);
+      &.price_up_plus { background-color: @success_clr; }
+    }
+    &.price_down {
+      background-color: lighten(@error_clr, 20%);
+      &.price_down_plus { background-color: @error_clr; }
+    }
+    &.price_neutral { background-color: @light_2_clr; }
+
+    .fxs_asset_label {
+      font-size: @txt_size_small;
+      &, a, a:hover { cursor: pointer; }
+      &::before { margin-top: 0.3rem; }
+    }
+
+    .fxs_asset_label::before, .fxs_price_change, .fxs_asset_label a { color: @lightest_clr; }
+    
+    .fxs_price_change, .fxs_asset_label::before { font-size: @txt_size_xsmall; }
+
+    &:hover{
+      opacity: 0.75;
+      cursor: pointer;
+    }
+  }
+
+  // Widget sizes variants
+  &.fxs_widget_mini{
+    @media (min-width: @screen-s) {
+      .fxs_widget_column { width:100%; }
+    }
+  }
+  &.fxs_widget_default{
+    .fxs_widget_column {
+      .make-s-column(3);
+    }
+  }
+  &.fxs_widget_big {
+    .fxs_widget_column {
+      .make-s-column(3);
+      .make_xl_column(2);
+    }
+  }
+}
+
+// heatmap gradient legend
+.fxs_widget_heatmap_legend,
+.fxs_widget_heatmap_gradient_linear {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.fxs_widget_heatmap_gradient_linear{
+  .background-image(linear-gradient(
+    to right,
+    @success_clr 0px,
+    @success_clr 20px,
+    @lightest_clr 21px,
+    lighten(@success_clr, 10%) 22px,
+    lighten(@success_clr, 10%) 40px,
+    @lightest_clr 21px,
+    @light_2_clr 42px,
+    @light_2_clr 60px,
+    @lightest_clr 61px,
+    lighten(@error_clr, 20%) 62px,
+    lighten(@error_clr, 20%) 80px,
+    @lightest_clr 81px,
+    @error_clr 82px,
+    @error_clr 100px
+    ));
+  width: 100px;
+  height: 18px;
+}
