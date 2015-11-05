@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>CTP Report - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="cbp-spmenu-push">
+        <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+        <header class="fxs_header">
+            <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
+            <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li class="active"><a href="" title="">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
+                    <li><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_overflowOptions">
+                        <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                        <ul class="fxs_dropdownList">
+                            <li class="fxs_dropdownHeader">Follow us on</li>
+                            <li>
+                                <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                            </li>
+                            <li class="fxs_divider_third">&nbsp;</li>
+                            <li class="fxs_dropdownHeader">RSS feeds</li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
+
+            <button type="button" id="showRightPush" class="fxs_show_usermenu">
+                <i class="fa fa-user"></i>
+                <span class="fxs_skip">User Settings</span>
+            </button>
+        </header>
+
+        <!-- The wrapper -->
+        <div class="fxs_wrapper fxs_content_wide">
+            <!-- Sidebar left nav -->
+            <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+                <!-- Main-nav -->
+                <nav class="fxs_nav_menu" role="navigation">
+                    <ul>
+                        <li><a href="#about-guide" title="">Intro</a></li>
+                        <li><a href="#atoms" title="">Atoms</a></li>
+                        <li><a href="#molecules" title="">Molecules</a></li>
+                        <li><a href="#organisms" title="">Organisms</a></li>
+                        <li><a href="#templates" title="">Templates</a></li>
+                    </ul>
+                </nav>
+                <!-- /Main-nav -->
+                <!-- Secondary nav -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">Secondary nav Title</li>
+                    <li><a href="" title="">Item secondary</a></li>
+                    <li><a href="" title="">Item secondary</a></li>
+                    <li><a href="" title="">Item secondary</a></li>
+                </ul>
+
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">Secondary nav Title</li>
+                    <li><a href="" title="">Item secondary</a></li>
+                    <li><a href="" title="">Item secondary</a></li>
+                    <li><a href="" title="">Item secondary</a></li>
+                </ul>
+                <!-- /Secondary nav -->
+                
+                <!-- Social Media share widget -->
+                <div class="fxs_socialLinks_nav">
+                    <ul class="fxs_shareOptions_boxed">
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Social Media share widget -->
+                
+                <!-- lang-edition -->
+                <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                    <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                    
+                    <ul class="fxs_dropdownList dropup">
+                        <li class="fxs_dropdownHeader">Other sites</li>
+                        <li><a href="#">体中文</a></li>
+                        <li><a href="#">繁體中文</a></li>
+                        <li><a href="#">Русский</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                        <li><a href="#">العربية</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Português</a></li>
+                        <li><a href="#">Magyar</a></li>
+                        <li><a href="#">Türkçe</a></li>
+                        <li><a href="#">Tiếng Việt</a></li>
+                        <li><a href="#">한국어</a></li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">Edition</li>
+                        <li><a href="#">Yсский</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                    </ul>
+                </div>
+                <!-- /lang-edition -->
+
+            </div>
+            <!-- /Sidebar left -->
+
+            <!-- Topics subnav -->
+            <nav class="fxs_content_subnav">
+                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Items</a>
+                <div class="fxs_topics_nav">
+                    <span class="fxs_label">Popular topics</span>
+                    <ul class="fxs_subnavInlined_list">
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 1</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 2</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 3</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /Topics subnav -->
+
+            <div class="fxs_content" id="fxs_content">
+
+                <!-- The content rail -->
+                <div class="fxs_contentView">
+
+                    <div class="fxs_leaderboard">
+                        <!-- Leaderboard -->
+                    </div>
+
+                    <!-- Main Section -->
+                    <header class="fxs_sectionTitle">
+                        <div class="fxs_search_title_holder">
+                            <h1 class="fxs_sectionTitle_header">EUR/USD Trading Positions</h1>
+                            <div class="fxs_filter">
+                                <form>
+                                    <div class="fxs_typeaheadContainer">
+                                        <label for="q" class="fxs_btn_filter" title="Search in news">
+                                            <i class="fa fa-search"></i>
+                                            <span class="fxs_skip">Search pair</span>
+                                        </label>
+                                        <div class="fxs_queryResults">
+                                            <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                                        </div>
+                                        <div class="fxs_typeaheadField">
+                                            <div class="fxs_typeaheadQuery">
+                                                <input id="q" name="q" type="search" placeholder="Search pair" autocomplete="on">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                            <div class="fxs_overflowOptions">
+                                <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                                <ul class="fxs_btnGroup_dropdownList">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+
+                    <section class="fxs_detail" role="main">
+
+                        <!-- Report goes here -->
+                        <article class="fxs_detailInfo_page">
+                            <section class="fxs_widget_summary">
+                                <div class="fxs_widget_divider_module">
+                                    <!-- widget price -->
+                                    <div class="fxs_widget_price price_down">
+                                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                            <a href="/">EUR/USD</a>
+                                        </abbr>
+                                        <div class="fxs_widget_price_value">
+                                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                            <span class="fxs_price_change">
+                                                <span class="fxs_change_pips">0.0026</span>
+                                                <span class="fxs_change_percent">(-0.12%)</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- /widget price -->
+                                </div>
+
+                                <!-- ctp widget -->
+                                <div class="fxs_ctp_widget fxs_widget_big">
+                                    <div class="fxs_widget_divider_module">
+                                        <div class="fxs_gauge_container">
+                                            <div class="fxs_insideChart_centered_legend">
+                                                <div class="ctp_price_precent">
+                                                    <small class="fxs_widget_small">Sell</small>
+                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">70%</span>
+                                                </div>
+
+                                                <div class="ctp_price_precent ctp_divider">
+                                                    <small class="fxs_widget_small">Buy</small>
+                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">30%</span>
+                                                </div>
+                                            </div>
+
+                                            <div id="gauge_chart" class="c3" style="width: 100%;"></div>
+                                        </div>
+
+                                        <div class="fxs_widget_avg_col">
+                                            <div class="fxs_module_cols_avg">
+                                                <small class="fxs_widget_small">Avg Sell Price</small>
+                                                <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
+                                            </div>
+
+                                            <div class="fxs_module_cols_avg">
+                                                <small class="fxs_widget_small">Avg Buy Price</small>
+                                                <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ctp barras content -->
+                                    <div class="fxs_widget_divider_module">
+                                        <span class="fxs_widget_legend">Liquidity Distribution</span>
+
+                                        <div id="orders_chart" class="c3 fxs_widget_bars" style="width: 100%;"></div>
+
+                                    </div>
+                                    <!-- /ctp barras content -->
+
+                                    <!-- widget footer -->
+                                    <footer class="fxs_widget_footer">
+                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                    </footer>
+                                    <!-- /widget footer -->
+                                </div>
+                                <!-- /ctp widget -->
+                            </section>
+
+                            <!-- Dinamic auto report -->
+                            <div class="fxs_entryPlain_txt">
+                                <p>
+                                    The latest data for the <a href="/">EUR/USD</a> <strong>Trading Positions</strong>, released by <strong>FXStreet</strong> on <strong>Friday the 3rd</strong> shows a distribution of <strong>60.33%</strong> short-term Bearish among the 15 participants.
+                                </p>
+                                <p>
+                                    <a class="fxs_mutedLink" href="#about_study">About this study <i class="fa fa-long-arrow-down"></i></a>
+                                </p>
+                            </div>
+                            <!-- /Dinamic auto report -->
+                            
+
+                            <!-- Tabla desglozada de CTPs por contributor -->
+                            <div class="fxs_swipeContent_slider">
+                                <table class="fxs_table fxs_tableHover fxs_ctp_table">
+                                    <thead>
+                                        <tr>
+                                            <th>Contributor</th>
+                                            <th>Order</th>
+                                            <th>Entry</th>
+                                            <th>Stop Loss</th>
+                                            <th>Take Profit 1</th>
+                                            <th>Take Profit 2</th>
+                                            <th>Take Profit 3</th>
+                                            <th>Date</th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            Admiral Markets
+                                                        </a>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_success">Long <a href="/">Limit Order</a></span>
+                                            </td>
+                                            <td>1.1113</td>
+                                            <td>1.1180</td>
+                                            <td>1.0920</td>
+                                            <td>1.0875</td>
+                                            <td>1.0780</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-07-27 09:34">Jul 27</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            Danske Bank A/S
+                                                        </a>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
+                                            </td>
+                                            <td>≈1.1012</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            DeltaStock.com
+                                                        </a>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
+                                            </td>
+                                            <td>&gt;1.0955</td>
+                                            <td>1.0850</td>
+                                            <td>1.1216</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            ElliottWaveForex
+                                                        </a>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Market Order</a></span>
+                                            </td>
+                                            <td>1.0968</td>
+                                            <td>1.1130</td>
+                                            <td>1.0722</td>
+                                            <td>1.0470</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            Growth Aces
+                                                        </a>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Latent Interest</a></span>
+                                            </td>
+                                            <td>1.1060</td>
+                                            <td>1.0726</td>
+                                            <td>1.0810</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr onclick="todo">
+                                            <td>
+                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            Mind Vision Traders
+                                                        </a>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_ctpTable_order fxs_txt_danger">Sell <a href="/">Latent Interest</a></span>
+                                            </td>
+                                            <td>&lt;1.0757</td>
+                                            <td>1.1078</td>
+                                            <td>1.0875</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
+                                            </td>
+                                            <td>
+                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /Tabla desglozada de CTPs por contributor -->
+
+                            <!-- About plain txt -->
+                            <div id="about_study" class="fxs_entryPlain_txt">
+                                <h2 class="fxs_helperLabel_title">About this study</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.The latest data for the <a href="/">Trading Positions</a>, released by FXStreet on Friday the 3rd shows a distribution short-term Bearish among the 15 participants.
+                                </p>
+                            </div>
+                            <!-- /About plain txt -->
+
+
+                        </article>
+                        <!-- //Report ends here -->
+
+                        <hr class="fxs_divider_wide">
+                        
+                        <!-- Related content -->
+                        <aside class="fxs_relatedContent_holder">
+                            <header class="fxs_resetRow_margin fxs_marginBase_bottom">
+                                <h4 class="fxs_helperLabel_title">Related content</h4>
+                            </header>
+                            <ul class="fxs_swipeContent_slider">
+                                <li class="fxs_relatedContentSlot_x3_cols">
+                                    <div class="fxs_relatedItem">
+                                        <article>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                            </div>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October</a>
+                                            </h3>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x3_cols">
+                                    <div class="fxs_relatedItem">
+                                        <article>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
+                                            </div>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October</a>
+                                            </h3>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x3_cols">
+                                    <div class="fxs_relatedItem">
+                                        <article>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                            </div>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                            </h3>
+                                        </article>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                        <!-- /Related content -->
+                    </section>
+                    <!-- /Main Section -->
+
+                </div>
+                <!-- /The content rail -->
+
+            </div>
+
+            <!-- Sidebar right -->
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
+
+            <!-- Timezones -->
+            <div class="fxs_pageSidebar fxs_timezone_items">
+                <nav class="fxs_timezone_nav">
+                    <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
+                </nav>
+                <div class="fxs_nav_menu fxs_timezone_hours">
+
+                    <ol>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+                
+            </div>
+            <!-- /Timezones -->
+            
+        </div>
+        <!-- /The wrapper -->
+        
+        <script src="../../../js/jquery-1.11.3.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="../../../js/bootstrap.min.js"></script>
+
+        <script src="../../../js/classie.js"></script>
+        <script src="../../../js/jquery.typeahead.min.js"></script>
+        <script src="../../../js/site.js"></script>
+
+        <script src="../../../widgets/core/js/c3.min.js"></script>
+        <script src="../../../widgets/core/js/d3.min.js"></script>
+        <script>
+            // Gauge chart
+            var gauge_chart = c3.generate({
+                bindto: '#gauge_chart',
+                       
+                data: {
+                    columns: [
+                    ['Buy', 100],
+                    ['Sell', 70]
+                    ],
+
+                    type: 'gauge'
+                    //onclick: function (d, i) { console.log("onclick", d, i); },
+                    //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                    //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                },
+                        
+                zoom: {
+                    enabled:false
+                },
+               
+                gauge: {
+                    label: {
+                        show: false
+                    },
+                    // },
+                    // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+                    // max: 100, // 100 is default
+                    // units: ' %',
+                    width: 6 // for adjusting arc thickness
+                },
+                color: {
+                    pattern: ['#CE4735', '#CE4735', '#328372'], // the three color levels for the percentage values.
+                    threshold: {
+                        // unit: 'value', // percentage is default
+                        // max: 200, // 100 is default
+                        values: [0, 100]
+                    }
+                },
+                size: {
+                    height: 100,
+                    width: 190 
+                },
+                tooltip: {
+                  show: false
+                },
+                interaction: { enabled: false }
+            });
+
+            // bar chart
+
+            var orders_chart = c3.generate({
+                bindto: '#orders_chart',
+                data: {
+                    x: 'x',
+                    columns: [
+                    ['x', 1.0005, 1.0010, 1.0028, 1.0035, 1.0042, 1.0051, 1.0061, 1.0072, 1.0088, 1.0097, 1.0105, 1.0111, 1.0128, 1.0135, 1.0142, 1.01501, 1.0160, 1.0170, 1.0182, 1.0197, 1.0203],
+                    ['Sell', 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    ['Buy', 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+
+                    ],
+                    type: 'bar',
+                    colors: {
+                        Sell: '#CE4735',
+                        Buy: '#338473'
+                    },
+                            
+                },
+                bar: {
+                    width: 5, // this makes bar width 3px
+                },
+                size: {
+                    height: 105
+                },
+                tooltip: {
+                    show: true,
+                    format: {
+                      title: function (d) { return d; },
+                      value: function (value, ratio, id) {
+                          return ratio;
+                      }             
+                    }
+                },
+                padding:{
+                    left:15
+                },
+                axis: {
+                  y: {
+                    show: false
+                  },
+                  x: {
+                    tick: {
+                        values: ['1.0005', '1.0105', '1.0203']
+                    }
+                  } 
+                },
+                legend: {
+                  position: 'right'
+                }
+            });
+        </script>
+
+    </body>
+</html>
