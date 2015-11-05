@@ -195,20 +195,10 @@
 }
 
 // Pre space wide widgets
-.fxs_wideWidget_pre(@widget-padding-default: 1rem; @widget-padding-m: 2rem; @widget-border: 3px solid @light_4_clr;) {
-  &:extend(.fxs_wideContent all);
-  border-top: @widget-border;
-  margin-bottom: 1rem;
-  padding: @widget-padding-default;
-  @media (min-width: @screen-s) { padding: @widget-padding-m; }
-}
-
-.fxs_wideWidget_pre_header_item(@widget-padding-default: 0 1rem 1rem; @widget-padding-m: 0 2rem 2rem; @widget-border: 3px solid @light_4_clr;) {
-  &:extend(.fxs_wideContent all);
-  border-bottom: @widget-border;
-  margin-bottom: 1rem;
-  padding: @widget-padding-default;
-  @media (min-width: @screen-s) { padding: @widget-padding-m; }
+.fxs_wideWidget_pre(@widget-border-top; @widget-border-bottom) {
+  &:extend(.fxs_wideContent all, .fxs_wideItem_pre_space all);
+  border-top: @widget-border-top;
+  border-bottom: @widget-border-bottom
 }
 
 //////////////////////////////////////
