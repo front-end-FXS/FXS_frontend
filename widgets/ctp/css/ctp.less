@@ -27,14 +27,9 @@
 }
 
 .fxs_module_cols_avg {
-  margin-right: 1rem;
   text-align: left;
-  &:first-child {
-    margin-bottom: 0.5rem;
-    @media (min-width: @screen-s) {
-      margin-bottom: 0;
-    }
-  }
+  margin-bottom: 0.5rem;
+  &:first-child { margin-right: 0.5rem; }
 }
 // Widget CTP modules
 .fxs_ctp_widget {
@@ -86,6 +81,12 @@
   }
   .fxs_module_cols_avg { display: inline-block; }
 
+  &.fxs_widget_default {
+    @media (min-width: @screen-s) {
+      .fxs_widget_avg_col { margin-bottom: 1rem; }
+    }
+  }
+
   // Big widget values & media queries
   &.fxs_widget_big {
     @media (min-width: @screen-s) {
@@ -94,9 +95,7 @@
         padding-left: 18%;
         margin-top: -@base_module_size;
       }
-    }
-    @media (min-width: @screen-xl) {
-      .fxs_module_cols_avg { margin-right: 0.5rem; }
+      .fxs_module_cols_avg { margin-bottom: 0; }
     }
   }
 
