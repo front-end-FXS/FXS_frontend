@@ -1,0 +1,36 @@
+// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+// COT POSITIONING WIDGET
+
+.fxs_widget_cot {
+  .fxs_list_table_item {
+    display: block;
+    letter-spacing: -1rem;
+    .fxs_widget_cot_box {
+      display: inline-block;
+      height: 60px;
+      padding: 0.5rem 2px;
+      text-align: center;
+      vertical-align: middle;
+      letter-spacing: normal;
+      width: @base_module_size*2;
+      &.fxs_widget_cot_graph { .calc(width, ~'100% - 140px'); }
+    }   
+  }
+  // &.fxs_widget_mini {
+  //   // Any rules here
+  // }
+
+  // &.fxs_widget_default {
+  //   // Any rules here
+  // }
+
+  // &.fxs_widget_big {
+  //   // Any rules here
+  // }  
+}

@@ -1,0 +1,149 @@
+///////////////////////////////////////////////////////////////
+/////////////// Helper classes & basic styles ////////////////
+/////////////////////////////////////////////////////////////
+
+// Extendable text classes
+.fxs_entryPlain_txt {
+  .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
+  @media (min-width: @screen-s) {
+    .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
+  }
+}
+
+.fxs_entryPlain_txt_large {
+  .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
+  @media (min-width: @screen-s) { font-size: @txt_size_large; }
+}
+
+// TEXT CONTEXTUAL COLORS
+.fxs_txt_success {
+  .fxs_txt_color_variants(@success_clr);
+}
+
+.fxs_txt_danger {
+  .fxs_txt_color_variants(@error_clr);
+}
+
+.fxs_txt_neutral {
+  .fxs_txt_color_variants(@light_1_clr);
+}
+
+// muted text
+.fxs_mutedContent_label {
+  font-size: @txt_size_xsmall;
+  line-height: @txt_lineheight_xsmall;
+  color: @light_2_clr;
+  font-style: italic;
+  display: block;
+  i{ font-size: @txt_size_small; }
+}
+
+// Content source only for acceskey
+.fxs_skip {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  font-size: @txt_size_nano;
+  &:active, &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+  }
+}
+
+// Divider base
+.fxs_divider_base {
+  background-color: @light_4_clr;
+  margin-bottom: 1rem;
+}
+
+// Wide content containers
+.fxs_wideContent {
+  &:extend(.fxs_clearfix all);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  @media (min-width: @screen-s) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+  }
+}
+
+/////////////////////////////////////////////////////////////
+//////////////////// Links styles //////////////////////////
+///////////////////////////////////////////////////////////
+
+// Parent section link
+.fxs_entry_sectionlink {
+  display: inline-block;
+  padding:0 2px;
+  text-transform: uppercase;
+}
+
+.fxs_mutedLink {
+  color: @dark_1_clr;
+  padding-right: 5px;
+}
+
+/////////////////////////////////////////////////////////////
+//////////////////// Header styles /////////////////////////
+///////////////////////////////////////////////////////////
+
+// Headlines in context
+.fxs_headline_nano {
+  font-size: @txt_size_small;
+  line-height: @txt_lineheight_small;
+}
+
+// Default
+.fxs_headline {
+  font-size: @txt_defaultsize_rem;
+  line-height: @txt_lineheight_small;
+  padding-bottom: 0.5rem;
+}
+
+.fxs_headline_from_nano_to_tiny {
+  &:extend(.fxs_headline_nano);
+  @media (min-width: @screen-s) {
+    font-size: @txt_defaultsize_rem;
+    line-height: @txt_lineheight_small;
+  }
+}
+
+.fxs_headline_tiny {
+  &:extend(.fxs_headline);
+  padding-bottom: 0.15rem;
+}
+
+.fxs_headline_from_tiny_to_small {
+  &:extend(.fxs_headline);
+  @media (min-width: @screen-s) {
+    font-size: @txt_size_large;
+    line-height: @txt_lineheight;
+  }
+}
+
+.fxs_headline_medium {
+  &:extend(.fxs_headline);
+  @media (min-width: @screen-s) {
+    font-size: @txt_size_huge;
+    line-height: @txt_lineheight_large;
+  }
+}
+
+.fxs_headline_large {
+  font-size: @txt_size_huge;
+  line-height: @txt_lineheight_large;
+  padding-bottom: 0.5rem;
+  @media (min-width: @screen-s) {
+    font-size: @txt_size_xhuge;
+    line-height: @txt_lineheight_xlarge;
+  }
+}

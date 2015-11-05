@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Forecast multiasset - FXStreet</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../../css/fxs_screen.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+   
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="fxs_content">
+    <section class="fxs_detail">
+        
+        
+        <h3 class="fxs_subtitle">
+            Currencies Forecast Poll <i class="fa fa-info-circle"></i>
+        </h3>
+
+        <section class="fxs_widget_summary">
+            <!-- Widget big -->
+            <div class="fxs_forecast_widget_multi fxs_widget_big">
+                <ul class="fxs_tabs_nav fxs_table_tabs">
+                    <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
+                    <li class="active"><a id="tab_1" href="#">1 Week</a></li>
+                    <li><a id="tab_2" href="#">1 Month</a></li>
+                    <li><a id="tab_3" href="#">1 Quarter</a></li>
+                </ul>
+                <table class="fxs_table fxs_tableHover">
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>1 Week</th>
+                            <th>1 Month</th>
+                            <th>1 Quarter</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="todo">
+                            <td>
+                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                    <a href="/">EUR/USD</a>
+                                </abbr>
+                            </td>
+                            <td>
+                                <div class="forecast_timeframe avg_1w active">
+                                    <div class="fxs_widget_slot_label">
+                                        <small class="fxs_widget_small">Avg.</small>
+                                        <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                    </div>
+                                    <div class="forecast_graphic_wrapper">
+                                        <div id="forecast_bar_stacked_1w" class="c3"></div>
+                                    </div>
+                                    <div class="forecast_avg_result result_bullish">
+                                        <small>Bias</small>
+                                        <span class="fxs_widget_custom_bold">Bullish</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="forecast_timeframe avg_1m">
+                                    <div class="fxs_widget_slot_label">
+                                        <small class="fxs_widget_small">Avg.</small>
+                                        <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                    </div>
+                                    <div class="forecast_graphic_wrapper">
+                                        <div id="forecast_bar_stacked_1m" class="c3"></div>
+                                    </div>
+                                    <div class="forecast_avg_result result_sideways">
+                                        <small>Bias</small>
+                                        <span class="fxs_widget_custom_bold">Sideways</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="forecast_timeframe avg_1q">
+                                    <div class="fxs_widget_slot_label">
+                                        <small class="fxs_widget_small">Avg.</small>
+                                        <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                    </div>
+                                    <div class="forecast_graphic_wrapper">
+                                        <div id="forecast_bar_stacked_1q" class="c3"></div>
+                                    </div>
+                                    <div class="forecast_avg_result result_beari">
+                                        <small>Bias</small>
+                                        <span class="fxs_widget_custom_bold">Sideways</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                            </td>
+                        </tr>
+
+                        <!---->
+
+                        <tr onclick="todo">
+                            <td>
+                                <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                    <a href="/">USD/JPY</a>
+                                </abbr>
+                            </td>
+                            <td>
+                                <div class="forecast_timeframe avg_1w active">
+                                    <div class="fxs_widget_slot_label">
+                                        <small class="fxs_widget_small">Avg.</small>
+                                        <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                    </div>
+                                    <div class="forecast_graphic_wrapper">
+                                        <div id="forecast_bar_stacked_1w_2" class="c3"></div>
+                                    </div>
+                                    <div class="forecast_avg_result result_bearish">
+                                        <small>Bias</small>
+                                        <span class="fxs_widget_custom_bold">Bearish</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="forecast_timeframe avg_1m">
+                                    <div class="fxs_widget_slot_label">
+                                        <small class="fxs_widget_small">Avg.</small>
+                                        <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                    </div>
+                                    <div class="forecast_graphic_wrapper">
+                                        <div id="forecast_bar_stacked_1m_2" class="c3"></div>
+                                    </div>
+                                    <div class="forecast_avg_result result_bullish">
+                                        <small>Bias</small>
+                                        <span class="fxs_widget_custom_bold">Bullish</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="forecast_timeframe avg_1q">
+                                    <div class="fxs_widget_slot_label">
+                                        <small class="fxs_widget_small">Avg.</small>
+                                        <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                    </div>
+                                    <div class="forecast_graphic_wrapper">
+                                        <div id="forecast_bar_stacked_1q_2" class="c3"></div>
+                                    </div>
+                                    <div class="forecast_avg_result result_sideways">
+                                        <small>Bias</small>
+                                        <span class="fxs_widget_custom_bold">Sideways</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                            </td>
+                        </tr>
+
+                        
+                    </tbody>
+                    <!-- footer -->
+                    <tfoot>
+                        <tr>
+                            <td class="fxs_widget_footer" colspan="5">
+                                <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    <!-- /footer -->
+                </table>
+            </div>
+            <!-- /Widget big -->
+        </section>
+
+</section>
+</div>
+
+    <script src="../../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../../../widgets/core/js/c3.min.js"></script>
+    <script src="../../../../widgets/core/js/d3.min.js"></script>
+    
+    <script>
+
+
+        // Omar A. code
+
+        var forecastProgressBarObj = function () {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
+
+            var setVars = function (initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
+
+            var initChart = function () {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
+                        type: 'bar',
+                        groups: [
+                            ['Bullish', 'Bearish', 'Sideways']
+                        ],
+                        order: 'null',
+                        colors: {
+                            Bullish: '#338473',
+                            Bearish: '#CE4735',
+                            Sideways: '#8b8c91'
+                        }
+                    },
+                    padding: {
+                        right: 0
+                    },
+                    axis: {
+                        y: {
+                            show: false
+                        },
+                        x: {
+                            show: false
+                        },
+                        rotated: true
+                    },
+                    bar: {
+                        width: 6
+                    },
+                    size: {
+                        height: 35,
+                        width: 90
+                    },
+                    legend: {
+                        show: false
+                    },
+                    tooltip: {
+                        format: {
+                            title: function (d) { return '1 Week'; },
+                            value: function (value, ratio, id) {
+                                var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                                return format(value);
+                            }
+                        }
+                    }
+                });
+            };
+
+            var delayLoad = function () {
+                setTimeout(function () {
+                    chart.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function () {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function () {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe").hasClass("active")) {
+                    chart.flush();
+                }
+            };
+
+            this.Init = function (initJson) {
+                setVars(initJson);
+                print();
+            };
+        };
+
+        var forecastWidgetObj = function () {
+
+            var charts = [];
+
+            var manageRenderedHtml = function () {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function () {
+                $.each(charts, function(i, chart) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+                $('#tab_1').on('click', function () {
+                    $('.avg_1w').addClass('active');
+                    $('#tab_2, #tab_3').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1m, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_2').on('click', function () {
+                    $('.avg_1m').addClass('active');
+                    $('#tab_1, #tab_3').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_3').on('click', function () {
+                    $('.avg_1q').addClass('active');
+                    $('#tab_1, #tab_2').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1m').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+            };
+
+            //#region Charts
+
+            var printCharts = function () {
+                instanciateProgressBar("forecast_bar_stacked_1w", [['Bullish', 0.5],['Bearish', 0.25],['Sideways', 0.25]]);
+                instanciateProgressBar("forecast_bar_stacked_1m", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+                instanciateProgressBar("forecast_bar_stacked_1q", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
+
+                instanciateProgressBar("forecast_bar_stacked_1w_2", [['Bullish', 0.2], ['Bearish', 0.6], ['Sideways', 0.2]]);
+                instanciateProgressBar("forecast_bar_stacked_1m_2", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
+                instanciateProgressBar("forecast_bar_stacked_1q_2", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+            };
+
+            var instanciateProgressBar = function (widgetId, colunms) {
+                var initJsonProgressBar = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpProgressBar = new forecastProgressBarObj();
+                ctpProgressBar.Init(initJsonProgressBar);
+
+                charts.push(ctpProgressBar);
+            };
+
+            //#endregion Charts
+
+            this.Init = function () {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
+
+    </script>
+
+</body>
+
+</html>
