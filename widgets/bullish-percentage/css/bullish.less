@@ -1,0 +1,58 @@
+// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+// Bullish percentage index
+.fxs_widget_bullishPercentage {
+  .fxs_list_table {
+    .fxs_list_table_item {
+      padding: 0.5rem 1rem;
+      text-align: center;
+    }
+  }
+  .fxs_widget_cell_col {
+    width: 33.33%;
+    padding: 5px;
+  }
+  .fxs_widget_custom_data_lable, .fxs_index_date { display: block; }
+  .fxs_index_icon {
+    &::before {
+      display: inline-block;
+      content: '\f062';
+      font: normal normal normal 26px FontAwesome;
+    }
+  }
+  .fxs_index_up {
+    .fxs_index_last, .fxs_index_icon { color: @success_clr; }
+  }
+  .fxs_index_down {
+    .fxs_index_last, .fxs_index_icon { color: @error_clr; }
+    .fxs_index_icon::before { content: '\f063'; }
+  }
+
+  // Mini rules
+  // &.fxs_widget_mini {
+  //   @media(min-width:@screen-s) {
+  //     // Any rules here
+  //   }
+  // }
+
+  // Default rules
+  // &.fxs_widget_default {
+  //   // Any rules here
+  // }
+
+  // Big rules
+  &.fxs_widget_big {
+    @media(min-width:@screen-l) {
+      .fxs_widget_custom_data_lable, .fxs_index_date {
+        display: inline-block;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+}

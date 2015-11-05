@@ -1,0 +1,17 @@
+﻿// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+////////////////////////////////////////////
+////////// Widget correlation /////////////
+.fxs_widget_correlation {
+  .fxs_widget_divider_module { padding-bottom: 0; }
+
+  // C3 overrides in correlation chart
+  .c3-axis-y, .c3-axis-x {
+    .domain { stroke: #fff; }
+  }
+}

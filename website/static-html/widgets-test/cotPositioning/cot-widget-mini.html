@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>News Home - FXStreet</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../../css/fxs_screen.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+   
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+ <body>
+	<!-- The wrapper -->
+	<div class="fxs_wrapper fxs_content_wide">
+		<div class="fxs_content" id="fxs_content">
+			<!-- The content rail -->
+			<div class="fxs_contentView">
+				<!-- Main Section -->
+				<header class="fxs_sectionTitle">                 
+				    <h1 class="fxs_sectionTitle_header">COT POSITIONING</h1>
+				    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+				        <div class="fxs_overflowOptions">
+				            <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+				            <ul class="fxs_btnGroup_dropdownList">
+				                <li class="fxs_socialMedia_item">
+				                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+				                </li>
+				                <!--
+				-->
+				                <li class="fxs_socialMedia_item">
+				                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+				                </li>
+				            </ul>
+				        </div>
+				    </div>
+				</header>
+
+				<section class="fxs_detail" role="main">
+
+				    <section class="fxs_widget_summary">
+
+				    	<div class="fxs_widget_cot fxs_widget_mini">						
+					        <div class="fxs_widget_divider_module">
+					        	
+					        	<ul class="fxs_list_table fxs_list_table_item_split_widget">
+					        		<li class="fxs_list_table_item">
+
+					        			<div class="fxs_dTable">
+                                            <span class="fxs_label">Non-Commercial</span>
+                                        </div>
+							        	
+							        	<div class="fxs_widget_cot_box">					        		
+								        	<strong class="fxs_widget_custom_data_lable">324.2k</strong>
+								        	<small class="fxs_index_date">
+                                                <time datetime="2015-02-21T00:00">Feb 21</time>
+                                            </small>
+							        	</div>
+
+							        	<div class="fxs_widget_cot_box fxs_widget_cot_graph">
+							           		<div id="non_commercial" class="c3"></div>
+							           </div>
+							           <div class="fxs_widget_cot_box">
+							           		<strong class="fxs_widget_custom_data_lable fxs_txt_danger">-45k</strong>
+							           		<small class="fxs_index_date">
+                                                <time datetime="2015-03-21T00:00">Last</time>
+                                            </small>
+							           </div>	 	
+						      		</li>
+									
+
+									<li class="fxs_list_table_item">
+
+										<div class="fxs_dTable">
+                                            <span class="fxs_label">Commercial</span>
+                                        </div>
+							        	
+							        	<div class="fxs_widget_cot_box">
+							        		<strong class="fxs_widget_custom_data_lable">-300k</strong>
+							        		<small class="fxs_index_date">
+                                                <time datetime="2015-02-21T00:00">Feb 21</time>
+                                            </small>
+							        	</div>
+							        	<div class="fxs_widget_cot_box fxs_widget_cot_graph">
+							           		<div id="commercial" class="c3"></div>
+							           </div>
+							           	<div class="fxs_widget_cot_box">
+							           		<strong class="fxs_widget_custom_data_lable fxs_txt_success">50k</strong>
+							           		<small class="fxs_index_date">
+                                                <time datetime="2015-03-21T00:00">Last</time>
+                                            </small>
+							        	</div>
+							        </li>
+					        	</ul>
+
+					        </div>
+
+					        <!-- widget footer -->
+					        <footer class="fxs_widget_footer">
+					            <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+					            <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+					        </footer>
+						</div>
+				        <!-- /widget footer -->
+				    </section>
+
+				</section>
+			</div>
+		</div>
+	</div>
+
+    <script src="../../../js/jquery-1.11.3.min.js"></script>
+    <script src="../../../widgets/core/js/c3.min.js"></script>
+    <script src="../../../widgets/core/js/d3.min.js"></script>
+    <script>
+        var non_commercial = c3.generate({
+			bindto: '#non_commercial',                 
+			data: {
+				x: 'x',
+				columns: [
+					['x', '2015-01-01', '2015-02-03', '2015-03-02', '2015-04-02'],
+				    ['noncommercial', 324550, 150000, 320000, -45000]
+				],
+				colors: { noncommercial: '#CE4735' },
+                names:{ noncommercial: 'Non-Commercial' }			
+			},
+			axis: {
+				x: {
+					show: false,
+					type: 'timeseries',
+		            tick: { format: '%Y-%m-%d' }
+				},
+				y: { show: false }
+			},
+			legend: { show: false },
+		    size:{ height: 47 },
+		    point: {
+		    	r: 2.4,
+                focus: {
+				    expand: { r: 3 },
+				    select: { r: 3 }
+				}
+		    }
+        });
+        
+        var commercial = c3.generate({
+			bindto: '#commercial',                 
+			data: {
+				x: 'x',
+			    columns: [
+			    	['x', '2015-01-01', '2015-02-03', '2015-03-02', '2015-04-02'],
+			        ['commercial', -300550, -150000, -320000, 45000]
+			    ],
+			    colors: { commercial: '#328372' },
+				names:{ commercial: "Commercial" }
+			},
+			axis: {
+				x: {
+					show: false,
+					type: 'timeseries',
+		            tick: { format: '%Y-%m-%d' }
+				},
+				y: { show: false }
+			},
+			legend: { show: false },
+		    size:{ height: 47 },
+		    point: {
+		    	r: 2.4,
+                focus: {
+				    expand: { r: 3 },
+				    select: { r: 3 }
+				} 
+		    }
+		});
+    </script>
+
+</body>
+
+</html>
