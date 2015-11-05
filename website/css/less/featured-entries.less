@@ -1,6 +1,6 @@
 // SUSCRIBE NEWSLETTER
 .fxs_suscribe {
-  .fxs_wideWidget_pre();
+  .fxs_wideWidget_pre(3px solid @light_4_clr; 3px solid @light_4_clr);
   background-color: @dark_2_clr;
 }
 
@@ -26,7 +26,7 @@
 
 // SEXY BANNER
 .fxs_sexy_banner {
-  .fxs_wideWidget_pre();
+  .fxs_wideWidget_pre(3px solid @light_4_clr; 0);
   position: relative;
   &:hover {
       cursor: pointer;
@@ -49,8 +49,8 @@
     padding: 2rem;
     top: 2rem;
     left: 2rem;
-    height: 84%;
-    .calc(height, ~'100% - 4rem');
+    height: 85%;
+    .calc(height, ~'100% - 3rem');
   }
   .fxs_entryHeadline, .fxs_entryHeadline a, .fxs_entryPlain_txt, .fxs_helperLabel_title, .fxs_entry_metaInfo { color: @lightest_clr; }
   header, .fxs_helperLabel_title{

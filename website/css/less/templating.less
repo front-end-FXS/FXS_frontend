@@ -195,7 +195,8 @@
   }
 }
 
-// sidebar user
+/////////////////////////////////////////////////////////////
+////////////////////// sidebar user ////////////////////////
 .fxs_sidebar_user {
   .fxs_authentication_form_content { 
     margin-bottom: @main_header_height;
@@ -205,48 +206,48 @@
       margin-left: 1.5rem;
       display: block;
     }
-    // rules for divider
-    .fxs_sidebar_divider {
-      margin:10px 0 10px 0;
-      text-align: center;
-      position:relative;
-      span {
-        display: inline-block;
-        text-transform:uppercase;
-        color:@light_1_clr; 
-        font-style:italic;
-        font-size:@txt_size_small;
-        &::before,
-        &::after {
-          border-top: 1px solid  @dark_3_clr;
-          display: block;
-          height: 1px;
-          content: " ";
-          width: 45%;
-          position: absolute;
-          left: 0;
-          top: 0.7rem;
-        }
-        &::after {
-          right: 0;  
-          left: auto; 
-        }
-      }
+  }
+}
+
+// Divider sidebar
+.fxs_sidebar_divider {
+  margin:10px 0 10px 0;
+  text-align: center;
+  position:relative;
+  span {
+    &:extend(.fxs_label);
+    font-size:@txt_size_small;
+    &::before,
+    &::after {
+      border-top: 1px solid  @dark_3_clr;
+      display: block;
+      height: 1px;
+      content: " ";
+      width: 45%;
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
     }
-    //
-    .fxs_social_sidebar_nav {
-      padding: 10px;
-      .fxs_btn {
-        text-align: left;
-        i { padding-right: @base_module_size; }
-      }
-    }
-    .fxs_login_message {
-      background-color: @dark_3_clr;
-      padding: 0.5rem 1rem;
-      margin-top: @base_module_size;
+    &::after {
+      right: 0;  
+      left: auto; 
     }
   }
+}
+//
+
+.fxs_social_sidebar_nav {
+  padding: 10px;
+  .fxs_btn {
+    text-align: left;
+    i { padding-right: @base_module_size; }
+  }
+}
+
+.fxs_login_message {
+  background-color: @dark_3_clr;
+  padding: 0.5rem 1rem;
+  margin-top: @base_module_size;
 }
 
 // Timezone trigger btn
