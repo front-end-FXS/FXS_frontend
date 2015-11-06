@@ -85,11 +85,15 @@
   margin-bottom: 1rem;
   ol { &:extend(.fxs_list_unstyled); }
   li {
-      padding: 1rem 0;
-      border-bottom: 1px solid @light_4_clr;
-      &:last-child { border-bottom: none; }
+    padding: 1rem 0;
+    border-bottom: 1px solid @light_4_clr;
+    &:first-child { padding-top: 0.5rem; }
+    &:last-child { border-bottom: none; }
   }
-  .fxs_entryHeadline { &:extend(.fxs_headline); }
+  .fxs_entryHeadline {
+    &:extend(.fxs_headline);
+    margin-bottom: 0.25rem;
+  }
   &.fxs_crawling_page {
     @media(min-width:@screen-l) { max-width: 75%; }
     .fxs_entryHeadline {
