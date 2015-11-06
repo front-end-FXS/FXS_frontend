@@ -59,7 +59,7 @@
 
 .fxs_helperLabel_title {
   .fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -392,14 +392,11 @@
 }
 
 // MEDIA OBJECTS (images & media)
-.fxs_mediaContainer, .fxs_entryFeatured_img {
-  .fxs_aspectRatio_media(16, 9);
-  margin-bottom: 1rem;
-}
+.fxs_entryFeatured_img { &:extend(.fxs_mediaContainer all); }
 
 // Floating media
 .fxs_floatingMedia_imageContainer {
-  .fxs_aspectRatio_media(16, 9);
+  &:extend(.fxs_mediaContainer all);
   display: inline-block;
 	float: left;
   margin-right: 1rem;
@@ -597,7 +594,33 @@
 	}
 }
 
-// LIST SPECIAL STYLES
+/////////////////////////////////////////////////////
+////////////// TOGGLES /////////////////////////////
+
+.fxs_toggleList {
+  &:extend(.fxs_visible_s all);
+  cursor: pointer;
+  display: inline-block;
+  height: @base_module_size;
+  line-height: @base_module_size;
+  text-transform: uppercase;
+  font-size: @txt_size_xsmall;
+  padding: 0 1rem 0 1rem;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  &.active { .translateX(@left_rail_space_reduced); }
+  &.disabled {
+    .opacity(.5);
+    cursor: default;
+    &:hover{ text-decoration: none; }
+  }
+}
+
+/////////////////////////////////////////////////////
+////////////// LIST SPECIAL STYLES /////////////////
+
 .fxs_list_table {
   &:extend(.fxs_list_unstyled);
   margin-bottom: 1rem;
@@ -610,7 +633,9 @@
   }
 }
 
-/// TABLES FOR CONTENT AND WIDGETS
+/////////////////////////////////////////////////////
+//////// TABLES FOR CONTENT AND WIDGETS ////////////
+
 .fxs_table {
 	width: 100%;
  	max-width: 100%;
@@ -922,7 +947,8 @@
   vertical-align: middle;
 }
 
-// Widget price inner components
+// Widget price components
+.fxs_widget_price { &:extend(.fxs_clearfix all); }
 .fxs_asset_label, .fxs_widget_price_value {
   display: inline-block;
   vertical-align: top;
@@ -932,14 +958,7 @@
   &:extend(.fxs_headline_base_rules all);
   max-width: @base_module_size*4;
   font-size: @txt_defaultsize_rem;
-  a {
-    display: inline-block;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-      color: @dark_1_clr;
-    }
-  }
+  a { display: inline-block; }
 }
 
 .fxs_widget_price_value {
