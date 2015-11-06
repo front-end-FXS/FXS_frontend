@@ -89,7 +89,10 @@
       border-bottom: 1px solid @light_4_clr;
       &:last-child { border-bottom: none; }
   }
-  .fxs_entryHeadline { &:extend(.fxs_headline); }
+  .fxs_entryHeadline {
+    &:extend(.fxs_headline);
+    margin-bottom: 0.25rem;
+  }
   &.fxs_crawling_page {
     @media(min-width:@screen-l) { max-width: 75%; }
     .fxs_entryHeadline {

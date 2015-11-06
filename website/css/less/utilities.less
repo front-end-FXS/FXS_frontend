@@ -119,9 +119,10 @@
 
 //Headline base rules
 .fxs_headline_base_rules {
+  &:extend(.fxs_boldAntialised_style);
   color: @dark_1_clr;
   letter-spacing: -0.02rem;
-  &:extend(.fxs_boldAntialised_style);
+  margin: 0 0 0.5rem;
   // Headline link
   a {
     color: @dark_1_clr;
@@ -133,17 +134,16 @@
   }
 }
 
-// Headlines in context
-.fxs_headline_nano {
-  font-size: @txt_size_small;
-  line-height: @txt_lineheight_small;
-}
-
 // Default
 .fxs_headline {
   font-size: @txt_defaultsize_rem;
   line-height: @txt_lineheight_small;
-  padding-bottom: 0.5rem;
+}
+
+// Headlines in context
+.fxs_headline_nano {
+  font-size: @txt_size_small;
+  line-height: @txt_lineheight_small;
 }
 
 .fxs_headline_from_nano_to_tiny {
@@ -156,7 +156,7 @@
 
 .fxs_headline_tiny {
   &:extend(.fxs_headline);
-  padding-bottom: 0.15rem;
+  margin-bottom: 0;
 }
 
 .fxs_headline_from_tiny_to_small {
@@ -178,7 +178,6 @@
 .fxs_headline_large {
   font-size: @txt_size_huge;
   line-height: @txt_lineheight_large;
-  padding-bottom: 0.5rem;
   @media (min-width: @screen-s) {
     font-size: @txt_size_xhuge;
     line-height: @txt_lineheight_xlarge;

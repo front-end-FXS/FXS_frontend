@@ -286,7 +286,7 @@ tbody.collapse.in {
   color: #49494f;
   font-size: 0.92rem;
   letter-spacing: normal;
-  margin-right: 0.5rem;
+  margin: 0 0.5rem 0 0;
 }
 .fxs_fieldset {
   margin-bottom: 1rem;
@@ -1746,11 +1746,6 @@ lesshat-selector {
   line-height: 1.25rem;
   font-weight: 300;
 }
-.fxs_entryPlain_txt > h2,
-.fxs_entryPlain_txt > h3,
-.fxs_entryPlain_txt > h4 {
-  margin-bottom: 0.5rem;
-}
 .fxs_entryPlain_txt > img,
 .fxs_entryPlain_txt > .fxs_mediaContainer img {
   min-width: inherit;
@@ -1762,11 +1757,6 @@ lesshat-selector {
     line-height: 1.55em;
     font-weight: 300;
   }
-  .fxs_entryPlain_txt > h2,
-  .fxs_entryPlain_txt > h3,
-  .fxs_entryPlain_txt > h4 {
-    margin-bottom: 0.5rem;
-  }
   .fxs_entryPlain_txt > img,
   .fxs_entryPlain_txt > .fxs_mediaContainer img {
     min-width: inherit;
@@ -1777,11 +1767,6 @@ lesshat-selector {
   font-size: 1rem;
   line-height: 1.55em;
   font-weight: 300;
-}
-.fxs_entryPlain_txt_large > h2,
-.fxs_entryPlain_txt_large > h3,
-.fxs_entryPlain_txt_large > h4 {
-  margin-bottom: 0.5rem;
 }
 .fxs_entryPlain_txt_large > img,
 .fxs_entryPlain_txt_large > .fxs_mediaContainer img {
@@ -1909,6 +1894,7 @@ lesshat-selector {
 .fxs_asset_label {
   color: #1b1c23;
   letter-spacing: -0.02rem;
+  margin: 0 0 0.5rem;
 }
 .fxs_headline_base_rules a,
 .fxs_asset_label a {
@@ -1920,13 +1906,6 @@ lesshat-selector {
   color: #e4871b;
   text-decoration: none;
 }
-.fxs_headline_nano,
-.fxs_feedbackLoading_msg .fxs_loadingStatus,
-.fxs_headline_from_nano_to_tiny,
-.fxs_relatedContentSlot_x4_cols .fxs_entryHeadline {
-  font-size: 0.92rem;
-  line-height: 1.25rem;
-}
 .fxs_headline,
 .fxs_headline_tiny,
 .fxs_headline_from_tiny_to_small,
@@ -1934,7 +1913,13 @@ lesshat-selector {
 .fxs_relatedContentSlot_x3_cols .fxs_entryHeadline {
   font-size: 1rem;
   line-height: 1.25rem;
-  padding-bottom: 0.5rem;
+}
+.fxs_headline_nano,
+.fxs_feedbackLoading_msg .fxs_loadingStatus,
+.fxs_headline_from_nano_to_tiny,
+.fxs_relatedContentSlot_x4_cols .fxs_entryHeadline {
+  font-size: 0.92rem;
+  line-height: 1.25rem;
 }
 @media (min-width: 680px) {
   .fxs_headline_from_nano_to_tiny,
@@ -1944,7 +1929,7 @@ lesshat-selector {
   }
 }
 .fxs_headline_tiny {
-  padding-bottom: 0.15rem;
+  margin-bottom: 0;
 }
 @media (min-width: 680px) {
   .fxs_headline_from_tiny_to_small,
@@ -1962,7 +1947,6 @@ lesshat-selector {
 .fxs_headline_large {
   font-size: 1.63rem;
   line-height: 1.75rem;
-  padding-bottom: 0.5rem;
 }
 @media (min-width: 680px) {
   .fxs_headline_large {
