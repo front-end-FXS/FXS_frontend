@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Site components - FXStreet</title>
@@ -1574,7 +1574,7 @@
                                 <caption>Simple responsive table.</caption>
                                 <thead>
                                 <tr>
-                                    <th>&nbsp;</th>
+                                    <th><span class="fxs_skip">Timeframe</span></th>
                                     <th>EUR/USD</th>
                                     <th>AUD/USD</th>
                                     <th>USD/JPY</th>
@@ -1630,7 +1630,7 @@
                                         <th>Take Profit 2</th>
                                         <th>Take Profit 3</th>
                                         <th>Date</th>
-                                        <th>&nbsp;</th>
+                                        <th><span class="fxs_skip">More info</span></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1946,7 +1946,7 @@
                             
                             <!-- Featured image -->
                             <div class="fxs_entryFeatured_img">
-                                <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg">
+                                <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" alt="NOMBRE DE LA IMAGEN">
                             </div>
                             <!-- /Featured image -->
 
@@ -1959,7 +1959,7 @@
                             <!-- Article main media figure -->
                             <figure class="fxs_article_mainMedia">
                                 <div class="fxs_mediaContainer">
-                                    <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" />
+                                    <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" alt="NOMBRE DE LA IMAGEN" />
                                 </div>
                                 <figcaption>President Obama, during a speech about job gains in Hyattsville <small>© Olivier Douliery-Pool / Getty Images</small></figcaption>
                             </figure>
@@ -2140,7 +2140,7 @@
                                     </address>
                                 </header>
                                 <div class="fxs_entryFeatured_img">
-                                    <img src="http://placekitten.com/g/500/350" />
+                                    <img src="http://placekitten.com/g/500/350" alt="NOMBRE DE LA IMAGEN" />
                                 </div>
                                 <div class="fxs_entryExcerpt">
                                     <p>
@@ -2161,7 +2161,7 @@
                         <div class="fxs_entryFeatured">
                             <article class="fxs_entryFeatured_med">
                                 <div class="fxs_entryFeatured_img"><!-- tener en cuenta esta clase (fxs_entryFeatured_img) crea una más cara sobre la imagen-->
-                                    <img src="http://placekitten.com/g/500/350" />
+                                    <img src="http://placekitten.com/g/500/350" alt="NOMBRE DE LA IMAGEN" />
                                 </div>
                                 <header>
                                     <h3 class="fxs_entryHeadline">
@@ -2190,7 +2190,7 @@
                         <div class="fxs_entryFeatured">
                             <article class="fxs_entryFeatured_reduced">
                                 <div class="fxs_entryFeatured_img">
-                                    <img src="http://placekitten.com/g/500/350" />
+                                    <img src="http://placekitten.com/g/500/350" alt="NOMBRE DE LA IMAGEN" />
                                 </div>
                                 <header>
                                     <h3 class="fxs_entryHeadline">
@@ -2214,7 +2214,7 @@
                         <div class="fxs_entryFeatured">
                             <article class="fxs_entryFeatured_imgSide">
                                 <div class="fxs_entryFeatured_img">
-                                    <img src="http://placekitten.com/g/500/350" />
+                                    <img src="http://placekitten.com/g/500/350" alt="NOMBRE DE LA IMAGEN" />
                                 </div>
                                 <div class="fxs_floatingMedia_textBody">
                                     <header>
@@ -2453,7 +2453,7 @@
 
                                     </header>
                                     <div class="fxs_entryFeatured_img">
-                                        <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg">
+                                        <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="NOMBRE DE LA IMAGEN">
                                     </div>
 
                                     <div class="fxs_entryExcerpt">
@@ -3671,7 +3671,10 @@
                                 <!-- Contador de resultados: activar cuando se selecciona uno -->
                                 <span class="fxs_queryResults_label">1238 Results</span>
                                 <!-- /Contador de resultados -->
-                                <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                                <button type="reset" title="Clear search" class="fxs_dismissQuery">
+                                    <i class="fa fa-times-circle"></i>
+                                    <span class="fxs_skip">Clear search</span>
+                                </button>
                             </div>
                             <div class="fxs_typeaheadField">
                                 <div class="fxs_typeaheadQuery">
