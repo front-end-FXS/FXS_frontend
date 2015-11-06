@@ -1,0 +1,90 @@
+// VENDOR IMPORTS
+@import "c3.min.css"; // c3 Graphics BASE library FOR ALL WIDGETS CHARTS. AVOID OTHER LIBRARIES!!
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins
+@import "../../../website/css/less/vendor/component-animations.less";  // Bootstrap 3.3.5 component animations
+@import "../../../website/css/less/vendor/tooltip.less"; // Bootstrap Tooltip
+
+// IMPORTS GENERAL APLICATION
+@import "../../../website/css/less/vars.less"; // Application variables
+@import "../../../website/css/less/mixins.less"; // Application mixins & extendible classes
+@import "../../../website/css/less/components.less";  // Molecular-combined components
+
+// UTILITIES, HELPERS & EXTENDIBLE CLASSES
+@import "../../../website/css/less/utilities.less";  // Helper classes
+//
+
+// Forced styles for widgets
+[class^="fxs_widget_"] {
+  font-family: @txt_fontfamily;
+  line-height: @txt_lineheight;
+  // Box model & typo rendering
+  * { .box-sizing(border-box); }
+  // lists
+  ol, ul { list-style: none; }
+  ol, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  a { &:extend(.fxs_boldAntialised_style, .fxs_transition); }
+  // Small tag
+  small {
+    font-size: @txt_size_nano;
+    color: @light_1_clr;
+  }
+  .fxs_marginBase_top { margin-top: 1rem; }
+  .fxs_marginHalf_top { margin-top: 0.5rem; }
+  .fxs_marginBase_right { margin-right: 1rem; }
+  .fxs_marginBase_bottom { margin-bottom: 1rem; }
+  .fxs_marginHalf_bottom { margin-bottom: 0.5rem; }
+  .fxs_marginBase_left { margin-left: 1rem; }
+  .fxs_resetRow_margin {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+// Tables
+.fxs_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: @txt_fontfamily;
+  a { &:extend(.fxs_boldAntialised_style, .fxs_transition);}
+  // Box model & typo rendering
+  * { .box-sizing(border-box); }
+}
+
+[class^="fxs_avatar_circleImage"] {
+  * { .box-sizing(border-box); }
+  img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+.fxs_list_table {
+  margin: 0;
+  padding: 0;
+  * { .box-sizing(border-box); }
+  li { list-style: none; }
+  blockquote {
+    font-style: italic;
+    position: relative;
+    &:before { position: absolute; }
+    &:before{
+      display: block;
+      color: @light_4_clr;
+      font: normal normal normal 1.25rem FontAwesome;
+      width: 2rem;
+      height: 2rem;
+      top: 0;
+      left: 0;
+      content: "\f10d";
+    }
+    footer {
+      color: @light_2_clr;
+      font-size: @txt_size_small;
+      line-height: @txt_lineheight_small;
+    }
+  }
+}
+//
