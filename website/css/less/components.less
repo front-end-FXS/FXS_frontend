@@ -1072,28 +1072,43 @@
 
 // overwrited styles
 .fxs_modal_wrap {
+  &:extend(.fxs_pageSidebar_transition);
   top: @main_header_height;
   padding: 3px!important;
   @media(min-width:@screen-s){ padding: 0 1rem!important; }
+
+  // When fading in the modal, animate it to slide down
+  &.fade .fxs_modal_content {
+   .translate(0, -25%);
+   .transition(transform 0.3s ease-out);
+   // .transition-transform(~"0.3s ease-out");
+  }
+  &.in .fxs_modal_content { .translate(0, 0) }
 }
 
-.modal-backdrop { top: @main_header_height; }
+.modal-backdrop {
+  &:extend(.fxs_pageSidebar_transition);
+  top: @main_header_height;
+}
 
 .fxs_modal_close{
   position:fixed; 
-  top: @main_header_height;
-  right: 1rem;
+  top: @main_header_height+3px;
+  right: 3px;
   margin: 0;
-  display: none;
   z-index: 9999;
-  @media(min-width:@screen-s){ display: inline-block; }
+  @media(min-width:@screen-s){
+    right: 0.25rem;
+    top: @main_header_height;
+  }
+  .cbp-spmenu-push-toleft & { display: none; }
 }
 
 .fxs_modal_content {
   position:relative;
   max-width: @content_rail_width;
   margin: 0 auto;
-  @media(min-width:@screen-s){ margin: 5px auto 0; }
+  @media(min-width: @screen-s){ margin: 5px auto 0; }
  // overwrited rules
   .fxs_footer{
     margin-left: 0;
@@ -1106,7 +1121,7 @@
 }
 
 .fxs_modal_add.fxs_leaderboard {
-  background-color: @light_3_clr;
+  background-color: @light_4_clr;
   margin-bottom: 5px;
   padding: 0.5rem 0;
 }

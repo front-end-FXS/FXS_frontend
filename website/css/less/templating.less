@@ -5,7 +5,7 @@
   height: @main_header_height;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 9999;
   left: 0;
 }
 .fxs_wrapper{
@@ -33,6 +33,7 @@
     margin-left: 0;
     .calc(height, ~'100% - @{base_module_size}');
   }
+  .fxs_modal_page & { height: 100%; }
 }
 
 .fxs_pageSidebar {
@@ -54,7 +55,7 @@
 .cbp-spmenu-push {
   &.cbp-spmenu-push-toright {
     .fxs_sidebar_nav  { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_content_subnav, .fxs_footer { .translate(@slide_sidebar_space); }
+    .fxs_content, .fxs_header, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(@slide_sidebar_space); }
     &.fxs_isParent_section{
       .fxs_listView {
         .translate(@slide_sidebar_space);
@@ -62,17 +63,17 @@
       }
     }
     @media (min-width: @screen-m) {
-      &.fxs_isParent_section .fxs_listView , .fxs_listView{
+      &.fxs_isParent_section .fxs_listView , .fxs_listView {
         .translate(@slide_sidebar_space);
       }
     }
     @media (min-width: @screen-l) {
-      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer{ .translate(0)!important; }
+      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(0)!important; }
     }
   }
   &.cbp-spmenu-push-toleft {
     .fxs_sidebar_user { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer { .translate(-@slide_sidebar_space)!important; }
+    .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space)!important; }
   }
 }
 
@@ -384,6 +385,7 @@
   margin-bottom: 0.5rem;
   padding: 1rem;
   @media (min-width: @screen-s) { padding: 1.5rem 2rem; }
+  .fxs_modal_page .fxs_wrapper & { min-height: @content_wide_width;}
 }
 
 .fxs_content_wide {
@@ -432,6 +434,7 @@
     @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
     @media (min-width: @screen-l) { width: @left_rail_space; }
   }
+  .fxs_modal_page  & { height: 100%; }
 }
 
 // Absolute dimension spaces in layout
@@ -512,6 +515,13 @@
   margin-bottom: 0.25rem;
 }
 
+
+// Fill layer for modal page
+.fxs_listView_fill_layer {
+  background-color: @lightest_clr;
+  height: 100%;
+  position: relative;
+}
 ///////////////////////////////////////////////////////////////
 //////////////////// FXStreet Typeahead //////////////////////
 .fxs_queryResults, .fxs_queryResults_label { display: none; }
