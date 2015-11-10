@@ -1636,21 +1636,42 @@ width:calc(100% - 320px);
     padding: 0 1rem!important;
   }
 }
+.fxs_modal_wrap.fade .fxs_modal_content {
+  -webkit-transform: translate(0, -25%);
+  -moz-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out,-moz-transform 0.3s ease-out,-o-transform 0.3s ease-out,transform 0.3s ease-out;
+}
+.fxs_modal_wrap.in .fxs_modal_content {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 .modal-backdrop {
   top: 45px;
 }
 .fxs_modal_close {
   position: fixed;
-  top: 45px;
-  right: 1rem;
+  top: 48px;
+  right: 3px;
   margin: 0;
-  display: none;
   z-index: 9999;
 }
 @media (min-width: 680px) {
   .fxs_modal_close {
-    display: inline-block;
+    right: 0.25rem;
+    top: 45px;
   }
+}
+.cbp-spmenu-push-toleft .fxs_modal_close {
+  display: none;
 }
 .fxs_modal_content {
   position: relative;
@@ -1671,7 +1692,7 @@ width:calc(100% - 320px);
   padding-bottom: 70px;
 }
 .fxs_modal_add.fxs_leaderboard {
-  background-color: #dddedf;
+  background-color: #f0f0f1;
   margin-bottom: 5px;
   padding: 0.5rem 0;
 }
@@ -1693,7 +1714,9 @@ width:calc(100% - 320px);
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
-.fxs_pageSidebar_transition {
+.fxs_pageSidebar_transition,
+.fxs_modal_wrap,
+.modal-backdrop {
   -webkit-transition: -webkit-transform 0.25s ease-in;
   -moz-transition: -moz-transform 0.25s ease-in;
   -o-transition: -o-transform 0.25s ease-in;
@@ -1728,10 +1751,10 @@ lesshat-selector {
 @keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;};
 }
 .fxs_blur {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
 }
 .fxs_entryPlain_txt {
   font-size: 0.92rem;
