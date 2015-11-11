@@ -26,6 +26,13 @@
     padding-right: 5px;
   }
   .fxs_btn_group { margin-top: -1px; }
+  &.fxs_inlined_list_bordered {
+    > li {
+      border-left: 1px solid @light_2_clr;
+      padding-left: 5px;
+      &:first-child { border-left: none; }
+    }
+  }
 }
 
 // Tabs navigation (overall nav options)
@@ -410,10 +417,7 @@
   margin-right: 0.5rem;
   width: 70px;
   height: 70px;
-  img{
-      height: 100%;
-      max-width: inherit;
-  }
+  img{ max-width: inherit; }
 }
 
 // SQUARE & AVATAR IMAGES
@@ -421,16 +425,12 @@
 [class*="fxs_avatar_circleImage"] {
   .fxs_aspectRatio_media(1, 1);
   display: inline-block;
+  img { height: 100%; }
 }
 
 [class*="fxs_avatar_circleImage"] {
 	border-radius: 50%;
-	vertical-align: middle;
-  img {
-    border-radius: 50%;
-    min-height: 100%;
-    width: inherit;
-  }
+  img { border-radius: 50%; }
 }
 
 .fxs_avatar_circleImage_s, .fxs_squareImage_s {
@@ -449,62 +449,89 @@
 }
 
 ///////////////////////////////////////////////////////////////
-////////////////////// Author Boxes ///////////////////////
+////////////////////// Contributor Boxes ///////////////////////
 .fxs_contributorBox, .fxs_article_author {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .fxs_contributorBox {
   font-size: @txt_size_small;
   line-height: @txt_lineheight_xsmall;
   white-space: nowrap;
+  .fxs_article_author a {
+    display: inline-block;
+    margin-bottom: 0.33em;
+  }
   .fxs_avatar_circleImage_s { margin-right: 0.25rem; }
 }
+
+.fxs_article_author { white-space: normal; }
 
 .fxs_author_description {
   display: block;
   font-size: @txt_size_xsmall;
-  padding: 0.25rem 0;
+  padding: 0 0 0.25rem;
 }
 
-// Author box Nano
+// Contributor box Nano
 .fxs_contributorBox_nano {
-  .fxs_avatar_circleImage_s { display: none; }
-  .fxs_article_author { white-space: normal; }
+  .fxs_avatar_circleImage_s {
+    display: none;
+    vertical-align: middle;
+  }
+  .fxs_article_author { vertical-align: middle; }
   @media (min-width: @screen-s) {
     .fxs_avatar_circleImage_s { display: inline-block; }
   }
 }
 
-// Author box Small : Default styles
+// Contributor box Small : Default styles
 
-// Author box Medium
+// Contributor box Medium
 .fxs_contributorBox_medium {
+  .fxs_avatar_circleImage_s { vertical-align: middle; }
+  .fxs_article_author { vertical-align: middle; }
    @media (min-width: @screen-s) {
     .fxs_avatar_circleImage_s {
+      margin-right: 0.5rem;
       width: @avatar_m;
       height: @avatar_m;
     }
   }
 }
 
-// Author box Medium & big txt
+// Contributor box Medium & big txt
 .fxs_contributorBox_medium, .fxs_contributorBox_big {
-   @media (min-width: @screen-s) {
-    font-size: @txt_defaultsize_rem;
+   @media (min-width: @screen-s) { font-size: @txt_defaultsize_rem; }
+}
+
+// Contributor box Big
+.fxs_contributorBox_big {
+  .fxs_btn { display: none; }
+  @media (min-width: @screen-s) {
+    .fxs_avatar_circleImage_s, .fxs_squareImage_s { margin-right: 0.5rem; }
+    .fxs_btn { display: inline-block; }
   }
 }
 
-// Author box Big
-.fxs_contributorBox_big {
-  .fxs_btn { display: none; }
-   @media (min-width: @screen-s) {
-    .fxs_avatar_circleImage_s {
+// Contributhor box Big & Header
+.fxs_contributorBox_big, .fxs_contributorBox_header {
+  .fxs_avatar_circleImage_s, .fxs_squareImage_s {
+    width: @avatar_m;
+    height: @avatar_m;
+  }
+  @media (min-width: @screen-s) {
+    .fxs_avatar_circleImage_s, .fxs_squareImage_s {
       width: @avatar_l;
       height: @avatar_l;
-      margin-right: 0.5rem;
     }
-    .fxs_btn { display: inline-block; }
+  }
+}
+
+.fxs_contributorBox_header {
+  margin-bottom: 0.5rem;
+  @media (min-width: @screen-s) {
+    .fxs_avatar_circleImage_s, .fxs_squareImage_s { margin-right: 1rem; }
   }
 }
 
@@ -715,7 +742,7 @@
 .fxs_disclaimer_block {
   border: 1px solid @light_5_clr;
   margin-bottom: 1rem;
-  max-height: @base_module_size*3.55;
+  max-height: @base_module_size*3.8;
   overflow-y: auto;
   padding: 0.5rem 1rem;
   * {
@@ -1121,8 +1148,8 @@
 }
 
 .fxs_modal_add.fxs_leaderboard {
-  background-color: @light_4_clr;
-  margin-bottom: 5px;
+  background-color: @light_5_clr;
+  margin-bottom: 3px;
   padding: 0.5rem 0;
 }
 
