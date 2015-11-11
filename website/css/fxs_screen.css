@@ -87,7 +87,7 @@ tbody.collapse.in {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: rgba(37, 37, 43, 0.6);
+  background-color: #25252b;
 }
 .modal-backdrop.fade {
   zoom: 1;
@@ -98,10 +98,10 @@ tbody.collapse.in {
 }
 .modal-backdrop.in {
   zoom: 1;
-  filter: alpha(opacity=500);
-  -webkit-opacity: 5;
-  -moz-opacity: 5;
-  opacity: 5;
+  filter: alpha(opacity=60);
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
 }
 .modal-header {
   padding: 0;
@@ -2066,21 +2066,42 @@ width:calc(100% - 320px);
     padding: 0 1rem!important;
   }
 }
+.fxs_modal_wrap.fade .fxs_modal_content {
+  -webkit-transform: translate(0, -25%);
+  -moz-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out,-moz-transform 0.3s ease-out,-o-transform 0.3s ease-out,transform 0.3s ease-out;
+}
+.fxs_modal_wrap.in .fxs_modal_content {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 .modal-backdrop {
   top: 45px;
 }
 .fxs_modal_close {
   position: fixed;
-  top: 45px;
-  right: 1rem;
+  top: 48px;
+  right: 3px;
   margin: 0;
-  display: none;
   z-index: 9999;
 }
 @media (min-width: 680px) {
   .fxs_modal_close {
-    display: inline-block;
+    right: 0.25rem;
+    top: 45px;
   }
+}
+.cbp-spmenu-push-toleft .fxs_modal_close {
+  display: none;
 }
 .fxs_modal_content {
   position: relative;
@@ -2101,7 +2122,7 @@ width:calc(100% - 320px);
   padding-bottom: 70px;
 }
 .fxs_modal_add.fxs_leaderboard {
-  background-color: #dddedf;
+  background-color: #f0f0f1;
   margin-bottom: 5px;
   padding: 0.5rem 0;
 }
@@ -2139,6 +2160,8 @@ textarea,
   transition: all 0.25s ease-in;
 }
 .fxs_pageSidebar_transition,
+.fxs_modal_wrap,
+.modal-backdrop,
 .fxs_header,
 .fxs_content,
 .fxs_content_subnav,
@@ -2178,10 +2201,10 @@ lesshat-selector {
 @keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;};
 }
 .fxs_blur {
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
 }
 .fxs_entryPlain_txt,
 .fxs_entryExcerpt {
@@ -2879,7 +2902,7 @@ width:calc(100% + 0.5rem);
   height: 45px;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 9999;
   left: 0;
 }
 .fxs_wrapper {
@@ -2923,6 +2946,9 @@ height:-moz-calc(100% - 35px);
 height:calc(100% - 35px);
 ;
 }
+.fxs_modal_page .fxs_content {
+  height: 100%;
+}
 .fxs_pageSidebar {
   background-color: #1b1c23;
   color: #ffffff;
@@ -2948,7 +2974,9 @@ height:calc(100% - 35px);
 .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_content,
 .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_header,
 .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_content_subnav,
-.cbp-spmenu-push.cbp-spmenu-push-toright .fxs_footer {
+.cbp-spmenu-push.cbp-spmenu-push-toright .fxs_footer,
+.cbp-spmenu-push.cbp-spmenu-push-toright .fxs_modal_wrap,
+.cbp-spmenu-push.cbp-spmenu-push-toright .modal-backdrop {
   -webkit-transform: translate(276px);
   -moz-transform: translate(276px);
   -o-transform: translate(276px);
@@ -2986,7 +3014,9 @@ height:calc(100% - 35px);
   .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_header,
   .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_listView,
   .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_content_subnav,
-  .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_footer {
+  .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_footer,
+  .cbp-spmenu-push.cbp-spmenu-push-toright .fxs_modal_wrap,
+  .cbp-spmenu-push.cbp-spmenu-push-toright .modal-backdrop {
     -webkit-transform: translate(0) !important;
     -moz-transform: translate(0) !important;
     -o-transform: translate(0) !important;
@@ -3001,7 +3031,9 @@ height:calc(100% - 35px);
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_header,
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_listView,
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_content_subnav,
-.cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_footer {
+.cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_footer,
+.cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_modal_wrap,
+.cbp-spmenu-push.cbp-spmenu-push-toleft .modal-backdrop {
   -webkit-transform: translate(-276px) !important;
   -moz-transform: translate(-276px) !important;
   -o-transform: translate(-276px) !important;
@@ -3426,6 +3458,9 @@ height:calc(100% - 45px);
     padding: 1.5rem 2rem;
   }
 }
+.fxs_modal_page .fxs_wrapper .fxs_detail {
+  min-height: 1280px;
+}
 .fxs_content_wide .fxs_detail,
 .fxs_content_wide .fxs_leaderboard,
 .fxs_content_wide .fxs_sectionTitle,
@@ -3511,6 +3546,9 @@ height:calc(100% - 35px - 45px);
   .fxs_listViewRail .fxs_listView_blockWrapper {
     width: 320px;
   }
+}
+.fxs_modal_page .fxs_listViewRail {
+  height: 100%;
 }
 @media (min-width: 680px) {
   .fxs_listView,
@@ -3602,6 +3640,11 @@ height:calc(100% - 35px - 45px);
 }
 .fxs_listView_squareImage {
   margin-bottom: 0.25rem;
+}
+.fxs_listView_fill_layer {
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
 }
 .fxs_queryResults,
 .fxs_queryResults_label {
@@ -5268,4 +5311,25 @@ width:calc(100% - 140px);
 .fxs_widget_spreads_table.fxs_widget_nano > thead .fxs_label,
 .fxs_widget_spreads_table.fxs_widget_nano tbody > tr > td .fxs_label {
   display: block;
+}
+.fxs_btn_filter_brokers {
+  padding-top: 5px;
+}
+.fxs_btn_filter_brokers .fa-filter {
+  font-size: 1.5rem;
+  color: #1b1c23;
+}
+.fxs_broker_sponsor_wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #49494f;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+.fxs_broker_sponsor_wrapper .fxs_broker_sponsor_title {
+  padding: 0rem 1.5rem 0.3rem 1.5rem;
+  display: block;
+}
+.fxs_broker_sponsor_wrapper .fxs_broker_sponsor_title .fxs_label {
+  color: #ffffff;
 }
