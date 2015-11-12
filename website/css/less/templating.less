@@ -187,28 +187,31 @@
   }
 }
 
-// Divider sidebar
+// Divider options
 .fxs_sidebar_divider {
-  margin:10px 0 10px 0;
+  margin: 0.5rem 0;
   text-align: center;
   position:relative;
   span {
     &:extend(.fxs_label);
-    font-size:@txt_size_small;
+    font-size: @txt_size_small;
     &::before,
     &::after {
-      border-top: 1px solid  @dark_3_clr;
+      border-top: 1px solid @light_2_clr;
       display: block;
       height: 1px;
       content: " ";
-      width: 45%;
+      width: 43%;
       position: absolute;
-      left: 0;
+      left: 1px;
       top: 0.7rem;
     }
     &::after {
-      right: 0;  
+      right: 1px;  
       left: auto; 
+    }
+    .fxs_sidebar_user & {
+      &::before, &::after { border-top-color: @dark_3_clr; }
     }
   }
 }
