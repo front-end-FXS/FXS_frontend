@@ -752,6 +752,27 @@
 }
 
 ///////////////////////////////////////////////////////////
+///////////// Spescific section layouts //////////////////
+/////////////////////////////////////////////////////////
+
+// Brokers
+.fxs_broker_contact_footer {
+  &:extend(.fxs_clearfix all);
+  border-top: 3px solid @light_4_clr;
+  padding-top: 1rem;
+  .fxs_subnavInlined_list {
+    display: block;
+    li { line-height: @base_module_size; }
+    @media (min-width: @screen-m) { float: right; }
+  }
+}
+
+.fxs_broker_contact_block {
+  margin-bottom: 0.5rem;
+  @media (min-width: @screen-m) { float: left; }
+}
+
+///////////////////////////////////////////////////////////
 /////////////// Layouts grid system //////////////////////
 /////////////////////////////////////////////////////////
 
@@ -785,7 +806,7 @@
 }
 
 /////////// Sitefinity cols overrrides //
-//////////// 12 columns based system ///
+//////////// 12 columns based system /// Omar: Borrar en cuanto se prueben las FXS cols en producción
 
 // .sf_cols {
 //   .make-row();
@@ -824,6 +845,7 @@
     &.fxs_flex_ad_col {
       width: @left_rail_space_reduced;
       overflow: hidden;
+      &.fxs_flex_ad_col_fRight { float: right; }
     }
   }
   @media (min-width: @screen-l) {
