@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////
-/////////////////// NAVIGATION MENUS /////////////////////
+///////////////////// NAVIGATIONS ////////////////////////
 
 // items nav list (2nd level navigations)
 .fxs_items_list_nav {
@@ -12,26 +12,6 @@
   .fxs_menuList_header {
     .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall);
     padding: 1.38rem 1rem 0.75rem;
-  }
-}
-
-// Mini-menu: barra topics (3rd level navigation)
-.fxs_subnavInlined_list {
-  &:extend(.fxs_list_unstyled);
-  font-size: @txt_size_nano;
-  display: inline-block;
-  vertical-align: middle;
-  > li {
-    display: inline-block;
-    padding-right: 5px;
-  }
-  .fxs_btn_group { margin-top: -1px; }
-  &.fxs_inlined_list_bordered {
-    > li {
-      border-left: 1px solid @light_2_clr;
-      padding-left: 5px;
-      &:first-child { border-left: none; }
-    }
   }
 }
 
@@ -67,6 +47,50 @@
 .fxs_helperLabel_title {
   .fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
   margin: 0 0.5rem 0 0;
+}
+
+////////////////////////////////////////////////////////////////////////
+/////////////////////////// Styled lists //////////////////////////////
+
+// Inlined lists
+.fxs_subnavInlined_list, .fxs_plainInlined_list {
+  &:extend(.fxs_list_unstyled);
+  display: inline-block;
+  vertical-align: middle;
+  > li {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  .fxs_btn_group { margin-top: -1px; }
+  &.fxs_inlined_list_bordered {
+    @media (min-width: @screen-m) {
+      > li {
+        border-left: 1px solid @light_2_clr;
+        margin-bottom: 0.25rem;
+        padding-left: 10px;
+        &:first-child {
+          border-left: none;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.fxs_subnavInlined_list { font-size: @txt_size_nano; }
+
+.fxs_inlined_definition_list {
+  &:extend(.fxs_list_unstyled);
+  display: table-row;
+  dt {
+    text-align: right;
+    width: 25%;
+  }
+  dt, dd {
+    display: table-cell;
+    vertical-align: top;
+  }
+  dd { padding-left: 1rem; }
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -471,6 +495,10 @@
   display: block;
   font-size: @txt_size_xsmall;
   padding: 0 0 0.25rem;
+  .fxs_list_unstyled > li {
+    margin-bottom: 2px;
+    &:last-child { margin-bottom: 0; }
+  }
 }
 
 // Contributor box Nano
@@ -1125,9 +1153,10 @@
   margin: 0;
   z-index: 9999;
   @media(min-width:@screen-s){
-    right: 0.25rem;
+    right: 0.5rem;
     top: @main_header_height;
   }
+  @media(min-width:@screen-l){ right: 1rem; }
   .cbp-spmenu-push-toleft & { display: none; }
 }
 

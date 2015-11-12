@@ -20,7 +20,6 @@
 
 //////////////////////////////
 // Extendable text classes //
-
 .fxs_entryPlain_txt {
   .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
   @media (min-width: @screen-s) {
@@ -32,6 +31,26 @@
   .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
   @media (min-width: @screen-s) { font-size: @txt_size_large; }
 }
+
+// Text sizes
+.fxs_entryPlain_txt_small {
+  .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
+}
+
+.fxs_txt_xsmall {
+  font-size: @txt_size_xsmall;
+  line-height: @txt_lineheight_xsmall;
+}
+
+.fxs_txt_large {
+  font-size: @txt_size_large;
+  line-height: @txt_lineheight_reset;
+}
+
+// Text aligments
+.fxs_txt_left { text-align: left; }
+.fxs_txt_right { text-align: right; }
+.fxs_txt_center { text-align: center; }
 
 // Text contectual colors
 .fxs_txt_success {
@@ -199,6 +218,7 @@
 
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
+.fxs_dBlock { display: block; }
 .fxs_dTable { display: table; width: 100%; }
 .fxs_fLeft { float: left; }
 .fxs_fRight { float: right; }
