@@ -22,10 +22,26 @@
 	margin-bottom:0.5rem;
 	.fxs_broker_sponsor_title{
 		padding:0rem 1.5rem 0.3rem 1.5rem;
-		
 		display:block;
 		.fxs_label{
 			color:@lightest_clr;
 		}
+	}
+}
+
+// modal small
+.fxs_modal_sm{
+	padding-top:@main_header_height;
+	margin:0 auto;
+	.fxs_detail{
+		&.fxs_modal_sm_content{
+			padding-bottom:2rem;
+		}
+	}
+	.fxs_modal_sm_alert{
+		margin-bottom:3px;
+	}
+	@media(min-width:@screen-s){
+		max-width:680px;
 	}
 }
