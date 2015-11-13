@@ -105,9 +105,15 @@
 }
 ///////////////////////////////////////////////////////////
 ////////// Forms grouped layouts & input groups //////////
-.fxs_formGroup { margin-bottom: 1rem; }
+.fxs_formGroup {
+  margin-bottom: 1rem;
+  .fxs_formGroup {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
 
-.fxs_textInput {
+.fxs_textInput, .fxs_select {
   width: 100%;
   margin-bottom: 0.22rem;
 }
@@ -129,19 +135,44 @@
   }
   .fxs_textInput { padding-left: @base_module_size;}
 }
+
+.fxs_inlineForm_group {
+  .fxs_textInput, .fxs_select {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: auto;
+  }
+}
+
+.fxs_formGroup__addon {
+  display: inline-block;
+  background-color: @light_4_clr;
+  border: 1px solid @light_3_clr;
+  color: @light_1_clr;
+  font-size: @txt_size_xsmall;
+  height: @base_module_size;
+  line-height: @base_module_size;
+  padding: 0 0.25rem;
+  text-align: center;
+  &:first-child {
+    float: left;
+    border-right: 0;
+  }
+  &:last-child {
+    float: right;
+    border-left: 0;
+  }
+}
+
 //
 .fxs_subscribeForm_group {
-  margin-bottom: 1rem;
+  &:extend(.fxs_inlineForm_group all);
   display: inline-block;
-  > * { margin-bottom: 0.5rem; }
+  margin-bottom: 1rem;
   @media (min-width: @screen-s) { width: auto; }
   .fxs_textInput {
-    vertical-align: middle;
-    display: inline-block;
-    @media (min-width: @screen-s) {
-      width: auto;
-      min-width: 250px;
-    }
+    @media (min-width: @screen-s) { min-width: 250px; }
     @media (min-width: @screen-l) { min-width: 320px; }
   }
 }
