@@ -883,8 +883,36 @@
 
                         <footer class="fxs_broker_contact_footer">
                             <!-- Contact form -->
-                            <div class="fxs_broker_contact_block">
-                                <button class="fxs_btn fxs_btn_line" type="button"><i class="fa fa-phone"></i> Contact this broker</button>
+                            <div class="fxs_broker_contact_block fxs_hidden_xs">
+                                <form class="fxs_inlineForm_group">
+                                    <label class="fxs_btn fxs_btn_line" for="broker-contact-name-1"><i class="fa fa-phone"></i> Contact this broker</label>
+                                    <div class="fxs_formGroup">
+                                        <input id="broker-contact-name-1" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                        <button type="button" class="fxs_btn_icon fxs_btn_functional">
+                                            <i class="fa fa-chevron-right"></i>
+                                            <span class="fxs_skip">Next</span>
+                                        </button>
+                                    </div>
+                                    <div class="fxs_formGroup">
+                                        <select class="fxs_select">
+                                            <option>Atlantis</option>
+                                            <option>Germany</option>
+                                            <option>Mexico</option>
+                                            <option>Murdor</option>
+                                            <option selected>Spain</option>
+                                            <option>United States</option>
+                                        </select>
+
+                                        <label title="phone" for="example-phone" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <div class="fxs_formGroup">
+                                            <span class="fxs_formGroup__addon">(+34)</span>
+                                            <input type="tel" class="fxs_textInput" placeholder="Your phone number" id="example-phone">
+                                        </div>
+                                        <input class="fxs_btn fxs_btn_functional" type="submit" value="Call me">
+                                    </div>
+                                </form>
                             </div>
                             <!-- /Contact form -->
 

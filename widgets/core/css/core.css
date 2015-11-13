@@ -335,7 +335,12 @@ tbody.collapse.in {
 .fxs_formGroup {
   margin-bottom: 1rem;
 }
-.fxs_textInput {
+.fxs_formGroup .fxs_formGroup {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.fxs_textInput,
+.fxs_select {
   width: 100%;
   margin-bottom: 0.22rem;
 }
@@ -357,25 +362,45 @@ tbody.collapse.in {
 .fxs_inputGroup_iconLabel .fxs_textInput {
   padding-left: 35px;
 }
-.fxs_subscribeForm_group {
-  margin-bottom: 1rem;
+.fxs_inlineForm_group .fxs_textInput,
+.fxs_inlineForm_group .fxs_select,
+.fxs_subscribeForm_group .fxs_textInput,
+.fxs_subscribeForm_group .fxs_select {
   display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: auto;
 }
-.fxs_subscribeForm_group > * {
-  margin-bottom: 0.5rem;
+.fxs_formGroup__addon {
+  display: inline-block;
+  background-color: #f0f0f1;
+  border: 1px solid #dddedf;
+  color: #8c8d91;
+  font-size: 0.8rem;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 0.25rem;
+  text-align: center;
+}
+.fxs_formGroup__addon:first-child {
+  float: left;
+  border-right: 0;
+}
+.fxs_formGroup__addon:last-child {
+  float: right;
+  border-left: 0;
+}
+.fxs_subscribeForm_group {
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 @media (min-width: 680px) {
   .fxs_subscribeForm_group {
     width: auto;
   }
 }
-.fxs_subscribeForm_group .fxs_textInput {
-  vertical-align: middle;
-  display: inline-block;
-}
 @media (min-width: 680px) {
   .fxs_subscribeForm_group .fxs_textInput {
-    width: auto;
     min-width: 250px;
   }
 }
