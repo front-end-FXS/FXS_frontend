@@ -248,6 +248,15 @@
   }
 }
 
+.fxs_btn_content_toggle_collapse {
+  .toggled_txt { display: block; }
+  .init_txt { display: none; }
+  &.collapsed {
+    .init_txt { display: block; }
+    .toggled_txt { display: none; }
+  }
+}
+
 ////////////////////////////////////
 //////// LABELS & badges //////////
 .fxs_label, .fxs_alertLabel, .fxs_badge {
