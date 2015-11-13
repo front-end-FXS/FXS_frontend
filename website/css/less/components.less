@@ -1149,20 +1149,18 @@
   }
 }
 
-// modal
+//////////////// Modals //////////////////
 
 // overwrited styles
 .fxs_modal_wrap {
-  &:extend(.fxs_pageSidebar_transition);
+  &:extend(.fxs_pageSidebar_transition, .fxs_scrollableContent all);
   top: @main_header_height;
   padding: 3px!important;
   @media(min-width:@screen-s){ padding: 0 1rem!important; }
-
   // When fading in the modal, animate it to slide down
   &.fade .fxs_modal_content {
    .translate(0, -25%);
    .transition(transform 0.3s ease-out);
-   // .transition-transform(~"0.3s ease-out");
   }
   &.in .fxs_modal_content { .translate(0, 0) }
 }
@@ -1206,5 +1204,16 @@
   background-color: @light_5_clr;
   margin-bottom: 3px;
   padding: 0.5rem 0;
+}
+
+// Modal sizes
+
+// modal small
+.fxs_modal_sm {
+  padding-top: @main_header_height;
+  margin: 0 auto;
+  .fxs_modal_sm_content{ padding-bottom: 2rem; }
+  .fxs_modal_sm_alert{ margin-bottom:3px; }
+  @media(min-width:@screen-s){ max-width:680px; }
 }
 
