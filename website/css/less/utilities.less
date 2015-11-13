@@ -275,6 +275,13 @@
   margin-bottom: 0.5rem;
 }
 
+// contextual detail section
+.fxs_detail{
+  &.fxs_contextual_section{
+    &:extend(.fxs_label_info);
+  }
+}
+
 // Dropdown general style
 .fxs_dropdown_generic {
   .animation(just-appear 0.25s ease-in);
@@ -291,6 +298,7 @@
     }
   }
 }
+
 
 // Media (img, video, embed) objects
 .fxs_mediaContainer {
