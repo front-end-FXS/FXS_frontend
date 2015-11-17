@@ -9,11 +9,16 @@
 .fxs_transition { .transition(all .25s ease-in); }
 .fxs_pageSidebar_transition { .transition(transform .25s ease-in); }
 
-// Animations
-.keyframes(~'slide-from-top, from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}');
-.keyframes(~'grow-and-show, from {height:0; opacity:0;} to {height: auto; opacity:1;}');
-.keyframes(~'just-appear, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
-.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}');
+/////////////////
+// Animations //
+
+// Generic from animate CSS - https://daneden.github.io/animate.css/
+.keyframes(~'fadeIn, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
+.keyframes(~'fadeInDown, from {transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {transform: none; height: auto; opacity:1;}');
+.keyframes(~'fadeInLeft, from {transform: translate3d(-100%, 0, 0); opacity:0;} to {transform: none; opacity:1;}');
+
+// Spescific for FXS layouts
+.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}');
 
 // blur modal effect
 .fxs_blur { .blur(4px); }
@@ -284,7 +289,7 @@
 
 // Dropdown general style
 .fxs_dropdown_generic {
-  .animation(just-appear 0.25s ease-in);
+  .animation(fadeIn 0.25s ease-in);
   display: none;
   position: absolute;
   right: 0;

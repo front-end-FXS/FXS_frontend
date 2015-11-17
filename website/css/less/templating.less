@@ -475,7 +475,7 @@
   line-height: @base_module_size;
   background-color: lighten(@highlight_clr, 40%);
   overflow: hidden;
-  .animation(slide-from-top 0.33s ease-in);
+  .animation(fadeInDown 0.33s ease-in);
   &:hover{ background-color: lighten(@highlight_clr, 35%); }
   @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
   @media (min-width: @screen-l) { width: @left_rail_space; }
@@ -552,7 +552,7 @@
       display: block;
       &.fxs_selectedQuery {
         .fxs_queryResults_label {
-          .animation(just-appear 0.25s ease-in);
+          .animation(fadeIn 0.25s ease-in);
           display: block;
         }
       }
@@ -577,7 +577,7 @@
   z-index: 100;
 }
 
-.fxs_dismissQuery{ .animation(just-appear 0.5s ease-in); }
+.fxs_dismissQuery{ .animation(fadeIn 0.5s ease-in); }
 
 // Query results
 .fxs_queryResults {
@@ -762,24 +762,84 @@
 /////////////////////////////////////////////////////////
 
 // Brokers
+
+/////////// Broker contact module ////////////
 .fxs_broker_contact_footer {
   &:extend(.fxs_clearfix all);
   border-top: 3px solid @light_4_clr;
+  min-height: @base_module_size;
   padding-top: 1rem;
+  position: relative;
+
   .fxs_subnavInlined_list {
-    display: block;
-    li { line-height: @base_module_size; }
-    @media (min-width: @screen-m) { float: right; }
+    li {
+      line-height: @base_module_size;
+      &:last-child {
+        display: none;
+        @media (min-width: @screen-l) { display: inline-block; }
+      }
+    }
+    @media (min-width: @screen-s) {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+    }
   }
+
+  // Trigger Button states
+  .fxs_btn_content_toggle_collapse {
+    .fxs_btn_properties(0; 20px; 2px 0; 0);
+    display: block;
+    font-size: @txt_size_xsmall;
+    line-height: inherit;
+    .toggled_txt { font-size: @txt_size_small; }
+    &.collapsed {
+      &:extend(.fxs_btn all, .fxs_btn_line all);
+      width: 100%;
+      @media (min-width: @screen-s) { width: auto; }
+    }
+  }
+
+  // Collapsible form
+  .fxs_inlineForm_group {
+    overflow: hidden;
+    @media (min-width: @screen-s) { width: 63%; }
+    &.collapsing { display: none; }
+  }
+
+  // Animate form groups contact broker
+  .fxs_contact_broker_slide {
+    display: none;
+    margin-bottom: 0;
+    .animation(fadeInLeft 0.33s ease-in);
+    &.active { display: block; }
+    .fxs_textInput { .calc(width, ~'100% - @{base_module_size} - 5px'); }
+    .fxs_nameInput {
+      @media (min-width: @screen-s) { max-width: 340px; }
+    }
+    .fxs_select { max-width: 120px; }
+    .fxs_formGroup, .fxs_select {
+      display: block;
+      margin-bottom: 0.25rem;
+      @media (min-width: @screen-s) {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Feedback message
+  .fxs_feedback_contact_msg {
+    &:extend(.fxs_boldAntialised_style);
+    @media (min-width: @screen-s) { line-height: @base_module_size; }
+  }
+
 }
 
-.fxs_broker_contact_block {
-  margin-bottom: 0.5rem;
-  @media (min-width: @screen-m) { float: left; }
-}
 
-// sponsor rules
-.fxs_broker_sponsor_wrapper{
+////////////////// Sponsor broker /////////////
+
+.fxs_soponsored_broker {
   margin-top: @main_header_height;
   margin-bottom: @main_header_height;
   .fxs_broker_sponsor_title{

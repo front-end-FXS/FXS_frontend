@@ -196,7 +196,7 @@
             <!-- /Sidebar left -->
 
             <nav class="fxs_content_subnav fxs_blur">
-                <a id="showLeft" class="fxs_toggleList"><i class="fa fa-chevron-left"></i> All News</a>
+                <a id="showLeft" class="fxs_toggleList"><i class="fa fa-chevron-left"></i> All Brokers</a>
             </nav>
 
             <div class="fxs_content fxs_blur" id="fxs_content">
@@ -577,12 +577,15 @@
                                 <!-- /Widget spreads nano -->
 
                                 <div class="collapse" id="collapseExample">
-                                    <div class="fxs_content_panel">
-                                        <ul class="fxs_txt_xsmall">
+                                    <div class="fxs_content_panel fxs_entryPlain_txt_small">
+                                        <ul>
                                           <li>No commissions</li>
                                           <li>Account: MetaTrader</li>
                                           <li>Variable Spreads</li>
                                         </ul>
+                                        <div class="fxs_txt_center">
+                                            <a href="/" class="fxs_mutedLink">Compare all spreads <i class="fa fa-angle-double-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -609,7 +612,6 @@
                             <!-- /Ad col outside -->
 
                             <div class="fxs_flex_col">
-                                <hr class="fxs_divider_second">
 
                                 <!-- Tabs navigation -->
                                 <ul class="fxs_tabs_nav">
@@ -882,18 +884,21 @@
                         </aside>
 
                         <footer class="fxs_broker_contact_footer">
-                            <!-- Contact form -->
-                            <div class="fxs_broker_contact_block fxs_hidden_xs">
-                                <form class="fxs_inlineForm_group">
-                                    <label class="fxs_btn fxs_btn_line" for="broker-contact-name-1"><i class="fa fa-phone"></i> Contact this broker</label>
-                                    <div class="fxs_formGroup">
+                                <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form" aria-controls="example-contact-form">
+                                    <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                                </button>
+
+                                <!-- Contact form -->
+                                <form id="example-contact-form" class="fxs_inlineForm_group collapse">
+                                    <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                        <label for="broker-contact-name-1" class="fxs_skip">Enter your full name</label>
                                         <input id="broker-contact-name-1" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
-                                        <button type="button" class="fxs_btn_icon fxs_btn_functional">
+                                        <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
                                             <i class="fa fa-chevron-right"></i>
                                             <span class="fxs_skip">Next</span>
                                         </button>
                                     </div>
-                                    <div class="fxs_formGroup">
+                                    <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
                                         <select class="fxs_select">
                                             <option>Atlantis</option>
                                             <option>Germany</option>
@@ -903,25 +908,27 @@
                                             <option>United States</option>
                                         </select>
 
-                                        <label title="phone" for="example-phone" class="fxs_skip">
-                                            Your phone number
-                                        </label>
                                         <div class="fxs_formGroup">
                                             <span class="fxs_formGroup__addon">(+34)</span>
-                                            <input type="tel" class="fxs_textInput" placeholder="Your phone number" id="example-phone">
+
+                                            <label title="phone" for="example-phone" class="fxs_skip">
+                                                Your phone number
+                                            </label>
+                                            <input id="example-phone" type="tel" class="fxs_textInput" placeholder="Your phone number">
                                         </div>
-                                        <input class="fxs_btn fxs_btn_functional" type="submit" value="Call me">
+                                        <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
                                     </div>
                                 </form>
-                            </div>
-                            <!-- /Contact form -->
+                                <!-- /Contact form -->
 
-                            <ul class="fxs_subnavInlined_list">
-                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
-                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
-                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
-                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
-                            </ul>
+                                <!-- Contact links -->
+                                <ul class="fxs_subnavInlined_list">
+                                    <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
+                                    <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
+                                    <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
+                                    <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
+                                </ul>
+                                <!-- /Contact links -->
                         </footer>                
                     
                     </section>
@@ -971,8 +978,21 @@
                 return false;
             });
 
-            // force collapsed class Validate IT
+            // force collapsed class - Validate IT
             $('.fxs_btn_content_toggle_collapse').addClass('collapsed');
+
+            //////////////////////////////////////////////////////////////////////
+            // Metido a saco para simular los slides de formulario - Validate IT
+            // REPEAT: METIDO A SACO, HACER FINO
+            $('[data-toggle="collapse"]').click(function() {
+                $(this).parent('.fxs_broker_contact_footer').find('.fxs_first_slide').addClass( "active" );
+                // Please make focus on click the #broker-contact-name-n
+                $(this).parent('.fxs_broker_contact_footer').find('.fxs_second_slide').removeClass( "active" );
+            });
+
+            $('[data-toggle="fxs_second_slide"]').click(function() {
+                $(this).closest('.fxs_inlineForm_group').find('.fxs_contact_broker_slide').toggleClass( "active" );
+            });
 
         </script>
 

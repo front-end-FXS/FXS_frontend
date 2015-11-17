@@ -2,10 +2,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>News - FXStreet</title>
+        <title>Brokers - FXStreet</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="../../css/fxs_screen.min.css">
-        <link rel="stylesheet" href="../../widgets/css/brokers.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
         <!--[if lt IE 9]>
@@ -26,12 +25,12 @@
             <ul>
                 <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
                 <li><a href="" title="">Rates & Charts</a></li>
-                <li class="active"><a href="" title="">News</a></li>
+                <li><a href="" title="">News</a></li>
                 <li><a href="" title="">Analysis</a></li>
                 <li><a href="" title="">Economic Calendar</a></li>
                 <li><a href="" title="">Live Video</a></li>
                 <li><a href="" title="">Education</a></li>
-                <li><a href="" title="">Find a Broker</a></li>
+                <li class="active"><a href="" title="">Find a Broker</a></li>
             </ul>
         </nav>
         <!-- /Main-nav -->
@@ -91,12 +90,12 @@
                 <ul>
                     <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
                     <li><a href="" title="">Rates & Charts</a></li>
-                    <li class="active"><a href="" title="">News</a></li>
+                    <li><a href="" title="">News</a></li>
                     <li><a href="" title="">Analysis</a></li>
                     <li><a href="" title="">Economic Calendar</a></li>
                     <li><a href="" title="">Live Video</a></li>
                     <li><a href="" title="">Education</a></li>
-                    <li><a href="" title="">Find a Broker</a></li>
+                    <li class="active"><a href="" title="">Find a Broker</a></li>
                 </ul>
             </nav>
             <!-- /Main-nav -->
@@ -169,7 +168,15 @@
         
         <!-- Topics subnav -->
         <nav class="fxs_content_subnav">
-            <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All News</a>
+            <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Brokers</a>
+            <div class="fxs_topics_nav">
+                <span class="fxs_label">Popular topics</span>
+                <ul class="fxs_subnavInlined_list">
+                    <li><a href="#" class="fxs_mutedLink">Live Spreads</a></li>
+                    <li><a href="#" class="fxs_mutedLink">How to choose a Broker?</a></li>
+                    <li><a href="#" class="fxs_mutedLink">Regulatory Organizations</a></li>
+                </ul>
+            </div>
         </nav>
         <!-- /Topics subnav -->
 
@@ -213,9 +220,9 @@
                                     <!-- /Broker's image -->
 
                                     <!-- Broker's name -->
-                                    <h1  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
                                        <a href="#" title="FxPro Financial Services Ltd">FxPro Financial Services Ltd</a>
-                                    </h1>
+                                    </h2>
                                     <!-- /Broker's name -->
 
                                     <!-- Broker's meta info -->
@@ -239,7 +246,7 @@
 
                             <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
                                 <!-- visible in big screens -->
-                                <h3 class="fxs_subtitle">
+                                <h3 class="fxs_subtitle fxs_hidden_s">
                                     Live Spreads
                                 </h3>
 
@@ -281,89 +288,118 @@
                                 <!-- / visible in big screens -->
                             </aside>
 
-                            <div class="fxs_flex_col">
-                                <footer class="fxs_hidden_m">
-                                    <hr class="fxs_divider_second">
-
-                                    <ul class="fxs_list_table fxs_entryPlain_txt_small">
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Leverage</dt>
-                                                <dd>up to 1:500</dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Instruments</dt>
-                                                <dd>
-                                                    <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            Futures
-                                                        </li>
-                                                        <li>
-                                                            Metals
-                                                        </li>
-                                                        <li>
-                                                            Commodities
-                                                        </li>
-                                                        <li>
-                                                            Shares
-                                                        </li>
-                                                        <li>
-                                                            Indices
-                                                        </li>
-                                                    </ul>
-                                                </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                              <dt>Platforms</dt>
-                                              <dd>
-                                                  <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
-                                                        </li>
-                                                    </ul>
-                                              </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
-                                            <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </footer>
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                             <!-- / visible in big screens -->
                         </article>
                         
 
                         <footer class="fxs_broker_contact_footer">
+                            <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form" aria-controls="example-contact-form">
+                                <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                            </button>
+
                             <!-- Contact form -->
-                            <div class="fxs_broker_contact_block">
-                                <button class="fxs_btn fxs_btn_line" type="button"><i class="fa fa-phone"></i> Contact this broker</button>
-                            </div>
+                            <form id="example-contact-form" class="fxs_inlineForm_group collapse">
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                    <label for="broker-contact-name-1" class="fxs_skip">Enter your full name</label>
+                                    <input id="broker-contact-name-1" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="fxs_skip">Next</span>
+                                    </button>
+                                </div>
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
+                                    <select class="fxs_select">
+                                        <option>Atlantis</option>
+                                        <option>Germany</option>
+                                        <option>Mexico</option>
+                                        <option>Murdor</option>
+                                        <option selected>Spain</option>
+                                        <option>United States</option>
+                                    </select>
+
+                                    <div class="fxs_formGroup">
+                                        <span class="fxs_formGroup__addon">(+34)</span>
+
+                                        <label title="phone" for="example-phone" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <input id="example-phone" type="tel" class="fxs_textInput" placeholder="Your phone number">
+                                    </div>
+                                    <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
+                                </div>
+                            </form>
                             <!-- /Contact form -->
 
+                            <!-- Contact links -->
                             <ul class="fxs_subnavInlined_list">
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
                             </ul>
+                            <!-- /Contact links -->
                         </footer>
 
                     </section>
@@ -383,10 +419,10 @@
                                     <!-- /Broker's image -->
 
                                     <!-- Broker's name -->
-                                    <h1  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
                                         <a href="#" title="Orbex">Orbex</a>
                                         <span class="fxs_label fxs_label_featured fxs_marginHalf_bottom">Gold Partner</span>
-                                    </h1>
+                                    </h2>
                                     <!-- /Broker's name -->
 
                                     <!-- Broker's meta info -->
@@ -410,7 +446,7 @@
 
                             <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
                                 <!-- visible in big screens -->
-                                <h3 class="fxs_subtitle">
+                                <h3 class="fxs_subtitle fxs_hidden_s">
                                     Live Spreads
                                 </h3>
 
@@ -452,71 +488,67 @@
                                 <!-- / visible in big screens -->
                             </aside>
 
-                            <div class="fxs_flex_col">
-                                <footer class="fxs_hidden_m">
-                                    <hr class="fxs_divider_second">
-
-                                    <ul class="fxs_list_table fxs_entryPlain_txt_small">
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Leverage</dt>
-                                                <dd>up to 1:500</dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Instruments</dt>
-                                                <dd>
-                                                    <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            Futures
-                                                        </li>
-                                                        <li>
-                                                            Metals
-                                                        </li>
-                                                        <li>
-                                                            Commodities
-                                                        </li>
-                                                        <li>
-                                                            Shares
-                                                        </li>
-                                                        <li>
-                                                            Indices
-                                                        </li>
-                                                    </ul>
-                                                </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                              <dt>Platforms</dt>
-                                              <dd>
-                                                  <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
-                                                        </li>
-                                                    </ul>
-                                              </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
-                                            <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </footer>
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                             <!-- / visible in big screens -->
 
@@ -524,18 +556,51 @@
                         
 
                         <footer class="fxs_broker_contact_footer">
+                            <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form-2" aria-controls="example-contact-form-2">
+                                <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                            </button>
+
                             <!-- Contact form -->
-                            <div class="fxs_broker_contact_block">
-                                <button class="fxs_btn fxs_btn_line" type="button"><i class="fa fa-phone"></i> Contact this broker</button>
-                            </div>
+                            <form id="example-contact-form-2" class="fxs_inlineForm_group collapse">
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                    <label for="broker-contact-name-2" class="fxs_skip">Enter your full name</label>
+                                    <input id="broker-contact-name-2" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="fxs_skip">Next</span>
+                                    </button>
+                                </div>
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
+                                    <select class="fxs_select">
+                                        <option>Atlantis</option>
+                                        <option>Germany</option>
+                                        <option>Mexico</option>
+                                        <option>Murdor</option>
+                                        <option selected>Spain</option>
+                                        <option>United States</option>
+                                    </select>
+
+                                    <div class="fxs_formGroup">
+                                        <span class="fxs_formGroup__addon">(+34)</span>
+
+                                        <label title="phone" for="example-phone-2" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <input id="example-phone-2" type="tel" class="fxs_textInput" placeholder="Your phone number">
+                                    </div>
+                                    <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
+                                </div>
+                            </form>
                             <!-- /Contact form -->
 
+                            <!-- Contact links -->
                             <ul class="fxs_subnavInlined_list">
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
                             </ul>
+                            <!-- /Contact links -->
                         </footer>
 
                     </section>
@@ -556,9 +621,9 @@
                                     <!-- /Broker's image -->
 
                                     <!-- Broker's name -->
-                                    <h1  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
                                         <a href="" title="FXCM Inc">FXCM Inc</a>
-                                    </h1>
+                                    </h2>
                                     <!-- /Broker's name -->
 
                                     <!-- Broker's meta info -->
@@ -582,7 +647,7 @@
 
                             <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
                                 <!-- visible in big screens -->
-                                <h3 class="fxs_subtitle">
+                                <h3 class="fxs_subtitle fxs_hidden_s">
                                     Live Spreads
                                 </h3>
 
@@ -624,95 +689,125 @@
                                 <!-- / visible in big screens -->
                             </aside>
 
-                            <div class="fxs_flex_col">
-                                <footer class="fxs_hidden_m">
-                                    <hr class="fxs_divider_second">
-
-                                    <ul class="fxs_list_table fxs_entryPlain_txt_small">
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Leverage</dt>
-                                                <dd>up to 1:500</dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Instruments</dt>
-                                                <dd>
-                                                    <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            Futures
-                                                        </li>
-                                                        <li>
-                                                            Metals
-                                                        </li>
-                                                        <li>
-                                                            Commodities
-                                                        </li>
-                                                        <li>
-                                                            Shares
-                                                        </li>
-                                                        <li>
-                                                            Indices
-                                                        </li>
-                                                    </ul>
-                                                </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                              <dt>Platforms</dt>
-                                              <dd>
-                                                  <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
-                                                        </li>
-                                                    </ul>
-                                              </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
-                                            <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </footer>
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                             <!-- / visible in big screens -->
 
                         </article>
 
+                        <!-- Bonus alert!!!! -->
                         <div class="fxs_contextual_alert fxs_alert_info">
                             <span class="fxs_alertLabel">Bonus</span>
                             <p class="fxs_alertText"><a href="#" data-toggle="modal" data-target="#fxs_modal">FXCM New Clients $30 No Deposit Bonus | Valid For: 106 days </a></p>
                         </div>
-                        
+                        <!-- /Bonus alert!!!! -->
 
                         <footer class="fxs_broker_contact_footer">
+                            <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form-3" aria-controls="example-contact-form-3">
+                                <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                            </button>
+
                             <!-- Contact form -->
-                            <div class="fxs_broker_contact_block">
-                                <button class="fxs_btn fxs_btn_line" type="button"><i class="fa fa-phone"></i> Contact this broker</button>
-                            </div>
+                            <form id="example-contact-form-3" class="fxs_inlineForm_group collapse">
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                    <label for="broker-contact-name-3" class="fxs_skip">Enter your full name</label>
+                                    <input id="broker-contact-name-3" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="fxs_skip">Next</span>
+                                    </button>
+                                </div>
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
+                                    <select class="fxs_select">
+                                        <option>Atlantis</option>
+                                        <option>Germany</option>
+                                        <option>Mexico</option>
+                                        <option>Murdor</option>
+                                        <option selected>Spain</option>
+                                        <option>United States</option>
+                                    </select>
+
+                                    <div class="fxs_formGroup">
+                                        <span class="fxs_formGroup__addon">(+34)</span>
+
+                                        <label title="phone" for="example-phone-3" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <input id="example-phone-3" type="tel" class="fxs_textInput" placeholder="Your phone number">
+                                    </div>
+                                    <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
+                                </div>
+                            </form>
                             <!-- /Contact form -->
 
+                            <!-- Contact links -->
                             <ul class="fxs_subnavInlined_list">
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
                             </ul>
+                            <!-- /Contact links -->
                         </footer>
 
                     </section>
@@ -787,9 +882,9 @@
                                     <!-- /Broker's image -->
 
                                     <!-- Broker's name -->
-                                    <h1  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
                                         <a href="#" title="XM XEMarkets">XM XEMarkets</a>
-                                    </h1>
+                                    </h2>
                                     <!-- /Broker's name -->
 
                                     <!-- Broker's meta info -->
@@ -813,7 +908,7 @@
 
                             <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
                                 <!-- visible in big screens -->
-                                <h3 class="fxs_subtitle">
+                                <h3 class="fxs_subtitle fxs_hidden_s">
                                     Live Spreads
                                 </h3>
 
@@ -855,89 +950,89 @@
                                 <!-- / visible in big screens -->
                             </aside>
 
-                            <div class="fxs_flex_col">
-                                <footer class="fxs_hidden_m">
-                                    <hr class="fxs_divider_second">
-
-                                    <ul class="fxs_list_table fxs_entryPlain_txt_small">
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Leverage</dt>
-                                                <dd>up to 1:500</dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                                <dt>Instruments</dt>
-                                                <dd>
-                                                    <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            Futures
-                                                        </li>
-                                                        <li>
-                                                            Metals
-                                                        </li>
-                                                        <li>
-                                                            Commodities
-                                                        </li>
-                                                        <li>
-                                                            Shares
-                                                        </li>
-                                                        <li>
-                                                            Indices
-                                                        </li>
-                                                    </ul>
-                                                </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <dl class="fxs_inlined_definition_list">
-                                              <dt>Platforms</dt>
-                                              <dd>
-                                                  <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
-                                                        </li>
-                                                    </ul>
-                                              </dd>
-                                            </dl>
-                                        </li>
-                                        <li class="fxs_list_table_item">
-                                            <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
-                                            <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
-                                        </li>
-                                    </ul>
-                                </footer>
+                            <!-- visible in big screens -->
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                             <!-- / visible in big screens -->
+
                         </article>
                         
 
                         <footer class="fxs_broker_contact_footer">
-                            <!-- Contact form -->
-                            <div class="fxs_broker_contact_block">
-                                <button class="fxs_btn fxs_btn_line" type="button"><i class="fa fa-phone"></i> Contact this broker</button>
+                            <!-- Broker contacted msg -->
+                            <div class="fxs_feedback_contact_msg fade in">
+                                <span class="fxs_txt_success">Thanks! We will call you as soon as possible.</span>
                             </div>
-                            <!-- /Contact form -->
+                            <!-- /Broker contacted msg -->
 
+                            <!-- Contact links -->
                             <ul class="fxs_subnavInlined_list">
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
                             </ul>
+                            <!-- /Contact links -->
                         </footer>
 
                     </section>
@@ -956,7 +1051,7 @@
             </header>
             <nav class="fxs_listViewRail">
                 <ol class="fxs_listView_blockWrapper">
-                    <li class="fxs_listView_item">
+                    <li class="fxs_listView_item fxs_soponsored_broker">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
                                 <img src="../../img/brokers/orbex.jpg" alt="Orbex">
@@ -965,10 +1060,10 @@
                                 <h3 class="fxs_headline_tiny">
                                     <a href="/">Orbex</a>
                                 </h3>
+                                <span class="fxs_label fxs_label_featured">Gold Partner</span>
                                 <span class="fxs_author_description">
                                     Regulated MiFID, CySEC, FCA (UK)
                                 </span>
-                                <span class="fxs_label fxs_label_featured">Gold Partner</span>
                             </div>
                         </article>
                     </li>
@@ -1430,7 +1525,7 @@
 
     </div>
     <!-- /The wrapper -->
-    <div class="fxs_modal_wrap modal fade" id="fxs_modal" style="display: none;">
+    <div class="fxs_modal_wrap modal fade" id="fxs_modal">
         <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close Modal">
             <i class="fa fa-times"></i>
             <span class="fxs_skip">Close Modal</span>
@@ -1444,7 +1539,7 @@
             <div class="fxs_modal_sm">
 
                 <div class="fxs_detail fxs_modal_sm_content">
-                    <h2 class="fxs_headline_from_tiny_to_small">FXCM New Clients $30 No Deposit Bonus</h3>
+                    <h3 class="fxs_headline_from_tiny_to_small">FXCM New Clients $30 No Deposit Bonus</h3>
                     <div class="fxs_entryPlain_txt">
                         <p>
                             Everyone loves rebates and here at HiWayFX we have decided to supersize it by giving you back a massive $15/Lot. Switch now to HiWayFX, apply for the rebates scheme within myHiWayFX, and get $15 back for every lot you trade.
@@ -1468,6 +1563,32 @@
     <script src="../../js/classie.js"></script>
     <script src="../../js/jquery.typeahead.min.js"></script>
     <script src="../../js/site.js"></script>
+
+    <script>
+        ////////////////////////// Bootstrap
+        // Activate bootstrap tooltip (must be!)
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+        
+        ////////////////////////////////////////////// Custom cutre js
+        // force collapsed class - Validate IT
+        $('.fxs_btn_content_toggle_collapse').addClass('collapsed');
+
+        //////////////////////////////////////////////////////////////////////
+        // Metido a saco para simular los slides de formulario - Validate IT
+        // REPEAT: METIDO A SACO, HACER FINO
+        $('[data-toggle="collapse"]').click(function() {
+            $(this).parent('.fxs_broker_contact_footer').find('.fxs_first_slide').addClass( "active" );
+            // Please make focus on click the #broker-contact-name-n
+            $(this).parent('.fxs_broker_contact_footer').find('.fxs_second_slide').removeClass( "active" );
+        });
+
+        $('[data-toggle="fxs_second_slide"]').click(function() {
+            $(this).closest('.fxs_inlineForm_group').find('.fxs_contact_broker_slide').toggleClass( "active" );
+        });
+
+    </script>
 
 </body>
 
