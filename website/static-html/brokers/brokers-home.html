@@ -364,7 +364,7 @@
                                 <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
                                     <label for="broker-contact-name-1" class="fxs_skip">Enter your full name</label>
                                     <input id="broker-contact-name-1" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
-                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_default" data-toggle="fxs_second_slide">
                                         <i class="fa fa-chevron-right"></i>
                                         <span class="fxs_skip">Next</span>
                                     </button>
@@ -387,7 +387,7 @@
                                         </label>
                                         <input id="example-phone" type="tel" class="fxs_textInput" placeholder="Your phone number">
                                     </div>
-                                    <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
+                                    <button type="button" class="fxs_btn fxs_btn_cta fxs_block_xs_to_inline_s_btn">Call me</button>
                                 </div>
                             </form>
                             <!-- /Contact form -->
@@ -407,6 +407,10 @@
                     <!-- sponsored content -->
 
                     <section class="fxs_detail fxs_soponsored_broker">
+                        <div class="fxs_soponsored_broker_title">
+                            <span class="fxs_label">Sponsored Broker</span>
+                            <i class="fa fa-question-circle fxs_fRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i>
+                        </div>
                         <article class="fxs_row">
                             <div class="fxs_flex_col">
                                 <header class="fxs_contributorBox_header">
@@ -565,7 +569,7 @@
                                 <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
                                     <label for="broker-contact-name-2" class="fxs_skip">Enter your full name</label>
                                     <input id="broker-contact-name-2" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
-                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_default" data-toggle="fxs_second_slide">
                                         <i class="fa fa-chevron-right"></i>
                                         <span class="fxs_skip">Next</span>
                                     </button>
@@ -588,7 +592,7 @@
                                         </label>
                                         <input id="example-phone-2" type="tel" class="fxs_textInput" placeholder="Your phone number">
                                     </div>
-                                    <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
+                                    <button type="button" class="fxs_btn fxs_btn_cta fxs_block_xs_to_inline_s_btn">Call me</button>
                                 </div>
                             </form>
                             <!-- /Contact form -->
@@ -772,7 +776,7 @@
                                 <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
                                     <label for="broker-contact-name-3" class="fxs_skip">Enter your full name</label>
                                     <input id="broker-contact-name-3" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
-                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_default" data-toggle="fxs_second_slide">
                                         <i class="fa fa-chevron-right"></i>
                                         <span class="fxs_skip">Next</span>
                                     </button>
@@ -795,7 +799,7 @@
                                         </label>
                                         <input id="example-phone-3" type="tel" class="fxs_textInput" placeholder="Your phone number">
                                     </div>
-                                    <button type="button" class="fxs_btn fxs_btn_functional fxs_block_xs_to_inline_s_btn">Call me</button>
+                                    <button type="button" class="fxs_btn fxs_btn_cta fxs_block_xs_to_inline_s_btn">Call me</button>
                                 </div>
                             </form>
                             <!-- /Contact form -->
@@ -1048,25 +1052,30 @@
         <section class="fxs_listView" id="cbp-spmenu-s3">
             <header class="fxs_listview_subnav">
                 <h2 class="fxs_helperLabel_title">All brokers</h2>
+                <div class="fxs_filter">
+                    <form>
+                        <div class="fxs_typeaheadContainer">
+                            <button type="button" class="fxs_btn_filter" title="Search in Items list">
+                                <i class="fa fa-sliders"></i>
+                                <span class="fxs_skip">Search in Items list</span>
+                            </button>
+                            <div class="fxs_queryResults">
+                                <button type="reset" title="Clear search" class="fxs_dismissQuery">
+                                    <i class="fa fa-times-circle"></i>
+                                    <span class="fxs_skip">Clear search</span>
+                                </button>
+                            </div>
+                            <div class="fxs_typeaheadField">
+                                <div class="fxs_typeaheadQuery">
+                                    <input id="q" name="q" type="search" placeholder="Search in Items list" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </header>
             <nav class="fxs_listViewRail">
                 <ol class="fxs_listView_blockWrapper">
-                    <li class="fxs_listView_item fxs_soponsored_broker">
-                        <article class="fxs_clearfix">
-                            <figure class="fxs_listView_squareImage">
-                                <img src="../../img/brokers/orbex.jpg" alt="Orbex">
-                            </figure>
-                            <div class="fxs_floatingMedia_textBody">
-                                <h3 class="fxs_headline_tiny">
-                                    <a href="/">Orbex</a>
-                                </h3>
-                                <span class="fxs_label fxs_label_featured">Gold Partner</span>
-                                <span class="fxs_author_description">
-                                    Regulated MiFID, CySEC, FCA (UK)
-                                </span>
-                            </div>
-                        </article>
-                    </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
@@ -1077,6 +1086,26 @@
                                     <a href="/">FxPro Financial Services Ltd</a>
                                 </h3>
 
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item fxs_soponsored_broker">
+                        <div class="fxs_soponsored_broker_title">
+                            <span class="fxs_label">Sponsored Broker</span>
+                            <i class="fa fa-question-circle fxs_fRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i>
+                        </div>
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="../../img/brokers/orbex.jpg" alt="Orbex">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Orbex</a>
+                                </h3>
+                                <span class="fxs_label fxs_label_featured">Gold Partner</span>
                                 <span class="fxs_author_description">
                                     Regulated MiFID, CySEC, FCA (UK)
                                 </span>

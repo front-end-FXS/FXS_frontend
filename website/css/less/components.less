@@ -33,20 +33,20 @@
 .fxs_subsectionTitle {
 	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
 	background-color: @light_3_clr;
-	margin: 0 0 1.5rem -0.5rem;
-	padding: 1px 0.5rem;
+	margin: 0 0 1.5rem -@half_base_spacer;
+	padding: 1px @half_base_spacer;
 }
 
 .fxs_subtitle {
   .fxs_stiled_text_variants(block; @dark_4_clr; @txt_size_small);
   margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: @half_base_spacer;
   border-bottom: 2px solid @light_3_clr;
 }
 
 .fxs_helperLabel_title {
   .fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
-  margin: 0 0.5rem 0 0;
+  margin: 0 @half_base_spacer 0 0;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -212,7 +212,7 @@
 .fxs_btn_block {
   display: block;
   width: 100%;
-  margin: 0.5rem 0;
+  margin: @half_base_spacer 0;
   &.fxs_sidebar_language { margin: 0; }
 }
 
@@ -246,7 +246,7 @@
   font-size: inherit;
   color: @dark_1_clr;
   margin: 0;
-  padding: 0 0.5rem;
+  padding: 0 @half_base_spacer;
   &:hover, &.active, .open > & { background-color: @light_3_clr; }
 }
 
@@ -356,14 +356,14 @@
   .animation(fadeInDown 0.33s ease-in);
   .reset-text();
   font-size: @txt_size_small;
-  padding: 0.75rem 0.5rem;
+  padding: 0.75rem @half_base_spacer;
   &.alert-dismissible { padding-right: 2rem; }
   // Close button in alert
   .fxs_close {
     background: transparent;
     display: block;
     float: right;
-    padding: 1px 0.5rem;
+    padding: 1px @half_base_spacer;
     margin: -2px -1.5rem 0 0;
     font-size: @txt_size_large;
     &:hover { .opacity(.75); }
@@ -487,7 +487,7 @@
 .fxs_squareImage {
   float: left;
   position: relative;
-  margin-right: 0.5rem;
+  margin-right: @half_base_spacer;
   width: 70px;
   height: 70px;
   img{ max-width: inherit; }
@@ -570,7 +570,7 @@
   .fxs_article_author { vertical-align: middle; }
    @media (min-width: @screen-s) {
     .fxs_avatar_circleImage_s {
-      margin-right: 0.5rem;
+      margin-right: @half_base_spacer;
       width: @avatar_m;
       height: @avatar_m;
     }
@@ -586,7 +586,7 @@
 .fxs_contributorBox_big {
   .fxs_btn { display: none; }
   @media (min-width: @screen-s) {
-    .fxs_avatar_circleImage_s, .fxs_squareImage_s { margin-right: 0.5rem; }
+    .fxs_avatar_circleImage_s, .fxs_squareImage_s { margin-right: @half_base_spacer; }
     .fxs_btn { display: inline-block; }
   }
 }
@@ -606,8 +606,8 @@
 }
 
 .fxs_contributorBox_header {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
+  margin-bottom: @half_base_spacer;
+  padding-bottom: @half_base_spacer;
   @media (min-width: @screen-s) {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -683,7 +683,7 @@
 
 .fxs_dropdownHeader {
   .fxs_stiled_text_variants(block; @light_2_clr; @txt_size_xsmall;);
-  margin: 0.5rem 0;
+  margin: @half_base_spacer 0;
 }
 
 .fxs_dropdownList > li > a {
@@ -735,7 +735,7 @@
   .fxs_list_table_item {
     display: table;
     width: 100%;
-    padding: 0.5rem;
+    padding: @half_base_spacer;
     border-top: 1px solid @light_4_clr;
     &:first-child { border-top: none; }
   }
@@ -751,7 +751,7 @@
   line-height: @txt_lineheight_small;
   >tbody, >thead, >tfoot {
     >tr >td, >tr >th {
-      padding: 0.5rem;
+      padding: @half_base_spacer;
       border-bottom: 1px solid @light_4_clr;
     }
   }
@@ -768,7 +768,7 @@
   caption {
     font-size: @txt_size_small;
     color: @light_1_clr;
-    padding: 0.5rem 0;
+    padding: @half_base_spacer 0;
     text-align: left;
   }
 }
@@ -790,7 +790,7 @@
           cursor: pointer;
           .fxs_btn_icon {
             color: @dark_4_clr;
-            padding-left: 0.5rem;
+            padding-left: @half_base_spacer;
           }
         }
       }
@@ -804,7 +804,7 @@
   padding: 1em;
   color: @light_2_clr;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: @half_base_spacer;
   display: none; // It'll be shown by js
   .background-image(linear-gradient(to bottom, @lightest_clr 0%,@light_4_clr 25%));
   .fxs_loadingStatus {
@@ -825,7 +825,7 @@
   margin-bottom: 1rem;
   max-height: @base_module_size*3.8;
   overflow-y: auto;
-  padding: 0.5rem 1rem;
+  padding: @half_base_spacer 1rem;
   * {
     color: @light_2_clr;
     font-size: @txt_size_nano;
@@ -905,7 +905,7 @@
 // Social media object - Spescific for subscribe social media widget
 .fxs_suscribeSocialBtn {
   &:extend(.fxs_list_unstyled);
-  li { margin: 0 0.5rem 0 0; }
+  li { margin: 0 @half_base_spacer 0 0; }
   .fxs_btn_icon {
     background-color: @light_3_clr;
     color: @dark_2_clr;
@@ -968,11 +968,11 @@
 // Widget divider modules
 .fxs_widget_divider_module {
   &.fxs_widget_divider_header{
-    @media(min-width:@screen-m){ padding:0 0 0.5rem 0; }       
+    @media(min-width:@screen-m){ padding:0 0 @half_base_spacer 0; }       
   }
   &:extend(.fxs_clearfix all);
-  padding-bottom:0.5rem;
-  margin-bottom:0.5rem;
+  padding-bottom:@half_base_spacer;
+  margin-bottom:@half_base_spacer;
   border-bottom: 1px solid @light_4_clr;  
 }
 
@@ -1134,7 +1134,7 @@
     vertical-align: middle;
   }
   .fxs_preload_spin_text{
-    padding-left:0.5rem;
+    padding-left:@half_base_spacer;
     vertical-align: middle;
   }
 }
@@ -1221,7 +1221,7 @@
   margin: 0;
   z-index: 9999;
   @media(min-width:@screen-s){
-    right: 0.5rem;
+    right: @half_base_spacer;
     top: @main_header_height;
   }
   @media(min-width:@screen-l){ right: 1rem; }
@@ -1247,7 +1247,7 @@
 .fxs_modal_add.fxs_leaderboard {
   background-color: @light_5_clr;
   margin-bottom: 3px;
-  padding: 0.5rem 0;
+  padding: @half_base_spacer 0;
 }
 
 // Modal sizes

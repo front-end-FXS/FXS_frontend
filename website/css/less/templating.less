@@ -189,7 +189,7 @@
 
 // Divider options
 .fxs_sidebar_divider {
-  margin: 0.5rem 0;
+  margin: @half_base_spacer 0;
   text-align: center;
   position:relative;
   span {
@@ -227,7 +227,7 @@
 
 .fxs_login_message {
   background-color: @dark_3_clr;
-  padding: 0.5rem 1rem;
+  padding: @half_base_spacer 1rem;
   margin-top: @base_module_size;
 }
 
@@ -242,7 +242,7 @@
   height: @main_header_height;
   position: fixed;
   width: @slide_sidebar_space;   
-  .fxs_timestamp { padding-left: 0.5rem; }
+  .fxs_timestamp { padding-left: @half_base_spacer; }
   i { padding-left: 1rem; }
   &:hover { background-color:@dark_4_clr; }
 }
@@ -344,12 +344,12 @@
 ////////// CONTENT //////// 
 .fxs_contentView {
   padding: 5px 0.25rem 1rem;
-  @media (min-width: @screen-s) { padding: 5px 0.5rem 1rem; }
+  @media (min-width: @screen-s) { padding: 5px @half_base_spacer 1rem; }
   @media (min-width: @screen-l) { padding: 5px 0.75rem 1rem 1rem; }
   .fxs_isParent_section & { &:extend(.fxs_hidden_xs all); }
   .fxs_feedbackLoading_msg {
     &:extend(.fxs_contentRail_box);
-    margin-bottom: 0.5rem;
+    margin-bottom: @half_base_spacer;
   }
 }
 
@@ -357,7 +357,7 @@
   &:extend(.fxs_contentRail_box);
   background-color: @lightest_clr;
   margin-bottom: 3px;
-  padding: 0.5rem 1rem;
+  padding: @half_base_spacer 1rem;
   height: @base_module_size;
   position: relative;
   @media (min-width: @screen-s) {
@@ -377,7 +377,7 @@
   text-align: center;
   img { min-width: inherit; }
   .fxs_detail & {
-    padding: 0 0 0.5rem;
+    padding: 0 0 @half_base_spacer;
     @media (min-width: @screen-s) { margin: 0 -2rem; }
   }
 }
@@ -385,7 +385,7 @@
 .fxs_detail {
   &:extend(.fxs_clearfix all, .fxs_contentRail_box);
   background-color: @lightest_clr;
-  margin-bottom: 0.5rem;
+  margin-bottom: @half_base_spacer;
   padding: 1rem;
   @media (min-width: @screen-s) { padding: 1.5rem 2rem; }
   .fxs_modal_page .fxs_wrapper & { min-height: @content_wide_width;}
@@ -601,7 +601,7 @@
   padding-right: @base_module_size;
   @media (min-width: @screen-s) { display: inline-block; }
   .fxs_filter {
-    margin-top: -0.5rem;
+    margin-top: -@half_base_spacer;
     @media (min-width: @screen-s) { margin-top: 5px; }
   }
 }
@@ -725,7 +725,7 @@
     padding: 0 1rem;
     vertical-align: middle;
     .fxs_copyRight{
-      margin-right: 0.5rem;
+      margin-right: @half_base_spacer;
       line-height: @base_module_size;
     }
     .fxs_subnavInlined_list {
@@ -840,11 +840,48 @@
 ////////////////// Sponsor broker /////////////
 
 .fxs_soponsored_broker {
-  margin-top: @main_header_height;
-  margin-bottom: @main_header_height;
-  .fxs_broker_sponsor_title{
-    padding: 0 1.5rem 0.3rem 1.5rem;
-    display:block;
+  border-bottom: 6px solid @dark_4_clr;
+  position: relative;
+  &.fxs_detail {
+    margin-top: @base_module_size - @half_base_spacer;
+    margin-bottom: @base_module_size - @half_base_spacer;
+    padding-top: @txt_defaultsize_px + 22px;
+    &::before, &::after {
+      display: block;
+      content: " ";
+      height: @base_module_size - @txt_defaultsize_px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      .background-image(repeating-linear-gradient(-45deg, @light_3_clr, @light_3_clr 5px, transparent 5px, transparent 10px));
+    }
+    &::before { top: -(@base_module_size - @txt_defaultsize_px); }
+    &::after { bottom: -(@base_module_size - @txt_defaultsize_px + 6px); }
+  }
+  &.fxs_listView_item {
+    margin-top: 1px;
+    margin-bottom: 3px;
+    padding-top: 32px;
+  }
+}
+
+.fxs_soponsored_broker_title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background-color: @dark_4_clr;
+  padding: 0 1rem;
+  color: @lightest_clr;
+  .fxs_label {
+    color: @lightest_clr;
+    margin: 0;
+    padding: 0;
+  }
+  .fa { margin-top: 3px; }
+  .fxs_detail & {
+    @media (min-width: @screen-s) { padding: 0 2rem; }
   }
 }
 
@@ -937,7 +974,7 @@
   padding: 0 0 1rem;
   clear: both;
   .fxs_sponsor_img {
-    margin-right: 0.5rem;
+    margin-right: @half_base_spacer;
     max-width: @base_module_size*2;
     @media (min-width: @screen-l) {
       max-width: inherit;
