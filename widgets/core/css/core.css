@@ -290,7 +290,7 @@ tbody.collapse.in {
 .fxs_plainInlined_list .fxs_btn_group {
   margin-top: -1px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .fxs_subnavInlined_list.fxs_inlined_list_bordered > li,
   .fxs_plainInlined_list.fxs_inlined_list_bordered > li {
     border-left: 1px solid #a3a3a8;
@@ -487,6 +487,16 @@ fieldset[disabled] .fxs_btn_icon {
 }
 .fxs_btn_block.fxs_sidebar_language {
   margin: 0;
+}
+.fxs_block_xs_to_inline_s_btn {
+  display: block;
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .fxs_block_xs_to_inline_s_btn {
+    width: auto;
+    display: inline-block;
+  }
 }
 .fxs_lang_btn {
   margin: 0;
@@ -781,16 +791,16 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   display: none;
 }
 .active .fxs_togglebtn_txt.toggled_txt {
-  display: block;
+  display: inline-block;
 }
 .fxs_btn_content_toggle_collapse .toggled_txt {
-  display: block;
+  display: inline-block;
 }
 .fxs_btn_content_toggle_collapse .init_txt {
   display: none;
 }
 .fxs_btn_content_toggle_collapse.collapsed .init_txt {
-  display: block;
+  display: inline-block;
 }
 .fxs_btn_content_toggle_collapse.collapsed .toggled_txt {
   display: none;
@@ -853,10 +863,10 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .fxs_alert,
 .fxs_contextual_alert,
 .fxs_global_alert {
-  -webkit-animation: grow-and-show 0.5s ease-in-out;
-  -moz-animation: grow-and-show 0.5s ease-in-out;
-  -o-animation: grow-and-show 0.5s ease-in-out;
-  animation: grow-and-show 0.5s ease-in-out;
+  -webkit-animation: fadeInDown 0.33s ease-in;
+  -moz-animation: fadeInDown 0.33s ease-in;
+  -o-animation: fadeInDown 0.33s ease-in;
+  animation: fadeInDown 0.33s ease-in;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1190,11 +1200,21 @@ width:calc(100% - 320px);
 }
 .fxs_contributorBox_header {
   margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 @media (min-width: 680px) {
+  .fxs_contributorBox_header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
   .fxs_contributorBox_header .fxs_avatar_circleImage_s,
   .fxs_contributorBox_header .fxs_squareImage_s {
     margin-right: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_contributorBox_header {
+    border-bottom: 2px solid #f0f0f1;
   }
 }
 .fxs_featured_quote {
@@ -1395,10 +1415,10 @@ width:calc(100% - 320px);
   padding-left: 0.5rem;
 }
 .fxs_feedbackLoading_msg {
-  -webkit-animation: just-appear 0.5s ease-in;
-  -moz-animation: just-appear 0.5s ease-in;
-  -o-animation: just-appear 0.5s ease-in;
-  animation: just-appear 0.5s ease-in;
+  -webkit-animation: fadeIn 0.33s ease-in;
+  -moz-animation: fadeIn 0.33s ease-in;
+  -o-animation: fadeIn 0.33s ease-in;
+  animation: fadeIn 0.33s ease-in;
   padding: 1em;
   color: #a3a3a8;
   text-align: center;
@@ -1875,31 +1895,31 @@ width:calc(100% - 320px);
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}}
-@-moz-keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}}
-@-o-keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}}
-@keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;};
+@-webkit-keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
+@-moz-keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
+@-o-keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
+@keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible};
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
-@-moz-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
-@-o-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
-@keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;};
+@-webkit-keyframes fadeInDown{ from {-webkit-transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-webkit-transform: none; height: auto; opacity:1;}}
+@-moz-keyframes fadeInDown{ from {-moz-transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-moz-transform: none; height: auto; opacity:1;}}
+@-o-keyframes fadeInDown{ from {-o-transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-o-transform: none; height: auto; opacity:1;}}
+@keyframes fadeInDown{ from {-webkit-transform: translate3d(0, -100%, 0);-moz-transform: translate3d(0, -100%, 0);-ms-transform: translate3d(0, -100%, 0);transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-webkit-transform: none;-moz-transform: none;-ms-transform: none;transform: none; height: auto; opacity:1;};
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
-@-moz-keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
-@-o-keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
-@keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible};
+@-webkit-keyframes fadeInLeft{ from {-webkit-transform: translate3d(-100%, 0, 0); opacity:0;} to {-webkit-transform: none; opacity:1;}}
+@-moz-keyframes fadeInLeft{ from {-moz-transform: translate3d(-100%, 0, 0); opacity:0;} to {-moz-transform: none; opacity:1;}}
+@-o-keyframes fadeInLeft{ from {-o-transform: translate3d(-100%, 0, 0); opacity:0;} to {-o-transform: none; opacity:1;}}
+@keyframes fadeInLeft{ from {-webkit-transform: translate3d(-100%, 0, 0);-moz-transform: translate3d(-100%, 0, 0);-ms-transform: translate3d(-100%, 0, 0);transform: translate3d(-100%, 0, 0); opacity:0;} to {-webkit-transform: none;-moz-transform: none;-ms-transform: none;transform: none; opacity:1;};
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}}
-@-moz-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}}
-@-o-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}}
-@keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;};
+@-webkit-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}}
+@-moz-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}}
+@-o-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}}
+@keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;};
 }
 .fxs_blur {
   -webkit-filter: blur(4px);
@@ -2297,10 +2317,10 @@ lesshat-selector {
 .fxs_dropdown_generic,
 .fxs_dropdownList,
 .fxs_btnGroup_dropdownList {
-  -webkit-animation: just-appear 0.25s ease-in;
-  -moz-animation: just-appear 0.25s ease-in;
-  -o-animation: just-appear 0.25s ease-in;
-  animation: just-appear 0.25s ease-in;
+  -webkit-animation: fadeIn 0.25s ease-in;
+  -moz-animation: fadeIn 0.25s ease-in;
+  -o-animation: fadeIn 0.25s ease-in;
+  animation: fadeIn 0.25s ease-in;
   display: none;
   position: absolute;
   right: 0;

@@ -725,7 +725,7 @@ input[type=submit] {
 .fxs_plainInlined_list .fxs_btn_group {
   margin-top: -1px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .fxs_subnavInlined_list.fxs_inlined_list_bordered > li,
   .fxs_plainInlined_list.fxs_inlined_list_bordered > li {
     border-left: 1px solid #a3a3a8;
@@ -845,7 +845,8 @@ input[type=submit] {
   }
 }
 .fxs_btn,
-.fxs_btn_icon {
+.fxs_btn_icon,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   background-color: transparent;
   border: 1px solid transparent;
   height: 35px;
@@ -862,7 +863,10 @@ input[type=submit] {
 .fxs_btn:hover,
 .fxs_btn_icon:hover,
 .fxs_btn:hover,
-.fxs_btn_icon:hover {
+.fxs_btn_icon:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover {
   text-decoration: none!important;
 }
 .fxs_btn.disabled,
@@ -870,7 +874,10 @@ input[type=submit] {
 .fxs_btn[disabled],
 .fxs_btn_icon[disabled],
 fieldset[disabled] .fxs_btn,
-fieldset[disabled] .fxs_btn_icon {
+fieldset[disabled] .fxs_btn_icon,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled],
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   cursor: not-allowed;
   zoom: 1;
   filter: alpha(opacity=65);
@@ -879,13 +886,15 @@ fieldset[disabled] .fxs_btn_icon {
   opacity: 0.65;
 }
 .fxs_btn .fxs_badge,
-.fxs_btn_icon .fxs_badge {
+.fxs_btn_icon .fxs_badge,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed .fxs_badge {
   position: absolute;
   right: 0;
   top: 0;
   z-index: 1;
 }
-.fxs_btn {
+.fxs_btn,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   font-size: 0.92rem;
 }
 .fxs_btn_icon {
@@ -922,6 +931,16 @@ fieldset[disabled] .fxs_btn_icon {
 }
 .fxs_btn_block.fxs_sidebar_language {
   margin: 0;
+}
+.fxs_block_xs_to_inline_s_btn {
+  display: block;
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .fxs_block_xs_to_inline_s_btn {
+    width: auto;
+    display: inline-block;
+  }
 }
 .fxs_lang_btn {
   margin: 0;
@@ -1102,17 +1121,22 @@ fieldset[disabled] .fxs_btn_danger.active {
   background-color: #cf4836;
   border-color: #cf4836;
 }
-.fxs_btn_line {
+.fxs_btn_line,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   color: #1b1c23;
   border-color: #1b1c23;
   background-color: transparent;
 }
-.fxs_btn_line:hover {
+.fxs_btn_line:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover {
   background-color: rgba(27, 28, 35, 0.15);
 }
 .fxs_btn_line.active,
 .open .fxs_btn_line.fxs_btn_dd,
-.fxs_btn_line:active {
+.fxs_btn_line:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.active,
+.open .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.fxs_btn_dd,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:active {
   background-color: #1b1c23;
 }
 .fxs_btn_line.disabled,
@@ -1132,22 +1156,47 @@ fieldset[disabled] .fxs_btn_line.focus,
 fieldset[disabled] .fxs_btn_line:active,
 .fxs_btn_line.disabled.active,
 .fxs_btn_line[disabled].active,
-fieldset[disabled] .fxs_btn_line.active {
+fieldset[disabled] .fxs_btn_line.active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled],
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled]:hover,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled:focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled]:focus,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled.focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled].focus,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled]:active,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled.active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled].active,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.active {
   background-color: rgba(27, 28, 35, 0);
 }
 .fxs_btn_line.active,
 .open .fxs_btn_line.fxs_btn_dd,
-.fxs_btn_line:active {
+.fxs_btn_line:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.active,
+.open .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.fxs_btn_dd,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:active {
   color: #ffffff;
 }
 .fxs_btn_line.inverse,
-.fxs_pageSidebar .fxs_btn_line {
+.fxs_pageSidebar .fxs_btn_line,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   color: #ffffff;
   border-color: #ffffff;
   background-color: transparent;
 }
 .fxs_btn_line.inverse:hover,
-.fxs_pageSidebar .fxs_btn_line:hover {
+.fxs_pageSidebar .fxs_btn_line:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse:hover,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
 .fxs_btn_line.inverse.active,
@@ -1155,7 +1204,13 @@ fieldset[disabled] .fxs_btn_line.active {
 .open .fxs_btn_line.inverse.fxs_btn_dd,
 .open .fxs_pageSidebar .fxs_btn_line.fxs_btn_dd,
 .fxs_btn_line.inverse:active,
-.fxs_pageSidebar .fxs_btn_line:active {
+.fxs_pageSidebar .fxs_btn_line:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.active,
+.open .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.fxs_btn_dd,
+.open .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.fxs_btn_dd,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse:active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:active {
   background-color: #ffffff;
 }
 .fxs_btn_line.inverse.disabled,
@@ -1193,7 +1248,43 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line:active,
 .fxs_btn_line.inverse[disabled].active,
 .fxs_pageSidebar .fxs_btn_line[disabled].active,
 fieldset[disabled] .fxs_btn_line.inverse.active,
-fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
+fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.disabled,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse[disabled],
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled],
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse,
+fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.disabled:hover,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse[disabled]:hover,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled]:hover,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse:hover,
+fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.disabled:focus,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled:focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse[disabled]:focus,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled]:focus,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse:focus,
+fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.disabled.focus,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled.focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse[disabled].focus,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled].focus,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.focus,
+fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.focus,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.disabled:active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse[disabled]:active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled]:active,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse:active,
+fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.disabled.active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled.active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse[disabled].active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled].active,
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.active,
+fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.active {
   background-color: rgba(255, 255, 255, 0);
 }
 .fxs_btn_line.inverse.active,
@@ -1201,7 +1292,13 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .open .fxs_btn_line.inverse.fxs_btn_dd,
 .open .fxs_pageSidebar .fxs_btn_line.fxs_btn_dd,
 .fxs_btn_line.inverse:active,
-.fxs_pageSidebar .fxs_btn_line:active {
+.fxs_pageSidebar .fxs_btn_line:active,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.active,
+.open .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse.fxs_btn_dd,
+.open .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.fxs_btn_dd,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.inverse:active,
+.fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:active {
   color: #1b1c23;
 }
 .fxs_togglebtn_txt {
@@ -1216,16 +1313,16 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   display: none;
 }
 .active .fxs_togglebtn_txt.toggled_txt {
-  display: block;
+  display: inline-block;
 }
 .fxs_btn_content_toggle_collapse .toggled_txt {
-  display: block;
+  display: inline-block;
 }
 .fxs_btn_content_toggle_collapse .init_txt {
   display: none;
 }
 .fxs_btn_content_toggle_collapse.collapsed .init_txt {
-  display: block;
+  display: inline-block;
 }
 .fxs_btn_content_toggle_collapse.collapsed .toggled_txt {
   display: none;
@@ -1290,10 +1387,10 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
 .fxs_alert,
 .fxs_contextual_alert,
 .fxs_global_alert {
-  -webkit-animation: grow-and-show 0.5s ease-in-out;
-  -moz-animation: grow-and-show 0.5s ease-in-out;
-  -o-animation: grow-and-show 0.5s ease-in-out;
-  animation: grow-and-show 0.5s ease-in-out;
+  -webkit-animation: fadeInDown 0.33s ease-in;
+  -moz-animation: fadeInDown 0.33s ease-in;
+  -o-animation: fadeInDown 0.33s ease-in;
+  animation: fadeInDown 0.33s ease-in;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1604,7 +1701,8 @@ width:calc(100% - 320px);
     font-size: 1rem;
   }
 }
-.fxs_contributorBox_big .fxs_btn {
+.fxs_contributorBox_big .fxs_btn,
+.fxs_contributorBox_big .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   display: none;
 }
 @media (min-width: 680px) {
@@ -1612,7 +1710,8 @@ width:calc(100% - 320px);
   .fxs_contributorBox_big .fxs_squareImage_s {
     margin-right: 0.5rem;
   }
-  .fxs_contributorBox_big .fxs_btn {
+  .fxs_contributorBox_big .fxs_btn,
+  .fxs_contributorBox_big .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
     display: inline-block;
   }
 }
@@ -1634,11 +1733,21 @@ width:calc(100% - 320px);
 }
 .fxs_contributorBox_header {
   margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 @media (min-width: 680px) {
+  .fxs_contributorBox_header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
   .fxs_contributorBox_header .fxs_avatar_circleImage_s,
   .fxs_contributorBox_header .fxs_squareImage_s {
     margin-right: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_contributorBox_header {
+    border-bottom: 2px solid #f0f0f1;
   }
 }
 .fxs_featured_quote {
@@ -1839,10 +1948,10 @@ width:calc(100% - 320px);
   padding-left: 0.5rem;
 }
 .fxs_feedbackLoading_msg {
-  -webkit-animation: just-appear 0.5s ease-in;
-  -moz-animation: just-appear 0.5s ease-in;
-  -o-animation: just-appear 0.5s ease-in;
-  animation: just-appear 0.5s ease-in;
+  -webkit-animation: fadeIn 0.33s ease-in;
+  -moz-animation: fadeIn 0.33s ease-in;
+  -o-animation: fadeIn 0.33s ease-in;
+  animation: fadeIn 0.33s ease-in;
   padding: 1em;
   color: #a3a3a8;
   text-align: center;
@@ -2020,12 +2129,15 @@ width:calc(100% - 320px);
 .fxs_widget_summary {
   margin-bottom: 1rem;
 }
-.fxs_widget_footer .fxs_btn {
+.fxs_widget_footer .fxs_btn,
+.fxs_widget_footer .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   float: right;
 }
 @media (min-width: 680px) {
   .fxs_widget_footer.fxs_widget_mini .fxs_btn,
-  .fxs_widget_mini .fxs_widget_footer .fxs_btn {
+  .fxs_widget_mini .fxs_widget_footer .fxs_btn,
+  .fxs_widget_footer.fxs_widget_mini .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed,
+  .fxs_widget_mini .fxs_widget_footer .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
     float: none;
   }
 }
@@ -2314,9 +2426,11 @@ select,
 .fxs_filter,
 .fxs_btn_filter,
 .fxs_dismissQuery,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse,
 .fxs_entryFeatured_img,
 .fxs_floatingMedia_imageContainer,
 .fxs_listView_squareImage,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed,
 .fxs_sexy_bannerImg,
 .fxs_entryFeatured_img,
 .fxs_entryFeatured_imgSide .fxs_entryFeatured_img {
@@ -2340,31 +2454,31 @@ select,
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}}
-@-moz-keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}}
-@-o-keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}}
-@keyframes slide-from-top{ from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;};
+@-webkit-keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
+@-moz-keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
+@-o-keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
+@keyframes fadeIn{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible};
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
-@-moz-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
-@-o-keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;}}
-@keyframes grow-and-show{ from {height:0; opacity:0;} to {height: auto; opacity:1;};
+@-webkit-keyframes fadeInDown{ from {-webkit-transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-webkit-transform: none; height: auto; opacity:1;}}
+@-moz-keyframes fadeInDown{ from {-moz-transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-moz-transform: none; height: auto; opacity:1;}}
+@-o-keyframes fadeInDown{ from {-o-transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-o-transform: none; height: auto; opacity:1;}}
+@keyframes fadeInDown{ from {-webkit-transform: translate3d(0, -100%, 0);-moz-transform: translate3d(0, -100%, 0);-ms-transform: translate3d(0, -100%, 0);transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {-webkit-transform: none;-moz-transform: none;-ms-transform: none;transform: none; height: auto; opacity:1;};
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
-@-moz-keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
-@-o-keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}}
-@keyframes just-appear{ from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible};
+@-webkit-keyframes fadeInLeft{ from {-webkit-transform: translate3d(-100%, 0, 0); opacity:0;} to {-webkit-transform: none; opacity:1;}}
+@-moz-keyframes fadeInLeft{ from {-moz-transform: translate3d(-100%, 0, 0); opacity:0;} to {-moz-transform: none; opacity:1;}}
+@-o-keyframes fadeInLeft{ from {-o-transform: translate3d(-100%, 0, 0); opacity:0;} to {-o-transform: none; opacity:1;}}
+@keyframes fadeInLeft{ from {-webkit-transform: translate3d(-100%, 0, 0);-moz-transform: translate3d(-100%, 0, 0);-ms-transform: translate3d(-100%, 0, 0);transform: translate3d(-100%, 0, 0); opacity:0;} to {-webkit-transform: none;-moz-transform: none;-ms-transform: none;transform: none; opacity:1;};
 }
 lesshat-selector {
   -lh-property: 0; } 
-@-webkit-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}}
-@-moz-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}}
-@-o-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}}
-@keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;};
+@-webkit-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}}
+@-moz-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}}
+@-o-keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}}
+@keyframes show-sponsor-from-top{ 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;};
 }
 .fxs_blur {
   -webkit-filter: blur(4px);
@@ -2544,13 +2658,16 @@ label,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a:hover,
 .fxs_typeaheadList > li.fxs_typeaheadGroup a:focus,
 .fxs_typeaheadList > li.fxs_typeaheadGroup.active a,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse,
+.fxs_broker_contact_footer .fxs_feedback_contact_msg,
 .fxs_suscribeText span,
 h1,
 h2,
 h3,
 h4,
 h5,
-.fxs_asset_label {
+.fxs_asset_label,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -2892,10 +3009,10 @@ h5 a:hover,
 .fxs_dropdown_generic,
 .fxs_dropdownList,
 .fxs_btnGroup_dropdownList {
-  -webkit-animation: just-appear 0.25s ease-in;
-  -moz-animation: just-appear 0.25s ease-in;
-  -o-animation: just-appear 0.25s ease-in;
-  animation: just-appear 0.25s ease-in;
+  -webkit-animation: fadeIn 0.25s ease-in;
+  -moz-animation: fadeIn 0.25s ease-in;
+  -o-animation: fadeIn 0.25s ease-in;
+  animation: fadeIn 0.25s ease-in;
   display: none;
   position: absolute;
   right: 0;
@@ -3512,10 +3629,12 @@ width:calc(100% - 320px);
 .fxs_social_sidebar_nav {
   padding: 10px;
 }
-.fxs_social_sidebar_nav .fxs_btn {
+.fxs_social_sidebar_nav .fxs_btn,
+.fxs_social_sidebar_nav .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   text-align: left;
 }
-.fxs_social_sidebar_nav .fxs_btn i {
+.fxs_social_sidebar_nav .fxs_btn i,
+.fxs_social_sidebar_nav .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed i {
   padding-right: 35px;
 }
 .fxs_login_message {
@@ -3826,10 +3945,10 @@ height:calc(100% - 35px - 45px);
   line-height: 35px;
   background-color: #fae7d1;
   overflow: hidden;
-  -webkit-animation: slide-from-top 0.33s ease-in;
-  -moz-animation: slide-from-top 0.33s ease-in;
-  -o-animation: slide-from-top 0.33s ease-in;
-  animation: slide-from-top 0.33s ease-in;
+  -webkit-animation: fadeInDown 0.33s ease-in;
+  -moz-animation: fadeInDown 0.33s ease-in;
+  -o-animation: fadeInDown 0.33s ease-in;
+  animation: fadeInDown 0.33s ease-in;
 }
 .fxs_listView_newItemsAlert:hover {
   background-color: #f7dbbb;
@@ -3918,10 +4037,10 @@ height:calc(100% - 35px - 45px);
   display: block;
 }
 .fxs_filter.active .fxs_queryResults.fxs_selectedQuery .fxs_queryResults_label {
-  -webkit-animation: just-appear 0.25s ease-in;
-  -moz-animation: just-appear 0.25s ease-in;
-  -o-animation: just-appear 0.25s ease-in;
-  animation: just-appear 0.25s ease-in;
+  -webkit-animation: fadeIn 0.25s ease-in;
+  -moz-animation: fadeIn 0.25s ease-in;
+  -o-animation: fadeIn 0.25s ease-in;
+  animation: fadeIn 0.25s ease-in;
   display: block;
 }
 .fxs_btn_filter,
@@ -3983,10 +4102,10 @@ fieldset[disabled] .fxs_dismissQuery {
   z-index: 100;
 }
 .fxs_dismissQuery {
-  -webkit-animation: just-appear 0.5s ease-in;
-  -moz-animation: just-appear 0.5s ease-in;
-  -o-animation: just-appear 0.5s ease-in;
-  animation: just-appear 0.5s ease-in;
+  -webkit-animation: fadeIn 0.5s ease-in;
+  -moz-animation: fadeIn 0.5s ease-in;
+  -o-animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in;
 }
 .fxs_queryResults {
   position: absolute;
@@ -4116,6 +4235,7 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_typeaheadList .fxs_typeaheadTxt {
   display: inline-block;
+  vertical-align: top;
 }
 .fxs_footer {
   position: absolute;
@@ -4194,32 +4314,136 @@ width:calc(100% - 320px);
 }
 .fxs_broker_contact_footer {
   border-top: 3px solid #f0f0f1;
+  min-height: 35px;
   padding-top: 1rem;
-}
-.fxs_broker_contact_footer .fxs_subnavInlined_list {
-  display: block;
+  position: relative;
 }
 .fxs_broker_contact_footer .fxs_subnavInlined_list li {
   line-height: 35px;
 }
-@media (min-width: 1024px) {
+.fxs_broker_contact_footer .fxs_subnavInlined_list li:last-child {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .fxs_broker_contact_footer .fxs_subnavInlined_list li:last-child {
+    display: inline-block;
+  }
+}
+@media (min-width: 680px) {
   .fxs_broker_contact_footer .fxs_subnavInlined_list {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 1rem;
   }
 }
-.fxs_broker_contact_block {
-  margin-bottom: 0.5rem;
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse {
+  background-color: transparent;
+  border: 0;
+  height: 20px;
+  margin: 2px 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  font-size: 0.8rem;
+  line-height: inherit;
 }
-@media (min-width: 1024px) {
-  .fxs_broker_contact_block {
-    float: left;
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse:hover,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse:hover {
+  text-decoration: none!important;
+}
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.disabled,
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse[disabled],
+fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse {
+  cursor: not-allowed;
+  zoom: 1;
+  filter: alpha(opacity=65);
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+}
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse .fxs_badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse .toggled_txt {
+  font-size: 0.92rem;
+}
+.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
+    width: auto;
   }
 }
-.fxs_broker_sponsor_wrapper {
+.fxs_broker_contact_footer .fxs_inlineForm_group,
+.fxs_broker_contact_footer .fxs_subscribeForm_group {
+  overflow: hidden;
+}
+@media (min-width: 680px) {
+  .fxs_broker_contact_footer .fxs_inlineForm_group,
+  .fxs_broker_contact_footer .fxs_subscribeForm_group {
+    width: 63%;
+  }
+}
+.fxs_broker_contact_footer .fxs_inlineForm_group.collapsing,
+.fxs_broker_contact_footer .fxs_subscribeForm_group.collapsing {
+  display: none;
+}
+.fxs_broker_contact_footer .fxs_contact_broker_slide {
+  display: none;
+  margin-bottom: 0;
+  -webkit-animation: fadeInLeft 0.33s ease-in;
+  -moz-animation: fadeInLeft 0.33s ease-in;
+  -o-animation: fadeInLeft 0.33s ease-in;
+  animation: fadeInLeft 0.33s ease-in;
+}
+.fxs_broker_contact_footer .fxs_contact_broker_slide.active {
+  display: block;
+}
+.fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_textInput {
+  -lh-property: 0;
+width:-webkit-calc(100% - 35px - 5px);
+width:-moz-calc(100% - 35px - 5px);
+width:calc(100% - 35px - 5px);
+;
+}
+@media (min-width: 680px) {
+  .fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_nameInput {
+    max-width: 340px;
+  }
+}
+.fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_select {
+  max-width: 120px;
+}
+.fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_formGroup,
+.fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_select {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 680px) {
+  .fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_formGroup,
+  .fxs_broker_contact_footer .fxs_contact_broker_slide .fxs_select {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_broker_contact_footer .fxs_feedback_contact_msg {
+    line-height: 35px;
+  }
+}
+.fxs_soponsored_broker {
   margin-top: 45px;
   margin-bottom: 45px;
 }
-.fxs_broker_sponsor_wrapper .fxs_broker_sponsor_title {
+.fxs_soponsored_broker .fxs_broker_sponsor_title {
   padding: 0 1.5rem 0.3rem 1.5rem;
   display: block;
 }
