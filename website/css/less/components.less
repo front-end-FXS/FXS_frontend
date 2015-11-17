@@ -63,7 +63,7 @@
   }
   .fxs_btn_group { margin-top: -1px; }
   &.fxs_inlined_list_bordered {
-    @media (min-width: @screen-m) {
+    @media (min-width: @screen-l) {
       > li {
         border-left: 1px solid @light_2_clr;
         margin-bottom: 0.25rem;
@@ -216,6 +216,15 @@
   &.fxs_sidebar_language { margin: 0; }
 }
 
+.fxs_block_xs_to_inline_s_btn {
+  display: block;
+  width: 100%;
+  @media (min-width: @screen-s) {
+    width: auto;
+    display: inline-block;
+  }
+}
+
 .fxs_lang_btn {
   margin: 0;
   background-color: @dark_3_clr;
@@ -275,15 +284,15 @@
   &.toggled_txt { display: none; }
   .active & {
     &.init_txt { display: none; }
-    &.toggled_txt { display: block; }
+    &.toggled_txt { display: inline-block; }
   }
 }
 
 .fxs_btn_content_toggle_collapse {
-  .toggled_txt { display: block; }
+  .toggled_txt { display: inline-block; }
   .init_txt { display: none; }
   &.collapsed {
-    .init_txt { display: block; }
+    .init_txt { display: inline-block; }
     .toggled_txt { display: none; }
   }
 }
@@ -344,7 +353,7 @@
 
 // ALERTS
 .fxs_alert, .fxs_contextual_alert, .fxs_global_alert {
-  .animation(grow-and-show 0.5s ease-in-out);
+  .animation(fadeInDown 0.33s ease-in);
   .reset-text();
   font-size: @txt_size_small;
   padding: 0.75rem 0.5rem;
@@ -598,9 +607,13 @@
 
 .fxs_contributorBox_header {
   margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
   @media (min-width: @screen-s) {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     .fxs_avatar_circleImage_s, .fxs_squareImage_s { margin-right: 1rem; }
   }
+  @media (min-width: @screen-m) { border-bottom: 2px solid @light_4_clr; }
 }
 
 // AUTHOR FEATURED QUOTES
@@ -787,7 +800,7 @@
 
 // LOADERS & FEEDBACK
 .fxs_feedbackLoading_msg {
-  .animation(just-appear 0.5s ease-in);
+  .animation(fadeIn 0.33s ease-in);
   padding: 1em;
   color: @light_2_clr;
   text-align: center;
