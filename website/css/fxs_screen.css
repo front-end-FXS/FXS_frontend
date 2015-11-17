@@ -501,11 +501,11 @@ input[type=email],
 input[type=password],
 input[type=search],
 input[type=tel],
-textarea {
-  -webkit-appearance: none;
+textarea,
+select {
   height: 35px;
   background-color: #ffffff;
-  border: 1px solid #2f2f33;
+  border: 1px solid #a3a3a8;
   color: #49494f;
   font-size: 0.92rem;
   padding: 5px 1rem;
@@ -515,15 +515,17 @@ input[type=email]:hover,
 input[type=password]:hover,
 input[type=search]:hover,
 input[type=tel]:hover,
-textarea:hover {
-  border-color: #a3a3a8;
+textarea:hover,
+select:hover {
+  border-color: #2f2f33;
 }
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=password]:focus,
 input[type=search]:focus,
 input[type=tel]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: 0;
   border-color: #e4871b;
 }
@@ -533,12 +535,14 @@ input[type=password]:invalid,
 input[type=search]:invalid,
 input[type=tel]:invalid,
 textarea:invalid,
+select:invalid,
 .fxs_hasError input[type=text],
 .fxs_hasError input[type=email],
 .fxs_hasError input[type=password],
 .fxs_hasError input[type=search],
 .fxs_hasError input[type=tel],
-.fxs_hasError textarea {
+.fxs_hasError textarea,
+.fxs_hasError select {
   border-color: #cf4836;
   background-color: #fbf1ef;
 }
@@ -547,9 +551,18 @@ textarea:invalid,
 .fxs_hasWarning input[type=password],
 .fxs_hasWarning input[type=search],
 .fxs_hasWarning input[type=tel],
-.fxs_hasWarning textarea {
+.fxs_hasWarning textarea,
+.fxs_hasWarning select {
   border-color: #f5c861;
   background-color: #fefaf1;
+}
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -757,7 +770,12 @@ input[type=submit] {
 .fxs_formGroup {
   margin-bottom: 1rem;
 }
-.fxs_textInput {
+.fxs_formGroup .fxs_formGroup {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.fxs_textInput,
+.fxs_select {
   width: 100%;
   margin-bottom: 0.22rem;
 }
@@ -779,25 +797,45 @@ input[type=submit] {
 .fxs_inputGroup_iconLabel .fxs_textInput {
   padding-left: 35px;
 }
-.fxs_subscribeForm_group {
-  margin-bottom: 1rem;
+.fxs_inlineForm_group .fxs_textInput,
+.fxs_inlineForm_group .fxs_select,
+.fxs_subscribeForm_group .fxs_textInput,
+.fxs_subscribeForm_group .fxs_select {
   display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  width: auto;
 }
-.fxs_subscribeForm_group > * {
-  margin-bottom: 0.5rem;
+.fxs_formGroup__addon {
+  display: inline-block;
+  background-color: #f0f0f1;
+  border: 1px solid #dddedf;
+  color: #8c8d91;
+  font-size: 0.8rem;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 0.25rem;
+  text-align: center;
+}
+.fxs_formGroup__addon:first-child {
+  float: left;
+  border-right: 0;
+}
+.fxs_formGroup__addon:last-child {
+  float: right;
+  border-left: 0;
+}
+.fxs_subscribeForm_group {
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 @media (min-width: 680px) {
   .fxs_subscribeForm_group {
     width: auto;
   }
 }
-.fxs_subscribeForm_group .fxs_textInput {
-  vertical-align: middle;
-  display: inline-block;
-}
 @media (min-width: 680px) {
   .fxs_subscribeForm_group .fxs_textInput {
-    width: auto;
     min-width: 250px;
   }
 }
@@ -2261,6 +2299,7 @@ input[type=password],
 input[type=search],
 input[type=tel],
 textarea,
+select,
 .fxs_btn,
 .fxs_btn_icon,
 .fxs_squareImage,
@@ -3243,7 +3282,7 @@ height:calc(100% - 35px);
   width: 98px;
   height: 0;
   background: url("../img/fxs_logo.png") 0 0 no-repeat;
-  background-image: url("../img/fxs_logo.svg"), none;
+  background-image: url("../img/fxs_logo.svg");
   background-size: contain;
   font-size: 15px;
   overflow: hidden;
