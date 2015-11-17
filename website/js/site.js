@@ -63,6 +63,13 @@ $(document).ready(function () {
             "Yerevan", "Zagreb"]
     };
 
+    var rates = {
+        currencies: ["EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+            "NZD/USD", "GBP/JPY"],
+        commodities: ["COPPER FUTURES", "GOLD FUTURES", "WTI CRUDE OIL LIGHT FUTURES", "BRENT CRUDE OIL FUTURES"],
+        indexes: ["DB FTSE MIB FUTURES", "DB DOW JONES FUTURES", "DB NASDAQ 100 FUTURES", "DB S&P 500 FUTURES", "DB SMI FUTURES", "DB EURO STOXX 50 FUTURES", "DB DAX FUTURES", "DB NIKKEI 225 FUTURES"]
+    };
+
     $('#q').typeahead({
         minLength: 1,
         order: "asc",
@@ -77,8 +84,32 @@ $(document).ready(function () {
                 template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
             },
             Contributors: {
-                data: data.contributors,
+                data: data.commodities,
                 template: '<div class="fxs_avatar_circleImage_s"><img class="" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"></div> <span class="fxs_typeaheadTxt">{{display}}</span>'
+            }
+        },
+        debug: true
+    });
+    $('#r').typeahead({
+        minLength: 1,
+        order: "asc",
+        group: true,
+        groupMaxItem: 6,
+        hint: true,
+        dropdownFilter: false,
+        emptyTemplate: 'No result for "{{query}}"',
+        source: {
+            Currencies: {
+                data: rates.currencies,
+                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
+            },
+            Commodities: {
+                data: rates.commodities,
+                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
+            },
+            Indexes: {
+                data: rates.indexes,
+                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
             }
         },
         debug: true
