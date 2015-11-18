@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>News - FXStreet</title>
+        <title>Brokers - FXStreet</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="../../css/fxs_screen.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -25,12 +25,12 @@
             <ul>
                 <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
                 <li><a href="" title="">Rates & Charts</a></li>
-                <li class="active"><a href="" title="">News</a></li>
+                <li><a href="" title="">News</a></li>
                 <li><a href="" title="">Analysis</a></li>
                 <li><a href="" title="">Economic Calendar</a></li>
                 <li><a href="" title="">Live Video</a></li>
                 <li><a href="" title="">Education</a></li>
-                <li><a href="" title="">Find a Broker</a></li>
+                <li class="active"><a href="" title="">Find a Broker</a></li>
             </ul>
         </nav>
         <!-- /Main-nav -->
@@ -90,12 +90,12 @@
                 <ul>
                     <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
                     <li><a href="" title="">Rates & Charts</a></li>
-                    <li class="active"><a href="" title="">News</a></li>
+                    <li><a href="" title="">News</a></li>
                     <li><a href="" title="">Analysis</a></li>
                     <li><a href="" title="">Economic Calendar</a></li>
                     <li><a href="" title="">Live Video</a></li>
                     <li><a href="" title="">Education</a></li>
-                    <li><a href="" title="">Find a Broker</a></li>
+                    <li class="active"><a href="" title="">Find a Broker</a></li>
                 </ul>
             </nav>
             <!-- /Main-nav -->
@@ -168,22 +168,37 @@
         
         <!-- Topics subnav -->
         <nav class="fxs_content_subnav">
-            <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All News</a>
+            <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Brokers</a>
+            <div class="fxs_topics_nav">
+                <span class="fxs_label">Popular topics</span>
+                <ul class="fxs_subnavInlined_list">
+                    <li><a href="#" class="fxs_mutedLink">Live Spreads</a></li>
+                    <li><a href="#" class="fxs_mutedLink">How to choose a Broker?</a></li>
+                    <li><a href="#" class="fxs_mutedLink">Regulatory Organizations</a></li>
+                </ul>
+            </div>
         </nav>
         <!-- /Topics subnav -->
 
         <div class="fxs_content" id="fxs_content">
 
-            <!-- The content rail -->
-            <div class="fxs_contentView" style="display:block">
+            <!-- Space for Global Alerts & Notifications --><!-- For dev -->
+            <!-- Add class "in" to show alerts -->
+            <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
+                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                  <i class="fa fa-close"></i>
+                  <span class="fxs_skip">Close alert</span>
+                </button>
+                <span class="fxs_alertLabel">Hey you</span>
+                <p class="fxs_alertText">                       
+                You are only viewing brokers that operate in your country.
+                </p>
+            </div>
+            <!-- /Space for Global Alerts & Notifications -->
 
-                <div class="fxs_leaderboard">
-                    <div class="fxs_add esto_es_un_ejemplo_para_borrar">
-                        <a target="_blank" href="http://adclick.g.doubleclick.net/aclk?sa=L&amp;ai=B1Pglz6MwVuumLozVWv-1rvAMjP_31AgAAAAQASAAOABYhK_YiqoCYNWN04K8CIIBF2NhLXB1Yi03OTQ1ODMxMTc0NjM1NzM2sgEQd3d3LmZ4c3RyZWV0LmNvbboBCWdmcF9pbWFnZcgBCdoBGGh0dHA6Ly93d3cuZnhzdHJlZXQuY29tL6kCDulDWfCJsj7AAgLgAgDqAgovNzEzOC9Ib21l-AL30R6AAwGQA4wGmAOMBqgDAeAEAZAGAaAGHtgHAA&amp;num=0&amp;cid=5GhaUeCSlgPdQSI4NDWiO48f&amp;sig=AOD64_0u0AD4PkhtvnnKORhLXm19_9UqfA&amp;client=ca-pub-7945831174635736&amp;adurl=https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuFNC9Slw3OH0TWavbWdfoN7hz6yuJX7LdGuWt0ylb3TwL9WC1g5k1FCwUhkFRi9e7004ohodpERx10VGDI4NQmiDTlGLeRZOFmZPcnpQzC3HxTdPhO&amp;sig=Cg0ArKJSzJBmQD6gBKal&amp;urlfix=1&amp;adurl=http://www.fxpro.co.uk/promo/fxpro/%3Futm_source%3DFxStreet%2Bcom%26utm_medium%3DBanner%26utm_term%3DBrand%26utm_content%3DUK%26utm_campaign%3D728x90%2BBanner%2Bon%2BFxStreet%26source%3D20">
-                            <img src="https://s1.2mdn.net/viewad/4310423/6-all_three_spreads_banner_728x90.jpg" alt="Advertisement" border="0" width="728" height="90">
-                        </a>
-                    </div>
-                </div>
+            <!-- The content rail -->
+            <div class="fxs_contentView">
+
                 <!-- Main Section -->
                 <main id="fxs_it_detail" role="main">
                     <div> <!-- dinamic div for dev -->
@@ -207,53 +222,50 @@
                         </header>
                     </div>
                     <section class="fxs_detail">
-                        <div class="fxs_row">
-                            <div class="fxs_cols fxs_col_67">
-                                <article class="fxs_clearfix">
-                                    <div class="fxs_squareImage">
-                                        <a href="/">
-                                            <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Título de la imagen">
+                        <article class="fxs_row">
+                            <div class="fxs_flex_col">
+                                <header class="fxs_contributorBox_header">
+                                    <!-- Broker's image -->
+                                    <div class="fxs_squareImage fxs_squareImage_s">
+                                        <a href="path/to/author" title="FxPro Financial Services Ltd">
+                                            <img src="../../img/broker-placeholder-img.png" alt="FxPro Financial Services Ltd" width="35" height="35">
                                         </a>
                                     </div>
-                                    <div class="fxs_floatingMedia_textBody">
-                                        <h3 class="fxs_headline_from_tiny_to_small">
-                                            <a href="" title="">New record lows for European sovereign yields</a>
-                                        </h3>
+                                    <!-- /Broker's image -->
+
+                                    <!-- Broker's name -->
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                       <a href="#" title="FxPro Financial Services Ltd">FxPro Financial Services Ltd</a>
+                                    </h2>
+                                    <!-- /Broker's name -->
+
+                                    <!-- Broker's meta info -->
+                                    <footer class="fxs_floatingMedia_textBody fxs_author_description">
                                         <ul class="fxs_list_unstyled">
                                             <li>
-                                                <span class="fxs_boldAntialised_style">Regulated</span> MiFID, CySEC, FCA (UK) 
+                                                <span class="fxs_boldAntialised_style">Regulated:</span> MiFID, CySEC, FCA (UK) 
                                             </li>
                                             <li>
-                                                <span class="fxs_boldAntialised_style">Foundation:</strong> 2006
+                                                <span class="fxs_boldAntialised_style">Foundation:</span> 2006
                                             </li>
-                                            <li>
-                                                <small class="fxs_hidden_m"><i class="fa fa-map-marker"></i> 13/14 Basinghall Street, City of London EC2V 5BQ, UK</small>
+                                            <li class="fxs_hidden_m">
+                                                <i class="fa fa-map-marker"></i> 13/14 Basinghall Street, City of London EC2V 5BQ, UK
                                             </li>
                                         </ul>
-                                    </div>
-                                </article>
-                                <div class="fxs_hidden_m">
-                                    <hr class="fxs_divider_second">
-                                    <ul class="fxs_subnavInlined_list">
-                                        <li><span class="fxs_boldAntialised_style">Leverage</span> up to 1:500</li>
-                                        <hr class="fxs_divider_third">
-                                        <li><span class="fxs_boldAntialised_style">Instruments</span> | Futures | Metal | Commodities | Shares | Indices</li>
-                                        <hr class="fxs_divider_third">
-                                        <li><span class="fxs_boldAntialised_style">Platforms</span> cTrader | MetaTrader4 | WebTrader | Mobile | Platforms | SuperTrader</li>
-                                        <hr class="fxs_divider_third">
-                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
-                                        <a href="#" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
-                                    </ul>
-                                </div>
+                                    </footer>
+                                    <!-- /Broker's meta info -->
 
+                                </header>
                             </div>
 
-                            <div class="fxs_col fxs_col_33">
+                            <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
                                 <!-- visible in big screens -->
-                                <div class="fxs_hidden_m">
-                                    <h3 class="fxs_subtitle">
-                                        Live Spreads Nano
-                                    </h3>
+                                <h3 class="fxs_subtitle fxs_hidden_s">
+                                    Live Spreads
+                                </h3>
+
+                                <!-- Widget spreads nano -->
+                                <div class="fxs_widget_summary">
                                     <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
                                         <tbody>
                                             <tr>
@@ -272,276 +284,1057 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Start free demo</a>
-                                    <div class="fxs_sidebar_divider"><span>or</span></div>
-                                    <button class="fxs_btn fxs_btn_line fxs_btn_block" type="button">Open my live account</button>
                                 </div>
-                                <!-- / visible in big screens -->
+                                <!-- /Widget spreads nano -->
 
                                 <!-- visible in small devices -->
                                 <div class="fxs_visible_m">
-                                    <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
-                                        <tbody>
-                                            <tr>
-                                                <td class="fxs_widget_spreads_item fxs_widget_spreads_item_lower">
-                                                    <span class="fxs_label">eur/usd</span>
-                                                    <span>1.1</span>
-                                                </td>
-                                                <td class="fxs_widget_spreads_item">
-                                                    <span class="fxs_label">gbp/usd</span>
-                                                    <span>1.1</span>
-                                                </td>
-                                                <td class="fxs_widget_spreads_item">
-                                                    <span class="fxs_label">usd/jpy</span>
-                                                    <span>1.1</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
                                     <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Download app</a>
                                 </div>
                                 <!-- / visible in small devices -->
-                            </div>
-                        </div>
 
-                        <!-- visible in big screens -->
-                        <footer class="fxs_hidden_m">
-                            <hr class="fxs_divider_second">
-                            <button class="fxs_btn fxs_btn_line fxs_fLeft" type="button"><i class="fa fa-phone"></i> Contact this broker</button>
-                            <ul class="fxs_subnavInlined_list fxs_fRight">
+                                <!-- visible in big screens -->
+                                <div class="fxs_hidden_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Start free demo</a>
+                                    <div class="fxs_sidebar_divider"><span>or</span></div>
+                                    <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Open my live account</a>
+                                </div>
+                                <!-- / visible in big screens -->
+                            </aside>
+
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- / visible in big screens -->
+                        </article>
+                        
+
+                        <footer class="fxs_broker_contact_footer">
+                            <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form" aria-controls="example-contact-form">
+                                <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                            </button>
+
+                            <!-- Contact form -->
+                            <form id="example-contact-form" class="fxs_inlineForm_group collapse">
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                    <label for="broker-contact-name-1" class="fxs_skip">Enter your full name</label>
+                                    <input id="broker-contact-name-1" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="fxs_skip">Next</span>
+                                    </button>
+                                </div>
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
+                                    <select class="fxs_select">
+                                        <option>Atlantis</option>
+                                        <option>Germany</option>
+                                        <option>Mexico</option>
+                                        <option>Murdor</option>
+                                        <option selected>Spain</option>
+                                        <option>United States</option>
+                                    </select>
+
+                                    <div class="fxs_formGroup">
+                                        <span class="fxs_formGroup__addon">(+34)</span>
+
+                                        <label title="phone" for="example-phone" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <input id="example-phone" type="tel" class="fxs_textInput" placeholder="Your phone number">
+                                    </div>
+                                    <button type="button" class="fxs_btn fxs_btn_cta fxs_block_xs_to_inline_s_btn">Call me</button>
+                                </div>
+                            </form>
+                            <!-- /Contact form -->
+
+                            <!-- Contact links -->
+                            <ul class="fxs_subnavInlined_list">
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
                             </ul>
+                            <!-- /Contact links -->
                         </footer>
-                        <!-- / visible in big screens -->
 
-                        <!-- visible in small screens -->
-                        <footer class="fxs_visible_m">
+                    </section>
+
+                    <!-- sponsored content -->
+
+                    <section class="fxs_detail fxs_soponsored_broker">
+                        <div class="fxs_soponsored_broker_title">
+                            <span class="fxs_label">Sponsored Broker</span>
+                            <i class="fa fa-question-circle fxs_fRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i>
+                        </div>
+                        <article class="fxs_row">
+                            <div class="fxs_flex_col">
+                                <header class="fxs_contributorBox_header">
+                                    <!-- Broker's image -->
+                                    <div class="fxs_squareImage fxs_squareImage_s">
+                                        <a href="path/to/author" title="Orbex">
+                                            <img src="../../img/brokers/orbex.jpg" alt="Orbex" width="35" height="35">
+                                        </a>
+                                    </div>
+                                    <!-- /Broker's image -->
+
+                                    <!-- Broker's name -->
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                        <a href="#" title="Orbex">Orbex</a>
+                                        <span class="fxs_label fxs_label_featured fxs_marginHalf_bottom">Gold Partner</span>
+                                    </h2>
+                                    <!-- /Broker's name -->
+
+                                    <!-- Broker's meta info -->
+                                    <footer class="fxs_floatingMedia_textBody fxs_author_description">
+                                        <ul class="fxs_list_unstyled">
+                                            <li>
+                                                <span class="fxs_boldAntialised_style">Regulated:</span> MiFID, CySEC, FCA (UK) 
+                                            </li>
+                                            <li>
+                                                <span class="fxs_boldAntialised_style">Foundation:</span> 2006
+                                            </li>
+                                            <li class="fxs_hidden_m">
+                                                <i class="fa fa-map-marker"></i> 13/14 Basinghall Street, City of London EC2V 5BQ, UK
+                                            </li>
+                                        </ul>
+                                    </footer>
+                                    <!-- /Broker's meta info -->
+
+                                </header>
+                            </div>
+
+                            <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
+                                <!-- visible in big screens -->
+                                <h3 class="fxs_subtitle fxs_hidden_s">
+                                    Live Spreads
+                                </h3>
+
+                                <!-- Widget spreads nano -->
+                                <div class="fxs_widget_summary">
+                                    <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
+                                        <tbody>
+                                            <tr>
+                                                <td class="fxs_widget_spreads_item fxs_widget_spreads_item_lower">
+                                                    <span class="fxs_label">eur/usd</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                                <td class="fxs_widget_spreads_item">
+                                                    <span class="fxs_label">gbp/usd</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                                <td class="fxs_widget_spreads_item">
+                                                    <span class="fxs_label">usd/jpy</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /Widget spreads nano -->
+
+                                <!-- visible in small devices -->
+                                <div class="fxs_visible_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Download app</a>
+                                </div>
+                                <!-- / visible in small devices -->
+
+                                <!-- visible in big screens -->
+                                <div class="fxs_hidden_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Start free demo</a>
+                                    <div class="fxs_sidebar_divider"><span>or</span></div>
+                                    <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Open my live account</a>
+                                </div>
+                                <!-- / visible in big screens -->
+                            </aside>
+
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- / visible in big screens -->
+
+                        </article>
+                        
+
+                        <footer class="fxs_broker_contact_footer">
+                            <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form-2" aria-controls="example-contact-form-2">
+                                <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                            </button>
+
+                            <!-- Contact form -->
+                            <form id="example-contact-form-2" class="fxs_inlineForm_group collapse">
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                    <label for="broker-contact-name-2" class="fxs_skip">Enter your full name</label>
+                                    <input id="broker-contact-name-2" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="fxs_skip">Next</span>
+                                    </button>
+                                </div>
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
+                                    <select class="fxs_select">
+                                        <option>Atlantis</option>
+                                        <option>Germany</option>
+                                        <option>Mexico</option>
+                                        <option>Murdor</option>
+                                        <option selected>Spain</option>
+                                        <option>United States</option>
+                                    </select>
+
+                                    <div class="fxs_formGroup">
+                                        <span class="fxs_formGroup__addon">(+34)</span>
+
+                                        <label title="phone" for="example-phone-2" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <input id="example-phone-2" type="tel" class="fxs_textInput" placeholder="Your phone number">
+                                    </div>
+                                    <button type="button" class="fxs_btn fxs_btn_cta fxs_block_xs_to_inline_s_btn">Call me</button>
+                                </div>
+                            </form>
+                            <!-- /Contact form -->
+
+                            <!-- Contact links -->
                             <ul class="fxs_subnavInlined_list">
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
                                 <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
                             </ul>
+                            <!-- /Contact links -->
                         </footer>
-                        <!-- / visible in small screens -->
 
                     </section>
+                    <!-- / sponsored content -->
+
+                    <!-- content with bonus link -->
+
+                    <section class="fxs_detail">
+                        <article class="fxs_row fxs_marginHalf_bottom">
+                            <div class="fxs_flex_col">
+                                <header class="fxs_contributorBox_header">
+                                    <!-- Broker's image -->
+                                    <div class="fxs_squareImage fxs_squareImage_s">
+                                        <a href="path/to/author" title="FXCM Inc">
+                                            <img src="../../img/brokers/fx-cm.jpg" alt="FXCM Inc" width="35" height="35">
+                                        </a>
+                                    </div>
+                                    <!-- /Broker's image -->
+
+                                    <!-- Broker's name -->
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                        <a href="" title="FXCM Inc">FXCM Inc</a>
+                                    </h2>
+                                    <!-- /Broker's name -->
+
+                                    <!-- Broker's meta info -->
+                                    <footer class="fxs_floatingMedia_textBody fxs_author_description">
+                                        <ul class="fxs_list_unstyled">
+                                            <li>
+                                                <span class="fxs_boldAntialised_style">Regulated:</span> MiFID, CySEC, FCA (UK) 
+                                            </li>
+                                            <li>
+                                                <span class="fxs_boldAntialised_style">Foundation:</span> 2006
+                                            </li>
+                                            <li class="fxs_hidden_m">
+                                                <i class="fa fa-map-marker"></i> 13/14 Basinghall Street, City of London EC2V 5BQ, UK
+                                            </li>
+                                        </ul>
+                                    </footer>
+                                    <!-- /Broker's meta info -->
+
+                                </header>
+                            </div>
+
+                            <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
+                                <!-- visible in big screens -->
+                                <h3 class="fxs_subtitle fxs_hidden_s">
+                                    Live Spreads
+                                </h3>
+
+                                <!-- Widget spreads nano -->
+                                <div class="fxs_widget_summary">
+                                    <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
+                                        <tbody>
+                                            <tr>
+                                                <td class="fxs_widget_spreads_item fxs_widget_spreads_item_lower">
+                                                    <span class="fxs_label">eur/usd</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                                <td class="fxs_widget_spreads_item">
+                                                    <span class="fxs_label">gbp/usd</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                                <td class="fxs_widget_spreads_item">
+                                                    <span class="fxs_label">usd/jpy</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /Widget spreads nano -->
+
+                                <!-- visible in small devices -->
+                                <div class="fxs_visible_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Download app</a>
+                                </div>
+                                <!-- / visible in small devices -->
+
+                                <!-- visible in big screens -->
+                                <div class="fxs_hidden_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Start free demo</a>
+                                    <div class="fxs_sidebar_divider"><span>or</span></div>
+                                    <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Open my live account</a>
+                                </div>
+                                <!-- / visible in big screens -->
+                            </aside>
+
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- / visible in big screens -->
+
+                        </article>
+
+                        <!-- Bonus alert!!!! -->
+                        <div class="fxs_contextual_alert fxs_alert_info">
+                            <span class="fxs_alertLabel">Bonus</span>
+                            <p class="fxs_alertText"><a href="#" data-toggle="modal" data-target="#fxs_modal">FXCM New Clients $30 No Deposit Bonus | Valid For: 106 days </a></p>
+                        </div>
+                        <!-- /Bonus alert!!!! -->
+
+                        <footer class="fxs_broker_contact_footer">
+                            <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form-3" aria-controls="example-contact-form-3">
+                                <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                            </button>
+
+                            <!-- Contact form -->
+                            <form id="example-contact-form-3" class="fxs_inlineForm_group collapse">
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_first_slide">
+                                    <label for="broker-contact-name-3" class="fxs_skip">Enter your full name</label>
+                                    <input id="broker-contact-name-3" type="text" class="fxs_textInput fxs_nameInput" placeholder="Your full name please" tabindex="1">
+                                    <button type="button" class="fxs_btn_icon fxs_btn_functional" data-toggle="fxs_second_slide">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="fxs_skip">Next</span>
+                                    </button>
+                                </div>
+                                <div class="fxs_formGroup fxs_contact_broker_slide fxs_second_slide">
+                                    <select class="fxs_select">
+                                        <option>Atlantis</option>
+                                        <option>Germany</option>
+                                        <option>Mexico</option>
+                                        <option>Murdor</option>
+                                        <option selected>Spain</option>
+                                        <option>United States</option>
+                                    </select>
+
+                                    <div class="fxs_formGroup">
+                                        <span class="fxs_formGroup__addon">(+34)</span>
+
+                                        <label title="phone" for="example-phone-3" class="fxs_skip">
+                                            Your phone number
+                                        </label>
+                                        <input id="example-phone-3" type="tel" class="fxs_textInput" placeholder="Your phone number">
+                                    </div>
+                                    <button type="button" class="fxs_btn fxs_btn_cta fxs_block_xs_to_inline_s_btn">Call me</button>
+                                </div>
+                            </form>
+                            <!-- /Contact form -->
+
+                            <!-- Contact links -->
+                            <ul class="fxs_subnavInlined_list">
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
+                            </ul>
+                            <!-- /Contact links -->
+                        </footer>
+
+                    </section>
+
+                    <!-- / content with bonus link -->
+
+                    <!-- wizard section -->
+
+                    <section class="fxs_detail fxs_contextual_section">
+                        <strong class="fxs_txt_large fxs_marginBase_bottom fxs_iBlock">Which pair you trade the most?</strong>
+                        <form>
+                            <div class="fxs_formGroup">
+
+                                <ul class="fxs_plainInlined_list">
+                                    <li class="fxs_marginBase_right">
+                                        <label class="fxs_checkboxGroup">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                            EUR/USD
+                                          </label>
+                                    </li>
+                                    <li class="fxs_marginBase_right">
+                                        <label class="fxs_checkboxGroup">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            GBP/USD
+                                        </label>
+                                    </li>
+                                    <li class="fxs_marginBase_right">
+                                        <label class="fxs_checkboxGroup">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                            GBP/USD
+                                        </label>
+                                    </li>
+                                    <li class="fxs_marginBase_right">
+                                       <label class="fxs_checkboxGroup">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            USD/CHF
+                                      </label>
+                                    </li>
+                                    <li class="fxs_marginBase_right">
+                                        <label class="fxs_checkboxGroup">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            AUD/USD
+                                        </label>
+                                    </li>
+                                    <li class="fxs_marginBase_right">
+                                        <label class="fxs_checkboxGroup">
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            EUR/CHF
+                                        </label>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <button class="fxs_btn fxs_btn_line inverse" type="submit">Button Line</button>
+                        </form>
+                    </section>
+
+                    <!-- /wizard section -->
+                    
+                    <section class="fxs_detail">
+                        <article class="fxs_row">
+                            <div class="fxs_flex_col">
+                                <header class="fxs_contributorBox_header">
+                                    <!-- Broker's image -->
+                                    <div class="fxs_squareImage fxs_squareImage_s">
+                                        <a href="path/to/author" title="XM XEMarkets">
+                                            <img src="../../img/brokers/xm.jpg" alt="XM XEMarkets" width="35" height="35">
+                                        </a>
+                                    </div>
+                                    <!-- /Broker's image -->
+
+                                    <!-- Broker's name -->
+                                    <h2  class="fxs_floatingMedia_textBody fxs_headline_medium" rel="author">
+                                        <a href="#" title="XM XEMarkets">XM XEMarkets</a>
+                                    </h2>
+                                    <!-- /Broker's name -->
+
+                                    <!-- Broker's meta info -->
+                                    <footer class="fxs_floatingMedia_textBody fxs_author_description">
+                                        <ul class="fxs_list_unstyled">
+                                            <li>
+                                                <span class="fxs_boldAntialised_style">Regulated:</span> MiFID, CySEC, FCA (UK) 
+                                            </li>
+                                            <li>
+                                                <span class="fxs_boldAntialised_style">Foundation:</span> 2006
+                                            </li>
+                                            <li class="fxs_hidden_m">
+                                                <i class="fa fa-map-marker"></i> 13/14 Basinghall Street, City of London EC2V 5BQ, UK
+                                            </li>
+                                        </ul>
+                                    </footer>
+                                    <!-- /Broker's meta info -->
+
+                                </header>
+                            </div>
+
+                            <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
+                                <!-- visible in big screens -->
+                                <h3 class="fxs_subtitle fxs_hidden_s">
+                                    Live Spreads
+                                </h3>
+
+                                <!-- Widget spreads nano -->
+                                <div class="fxs_widget_summary">
+                                    <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
+                                        <tbody>
+                                            <tr>
+                                                <td class="fxs_widget_spreads_item fxs_widget_spreads_item_lower">
+                                                    <span class="fxs_label">eur/usd</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                                <td class="fxs_widget_spreads_item">
+                                                    <span class="fxs_label">gbp/usd</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                                <td class="fxs_widget_spreads_item">
+                                                    <span class="fxs_label">usd/jpy</span>
+                                                    <span>1.1</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /Widget spreads nano -->
+
+                                <!-- visible in small devices -->
+                                <div class="fxs_visible_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Download app</a>
+                                </div>
+                                <!-- / visible in small devices -->
+
+                                <!-- visible in big screens -->
+                                <div class="fxs_hidden_m">
+                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Start free demo</a>
+                                    <div class="fxs_sidebar_divider"><span>or</span></div>
+                                    <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Open my live account</a>
+                                </div>
+                                <!-- / visible in big screens -->
+                            </aside>
+
+                            <!-- visible in big screens -->
+                            <div class="fxs_flex_col fxs_hidden_s fxs_marginHalf_bottom">
+                                <ul class="fxs_list_table fxs_entryPlain_txt_small">
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Leverage</dt>
+                                            <dd>up to 1:500</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                            <dt>Instruments</dt>
+                                            <dd>
+                                                <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        Futures
+                                                    </li>
+                                                    <li>
+                                                        Metals
+                                                    </li>
+                                                    <li>
+                                                        Commodities
+                                                    </li>
+                                                    <li>
+                                                        Shares
+                                                    </li>
+                                                    <li>
+                                                        Indices
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <dl class="fxs_inlined_definition_list">
+                                          <dt>Platforms</dt>
+                                          <dd>
+                                              <ul class="fxs_plainInlined_list fxs_inlined_list_bordered">
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">cTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">MetaTrader4</a> 
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">WebTrader</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">Mobile</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="fxs_mutedLink" href="path-to-broker-platform" target="_blank">SuperTrader</a>
+                                                    </li>
+                                                </ul>
+                                          </dd>
+                                        </dl>
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
+                                        <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- / visible in big screens -->
+
+                        </article>
+                        
+
+                        <footer class="fxs_broker_contact_footer">
+                            <!-- Broker contacted msg -->
+                            <div class="fxs_feedback_contact_msg fade in">
+                                <span class="fxs_txt_success">Thanks! We will call you as soon as possible.</span>
+                            </div>
+                            <!-- /Broker contacted msg -->
+
+                            <!-- Contact links -->
+                            <ul class="fxs_subnavInlined_list">
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
+                                <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Customer service</a></li>
+                            </ul>
+                            <!-- /Contact links -->
+                        </footer>
+
+                    </section>
+
+
                 </main>
                 <!-- //Main Section -->
-
-                <section class="fxs_detail">  
-                </section>
-
-                <section class="fxs_detail">  
-                </section>
-                
-
             </div>
             <!-- /The content rail -->
         </div>
 
         <!-- ListView -->
-        <section class="fxs_listView" id="cbp-spmenu-s3" style="display:none">
+        <section class="fxs_listView" id="cbp-spmenu-s3">
             <header class="fxs_listview_subnav">
-                <h2 class="fxs_helperLabel_title">Latest News</h2>
-
-                <!-- Typeahead -->
+                <h2 class="fxs_helperLabel_title">All brokers</h2>
                 <div class="fxs_filter">
-                    <form>
+                    
                         <div class="fxs_typeaheadContainer">
-                            <label for="q" class="fxs_btn_filter" title="Search in news">
-                                <i class="fa fa-search"></i>
-                                <span class="fxs_skip">Search in news</span>
-                            </label>
+                            <button type="button" class="fxs_btn_filter" title="Filter results" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
+                                <i class="fa fa-sliders"></i>
+                                <span class="fxs_skip">Filter results</span>
+                            </button>
                             <div class="fxs_queryResults">
-                                <!-- Contador de resultados: activar cuando se selecciona uno -->
-                                <span class="fxs_queryResults_label">1238 Results</span>
-                                <!-- /Contador de resultados -->
-                                <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
+                                    Cancel
+                                </button>
                             </div>
-                            <div class="fxs_typeaheadField">
-                                <div class="fxs_typeaheadQuery">
-                                    <input id="q" name="q" type="search" placeholder="Search in news" autocomplete="off">
+                            <div class="fxs_typeaheadField fxs_txt_center">
+                                <span class="fxs_helperLabel_title">Filter brokers</span>
+                            </div>
+                        </div>
+                    
+                </div>
+            </header>
+            <div id="brokers-filter-block" class="fxs_listViewRail fxs_filter_rail collapse">
+                <div class="fxs_filter_rail_container">
+                    <form>
+                        <fieldset class="fxs_fieldset">
+                            <select class="fxs_select">
+                                <option selected>-Business nature-</option>
+                                <option>Broker</option>
+                                <option>NDD</option>
+                                <option>STP</option>
+                                <option>DMA</option>
+                                <option>ECN</option>
+                                <option>Market Maker</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="fxs_fieldset">
+                            <legend>Regulation</legend>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> FSA (UK)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> NFA (USA)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> FXA (JP)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> FINMA (CH)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> MFSA (MT)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> ASIC (AU)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> DFSA (DK)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> AMF (FR)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> CySEC (CY)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> BAFIN (DE)
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fxs_fieldset fxs_inlineForm_group">
+                            <div class="fxs_formGroup fxs_splitForm_group">
+                                <label for="min-deposit">
+                                    Min. Deposit
+                                </label>
+                               <div class="fxs_formGroup">
+                                    <span class="fxs_formGroup__addon">$</span>
+                                    <input id="min-deposit" type="text" class="fxs_textInput fxs_textInput_mini" placeholder="00000" maxlength="5">
+                                    <span class="fxs_label">USD</span>
                                 </div>
                             </div>
+                            <div class="fxs_formGroup fxs_splitForm_group">
+                                <label for="max-leverage">
+                                    Max. Leverage <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explains Leverage in just few words please"></i>
+                                </label>
+                               <div class="fxs_formGroup">
+                                    <span class="fxs_formGroup__addon">1:</span>
+                                    <input id="max-leverage" type="text" class="fxs_textInput fxs_textInput_mini" placeholder="0000" maxlength="4 ">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="fxs_apply_filters_block">
+                            <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block" data-remove="filter-active-class">Apply filters</button>
                         </div>
                     </form>
                 </div>
-                <!-- /Typeahead -->
-
-            </header>
+            </div>
             <nav class="fxs_listViewRail">
-                <a href="#" class="fxs_listView_newItemsAlert">
-                    See 2 New Updates
-                </a>
                 <ol class="fxs_listView_blockWrapper">
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                <img src="../../img/brokers/fx-pro.jpg" alt="Cute cat">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">EUR/USD Forecast: Shy upward correction underway</a>
+                                    <a href="/">FxPro Financial Services Ltd</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
-                                </address>
+
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item fxs_soponsored_broker">
+                        <div class="fxs_soponsored_broker_title">
+                            <span class="fxs_label">Sponsored Broker</span>
+                            <i class="fa fa-question-circle fxs_fRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i>
+                        </div>
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="../../img/brokers/orbex.jpg" alt="Orbex">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Orbex</a>
+                                </h3>
+                                <span class="fxs_label fxs_label_featured">Gold Partner</span>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat">
+                                <img src="../../img/brokers/fx-cm.jpg" alt="Cage">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">FXCM Inc</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:32">22 <abbr title="Minutes">min</abbr> ago</time>
-                                </address>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="fxs_listView_adContiner">
-                        <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
-                        <img class="fxs_hidden_xs fxs_visible_m EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://www.denimblog.com/wp-content/uploads/2009/08/250x250.png" width="250" height="250">
-                        <img class="fxs_visible_xs EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://yaffacdn.s3.amazonaws.com/live/adnews/images/dmImage/SourceImage/opPICTURE06.jpg" width="320" height="49">
-                    </li>
-                    <li class="fxs_listView_item">
-                        <article class="fxs_clearfix">
-                            <figure class="fxs_listView_squareImage">
-                                <img src="http://www.placecage.com/300/200" alt="Cage">
-                            </figure>
-                            <div class="fxs_floatingMedia_textBody">
-                                <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
-                                </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/ERmerV5laR2Zq/giphy.gif" alt="Cute cat">
+                                <img src="../../img/brokers/octa-fm.jpg" alt="Cute cat">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">Octa FX UK Limited</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://www.placecage.com/c/460/300" alt="Cage">
+                                <img src="../../img/brokers/xm.jpg" alt="Cage">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">XM XEMarkets</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:28">Sept 13, 09:28 UTC</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                <img src="../../img/brokers/hantec.jpg" alt="Cute cat actual">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">Hantec Markets</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:27">Sept 13, 09:27 UTC</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                <img src="../../img/brokers/fx-pro.jpg" alt="Cute cat">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">FxPro Financial Services Ltd</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:25">Sept 13, 09:25 UTC</time>
-                                </address>
-                            </div>
-                        </article>
-                    </li>
-                    <li class="fxs_listView_item">
-                        <article class="fxs_clearfix">
-                            <div class="fxs_floatingMedia_textBody">
-                                <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
-                                </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 08:12">Sept 13, 08:12 UTC</time>
-                                </address>
+
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                <img src="../../img/brokers/fx-cm.jpg" alt="Cage">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
-                                <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">FXCM Inc</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 08:00">Sept 13, 08:00 UTC</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                <img src="../../img/brokers/octa-fm.jpg" alt="Cute cat">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">Octa FX UK Limited</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-12 09:25">Sept 12, 09:25 UTC</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
-                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                <img src="../../img/brokers/xm.jpg" alt="Cage">
                             </figure>
                             <div class="fxs_floatingMedia_textBody">
                                 <h3 class="fxs_headline_tiny">
-                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    <a href="/">XM XEMarkets</a>
                                 </h3>
-                                <address class="fxs_entry_metaInfo">
-                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-12 09:12">Sept 12, 09:12 UTC</time>
-                                </address>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="../../img/brokers/hantec.jpg" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Hantec Markets</a>
+                                </h3>
+                                <span class="fxs_author_description">
+                                    Regulated MiFID, CySEC, FCA (UK)
+                                </span>
                             </div>
                         </article>
                     </li>
@@ -851,7 +1644,36 @@
 
     </div>
     <!-- /The wrapper -->
-    
+    <div class="fxs_modal_wrap modal fade" id="fxs_modal">
+        <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close Modal">
+            <i class="fa fa-times"></i>
+            <span class="fxs_skip">Close Modal</span>
+        </button>
+        <div class="fxs_modal_content">
+
+            <!-- Modal header -->
+
+            <!-- Modal body -->
+
+            <div class="fxs_modal_sm">
+
+                <div class="fxs_detail fxs_modal_sm_content">
+                    <h3 class="fxs_headline_from_tiny_to_small">FXCM New Clients $30 No Deposit Bonus</h3>
+                    <div class="fxs_entryPlain_txt">
+                        <p>
+                            Everyone loves rebates and here at HiWayFX we have decided to supersize it by giving you back a massive $15/Lot. Switch now to HiWayFX, apply for the rebates scheme within myHiWayFX, and get $15 back for every lot you trade.
+                        </p>
+                    </div>
+                    <div class="fxs_clearfix">
+                        <small>Valid For: 56 days</small>
+                    </div>
+                    <a class="fxs_btn fxs_btn_cta fxs_btn_small" role="button">Apply now!</a>
+                </div>
+            </div>
+            
+            <!-- /Modal body -->
+        </div>
+    </div>
 
     <script src="../../js/jquery-1.11.3.min.js"></script>
     <!-- Bootstrap -->
@@ -860,6 +1682,37 @@
     <script src="../../js/classie.js"></script>
     <script src="../../js/jquery.typeahead.min.js"></script>
     <script src="../../js/site.js"></script>
+
+    <script>
+        ////////////////////////// Bootstrap
+        // Activate bootstrap tooltip (must be!)
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+        
+        ////////////////////////////////////////////// Custom cutre js
+        // force collapsed class - Validate IT
+        $('.fxs_btn_content_toggle_collapse').addClass('collapsed');
+
+        //////////////////////////////////////////////////////////////////////
+        // Metido a saco para simular los slides de formulario - Validate IT
+        // REPEAT: METIDO A SACO, HACER FINO
+        $('[data-toggle="collapse"]').click(function() {
+            $(this).parent('.fxs_broker_contact_footer').find('.fxs_first_slide').addClass( "active" );
+            // Please make focus on click the #broker-contact-name-n
+            $(this).parent('.fxs_broker_contact_footer').find('.fxs_second_slide').removeClass( "active" );
+        });
+
+        $('[data-toggle="fxs_second_slide"]').click(function() {
+            $(this).closest('.fxs_inlineForm_group').find('.fxs_contact_broker_slide').toggleClass( "active" );
+        });
+
+        // TODAVÍA MÁS A SACO: remover clase activa del .fxs_filter al pulsar botón de "Apply filter"
+        $('[data-remove="filter-active-class"]').click(function() {
+            $('.fxs_filter').removeClass( "active" );
+        });
+
+    </script>
 
 </body>
 

@@ -35,7 +35,7 @@
         
         <button type="button" id="showRightPush" class="fxs_show_usermenu">
             <span class="fxs_badge">1</span>
-            <span class="fxs_avatar_circleImage_s">
+            <span class="fxs_avatar_circleImage_s fxs_align_middle">
                 <img src="../img/user_avatar.jpg">
             </span>
             <span class="fxs_skip">User Settings</span>
@@ -376,7 +376,7 @@
         <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
             <div class="fxs_user_area_content">
                 <div class="form_group">
-                    <label>
+                    <label data-toggle="tooltip" data-placement="right" title="" data-original-title="Upload your profile picture">
                         <span class="fxs_avatar_circleImage_m">
                             <img src="../img/user_avatar_2.jpg">
                         </span>
@@ -614,6 +614,13 @@
     <script src="../js/classie.js"></script>
     <script src="../js/jquery.typeahead.min.js"></script>
     <script src="../js/site.js"></script>
+
+    <script>
+        // Activate bootstrap tooltip (must be!)
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
 
 </body>
 

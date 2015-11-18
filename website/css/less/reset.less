@@ -131,6 +131,10 @@ ul {
   }
 }
 
+dl {
+  dt { &:extend(.fxs_boldAntialised_style); }
+}
+
 code, pre {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   padding: 4px;
@@ -165,16 +169,15 @@ button, input {
 }
 
 // Text inputs & fields
-input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea {
+input[type=text], input[type=email], input[type=password], input[type=search], input[type=tel], textarea, select {
   &:extend(.fxs_transition);
-  -webkit-appearance: none; // Reset para safari y iOS
   height: @base_module_size;
   background-color: @lightest_clr;
-  border: 1px solid @dark_3_clr;
+  border: 1px solid @light_2_clr;
   color: @dark_4_clr;
   font-size: @txt_size_small;
   padding: 5px 1rem;
-  &:hover { border-color: @light_2_clr; }
+  &:hover { border-color: @dark_3_clr; }
   &:focus {
     outline: 0;
     border-color: @highlight_clr;
@@ -187,6 +190,11 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
     border-color: @warning_clr;
     background-color: lighten(@warning_clr, 30%);
   } 
+}
+
+input[type=text], input[type=email], input[type=password],
+input[type=search], input[type=tel], textarea {
+  -webkit-appearance: none; // Reset para safari y iOS 
 }
 
 input[type="search"]{
