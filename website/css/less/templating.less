@@ -422,24 +422,6 @@
   }
 }
 
-.fxs_listViewRail {
-  &:extend(.fxs_scrollableContent all);
-  padding-bottom: @base_module_size;
-  position: absolute;
-  top: @base_module_size;
-  width: 100%;
-  .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
-  @media (min-width: @screen-l) {
-    overflow-y: hidden;
-    &:hover { overflow-y: scroll; }
-  }
-  .fxs_dateIndicator_divider, .fxs_feedbackLoading_msg, .fxs_listView_blockWrapper {
-    @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
-    @media (min-width: @screen-l) { width: @left_rail_space; }
-  }
-  .fxs_modal_page  & { height: 100%; }
-}
-
 // Absolute dimension spaces in layout
 .fxs_listView, .fxs_listViewRail {
   @media (min-width: @screen-s) {
@@ -450,6 +432,27 @@
     width: @left_rail_space + 5px;
     padding-right: 5px;
   }
+}
+
+.fxs_listView_space {
+  @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
+  @media (min-width: @screen-l) { width: @left_rail_space; }
+}
+
+.fxs_listViewRail {
+  &:extend(.fxs_scrollableContent all);
+  position: absolute;
+  top: @base_module_size;
+  width: 100%;
+  .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
+  @media (min-width: @screen-l) {
+    overflow-y: hidden;
+    &:hover { overflow-y: scroll; }
+  }
+  .fxs_dateIndicator_divider, .fxs_feedbackLoading_msg {
+    &:extend(.fxs_listView_space all);
+  }
+  .fxs_modal_page  & { height: 100%; }
 }
 
 .fxs_listview_subnav {
@@ -464,21 +467,30 @@
 }
 
 .fxs_listView_blockWrapper {
-  &:extend(.fxs_list_unstyled);
+  &:extend(.fxs_list_unstyled, .fxs_listView_space all);
   position: relative;
 }
 
-.fxs_listView_newItemsAlert {
+.fxs_listViewAlert {
+  &:extend(.fxs_listView_space all);
+  .animation(fadeInDown 0.33s ease-in);
   display: block;
   text-align: center;
-  font-size: @txt_size_small;
-  line-height: @base_module_size;
-  background-color: lighten(@highlight_clr, 40%);
+  font-size: @txt_size_xsmall;
+  line-height: @base_module_size - 5px;
   overflow: hidden;
-  .animation(fadeInDown 0.33s ease-in);
+}
+.fxs_listView_newItemsAlert {
+  &:extend(.fxs_listViewAlert);
+  background-color: lighten(@highlight_clr, 40%);
   &:hover{ background-color: lighten(@highlight_clr, 35%); }
-  @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
-  @media (min-width: @screen-l) { width: @left_rail_space; }
+}
+
+.fxs_listView_filterAlert {
+  &:extend(.fxs_listViewAlert, .fxs_boldAntialised_style, .fxs_transition);
+  background-color: @light_5_clr;
+  color: @dark_1_clr;
+  &:hover{ background-color: @light_3_clr; }
 }
 
 .fxs_listView_item, .fxs_listView_adContiner {
@@ -525,9 +537,51 @@
   height: 100%;
   position: relative;
 }
+
 ///////////////////////////////////////////////////////////////
 //////////////////// FXStreet Typeahead //////////////////////
 .fxs_queryResults, .fxs_queryResults_label { display: none; }
+
+.fxs_typeaheadField {
+  position: relative;
+  width: 100%;
+  height: @base_module_size;
+  input {
+    width: 100%;
+    line-height: @base_module_size;
+    padding: 5px 0 5px @base_module_size;
+    border-width: 0;
+    border-bottom-width: 3px;
+    &.disabled, &[disabled] {
+      cursor: not-allowed;
+      background-color: @light_5_clr;
+    }
+    &.typeahead-hint[readonly] {
+      background-color: transparent;
+      border:none!important;
+    }
+    &, &:hover { border-color: transparent; }
+  }
+  .fxs_helperLabel_title {
+    display: none;
+    white-space: nowrap;
+    .opacity(0);
+  }
+  .fxs_filter.active & {
+    background-color: @lightest_clr;
+    input {
+      border-color: @light_3_clr;
+      padding-right: @base_module_size;
+      &:hover { border-color: @light_2_clr; }
+      &:focus { border-color: @highlight_clr; }
+    }
+    .fxs_helperLabel_title {
+      .animation(fadeIn 0.66s ease-in);
+      display: block;
+      .opacity(1);
+    }
+  }
+}
 
 .fxs_filter{
   &:extend(.fxs_transition);
@@ -540,20 +594,11 @@
     width: 100%;
     overflow: visible;
     .fxs_btn_filter { color: @light_2_clr; }
-    .fxs_typeaheadField {
-      background-color: @lightest_clr;
-      input {
-        border-color: @light_3_clr;
-        padding-right: @base_module_size;
-        &:hover { border-color: @light_2_clr; }
-        &:focus { border-color: @highlight_clr; }
-      }
-    }
     .fxs_queryResults {
       display: block;
       &.fxs_selectedQuery {
         .fxs_queryResults_label {
-          .animation(fadeIn 0.25s ease-in);
+          .animation(fadeIn 0.33s ease-in);
           display: block;
         }
       }
@@ -561,7 +606,7 @@
   }
 }
 
-// Typeahead buttons
+// Filter buttons
 .fxs_btn_filter, .fxs_dismissQuery {
   .fxs_btn_properties(none; @base_module_size; 0; 0);
   background-color: transparent;
@@ -571,11 +616,14 @@
   width: @base_module_size;
   &:hover { .opacity(.75); }
 }
+
 .fxs_dismissQuery.fxs_btn {
   width: auto;
   padding: 0 1rem;
   font-size: @txt_size_small;
+  color: @light_1_clr;
 }
+
 .fxs_btn_filter {
   left: 0;
   position: absolute;
@@ -619,27 +667,6 @@
   .fxs_typeaheadList { display: none!important; }
   &.hint .typeahead-hint { visibility: visible!important; }
   .typeahead-hint { visibility: hidden!important; }
-}
-
-.fxs_typeaheadField {
-  position: relative;
-  width: 100%;
-  input {
-    width: 100%;
-    line-height: @base_module_size;
-    padding: 5px 0 5px @base_module_size;
-    border-width: 0;
-    border-bottom-width: 3px;
-    &.disabled, &[disabled] {
-      cursor: not-allowed;
-      background-color: @light_5_clr;
-    }
-    &.typeahead-hint[readonly] {
-      background-color: transparent;
-      border:none!important;
-    }
-    &, &:hover { border-color: transparent; }
-  }
 }
 
 .fxs_typeaheadQuery {
@@ -697,18 +724,31 @@
   }
 }
 
+//////////////////////////
 // Filter rail in listView
 
-.fxs_filter_rail {
-  z-index: 1;
-  padding-bottom: 0;
-}
+.fxs_filter_rail { z-index: 1; }
 
 .fxs_filter_rail_container {
+  &:extend(.fxs_listView_space all);
   position: relative;
-  height: 100%;
-  background-color: #fff;
-  padding: 1rem 0 2rem;
+  min-height: 100%;
+  background-color: @lightest_clr;
+  padding: 1rem 0 50px;
+}
+
+.fxs_apply_filters_block {
+  &:extend(.fxs_listView_space all);
+  display: none;
+  background-color: @lightest_clr;
+  border-top: 1px solid @light_5_clr;
+  position: fixed;
+  bottom: 0;
+  padding: 0.5rem 1rem;
+  .in & {
+    .animation(fadeInUp 0.33s ease-in);
+    display: block;
+  }
 }
 
 ////////////////////////////////////////////
