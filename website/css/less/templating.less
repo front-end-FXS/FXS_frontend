@@ -541,6 +541,7 @@
     overflow: visible;
     .fxs_btn_filter { color: @light_2_clr; }
     .fxs_typeaheadField {
+      background-color: @lightest_clr;
       input {
         border-color: @light_3_clr;
         padding-right: @base_module_size;
@@ -569,7 +570,12 @@
   line-height: @base_module_size - 2;
   width: @base_module_size;
   &:hover { .opacity(.75); }
-} 
+}
+.fxs_dismissQuery.fxs_btn {
+  width: auto;
+  padding: 0 1rem;
+  font-size: @txt_size_small;
+}
 .fxs_btn_filter {
   left: 0;
   position: absolute;
@@ -689,6 +695,20 @@
     display: inline-block;
     vertical-align: top;
   }
+}
+
+// Filter rail in listView
+
+.fxs_filter_rail {
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+.fxs_filter_rail_container {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem 0 2rem;
 }
 
 ////////////////////////////////////////////

@@ -1053,27 +1053,97 @@
             <header class="fxs_listview_subnav">
                 <h2 class="fxs_helperLabel_title">All brokers</h2>
                 <div class="fxs_filter">
-                    <form>
+                    
                         <div class="fxs_typeaheadContainer">
-                            <button type="button" class="fxs_btn_filter" title="Search in Items list">
+                            <button type="button" class="fxs_btn_filter" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
                                 <i class="fa fa-sliders"></i>
-                                <span class="fxs_skip">Search in Items list</span>
+                                <span class="fxs_skip">Filter results</span>
                             </button>
                             <div class="fxs_queryResults">
-                                <button type="reset" title="Clear search" class="fxs_dismissQuery">
-                                    <i class="fa fa-times-circle"></i>
-                                    <span class="fxs_skip">Clear search</span>
+                                <button type="button" class="fxs_btn fxs_dismissQuery fxs_txt_neutral" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
+                                    Cancel
                                 </button>
                             </div>
-                            <div class="fxs_typeaheadField">
-                                <div class="fxs_typeaheadQuery">
-                                    <input id="q" name="q" type="search" placeholder="Search in Items list" autocomplete="off">
-                                </div>
+                            <div class="fxs_typeaheadField fxs_txt_center">
+                                <span class="fxs_helperLabel_title">Filter brokers</span>
                             </div>
                         </div>
-                    </form>
+                    
                 </div>
             </header>
+            <div id="brokers-filter-block" class="fxs_listViewRail fxs_filter_rail collapse">
+                <div class="fxs_filter_rail_container">
+                    <form>
+                        <fieldset class="fxs_fieldset">
+                            <legend>Regulation</legend>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> FSA (UK)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> NFA (USA)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> FXA (JP)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> FINMA (CH)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> MFSA (MT)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> ASIC (AU)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> DFSA (DK)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> AMF (FR)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> CySEC (CY)
+                                </label>
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms"> BAFIN (DE)
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fxs_fieldset">
+                           <select class="fxs_select">
+                                <option selected>-Business nature-</option>
+                                <option>Broker</option>
+                                <option>NDD</option>
+                                <option>STP</option>
+                                <option>DMA</option>
+                                <option>ECN</option>
+                                <option>Market Maker</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="fxs_fieldset fxs_inlineForm_group">
+                            <div class="fxs_formGroup">
+                                <label for="min-deposit">
+                                    Min. Deposit
+                                </label>
+                               <div class="fxs_formGroup">
+                                    <span class="fxs_formGroup__addon">$</span>
+                                    <input id="min-deposit" type="text" class="fxs_textInput fxs_textInput_mini" placeholder="00000" maxlength="5">
+                                    <span class="fxs_label">USD</span>
+                                </div>
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label for="max-leverage">
+                                    Max. Leverage <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explains Leverage in just few words please"></i>
+                                </label>
+                               <div class="fxs_formGroup">
+                                    <span class="fxs_formGroup__addon">1:</span>
+                                    <input id="max-leverage" type="text" class="fxs_textInput fxs_textInput_mini" placeholder="0000" maxlength="4 ">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
             <nav class="fxs_listViewRail">
                 <ol class="fxs_listView_blockWrapper">
                     <li class="fxs_listView_item">

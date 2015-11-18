@@ -172,7 +172,6 @@ $(document).ready(function () {
     // METIDO A SACO para que funcione el trigger del filtro
     $('.fxs_btn_filter').click(function(evt) {
         $(this).closest('.fxs_filter').toggleClass("active");
-        evt.stopPropagation();
     }); 
 
         // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA
