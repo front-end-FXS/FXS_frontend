@@ -182,20 +182,6 @@
 
         <div class="fxs_content" id="fxs_content">
 
-            <!-- Space for Global Alerts & Notifications --><!-- For dev -->
-            <!-- Add class "in" to show alerts -->
-            <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
-                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
-                  <i class="fa fa-close"></i>
-                  <span class="fxs_skip">Close alert</span>
-                </button>
-                <span class="fxs_alertLabel">Hey you</span>
-                <p class="fxs_alertText">                       
-                You are only viewing brokers that operate in your country.
-                </p>
-            </div>
-            <!-- /Space for Global Alerts & Notifications -->
-
             <!-- The content rail -->
             <div class="fxs_contentView">
 
@@ -1070,6 +1056,10 @@
                     
                         <div class="fxs_typeaheadContainer">
                             <button type="button" class="fxs_btn_filter" title="Filter results" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
+                                <!-- 2 Active filters!!! -->
+                                <span class="fxs_badge">2</span>
+                                <!-- /2 Active filters!!! -->
+
                                 <i class="fa fa-sliders"></i>
                                 <span class="fxs_skip">Filter results</span>
                             </button>
@@ -1107,7 +1097,7 @@
                                     <input type="checkbox" id="terms"> FSA (UK)
                                 </label>
                                 <label class="fxs_checkboxGroup">
-                                    <input type="checkbox" id="terms"> NFA (USA)
+                                    <input type="checkbox" id="terms" checked=""> NFA (USA)
                                 </label>
                                 <label class="fxs_checkboxGroup">
                                     <input type="checkbox" id="terms"> FXA (JP)
@@ -1143,7 +1133,7 @@
                                 </label>
                                <div class="fxs_formGroup">
                                     <span class="fxs_formGroup__addon">$</span>
-                                    <input id="min-deposit" type="text" class="fxs_textInput fxs_textInput_mini" placeholder="00000" maxlength="5">
+                                    <input id="min-deposit" type="text" class="fxs_textInput fxs_textInput_mini" placeholder="00000" maxlength="5" value="66666">
                                     <span class="fxs_label">USD</span>
                                 </div>
                             </div>
@@ -1165,6 +1155,9 @@
                 </div>
             </div>
             <nav class="fxs_listViewRail">
+                <button type="reset" class="fxs_listView_filterAlert">
+                    Reset filters <i class="fa fa-times-circle"></i>
+                </button>
                 <ol class="fxs_listView_blockWrapper">
                     <li class="fxs_listView_item">
                         <article class="fxs_clearfix">

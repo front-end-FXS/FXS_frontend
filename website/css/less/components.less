@@ -99,7 +99,7 @@
 // Fieldset styles
 .fxs_fieldset {
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid @light_3_clr;
   legend { .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall;); }
 }
@@ -145,6 +145,15 @@
     margin-bottom: 0;
     vertical-align: middle;
     width: auto;
+  }
+}
+
+.fxs_splitForm_group {
+  display: table;
+  width: 100%;
+  > .fxs_formGroup, > label {
+    display: table-cell;
+    width: 50%;
   }
 }
 
@@ -410,7 +419,7 @@
   .fxs_content_wide & { width: 100%; }
   &.in {
     display: block;
-    & + .fxs_contentView { margin-top: @base_module_size; } 
+    & + .fxs_contentView { margin-top: @main_header_height; } 
   }
   .cbp-spmenu-push-toleft &, .cbp-spmenu-push-toright & { display: none; }
 }

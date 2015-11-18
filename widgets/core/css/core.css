@@ -323,7 +323,7 @@ tbody.collapse.in {
 }
 .fxs_fieldset {
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid #dddedf;
 }
 .fxs_fieldset legend {
@@ -374,6 +374,15 @@ tbody.collapse.in {
   margin-bottom: 0;
   vertical-align: middle;
   width: auto;
+}
+.fxs_splitForm_group {
+  display: table;
+  width: 100%;
+}
+.fxs_splitForm_group > .fxs_formGroup,
+.fxs_splitForm_group > label {
+  display: table-cell;
+  width: 50%;
 }
 .fxs_formGroup__addon {
   display: inline-block;
@@ -966,7 +975,7 @@ width:calc(100% - 320px);
   display: block;
 }
 .fxs_global_alert.in + .fxs_contentView {
-  margin-top: 35px;
+  margin-top: 45px;
 }
 .cbp-spmenu-push-toleft .fxs_global_alert,
 .cbp-spmenu-push-toright .fxs_global_alert {
@@ -1917,6 +1926,13 @@ lesshat-selector {
 }
 lesshat-selector {
   -lh-property: 0; } 
+@-webkit-keyframes fadeInUp{ from {-webkit-transform: translate3d(0, 100%, 0); height:0; opacity:0;} to {-webkit-transform: none; height: auto; opacity:1;}}
+@-moz-keyframes fadeInUp{ from {-moz-transform: translate3d(0, 100%, 0); height:0; opacity:0;} to {-moz-transform: none; height: auto; opacity:1;}}
+@-o-keyframes fadeInUp{ from {-o-transform: translate3d(0, 100%, 0); height:0; opacity:0;} to {-o-transform: none; height: auto; opacity:1;}}
+@keyframes fadeInUp{ from {-webkit-transform: translate3d(0, 100%, 0);-moz-transform: translate3d(0, 100%, 0);-ms-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0); height:0; opacity:0;} to {-webkit-transform: none;-moz-transform: none;-ms-transform: none;transform: none; height: auto; opacity:1;};
+}
+lesshat-selector {
+  -lh-property: 0; } 
 @-webkit-keyframes fadeInLeft{ from {-webkit-transform: translate3d(-100%, 0, 0); opacity:0;} to {-webkit-transform: none; opacity:1;}}
 @-moz-keyframes fadeInLeft{ from {-moz-transform: translate3d(-100%, 0, 0); opacity:0;} to {-moz-transform: none; opacity:1;}}
 @-o-keyframes fadeInLeft{ from {-o-transform: translate3d(-100%, 0, 0); opacity:0;} to {-o-transform: none; opacity:1;}}
@@ -2202,6 +2218,9 @@ lesshat-selector {
 }
 .fxs_iBlock {
   display: inline-block;
+}
+.fxs_align_middle {
+  vertical-align: middle;
 }
 .fxs_dBlock {
   display: block;
