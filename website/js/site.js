@@ -84,7 +84,7 @@ $(document).ready(function () {
                 template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
             },
             Contributors: {
-                data: data.commodities,
+                data: data.contributors,
                 template: '<div class="fxs_avatar_circleImage_s"><img class="" src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"></div> <span class="fxs_typeaheadTxt">{{display}}</span>'
             }
         },
