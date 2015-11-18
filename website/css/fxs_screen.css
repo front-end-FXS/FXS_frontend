@@ -773,11 +773,15 @@ input[type=submit] {
 .fxs_formGroup .fxs_formGroup {
   display: inline-block;
   margin-bottom: 0;
+  margin-left: 2px;
 }
 .fxs_textInput,
 .fxs_select {
   width: 100%;
   margin-bottom: 0.22rem;
+}
+.fxs_textInput_mini {
+  max-width: 70px;
 }
 .fxs_checkboxGroup {
   font-size: 0.92rem;
@@ -813,6 +817,7 @@ input[type=submit] {
   color: #8c8d91;
   font-size: 0.8rem;
   height: 35px;
+  min-width: 2rem;
   line-height: 35px;
   padding: 0 0.25rem;
   text-align: center;
@@ -4023,6 +4028,9 @@ height:calc(100% - 35px - 45px);
 .fxs_filter.active .fxs_btn_filter {
   color: #a3a3a8;
 }
+.fxs_filter.active .fxs_typeaheadField {
+  background-color: #ffffff;
+}
 .fxs_filter.active .fxs_typeaheadField input {
   border-color: #dddedf;
   padding-right: 35px;
@@ -4094,6 +4102,12 @@ fieldset[disabled] .fxs_dismissQuery {
   -webkit-opacity: 0.75;
   -moz-opacity: 0.75;
   opacity: 0.75;
+}
+.fxs_dismissQuery.fxs_btn,
+.fxs_dismissQuery.fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
+  width: auto;
+  padding: 0 1rem;
+  font-size: 0.92rem;
 }
 .fxs_btn_filter {
   left: 0;
@@ -4236,6 +4250,16 @@ fieldset[disabled] .fxs_dismissQuery {
 .fxs_typeaheadList .fxs_typeaheadTxt {
   display: inline-block;
   vertical-align: top;
+}
+.fxs_filter_rail {
+  z-index: 1;
+  padding-bottom: 0;
+}
+.fxs_filter_rail_container {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  padding: 1rem 0 2rem;
 }
 .fxs_footer {
   position: absolute;
