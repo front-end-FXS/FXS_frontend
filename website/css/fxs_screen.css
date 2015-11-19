@@ -2928,6 +2928,8 @@ h5 a:hover,
 .fxs_widget_price::after,
 .fxs_wideContent::before,
 .fxs_wideContent::after,
+.fxs_swipeContent_slider::before,
+.fxs_swipeContent_slider::after,
 .fxs_detail::before,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::before,
@@ -2976,6 +2978,7 @@ h5 a:hover,
 .fxs_widget_footer::after,
 .fxs_widget_price::after,
 .fxs_wideContent::after,
+.fxs_swipeContent_slider::after,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .fxs_broker_contact_footer::after,
@@ -3272,7 +3275,7 @@ width:calc(100% + @half_base_spacer);
 ;
   padding: 0 0 1rem;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
 }
 @media (min-width: 680px) {
   .fxs_swipeContent_slider {
