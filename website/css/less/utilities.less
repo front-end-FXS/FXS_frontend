@@ -373,13 +373,13 @@
 
 // Swipe content in mobile
 .fxs_swipeContent_slider {
-  &:extend(.fxs_scrollableContent all);
+  &:extend(.fxs_scrollableContent all, .fxs_clearfix all);
   overflow-x: auto;
   overflow-y: hidden;
   .calc(width, ~'100% + @half_base_spacer');
   padding: 0 0 1rem;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   @media (min-width: @screen-s) {
     width: 100%;
   }
