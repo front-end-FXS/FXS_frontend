@@ -176,9 +176,12 @@
 
                 <!-- The content rail -->
                 <div class="fxs_contentView">
-
+                    <!--                                         
+                         "This ad must change in small sizes."
+                         Talk with design department about advertisments functionallity in general .
+                    -->
                     <div class="fxs_leaderboard">
-                        <div class="fxs_add esto_es_un_ejemplo_para_borrar">
+                        <div class="fxs_add">
                             <a target="_blank" href="http://adclick.g.doubleclick.net/aclk?sa=L&amp;ai=B1Pglz6MwVuumLozVWv-1rvAMjP_31AgAAAAQASAAOABYhK_YiqoCYNWN04K8CIIBF2NhLXB1Yi03OTQ1ODMxMTc0NjM1NzM2sgEQd3d3LmZ4c3RyZWV0LmNvbboBCWdmcF9pbWFnZcgBCdoBGGh0dHA6Ly93d3cuZnhzdHJlZXQuY29tL6kCDulDWfCJsj7AAgLgAgDqAgovNzEzOC9Ib21l-AL30R6AAwGQA4wGmAOMBqgDAeAEAZAGAaAGHtgHAA&amp;num=0&amp;cid=5GhaUeCSlgPdQSI4NDWiO48f&amp;sig=AOD64_0u0AD4PkhtvnnKORhLXm19_9UqfA&amp;client=ca-pub-7945831174635736&amp;adurl=https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuFNC9Slw3OH0TWavbWdfoN7hz6yuJX7LdGuWt0ylb3TwL9WC1g5k1FCwUhkFRi9e7004ohodpERx10VGDI4NQmiDTlGLeRZOFmZPcnpQzC3HxTdPhO&amp;sig=Cg0ArKJSzJBmQD6gBKal&amp;urlfix=1&amp;adurl=http://www.fxpro.co.uk/promo/fxpro/%3Futm_source%3DFxStreet%2Bcom%26utm_medium%3DBanner%26utm_term%3DBrand%26utm_content%3DUK%26utm_campaign%3D728x90%2BBanner%2Bon%2BFxStreet%26source%3D20">
                                 <img src="https://s1.2mdn.net/viewad/4310423/6-all_three_spreads_banner_728x90.jpg" alt="Advertisement" border="0" width="728" height="90">
                             </a>
@@ -207,8 +210,51 @@
                             </header>
                         </div>
 
+                        <!--
+
+                        Common structure HTML and CSS:
+
+                        #####################################
+                        Every widget has the follow structure: 
+                        #####################################
+
+                        <div class="fxs_row">
+                            <div class="fxs_col fxs_col_X">
+                            </div>
+                        </div>
+
+                        In case of flex cols:
+
+                        <div class="fxs_row fxs_tableRow">
+                            <div class="fxs_col fxs_flex_col">
+                            </div>
+                            <div class="fxs_col fxs_flex_col fxs_flex_ad_col">
+                            </div>
+                        </div>
+
+
+                        ########################################
+                        Common widget structure:
+                        In some cases this structure can change.
+                        ########################################
+                        
+                        <h3 class="fxs_subtitle">
+                            widget title
+                        </h3>
+                        <div class="fxs_widget_summary">
+                            <div class="fxs_widget_NAME">
+                                <div class="fxs_widget_divider_module">
+                                </div>
+                            </div>
+                        </div>
+
+                        -->
+
                         <section class="fxs_detail">
+
+                            <!-- EUR/USD WIDGET PRICE HEADER -->
                             <div class="fxs_row">
+                                <!-- fxs_col_100 -->
                                 <div class="fxs_col fxs_col_100">
                                     <div class="fxs_widget_price fxs_widget_price_header price_down">
                                         <div class="fxs_asset_label_block">
@@ -221,7 +267,7 @@
                                             </span>
                                         </div>
                                         <div class="fxs_widget_price_value">
-                                            <span class="fxs_price_bidask">1.27688</span>
+                                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
                                             <small class="fxs_price_ohl">
                                                 <span>Open 1.1872</span>
                                                 <span>High 1.1872</span>
@@ -232,6 +278,7 @@
                                 </div>
                             </div>
 
+                            <!-- TELETRADER CHART WITH AD -->
                             <div class="fxs_row fxs_tableRow">
                                 <div class="fxs_col fxs_flex_col">
                                     <div class="fxs_widget_summary">
@@ -244,13 +291,13 @@
                                                     <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
                                                 </ul>
                                                <div class="fxs_indexes_tabpanel tab-content">
-                                            <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph" style="width:100%">
-                                            </div>
+                                                    <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph" style="width:100%">
+                                                    </div>
                                                 </div>
            
                                             </div>
                                             <footer class="fxs_widget_footer">                              
-                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
                                             </footer>                                                       
                                         </div>
                                     </div>
@@ -265,8 +312,10 @@
 
                                 </div>
                             </div>
-                      
+                            
+                            <hr class="fxs_divider_first">
 
+                            <!-- WIDGET INDEXES -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_100">
                                     <div class="fxs_widget_summary">
@@ -361,32 +410,29 @@
 
                             <hr class="fxs_divider_wide">
 
+                            <!--  AD WIDGET                                       
+                                 "This ad must change in small sizes."
+                                 Talk with design department about the functionallity with advertisments in general .
+                            -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_100">
-                                    
-                                        <div class="fxs_clearfix fxs_sponsored_content_row">
-                                            <div class="fxs_sponsor_img fxs_fLeft">
-                                                <a href="/">
-                                                    <img src="http://cdn.fxstreet.com/images/FxPro_100x33_Logob.jpg">
-                                                </a>
-                                            </div>
-                                            <div class="fxs_floatingMedia_textBody">
-                                                <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
-                                                <h3 class="fxs_headline_tiny">
-                                                    <a href="" title="">New record lows for European sovereign yields</a>
-                                                </h3>
-                                            </div>
+                                    <div class="fxs_leaderboard">
+                                        <div class="fxs_add">
+                                            <a target="_blank" href="http://adclick.g.doubleclick.net/aclk?sa=L&amp;ai=B1Pglz6MwVuumLozVWv-1rvAMjP_31AgAAAAQASAAOABYhK_YiqoCYNWN04K8CIIBF2NhLXB1Yi03OTQ1ODMxMTc0NjM1NzM2sgEQd3d3LmZ4c3RyZWV0LmNvbboBCWdmcF9pbWFnZcgBCdoBGGh0dHA6Ly93d3cuZnhzdHJlZXQuY29tL6kCDulDWfCJsj7AAgLgAgDqAgovNzEzOC9Ib21l-AL30R6AAwGQA4wGmAOMBqgDAeAEAZAGAaAGHtgHAA&amp;num=0&amp;cid=5GhaUeCSlgPdQSI4NDWiO48f&amp;sig=AOD64_0u0AD4PkhtvnnKORhLXm19_9UqfA&amp;client=ca-pub-7945831174635736&amp;adurl=https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuFNC9Slw3OH0TWavbWdfoN7hz6yuJX7LdGuWt0ylb3TwL9WC1g5k1FCwUhkFRi9e7004ohodpERx10VGDI4NQmiDTlGLeRZOFmZPcnpQzC3HxTdPhO&amp;sig=Cg0ArKJSzJBmQD6gBKal&amp;urlfix=1&amp;adurl=http://www.fxpro.co.uk/promo/fxpro/%3Futm_source%3DFxStreet%2Bcom%26utm_medium%3DBanner%26utm_term%3DBrand%26utm_content%3DUK%26utm_campaign%3D728x90%2BBanner%2Bon%2BFxStreet%26source%3D20">
+                                                <img src="https://s1.2mdn.net/viewad/4310423/6-all_three_spreads_banner_728x90.jpg" alt="Advertisement" border="0" width="728" height="90">
+                                            </a>
                                         </div>
-                                    
+                                    </div>
                                 </div>
                             </div>
 
                             <hr class="fxs_divider_wide">
 
+                            <!-- PIVOT POINTS WIDGET -->
                             <div class="fxs_row">
-                                <div class="fxs_col fxs_col_100">
+                                <div class="fxs_col fxs_col_67">
                                     <h3 class="fxs_subtitle">
-                                        EUR/USD pivot points
+                                        EUR/USD pivot points <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
                                     </h3>
                                     <div class="fxs_widget_summary">
 
@@ -452,25 +498,37 @@
                                             <!-- widget footer -->
                                             <footer class="fxs_widget_footer">
                                                 <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See full report<i class="fa fa-angle-double-right"></i></a>
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
                                             </footer>
                                             <!-- /widget footer -->
                                         </div>
 
                                     </div>
-                                    <div class="fxs_entryPlain_txt_large fxs_marginBase_bottom">
+                                </div>
+                                <div class="fxs_col fxs_col_33">
+                                    <div class="fxs_entryPlain_txt">
                                         <p>As the chart shows, the <a href="#">EUR/USD</a> rate continues topullback from prior highs of 1.1450, the <a href="#">Dax</a> is off to a flying start this week. In the last 2 days, the <a href="#">Dax</a> is up more than 3%, and is testing its 50-day sma at 11,822, the highest level since the end of April.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="fxs_row">
-                                <div class="fxs_col fxs_col_100">
+                            <hr class="fxs_divider_wide">
+                            
+                            <!-- TRADING POSITIONING WIDGET -->
+                            <div class="fxs_row fxs_tableRow">
+                                <div class="fxs_col fxs_flex_col fxs_flex_ad_col">
+
+                                    <!-- Content Ad container -->
+                                   <iframe src="http://octaengine.com/b/162/" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px; margin-top:16px;" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+
+                                    <!-- Content Ad container -->
+
+                                </div>
+                                <div class="fxs_col fxs_flex_col">
                                     <h3 class="fxs_subtitle">
-                                        EUR/USD TRADING POSITIONS
+                                        EUR/USD TRADING POSITIONS <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
                                     </h3>
                                     <div class="fxs_widget_summary">
-                                    
                                         <!-- ctp widget -->
                                         <div class="fxs_ctp_widget fxs_widget_default">
                                             <div class="fxs_widget_divider_module">
@@ -515,7 +573,7 @@
                                             <!-- widget footer -->
                                             <footer class="fxs_widget_footer">
                                                 <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
                                             </footer>
                                             <!-- /widget footer -->
                                         </div>
@@ -525,17 +583,18 @@
                                         <p>The Average <strong>Sell Price</strong> among our contributors is <strong>1.3380</strong>, with no visible cluster ahead.Traders positioning shows <strong>Average Buy Price at 1.3350
                                         </strong>, and a lot of liquidity clustered around 1.3320.)</p>
                                     </div>
-
                                 </div>
                             </div>
 
-
+                            <hr class="fxs_divider_wide">
+                            
+                            <!-- FORECAST WIDGET -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_100">
                                     <!-- Widget big -->
 
                                     <h3 class="fxs_subtitle">
-                                        EUR/USD FORECAST POLL <i class="fa fa-info-circle"></i>
+                                        EUR/USD FORECAST POLL <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
                                     </h3>
                                     <div class="fxs_widget_summary">
 
@@ -694,7 +753,7 @@
                                     </div>
                                     <!-- /widget big -->
 
-                                    <div class="fxs_entryPlain_txt_large fxs_marginBase_bottom">
+                                    <div class="fxs_article_body">
                                         <p>The latest data for the <a href="#">Currencies Forecast Poll</a>, released by FXStreet on Friday the 3rd shows a distribution of 60.33% short-term Bearish among the 15 participants.</p>
                                     </div>
                                 </div>
@@ -702,6 +761,7 @@
 
                             <hr class="fxs_divider_wide">
 
+                            <!-- CORRELATION CHART + AD-->
                             <div class="fxs_row fxs_tableRow">
                                 <div class="fxs_col fxs_flex_col fxs_flex_ad_col">
 
@@ -711,172 +771,186 @@
                                     <!-- Content Ad container -->
                                 </div>
                                 <div class="fxs_col fxs_flex_col">
+                                    <!-- Widget correlation chart -->
                                     <h3 class="fxs_subtitle">
-                                        Cot net positioning
+                                        EUR/USD CORRELATION CHART <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip656902"></i>
                                     </h3>
-
-                                        <!-- Widget COT Big-->
                                     <div class="fxs_widget_summary">
-
-                                        <div class="fxs_widget_cot fxs_widget_default">                     
+                                        <div class="fxs_widget_correlation fxs_widget_default">
                                             <div class="fxs_widget_divider_module">
-                                                
-                                                <ul class="fxs_list_table fxs_list_table_item_split_widget">
-                                                    <li class="fxs_list_table_item">
-
-                                                        <div class="fxs_dTable">
-                                                            <span class="fxs_label">Non-Commercial</span>
-                                                        </div>
-                                                        
-                                                        <div class="fxs_widget_cot_box">                                    
-                                                            <strong class="fxs_widget_custom_data_lable">324.2k</strong>
-                                                            <small class="fxs_index_date">
-                                                                <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                            </small>
-                                                        </div>
-
-                                                        <div class="fxs_widget_cot_box fxs_widget_cot_graph">
-                                                            <div id="non_commercial_default" class="c3"></div>
-                                                       </div>
-                                                       <div class="fxs_widget_cot_box">
-                                                            <strong class="fxs_widget_custom_data_lable fxs_txt_danger">-45k</strong>
-                                                            <small class="fxs_index_date">
-                                                                <time datetime="2015-03-21T00:00">Last</time>
-                                                            </small>
-                                                       </div>       
-                                                    </li>
-                                                    
-
-                                                    <li class="fxs_list_table_item">
-
-                                                        <div class="fxs_dTable">
-                                                            <span class="fxs_label">Commercial</span>
-                                                        </div>
-                                                        
-                                                        <div class="fxs_widget_cot_box">
-                                                            <strong class="fxs_widget_custom_data_lable">-300k</strong>
-                                                            <small class="fxs_index_date">
-                                                                <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                            </small>
-                                                        </div>
-                                                        <div class="fxs_widget_cot_box fxs_widget_cot_graph">
-                                                            <div id="commercial_default" class="c3"></div>
-                                                       </div>
-                                                        <div class="fxs_widget_cot_box">
-                                                            <strong class="fxs_widget_custom_data_lable fxs_txt_success">50k</strong>
-                                                            <small class="fxs_index_date">
-                                                                <time datetime="2015-03-21T00:00">Last</time>
-                                                            </small>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-
+                                                <div id="c_chart"></div>
                                             </div>
-
                                             <!-- widget footer -->
                                             <footer class="fxs_widget_footer">
                                                 <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
                                             </footer>
+                                            <!-- /widget footer -->
                                         </div>
-                                        <!-- /widget footer -->
                                     </div>
-                                    <!-- /Widget COT Big -->
+                                    <!-- /Widget correlation chart -->
                                     <div class="fxs_entryPlain_txt">
-                                        <p>Net implied commercial USD long positions increased modestly over the previous week, while speculators pared their long positions</p>
+                                        <p>Intraday relationship between EUR/USD and <a href="#">AUD/JPY</a> resurfaces. On the other hand, no correlation to the EUR/USD exists in the <a href="#">GBP/JPY</a>.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <hr class="fxs_divider_wide">
-
+                            
+                            <!-- BULLISH PERCENTAGE + COT POSITIONING WIDGET  -->
                             <div class="fxs_row">
-                                <div class="fxs_col fxs_col_50">
-                                    <div class="fxs_widget_summary">
-                                        <div class="fxs_widget_bullishPercentage fxs_widget_default">
-                                            
-                                            <div class="fxs_widget_divider_module">
+                                    <div class="fxs_col fxs_col_33">
+                                        <h3 class="fxs_subtitle">
+                                            BULLISH PERCENTAGE <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip656902"></i>
+                                        </h3>
+                                        <div class="fxs_widget_summary">
+                                            <div class="fxs_widget_bullishPercentage fxs_widget_mini">
                                                 
-                                                <ul class="fxs_list_table fxs_list_table_item_split_widget">
-                                                    <li class="fxs_list_table_item">
-                                                        
-                                                        <div class="fxs_dTable">
-                                                            <span class="fxs_label">Euro</span>
-                                                        </div>
-
-                                                        <div class="fxs_dTable fxs_index_up">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
-                                                                <small class="fxs_index_date">
-                                                                    <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                                </small>
+                                                <div class="fxs_widget_divider_module">
+                                                    
+                                                    <ul class="fxs_list_table fxs_list_table_item_split_widget">
+                                                        <li class="fxs_list_table_item">
+                                                            
+                                                            <div class="fxs_dTable">
+                                                                <span class="fxs_label">Euro</span>
                                                             </div>
-                                                            <span class="fxs_widget_cell_col fxs_index_icon"></span>
-                                                            <div class="fxs_widget_cell_col">
-                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
-                                                                <small class="fxs_index_date">
-                                                                    <time datetime="2015-03-21T00:00">Last</time>
-                                                                </small>
+
+                                                            <div class="fxs_dTable fxs_index_up">
+                                                                <div class="fxs_widget_cell_col">
+                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
+                                                                    <small class="fxs_index_date">
+                                                                        <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                                    </small>
+                                                                </div>
+                                                                <span class="fxs_widget_cell_col fxs_index_icon"></span>
+                                                                <div class="fxs_widget_cell_col">
+                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
+                                                                    <small class="fxs_index_date">
+                                                                        <time datetime="2015-03-21T00:00">Last</time>
+                                                                    </small>
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                    </li>
+                                                        </li>
 
-                                                    <li class="fxs_list_table_item">
-                                                        
-                                                        <div class="fxs_dTable">
-                                                            <span class="fxs_label">US Dollar</span>
-                                                        </div>
-
-                                                        <div class="fxs_dTable fxs_index_down">
-                                                            <div class="fxs_widget_cell_col">
-                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
-                                                                <small class="fxs_index_date">
-                                                                    <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                                </small>
+                                                        <li class="fxs_list_table_item">
+                                                            
+                                                            <div class="fxs_dTable">
+                                                                <span class="fxs_label">US Dollar</span>
                                                             </div>
-                                                            <span class="fxs_widget_cell_col fxs_index_icon"></span>
-                                                            <div class="fxs_widget_cell_col">
-                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
-                                                                <small class="fxs_index_date">
-                                                                    <time datetime="2015-03-21T00:00">Last</time>
-                                                                </small>
+
+                                                            <div class="fxs_dTable fxs_index_down">
+                                                                <div class="fxs_widget_cell_col">
+                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
+                                                                    <small class="fxs_index_date">
+                                                                        <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                                    </small>
+                                                                </div>
+                                                                <span class="fxs_widget_cell_col fxs_index_icon"></span>
+                                                                <div class="fxs_widget_cell_col">
+                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
+                                                                    <small class="fxs_index_date">
+                                                                        <time datetime="2015-03-21T00:00">Last</time>
+                                                                    </small>
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                    </li>       
-                                                </ul>
+                                                        </li>       
+                                                    </ul>
 
+                                                </div>
+                                                <!-- widget footer -->
+                                                <footer class="fxs_widget_footer">
+                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
+                                                </footer>
+                                                <!-- /widget footer -->
                                             </div>
-                                            <!-- widget footer -->
-                                            <footer class="fxs_widget_footer">
-                                                <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                                            </footer>
-                                            <!-- /widget footer -->
+                                        </div>
+
+                                        <div class="fxs_entryPlain_txt">
+                                            <p>The <strong>EUR-Bullish Percentage</strong> Index soars above the <strong>70%</strong> level, considered <strong>overbougth</strong> territory</p>
                                         </div>
 
                                     </div>
+                                    <div class="fxs_col fxs_col_67">
 
-                                </div>
-                                <div class="fxs_col fxs_col_50">
-                                    <!-- Widget correlation chart -->
-                                <div class="fxs_widget_summary">
+                                        <h3 class="fxs_subtitle">
+                                            Cot net positioning <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
+                                        </h3>
 
-                                  <div class="fxs_widget_correlation fxs_widget_default">
-                                    <div class="fxs_widget_divider_module">
-                                      <div id="c_chart"></div>
+
+                                        <div class="fxs_widget_summary">
+
+                                            <div class="fxs_widget_cot fxs_widget_default">                     
+                                                <div class="fxs_widget_divider_module">
+                                                    
+                                                    <ul class="fxs_list_table fxs_list_table_item_split_widget">
+                                                        <li class="fxs_list_table_item">
+
+                                                            <div class="fxs_dTable">
+                                                                <span class="fxs_label">Non-Commercial</span>
+                                                            </div>
+                                                            
+                                                            <div class="fxs_widget_cot_box">                                    
+                                                                <strong class="fxs_widget_custom_data_lable">324.2k</strong>
+                                                                <small class="fxs_index_date">
+                                                                    <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                                </small>
+                                                            </div>
+
+                                                            <div class="fxs_widget_cot_box fxs_widget_cot_graph">
+                                                                <div id="non_commercial_default" class="c3"></div>
+                                                           </div>
+                                                           <div class="fxs_widget_cot_box">
+                                                                <strong class="fxs_widget_custom_data_lable fxs_txt_danger">-45k</strong>
+                                                                <small class="fxs_index_date">
+                                                                    <time datetime="2015-03-21T00:00">Last</time>
+                                                                </small>
+                                                           </div>       
+                                                        </li>
+                                                        
+
+                                                        <li class="fxs_list_table_item">
+
+                                                            <div class="fxs_dTable">
+                                                                <span class="fxs_label">Commercial</span>
+                                                            </div>
+                                                            
+                                                            <div class="fxs_widget_cot_box">
+                                                                <strong class="fxs_widget_custom_data_lable">-300k</strong>
+                                                                <small class="fxs_index_date">
+                                                                    <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                                </small>
+                                                            </div>
+                                                            <div class="fxs_widget_cot_box fxs_widget_cot_graph">
+                                                                <div id="commercial_default" class="c3"></div>
+                                                           </div>
+                                                            <div class="fxs_widget_cot_box">
+                                                                <strong class="fxs_widget_custom_data_lable fxs_txt_success">50k</strong>
+                                                                <small class="fxs_index_date">
+                                                                    <time datetime="2015-03-21T00:00">Last</time>
+                                                                </small>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                                <footer class="fxs_widget_footer">
+                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
+                                                </footer>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="fxs_entryPlain_txt">
+                                            <p>Net implied commercial USD long positions increased modestly over the previous week, while speculators pared their long positions</p>
+                                        </div>   
                                     </div>
-                                    <!-- widget footer -->
-                                    <footer class="fxs_widget_footer">
-                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                    </footer>
-                                    <!-- /widget footer -->
-                                  </div>
-                                </div>
-                                <!-- /Widget correlation chart -->
                                 </div>
                             </div>
+
                         </section>
                     </main>
                     <!-- //Main Section -->
@@ -884,6 +958,7 @@
                 </div>
                 <!-- /The content rail -->
             </div>
+
 
             <!-- ListView -->
             <section class="fxs_listView" id="cbp-spmenu-s3">
@@ -1486,6 +1561,13 @@
 
         <script>
 
+        /* / end chart 5 */
+
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            });
+
+
             var d = Date.now();
 
             var strSymbolname = "tts-3212164";
@@ -1944,10 +2026,13 @@
                 }
             });
 
-        // correlation chart
-        var colors = ['#F5C861', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#F5C861']; 
+       var colors = ['#F5C861', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#F5C861']; // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
 
-        var chartCorrelation = c3.generate({
+        // Importante!: añadir "chart.flush();" on window resize para que vuelva a pintar la gráfica (y ajuste las medidas)
+        // Importante2!: ajustar la altura proporcional al número de categories (pares): si son 10 = 300, si son 5 = 150, si son 2 = 60 (la base de cada category es 30)
+        // Importante3!: Si se configura para dejar menos categories (pares), eliminar del centro hacia afuera: los últimos en ser descartados deben ser los extremos (siempre números pares: 2, 4, 6, 8, 10, ...)
+
+        var chart = c3.generate({
             bindto: '#c_chart',
             data: {
               columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
@@ -1980,6 +2065,14 @@
             padding: { bottom: 0 },
             size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
         });
+        setTimeout(function () {
+            chart.load({
+                columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
+            });
+            chart2.load({
+                columns: [ ['data1', 0.99, 0.88, 0.4, 0.2, -0.1, -0.33, -0.55, -0.8] ]
+            });
+        }, 500);
 
         </script>
 
