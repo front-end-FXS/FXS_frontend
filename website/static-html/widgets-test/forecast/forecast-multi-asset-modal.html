@@ -508,549 +508,550 @@
                             </div>
                         </div>
                     </header>
+                    <main id="fxs_it_detail" role="main">
+                        <section class="fxs_detail" role="main">
+                            
+                            <!-- Report goes here -->
+                            <article class="fxs_detailInfo_page">
 
-                    <section class="fxs_detail" role="main">
-                        
-                        <!-- Report goes here -->
-                        <article class="fxs_detailInfo_page">
+                                <section class="fxs_widget_summary">
+                                    <!-- Widget big -->
+                                    <div class="fxs_forecast_widget_multi fxs_widget_big">
+                                        <ul class="fxs_tabs_nav fxs_table_tabs">
+                                            <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
+                                            <li class="active"><a id="tab_1" href="#">1 Week</a></li>
+                                            <li><a id="tab_2" href="#">1 Month</a></li>
+                                            <li><a id="tab_3" href="#">1 Quarter</a></li>
+                                        </ul>
+                                        <table class="fxs_table fxs_tableHover">
+                                            <thead>
+                                                <tr>
+                                                    <th>&nbsp;</th>
+                                                    <th>1 Week</th>
+                                                    <th>1 Month</th>
+                                                    <th>1 Quarter</th>
+                                                    <th>&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                            <a href="/">EUR/USD</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_beari">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                            <section class="fxs_widget_summary">
-                                <!-- Widget big -->
-                                <div class="fxs_forecast_widget_multi fxs_widget_big">
-                                    <ul class="fxs_tabs_nav fxs_table_tabs">
-                                        <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
-                                        <li class="active"><a id="tab_1" href="#">1 Week</a></li>
-                                        <li><a id="tab_2" href="#">1 Month</a></li>
-                                        <li><a id="tab_3" href="#">1 Quarter</a></li>
-                                    </ul>
-                                    <table class="fxs_table fxs_tableHover">
-                                        <thead>
-                                            <tr>
-                                                <th>&nbsp;</th>
-                                                <th>1 Week</th>
-                                                <th>1 Month</th>
-                                                <th>1 Quarter</th>
-                                                <th>&nbsp;</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                        <a href="/">EUR/USD</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_beari">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                <!---->
 
-                                            <!---->
+                                                <tr onclick="todo">
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">USD/JPY</a>
+                                                        </abbr>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_2" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bearish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bearish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_2" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_2" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                   
+                                                </tr>
+                                                <tr onclick="todo">
+                                                    <!-- NUEVA -->
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">AUD/USD</a>
+                                                        </abbr>
+                                                    </td>
 
-                                            <tr onclick="todo">
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
-                                                        <a href="/">USD/JPY</a>
-                                                    </abbr>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_3" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_2" class="c3"></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_3" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="forecast_avg_result result_bearish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bearish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_2" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_2" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                               
-                                            </tr>
-                                            <tr onclick="todo">
-                                                <!-- NUEVA -->
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
-                                                        <a href="/">AUD/USD</a>
-                                                    </abbr>
-                                                </td>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_3" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_3" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_3" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_3" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-
-
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <tr onclick="todo">
-                                                <!-- NUEVA -->
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
-                                                        <a href="/">USD/CHF</a>
-                                                    </abbr>
-                                                </td>
-
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_6" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_6" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_6" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                    </td>
 
 
 
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                                            <tr onclick="todo">
-                                                <!-- NUEVA -->
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
-                                                        <a href="/">USD/CAD</a>
-                                                    </abbr>
-                                                </td>
+                                                <tr onclick="todo">
+                                                    <!-- NUEVA -->
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">USD/CHF</a>
+                                                        </abbr>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_6" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_4" class="c3"></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_6" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_4" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                    </td>
 
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_6" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
                                                         </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_4" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-
-
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
-
-                                            <tr onclick="todo">
-                                                <!-- NUEVA -->
-                                                <td>
-                                                    <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
-                                                        <a href="/">GBP/JPY</a>
-                                                    </abbr>
-                                                </td>
-
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1w active">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1w_5" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1m">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1m_5" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_sideways">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Sideways</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
-
-                                                <td>
-                                                    <div class="forecast_timeframe avg_1q">
-                                                        <div class="fxs_widget_slot_label">
-                                                            <small class="fxs_widget_small">Avg.</small>
-                                                            <span class="fxs_widget_custom_data_lable">1.0321</span>
-                                                        </div>
-                                                        <div class="forecast_graphic_wrapper">
-                                                            <div id="forecast_bar_stacked_1q_5" class="c3"></div>
-                                                        </div>
-                                                        <div class="forecast_avg_result result_bullish">
-                                                            <small>Bias</small>
-                                                            <span class="fxs_widget_custom_bold">Bullish</span>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                    </td>
 
 
 
-                                                <td>
-                                                    <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                                </td>
-                                            </tr>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
+
+                                                <tr onclick="todo">
+                                                    <!-- NUEVA -->
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">USD/CAD</a>
+                                                        </abbr>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_4" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_4" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_4" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
 
 
-                                        </tbody>
-                                    </table>
-                                </div><!-- /Widget big -->
-                            </section>
-                            <!-- study -->
-                            <!-- Dinamic auto report -->
-                            <div class="fxs_entryPlain_txt">
-                                <p>
-                                   The latest data for the Currencies Forecast Poll, released by <strong>FXStreet</strong> on Friday the 3rd shows a distribution of <strong>60.33%</strong> short-term <span class="fxs_txt_danger">Bearish</span> among the 15 participants.
-                                </p>
-                                <p>
-                                    <a class="fxs_mutedLink" href="#about_study">About this study <i class="fa fa-long-arrow-down"></i></a>
-                                </p>
-                            </div>
-                            <!-- /Dinamic auto report -->
 
-                            <h3 class="fxs_subtitle">Highlighted comments</h3>
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
 
-                            <!-- Quotes -->
-                            <!-- Highlighted quotes -->
-                            <ul class="fxs_list_table">
-                                <li class="fxs_list_table_item">
-                                    <!-- Quote module -->
-                                    <blockquote class="fxs_featured_quote">
-                                        <div class="fxs_avatar_circleImage">
-                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
-                                            </a>
-                                        </div>
-                                        <p>
-                                            If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                                <tr onclick="todo">
+                                                    <!-- NUEVA -->
+                                                    <td>
+                                                        <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                            <a href="/">GBP/JPY</a>
+                                                        </abbr>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1w active">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1w_5" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1m">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1m_5" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_sideways">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Sideways</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="forecast_timeframe avg_1q">
+                                                            <div class="fxs_widget_slot_label">
+                                                                <small class="fxs_widget_small">Avg.</small>
+                                                                <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                            </div>
+                                                            <div class="forecast_graphic_wrapper">
+                                                                <div id="forecast_bar_stacked_1q_5" class="c3"></div>
+                                                            </div>
+                                                            <div class="forecast_avg_result result_bullish">
+                                                                <small>Bias</small>
+                                                                <span class="fxs_widget_custom_bold">Bullish</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+
+
+                                                    <td>
+                                                        <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                    </td>
+                                                </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div><!-- /Widget big -->
+                                </section>
+                                <!-- study -->
+                                <!-- Dinamic auto report -->
+                                <div class="fxs_entryPlain_txt">
+                                    <p>
+                                       The latest data for the Currencies Forecast Poll, released by <strong>FXStreet</strong> on Friday the 3rd shows a distribution of <strong>60.33%</strong> short-term <span class="fxs_txt_danger">Bearish</span> among the 15 participants.
+                                    </p>
+                                    <p>
+                                        <a class="fxs_mutedLink" href="#about_study">About this study <i class="fa fa-long-arrow-down"></i></a>
+                                    </p>
+                                </div>
+                                <!-- /Dinamic auto report -->
+
+                                <h3 class="fxs_subtitle">Highlighted comments</h3>
+
+                                <!-- Quotes -->
+                                <!-- Highlighted quotes -->
+                                <ul class="fxs_list_table">
+                                    <li class="fxs_list_table_item">
+                                        <!-- Quote module -->
+                                        <blockquote class="fxs_featured_quote">
+                                            <div class="fxs_avatar_circleImage">
+                                                <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                                </a>
+                                            </div>
+                                            <p>
+                                                If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                                <footer>
+                                                    <cite title="Source Title" class="fxs_cite">
+                                                        <a href="">EUR/USD Forecast Poll</a>
+                                                    </cite>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="path/to/author">Tyler Durden F.C.</a></span> |
+                                                        <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                    </address>
+                                                </footer>
+                                            </p>
+                                        </blockquote>
+                                        <!-- /Quote module -->
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <!-- Quote module -->
+                                        <blockquote class="fxs_featured_quote">
+                                            <div class="fxs_avatar_circleImage">
+                                                <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                                </a>
+                                            </div>
+                                            <p>
+                                                After a steep fall, the Euro will attempt to recover losses against the Dollar. However, this will be limited to 1.10 and we would need to close above this level for the sentiment to be more bullish.
+                                            </p>
                                             <footer>
                                                 <cite title="Source Title" class="fxs_cite">
-                                                    <a href="">EUR/USD Forecast Poll</a>
+                                                    <a href="">USD/GPB Forecast Poll</a>
                                                 </cite>
                                                 <address class="fxs_entry_metaInfo">
-                                                    <span class="fxs_article_author">By <a href="path/to/author">Tyler Durden F.C.</a></span> |
+                                                    <span class="fxs_article_author">By <a href="path/to/author">Sacha Baron Cohen</a></span> |
                                                     <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
                                                 </address>
                                             </footer>
-                                        </p>
-                                    </blockquote>
-                                    <!-- /Quote module -->
-                                </li>
-                                <li class="fxs_list_table_item">
-                                    <!-- Quote module -->
-                                    <blockquote class="fxs_featured_quote">
-                                        <div class="fxs_avatar_circleImage">
-                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
-                                            </a>
+                                            <p></p>
+                                        </blockquote>
+                                        <!-- /Quote module -->
+                                    </li>
+                                    <li class="fxs_list_table_item">
+                                        <!-- Quote module -->
+                                        <blockquote class="fxs_featured_quote">
+                                            <div class="fxs_avatar_circleImage">
+                                                <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                    <img src="http://www.ps4-magazin.de/wcf/images/avatars/avatar-3974.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                                </a>
+                                            </div>
+                                            <p>
+                                                Despite a near term rebound, the bears are back I control and this should continue to put pressure on the supports over the coming weeks.
+                                            </p>
+                                            <footer>
+                                                <cite title="Source Title" class="fxs_cite"><a href="">USD/GPB Forecast Poll</a></cite>
+                                                <address class="fxs_entry_metaInfo">
+                                                    <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                                    <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                </address>
+                                            </footer>
+                                        </blockquote>
+                                        <!-- /Quote module -->
+                                    </li>
+                                </ul>
+                                <!-- /Highlighted quotes -->
+
+                                <hr class="fxs_divider_wide">
+
+                                <!-- study -->
+                                <div id="about_study" class="fxs_entryPlain_txt">
+                                    <p>
+                                        The <strong>Currencies Forecast Poll</strong> is a sentiment tool that highlights our selected experts near and medium term mood and calculates trends according to Friday's 15:00 GMT price. The <strong>#FXpoll</strong> is not to be taken as signal or as final target, but as an <a href="/path-to/topic/exchange-rates">exchange rates</a> heat map of where sentiment and expectations are going.
+                                    </p>
+                                </div>
+
+                                <hr class="fxs_divider_wide">
+
+                            </article>
+                            <!-- /Report ends here -->
+
+                            <!-- Related content -->
+                            <aside class="fxs_relatedContent_holder">
+                                <header class="fxs_resetRow_margin fxs_marginBase_bottom">
+                                    <h4 class="fxs_helperLabel_title">Related content</h4>
+                                </header>
+                                <ul class="fxs_swipeContent_slider">
+                                    <li class="fxs_relatedContentSlot_x3_cols">
+                                        <div class="fxs_relatedItem">
+                                            <article>
+                                                <div class="fxs_entryFeatured_img">
+                                                    <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                                </div>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October</a>
+                                                </h3>
+                                            </article>
                                         </div>
-                                        <p>
-                                            After a steep fall, the Euro will attempt to recover losses against the Dollar. However, this will be limited to 1.10 and we would need to close above this level for the sentiment to be more bullish.
-                                        </p>
-                                        <footer>
-                                            <cite title="Source Title" class="fxs_cite">
-                                                <a href="">USD/GPB Forecast Poll</a>
-                                            </cite>
-                                            <address class="fxs_entry_metaInfo">
-                                                <span class="fxs_article_author">By <a href="path/to/author">Sacha Baron Cohen</a></span> |
-                                                <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
-                                            </address>
-                                        </footer>
-                                        <p></p>
-                                    </blockquote>
-                                    <!-- /Quote module -->
-                                </li>
-                                <li class="fxs_list_table_item">
-                                    <!-- Quote module -->
-                                    <blockquote class="fxs_featured_quote">
-                                        <div class="fxs_avatar_circleImage">
-                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
-                                                <img src="http://www.ps4-magazin.de/wcf/images/avatars/avatar-3974.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
-                                            </a>
+                                    </li>
+                                    <li class="fxs_relatedContentSlot_x3_cols">
+                                        <div class="fxs_relatedItem">
+                                            <article>
+                                                <div class="fxs_entryFeatured_img">
+                                                    <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
+                                                </div>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October</a>
+                                                </h3>
+                                            </article>
                                         </div>
-                                        <p>
-                                            Despite a near term rebound, the bears are back I control and this should continue to put pressure on the supports over the coming weeks.
-                                        </p>
-                                        <footer>
-                                            <cite title="Source Title" class="fxs_cite"><a href="">USD/GPB Forecast Poll</a></cite>
-                                            <address class="fxs_entry_metaInfo">
-                                                <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
-                                                <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
-                                            </address>
-                                        </footer>
-                                    </blockquote>
-                                    <!-- /Quote module -->
-                                </li>
-                            </ul>
-                            <!-- /Highlighted quotes -->
-
-                            <hr class="fxs_divider_wide">
-
-                            <!-- study -->
-                            <div id="about_study" class="fxs_entryPlain_txt">
-                                <p>
-                                    The <strong>Currencies Forecast Poll</strong> is a sentiment tool that highlights our selected experts near and medium term mood and calculates trends according to Friday's 15:00 GMT price. The <strong>#FXpoll</strong> is not to be taken as signal or as final target, but as an <a href="/path-to/topic/exchange-rates">exchange rates</a> heat map of where sentiment and expectations are going.
-                                </p>
-                            </div>
-
-                            <hr class="fxs_divider_wide">
-
-                        </article>
-                        <!-- /Report ends here -->
-
-                        <!-- Related content -->
-                        <aside class="fxs_relatedContent_holder">
-                            <header class="fxs_resetRow_margin fxs_marginBase_bottom">
-                                <h4 class="fxs_helperLabel_title">Related content</h4>
-                            </header>
-                            <ul class="fxs_swipeContent_slider">
-                                <li class="fxs_relatedContentSlot_x3_cols">
-                                    <div class="fxs_relatedItem">
-                                        <article>
-                                            <div class="fxs_entryFeatured_img">
-                                                <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
-                                            </div>
-                                            <h3 class="fxs_entryHeadline">
-                                                <a href="/">US durable goods orders strong than expected in October</a>
-                                            </h3>
-                                        </article>
-                                    </div>
-                                </li>
-                                <li class="fxs_relatedContentSlot_x3_cols">
-                                    <div class="fxs_relatedItem">
-                                        <article>
-                                            <div class="fxs_entryFeatured_img">
-                                                <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
-                                            </div>
-                                            <h3 class="fxs_entryHeadline">
-                                                <a href="/">US durable goods orders strong than expected in October</a>
-                                            </h3>
-                                        </article>
-                                    </div>
-                                </li>
-                                <li class="fxs_relatedContentSlot_x3_cols">
-                                    <div class="fxs_relatedItem">
-                                        <article>
-                                            <div class="fxs_entryFeatured_img">
-                                                <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
-                                            </div>
-                                            <h3 class="fxs_entryHeadline">
-                                                <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
-                                            </h3>
-                                        </article>
-                                    </div>
-                                </li>
-                            </ul>
-                        </aside>
-                        <!-- //Related content -->
-                       
-                    </section>
-                    <!-- /Main Section -->
+                                    </li>
+                                    <li class="fxs_relatedContentSlot_x3_cols">
+                                        <div class="fxs_relatedItem">
+                                            <article>
+                                                <div class="fxs_entryFeatured_img">
+                                                    <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                                </div>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                                </h3>
+                                            </article>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <!-- //Related content -->
+                           
+                        </section>
+                        <!-- /Main Section -->
+                    </main>
 
                 <!-- Modal footer -->
                 <footer class="fxs_footer">
