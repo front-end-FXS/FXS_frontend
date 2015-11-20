@@ -978,37 +978,6 @@
   }
 }
 
-/////////// Sitefinity cols overrrides //
-//////////// 12 columns based system /// Omar: Borrar en cuanto se prueben las FXS cols en producción
-
-// .sf_cols {
-//   .make-row();
-//   [class^="sf"][class*="col"]:not(.sf_colsIn), .fxs_flex_col { .column-default-parameters(); }
-//   // 100% //
-//   .fxs_col_100:not(.sf_colsIn) { &:extend(.fxs_clearfix all); }
-//   // 75% //
-//   [class$="_75"]:not(.sf_colsIn) { .make-l-column(9); }
-//   // 67% //
-//   [class$="_67"]:not(.sf_colsIn) { .make-s-column(8); }
-//   // 50% //
-//   [class$="_50"]:not(.sf_colsIn) { .make-s-column(6); } 
-//   [class*="3cols"][class$="_50"]:not(.sf_colsIn) { .make-m-column(6); }
-//   // ~33%-34% //
-//   [class$="_33"]:not(.sf_colsIn), [class$="_34"]:not(.sf_colsIn) { .make-s-column(4); }
-//   // 25% //
-//   [class*="2cols"][class$="_25"]:not(.sf_colsIn) {
-//     display: none;
-//     @media (min-width: @screen-l) { display: block;}
-//     .make-l-column(3);
-//   }
-//   [class*="3cols"][class$="_25"]:not(.sf_colsIn) {
-//     display: none;
-//     @media (min-width: @screen-m) { display: block;}
-//     .make-l-column(3);
-//   }
-//   [class*="4cols"][class$="_25"]:not(.sf_colsIn) { .make-s-column(3); }
-// }
-
 /////////////// Flexible cols //
 .fxs_flex_col {
   @media (min-width: @screen-s) {
@@ -1047,11 +1016,5 @@
 
 
 ///////////////////////// STYCKY /////////////////////////////
-// .stickem-container{ position: relative; }
-// .stickit{
-//     position: fixed;
-//     top: 0;
-//     .fxs_listView & { top: 80px; }
-//     &-end { position: absolute; bottom: 3px; }
-// }
+
 /////////////////////////////////////////////////////////////
