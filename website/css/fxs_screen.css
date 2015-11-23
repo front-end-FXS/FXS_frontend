@@ -2109,6 +2109,7 @@ width:calc(100% - 320px);
 .fxs_relatedContentSlot_x3_cols,
 .fxs_relatedContentSlot_x4_cols {
   position: relative;
+  min-height: 1px;
   padding-left: 0.66666667rem;
   padding-right: 0.66666667rem;
   min-width: 140px;
@@ -2288,17 +2289,6 @@ width:calc(100% - 320px);
 .fxs_preload .fxs_preload_spin_text {
   padding-left: 7.5px;
   vertical-align: middle;
-}
-.stickem-container {
-  position: relative;
-}
-.stickit {
-  position: fixed;
-  width: 300px;
-}
-.stickit-end {
-  position: absolute;
-  bottom: 0;
 }
 .c3 .tick line {
   zoom: 1;
@@ -4629,6 +4619,7 @@ width:calc(100% - 35px - 5px);
 .fxs_col,
 .fxs_flex_col {
   position: relative;
+  min-height: 1px;
   padding-left: 0.66666667rem;
   padding-right: 0.66666667rem;
 }
@@ -4671,7 +4662,6 @@ width:calc(100% - 35px - 5px);
 @media (min-width: 680px) {
   .fxs_flex_col {
     float: left;
-    position: relative;
     -lh-property: 0;
 width:-webkit-calc(100% - 270px);
 width:-moz-calc(100% - 270px);
@@ -4680,11 +4670,13 @@ width:calc(100% - 270px);
   }
   .fxs_flex_col.fxs_flex_ad_col {
     width: 270px;
-    overflow: hidden;
     position: static;
   }
   .fxs_flex_col.fxs_flex_ad_col.fxs_flex_ad_col_fRight {
     float: right;
+  }
+  .fxs_flex_col.fxs_flex_ad_col .stickem {
+    width: 250px;
   }
 }
 @media (min-width: 1100px) {
@@ -4698,9 +4690,40 @@ width:calc(100% - 320px);
   .fxs_flex_col.fxs_flex_ad_col {
     width: 320px;
   }
+  .fxs_flex_col.fxs_flex_ad_col .stickem {
+    width: 300px;
+  }
+}
+.stickem-container {
+  position: relative;
+}
+@media (min-width: 680px) {
+  .stickit {
+    position: fixed;
+  }
+}
+.stickit-end {
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 680px) {
+  .fxs_content .stickit {
+    top: 95px;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_modal_content .stickit {
+    top: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_modal_content .stickit {
+    top: 67.5px;
+  }
 }
 .fxs_content_adContainer {
   margin: 0 auto;
+  overflow: hidden;
 }
 .fxs_sponsored_content_row {
   padding: 0 0 1rem;
@@ -5517,6 +5540,7 @@ width:calc(100% - 210px - 2rem);
   }
   .fxs_forecast_widget.fxs_widget_big .forecast_timeframe_slot {
     position: relative;
+    min-height: 1px;
     padding-left: 0.66666667rem;
     padding-right: 0.66666667rem;
   }
@@ -5771,6 +5795,7 @@ width:calc(100% - 140px);
 }
 .fxs_widget_column {
   position: relative;
+  min-height: 1px;
   padding-left: 0.66666667px;
   padding-right: 0.66666667px;
   float: left;

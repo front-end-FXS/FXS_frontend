@@ -53,20 +53,27 @@
 		bindEvents: function() {
 			var _self = this;
 
-			if (_self.config.containerScroll !== undefined && _self.config.containerScroll != null) {
-               _self.config.containerScroll.on("scroll", $.proxy(_self.handleScroll, _self));
-           }
-           else {
+			if (_self.itsModal()) {
+			   _self.config.containerScroll.on("scroll", $.proxy(_self.handleScroll, _self));
+			   _self.$win.on("resize", $.proxy(_self.handleResize, _self)); 
+			}
+            else {
                _self.$win.on('scroll.stickem', $.proxy(_self.handleScroll, _self));
-           }
-			_self.$win.on('resize.stickem', $.proxy(_self.handleResize, _self));
+               _self.$win.on('resize.stickem', $.proxy(_self.handleResize, _self));
+            }			
 		},
 
 		destroy: function() {
 			var _self = this;
 
-			_self.$win.off('scroll.stickem');
-			_self.$win.off('resize.stickem');
+			if (_self.itsModal()) {
+			   _self.config.containerScroll.off("scroll");
+			   _self.$win.off("resize");
+			}
+            else {
+               _self.$win.off('scroll.stickem');
+			   _self.$win.off('resize.stickem');
+            }			
 		},
 
 		getItem: function(index, element) {
@@ -125,7 +132,13 @@
 			var _self = this;
 
 			if(_self.items.length > 0) {
-				var pos = _self.$win.scrollTop();
+				var pos = 0;
+
+				if(_self.itsModal()){
+					pos = _self.config.containerScroll.scrollTop();
+				}else{
+					pos = _self.$win.scrollTop();
+				}				
 
 				for(var i = 0, len = _self.items.length; i < len; i++) {
 					var item = _self.items[i];
@@ -163,7 +176,16 @@
 		setWindowHeight: function() {
 			var _self = this;
 
-			_self.windowHeight = _self.$win.height() - _self.config.offset;
+			if(_self.itsModal()){
+				_self.windowHeight = _self.config.containerScroll.height() - _self.config.offset;
+			}else{
+				_self.windowHeight = _self.$win.height() - _self.config.offset;
+			}
+		},
+
+		itsModal: function() {
+			var _self = this;
+			return _self.config.containerScroll !== undefined && _self.config.containerScroll != null;
 		}
 	};
 

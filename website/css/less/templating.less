@@ -989,23 +989,53 @@
 .fxs_flex_col {
   @media (min-width: @screen-s) {
     float: left;
-    position: relative;
     .calc(width, ~'100% - @{left_rail_space_reduced}');
     &.fxs_flex_ad_col {
       width: @left_rail_space_reduced;
-      overflow: hidden;
       position: static;
       &.fxs_flex_ad_col_fRight { float: right; }
+      .stickem { width: @left_rail_space_reduced - ((@txt_defaultsize_px / 1.5) * 2); }
     }
   }
   @media (min-width: @screen-l) {
     .calc(width, ~'100% - @{left_rail_space}');
-    &.fxs_flex_ad_col { width: @left_rail_space; }
+    &.fxs_flex_ad_col {
+      width: @left_rail_space;
+      .stickem { width: @left_rail_space - ((@txt_defaultsize_px / 1.5) * 2); }
+    }
   }
 }
 //
 
-.fxs_content_adContainer { margin: 0 auto; }
+/////////////////////////////////////////////////////////////////////////
+//////////////////////// Sticky module /////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+.stickem-container { position: relative; }
+
+.stickit {
+  @media(min-width:@screen-s) { position: fixed; }
+}
+
+.stickit-end {
+  position: absolute;
+  bottom: 0;
+}
+
+.fxs_content .stickit {
+  @media(min-width:@screen-s) { top: 80px + @txt_defaultsize_px; }
+}
+
+.fxs_modal_content .stickit {
+  @media(min-width:@screen-s) { top: 45px + @txt_defaultsize_px; }
+  @media(min-width:@screen-m) { top: 45px + (@txt_defaultsize_px*1.5); }
+}
+
+/////////////////////////////////////////////////////////////
+
+.fxs_content_adContainer {
+  margin: 0 auto;
+  overflow: hidden;
+}
 
 .fxs_sponsored_content_row {
   padding: 0 0 1rem;
@@ -1022,7 +1052,3 @@
   @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
 }
 
-
-///////////////////////// STYCKY /////////////////////////////
-
-/////////////////////////////////////////////////////////////
