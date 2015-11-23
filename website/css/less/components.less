@@ -1156,6 +1156,15 @@
 }
 
 /////////////////////////////////////////////////////////////////////////
+//////////////////////// Sticky module /////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+.stickem-container { position: relative; }
+.stickit {
+  position: fixed;
+  width: 300px;
+}
+
+/////////////////////////////////////////////////////////////////////////
 ///////////// Reset & overrides C3 library General. USE IT WITH CAUTION!!
 
 .c3 {
@@ -1232,7 +1241,7 @@
    .translate(0, -25%);
    .transition(transform 0.3s ease-out);
   }
-  &.in .fxs_modal_content { .translate(0, 0) }
+  &.in .fxs_modal_content { .transform(none); }
 }
 
 .modal-backdrop {
