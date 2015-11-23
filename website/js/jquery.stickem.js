@@ -33,7 +33,8 @@
 			offset: 0,
 			start: 0,
 			onStick: null,
-			onUnstick: null
+			onUnstick: null,
+			containerScroll: null,
 		},
 
 		init: function() {
@@ -52,7 +53,12 @@
 		bindEvents: function() {
 			var _self = this;
 
-			_self.$win.on('scroll.stickem', $.proxy(_self.handleScroll, _self));
+			if (_self.config.containerScroll !== undefined && _self.config.containerScroll != null) {
+               _self.config.containerScroll.on("scroll", $.proxy(_self.handleScroll, _self));
+           }
+           else {
+               _self.$win.on('scroll.stickem', $.proxy(_self.handleScroll, _self));
+           }
 			_self.$win.on('resize.stickem', $.proxy(_self.handleResize, _self));
 		},
 

@@ -473,7 +473,7 @@
         <!-- /The wrapper -->
 
         <!-- Modal -->
-        <div class="fxs_modal_wrap modal fade">
+        <div id="modalfxs" class="fxs_modal_wrap modal fade">
             
             <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close content">
                 <i class="fa fa-times"></i>
@@ -595,19 +595,12 @@
                                         <span class="fxs_togglebtn_txt toggled_txt">Hide conditions <i class="fa fa-chevron-up"></i></span>
                                     </button>
 
-                                    <!-- visible in small devices -->
-                                    <div class="fxs_visible_m">
-                                        <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Download app</a>
-                                    </div>
-                                    <!-- / visible in small devices -->
-
-                                    <!-- visible in big screens -->
-                                    <div class="fxs_hidden_m">
-                                        <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Start free demo</a>
+                                    <div class="fxs_clearfix">
+                                        <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Open my live account</a>
                                         <div class="fxs_sidebar_divider"><span>or</span></div>
-                                        <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Open my live account</a>
+                                        <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Start free demo</a>
                                     </div>
-                                    <!-- / visible in big screens -->
+
                                 </div>
 
                             </aside>
@@ -887,7 +880,7 @@
 
                         <footer class="fxs_broker_contact_footer">
                                 <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form" aria-controls="example-contact-form">
-                                    <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                                    <i class="fa fa-phone init_txt"></i> Call me <i class="fa fa-times-circle toggled_txt"></i>
                                 </button>
 
                                 <!-- Contact form -->
@@ -925,6 +918,7 @@
 
                                 <!-- Contact links -->
                                 <ul class="fxs_subnavInlined_list">
+                                    <li><i class="fa fa-phone"></i> <strong>(+00) 000000000</strong></li>
                                     <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                     <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                     <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
@@ -999,7 +993,9 @@
 
             ////////////////////////////////
             //// Stick em /////////////////
-            $('.fxs_detail').stickem();
+            $('.fxs_detail').stickem({
+               containerScroll: $("#modalfxs")
+           });
 
         </script>
 

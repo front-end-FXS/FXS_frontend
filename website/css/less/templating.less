@@ -776,7 +776,7 @@
   }
 }
 
-.fxs_copy_disclaimer { // capa contenedora navegación copyright y disclaimer
+.fxs_copy_disclaimer { // capa contenedora navegaciÃ³n copyright y disclaimer
   background-color: @light_5_clr;
   font-size: @txt_size_nano;
   height: @base_module_size;
@@ -822,7 +822,14 @@
 /////////////////////////////////////////////////////////
 
 // Brokers
-
+.fxs_list_table_summary {
+  .fxs_list_table_item {
+    &:not(:last-child) { display: none; }
+    @media (min-width: @screen-m) {
+      &:not(:last-child) { display: table; }
+    }
+  }
+}
 /////////// Broker contact module ////////////
 .fxs_broker_contact_footer {
   &:extend(.fxs_clearfix all);
@@ -834,7 +841,7 @@
   .fxs_subnavInlined_list {
     li {
       line-height: @base_module_size;
-      &:last-child {
+      &:last-child, &:nth-last-child(2) {
         display: none;
         @media (min-width: @screen-l) { display: inline-block; }
       }

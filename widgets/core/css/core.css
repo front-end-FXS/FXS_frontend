@@ -1218,7 +1218,6 @@ width:calc(100% - 320px);
 }
 @media (min-width: 680px) {
   .fxs_contributorBox_header {
-    margin-bottom: 1rem;
     padding-bottom: 1rem;
   }
   .fxs_contributorBox_header .fxs_avatar_circleImage_s,
@@ -1229,6 +1228,7 @@ width:calc(100% - 320px);
 @media (min-width: 1024px) {
   .fxs_contributorBox_header {
     border-bottom: 2px solid #f0f0f1;
+    margin-bottom: 1rem;
   }
 }
 .fxs_featured_quote {
@@ -1608,7 +1608,12 @@ width:calc(100% - 320px);
   }
 }
 .fxs_widget_summary {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .fxs_widget_summary {
+    margin-bottom: 1rem;
+  }
 }
 .fxs_widget_footer .fxs_btn {
   float: right;
