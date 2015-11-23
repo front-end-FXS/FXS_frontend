@@ -1553,8 +1553,8 @@ width:calc(100% - 320px);
   color: #8c8d91;
 }
 .fxs_relatedContent_holder {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
+  margin-left: -0.66666667rem;
+  margin-right: -0.66666667rem;
   overflow: hidden;
   font-size: 0;
 }
@@ -1576,8 +1576,8 @@ width:calc(100% - 320px);
 .fxs_relatedContentSlot_x3_cols,
 .fxs_relatedContentSlot_x4_cols {
   position: relative;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.66666667rem;
+  padding-right: 0.66666667rem;
   min-width: 140px;
 }
 .fxs_relatedContentSlot_x3_cols {
@@ -1753,6 +1753,17 @@ width:calc(100% - 320px);
   padding-left: 7.5px;
   vertical-align: middle;
 }
+.stickem-container {
+  position: relative;
+}
+.stickit {
+  position: fixed;
+  width: 300px;
+}
+.stickit-end {
+  position: absolute;
+  bottom: 0;
+}
 .c3 .tick line {
   zoom: 1;
   filter: alpha(opacity=0);
@@ -1821,11 +1832,11 @@ width:calc(100% - 320px);
   transition: -webkit-transform 0.3s ease-out,-moz-transform 0.3s ease-out,-o-transform 0.3s ease-out,transform 0.3s ease-out;
 }
 .fxs_modal_wrap.in .fxs_modal_content {
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 .modal-backdrop {
   top: 45px;

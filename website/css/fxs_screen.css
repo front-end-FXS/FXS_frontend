@@ -2086,8 +2086,8 @@ width:calc(100% - 320px);
   color: #8c8d91;
 }
 .fxs_relatedContent_holder {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
+  margin-left: -0.66666667rem;
+  margin-right: -0.66666667rem;
   overflow: hidden;
   font-size: 0;
 }
@@ -2109,8 +2109,8 @@ width:calc(100% - 320px);
 .fxs_relatedContentSlot_x3_cols,
 .fxs_relatedContentSlot_x4_cols {
   position: relative;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.66666667rem;
+  padding-right: 0.66666667rem;
   min-width: 140px;
 }
 .fxs_relatedContentSlot_x3_cols {
@@ -2289,6 +2289,17 @@ width:calc(100% - 320px);
   padding-left: 7.5px;
   vertical-align: middle;
 }
+.stickem-container {
+  position: relative;
+}
+.stickit {
+  position: fixed;
+  width: 300px;
+}
+.stickit-end {
+  position: absolute;
+  bottom: 0;
+}
 .c3 .tick line {
   zoom: 1;
   filter: alpha(opacity=0);
@@ -2357,11 +2368,11 @@ width:calc(100% - 320px);
   transition: -webkit-transform 0.3s ease-out,-moz-transform 0.3s ease-out,-o-transform 0.3s ease-out,transform 0.3s ease-out;
 }
 .fxs_modal_wrap.in .fxs_modal_content {
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 .modal-backdrop {
   top: 45px;
@@ -4612,14 +4623,14 @@ width:calc(100% - 35px - 5px);
   }
 }
 .fxs_row {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
+  margin-left: -0.66666667rem;
+  margin-right: -0.66666667rem;
 }
 .fxs_col,
 .fxs_flex_col {
   position: relative;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
+  padding-left: 0.66666667rem;
+  padding-right: 0.66666667rem;
 }
 @media (min-width: 1100px) {
   .fxs_col_75 {
@@ -4670,6 +4681,7 @@ width:calc(100% - 270px);
   .fxs_flex_col.fxs_flex_ad_col {
     width: 270px;
     overflow: hidden;
+    position: static;
   }
   .fxs_flex_col.fxs_flex_ad_col.fxs_flex_ad_col_fRight {
     float: right;
@@ -5500,13 +5512,13 @@ width:calc(100% - 210px - 2rem);
     margin: 0 auto 1rem;
   }
   .fxs_forecast_widget.fxs_widget_big .fxs_widget_divider_module {
-    margin-left: -0.625rem;
-    margin-right: -0.625rem;
+    margin-left: -0.66666667rem;
+    margin-right: -0.66666667rem;
   }
   .fxs_forecast_widget.fxs_widget_big .forecast_timeframe_slot {
     position: relative;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
+    padding-left: 0.66666667rem;
+    padding-right: 0.66666667rem;
   }
   .fxs_forecast_widget.fxs_widget_big .fxs_widget_avg_col {
     display: block;
@@ -5759,8 +5771,8 @@ width:calc(100% - 140px);
 }
 .fxs_widget_column {
   position: relative;
-  padding-left: 0.625px;
-  padding-right: 0.625px;
+  padding-left: 0.66666667px;
+  padding-right: 0.66666667px;
   float: left;
   padding-bottom: 1px;
   width: 50%;
