@@ -993,8 +993,10 @@
 
             ////////////////////////////////
             //// Stick em /////////////////
-            $('.fxs_modal_content .fxs_detail').stickem({
-               containerScroll: $("#modalfxs")
+            $('.fxs_detail').stickem({
+               containerScroll: $("#modalfxs"),
+               offset: 45,
+               top: 45
            });
 
         </script>
