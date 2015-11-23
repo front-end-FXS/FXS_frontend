@@ -1751,7 +1751,6 @@ width:calc(100% - 320px);
 }
 @media (min-width: 680px) {
   .fxs_contributorBox_header {
-    margin-bottom: 1rem;
     padding-bottom: 1rem;
   }
   .fxs_contributorBox_header .fxs_avatar_circleImage_s,
@@ -1762,6 +1761,7 @@ width:calc(100% - 320px);
 @media (min-width: 1024px) {
   .fxs_contributorBox_header {
     border-bottom: 2px solid #f0f0f1;
+    margin-bottom: 1rem;
   }
 }
 .fxs_featured_quote {
@@ -2141,7 +2141,12 @@ width:calc(100% - 320px);
   }
 }
 .fxs_widget_summary {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .fxs_widget_summary {
+    margin-bottom: 1rem;
+  }
 }
 .fxs_widget_footer .fxs_btn,
 .fxs_widget_footer .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
@@ -4412,6 +4417,14 @@ width:calc(100% - 320px);
     max-width: 75%;
   }
 }
+.fxs_list_table_summary .fxs_list_table_item:not(:last-child) {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fxs_list_table_summary .fxs_list_table_item:not(:last-child) {
+    display: table;
+  }
+}
 .fxs_broker_contact_footer {
   border-top: 3px solid #f0f0f1;
   min-height: 35px;
@@ -4421,11 +4434,13 @@ width:calc(100% - 320px);
 .fxs_broker_contact_footer .fxs_subnavInlined_list li {
   line-height: 35px;
 }
-.fxs_broker_contact_footer .fxs_subnavInlined_list li:last-child {
+.fxs_broker_contact_footer .fxs_subnavInlined_list li:last-child,
+.fxs_broker_contact_footer .fxs_subnavInlined_list li:nth-last-child(2) {
   display: none;
 }
 @media (min-width: 1100px) {
-  .fxs_broker_contact_footer .fxs_subnavInlined_list li:last-child {
+  .fxs_broker_contact_footer .fxs_subnavInlined_list li:last-child,
+  .fxs_broker_contact_footer .fxs_subnavInlined_list li:nth-last-child(2) {
     display: inline-block;
   }
 }
@@ -5835,7 +5850,7 @@ width:calc(100% - 140px);
 .fxs_widget_spreads_table > tbody > tr > th,
 .fxs_widget_spreads_table > thead > tr > th,
 .fxs_widget_spreads_table > tfoot > tr > th {
-  padding: 0.5rem 0.25rem;
+  padding: 0.25rem;
 }
 .fxs_widget_spreads_table .fxs_widget_spreads_item {
   font-size: 1.125rem;

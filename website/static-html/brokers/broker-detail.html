@@ -473,7 +473,7 @@
         <!-- /The wrapper -->
 
         <!-- Modal -->
-        <div class="fxs_modal_wrap modal fade">
+        <div id="modalfxs" class="fxs_modal_wrap modal fade">
             
             <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close content">
                 <i class="fa fa-times"></i>
@@ -489,7 +489,7 @@
                     <section class="fxs_detail">
                     
                         <!-- 1 = 100% -->
-                        <article class="fxs_row">
+                        <article class="fxs_row stickem-container">
                             
                             <div class="fxs_flex_col">
                             
@@ -548,65 +548,60 @@
 
                             <!-- Ad col outside -->
                             <aside class="fxs_flex_col fxs_flex_ad_col fxs_flex_ad_col_fRight fxs_marginBase_bottom">
-                                
-                                <h3 class="fxs_subtitle">
-                                    Live Spreads
-                                </h3>
 
-                                <!-- Widget spreads nano -->
-                                <div class="fxs_widget_summary">
-                                    <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
-                                        <tbody>
-                                            <tr>
-                                                <td class="fxs_widget_spreads_item fxs_widget_spreads_item_lower">
-                                                    <span class="fxs_label">eur/usd</span>
-                                                    <span>1.1</span>
-                                                </td>
-                                                <td class="fxs_widget_spreads_item">
-                                                    <span class="fxs_label">gbp/usd</span>
-                                                    <span>1.1</span>
-                                                </td>
-                                                <td class="fxs_widget_spreads_item">
-                                                    <span class="fxs_label">usd/jpy</span>
-                                                    <span>1.1</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /Widget spreads nano -->
+                                <div class="stickem">
+                                    <h3 class="fxs_subtitle">
+                                        Live Spreads
+                                    </h3>
 
-                                <div class="collapse" id="collapseExample">
-                                    <div class="fxs_content_panel fxs_entryPlain_txt_small">
-                                        <ul>
-                                          <li>No commissions</li>
-                                          <li>Account: MetaTrader</li>
-                                          <li>Variable Spreads</li>
-                                        </ul>
-                                        <div class="fxs_txt_center">
-                                            <a href="/" class="fxs_mutedLink">Compare all spreads <i class="fa fa-angle-double-right"></i></a>
+                                    <!-- Widget spreads nano -->
+                                    <div class="fxs_widget_summary">
+                                        <table class="fxs_table fxs_widget_spreads_table fxs_widget_nano">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="fxs_widget_spreads_item fxs_widget_spreads_item_lower">
+                                                        <span class="fxs_label">eur/usd</span>
+                                                        <span>1.1</span>
+                                                    </td>
+                                                    <td class="fxs_widget_spreads_item">
+                                                        <span class="fxs_label">gbp/usd</span>
+                                                        <span>1.1</span>
+                                                    </td>
+                                                    <td class="fxs_widget_spreads_item">
+                                                        <span class="fxs_label">usd/jpy</span>
+                                                        <span>1.1</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /Widget spreads nano -->
+
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="fxs_content_panel fxs_entryPlain_txt_small">
+                                            <ul>
+                                              <li>No commissions</li>
+                                              <li>Account: MetaTrader</li>
+                                              <li>Variable Spreads</li>
+                                            </ul>
+                                            <div class="fxs_txt_center">
+                                                <a href="/" class="fxs_mutedLink">Compare all spreads <i class="fa fa-angle-double-right"></i></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <button type="button" class="fxs_btn fxs_btn_content_toggle fxs_btn_content_toggle_collapse fxs_btn_block btn" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                    <span class="fxs_togglebtn_txt init_txt">Show conditions <i class="fa fa-chevron-down"></i></span>
-                                    <span class="fxs_togglebtn_txt toggled_txt">Hide conditions <i class="fa fa-chevron-up"></i></span>
-                                </button>
+                                    <button type="button" class="fxs_btn fxs_btn_content_toggle fxs_btn_content_toggle_collapse fxs_btn_block btn" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <span class="fxs_togglebtn_txt init_txt">Show conditions <i class="fa fa-chevron-down"></i></span>
+                                        <span class="fxs_togglebtn_txt toggled_txt">Hide conditions <i class="fa fa-chevron-up"></i></span>
+                                    </button>
 
-                                <!-- visible in small devices -->
-                                <div class="fxs_visible_m">
-                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block" role="button">Download app</a>
-                                </div>
-                                <!-- / visible in small devices -->
+                                    <div class="fxs_clearfix">
+                                        <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Open my live account</a>
+                                        <div class="fxs_sidebar_divider"><span>or</span></div>
+                                        <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Start free demo</a>
+                                    </div>
 
-                                <!-- visible in big screens -->
-                                <div class="fxs_hidden_m">
-                                    <a href="#" class="fxs_btn fxs_btn_cta fxs_btn_block">Start free demo</a>
-                                    <div class="fxs_sidebar_divider"><span>or</span></div>
-                                    <a href="#" class="fxs_btn fxs_btn_line fxs_btn_block">Open my live account</a>
                                 </div>
-                                <!-- / visible in big screens -->
 
                             </aside>
                             <!-- /Ad col outside -->
@@ -885,7 +880,7 @@
 
                         <footer class="fxs_broker_contact_footer">
                                 <button class="fxs_btn fxs_btn_content_toggle_collapse" type="button" data-toggle="collapse" data-target="#example-contact-form" aria-controls="example-contact-form">
-                                    <i class="fa fa-phone init_txt"></i> Contact this broker <i class="fa fa-times-circle toggled_txt"></i>
+                                    <i class="fa fa-phone init_txt"></i> Call me <i class="fa fa-times-circle toggled_txt"></i>
                                 </button>
 
                                 <!-- Contact form -->
@@ -923,6 +918,7 @@
 
                                 <!-- Contact links -->
                                 <ul class="fxs_subnavInlined_list">
+                                    <li><i class="fa fa-phone"></i> <strong>(+00) 000000000</strong></li>
                                     <li><a href="#" class="fxs_mutedLink"><i class="fa fa-link"></i> Website</a></li>
                                     <li><a href="#" class="fxs_mutedLink"><i class="fa fa-envelope-o"></i> Email</a></li>
                                     <li><a href="#" class="fxs_mutedLink"><i class="fa fa-external-link"></i> Faq</a></li>
@@ -964,6 +960,7 @@
 
         <script src="../../js/classie.js"></script>
         <script src="../../js/jquery.typeahead.min.js"></script>
+        <script src="../../js/jquery.stickem.js"></script>
         <script src="../../js/site.js"></script>
 
         <script>
@@ -993,6 +990,12 @@
             $('[data-toggle="fxs_second_slide"]').click(function() {
                 $(this).closest('.fxs_inlineForm_group').find('.fxs_contact_broker_slide').toggleClass( "active" );
             });
+
+            ////////////////////////////////
+            //// Stick em /////////////////
+            $('.fxs_detail').stickem({
+               containerScroll: $("#modalfxs")
+           });
 
         </script>
 

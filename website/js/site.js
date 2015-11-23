@@ -160,9 +160,7 @@ $(document).ready(function () {
             classie.toggle(showLeft, 'disabled');
         }
     }
-
-    ////////// Stick'em ////////// Se activará para anuncios fijos en layout
-    // $('.fxs_listView').stickem({offset:80});
+    
 
     ///////////////////////////////////////////
     ////////// Buttons active state //////////

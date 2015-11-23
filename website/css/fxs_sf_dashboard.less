@@ -1,7 +1,23 @@
 ﻿body{
      &.sfPageEditor{
-         // body
+        // disable modal in sitefinity dashboard
+        &.fxs_modal_page{
+            .fxs_modal_wrap{
+                display:block;
+                &.fade{
+                    opacity:1;
+                }
+                &.modal{
+                    position:relative;
+                }
+                .fxs_modal_content{
+                    margin-top:70px;
+                }
+            }
+        }
+         // body //
         overflow:auto!important;
+        background-color: #DEE2E7;
 
         // sitefinity template
         .sfPageContainer{
