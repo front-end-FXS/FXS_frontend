@@ -806,7 +806,7 @@
             ojo: este fragmento de código manipula el css para que al visualizar el chart en fullscreen sobreescribe la clase 'fxs_modal_wrap' con la propiedad top:0, cuando se desactiva el fullscreen top retoma su valor por defecto.
             */
 
-           chart.addEventListener('dataLoad',function(){
+           /*chart.addEventListener('dataLoad',function(){
              $('div.tt_fullscreen').on('click', function(){
                 if($('div.tt_fullscreen').attr('data-checked') == "on"){
                     $('.fxs_modal_content').css({
@@ -823,6 +823,19 @@
                     $('.fxs_modal_content').css({
                     "max-width" : "1000px"
                     });
+                }
+             });
+            });*/
+
+            chart.addEventListener('dataLoad',function(){
+             $('div.tt_fullscreen').on('click', function(){
+                if($('div.tt_fullscreen').attr('data-checked') == "on"){
+                    $('.tt_chartContainer').css({
+                        "top" : "45px",                   
+                        "bottom" : "0px"
+                    });
+                }else{
+                    $('.tt_chartContainer').css("top" , "0");
                 }
              });
             });
