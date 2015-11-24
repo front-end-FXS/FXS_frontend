@@ -1623,19 +1623,345 @@
         <script src="../../js/classie.js"></script>
         <script src="../../js/jquery.typeahead.min.js"></script>
         <script src="../../js/site.js"></script>
-        <script src="../../../../widgets/core/js/c3.min.js"></script>
-        <script src="../../../../widgets/core/js/d3.min.js"></script>
+        <script src="../../../widgets/core/js/c3.min.js"></script>
+        <script src="../../../widgets/core/js/d3.min.js"></script>
 
         <script>
 
-        /* / end chart 5 */
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
 
-            $(function () {
-              $('[data-toggle="tooltip"]').tooltip()
+
+    
+        // Gauge chart 3
+        var gauge_chart = c3.generate({
+            bindto: '#gauge_chart_3',
+                   
+            data: {
+                columns: [
+                ['Buy', 100],
+                ['Sell', 50]
+                ],
+                type: 'gauge'
+            },
+                    
+            zoom: {
+                enabled:false
+            },
+           
+            gauge: {
+                label: {
+                    show: false
+                },
+                units: ' %',
+                width: 6 // for adjusting arc thickness
+            },
+            color: {
+                pattern: ['#CE4735', '#CE4735', '#328372'], // the three color levels for the percentage values.
+                threshold: { values: [0, 100] }
+            },
+            size: {
+                height: 100,
+                width: 190
+            },
+            tooltip: {
+              show: false
+            },
+            interaction: { enabled: false }
+        });
+
+        // bar chart
+
+        var orders_chart_3 = c3.generate({
+            bindto: '#orders_chart_3',
+            data: {
+                x: 'x',
+                columns: [
+                ['x', 1.0005, 1.0010, 1.0028, 1.0035, 1.0042, 1.0051, 1.0061, 1.0072, 1.0088, 1.0097, 1.0105, 1.0111, 1.0128, 1.0135, 1.0142, 1.01501, 1.0160, 1.0170, 1.0182, 1.0197, 1.0203],
+                ['Sell', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+                ['Buy', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+
+                ],
+                type: 'bar',
+                colors: {
+                    Sell: '#CE4735',
+                    Buy: '#338473'
+                },
+                        
+            },
+            bar: {
+                width: 5 // this makes bar width 3px
+            },
+            size: {
+                height: 105
+            },
+            tooltip: {
+              show: true,
+              format: {
+                  title: function (d) { return d; },
+                  value: function (value, ratio, id) {
+                      return ratio;
+                  }             
+              }
+            },
+            interaction: { enabled: false },
+            padding:{
+                left:15
+            },
+            axis: {
+              y: {
+                show: false
+              },
+              x: {
+                tick: {
+                    values: ['1.0005', '1.0105', '1.0203']
+                }
+              } 
+            },
+            legend: {
+              position: 'right'
+            }
+        });
+
+        // forecast
+
+        var forecastSpeedometerObj = function() {
+            var id = "";
+            var chartAssets = null;
+            var container = null;
+            var colunms = null;
+
+            var setVars = function(initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
+
+            var initChart = function() {
+                chartAssets = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Sideways', 0], ['Bearish', 0], ['Bullish', 0]],
+                        type: 'gauge'
+                    },
+                    zoom: { enabled: false },
+                    gauge: {
+                        label: { show: false },
+                        units: ' %',
+                        width: 6 // for adjusting arc thickness
+                    },
+                    color: {
+                        pattern: ['#8B8C91', '#CE4735', '#338473'] // the three color levels for the percentage values
+                    },
+                    size: {
+                        height: 90,
+                        width: 190
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    interaction: { enabled: false }
+                });
+            };
+
+            var delayLoad = function() {
+                setTimeout(function() {
+                    chartAssets.resize({
+                        height: 90,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function() {
+                    chartAssets.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function() {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe_slot").hasClass("active")) {
+                    chartAssets.flush();
+                }
+            };
+
+            this.Init = function(initJson) {
+                setVars(initJson);
+                print();
+            };
+        };
+
+        var forecastWidgetObj = function() {
+
+            var chartAssets = [];
+
+            var manageRenderedHtml = function() {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function() {
+                $.each(chartAssets, function (i, chartAssets) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+                $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function(e) {
+                    notifyChartsActiveChange();
+                });
+            };
+
+            //#region Charts
+
+            var printCharts = function() {
+                // Widget big
+                instanciateSpeedometer("forecast_chart_1w_big", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1m_big", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1q_big", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
+            };
+
+            var instanciateSpeedometer = function(widgetId, colunms) {
+                var initJsonSpeedometer = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpSpeedometer = new forecastSpeedometerObj();
+                ctpSpeedometer.Init(initJsonSpeedometer);
+
+                chartAssets.push(ctpSpeedometer);
+            };
+
+            //#endregion Charts
+
+            this.Init = function() {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
+
+        // widget cot positioning
+
+        var non_commercial_default = c3.generate({
+            bindto: '#non_commercial_default',                 
+            data: {
+                x: 'x',
+                columns: [
+                    ['x', '2015-01-01', '2015-02-03', '2015-03-02', '2015-04-02'],
+                    ['noncommercial', 324550, 150000, 320000, -45000]
+                ],
+                colors: { noncommercial: '#CE4735' },
+                names:{ noncommercial: 'Non-Commercial' }           
+            },
+            axis: {
+                x: {
+                    show: false,
+                    type: 'timeseries',
+                    tick: { format: '%Y-%m-%d' }
+                },
+                y: { show: false }
+            },
+            legend: { show: false },
+            size:{ height: 47 },
+            point: {
+                r: 2.4,
+                focus: {
+                    expand: { r: 3 },
+                    select: { r: 3 }
+                }
+            }
+        });
+        
+        var commercial_default = c3.generate({
+            bindto: '#commercial_default',                 
+            data: {
+                x: 'x',
+                columns: [
+                    ['x', '2015-01-01', '2015-02-03', '2015-03-02', '2015-04-02'],
+                    ['commercial', -300550, -150000, -320000, 45000]
+                ],
+                colors: { commercial: '#328372' },
+                names:{ commercial: "Commercial" }
+            },
+            axis: {
+                x: {
+                    show: false,
+                    type: 'timeseries',
+                    tick: { format: '%Y-%m-%d' }
+                },
+                y: { show: false }
+            },
+            legend: { show: false },
+            size:{ height: 47 },
+            point: {
+                r: 2.4,
+                focus: {
+                    expand: { r: 3 },
+                    select: { r: 3 }
+                } 
+            }
+        });
+
+       var colors = ['#F5C861', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#F5C861']; // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+
+        // Importante!: añadir "chart.flush();" on window resize para que vuelva a pintar la gráfica (y ajuste las medidas)
+        // Importante2!: ajustar la altura proporcional al número de categories (pares): si son 10 = 300, si son 5 = 150, si son 2 = 60 (la base de cada category es 30)
+        // Importante3!: Si se configura para dejar menos categories (pares), eliminar del centro hacia afuera: los últimos en ser descartados deben ser los extremos (siempre números pares: 2, 4, 6, 8, 10, ...)
+
+        var chartNew = c3.generate({
+            bindto: '#c_chart',
+            data: {
+              columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
+              type: 'bar',
+              names: { data1: 'Correlation' },
+              color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+            },
+            bar: { width: 15 },
+            legend: { hide: true },
+            axis: {
+              rotated: true,
+              x: {
+                type: 'category',
+                categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
+              },
+              y: {
+                padding: {top: 10, bottom: 10 },
+                max: 1,
+                min: -1,
+                center: 0,
+                tick: { values: [-1, -0.5, 0, 0.5, 1] }
+              }
+            },
+            grid: {
+              y: {
+                show: true,
+                lines: [ {value: 0} ]
+              }
+            },
+            padding: { bottom: 0 },
+            size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
+        });
+        setTimeout(function () {
+            chartNew.load({
+                columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
             });
+            chart2.load({
+                columns: [ ['data1', 0.99, 0.88, 0.4, 0.2, -0.1, -0.33, -0.55, -0.8] ]
+            });
+        }, 500);
 
 
-            var d = Date.now();
+        // teletrader
+
+        var d = Date.now();
 
             var strSymbolname = "tts-3212164";
             var strLabelname = "EUR/USD";
@@ -1815,331 +2141,7 @@
                     chart.symbols.addIndicator(objValue);
                     chart.display();
                 }
-            } 
-
-            // Gauge chart 3
-        var gauge_chart = c3.generate({
-            bindto: '#gauge_chart_3',
-                   
-            data: {
-                columns: [
-                ['Buy', 100],
-                ['Sell', 50]
-                ],
-                type: 'gauge'
-            },
-                    
-            zoom: {
-                enabled:false
-            },
-           
-            gauge: {
-                label: {
-                    show: false
-                },
-                units: ' %',
-                width: 6 // for adjusting arc thickness
-            },
-            color: {
-                pattern: ['#CE4735', '#CE4735', '#328372'], // the three color levels for the percentage values.
-                threshold: { values: [0, 100] }
-            },
-            size: {
-                height: 100,
-                width: 190
-            },
-            tooltip: {
-              show: false
-            },
-            interaction: { enabled: false }
-        });
-
-        // bar chart
-
-        var orders_chart_3 = c3.generate({
-            bindto: '#orders_chart_3',
-            data: {
-                x: 'x',
-                columns: [
-                ['x', 1.0005, 1.0010, 1.0028, 1.0035, 1.0042, 1.0051, 1.0061, 1.0072, 1.0088, 1.0097, 1.0105, 1.0111, 1.0128, 1.0135, 1.0142, 1.01501, 1.0160, 1.0170, 1.0182, 1.0197, 1.0203],
-                ['Sell', 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1],
-                ['Buy', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
-
-                ],
-                type: 'bar',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#338473'
-                },
-                        
-            },
-            bar: {
-                width: 5 // this makes bar width 3px
-            },
-            size: {
-                height: 105
-            },
-            tooltip: {
-              show: true,
-              format: {
-                  title: function (d) { return d; },
-                  value: function (value, ratio, id) {
-                      return ratio;
-                  }             
-              }
-            },
-            interaction: { enabled: false },
-            padding:{
-                left:15
-            },
-            axis: {
-              y: {
-                show: false
-              },
-              x: {
-                tick: {
-                    values: ['1.0005', '1.0105', '1.0203']
-                }
-              } 
-            },
-            legend: {
-              position: 'right'
             }
-        });
-
-        // forecast
-
-        var forecastSpeedometerObj = function() {
-            var id = "";
-            var chart = null;
-            var container = null;
-            var colunms = null;
-
-            var setVars = function(initJson) {
-                id = initJson.Id;
-                colunms = initJson.Colunms;
-                container = $('#' + id);
-            };
-
-            var initChart = function() {
-                chart = c3.generate({
-                    bindto: '#' + id,
-                    data: {
-                        columns: [['Sideways', 0], ['Bearish', 0], ['Bullish', 0]],
-                        type: 'gauge'
-                    },
-                    zoom: { enabled: false },
-                    gauge: {
-                        label: { show: false },
-                        units: ' %',
-                        width: 6 // for adjusting arc thickness
-                    },
-                    color: {
-                        pattern: ['#8B8C91', '#CE4735', '#338473'] // the three color levels for the percentage values
-                    },
-                    size: {
-                        height: 90,
-                        width: 190
-                    },
-                    tooltip: {
-                        show: false
-                    },
-                    interaction: { enabled: false }
-                });
-            };
-
-            var delayLoad = function() {
-                setTimeout(function() {
-                    chart.resize({
-                        height: 90,
-                        width: undefined
-                    });
-                }, 100);
-                setTimeout(function() {
-                    chart.load({
-                        columns: colunms
-                    });
-                }, 250);
-            };
-
-            var print = function() {
-                initChart();
-                delayLoad();
-            };
-
-            this.ActiveChange = function() {
-                if (container.closest(".forecast_timeframe_slot").hasClass("active")) {
-                    chart.flush();
-                }
-            };
-
-            this.Init = function(initJson) {
-                setVars(initJson);
-                print();
-            };
-        };
-
-        var forecastWidgetObj = function() {
-
-            var charts = [];
-
-            var manageRenderedHtml = function() {
-                addTabOnClick();
-            };
-
-            var notifyChartsActiveChange = function() {
-                $.each(charts, function (i, chart) {
-                    chart.ActiveChange();
-                });
-            };
-
-            var addTabOnClick = function () {
-                $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function(e) {
-                    notifyChartsActiveChange();
-                });
-            };
-
-            //#region Charts
-
-            var printCharts = function() {
-                // Widget big
-                instanciateSpeedometer("forecast_chart_1w_big", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
-                instanciateSpeedometer("forecast_chart_1m_big", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
-                instanciateSpeedometer("forecast_chart_1q_big", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
-            };
-
-            var instanciateSpeedometer = function(widgetId, colunms) {
-                var initJsonSpeedometer = {
-                    Id: widgetId,
-                    Colunms: colunms
-                };
-
-                var ctpSpeedometer = new forecastSpeedometerObj();
-                ctpSpeedometer.Init(initJsonSpeedometer);
-
-                charts.push(ctpSpeedometer);
-            };
-
-            //#endregion Charts
-
-            this.Init = function() {
-                manageRenderedHtml();
-                printCharts();
-            };
-        };
-
-        var forecast = new forecastWidgetObj();
-        forecast.Init();
-
-        // widget cot positioning
-
-        var non_commercial_default = c3.generate({
-                bindto: '#non_commercial_default',                 
-                data: {
-                    x: 'x',
-                    columns: [
-                        ['x', '2015-01-01', '2015-02-03', '2015-03-02', '2015-04-02'],
-                        ['noncommercial', 324550, 150000, 320000, -45000]
-                    ],
-                    colors: { noncommercial: '#CE4735' },
-                    names:{ noncommercial: 'Non-Commercial' }           
-                },
-                axis: {
-                    x: {
-                        show: false,
-                        type: 'timeseries',
-                        tick: { format: '%Y-%m-%d' }
-                    },
-                    y: { show: false }
-                },
-                legend: { show: false },
-                size:{ height: 47 },
-                point: {
-                    r: 2.4,
-                    focus: {
-                        expand: { r: 3 },
-                        select: { r: 3 }
-                    }
-                }
-            });
-            
-            var commercial_default = c3.generate({
-                bindto: '#commercial_default',                 
-                data: {
-                    x: 'x',
-                    columns: [
-                        ['x', '2015-01-01', '2015-02-03', '2015-03-02', '2015-04-02'],
-                        ['commercial', -300550, -150000, -320000, 45000]
-                    ],
-                    colors: { commercial: '#328372' },
-                    names:{ commercial: "Commercial" }
-                },
-                axis: {
-                    x: {
-                        show: false,
-                        type: 'timeseries',
-                        tick: { format: '%Y-%m-%d' }
-                    },
-                    y: { show: false }
-                },
-                legend: { show: false },
-                size:{ height: 47 },
-                point: {
-                    r: 2.4,
-                    focus: {
-                        expand: { r: 3 },
-                        select: { r: 3 }
-                    } 
-                }
-            });
-
-       var colors = ['#F5C861', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#F5C861']; // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
-
-        // Importante!: añadir "chart.flush();" on window resize para que vuelva a pintar la gráfica (y ajuste las medidas)
-        // Importante2!: ajustar la altura proporcional al número de categories (pares): si son 10 = 300, si son 5 = 150, si son 2 = 60 (la base de cada category es 30)
-        // Importante3!: Si se configura para dejar menos categories (pares), eliminar del centro hacia afuera: los últimos en ser descartados deben ser los extremos (siempre números pares: 2, 4, 6, 8, 10, ...)
-
-        var chart = c3.generate({
-            bindto: '#c_chart',
-            data: {
-              columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
-              type: 'bar',
-              names: { data1: 'Correlation' },
-              color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
-            },
-            bar: { width: 15 },
-            legend: { hide: true },
-            axis: {
-              rotated: true,
-              x: {
-                type: 'category',
-                categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
-              },
-              y: {
-                padding: {top: 10, bottom: 10 },
-                max: 1,
-                min: -1,
-                center: 0,
-                tick: { values: [-1, -0.5, 0, 0.5, 1] }
-              }
-            },
-            grid: {
-              y: {
-                show: true,
-                lines: [ {value: 0} ]
-              }
-            },
-            padding: { bottom: 0 },
-            size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
-        });
-        setTimeout(function () {
-            chart.load({
-                columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
-            });
-            chart2.load({
-                columns: [ ['data1', 0.99, 0.88, 0.4, 0.2, -0.1, -0.33, -0.55, -0.8] ]
-            });
-        }, 500);
 
         </script>
 

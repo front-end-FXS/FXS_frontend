@@ -3290,1198 +3290,1199 @@
     <script src="../../js/classie.js"></script>
     <script src="../../js/jquery.typeahead.min.js"></script>
     <script src="../../js/site.js"></script>
-    <script src="../../../../widgets/core/js/c3.min.js"></script>
-    <script src="../../../../widgets/core/js/d3.min.js"></script>
+    <script src="../../../widgets/core/js/c3.min.js"></script>
+    <script src="../../../widgets/core/js/d3.min.js"></script>
 
     <script>
-    
 
-            var d = Date.now();
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
 
-            var strSymbolname = "tts-3212164";
-            var strLabelname = "EUR/USD";
-            var strLocale = "en";
+        // forecast
 
-            var strComparision ="tts-3230110";
+        var forecastProgressBarObj = function () {
+        var id = "";
+        var chartRates = null;
+        var container = null;
+        var colunms = null;
 
-            //symbolname, labelname, daterange & locale definition through query string     
-            var strquery = document.URL.split('?')[1];
-            if (strquery)
-                strquery = strquery.split('&');
-            for (var y in strquery) {
-                var z = strquery[y].toString().split('=');
-                if (z.length == 2) {
-                    if (z[0].toLowerCase() == "lang") {
-                        strLocale = z[1];
+        var setVars = function (initJson) {
+            id = initJson.Id;
+            colunms = initJson.Colunms;
+            container = $('#' + id);
+        };
+
+        var initChart = function () {
+            chartRates = c3.generate({
+                bindto: '#' + id,
+                data: {
+                    columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
+                    type: 'bar',
+                    groups: [
+                        ['Bullish', 'Bearish', 'Sideways']
+                    ],
+                    order: 'null',
+                    colors: {
+                        Bullish: '#338473',
+                        Bearish: '#CE4735',
+                        Sideways: '#8b8c91'
                     }
-                    else if (z[0].toLowerCase() == "symbolname") {
-                        strSymbolname = z[1];
-                    }
-                    else if (z[0].toLowerCase() == "labelname") {
-                        strLabelname = z[1];
-                    }
-                }
-            }
-
-
-            var chart = TTChart.create({ id: "chartDiv1" });
-
-            chart.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv'
-            });
-
-            chart.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart.resize();
-
-            chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart.symbols.addIndicator(objValue);
-                    chart.display();
-                }
-            } 
-
-            /* ------------------ 2 ------------------- */
-
-
-            var chart2 = TTChart.create({ id: "chartDiv2" });
-
-            chart2.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv'
-            });
-
-            chart2.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart2.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart2.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart2.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart2.resize();
-
-            chart2.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart2.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart2.symbols.addIndicator(objValue);
-                    chart2.display();
-                }
-            } 
-
-            /* ------------------ 3 ------------------- */
-
-
-            var chart3 = TTChart.create({ id: "chartDiv3" });
-
-            chart3.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                "main.lineColor": "rgba(51, 132, 115, 1)",
-                "main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                //"main.lineColor": "rgba(206, 71, 53, 1)",
-                //"main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv'
-            });
-
-            chart3.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart3.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart3.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart3.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart3.resize();
-
-            chart3.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart3.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart3.symbols.addIndicator(objValue);
-                    chart3.display();
-                }
-            }
-
-            /* ------------------ 2 ------------------- */
-
-
-            var chart4 = TTChart.create({ id: "chartDiv4" });
-
-            chart4.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                "main.lineColor": "rgba(51, 132, 115, 1)",
-                "main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                //"main.lineColor": "rgba(206, 71, 53, 1)",
-                //"main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv'
-            });
-
-            chart4.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart4.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart4.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart4.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart4.resize();
-
-            chart4.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart4.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart4.symbols.addIndicator(objValue);
-                    chart4.display();
-                }
-            }
-
-
-            /* ---------------------------- 5 ------------------------------- */
-
-            var chart5 = TTChart.create({ id: "chartDiv5" });
-
-            chart5.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'line',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(51, 132, 115, 1)",
-
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv'
-            });
-
-            chart5.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart5.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart5.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart5.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart5.symbols.addComparison( "tts-3230110", "Gold" );
-
-
-            chart5.resize();
-
-            chart5.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart5.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart5.symbols.addIndicator(objValue);
-                    chart5.display();
-                }
-            }
-
-            /* / end chart 5 */
-
-            $(function () {
-              $('[data-toggle="tooltip"]').tooltip()
-            });
-
-            // forecast
-
-            var forecastProgressBarObj = function () {
-            var id = "";
-            var chart = null;
-            var container = null;
-            var colunms = null;
-
-            var setVars = function (initJson) {
-                id = initJson.Id;
-                colunms = initJson.Colunms;
-                container = $('#' + id);
-            };
-
-            var initChart = function () {
-                chart = c3.generate({
-                    bindto: '#' + id,
-                    data: {
-                        columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
-                        type: 'bar',
-                        groups: [
-                            ['Bullish', 'Bearish', 'Sideways']
-                        ],
-                        order: 'null',
-                        colors: {
-                            Bullish: '#338473',
-                            Bearish: '#CE4735',
-                            Sideways: '#8b8c91'
-                        }
-                    },
-                    padding: {
-                        right: 0
-                    },
-                    axis: {
-                        y: {
-                            show: false
-                        },
-                        x: {
-                            show: false
-                        },
-                        rotated: true
-                    },
-                    bar: {
-                        width: 6
-                    },
-                    size: {
-                        height: 35,
-                        width: 90
-                    },
-                    legend: {
+                },
+                padding: {
+                    right: 0
+                },
+                axis: {
+                    y: {
                         show: false
                     },
-                    tooltip: {
-                        format: {
-                            title: function (d) { return '1 Week'; },
-                            value: function (value, ratio, id) {
-                                var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                                return format(value);
-                            }
+                    x: {
+                        show: false
+                    },
+                    rotated: true
+                },
+                bar: {
+                    width: 6
+                },
+                size: {
+                    height: 35,
+                    width: 90
+                },
+                legend: {
+                    show: false
+                },
+                tooltip: {
+                    format: {
+                        title: function (d) { return '1 Week'; },
+                        value: function (value, ratio, id) {
+                            var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                            return format(value);
                         }
                     }
-                });
-            };
-
-            var delayLoad = function () {
-                setTimeout(function () {
-                    chart.resize({
-                        height: 35,
-                        width: undefined
-                    });
-                }, 100);
-                setTimeout(function () {
-                    chart.load({
-                        columns: colunms
-                    });
-                }, 250);
-            };
-
-            var print = function () {
-                initChart();
-                delayLoad();
-            };
-
-            this.ActiveChange = function() {
-                if (container.closest(".forecast_timeframe").hasClass("active")) {
-                    chart.flush();
                 }
-            };
-
-            this.Init = function (initJson) {
-                setVars(initJson);
-                print();
-            };
+            });
         };
 
-        var forecastWidgetObj = function () {
-
-            var charts = [];
-
-            var manageRenderedHtml = function () {
-                addTabOnClick();
-            };
-
-            var notifyChartsActiveChange = function () {
-                $.each(charts, function(i, chart) {
-                    chart.ActiveChange();
+        var delayLoad = function () {
+            setTimeout(function () {
+                chartRates.resize({
+                    height: 35,
+                    width: undefined
                 });
-            };
-
-            var addTabOnClick = function () {
-
-                // Default widget
-                $('#tab_1_default').on('click', function () {
-                    $('.avg_1w').addClass('active');
-                    $('#tab_2_default, #tab_3_default').parent().removeClass('active');
-                    $(this).parent().addClass('active');
-                    $('.avg_1m, .avg_1q').removeClass('active');
-                    notifyChartsActiveChange();
+            }, 100);
+            setTimeout(function () {
+                chartRates.load({
+                    columns: colunms
                 });
-                $('#tab_2_default').on('click', function () {
-                    $('.avg_1m').addClass('active');
-                    $('#tab_1_default, #tab_3_default').parent().removeClass('active');
-                    $(this).parent().addClass('active');
-                    $('.avg_1w, .avg_1q').removeClass('active');
-                    notifyChartsActiveChange();
-                });
-                $('#tab_3_default').on('click', function () {
-                    $('.avg_1q').addClass('active');
-                    $('#tab_1_default, #tab_2_default').parent().removeClass('active');
-                    $(this).parent().addClass('active');
-                    $('.avg_1w, .avg_1m').removeClass('active');
-                    notifyChartsActiveChange();
-                });
-            };
-
-            //#region Charts
-
-            var printCharts = function () {
-                // Default Widget
-                instanciateProgressBar("forecast_bar_stacked_1w_default", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
-                instanciateProgressBar("forecast_bar_stacked_1m_default", [['Bullish', 0.8], ['Bearish', 0.1], ['Sideways', 0.1]]);
-                instanciateProgressBar("forecast_bar_stacked_1q_default", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
-
-                instanciateProgressBar("forecast_bar_stacked_1w_2_default", [['Bullish', 0.25],['Bearish', 0.7],['Sideways', 0.05]]);
-                instanciateProgressBar("forecast_bar_stacked_1m_2_default", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
-                instanciateProgressBar("forecast_bar_stacked_1q_2_default", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
-
-                // Default Widget
-                instanciateProgressBar("forecast_bar_stacked_1w_3_default", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
-                instanciateProgressBar("forecast_bar_stacked_1m_3_default", [['Bullish', 0.7], ['Bearish', 0.2], ['Sideways', 0.1]]);
-                instanciateProgressBar("forecast_bar_stacked_1q_3_default", [['Bullish', 0.5], ['Bearish', 0.3], ['Sideways', 0.2]]);
-
-                instanciateProgressBar("forecast_bar_stacked_1w_4_default", [['Bullish', 0.25],['Bearish', 0.8],['Sideways', 0.1]]);
-                instanciateProgressBar("forecast_bar_stacked_1m_4_default", [['Bullish', 0.5], ['Bearish', 0.3], ['Sideways', 0.2]]);
-                instanciateProgressBar("forecast_bar_stacked_1q_4_default", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
-            };
-
-            var instanciateProgressBar = function (widgetId, colunms) {
-                var initJsonProgressBar = {
-                    Id: widgetId,
-                    Colunms: colunms
-                };
-
-                var ctpProgressBar = new forecastProgressBarObj();
-                ctpProgressBar.Init(initJsonProgressBar);
-
-                charts.push(ctpProgressBar);
-            };
-
-            //#endregion Charts
-
-            this.Init = function () {
-                manageRenderedHtml();
-                printCharts();
-            };
+            }, 250);
         };
 
-        var forecast = new forecastWidgetObj();
-        forecast.Init();
+        var print = function () {
+            initChart();
+            delayLoad();
+        };
 
-        // current trading positions default
-
-        // Default widgets
-
-        var ctp_horitzontal_bar_default = c3.generate({
-            bindto: '#ctp_bar_stacked_default_1',
-            data: {
-                columns: [
-                    ['Sell',40],
-                    ['Buy', 60]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
+        this.ActiveChange = function() {
+            if (container.closest(".forecast_timeframe").hasClass("active")) {
+                chartRates.flush();
             }
-        });
+        };
 
+        this.Init = function (initJson) {
+            setVars(initJson);
+            print();
+        };
+    };
 
-        var ctp_horitzontal_bar_default_2 = c3.generate({
-            bindto: '#ctp_bar_stacked_default_2',
-            data: {
-                columns: [
-                    ['Sell', 70],
-                    ['Buy', 30]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
+    var forecastWidgetObj = function () {
+
+        var chartRates = [];
+
+        var manageRenderedHtml = function () {
+            addTabOnClick();
+        };
+
+        var notifyChartsActiveChange = function () {
+            $.each(charts, function(i, chart) {
+                chartRates.ActiveChange();
+            });
+        };
+
+        var addTabOnClick = function () {
+
+            // Default widget
+            $('#tab_1_default').on('click', function () {
+                $('.avg_1w').addClass('active');
+                $('#tab_2_default, #tab_3_default').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1m, .avg_1q').removeClass('active');
+                notifyChartsActiveChange();
+            });
+            $('#tab_2_default').on('click', function () {
+                $('.avg_1m').addClass('active');
+                $('#tab_1_default, #tab_3_default').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1q').removeClass('active');
+                notifyChartsActiveChange();
+            });
+            $('#tab_3_default').on('click', function () {
+                $('.avg_1q').addClass('active');
+                $('#tab_1_default, #tab_2_default').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                $('.avg_1w, .avg_1m').removeClass('active');
+                notifyChartsActiveChange();
+            });
+        };
+
+        //#region Charts
+
+        var printCharts = function () {
+            // Default Widget
+            instanciateProgressBar("forecast_bar_stacked_1w_default", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
+            instanciateProgressBar("forecast_bar_stacked_1m_default", [['Bullish', 0.8], ['Bearish', 0.1], ['Sideways', 0.1]]);
+            instanciateProgressBar("forecast_bar_stacked_1q_default", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
+
+            instanciateProgressBar("forecast_bar_stacked_1w_2_default", [['Bullish', 0.25],['Bearish', 0.7],['Sideways', 0.05]]);
+            instanciateProgressBar("forecast_bar_stacked_1m_2_default", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
+            instanciateProgressBar("forecast_bar_stacked_1q_2_default", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+
+            // Default Widget
+            instanciateProgressBar("forecast_bar_stacked_1w_3_default", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
+            instanciateProgressBar("forecast_bar_stacked_1m_3_default", [['Bullish', 0.7], ['Bearish', 0.2], ['Sideways', 0.1]]);
+            instanciateProgressBar("forecast_bar_stacked_1q_3_default", [['Bullish', 0.5], ['Bearish', 0.3], ['Sideways', 0.2]]);
+
+            instanciateProgressBar("forecast_bar_stacked_1w_4_default", [['Bullish', 0.25],['Bearish', 0.8],['Sideways', 0.1]]);
+            instanciateProgressBar("forecast_bar_stacked_1m_4_default", [['Bullish', 0.5], ['Bearish', 0.3], ['Sideways', 0.2]]);
+            instanciateProgressBar("forecast_bar_stacked_1q_4_default", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+        };
+
+        var instanciateProgressBar = function (widgetId, colunms) {
+            var initJsonProgressBar = {
+                Id: widgetId,
+                Colunms: colunms
+            };
+
+            var ctpProgressBar = new forecastProgressBarObj();
+            ctpProgressBar.Init(initJsonProgressBar);
+
+            chartRates.push(ctpProgressBar);
+        };
+
+        //#endregion Charts
+
+        this.Init = function () {
+            manageRenderedHtml();
+            printCharts();
+        };
+    };
+
+    var forecast = new forecastWidgetObj();
+    forecast.Init();
+
+    // current trading positions default
+
+    // Default widgets
+
+    var ctp_horitzontal_bar_default = c3.generate({
+        bindto: '#ctp_bar_stacked_default_1',
+        data: {
+            columns: [
+                ['Sell',40],
+                ['Buy', 60]
+            ],
+            type: 'bar',
+            groups: [
+                ['Sell', 'Buy']
+            ],
+            order: 'null',
+            colors: {
+                Sell: '#CE4735',
+                Buy: '#328372',
             }
-        });
+        },
+        padding: {
+            right: 0
+        },
+        axis: {
+            y: {
+                show: false
+             },
+            x: {
+                show: false
+            },
+            rotated: true
+        },
+        bar: {
+            width: 6
+        },
+        size: {
+            height: 35
+        },
+        tooltip: {
+            show: false
+        },
+        legend: {
+            show: false
+        }
+    });
 
-        var ctp_horitzontal_bar_default_3 = c3.generate({
-            bindto: '#ctp_bar_stacked_default_3',
-            data: {
-                columns: [
-                    ['Sell', 20],
-                    ['Buy', 80]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
-            }
-        });
 
-        var ctp_horitzontal_bar_default_4 = c3.generate({
-            bindto: '#ctp_bar_stacked_default_4',
-            data: {
-                columns: [
-                    ['Sell', 50],
-                    ['Buy', 50]
-                ],
-                type: 'bar',
-                groups: [
-                    ['Sell', 'Buy']
-                ],
-                order: 'null',
-                colors: {
-                    Sell: '#CE4735',
-                    Buy: '#328372',
-                }
-            },
-            padding: {
-                right: 0
-            },
-            axis: {
-                y: {
-                    show: false
-                 },
-                x: {
-                    show: false
-                },
-                rotated: true
-            },
-            bar: {
-                width: 6
-            },
-            size: {
-                height: 35
-            },
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
+    var ctp_horitzontal_bar_default_2 = c3.generate({
+        bindto: '#ctp_bar_stacked_default_2',
+        data: {
+            columns: [
+                ['Sell', 70],
+                ['Buy', 30]
+            ],
+            type: 'bar',
+            groups: [
+                ['Sell', 'Buy']
+            ],
+            order: 'null',
+            colors: {
+                Sell: '#CE4735',
+                Buy: '#328372',
             }
-        });
+        },
+        padding: {
+            right: 0
+        },
+        axis: {
+            y: {
+                show: false
+             },
+            x: {
+                show: false
+            },
+            rotated: true
+        },
+        bar: {
+            width: 6
+        },
+        size: {
+            height: 35
+        },
+        tooltip: {
+            show: false
+        },
+        legend: {
+            show: false
+        }
+    });
+
+    var ctp_horitzontal_bar_default_3 = c3.generate({
+        bindto: '#ctp_bar_stacked_default_3',
+        data: {
+            columns: [
+                ['Sell', 20],
+                ['Buy', 80]
+            ],
+            type: 'bar',
+            groups: [
+                ['Sell', 'Buy']
+            ],
+            order: 'null',
+            colors: {
+                Sell: '#CE4735',
+                Buy: '#328372',
+            }
+        },
+        padding: {
+            right: 0
+        },
+        axis: {
+            y: {
+                show: false
+             },
+            x: {
+                show: false
+            },
+            rotated: true
+        },
+        bar: {
+            width: 6
+        },
+        size: {
+            height: 35
+        },
+        tooltip: {
+            show: false
+        },
+        legend: {
+            show: false
+        }
+    });
+
+    var ctp_horitzontal_bar_default_4 = c3.generate({
+        bindto: '#ctp_bar_stacked_default_4',
+        data: {
+            columns: [
+                ['Sell', 50],
+                ['Buy', 50]
+            ],
+            type: 'bar',
+            groups: [
+                ['Sell', 'Buy']
+            ],
+            order: 'null',
+            colors: {
+                Sell: '#CE4735',
+                Buy: '#328372',
+            }
+        },
+        padding: {
+            right: 0
+        },
+        axis: {
+            y: {
+                show: false
+             },
+            x: {
+                show: false
+            },
+            rotated: true
+        },
+        bar: {
+            width: 6
+        },
+        size: {
+            height: 35
+        },
+        tooltip: {
+            show: false
+        },
+        legend: {
+            show: false
+        }
+    });
+
+    // teletrader
+
+    var d = Date.now();
+
+    var strSymbolname = "tts-3212164";
+    var strLabelname = "EUR/USD";
+    var strLocale = "en";
+
+    var strComparision ="tts-3230110";
+
+    //symbolname, labelname, daterange & locale definition through query string     
+    var strquery = document.URL.split('?')[1];
+    if (strquery)
+        strquery = strquery.split('&');
+    for (var y in strquery) {
+        var z = strquery[y].toString().split('=');
+        if (z.length == 2) {
+            if (z[0].toLowerCase() == "lang") {
+                strLocale = z[1];
+            }
+            else if (z[0].toLowerCase() == "symbolname") {
+                strSymbolname = z[1];
+            }
+            else if (z[0].toLowerCase() == "labelname") {
+                strLabelname = z[1];
+            }
+        }
+    }
+
+
+    var chart = TTChart.create({ id: "chartDiv1" });
+
+    chart.setOptions({
+        "global.locale": "en",
+        "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+        "data.period": 'INTRADAY 60',
+        "data.numberOfBars": 1000,           
+        // grid
+        "grid.show":true,
+        // custom graph
+        "main.chartType": 'mountain',
+        // colors values down
+        //"main.lineColor": "rgba(51, 132, 115, 1)",
+        //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+        // colors value up
+        "main.lineColor": "rgba(206, 71, 53, 1)",
+        "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
+
+
+        // custom tootlbars and history
+        "volume.show": false,
+        "history.show": false,
+        "history.sliderBorderColor": "#fff",
+        "dataInfo.show": false,
+        "toolbar.top.show": false,
+        "toolbar.left.show": false,
+        "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+        "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+        "contextMenu.show": false,
+        "data.usePush": false,
+        // custom panel
+        "panel.background.color": "#F7F7F7",
+        "global.verticalAxisZoom": true,
+        "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+        "data.maxAdditionalBars": 1000,
+        'data.dynamicHistoryLoading': true,
+        'zoom.dateRange': '1d',
+        'dialogs.limitingElementId': 'chartDiv'
+    });
+
+    chart.setOption("toolbar.symbols", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart.setOption("toolbar.comparisons", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],            
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart.setOption("toolbar.dateRanges", [
+        ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+            ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+            ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+            ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+            ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+            ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+        ]],
+        ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+        ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+        ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+        ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+        ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+        ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+        ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+        ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+        ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+    ]);
+
+    chart.symbols.setMainSymbol(strSymbolname, strLabelname);
+
+    chart.resize();
+
+    chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+        //['*|Quick Save|*', 'quickSave'],
+        ['*|menu_save|*', 'save'],
+        //['*|menu_quick_load|*', 'quickLoad'],
+        ['*|Load Template|*', 'loadTemplate'],
+        ['*|Save Template|*', 'saveTemplate'],
+        ['*|Save Default|*', 'saveDefault']
+    ]);
+    chart.display();
+    function addIndicator(objValue) {
+        if (objValue != "") {
+            chart.symbols.addIndicator(objValue);
+            chart.display();
+        }
+    } 
+
+    /* ------------------ 2 ------------------- */
+
+
+    var chart2 = TTChart.create({ id: "chartDiv2" });
+
+    chart2.setOptions({
+        "global.locale": "en",
+        "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+        "data.period": 'INTRADAY 60',
+        "data.numberOfBars": 1000,           
+        // grid
+        "grid.show":true,
+        // custom graph
+        "main.chartType": 'mountain',
+        // colors values down
+        //"main.lineColor": "rgba(51, 132, 115, 1)",
+        //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+        // colors value up
+        "main.lineColor": "rgba(206, 71, 53, 1)",
+        "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
+
+        // custom tootlbars and history
+        "volume.show": false,
+        "history.show": false,
+        "history.sliderBorderColor": "#fff",
+        "dataInfo.show": false,
+        "toolbar.top.show": false,
+        "toolbar.left.show": false,
+        "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+        "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+        "contextMenu.show": false,
+        "data.usePush": false,
+        // custom panel
+        "panel.background.color": "#F7F7F7",
+        "global.verticalAxisZoom": true,
+        "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+        "data.maxAdditionalBars": 1000,
+        'data.dynamicHistoryLoading': true,
+        'zoom.dateRange': '1d',
+        'dialogs.limitingElementId': 'chartDiv'
+    });
+
+    chart2.setOption("toolbar.symbols", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart2.setOption("toolbar.comparisons", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],            
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart2.setOption("toolbar.dateRanges", [
+        ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+            ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+            ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+            ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+            ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+            ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+        ]],
+        ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+        ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+        ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+        ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+        ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+        ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+        ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+        ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+        ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+    ]);
+
+    chart2.symbols.setMainSymbol(strSymbolname, strLabelname);
+
+    chart2.resize();
+
+    chart2.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+        //['*|Quick Save|*', 'quickSave'],
+        ['*|menu_save|*', 'save'],
+        //['*|menu_quick_load|*', 'quickLoad'],
+        ['*|Load Template|*', 'loadTemplate'],
+        ['*|Save Template|*', 'saveTemplate'],
+        ['*|Save Default|*', 'saveDefault']
+    ]);
+    chart2.display();
+    function addIndicator(objValue) {
+        if (objValue != "") {
+            chart2.symbols.addIndicator(objValue);
+            chart2.display();
+        }
+    } 
+
+    /* ------------------ 3 ------------------- */
+
+
+    var chart3 = TTChart.create({ id: "chartDiv3" });
+
+    chart3.setOptions({
+        "global.locale": "en",
+        "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+        "data.period": 'INTRADAY 60',
+        "data.numberOfBars": 1000,           
+        // grid
+        "grid.show":true,
+        // custom graph
+        "main.chartType": 'mountain',
+        // colors values down
+        "main.lineColor": "rgba(51, 132, 115, 1)",
+        "main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+        // colors value up
+        //"main.lineColor": "rgba(206, 71, 53, 1)",
+        //"main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
+
+        // custom tootlbars and history
+        "volume.show": false,
+        "history.show": false,
+        "history.sliderBorderColor": "#fff",
+        "dataInfo.show": false,
+        "toolbar.top.show": false,
+        "toolbar.left.show": false,
+        "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+        "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+        "contextMenu.show": false,
+        "data.usePush": false,
+        // custom panel
+        "panel.background.color": "#F7F7F7",
+        "global.verticalAxisZoom": true,
+        "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+        "data.maxAdditionalBars": 1000,
+        'data.dynamicHistoryLoading': true,
+        'zoom.dateRange': '1d',
+        'dialogs.limitingElementId': 'chartDiv'
+    });
+
+    chart3.setOption("toolbar.symbols", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart3.setOption("toolbar.comparisons", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],            
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart3.setOption("toolbar.dateRanges", [
+        ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+            ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+            ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+            ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+            ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+            ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+        ]],
+        ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+        ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+        ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+        ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+        ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+        ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+        ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+        ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+        ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+    ]);
+
+    chart3.symbols.setMainSymbol(strSymbolname, strLabelname);
+
+    chart3.resize();
+
+    chart3.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+        //['*|Quick Save|*', 'quickSave'],
+        ['*|menu_save|*', 'save'],
+        //['*|menu_quick_load|*', 'quickLoad'],
+        ['*|Load Template|*', 'loadTemplate'],
+        ['*|Save Template|*', 'saveTemplate'],
+        ['*|Save Default|*', 'saveDefault']
+    ]);
+    chart3.display();
+    function addIndicator(objValue) {
+        if (objValue != "") {
+            chart3.symbols.addIndicator(objValue);
+            chart3.display();
+        }
+    }
+
+    /* ------------------ 2 ------------------- */
+
+
+    var chart4 = TTChart.create({ id: "chartDiv4" });
+
+    chart4.setOptions({
+        "global.locale": "en",
+        "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+        "data.period": 'INTRADAY 60',
+        "data.numberOfBars": 1000,           
+        // grid
+        "grid.show":true,
+        // custom graph
+        "main.chartType": 'mountain',
+        // colors values down
+        "main.lineColor": "rgba(51, 132, 115, 1)",
+        "main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+        // colors value up
+        //"main.lineColor": "rgba(206, 71, 53, 1)",
+        //"main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
+
+        // custom tootlbars and history
+        "volume.show": false,
+        "history.show": false,
+        "history.sliderBorderColor": "#fff",
+        "dataInfo.show": false,
+        "toolbar.top.show": false,
+        "toolbar.left.show": false,
+        "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+        "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+        "contextMenu.show": false,
+        "data.usePush": false,
+        // custom panel
+        "panel.background.color": "#F7F7F7",
+        "global.verticalAxisZoom": true,
+        "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+        "data.maxAdditionalBars": 1000,
+        'data.dynamicHistoryLoading': true,
+        'zoom.dateRange': '1d',
+        'dialogs.limitingElementId': 'chartDiv'
+    });
+
+    chart4.setOption("toolbar.symbols", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart4.setOption("toolbar.comparisons", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],            
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart4.setOption("toolbar.dateRanges", [
+        ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+            ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+            ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+            ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+            ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+            ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+        ]],
+        ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+        ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+        ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+        ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+        ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+        ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+        ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+        ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+        ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+    ]);
+
+    chart4.symbols.setMainSymbol(strSymbolname, strLabelname);
+
+    chart4.resize();
+
+    chart4.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+        //['*|Quick Save|*', 'quickSave'],
+        ['*|menu_save|*', 'save'],
+        //['*|menu_quick_load|*', 'quickLoad'],
+        ['*|Load Template|*', 'loadTemplate'],
+        ['*|Save Template|*', 'saveTemplate'],
+        ['*|Save Default|*', 'saveDefault']
+    ]);
+    chart4.display();
+    function addIndicator(objValue) {
+        if (objValue != "") {
+            chart4.symbols.addIndicator(objValue);
+            chart4.display();
+        }
+    }
+
+
+    /* ---------------------------- 5 ------------------------------- */
+
+    var chart5 = TTChart.create({ id: "chartDiv5" });
+
+    chart5.setOptions({
+        "global.locale": "en",
+        "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
+        "data.period": 'INTRADAY 60',
+        "data.numberOfBars": 1000,           
+        // grid
+        "grid.show":true,
+        // custom graph
+        "main.chartType": 'line',
+        // colors values down
+        //"main.lineColor": "rgba(51, 132, 115, 1)",
+        //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
+        // colors value up
+        "main.lineColor": "rgba(51, 132, 115, 1)",
+
+
+        // custom tootlbars and history
+        "volume.show": false,
+        "history.show": false,
+        "history.sliderBorderColor": "#fff",
+        "dataInfo.show": false,
+        "toolbar.top.show": false,
+        "toolbar.left.show": false,
+        "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
+        "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
+        "contextMenu.show": false,
+        "data.usePush": false,
+        // custom panel
+        "panel.background.color": "#F7F7F7",
+        "global.verticalAxisZoom": true,
+        "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
+        "data.maxAdditionalBars": 1000,
+        'data.dynamicHistoryLoading': true,
+        'zoom.dateRange': '1d',
+        'dialogs.limitingElementId': 'chartDiv'
+    });
+
+    chart5.setOption("toolbar.symbols", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart5.setOption("toolbar.comparisons", [['*|search|*', ''],
+        ['EUR/USD', 'tts-3212164'],
+        ['USD/JPY', 'tts-3212155'],
+        ['GBP/USD', 'tts-3212166'],
+        ['USD/CHF', 'tts-3212167'],
+        ['USD/CAD', 'tts-3212172'],
+        ['NZD/USD', 'tts-3212173'],
+        ['AUD/USD', 'tts-3212322'],
+        ['USD/HKD', 'tts-3212406'],
+        ['USD/SGD', 'tts-3215241'],
+        ['EUR/AUD', 'tts-3212169'],
+        ['EUR/CHF', 'tts-3212215'],
+        ['EUR/JPY', 'tts-3212165'],
+        ['EUR/GBP', 'tts-3212168'],
+        ['GBP/CHF', 'tts-3212158'],
+        ['GBP/JPY', 'tts-3212160'],
+        ['CAD/JPY', 'tts-3212163'],
+        ['CHF/JPY', 'tts-3212200'],
+        ['NZD/JPY', 'tts-3212268'],
+        ['AUD/CAD', 'tts-3212182'],
+        ['AUD/JPY', 'tts-3212171'],
+        ['AUD/NZD', 'tts-3212259'],
+        ['AUD/SGD', 'tts-3212321'],
+        ['AUD/CHF', 'tts-3212170'],
+        ['AUD/EUR', 'tts-3212510'],
+        //['XAU/USD', 'tts-396017'],
+        //['XAG/USD', 'tts-395119'],
+        ['Dow Jones', 'tts-3212165'],
+        ['Nasdaq 100', 'tts-751307'],
+        ['SP100', 'tts-898976'],
+        ['SP500', 'tts-898974'],
+        //['Nikkei', 'tts-955000'],
+        ['DAX', 'tts-514562'],
+        ['TecDAX', 'tts-457683'],
+        //['SMI', 'tts-675717'],
+        ['FTSE 100', 'tts-402482'],            
+        ['Nikkei 225', 'tts-18922968'],
+        ['Gold', 'tts-3230110']]);
+
+    chart5.setOption("toolbar.dateRanges", [
+        ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
+            ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
+            ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
+            ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
+            ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
+            ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
+        ]],
+        ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
+        ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
+        ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
+        ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
+        ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
+        ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
+        ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
+        ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
+        ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
+    ]);
+
+    chart5.symbols.setMainSymbol(strSymbolname, strLabelname);
+
+    chart5.symbols.addComparison( "tts-3230110", "Gold" );
+
+
+    chart5.resize();
+
+    chart5.setOption("toolbar.file", [['*|menu_load|*', 'load'],
+        //['*|Quick Save|*', 'quickSave'],
+        ['*|menu_save|*', 'save'],
+        //['*|menu_quick_load|*', 'quickLoad'],
+        ['*|Load Template|*', 'loadTemplate'],
+        ['*|Save Template|*', 'saveTemplate'],
+        ['*|Save Default|*', 'saveDefault']
+    ]);
+    chart5.display();
+    function addIndicator(objValue) {
+        if (objValue != "") {
+            chart5.symbols.addIndicator(objValue);
+            chart5.display();
+        }
+    }
+
+    /* / end chart 5 */
 
 
     </script>
