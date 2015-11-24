@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>EUR/USD Trading positions - FXStreet</title>
+        <title>Correlation chart - FXStreet</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="../../../css/fxs_screen.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -491,7 +491,7 @@
                 <!-- Main Section -->
                 <header class="fxs_sectionTitle">
                     <div class="fxs_search_title_holder">
-                        <h1 class="fxs_sectionTitle_header">EUR/USD Trading Positions</h1>
+                        <h1 class="fxs_sectionTitle_header">Correlation chart</h1>
                     </div>
                     <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
                         <div class="fxs_overflowOptions">
@@ -500,8 +500,6 @@
                                 <li class="fxs_socialMedia_item">
                                     <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
                                 </li>
-                                <!--
-                                -->
                                 <li class="fxs_socialMedia_item">
                                     <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
                                 </li>
@@ -511,325 +509,328 @@
                 </header>
 
                 <main id="fxs_it_detail" role="main">
-                    <section class="fxs_detail" role="main">
-
-                        <!-- Report goes here -->
-                        <article class="fxs_detailInfo_page">
-                            <section class="fxs_widget_summary">
-                                <div class="fxs_widget_divider_module">
-                                    <!-- widget price -->
-                                    <div class="fxs_widget_price price_down">
-                                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                            <a href="/">EUR/USD</a>
-                                        </abbr>
-                                        <div class="fxs_widget_price_value">
-                                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                            <span class="fxs_price_change">
-                                                <span class="fxs_change_pips">0.0026</span>
-                                                <span class="fxs_change_percent">(-0.12%)</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- /widget price -->
-                                </div>
-
-                                <!-- ctp widget -->
-                                <div class="fxs_ctp_widget fxs_widget_big">
-                                    <div class="fxs_widget_divider_module">
-                                        <div class="fxs_gauge_container">
-                                            <div class="fxs_insideChart_centered_legend">
-                                                <div class="ctp_price_precent">
-                                                    <small class="fxs_widget_small">Sell</small>
-                                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">70%</span>
-                                                </div>
-
-                                                <div class="ctp_price_precent ctp_divider">
-                                                    <small class="fxs_widget_small">Buy</small>
-                                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">30%</span>
-                                                </div>
-                                            </div>
-
-                                            <div id="gauge_chart" class="c3" style="width: 100%;"></div>
-                                        </div>
-
-                                        <div class="fxs_widget_avg_col">
-                                            <div class="fxs_module_cols_avg">
-                                                <small class="fxs_widget_small">Avg Sell Price</small>
-                                                <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.3380</span>
-                                            </div>
-
-                                            <div class="fxs_module_cols_avg">
-                                                <small class="fxs_widget_small">Avg Buy Price</small>
-                                                <span class="fxs_txt_success fxs_widget_custom_data_lable">1.3380</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- ctp barras content -->
-                                    <div class="fxs_widget_divider_module">
-                                        <span class="fxs_widget_legend">Liquidity Distribution</span>
-
-                                        <div id="orders_chart" class="c3 fxs_widget_bars" style="width: 100%;"></div>
-
-                                    </div>
-                                    <!-- /ctp barras content -->
-
-                                    <!-- widget footer -->
-                                    <footer class="fxs_widget_footer">
-                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                    </footer>
-                                    <!-- /widget footer -->
-                                </div>
-                                <!-- /ctp widget -->
-                            </section>
-
-                            <!-- Dinamic auto report -->
-                            <div class="fxs_article_body">
-                                <p>
-                                    The latest data for the <a href="/">EUR/USD</a> <strong>Trading Positions</strong>, released by <strong>FXStreet</strong> on <strong>Friday the 3rd</strong> shows a distribution of <strong>60.33%</strong> short-term Bearish among the 15 participants.
-                                </p>
-                                <p>
-                                    <a class="fxs_mutedLink" href="#about_study">About this study <i class="fa fa-long-arrow-down"></i></a>
-                                </p>
+                    <!-- Main Setcion -->
+                    <section class="fxs_detail">
+                        <div class="fxs_widget_summary">
+                          <div class="fxs_widget_correlation fxs_widget_default">
+                            <div class="fxs_widget_divider_module">
+                              <div id="c_chart" class="c3" style="max-height: 300px; position: relative;"></div>
                             </div>
-                            <!-- /Dinamic auto report -->
-                            
+                            <!-- widget footer -->
+                            <footer class="fxs_widget_footer">
+                                <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                            </footer>
+                            <!-- /widget footer -->
+                          </div>
+                        </div> 
 
-                            <!-- Tabla desglozada de CTPs por contributor -->
-                            <div class="fxs_swipeContent_slider">
-                                <table class="fxs_table fxs_tableHover fxs_ctp_table">
-                                    <thead>
-                                        <tr>
-                                            <th>Contributor</th>
-                                            <th>Order</th>
-                                            <th>Entry</th>
-                                            <th>Stop Loss</th>
-                                            <th>Take Profit 1</th>
-                                            <th>Take Profit 2</th>
-                                            <th>Take Profit 3</th>
-                                            <th>Date</th>
-                                            <th>&nbsp;</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr onclick="todo">
-                                            <td>
-                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                    <div class="fxs_avatar_circleImage_s">
-                                                        <a href="/">
-                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                        </a>
-                                                    </div>
-                                                    <span class="fxs_article_author">
-                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                                            Admiral Markets
-                                                        </a>
-                                                    </span>
-                                                    <script type="application/ld+json">
-                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                    </script>
-                                                </address>
-                                            </td>
-                                            <td>
-                                                <span class="fxs_ctpTable_order fxs_txt_success">Long <a href="/">Limit Order</a></span>
-                                            </td>
-                                            <td>1.1113</td>
-                                            <td>1.1180</td>
-                                            <td>1.0920</td>
-                                            <td>1.0875</td>
-                                            <td>1.0780</td>
-                                            <td>
-                                                <time pubdate="" datetime="2015-07-27 09:34">Jul 27</time>
-                                            </td>
-                                            <td>
-                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                            </td>
-                                        </tr>
-                                        <tr onclick="todo">
-                                            <td>
-                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                    <div class="fxs_avatar_circleImage_s">
-                                                        <a href="/">
-                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                        </a>
-                                                    </div>
-                                                    <span class="fxs_article_author">
-                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                                            Danske Bank A/S
-                                                        </a>
-                                                    </span>
-                                                    <script type="application/ld+json">
-                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                    </script>
-                                                </address>
-                                            </td>
-                                            <td>
-                                                <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
-                                            </td>
-                                            <td>≈1.1012</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>
-                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
-                                            </td>
-                                            <td>
-                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                            </td>
-                                        </tr>
-                                        <tr onclick="todo">
-                                            <td>
-                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                    <div class="fxs_avatar_circleImage_s">
-                                                        <a href="/">
-                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                        </a>
-                                                    </div>
-                                                    <span class="fxs_article_author">
-                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                                            DeltaStock.com
-                                                        </a>
-                                                    </span>
-                                                    <script type="application/ld+json">
-                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                    </script>
-                                                </address>
-                                            </td>
-                                            <td>
-                                                <span class="fxs_ctpTable_order fxs_txt_danger">Short <a href="/">Limit Order</a></span>
-                                            </td>
-                                            <td>&gt;1.0955</td>
-                                            <td>1.0850</td>
-                                            <td>1.1216</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>
-                                                <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
-                                            </td>
-                                            <td>
-                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                            </td>
-                                        </tr>
-                                        <tr onclick="todo">
-                                            <td>
-                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                    <div class="fxs_avatar_circleImage_s">
-                                                        <a href="/">
-                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                        </a>
-                                                    </div>
-                                                    <span class="fxs_article_author">
-                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                                            ElliottWaveForex
-                                                        </a>
-                                                    </span>
-                                                    <script type="application/ld+json">
-                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                    </script>
-                                                </address>
-                                            </td>
-                                            <td>
-                                                <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Market Order</a></span>
-                                            </td>
-                                            <td>1.0968</td>
-                                            <td>1.1130</td>
-                                            <td>1.0722</td>
-                                            <td>1.0470</td>
-                                            <td>-</td>
-                                            <td>
-                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
-                                            </td>
-                                            <td>
-                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                            </td>
-                                        </tr>
-                                        <tr onclick="todo">
-                                            <td>
-                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                    <div class="fxs_avatar_circleImage_s">
-                                                        <a href="/">
-                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                        </a>
-                                                    </div>
-                                                    <span class="fxs_article_author">
-                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                                            Growth Aces
-                                                        </a>
-                                                    </span>
-                                                    <script type="application/ld+json">
-                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                    </script>
-                                                </address>
-                                            </td>
-                                            <td>
-                                                <span class="fxs_ctpTable_order fxs_txt_success">Buy <a href="/">Latent Interest</a></span>
-                                            </td>
-                                            <td>1.1060</td>
-                                            <td>1.0726</td>
-                                            <td>1.0810</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>
-                                                <time pubdate="" datetime="2015-08-03 09:34">Aug 03</time>
-                                            </td>
-                                            <td>
-                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                            </td>
-                                        </tr>
-                                        <tr onclick="todo">
-                                            <td>
-                                                <address class="fxs_contributorBox fxs_contributorBox_nano">
-                                                    <div class="fxs_avatar_circleImage_s">
-                                                        <a href="/">
-                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="35" height="35">
-                                                        </a>
-                                                    </div>
-                                                    <span class="fxs_article_author">
-                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
-                                                            Mind Vision Traders
-                                                        </a>
-                                                    </span>
-                                                    <script type="application/ld+json">
-                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
-                                                    </script>
-                                                </address>
-                                            </td>
-                                            <td>
-                                                <span class="fxs_ctpTable_order fxs_txt_danger">Sell <a href="/">Latent Interest</a></span>
-                                            </td>
-                                            <td>&lt;1.0757</td>
-                                            <td>1.1078</td>
-                                            <td>1.0875</td>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>
-                                                <time pubdate="" datetime="2015-08-04 09:34">Aug 04</time>
-                                            </td>
-                                            <td>
-                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /Tabla desglozada de CTPs por contributor -->
-
-                            <!-- About plain txt -->
-                            <div id="about_study" class="fxs_article_body">
-                                <h2 class="fxs_helperLabel_title">About this study</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.The latest data for the <a href="/">Trading Positions</a>, released by FXStreet on Friday the 3rd shows a distribution short-term Bearish among the 15 participants.
-                                </p>
-                            </div>
-                            <!-- /About plain txt -->
-
-
-                        </article>
-                        <!-- //Report ends here -->
+                        <div class="fxs_article_body">
+                            <p>
+                                The latest data for the <a href="/">EUR/USD</a> <strong>Trading Positions</strong>, released by <strong>FXStreet</strong> on <strong>Friday the 3rd</strong> shows a distribution of <strong>60.33%</strong> short-term Bearish among the 15 participants.
+                            </p>
+                            <p>
+                                <a class="fxs_mutedLink" href="#about_study">About this study <i class="fa fa-long-arrow-down"></i></a>
+                            </p>
+                        </div> 
 
                         <hr class="fxs_divider_wide">
-                        
-                        <!-- Related content -->
+
+                        <div class="fxs_row fxs_tableRow">
+
+                            <div class="fxs_flex_col">
+
+                                <div class="fxs_widget_summary">
+                                    <h3 class="fxs_subtitle">
+                                        Correlation pairs 
+                                    </h3>
+
+                                    <!-- Table default size -->
+                                    <table class="fxs_table fxs_table_prices fxs_widget_default fxs_tableHover">
+                                        
+                                        <tbody>
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">AUD/JPJ</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">USD/JPY</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">USD/CAD</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">AUD/USD</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">EUR/CAD</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">GBP/JPY</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">NZO/JPY</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">EUR/CAD</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_up">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">GBP/JPY</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr onclick="todo" class="fxs_widget_price price_down">
+                                                <td>
+                                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                        <a href="/">NZO/JPY</a>
+                                                    </abbr>
+                                                </td>
+                                                <td>
+                                                    <div class="fxs_widget_price_value">
+                                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                        <span class="fxs_price_change">
+                                                            <span class="fxs_change_pips">0.0026</span>
+                                                            <span class="fxs_change_percent">(-0.12%)</span>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <small class="fxs_price_ohl">
+                                                        <span>Open 1.1872</span>
+                                                        <span>High 1.1872</span>
+                                                        <span>Low 1.1810</span>
+                                                    </small>
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <!-- /Table default size -->
+                                </div>
+                                
+
+                            </div>
+
+                            <!-- Ad col outside -->
+                            <div class="fxs_flex_col fxs_flex_ad_col">
+
+                                <!-- Content Ad container -->
+                                <div class="fxs_content_adContainer">
+                                    <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
+                                </div>
+                                <!-- Content Ad container -->
+
+                            </div>
+                            <!-- /Ad col outside -->
+
+                        </div>
+
+                        <hr class="fxs_divider_wide">
+
+                        <div id="about_study" class="fxs_article_body">
+                            <h2 class="fxs_helperLabel_title">About this study</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.The latest data for the <a href="/">Trading Positions</a>, released by FXStreet on Friday the 3rd shows a distribution short-term Bearish among the 15 participants.
+                            </p>
+                        </div>
+
+                        <hr class="fxs_divider_wide">
+
                         <aside class="fxs_relatedContent_holder">
                             <header class="fxs_resetRow_margin fxs_marginBase_bottom">
                                 <h4 class="fxs_helperLabel_title">Related content</h4>
@@ -873,7 +874,8 @@
                                 </li>
                             </ul>
                         </aside>
-                        <!-- /Related content -->
+
+                                       
                     </section>
                     <!-- /Main Section -->
                 </main>
@@ -907,9 +909,10 @@
 
         <script src="../../../js/classie.js"></script>
         <script src="../../../js/jquery.typeahead.min.js"></script>
+        <script src="../../../js/site.js"></script>
+        <!-- javascript widget mini -->
         <script src="../../../../widgets/core/js/c3.min.js"></script>
         <script src="../../../../widgets/core/js/d3.min.js"></script>
-        <script src="../../../js/site.js"></script>
 
         <script>
             // Modal open //
@@ -919,105 +922,46 @@
                 return false;
             });
         </script>
+
         <script>
-            // Gauge chart
-            var gauge_chart = c3.generate({
-                bindto: '#gauge_chart',
-                       
+            var colors = ['#F5C861', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#A3A3A8', '#F5C861']; // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+
+            // Importante!: añadir "chart.flush();" on window resize para que vuelva a pintar la gráfica (y ajuste las medidas)
+            // Importante2!: ajustar la altura proporcional al número de categories (pares): si son 10 = 300, si son 5 = 150, si son 2 = 60 (la base de cada category es 30)
+            // Importante3!: Si se configura para dejar menos categories (pares), eliminar del centro hacia afuera: los últimos en ser descartados deben ser los extremos (siempre números pares: 2, 4, 6, 8, 10, ...)
+
+            var chart = c3.generate({
+                bindto: '#c_chart',
                 data: {
-                    columns: [
-                    ['Buy', 100],
-                    ['Sell', 70]
-                    ],
-
-                    type: 'gauge'
-                    //onclick: function (d, i) { console.log("onclick", d, i); },
-                    //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                    //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                  columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ],
+                  type: 'bar',
+                  names: { data1: 'Correlation' },
+                  color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
                 },
-                        
-                zoom: {
-                    enabled:false
-                },
-               
-                gauge: {
-                    label: {
-                        show: false
-                    },
-                    // },
-                    // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-                    // max: 100, // 100 is default
-                    // units: ' %',
-                    width: 6 // for adjusting arc thickness
-                },
-                color: {
-                    pattern: ['#CE4735', '#CE4735', '#328372'], // the three color levels for the percentage values.
-                    threshold: {
-                        // unit: 'value', // percentage is default
-                        // max: 200, // 100 is default
-                        values: [0, 100]
-                    }
-                },
-                size: {
-                    height: 100,
-                    width: 190 
-                },
-                tooltip: {
-                  show: false
-                },
-                interaction: { enabled: false }
-            });
-
-            // bar chart
-
-            var orders_chart = c3.generate({
-                bindto: '#orders_chart',
-                data: {
-                    x: 'x',
-                    columns: [
-                    ['x', 1.0005, 1.0010, 1.0028, 1.0035, 1.0042, 1.0051, 1.0061, 1.0072, 1.0088, 1.0097, 1.0105, 1.0111, 1.0128, 1.0135, 1.0142, 1.01501, 1.0160, 1.0170, 1.0182, 1.0197, 1.0203],
-                    ['Sell', 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                    ['Buy', 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
-
-                    ],
-                    type: 'bar',
-                    colors: {
-                        Sell: '#CE4735',
-                        Buy: '#338473'
-                    },
-                            
-                },
-                bar: {
-                    width: 5, // this makes bar width 3px
-                },
-                size: {
-                    height: 105
-                },
-                tooltip: {
-                    show: true,
-                    format: {
-                      title: function (d) { return d; },
-                      value: function (value, ratio, id) {
-                          return ratio;
-                      }             
-                    }
-                },
-                padding:{
-                    left:15
-                },
+                bar: { width: 15 },
+                legend: { hide: true },
                 axis: {
-                  y: {
-                    show: false
-                  },
+                  rotated: true,
                   x: {
-                    tick: {
-                        values: ['1.0005', '1.0105', '1.0203']
-                    }
-                  } 
+                    type: 'category',
+                    categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
+                  },
+                  y: {
+                    padding: {top: 10, bottom: 10 },
+                    max: 1,
+                    min: -1,
+                    center: 0,
+                    tick: { values: [-1, -0.5, 0, 0.5, 1] }
+                  }
                 },
-                legend: {
-                  position: 'right'
-                }
+                grid: {
+                  y: {
+                    show: true,
+                    lines: [ {value: 0} ]
+                  }
+                },
+                padding: { bottom: 0 },
+                size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
             });
         </script>
 
