@@ -622,11 +622,13 @@
   margin-bottom: @half_base_spacer;
   padding-bottom: @half_base_spacer;
   @media (min-width: @screen-s) {
-    margin-bottom: 1rem;
     padding-bottom: 1rem;
     .fxs_avatar_circleImage_s, .fxs_squareImage_s { margin-right: 1rem; }
   }
-  @media (min-width: @screen-m) { border-bottom: 2px solid @light_4_clr; }
+  @media (min-width: @screen-m) {
+    border-bottom: 2px solid @light_4_clr;
+    margin-bottom: 1rem;
+  }
 }
 
 // AUTHOR FEATURED QUOTES
@@ -992,7 +994,8 @@
 // Widget container
 .fxs_widget_summary {
   &:extend(.fxs_clearfix all);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  @media(min-width:@screen-m){ margin-bottom: 1rem; }
 }
 
 // widget footer module
@@ -1229,7 +1232,7 @@
    .translate(0, -25%);
    .transition(transform 0.3s ease-out);
   }
-  &.in .fxs_modal_content { .translate(0, 0) }
+  &.in .fxs_modal_content { .transform(none); }
 }
 
 .modal-backdrop {
