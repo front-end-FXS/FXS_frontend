@@ -168,7 +168,7 @@
             
             <!-- Topics subnav -->
             <nav class="fxs_content_subnav">
-                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Rates and Charts</a>
+                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Rates</a>
                 <div class="fxs_topics_nav">
                 <span class="fxs_label">Popular topics</span>
                 <ul class="fxs_subnavInlined_list">
@@ -299,7 +299,7 @@
                                                     <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
                                                 </ul>
                                                <div class="fxs_indexes_tabpanel tab-content">
-                                                    <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph" style="width:100%">
+                                                    <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph fxs_compare_performance_chart" style="width:100%">
                                                     </div>
                                                 </div>
            
@@ -1997,7 +1997,7 @@
                 // grid
                 "grid.show":true,
                 // custom graph
-                "main.chartType": 'mountain',
+                "main.chartType": 'candle',
                 // colors values down
                 //"main.lineColor": "rgba(51, 132, 115, 1)",
                 //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
@@ -2022,7 +2022,8 @@
                 "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
                 "data.maxAdditionalBars": 1000,
                 'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
+                'zoom.dateRange': '1w',
+                'data.period':'intraday 60',
                 'dialogs.limitingElementId': 'chartDiv'
             });
 
@@ -2124,6 +2125,8 @@
             ]);
 
             chart.symbols.setMainSymbol(strSymbolname, strLabelname);
+            chart.symbols.addIndicator( "sma", { period:100, shift:0 } );
+            chart.symbols.addIndicator( "rsi", "14","70","30","1" );
 
             chart.resize();
 
