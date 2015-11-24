@@ -1014,20 +1014,18 @@
 
 .stickit {
   @media(min-width:@screen-s) { position: fixed; }
+  .fxs_content & {
+    @media(min-width:@screen-s) { top: 80px + @txt_defaultsize_px; }
+  }
+  .fxs_modal_content & {
+    @media(min-width:@screen-s) { top: 45px + @txt_defaultsize_px; }
+    @media(min-width:@screen-m) { top: 45px + (@txt_defaultsize_px*1.5); } 
+  }
 }
 
 .stickit-end {
   position: absolute;
   bottom: 0;
-}
-
-.fxs_content .stickit {
-  @media(min-width:@screen-s) { top: 80px + @txt_defaultsize_px; }
-}
-
-.fxs_modal_content .stickit {
-  @media(min-width:@screen-s) { top: 45px + @txt_defaultsize_px; }
-  @media(min-width:@screen-m) { top: 45px + (@txt_defaultsize_px*1.5); }
 }
 
 /////////////////////////////////////////////////////////////
