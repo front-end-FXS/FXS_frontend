@@ -481,7 +481,7 @@
   background-color: @light_5_clr;
   color: @dark_4_clr;
   font-size: @txt_size_xsmall;
-  padding: 0.25rem 1rem;
+  padding: 0.33rem 1rem;
 }
 
 // MEDIA OBJECTS (images & media)
@@ -544,11 +544,14 @@
   font-size: @txt_size_small;
   line-height: @txt_lineheight_xsmall;
   white-space: nowrap;
+  .fxs_article_author {
+    .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
+  }
   .fxs_article_author a {
     display: inline-block;
-    margin-bottom: 0.33em;
+    margin-bottom: 0.33rem;
   }
-  .fxs_avatar_circleImage_s { margin-right: 0.25rem; }
+  .fxs_avatar_circleImage_s { margin-right: 0.33rem; }
 }
 
 .fxs_article_author { white-space: normal; }
