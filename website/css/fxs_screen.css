@@ -4618,6 +4618,49 @@ width:calc(100% - 35px - 5px);
     padding: 0 2rem;
   }
 }
+.fxs_live_events_table > thead tr > th {
+  padding: 0;
+}
+.fxs_live_events_table > thead tr > th:nth-last-child(2),
+.fxs_live_events_table tbody > tr > td:nth-last-child(2) {
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_live_events_table > thead tr > th:nth-last-child(2),
+  .fxs_live_events_table tbody > tr > td:nth-last-child(2) {
+    display: table-cell;
+    white-space: nowrap;
+    text-align: right;
+  }
+}
+.fxs_live_events_table .fxs_squareImage_s,
+.fxs_live_events_table .fxs_event_time {
+  vertical-align: middle;
+}
+.fxs_live_events_table .fxs_event_time {
+  display: inline-block;
+  font-size: 0.8rem;
+  width: 70px;
+}
+.fxs_live_events_table .fxs_event_time strong {
+  display: block;
+}
+.fxs_live_events_table .fxs_event_date,
+.fxs_live_events_table .fxs_event_title_author {
+  vertical-align: top;
+}
+.fxs_live_events_table .fxs_event_date {
+  width: 70px;
+}
+@media (min-width: 680px) {
+  .fxs_live_events_table .fxs_event_date {
+    width: 155px;
+  }
+}
+.fxs_live_events_table .fxs_event_title_author a,
+.fxs_live_events_table .fxs_event_title_author span {
+  display: block;
+}
 .fxs_row {
   margin-left: -0.66666667rem;
   margin-right: -0.66666667rem;
