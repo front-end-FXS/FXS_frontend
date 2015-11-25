@@ -108,7 +108,7 @@
     header { margin-bottom: 0.5rem; }
     &:hover {
       cursor: pointer;
-      .fxs_entryFeatured_img { .opacity(.75); }
+      .fxs_entryFeatured_img img { .opacity(.75); }
     }
 }
 
@@ -188,5 +188,14 @@
   display: block;
   font-size: @txt_size_xsmall;
   color: @lightest_clr;
-  background-color: fade(@dark_3_clr, 90%);
+  background-color: fade(@dark_2_clr, 90%);
+  text-align: center;
+  .fxs_entryFeatured_img & {
+    padding: 0.5rem 1rem;
+    i, span { display: block; }
+    i {
+      font-size: @txt_size_huge;
+      margin-bottom: 0.25rem;
+    }
+  }
 }
