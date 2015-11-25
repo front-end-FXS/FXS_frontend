@@ -4,16 +4,20 @@
         &.fxs_modal_page{
             .fxs_modal_wrap{
                 display:block;
+                top:120px;
                 &.fade{
                     opacity:1;
                 }
-                &.modal{
-                    position:relative;
-                }
-                .fxs_modal_content{
-                    margin-top:70px;
+                .fxs_modal_close{
+                    display: none;
                 }
             }
+            .sfPageContainer{
+                overflow: hidden!important;
+            }
+        }
+        .ZoneEditorToolboxContainer{
+            z-index: 9999;
         }
          // body //
         overflow:auto!important;
