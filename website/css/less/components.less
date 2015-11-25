@@ -877,7 +877,9 @@
 }
 
 .fxs_shareOptions_boxed,
-.fxs_overflowOptions, .fxs_socialMedia_item { display: inline-block; }
+.fxs_overflowOptions, .fxs_socialMedia_item { 
+  display: inline-block; 
+}
 
 // Social media object - Spescific for Header title block in detail pages
 .fxs_shareContent_holder {
@@ -923,6 +925,14 @@
 // Social media object - Spescific for subscribe social media widget
 .fxs_suscribeSocialBtn {
   &:extend(.fxs_list_unstyled);
+  &.fxs_socialMedia_author_item{
+    .fxs_btn_icon{
+      width: 25px;
+      height:25px;
+      line-height: 23px;
+      font-size: 1rem;
+    }
+  }
   li { margin: 0 @half_base_spacer 0 0; }
   .fxs_btn_icon {
     background-color: @light_3_clr;
