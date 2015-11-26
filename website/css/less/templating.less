@@ -821,7 +821,7 @@
 ///////////// Spescific section layouts //////////////////
 /////////////////////////////////////////////////////////
 
-// Brokers
+//////////////////// Brokers //////////////////////////
 .fxs_list_table_summary {
   .fxs_list_table_item {
     &:not(:last-child) { display: none; }
@@ -830,7 +830,7 @@
     }
   }
 }
-/////////// Broker contact module ////////////
+// Broker contact module
 .fxs_broker_contact_footer {
   &:extend(.fxs_clearfix all);
   border-top: 3px solid @light_4_clr;
@@ -903,9 +903,7 @@
 
 }
 
-
-////////////////// Sponsor broker /////////////
-
+// Sponsor broker
 .fxs_soponsored_broker {
   border-bottom: 6px solid @dark_4_clr;
   position: relative;
@@ -949,6 +947,39 @@
   .fa { margin-top: 3px; }
   .fxs_detail & {
     @media (min-width: @screen-s) { padding: 0 2rem; }
+  }
+}
+
+/////////////////// Live videos ///////////////////////////
+.fxs_live_events_table {
+  >thead tr> th { padding: 0; }
+  >thead tr> th, tbody> tr> td {
+    &:nth-last-child(2) {
+      display: none;
+      @media (min-width: @screen-s) {
+        display: table-cell;
+        white-space: nowrap;
+        text-align: right;
+      }
+    }
+  }
+  .fxs_squareImage_s, .fxs_event_time { vertical-align: middle; }
+  .fxs_event_time {
+    display: inline-block;
+    font-size: @txt_size_xsmall;
+    width: @double_module_size;
+    strong { display: block;}
+  }
+  //
+  .fxs_event_date, .fxs_event_title_author { vertical-align: top; }
+  .fxs_event_date {
+    width: @double_module_size;
+    @media (min-width: @screen-s) {
+      width: 155px;
+    }
+  }
+  .fxs_event_title_author {
+    a, span { display: block; }
   }
 }
 
