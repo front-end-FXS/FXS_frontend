@@ -953,20 +953,11 @@
 /////////////////// Live videos ///////////////////////////
 .fxs_live_events_table {
   >thead tr> th { padding: 0; }
-  >thead tr> th, tbody> tr> td {
-    &:nth-last-child(2) {
-      display: none;
-      @media (min-width: @screen-s) {
-        display: table-cell;
-        white-space: nowrap;
-        text-align: right;
-      }
-    }
+  .fxs_event_sponsor {
+    display: none;
+    @media (min-width: @screen-s) { display: table-cell; }
   }
-  .fxs_squareImage_s, .fxs_event_time { vertical-align: middle; }
   .fxs_event_time {
-    display: inline-block;
-    font-size: @txt_size_xsmall;
     width: @double_module_size;
     strong { display: block;}
   }
