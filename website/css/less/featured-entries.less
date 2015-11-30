@@ -353,3 +353,51 @@
   width: 100%;
   height: 100%;
 }
+
+// pricing table
+
+.fxs_pricing_table{ 
+    .fxs_pricing_table_item{
+      border:1px solid @light_4_clr; 
+      padding:3rem;
+      .fxs_pricing_table_price{
+        position: relative;
+        padding-top:1.5rem;
+        padding-bottom:3rem;
+        .fxs_headline_medium,.fxs_pricing_table_subtitle,.fxs_pricing_table_value,.fxs_label{
+          display:block;
+          width:100%;
+          text-align: center;
+        }
+        .fxs_pricing_table_subtitle{ position: absolute; top:0; }
+        .fxs_label{ position: absolute; }
+        .fxs_pricing_table_subtitle,.fxs_label{ display:none; }
+        .fxs_pricing_table_value{
+        &:extend(.fxs_headline_hero all);
+          font-weight:@txt_fontweight_light;
+        }
+      }
+      .fxs_btn_cta{ width:100%; }
+
+      // different behaviors
+
+      &.fxs_pricing_featured_offer{
+        *{
+          color:@lightest_clr;
+        }
+        background-color: @highlight_clr;
+        .fxs_btn_cta{
+          background-color: @lightest_clr;
+          color:@highlight_clr;
+        }
+        .fxs_pricing_table_subtitle,.fxs_label{
+          display:block;
+        }
+      }
+      &.fxs_pricing_featured_save{
+        .fxs_label{
+          display:block;
+        }
+      }      
+  }
+}

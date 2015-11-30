@@ -2885,6 +2885,18 @@ h5 a:hover,
     line-height: 2.75rem;
   }
 }
+.fxs_headline_hero,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value {
+  font-size: 2.64rem;
+  line-height: 2.75rem;
+}
+@media (min-width: 680px) {
+  .fxs_headline_hero,
+  .fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value {
+    font-size: 3.5rem;
+    line-height: 3.57rem;
+  }
+}
 .fxs_relativePositioning {
   position: relative;
 }
@@ -5254,6 +5266,59 @@ max-width:calc(100% - ( 35px + 5px ));
   top: 0;
   width: 100%;
   height: 100%;
+}
+.fxs_pricing_table .fxs_pricing_table_item {
+  border: 1px solid #ececf1;
+  padding: 3rem;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_headline_medium,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_subtitle,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_label,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_entryFeatured_med .fxs_entryHeadline,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_live_event_module .fxs_entryHeadline {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_subtitle {
+  position: absolute;
+  top: 0;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_label {
+  position: absolute;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_subtitle,
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_label {
+  display: none;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value {
+  font-weight: 300;
+}
+.fxs_pricing_table .fxs_pricing_table_item .fxs_btn_cta {
+  width: 100%;
+}
+.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer {
+  background-color: #e4871b;
+}
+.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer * {
+  color: #ffffff;
+}
+.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_btn_cta {
+  background-color: #ffffff;
+  color: #e4871b;
+}
+.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_pricing_table_subtitle,
+.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_label {
+  display: block;
+}
+.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_save .fxs_label {
+  display: block;
 }
 .fxs_article_header {
   padding: 0 0 0.5rem 0;
