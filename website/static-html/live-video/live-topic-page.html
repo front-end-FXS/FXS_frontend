@@ -203,7 +203,7 @@
 
                                 <div class="fxs_video_chat_block">
                                     
-                                    <div class="fxs_mediaContainer" style="z-index:1;">
+                                    <div class="fxs_mediaContainer fxs_live_video_main_media" style="z-index:1;">
 
                                         <!-- <div class="fxs_timer_countdown_block">
                                             <div class="fxs_countdown fxs_clearfix">
@@ -233,18 +233,17 @@
 
                                     </div>
 
-                                    <div class="fxs_chat_block" style="position:relative; z-index:1;">
+                                    <div class="fxs_live_chat_block">
 
-                                        <div class="collapse" id="collapseExample">
-                                            <div id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" style="overflow: auto; -webkit-overflow-scrolling: touch;width:100%;height:389px;">
-                                                <iframe style="margin-bottom: -8px;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" frameborder="0" height="100%" width="100%"></iframe>
-                                            </div>
+                                        <!-- Chat enviado por Pol -->
+                                        <!-- <div id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" style="overflow: auto; -webkit-overflow-scrolling: touch;width:100%;height:389px;">
+                                            <iframe style="margin-bottom: -8px;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" frameborder="0" height="100%" width="100%"></iframe>
+                                        </div> -->
+                                        <!-- /Chat enviado por Pol -->
+
+                                        <div style="position:absolute; height:100%; width:100%;" id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css">
+                                            <iframe src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" frameborder="0" height="100%" width="100%"></iframe>
                                         </div>
-
-                                        <button type="button" class="fxs_btn fxs_btn_content_toggle fxs_btn_content_toggle_collapse fxs_btn_block btn" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                            <span class="fxs_togglebtn_txt init_txt">Live Chat <i class="fa fa-chevron-down"></i></span>
-                                            <span class="fxs_togglebtn_txt toggled_txt">Hide Chat <i class="fa fa-chevron-up"></i></span>
-                                        </button>
 
                                     </div>
 
@@ -258,6 +257,9 @@
                                                     <li>
                                                         <span class="fxs_label fxs_not_onAir_item">Up next</span>
                                                         <span class="fxs_label fxs_label_error fxs_onAir_item">On air</span>
+                                                    </li>
+                                                    <li class="fxs_not_onAir_item">
+                                                        <span class="fxs_event_time"><i class="fa fa-calendar-o"></i> <time datetime="2015-12-01 12:44:00"><strong>Dec 01</strong> | 12:44 UTC</time></span>
                                                     </li>
                                                     <li>
                                                         <span class="fxs_event_time"><i class="fa fa-clock-o"></i> Duration: <time datetime="PT1H45M">1h 45m</time></span>
@@ -276,7 +278,7 @@
                                         </footer>
 
                                         <article class="fxs_live_event_cta_content">
-                                            <header class="fxs_sideImage_headline">
+                                            <header class="fxs_sideImage_headline fxs_marginBase_bottom">
                                                 <!-- Author's image -->
                                                 <div class="fxs_avatar_circleImage_s">
                                                     <a href="path/to/author" title="NOMBRE DEL AUTOR">
@@ -302,7 +304,7 @@
                                             </header>
 
                                             <!-- Summary -->
-                                            <div class="collapse" id="live-event-summary">
+                                            <div class="fxs_entryPlain_txt collapse" id="live-event-summary">
                                                 <p>Kathleen Brooks, Steve O’Hare and the Pia First Team look to break down the long and short-term outlook for the USD, commodities and look to how it impacts the FX Majors</p>
 
                                                 <p>Correlation is a major factor in intermarket analysis; Oil and Canadian dollar, stocks and safe haven currencies such as the Swiss Franc and Japanese YEN, Gold and the Aussie dollar. The USD index is the major player in this market place. A solid forecast here (USD) can lead to substantial gains in the USD majors</p>
@@ -325,6 +327,9 @@
                                                 <ul class="fxs_plainInlined_list">
                                                     <li>
                                                         <span class="fxs_label">Up next</span>
+                                                    </li>
+                                                    <li class="fxs_not_onAir_item">
+                                                        <span class="fxs_event_time"><i class="fa fa-calendar-o"></i> <time datetime="2015-12-15 09:34"><strong>Dec 15</strong> | 9:34 UTC</time></span>
                                                     </li>
                                                     <li>
                                                         <span class="fxs_event_time"><i class="fa fa-clock-o"></i> Duration: <time datetime="PT1H45M">1h 45m</time></span>
@@ -988,7 +993,7 @@
             $('.fxs_btn_content_toggle_collapse').addClass('collapsed');
 
             // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-            $('#clock').countdown('2015/11/30 09:16:00')
+            $('#clock').countdown('2015-12-01 12:44:00')
             .on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                 + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
