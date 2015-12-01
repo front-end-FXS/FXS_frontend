@@ -270,7 +270,7 @@
     color: @dark_4_clr;
     position: relative;
     z-index: 1;
-    margin: 1rem 0 -1rem;
+    margin: 0 0 -1rem;
   }
   .fxs_live_event_cta_content, .fxs_pricing_table {
     &:extend(.fxs_wideItem_pre_space all);
@@ -279,12 +279,17 @@
     position: relative;
     z-index: 1;
   }
+  .fxs_content_panel {
+    margin-top: -@main_header_height*2;
+    padding-top: @main_header_height*2;
+  }
 }
 
 .fxs_live_event_module_summary {
   &:extend(.fxs_dTable);
   background-color: @dark_1_clr;
   color: @light_1_clr;
+  height: @main_header_height;
   margin-bottom: 1rem;
   padding: 5px 10px;
   position: relative;
@@ -354,50 +359,3 @@
   height: 100%;
 }
 
-// pricing table
-
-.fxs_pricing_table{ 
-    .fxs_pricing_table_item{
-      border:1px solid @light_4_clr; 
-      padding:3rem;
-      .fxs_pricing_table_price{
-        position: relative;
-        padding-top:1.5rem;
-        padding-bottom:3rem;
-        .fxs_headline_medium,.fxs_pricing_table_subtitle,.fxs_pricing_table_value,.fxs_label{
-          display:block;
-          width:100%;
-          text-align: center;
-        }
-        .fxs_pricing_table_subtitle{ position: absolute; top:0; }
-        .fxs_label{ position: absolute; }
-        .fxs_pricing_table_subtitle,.fxs_label{ display:none; }
-        .fxs_pricing_table_value{
-        &:extend(.fxs_headline_hero all);
-          font-weight:@txt_fontweight_light;
-        }
-      }
-      .fxs_btn_cta{ width:100%; }
-
-      // different behaviors
-
-      &.fxs_pricing_featured_offer{
-        *{
-          color:@lightest_clr;
-        }
-        background-color: @highlight_clr;
-        .fxs_btn_cta{
-          background-color: @lightest_clr;
-          color:@highlight_clr;
-        }
-        .fxs_pricing_table_subtitle,.fxs_label{
-          display:block;
-        }
-      }
-      &.fxs_pricing_featured_save{
-        .fxs_label{
-          display:block;
-        }
-      }      
-  }
-}
