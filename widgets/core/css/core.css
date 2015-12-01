@@ -1806,6 +1806,12 @@ width:calc(100% - 320px);
 .fxs_compare_performance_chart .tt_panelDiv .tt_symbolTitle {
   display: block!important;
 }
+.fxs_fullreport_chart {
+  position: absolute;
+  right: 4.5rem;
+  top: 0.2rem;
+  z-index: 9999;
+}
 .tab-content > .tab-pane {
   display: none;
 }
@@ -2235,6 +2241,16 @@ lesshat-selector {
   .fxs_headline_large {
     font-size: 2.64rem;
     line-height: 2.75rem;
+  }
+}
+.fxs_headline_hero {
+  font-size: 2.64rem;
+  line-height: 2.75rem;
+}
+@media (min-width: 680px) {
+  .fxs_headline_hero {
+    font-size: 3.75rem;
+    line-height: 3.57rem;
   }
 }
 .fxs_relativePositioning {

@@ -214,6 +214,15 @@
 
                         <!-- CTA Free-Free event -->
                         <section class="fxs_live_event_module">
+
+                            <!-- Background video container -->
+                            <div class="fxs_background_video">
+                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
+                                  <source src="../../video/Live1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Background video container -->
+
                             <footer class="fxs_live_event_module_summary">
                                 <div class="fxs_event_summary_data">
                                     <ul class="fxs_plainInlined_list">
@@ -221,8 +230,11 @@
                                             <span class="fxs_label fxs_not_onAir_item">Up next</span>
                                             <span class="fxs_label fxs_label_error fxs_onAir_item">On air</span>
                                         </li>
+                                        <li class="fxs_not_onAir_item">
+                                            <span class="fxs_event_time"><i class="fa fa-calendar-o"></i> <time datetime="2015-12-01 12:44:00"><strong>Dec 01</strong> | 12:44 UTC</time></span>
+                                        </li>
                                         <li>
-                                            <span class="fxs_event_time"><i class="fa fa-clock-o"></i> Duration: <time datetime="PT1H45M">1h 45m</time></span>
+                                            <span class="fxs_event_time"><i class="fa fa-clock-o"></i> <span class="fxs_hidden_xs_iBlock">Duration:</span> <time datetime="PT1H45M">1h 45m</time></span>
                                         </li>
                                     </ul>
                                 </div>
@@ -235,16 +247,7 @@
                                         </a>
                                     </div>
                                 </div>
-
                             </footer>
-
-                            <!-- Background video container -->
-                            <div class="fxs_background_video fxs_onAir_item">
-                                <video width="100%" autoplay loop muted>
-                                  <source src="../../video/Live1.mp4" type="video/mp4">
-                                </video>
-                            </div>
-                            <!-- Background video container -->
 
                             <article class="fxs_live_event_cta_content">
                                 <header class="fxs_sideImage_headline">
@@ -1696,7 +1699,7 @@
 
     <script>
         // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-        $('#clock').countdown('2015/11/30 13:10:00')
+        $('#clock').countdown('2015-12-01 16:48:00')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'

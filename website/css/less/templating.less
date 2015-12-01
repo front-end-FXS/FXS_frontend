@@ -346,6 +346,7 @@
   padding: 5px 0.25rem 1rem;
   @media (min-width: @screen-s) { padding: 5px @half_base_spacer 1rem; }
   @media (min-width: @screen-l) { padding: 5px 0.75rem 1rem 1rem; }
+  @media (min-width: @screen-xl) { padding: 5px 1.75rem 1rem 2rem; }
   .fxs_isParent_section & { &:extend(.fxs_hidden_xs all); }
   .fxs_feedbackLoading_msg {
     &:extend(.fxs_contentRail_box);
@@ -373,7 +374,7 @@
 
 .fxs_leaderboard {
   &:extend(.fxs_hidden_xs all, .fxs_contentRail_box);
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: center;
   img { min-width: inherit; }
   .fxs_detail & {
@@ -950,7 +951,8 @@
   }
 }
 
-/////////////////// Live videos ///////////////////////////
+///////////////////////////////////////////////////////////
+//////////////////// Live video //////////////////////////
 .fxs_live_events_table {
   >thead tr> th { padding: 0; }
   .fxs_event_sponsor {
@@ -972,6 +974,203 @@
   .fxs_event_title_author {
     a, span { display: block; }
   }
+}
+
+// Live event module components
+.fxs_background_video {
+  background: url(../img/video_cta_bg.jpg) no-repeat @dark_2_clr;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  &::after {
+    background: url(../img/pixel_pattern_layer.png) repeat transparent;
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .on_air & .fxs_onAir_item {
+    &:extend(.fxs_hidden_xs all);
+  }
+}
+
+.fxs_onAir_item {
+  display: none;
+  .on_air & {
+    display: inline-block;
+    .animation(fadeIn 0.33s ease-in);
+  }
+}
+
+.fxs_not_onAir_item {
+  .on_air & { display: none; }
+}
+
+.fxs_event_time {
+  display: inline-block;
+  font-size: @txt_size_xsmall;
+  vertical-align: middle;
+}
+
+.fxs_event_sponsor, .fxs_table .fxs_event_sponsor {
+  white-space: nowrap;
+  text-align: right;
+  .fxs_squareImage_s {
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
+
+.fxs_live_event_module_summary {
+  &:extend(.fxs_dTable);
+  background-color: @dark_1_clr;
+  border-bottom: 1px solid @dark_4_clr;
+  color: @light_1_clr;
+  height: @main_header_height;
+  margin-bottom: 1rem;
+  padding: 4px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.fxs_event_summary_data {
+  display: table-cell;
+  vertical-align: middle;
+  .fxs_label {
+    margin: 0;
+    color: @light_5_clr;
+  }
+}
+
+.fxs_live_event_cta_content {
+  &:extend(.fxs_wideItem_pre_space all);
+  max-width: @left_rail_space * 2;
+  position: relative;
+  z-index: 2;
+}
+
+.fxs_main_cta_block {
+  margin: 1rem 1rem 1rem @avatar_s+@half_base_spacer;
+  @media (min-width: @screen-s) {
+    margin: 1.5rem 1.5rem 1.5rem @avatar_l+@txt_defaultsize_px+5px;
+  }
+}
+
+.fxs_timer_countdown_block {
+  margin-bottom: 1rem;
+  max-width: 250px;
+}
+
+.fxs_countdown {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.fxs_countdown_clock {
+  font-size: @txt_size_xsmall;
+  >span {
+    display: inline-block;
+    &:not(:first-child) { margin-left: 0.33rem; }
+  }
+  .fxs_widget_custom_data_lable {
+    &:extend(.fxs_boldAntialised_style);
+    .on_air & { color: @error_clr; }
+  }
+}
+
+// Live video topic page widget
+.fxs_video_chat_block {
+  position: relative;
+  overflow: hidden;
+}
+.fxs_live_video_main_media {
+  margin: 1px;
+  margin-bottom: 0;
+  @media (min-width: @screen-m) { margin-right: 33.33333333%; }
+}
+
+.fxs_live_chat_block {
+  display: none;
+  @media (min-width: @screen-m) {
+    background-color: @light_5_clr;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33.33333333%;
+    z-index: 1;
+  }
+}
+
+.fxs_live_event_cell {
+  vertical-align: top;
+  @media (min-width: @screen-m) { display: table-cell; }
+  .fxs_live_event_cta_content {
+    max-width: inherit;
+    padding-top: 0;
+    padding-bottom: @half_base_spacer;
+  }
+  .fxs_btn_content_toggle {
+    color: @light_2_clr;
+    &:hover { color: @light_3_clr; }
+  }
+  &.fxs_current_item { background-color: @dark_1_clr; }
+  &.fxs_upcomming_item {
+    &, .fxs_live_event_module_summary { background-color: lighten(@dark_2_clr, 3%); }
+    .fxs_entryHeadline {
+      &:extend(.fxs_headline_from_tiny_to_small all);
+    }
+    @media (min-width: @screen-m) { width: 33.33333333%; }
+  }
+}
+
+//////////////////////////////////////
+// Paywall pricing table
+.fxs_pricing_table_item {
+  background-color: @lightest_clr;
+  border: 1px solid @light_4_clr; 
+  padding: 10%;
+  .fxs_label { position: absolute; }
+  // Different behaviors
+  &.fxs_pricing_featured_offer {
+    * { color: @lightest_clr; }
+    background-color: @highlight_clr;
+    border-color: @highlight_clr;
+    .fxs_btn_cta {
+      background-color: @lightest_clr;
+      color: @highlight_clr;
+    }
+  }     
+}
+
+.fxs_pricing_table_price {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  * {
+    display:block;
+    width:100%;
+    text-align: center;
+  }
+}
+
+.fxs_pricing_table_value {
+  &:extend(.fxs_headline_hero all);
+  font-weight: @txt_fontweight_light;
+  padding: 0.5rem 0;
+}
+
+.fxs_pricing_table_subtitle {
+  text-transform: uppercase;
+  font-size: @txt_size_small;
+  position: absolute;
+  top: -5px;
 }
 
 ///////////////////////////////////////////////////////////
