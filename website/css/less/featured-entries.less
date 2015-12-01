@@ -238,7 +238,7 @@
 // Live Event Module //
 .fxs_live_event_module {
   &:extend(.fxs_wideContent all, .fxs_wideItem_pre_space all);
-  background: url(../img/video_cta_bg.jpg) no-repeat @dark_2_clr;
+  background-color: @dark_2_clr;
   border-bottom: 3px solid @light_4_clr;
   color: @light_3_clr;
   margin-top: -1rem;
@@ -349,10 +349,11 @@
 }
 
 .fxs_background_video {
-  .on_air &.fxs_onAir_item {
+  background: url(../img/video_cta_bg.jpg) no-repeat @dark_2_clr;
+  .on_air & video {
     &:extend(.fxs_hidden_xs all);
+    .animation(fadeIn 0.33s ease-in);
   }
-  .animation(fadeIn 0.33s ease-in);
   position: absolute;
   top: 0;
   width: 100%;
