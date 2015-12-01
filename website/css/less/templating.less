@@ -981,6 +981,49 @@
   }
 }
 
+//////////////////////////////////////
+// Paywall pricing table
+.fxs_pricing_table_item {
+  background-color: @lightest_clr;
+  border: 1px solid @light_4_clr; 
+  padding: 10%;
+  .fxs_label { position: absolute; }
+  // Different behaviors
+  &.fxs_pricing_featured_offer {
+    * { color: @lightest_clr; }
+    background-color: @highlight_clr;
+    border-color: @highlight_clr;
+    .fxs_btn_cta {
+      background-color: @lightest_clr;
+      color: @highlight_clr;
+    }
+  }     
+}
+
+.fxs_pricing_table_price {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+  * {
+    display:block;
+    width:100%;
+    text-align: center;
+  }
+}
+
+.fxs_pricing_table_value {
+  &:extend(.fxs_headline_hero all);
+  font-weight: @txt_fontweight_light;
+  padding: 0.5rem 0;
+}
+
+.fxs_pricing_table_subtitle {
+  text-transform: uppercase;
+  font-size: @txt_size_small;
+  position: absolute;
+  top: -5px;
+}
+
 ///////////////////////////////////////////////////////////
 /////////////// Layouts grid system //////////////////////
 /////////////////////////////////////////////////////////
