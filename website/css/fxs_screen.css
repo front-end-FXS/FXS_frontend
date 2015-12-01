@@ -2886,14 +2886,14 @@ h5 a:hover,
   }
 }
 .fxs_headline_hero,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value {
+.fxs_pricing_table_value {
   font-size: 2.64rem;
   line-height: 2.75rem;
 }
 @media (min-width: 680px) {
   .fxs_headline_hero,
-  .fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value {
-    font-size: 3.5rem;
+  .fxs_pricing_table_value {
+    font-size: 3.75rem;
     line-height: 3.57rem;
   }
 }
@@ -3173,7 +3173,7 @@ h5 a:hover,
 .fxs_shareContent_holder,
 .fxs_isParent_section .fxs_contentView,
 .fxs_leaderboard,
-.on_air .fxs_background_video.fxs_onAir_item {
+.on_air .fxs_background_video video {
   display: none;
 }
 @media (min-width: 680px) {
@@ -3181,7 +3181,7 @@ h5 a:hover,
   .fxs_shareContent_holder,
   .fxs_isParent_section .fxs_contentView,
   .fxs_leaderboard,
-  .on_air .fxs_background_video.fxs_onAir_item {
+  .on_air .fxs_background_video video {
     display: block;
   }
 }
@@ -4747,6 +4747,51 @@ width:calc(100% - 35px - 5px);
 .fxs_live_events_table .fxs_event_title_author span {
   display: block;
 }
+.fxs_live_event_cell {
+  display: table-cell;
+}
+.fxs_live_event_cell .fxs_live_event_cta_content {
+  max-width: inherit;
+}
+.fxs_pricing_table_item {
+  background-color: #ffffff;
+  border: 1px solid #ececf1;
+  padding: 10%;
+}
+.fxs_pricing_table_item .fxs_label {
+  position: absolute;
+}
+.fxs_pricing_table_item.fxs_pricing_featured_offer {
+  background-color: #e4871b;
+  border-color: #e4871b;
+}
+.fxs_pricing_table_item.fxs_pricing_featured_offer * {
+  color: #ffffff;
+}
+.fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_btn_cta {
+  background-color: #ffffff;
+  color: #e4871b;
+}
+.fxs_pricing_table_price {
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+.fxs_pricing_table_price * {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.fxs_pricing_table_value {
+  font-weight: 300;
+  padding: 0.5rem 0;
+}
+.fxs_pricing_table_subtitle {
+  text-transform: uppercase;
+  font-size: 0.92rem;
+  position: absolute;
+  top: -5px;
+}
 .fxs_row {
   margin-left: -0.66666667rem;
   margin-right: -0.66666667rem;
@@ -5152,7 +5197,7 @@ max-width:calc(100% - ( 35px + 5px ));
   margin-left: 5px;
 }
 .fxs_live_event_module {
-  background: url(../img/video_cta_bg.jpg) no-repeat #25252b;
+  background-color: #25252b;
   border-bottom: 3px solid #ececf1;
   color: #dddedf;
   margin-top: -1rem;
@@ -5186,7 +5231,7 @@ max-width:calc(100% - ( 35px + 5px ));
   color: #49494f;
   position: relative;
   z-index: 1;
-  margin: 1rem 0 -1rem;
+  margin: 0 0 -1rem;
 }
 .fxs_live_event_module .fxs_live_event_cta_content,
 .fxs_live_event_module .fxs_pricing_table {
@@ -5195,9 +5240,14 @@ max-width:calc(100% - ( 35px + 5px ));
   position: relative;
   z-index: 1;
 }
+.fxs_live_event_module .fxs_content_panel {
+  margin-top: -90px;
+  padding-top: 90px;
+}
 .fxs_live_event_module_summary {
   background-color: #1b1c23;
   color: #8c8d91;
+  height: 45px;
   margin-bottom: 1rem;
   padding: 5px 10px;
   position: relative;
@@ -5252,67 +5302,17 @@ max-width:calc(100% - ( 35px + 5px ));
   color: #cf4836;
 }
 .fxs_background_video {
-  -webkit-animation: fadeIn 0.33s ease-in;
-  -moz-animation: fadeIn 0.33s ease-in;
-  -o-animation: fadeIn 0.33s ease-in;
-  animation: fadeIn 0.33s ease-in;
+  background: url(../img/video_cta_bg.jpg) no-repeat #25252b;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.fxs_pricing_table .fxs_pricing_table_item {
-  border: 1px solid #ececf1;
-  padding: 3rem;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price {
-  position: relative;
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_headline_medium,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_subtitle,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_label,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_entryFeatured_med .fxs_entryHeadline,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_live_event_module .fxs_entryHeadline {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_subtitle {
-  position: absolute;
-  top: 0;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_label {
-  position: absolute;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_subtitle,
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_label {
-  display: none;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_pricing_table_price .fxs_pricing_table_value {
-  font-weight: 300;
-}
-.fxs_pricing_table .fxs_pricing_table_item .fxs_btn_cta {
-  width: 100%;
-}
-.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer {
-  background-color: #e4871b;
-}
-.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer * {
-  color: #ffffff;
-}
-.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_btn_cta {
-  background-color: #ffffff;
-  color: #e4871b;
-}
-.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_pricing_table_subtitle,
-.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_offer .fxs_label {
-  display: block;
-}
-.fxs_pricing_table .fxs_pricing_table_item.fxs_pricing_featured_save .fxs_label {
-  display: block;
+.on_air .fxs_background_video video {
+  -webkit-animation: fadeIn 0.33s ease-in;
+  -moz-animation: fadeIn 0.33s ease-in;
+  -o-animation: fadeIn 0.33s ease-in;
+  animation: fadeIn 0.33s ease-in;
 }
 .fxs_article_header {
   padding: 0 0 0.5rem 0;
@@ -6348,7 +6348,7 @@ width:calc(100% - 140px);
   .fxs_widget_spreads_table.fxs_widget_mini .fxs_shareContent_holder,
   .fxs_widget_spreads_table.fxs_widget_mini .fxs_isParent_section .fxs_contentView,
   .fxs_widget_spreads_table.fxs_widget_mini .fxs_leaderboard,
-  .fxs_widget_spreads_table.fxs_widget_mini .on_air .fxs_background_video.fxs_onAir_item {
+  .fxs_widget_spreads_table.fxs_widget_mini .on_air .fxs_background_video video {
     display: none;
   }
 }

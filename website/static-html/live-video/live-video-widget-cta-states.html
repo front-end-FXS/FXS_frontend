@@ -239,8 +239,8 @@
                             </footer>
 
                             <!-- Background video container -->
-                            <div class="fxs_background_video fxs_onAir_item">
-                                <video width="100%" autoplay loop muted>
+                            <div class="fxs_background_video">
+                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
                                   <source src="../../video/Live1.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -332,8 +332,8 @@
                             </footer>
 
                             <!-- Background video container -->
-                            <div class="fxs_background_video fxs_onAir_item">
-                                <video width="100%" autoplay loop muted>
+                            <div class="fxs_background_video">
+                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
                                   <source src="../../video/Live2.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -427,8 +427,8 @@
                             </footer>
 
                             <!-- Background video container -->
-                            <div class="fxs_background_video fxs_onAir_item">
-                                <video width="100%" autoplay loop muted>
+                            <div class="fxs_background_video">
+                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
                                   <source src="../../video/Live3.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -526,8 +526,8 @@
                             </footer>
 
                             <!-- Background video container -->
-                            <div class="fxs_background_video fxs_onAir_item">
-                                <video width="100%" autoplay loop muted>
+                            <div class="fxs_background_video">
+                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
                                   <source src="../../video/Live1.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -572,7 +572,38 @@
                                     <span class="fxs_helperLabel_title">Premium service</span>
                                     <div id="clock_4" class="fxs_countdown_clock fxs_skip"></div>
 
-                                    Waiting for pricing table item...
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_33">
+                                            <div class="fxs_pricing_table_item fxs_marginBase_bottom">
+                                                <div class="fxs_pricing_table_price fxs_clearfix">
+                                                    <span class="fxs_headline_from_tiny_to_medium">1 Month</span>
+                                                    <span class="fxs_pricing_table_value">35&#8364;</span>
+                                                </div>
+                                                <button type="button" class="fxs_btn fxs_btn_cta fxs_btn_block">Subscribe</button>
+                                            </div>
+                                        </div>
+                                        <div class="fxs_col fxs_col_33">
+                                            <div class="fxs_pricing_table_item fxs_marginBase_bottom">
+                                                <div class="fxs_pricing_table_price fxs_clearfix">
+                                                    <span class="fxs_headline_from_tiny_to_medium">3 Months</span>
+                                                    <span class="fxs_pricing_table_value">95&#8364;</span>
+                                                    <span class="fxs_label">You will save 20&#8364;</span>  
+                                                </div>
+                                                <button type="button" class="fxs_btn fxs_btn_cta fxs_btn_block">Subscribe</button>
+                                            </div>
+                                        </div>
+                                        <div class="fxs_col fxs_col_33">
+                                            <div class="fxs_pricing_table_item fxs_pricing_featured_offer fxs_marginBase_bottom">
+                                                <div class="fxs_pricing_table_price fxs_clearfix">
+                                                    <span class="fxs_pricing_table_subtitle">Best deal</span>
+                                                    <span class="fxs_headline_from_tiny_to_medium">12 Months</span>
+                                                    <span class="fxs_pricing_table_value">320&#8364;</span>
+                                                    <span class="fxs_label">You will save 100&#8364;</span>
+                                                </div>
+                                                <button type="button" class="fxs_btn fxs_btn_cta fxs_btn_block">Subscribe</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <aside class="fxs_content_panel fxs_txt_center">
@@ -622,8 +653,8 @@
                             </footer>
 
                             <!-- Background video container -->
-                            <div class="fxs_background_video fxs_onAir_item">
-                                <video width="100%" autoplay loop muted>
+                            <div class="fxs_background_video">
+                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
                                   <source src="../../video/Live1.mp4" type="video/mp4">
                                 </video>
                             </div>
@@ -1238,7 +1269,7 @@
 
     <script>
     // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-        $('#clock').countdown('2015/11/30 09:16:00')
+        $('#clock').countdown('2015/12/01 09:16:00')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
