@@ -488,7 +488,7 @@
                                                 </div>
                                                 <!-- /Featured video Reduced -->
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
@@ -1134,6 +1134,15 @@
                 // .parent().addClass('disabled');
                 .closest('.fxs_live_event_module').addClass( "on_air" );
             });
+
+
+            ////////////////////////////////
+            //// Stick em /////////////////
+            $('.fxs_detail').stickem({
+               containerScroll: $("#fxs_content"),
+               offset: 65
+            });
+            
         </script>
         
     </body>
