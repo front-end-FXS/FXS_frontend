@@ -1145,13 +1145,23 @@
 .fxs_col_75 { .make-l-column(9); }
 
 // 67% //
-.fxs_col_67 { .make-s-column(8); }
+.fxs_col_67 {
+  .make-s-column(8);
+  .fxs_flex_col & {
+    .make-l-column(8);
+  }
+}
 
 // 50% //
 .fxs_col_50 { .make-s-column(6); }
 
 // 33% //
-.fxs_col_33 { .make-s-column(4); }
+.fxs_col_33 {
+  .make-s-column(4);
+  .fxs_flex_col & {
+    .make-l-column(4);
+  }
+}
 
 // 25% //
 .fxs_col_25 {
