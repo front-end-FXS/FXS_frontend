@@ -199,37 +199,51 @@
                             <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
 
                             <!-- CTA Free-Free event -->
-                            <section class="fxs_live_event_module fxs_login_required_video">
+                            <section class="fxs_live_event_module">
 
                                 <div class="fxs_video_chat_block">
                                     
                                     <div class="fxs_mediaContainer fxs_live_video_main_media" style="z-index:1;">
                                         
-                                        <!-- Hidden clock for knowing when it's live -->
-                                        <div class="fxs_background_video fxs_skip">
+                                        <!-- Registration wall -->
+                                        <div class="fxs_background_video">
+                                            
+                                            <!-- Background video -->
+                                            <video class="fxs_onAir_item" width="100%" autoplay loop muted>
+                                              <source src="../../video/Live1.mp4" type="video/mp4">
+                                            </video>
+                                            <!-- /Background video -->
 
                                             <div class="fxs_timer_countdown_block">
                                                 <div class="fxs_countdown fxs_clearfix">
                                                     <span class="fxs_helperLabel_title">Event Starts in</span>
                                                     <div id="clock" class="fxs_countdown_clock"></div>
-                                                </div>                                                
+                                                </div>
+
+                                                <small>You need to be registered to view this content.</small>
+
+                                                <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
+                                                    Register for free
+                                                </button>
+                                                
+                                                <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
+                                                    Register to enter!
+                                                </button>
+                                                
                                             </div>
 
                                         </div>
-                                        <!-- Hidden clock for knowing when it's live -->
+                                        <!-- /Registration wall -->
 
+                                        <!-- No video if not logged!!!! -->
 
-                                        <iframe class="fxs_media_item" src="https://www.youtube.com/embed/kTROTOgTdtk?vq=hd1080&amp;autoplay=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;theme=light&amp;color=white" allowfullscreen="" frameborder="0" width="1280" height="720"></iframe>
+                                            <!-- <iframe class="fxs_media_item" src="https://www.youtube.com/embed/kTROTOgTdtk?vq=hd1080&amp;autoplay=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;theme=light&amp;color=white" allowfullscreen="" frameborder="0" width="1280" height="720"></iframe> -->
+                                        
+                                        <!-- /No video if not logged!!!! -->
 
                                     </div>
 
                                     <div class="fxs_live_chat_block">
-
-                                        <!-- Chat original enviado por Pol -->
-                                        <!-- <div id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" style="overflow: auto; -webkit-overflow-scrolling: touch;width:100%;height:389px;">
-                                            <iframe style="margin-bottom: -8px;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" frameborder="0" height="100%" width="100%"></iframe>
-                                        </div> -->
-                                        <!-- /Chat original enviado por Pol -->
 
                                         <div id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="http://front-end-fxs.github.io/FXS_frontend/website/css/fxs_custom_live_chat.css" style="position:relative; z-index:2; overflow-y:auto; -webkit-overflow-scrolling:touch; width:100%; height:100%;">
                                             <iframe style="margin-bottom:-5px;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=http://front-end-fxs.github.io/FXS_frontend/website/css/fxs_custom_live_chat.css" frameborder="0" height="100%" width="100%"></iframe>
