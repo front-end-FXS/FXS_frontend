@@ -1063,6 +1063,8 @@
 .fxs_timer_countdown_block {
   margin-bottom: 1rem;
   max-width: 250px;
+  position: relative;
+  z-index: 2;
 }
 
 .fxs_countdown {
@@ -1075,6 +1077,7 @@
   font-size: @txt_size_xsmall;
   >span {
     display: inline-block;
+    text-align: left;
     &:not(:first-child) { margin-left: 0.33rem; }
   }
   .fxs_widget_custom_data_lable {
@@ -1092,6 +1095,14 @@
   margin: 1px;
   margin-bottom: 0;
   @media (min-width: @screen-s) { margin-right: 33.33333333%; }
+  .fxs_timer_countdown_block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -73px;
+    margin-left: -125px;
+    text-align: center;
+  }
 }
 
 .fxs_live_chat_block {

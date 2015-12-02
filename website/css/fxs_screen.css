@@ -4839,6 +4839,8 @@ width:calc(100% - 35px - 5px);
 .fxs_timer_countdown_block {
   margin-bottom: 1rem;
   max-width: 250px;
+  position: relative;
+  z-index: 2;
 }
 .fxs_countdown {
   margin-bottom: 0.5rem;
@@ -4850,6 +4852,7 @@ width:calc(100% - 35px - 5px);
 }
 .fxs_countdown_clock > span {
   display: inline-block;
+  text-align: left;
 }
 .fxs_countdown_clock > span:not(:first-child) {
   margin-left: 0.33rem;
@@ -4869,6 +4872,14 @@ width:calc(100% - 35px - 5px);
   .fxs_live_video_main_media {
     margin-right: 33.33333333%;
   }
+}
+.fxs_live_video_main_media .fxs_timer_countdown_block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -73px;
+  margin-left: -125px;
+  text-align: center;
 }
 .fxs_live_chat_block {
   display: none;
