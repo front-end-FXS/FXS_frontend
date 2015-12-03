@@ -191,7 +191,7 @@ $(document).ready(function () {
         $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
     });
 
-    $('.fxs_timezone_close, .fxs_timezone_done').click(function () {         
+    $('[data-toggle="fxs_timezone_items"]').click(function () {         
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
     });
 
