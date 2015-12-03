@@ -1,7 +1,4 @@
-html {
-    font-family: 'Roboto', sans-serif;
-    overflow-y: auto;
-}
+html { font-family: 'Roboto', sans-serif; }
 .header, .header-bar, .header-avatar,
 .header-channel, .header-status, .nav,
 .twitter-button-icon, .join-button--twitter,
@@ -13,10 +10,18 @@ html {
 .join {
     border-radius: 0;
     border-width: 1px 0 0;
+    padding-top: 7px;
 }
 
 .join-form { width: 100%; }
 
 .input-text { width: 100%; }
 
-#chat.chat { padding-top: 15px; }
+#chat.chat { padding: 15px 10px; }
+
+.footer {
+    bottom: 0;
+    width: 100%;
+}
+
+.isVirgin .footer-wrapper { padding: 0; }
