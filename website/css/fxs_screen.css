@@ -2732,8 +2732,8 @@ label,
 .fxs_typeaheadList > li.fxs_typeaheadGroup.active a,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse,
 .fxs_broker_contact_footer .fxs_feedback_contact_msg,
-.fxs_countdown_clock .fxs_widget_custom_data_lable,
 .fxs_suscribeText span,
+.fxs_countdown_clock .fxs_widget_custom_data_lable,
 h1,
 h2,
 h3,
@@ -2965,6 +2965,10 @@ h5 a:hover,
 .fxs_resetRow_margin {
   padding-left: 7.5px;
   padding-right: 7.5px;
+}
+.fxs_absolute_center {
+  top: 50%;
+  left: 50%;
 }
 .fxs_clearfix::before,
 .fxs_clearfix::after,
@@ -3267,22 +3271,22 @@ h5 a:hover,
   }
 }
 .fxs_wideItem_pre_space,
-.fxs_live_event_cta_content,
 .fxs_suscribe,
 .fxs_sexy_banner,
 .fxs_live_event_module,
 .fxs_live_event_module .fxs_pricing_table,
+.fxs_live_event_cta_content,
 .fxs_widget_price.fxs_widget_price_header {
   margin-bottom: 1rem;
   padding: 1rem;
 }
 @media (min-width: 680px) {
   .fxs_wideItem_pre_space,
-  .fxs_live_event_cta_content,
   .fxs_suscribe,
   .fxs_sexy_banner,
   .fxs_live_event_module,
   .fxs_live_event_module .fxs_pricing_table,
+  .fxs_live_event_cta_content,
   .fxs_widget_price.fxs_widget_price_header {
     padding: 1.5rem 2rem 1rem;
     margin-bottom: 1.5rem;
@@ -4773,106 +4777,6 @@ width:calc(100% - 35px - 5px);
 .fxs_live_events_table .fxs_event_title_author span {
   display: block;
 }
-.fxs_background_video {
-  background: url(../img/video_cta_bg.jpg) no-repeat #25252b;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.fxs_background_video::after {
-  background: url(../img/pixel_pattern_layer.png) repeat transparent;
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-.fxs_onAir_item {
-  display: none;
-}
-.on_air .fxs_onAir_item {
-  display: inline-block;
-  -webkit-animation: fadeIn 0.33s ease-in;
-  -moz-animation: fadeIn 0.33s ease-in;
-  -o-animation: fadeIn 0.33s ease-in;
-  animation: fadeIn 0.33s ease-in;
-}
-.on_air .fxs_not_onAir_item {
-  display: none;
-}
-.fxs_event_time {
-  display: inline-block;
-  font-size: 0.8rem;
-  vertical-align: middle;
-}
-.fxs_event_sponsor,
-.fxs_table .fxs_event_sponsor {
-  white-space: nowrap;
-  text-align: right;
-}
-.fxs_event_sponsor .fxs_squareImage_s,
-.fxs_table .fxs_event_sponsor .fxs_squareImage_s {
-  vertical-align: middle;
-  margin-left: 5px;
-}
-.fxs_live_event_module_summary {
-  background-color: #1b1c23;
-  border-bottom: 1px solid #49494f;
-  color: #8c8d91;
-  height: 45px;
-  margin-bottom: 1rem;
-  padding: 4px 10px;
-  position: relative;
-  z-index: 2;
-}
-.fxs_event_summary_data {
-  display: table-cell;
-  vertical-align: middle;
-}
-.fxs_event_summary_data .fxs_label {
-  margin: 0;
-  color: #f3f3f8;
-}
-.fxs_live_event_cta_content {
-  max-width: 640px;
-  position: relative;
-  z-index: 2;
-}
-.fxs_main_cta_block {
-  margin: 1rem 1rem 1rem 42.5px;
-}
-@media (min-width: 680px) {
-  .fxs_main_cta_block {
-    margin: 1.5rem 1.5rem 1.5rem 95px;
-  }
-}
-.fxs_timer_countdown_block {
-  margin-bottom: 1rem;
-  max-width: 250px;
-  position: relative;
-  z-index: 2;
-}
-.fxs_countdown {
-  margin-bottom: 0.5rem;
-  display: inline-block;
-  width: 100%;
-}
-.fxs_countdown_clock {
-  font-size: 0.8rem;
-}
-.fxs_countdown_clock > span {
-  display: inline-block;
-  text-align: left;
-}
-.fxs_countdown_clock > span:not(:first-child) {
-  margin-left: 0.33rem;
-}
-.on_air .fxs_countdown_clock .fxs_widget_custom_data_lable {
-  color: #cf4836;
-}
 .fxs_pricing_table_item {
   background-color: #ffffff;
   border: 1px solid #ececf1;
@@ -5353,6 +5257,115 @@ max-width:calc(100% - ( 35px + 5px ));
   margin-top: -90px;
   padding-top: 90px;
 }
+.fxs_live_event_module .fxs_relativePositioning {
+  z-index: 2;
+}
+.fxs_background_video {
+  background: url(../img/video_cta_bg.jpg) no-repeat #25252b;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.fxs_background_video::after {
+  background: url(../img/pixel_pattern_layer.png) repeat transparent;
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.fxs_onAir_item {
+  display: none;
+}
+.on_air .fxs_onAir_item {
+  display: inline-block;
+  -webkit-animation: fadeIn 0.33s ease-in;
+  -moz-animation: fadeIn 0.33s ease-in;
+  -o-animation: fadeIn 0.33s ease-in;
+  animation: fadeIn 0.33s ease-in;
+}
+.on_air .fxs_not_onAir_item {
+  display: none;
+}
+.fxs_event_time {
+  display: inline-block;
+  font-size: 0.8rem;
+  vertical-align: middle;
+}
+.fxs_event_sponsor,
+.fxs_table .fxs_event_sponsor {
+  white-space: nowrap;
+  text-align: right;
+}
+.fxs_event_sponsor .fxs_squareImage_s,
+.fxs_table .fxs_event_sponsor .fxs_squareImage_s {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.fxs_live_event_module_summary {
+  background-color: #1b1c23;
+  border-bottom: 1px solid #49494f;
+  color: #8c8d91;
+  height: 45px;
+  margin-bottom: 1rem;
+  padding: 4px 3%;
+  position: relative;
+  z-index: 2;
+}
+.fxs_event_summary_data {
+  display: table-cell;
+  vertical-align: middle;
+}
+.fxs_event_summary_data .fxs_label {
+  margin: 0;
+  color: #f3f3f8;
+}
+.fxs_live_event_cta_content {
+  max-width: 640px;
+  position: relative;
+  z-index: 2;
+}
+.fxs_main_cta_block {
+  margin: 1rem 1rem 1rem 42.5px;
+}
+@media (min-width: 680px) {
+  .fxs_main_cta_block {
+    margin: 1.5rem 1.5rem 1.5rem 95px;
+  }
+}
+.fxs_timer_countdown_block {
+  margin-bottom: 1rem;
+  width: 250px;
+  position: relative;
+  z-index: 2;
+}
+.fxs_timer_countdown_block.fxs_absolute_center {
+  position: absolute;
+  margin-top: -90px;
+  margin-left: -125px;
+  text-align: center;
+}
+.fxs_countdown {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  width: 100%;
+}
+.fxs_countdown_clock {
+  font-size: 0.8rem;
+}
+.fxs_countdown_clock > span {
+  display: inline-block;
+  text-align: left;
+}
+.fxs_countdown_clock > span:not(:first-child) {
+  margin-left: 0.33rem;
+}
+.on_air .fxs_countdown_clock .fxs_widget_custom_data_lable {
+  color: #cf4836;
+}
 .fxs_video_chat_block {
   position: relative;
   overflow: hidden;
@@ -5365,14 +5378,6 @@ max-width:calc(100% - ( 35px + 5px ));
   .fxs_live_video_main_media {
     margin-right: 33.33333333%;
   }
-}
-.fxs_live_video_main_media .fxs_timer_countdown_block {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -73px;
-  margin-left: -125px;
-  text-align: center;
 }
 .fxs_live_chat_block {
   display: none;
