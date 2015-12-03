@@ -1142,33 +1142,23 @@
 .fxs_col_100 { &:extend(.fxs_clearfix all); }
 
 // 75% //
-.fxs_col_75 { .make-l-column(9); }
+.fxs_col_75 { .make-m-column(9); }
 
 // 67% //
-.fxs_col_67 {
-  .make-s-column(8);
-  .fxs_flex_col & {
-    .make-l-column(8);
-  }
-}
+.fxs_col_67 { .make-s-column(8); }
 
 // 50% //
-.fxs_col_50 { .make-s-column(6); }
+.fxs_col_50 { .make-m-column(6); }
 
 // 33% //
-.fxs_col_33 {
-  .make-s-column(4);
-  .fxs_flex_col & {
-    .make-l-column(4);
-  }
-}
+.fxs_col_33 { .make-s-column(4); }
 
 // 25% //
 .fxs_col_25 {
   &:not(.fxs_col_dismissible) { .make-s-column(3); }
   &.fxs_col_dismissible {
-    &:extend(.fxs_hidden_m all);
-    .make-l-column(3);
+    &:extend(.fxs_hidden_s all);
+    .make-m-column(3);
   }
 }
 
@@ -1176,9 +1166,9 @@
 .fxs_flex_col {
   @media (min-width: @screen-s) {
     float: left;
-    .calc(width, ~'100% - @{left_rail_space_reduced}');
+    .calc(width, ~'100% - ((@{left_rail_space_reduced}) - 5px)');
     &.fxs_flex_ad_col {
-      width: @left_rail_space_reduced;
+      width: @left_rail_space_reduced - (@txt_defaultsize_px / 3);
       position: static;
       &.fxs_flex_ad_col_fRight { float: right; }
       .stickem { width: @left_rail_space_reduced - ((@txt_defaultsize_px / 1.5) * 2); }
@@ -1211,8 +1201,10 @@
 }
 
 .stickit-end {
-  position: absolute;
-  bottom: 0;
+  @media(min-width:@screen-s) {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 /////////////////////////////////////////////////////////////
