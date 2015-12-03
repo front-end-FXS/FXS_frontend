@@ -1568,10 +1568,16 @@ width:calc(100% - 320px);
   color: #8c8d91;
 }
 .fxs_relatedContent_holder {
-  margin-left: -0.66666667rem;
-  margin-right: -0.66666667rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
   overflow: hidden;
   font-size: 0;
+}
+@media (min-width: 1024px) {
+  .fxs_relatedContent_holder {
+    margin-left: -0.66666667rem;
+    margin-right: -0.66666667rem;
+  }
 }
 .fxs_relatedItem {
   padding-bottom: 1rem;
@@ -1592,9 +1598,16 @@ width:calc(100% - 320px);
 .fxs_relatedContentSlot_x4_cols {
   position: relative;
   min-height: 1px;
-  padding-left: 0.66666667rem;
-  padding-right: 0.66666667rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   min-width: 140px;
+}
+@media (min-width: 1024px) {
+  .fxs_relatedContentSlot_x3_cols,
+  .fxs_relatedContentSlot_x4_cols {
+    padding-left: 0.66666667rem;
+    padding-right: 0.66666667rem;
+  }
 }
 .fxs_relatedContentSlot_x3_cols {
   width: 33.33333333%;
@@ -2209,7 +2222,7 @@ lesshat-selector {
 .fxs_headline_tiny {
   margin-bottom: 0;
 }
-@media (min-width: 680px) {
+@media (min-width: 1100px) {
   .fxs_headline_from_tiny_to_small,
   .fxs_relatedContentSlot_x3_cols .fxs_entryHeadline {
     font-size: 1.2rem;
@@ -2521,7 +2534,7 @@ lesshat-selector {
 }
 @media (min-width: 680px) {
   .fxs_wideItem_pre_space {
-    padding: 2rem 2rem 1rem;
+    padding: 1.5rem 2rem 1rem;
     margin-bottom: 1.5rem;
   }
 }

@@ -199,51 +199,31 @@
                             <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
 
                             <!-- CTA Free-Free event -->
-                            <section class="fxs_live_event_module">
+                            <section class="fxs_live_event_module fxs_login_required_video">
 
                                 <div class="fxs_video_chat_block">
                                     
                                     <div class="fxs_mediaContainer fxs_live_video_main_media" style="z-index:1;">
+                                        
+                                        <!-- Hidden clock for knowing when it's live -->
+                                        <div class="fxs_skip">
+                                            <div id="clock" class="fxs_countdown_clock"></div>                                           
+                                        </div>
+                                        <!-- /Hidden clock for knowing when it's live -->
 
-                                        <!-- <div class="fxs_timer_countdown_block">
-                                            <div class="fxs_countdown fxs_clearfix">
-                                                <span class="fxs_helperLabel_title">Event Starts in</span>
-                                                <div id="clock" class="fxs_countdown_clock"></div>
-                                            </div>
-
-                                            <small>You need to be registered to view this content.</small>
-
-                                            
-                                            <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                                Register for free
-                                            </button>
-                                            
-
-                                            
-                                            <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
-                                                Register to enter!
-                                            </button>
-                                            
-
-                                        </div> -->
-
-                                        <div id="clock" class="fxs_countdown_clock fxs_skip"></div>
-
+                                        <!-- Embed Youtube -->
                                         <iframe class="fxs_media_item" src="https://www.youtube.com/embed/kTROTOgTdtk?vq=hd1080&amp;autoplay=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1&amp;theme=light&amp;color=white" allowfullscreen="" frameborder="0" width="1280" height="720"></iframe>
+                                        <!-- /Embed Youtube -->
 
                                     </div>
 
                                     <div class="fxs_live_chat_block">
 
-                                        <!-- Chat enviado por Pol -->
-                                        <!-- <div id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" style="overflow: auto; -webkit-overflow-scrolling: touch;width:100%;height:389px;">
-                                            <iframe style="margin-bottom: -8px;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=https://staticconent.blob.core.windows.net/babel-fxstreet/fxstreet/_css/lar-chat.css" frameborder="0" height="100%" width="100%"></iframe>
-                                        </div> -->
-                                        <!-- /Chat enviado por Pol -->
-
-                                        <div style="position:absolute; height:100%; width:100%; overflow-y:auto;" id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="http://front-end-fxs.github.io/FXS_frontend/website/css/fxs_custom_live_chat.css">
-                                            <iframe style="overflow-y:auto;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=http://front-end-fxs.github.io/FXS_frontend/website/css/fxs_custom_live_chat.css" frameborder="0" height="100%" width="100%"></iframe>
+                                        <!-- Chat embed -->
+                                        <div id="tlkio" data-channel="fxstreet-forex-live-video" data-custom-css="http://front-end-fxs.github.io/FXS_frontend/website/css/fxs_custom_live_chat.css" style="position:relative; z-index:2; overflow-y:auto; -webkit-overflow-scrolling:touch; width:100%; height:100%;">
+                                            <iframe style="margin-bottom:-5px;" src="//embed.tlk.io/fxstreet-forex-live-video?custom_css_path=http://front-end-fxs.github.io/FXS_frontend/website/css/fxs_custom_live_chat.css" frameborder="0" height="100%" width="100%"></iframe>
                                         </div>
+                                        <!-- /Chat embed -->
 
                                     </div>
 
@@ -328,11 +308,8 @@
                                                     <li>
                                                         <span class="fxs_label">Up next</span>
                                                     </li>
-                                                    <li class="fxs_not_onAir_item">
-                                                        <span class="fxs_event_time"><i class="fa fa-calendar-o"></i> <time datetime="2015-12-15 09:34"><strong>Dec 15</strong> | 9:34 UTC</time></span>
-                                                    </li>
                                                     <li>
-                                                        <span class="fxs_event_time"><i class="fa fa-clock-o"></i> Duration: <time datetime="PT1H45M">1h 45m</time></span>
+                                                        <span class="fxs_event_time"><i class="fa fa-calendar-o"></i> <time datetime="2015-12-15 09:34"><strong>Dec 15</strong> | 9:34 UTC</time></span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -367,296 +344,523 @@
                             <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
                             <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
 
-
-
-
-
-
-
-
+                            <h2 class="fxs_subsectionTitle">
+                                Featured videos
+                            </h2>
                         
-                            <!-- 1 = 100% -->
-                            <div class="fxs_row">
-                                <div class="fxs_col fxs_col_100">
-                                    
-                                </div>
-                            </div>
-                            <!-- /1 = 100% -->
+                            <!-- Sticky ad outside -->
+                            <div class="fxs_row stickem-container"><!-- For dev! -->
+                            
+                                <div class="fxs_flex_col">
 
-                            <hr class="fxs_divider_third">
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_75">
+                                            <!-- Featured video Medium -->
+                                            <div class="fxs_entryFeatured">
+                                                <article class="fxs_entryFeatured_med">
+                                                    <div class="fxs_entryFeatured_img">
+                                                        <img src="https://i.ytimg.com/vi_webp/iY4qvXvCgZI/mqdefault.webp" width="" height="" alt="Nombre del vídeo">
+                                                        <!-- May or may not be premium!!!!! -->
+                                                        <span class="fxs_label fxs_label_featured">Premium</span>
+                                                        <!-- /May or may not be premium!!!!! -->
+                                                        <span class="fxs_miniLabel_video">
+                                                            <i class="fa fa-play"></i> <span>42:20</span>
+                                                        </span>
+                                                    </div>
+                                                    <header>
+                                                        <h3 class="fxs_entryHeadline">
+                                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                                        </h3>
+                                                        <!-- Author box small -->
+                                                        <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                            <div class="fxs_avatar_circleImage_s">
+                                                                <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                                </a>
+                                                            </div>
+                                                            <span class="fxs_article_author">
+                                                                <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                    Giuseppe Basile, SIAT/CSTA
+                                                                </a>
+                                                                <span class="fxs_author_description">
+                                                                    Founder, Trader, Technical Analyst and Mentor <a href="path/to/company" class="fxs_mutedLink">FibStalker Trading</a>
+                                                                </span>
+                                                            </span>
+                                                            <script type="application/ld+json">
+                                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                            </script>
+                                                        </address>
+                                                        <!-- /Author box small -->
+                                                    </header>
+                                                </article>
+                                            </div>
+                                            <!-- /Featured video Medium -->
+                                        </div>
 
-                            <!-- 8 - 4 -->
-                            <div class="fxs_row">
-                                <div class="fxs_col fxs_col_67">
-                                    <div id="fxs_detail_ctl00_C004_Col00">
-                                        <div>
-                                            
-                                            <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                                <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                    SF 2cols 67-33 - 67%
+                                        <div class="fxs_col fxs_col_25 fxs_col_dismissible">
+                                            <div id="fxs_detail_ctl00_C004_Col01">
+                                                <!-- Featured video Reduced -->
+                                                <div class="fxs_entryFeatured">
+                                                    <article class="fxs_entryFeatured_reduced">
+                                                        <div class="fxs_entryFeatured_img">
+                                                            <img src="https://i.ytimg.com/vi/0f70z77dPOU/mqdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                            <span class="fxs_miniLabel_video">
+                                                                <i class="fa fa-play"></i> <span>42:20</span>
+                                                            </span>
+                                                        </div>
+                                                        <header>
+                                                            <h3 class="fxs_entryHeadline">
+                                                                <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                            </h3>
+                                                            <!-- Author box small -->
+                                                            <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                                <div class="fxs_avatar_circleImage_s">
+                                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                                    </a>
+                                                                </div>
+                                                                <span class="fxs_article_author">
+                                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                        Vicky Schmelzer
+                                                                    </a>
+                                                                    <span class="fxs_author_description">
+                                                                        Research Director <a href="path/to/company" class="fxs_mutedLink">Windsor Brokers Ltd</a>
+                                                                    </span>
+                                                                </span>
+                                                            </address>
+                                                            <!-- /Author box small -->
+                                                        </header>
+                                                    </article>
                                                 </div>
-
+                                                <!-- /Featured video Reduced -->
                                             </div>
 
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_33">
-                                    <div id="fxs_detail_ctl00_C004_Col01">
-
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 2cols 67-33 - 33%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr class="fxs_divider_third">
-
-                            <!-- 9 - 3 -->
-                            <div class="fxs_row">
-                                <div class="fxs_col fxs_col_75">
-                                    <div id="fxs_detail_ctl04_ctl03_C024_Col00">
-                                        <div>
-                                            <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                                <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                    SF 2cols 75-25 - 75%
+                                            <div id="fxs_detail_ctl00_C004_Col01">
+                                                <!-- Featured video Reduced -->
+                                                <div class="fxs_entryFeatured">
+                                                    <article class="fxs_entryFeatured_reduced">
+                                                        <div class="fxs_entryFeatured_img">
+                                                            <img src="https://i.ytimg.com/vi/0f70z77dPOU/mqdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                            <span class="fxs_miniLabel_video">
+                                                                <i class="fa fa-play"></i> <span>42:20</span>
+                                                            </span>
+                                                        </div>
+                                                        <header>
+                                                            <h3 class="fxs_entryHeadline">
+                                                                <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                            </h3>
+                                                            <!-- Author box small -->
+                                                            <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                                <div class="fxs_avatar_circleImage_s">
+                                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                                    </a>
+                                                                </div>
+                                                                <span class="fxs_article_author">
+                                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                        Vicky Schmelzer
+                                                                    </a>
+                                                                    <span class="fxs_author_description">
+                                                                        Research Director <a href="path/to/company" class="fxs_mutedLink">Windsor Brokers Ltd</a>
+                                                                    </span>
+                                                                </span>
+                                                                <script type="application/ld+json">
+                                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                                </script>
+                                                            </address>
+                                                            <!-- /Author box small -->
+                                                        </header>
+                                                    </article>
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="fxs_col fxs_col_25 fxs_col_dismissible">
-                                    <div id="fxs_detail_ctl04_ctl03_C024_Col01">
-
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 2cols 75-25 - 25%
+                                                <!-- /Featured video Reduced -->
                                             </div>
 
                                         </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="fxs_flex_col fxs_flex_ad_col">
+
+                                    <div class="fxs_content_adContainer stickem">
+
+                                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto;"></iframe>
 
                                     </div>
+
                                 </div>
+
                             </div>
-
-                            <hr class="fxs_divider_third">
-
-                            <!-- 6 - 6 -->
-                            <div class="fxs_row">
-                                <div class="fxs_col fxs_col_50">
-                                    <div id="fxs_detail_ctl05_C030_Col00">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 2cols 50-50 - 50%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_50">
-                                    <div id="fxs_detail_ctl05_C030_Col00">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 2cols 50-50 - 50%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- /Sticky ad outside -->
 
                             <hr class="fxs_divider_third">
 
                             <!-- 3 - 3 - 3 -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_33">
-                                    <div id="fxs_detail_ctl07_C037_Col00">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 3cols - 33%
-                                            </div>
-
+                                    <div id="fxs_detail_ctl00_C004_Col01">
+                                        <!-- Featured video Reduced -->
+                                        <div class="fxs_entryFeatured">
+                                            <article class="fxs_entryFeatured_reduced">
+                                                <div class="fxs_entryFeatured_img">
+                                                    <img src="https://i.ytimg.com/vi/0f70z77dPOU/mqdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                    <span class="fxs_miniLabel_video">
+                                                        <i class="fa fa-play"></i> <span>42:20</span>
+                                                    </span>
+                                                </div>
+                                                <header>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                    </h3>
+                                                    <!-- Author box small -->
+                                                    <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                        <div class="fxs_avatar_circleImage_s">
+                                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                            </a>
+                                                        </div>
+                                                        <span class="fxs_article_author">
+                                                            <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                Vicky Schmelzer
+                                                            </a>
+                                                            <span class="fxs_author_description">
+                                                                Research Director <a href="path/to/company" class="fxs_mutedLink">Windsor Brokers Ltd</a>
+                                                            </span>
+                                                        </span>
+                                                    </address>
+                                                    <!-- /Author box small -->
+                                                </header>
+                                            </article>
                                         </div>
-
+                                        <!-- /Featured video Reduced -->
                                     </div>
                                 </div>
                                 <div class="fxs_col fxs_col_33">
-                                    <div id="fxs_detail_ctl07_C037_Col01">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 3cols - 33%
-                                            </div>
-
+                                    <div id="fxs_detail_ctl00_C004_Col01">
+                                        <!-- Featured video Reduced -->
+                                        <div class="fxs_entryFeatured">
+                                            <article class="fxs_entryFeatured_reduced">
+                                                <div class="fxs_entryFeatured_img">
+                                                    <img src="https://i.ytimg.com/vi/0f70z77dPOU/mqdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                    <span class="fxs_miniLabel_video">
+                                                        <i class="fa fa-play"></i> <span>42:20</span>
+                                                    </span>
+                                                </div>
+                                                <header>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                    </h3>
+                                                    <!-- Author box small -->
+                                                    <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                        <div class="fxs_avatar_circleImage_s">
+                                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                            </a>
+                                                        </div>
+                                                        <span class="fxs_article_author">
+                                                            <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                Vicky Schmelzer
+                                                            </a>
+                                                            <span class="fxs_author_description">
+                                                                Research Director <a href="path/to/company" class="fxs_mutedLink">Windsor Brokers Ltd</a>
+                                                            </span>
+                                                        </span>
+                                                        <script type="application/ld+json">
+                                                            // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                        </script>
+                                                    </address>
+                                                    <!-- /Author box small -->
+                                                </header>
+                                            </article>
                                         </div>
-
+                                        <!-- /Featured video Reduced -->
                                     </div>
                                 </div>
                                 <div class="fxs_col fxs_col_33">
-                                    <div id="fxs_detail_ctl07_C037_Col02">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 3cols - 33%
-                                            </div>
-
+                                    <div id="fxs_detail_ctl00_C004_Col01">
+                                        <!-- Featured video Reduced -->
+                                        <div class="fxs_entryFeatured">
+                                            <article class="fxs_entryFeatured_reduced">
+                                                <div class="fxs_entryFeatured_img">
+                                                    <img src="https://i.ytimg.com/vi/0f70z77dPOU/mqdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                    <span class="fxs_miniLabel_video">
+                                                        <i class="fa fa-play"></i> <span>42:20</span>
+                                                    </span>
+                                                </div>
+                                                <header>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                    </h3>
+                                                    <!-- Author box small -->
+                                                    <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                        <div class="fxs_avatar_circleImage_s">
+                                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                            </a>
+                                                        </div>
+                                                        <span class="fxs_article_author">
+                                                            <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                Vicky Schmelzer
+                                                            </a>
+                                                            <span class="fxs_author_description">
+                                                                Research Director <a href="path/to/company" class="fxs_mutedLink">Windsor Brokers Ltd</a>
+                                                            </span>
+                                                        </span>
+                                                        <script type="application/ld+json">
+                                                            // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                        </script>
+                                                    </address>
+                                                    <!-- /Author box small -->
+                                                </header>
+                                            </article>
                                         </div>
-
+                                        <!-- /Featured video Reduced -->
                                     </div>
                                 </div>
                             </div>
 
-                            <hr class="fxs_divider_third">
-
-                            <!-- 4 - 4 - 4 -->
-                            <div class="fxs_row">
-                                <div class="fxs_col fxs_col_25">
-                                    <div id="fxs_detail_ctl07_C037_Col00">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 4cols - 25%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_25">
-                                    <div id="fxs_detail_ctl07_C037_Col01">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 4cols - 25%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_25">
-                                    <div id="fxs_detail_ctl07_C037_Col02">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 4cols - 25%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_25">
-                                    <div id="fxs_detail_ctl07_C037_Col02">
-                                        
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                SF 4cols - 25%
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr class="fxs_divider_third">
-
-                            <!--  Flex col Ad outside -->
-                            <div class="fxs_row fxs_tableRow">
-
-                                <div class="fxs_flex_col">
-                                    
-                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                            Flex col Ad outside - Content col
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <!-- Ad col outside -->
-                                <div class="fxs_flex_col fxs_flex_ad_col">
-                                    
-                                    <!-- Content Ad container -->
-                                    <div class="fxs_content_adContainer">
-
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                Flex col Ad outside - Ad col
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <!-- Content Ad container -->
-
-                                </div>
-                                <!-- /Ad col outside -->
-
-                            </div>
-                            <!--  /Flex col Ad outside -->
-
-                            <hr class="fxs_divider_third">
+                            <hr class="fxs_divider_wide">
 
                             <!--  Flex col Ad inside -->
-                            <div class="fxs_row fxs_tableRow">
+                            <div class="fxs_row stickem-container"><!-- For dev! -->
                                 
                                 <!-- Ad col inside -->
                                 <div class="fxs_flex_col fxs_flex_ad_col">
                                     
-                                    <!-- Content Ad container -->
-                                    <div class="fxs_content_adContainer">
+                                    <div class="fxs_content_adContainer stickem">
 
-                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
-
-                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                                Flex col Ad inside - Ad col
-                                            </div>
-
-                                        </div>
+                                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto;"></iframe>
 
                                     </div>
-                                    <!-- Content Ad container -->
 
                                 </div>
                                 <!-- /Ad col inside -->
 
                                 <div class="fxs_flex_col">
-                                    
-                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
 
-                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
-                                            Flex col Ad inside - Content col
+                                    <h2 class="fxs_subsectionTitle">
+                                        Upcoming live events
+                                    </h2>
+
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_50">
+                                            
+                                            <!-- Featured live event Medium -->
+                                            <div class="fxs_entryFeatured">
+                                                <article class="fxs_entryFeatured_med">
+                                                    <header>
+                                                        <h3 class="fxs_entryHeadline">
+                                                            <a href="/">Price Patterns Connections in Different Time frames</a>
+                                                        </h3>
+                                                        <!-- Author box small -->
+                                                        <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                            <div class="fxs_avatar_circleImage_s">
+                                                                <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                                </a>
+                                                            </div>
+                                                            <span class="fxs_article_author">
+                                                                <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                    Giuseppe Basile, SIAT/CSTA
+                                                                </a>
+                                                                <span class="fxs_author_description">
+                                                                    Founder, Trader, Technical Analyst and Mentor <a href="path/to/company" class="fxs_mutedLink">FibStalker Trading</a>
+                                                                </span>
+                                                            </span>
+                                                            <script type="application/ld+json">
+                                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                            </script>
+                                                        </address>
+                                                        <!-- /Author box small -->
+                                                    </header>
+
+                                                    <footer class="fxs_dateIndicator_divider fxs_marginHalf_bottom">
+                                                        <time class="fxs_fLeft" datetime="2016-02-14 09:34"><strong>Feb 02</strong> | 9:34 UTC</time>
+                                                        <!-- May or may not be premium!!!!! -->
+                                                        <span class="fxs_label fxs_label_featured fxs_fRight">Premium</span>
+                                                        <!-- /May or may not be premium!!!!! -->
+                                                    </footer>
+
+                                                    <div class="fxs_entryExcerpt">
+                                                        <p>
+                                                            This is part III of the series related to setups and entries in Forex and Stocks using continuations. However the information can also be used independently.
+                                                        </p>
+                                                    </div>
+                                                </article>
+
+                                                <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+
+                                            </div>
+                                            <!-- Featured live event Medium -->
+
+                                        </div>
+
+                                        <div class="fxs_col fxs_col_50">
+                                            
+                                            <!-- Featured live event Medium -->
+                                            <div class="fxs_entryFeatured">
+                                                <article class="fxs_entryFeatured_med">
+                                                    <header>
+                                                        <h3 class="fxs_entryHeadline">
+                                                            <a href="/">Price Patterns Connections in Different Time frames</a>
+                                                        </h3>
+                                                        <!-- Author box small -->
+                                                        <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                            <div class="fxs_avatar_circleImage_s">
+                                                                <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                                </a>
+                                                            </div>
+                                                            <span class="fxs_article_author">
+                                                                <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                                    Giuseppe Basile, SIAT/CSTA
+                                                                </a>
+                                                                <span class="fxs_author_description">
+                                                                    Founder, Trader, Technical Analyst and Mentor <a href="path/to/company" class="fxs_mutedLink">FibStalker Trading</a>
+                                                                </span>
+                                                            </span>
+                                                            <script type="application/ld+json">
+                                                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                            </script>
+                                                        </address>
+                                                        <!-- /Author box small -->
+                                                    </header>
+
+                                                    <footer class="fxs_dateIndicator_divider fxs_marginHalf_bottom">
+                                                        <time class="fxs_fLeft" datetime="2016-02-14 09:34"><strong>Feb 02</strong> | 9:34 UTC</time>
+                                                    </footer>
+
+                                                    <div class="fxs_entryExcerpt">
+                                                        <p>
+                                                            This is part III of the series related to setups and entries in Forex and Stocks using continuations. However the information can also be used independently.
+                                                        </p>
+                                                    </div>
+                                                </article>
+
+                                                <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                                
+                                            </div>
+                                            <!-- Featured live event Medium -->
+
+                                        </div>
+
+                                    </div>
+                                    
+                                    <div class="fxs_row">
+                            
+                                        <div class="fxs_col fxs_col_100">
+                                            
+                                            <!-- Events table -->
+                                            <div class="fxs_swipeContent_slider">
+                                                <table class="fxs_table fxs_tableHover fxs_live_events_table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th><span class="fxs_skip">Date</span></th>
+                                                            <th><span class="fxs_skip">Event title</span></th>
+                                                            <th><span class="fxs_skip">Sponsor</span></th>
+                                                            <th><span class="fxs_skip">More info</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr onclick="todo">
+                                                            <td class="fxs_event_date">
+                                                                <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                                <span class="fxs_label fxs_label_featured">Premium</span>
+                                                            </td>
+                                                            <td class="fxs_event_title_author">
+                                                                <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                                <span class="fxs_txt_neutral">Valeria Bednarik</span>
+                                                            </td>
+                                                            <td class="fxs_event_sponsor">
+                                                                <small>Sponsored by</small>
+                                                                <div class="fxs_squareImage_s">
+                                                                    <a href="/">
+                                                                        <img src="../../img/brokers/fx-pro.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr onclick="todo">
+                                                            <td class="fxs_event_date">
+                                                                <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                            </td>
+                                                            <td class="fxs_event_title_author">
+                                                                <a href="/" class="fxs_mutedLink">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                                <span class="fxs_txt_neutral">Giuseppe Basile, SIAT/CSTA</span>
+                                                            </td>
+                                                            <td class="fxs_event_sponsor">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td>
+                                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr onclick="todo">
+                                                            <td class="fxs_event_date">
+                                                                <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                                <span class="fxs_label fxs_label_featured">Premium</span>
+                                                            </td>
+                                                            <td class="fxs_event_title_author">
+                                                                <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                                <span class="fxs_txt_neutral">Valeria Bednarik</span>
+                                                            </td>
+                                                            <td class="fxs_event_sponsor">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td>
+                                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr onclick="todo">
+                                                            <td class="fxs_event_date">
+                                                                <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                            </td>
+                                                            <td class="fxs_event_title_author">
+                                                                <a href="/" class="fxs_mutedLink">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
+                                                                <span class="fxs_txt_neutral">Walter Peters</span>
+                                                            </td>
+                                                            <td class="fxs_event_sponsor">
+                                                                <small>Sponsored by</small>
+                                                                <div class="fxs_squareImage_s">
+                                                                    <a href="/">
+                                                                        <img src="../../img/brokers/fx-pro.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                                                    </a>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr onclick="todo">
+                                                            <td class="fxs_event_date">
+                                                                <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                            </td>
+                                                            <td class="fxs_event_title_author">
+                                                                <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                                <span class="fxs_txt_neutral">Valeria Bednarik</span>
+                                                            </td>
+                                                            <td class="fxs_event_sponsor">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td>
+                                                                <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td class="fxs_widget_footer" colspan="4">
+                                                                <a href="live-video-events-table-modal.html" class="fxs_btn fxs_btn_line fxs_btn_small">All upcoming events <i class="fa fa-angle-double-right"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                            <!-- /Events table -->
+
                                         </div>
 
                                     </div>
@@ -993,7 +1197,7 @@
             $('.fxs_btn_content_toggle_collapse').addClass('collapsed');
 
             // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-            $('#clock').countdown('2015-12-01 12:44:00')
+            $('#clock').countdown('2015-12-02 16:14:00')
             .on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                 + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
@@ -1010,6 +1214,15 @@
                 // .parent().addClass('disabled');
                 .closest('.fxs_live_event_module').addClass( "on_air" );
             });
+
+
+            ////////////////////////////////
+            //// Stick em /////////////////
+            $('.fxs_detail').stickem({
+               containerScroll: $("#fxs_content"),
+               offset: 65,
+            });
+
         </script>
         
     </body>
