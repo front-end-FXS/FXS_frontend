@@ -182,6 +182,25 @@
 
         <div class="fxs_content" id="fxs_content">
 
+            <!-- >>>>Atention please!! This is the widget for dev<<<<<<<<<< -->
+            <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+            <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+
+            <!-- Global Alert --><!-- For dev -->
+
+            <div class="fxs_global_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
+                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                  <i class="fa fa-close"></i>
+                  <span class="fxs_skip">Close alert</span>
+                </button>
+                <span class="fxs_alertLabel">Hurray!</span>
+                <p class="fxs_alertText">You've just subscribed to an event, you will receive a mail 15 minutes before it begans.</p>
+            </div>
+            <!-- /Global Alert -->
+
+            <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+            <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
             <!-- The content rail -->
             <div class="fxs_contentView">
 
@@ -220,17 +239,17 @@
                         <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
                         <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
 
-                        <!-- CTA Free-Free event -->
+                        <!-- CTA user subscribed to event -->
                         <section class="fxs_live_event_module">
 
                             <!-- Background video container -->
                             <div class="fxs_background_video">
-                                <video class="fxs_onAir_item" width="100%" autoplay loop muted>
+                                <video class="fxs_placeholder_video fxs_onAir_item" width="100%" autoplay loop muted>
                                   <source src="../../video/Live1.mp4" type="video/mp4">
                                 </video>
                             </div>
                             <!-- Background video container -->
-
+                            
                             <footer class="fxs_live_event_module_summary">
                                 <div class="fxs_event_summary_data">
                                     <ul class="fxs_plainInlined_list">
@@ -255,6 +274,7 @@
                                         </a>
                                     </div>
                                 </div>
+
                             </footer>
 
                             <article class="fxs_live_event_cta_content">
@@ -270,7 +290,7 @@
                                     <div class="fxs_floatingMedia_textBody">
                                         <!-- Event title -->
                                         <h2  class="fxs_entryHeadline" rel="author">
-                                            <a href="live-video-event-subscription-free.html">Live Forex Strategy Session  Fundamental and Technical Analysis</a>
+                                            <a href="path-to-event-page">Live Forex Strategy Session  Fundamental and Technical Analysis</a>
                                         </h2>
                                         <!-- /Event title -->
 
@@ -289,23 +309,27 @@
                                             <div id="clock" class="fxs_countdown_clock"></div>
                                         </div>
 
-                                        <!-- NOT Live item -->
-                                        <a href="live-video-home-subscribed-example.html" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                            Subscribe now!
-                                        </a>
-                                        <!-- /NOT Live item -->
-
                                         <!-- Live item -->
                                         <a href="live-topic-page.html" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
                                             <i class="fa fa-play"></i> Enter now!
                                         </a>
                                         <!-- /Live item -->
 
-                                    </div>                                    
+                                        <!-- NOT Live item -->
+                                        <div class="fxs_not_onAir_item">
+                                            <div class="fxs_contextual_alert fxs_alert_info">
+                                                <p class="fxs_alertText">You are registered for this live event. See you there</p>
+                                            </div>
+                                            <button class="fxs_btn fxs_btn_line fxs_btn_small inverse" type="button">Cancel your registration</button>
+                                        </div>
+                                        <!-- /NOT Live item -->
+
+                                    </div>
+
                                 </div>
                             </article>
                         </section>
-                        <!-- /CTA Free-Free event -->
+                        <!-- /CTA user subscribed to event -->
 
                         <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
                         <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
@@ -328,7 +352,7 @@
                                     <article class="fxs_entryFeatured_big">
                                         <header>
                                             <h2 class="fxs_entryHeadline">
-                                                <a href="live-video-event-subscription-premium-false.html">US GDP, LAR show 567th + interview with Aleksandar Ivanovic</a>
+                                                <a href="/">US GDP, LAR show 567th + interview with Aleksandar Ivanovic</a>
                                             </h2>
                                             <!-- Author box medium -->
                                             <address class="fxs_contributorBox fxs_contributorBox_medium">
@@ -368,7 +392,7 @@
                                         </div>
                                     </article>
 
-                                    <a href="live-video-event-subscription-premium-false.html" class="fxs_btn fxs_btn_line">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                    <a href="path-to-event" class="fxs_btn fxs_btn_line">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
 
                                 </div>
                                 <!-- /Featured live event Big -->
@@ -400,7 +424,7 @@
                                     <article class="fxs_entryFeatured_med">
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="live-video-event-subscription-premium-false.html">Price Patterns Connections in Different Time frames</a>
+                                                <a href="/">Price Patterns Connections in Different Time frames</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -438,7 +462,7 @@
                                         </div>
                                     </article>
 
-                                    <a href="live-video-event-subscription-premium-false.html" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                    <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
 
                                 </div>
                                 <!-- Featured live event Medium -->
@@ -459,7 +483,7 @@
                                     <article class="fxs_entryFeatured_med">
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="live-video-event-subscription-login.html">Price Patterns Connections in Different Time frames</a>
+                                                <a href="/">Price Patterns Connections in Different Time frames</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -494,7 +518,7 @@
                                         </div>
                                     </article>
 
-                                    <a href="live-video-event-subscription-login.html" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                    <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
                                     
                                 </div>
                                 <!-- Featured live event Medium -->
@@ -520,7 +544,7 @@
                                     <article class="fxs_entryFeatured_reduced">
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="live-video-event-subscription-free.html">Price Patterns Connections in Different Time frames</a>
+                                                <a href="/">Price Patterns Connections in Different Time frames</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -549,7 +573,7 @@
                                         </footer>
                                     </article>
 
-                                    <a href="live-video-event-subscription-free.html" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                    <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
 
                                 </div>
                                 <!-- /Featured live event Reduced -->
@@ -570,7 +594,7 @@
                                     <article class="fxs_entryFeatured_reduced">
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="live-video-event-subscription-free.html">2015 round up of all the major events that have shaped the trading year</a>
+                                                <a href="/">2015 round up of all the major events that have shaped the trading year</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -599,7 +623,7 @@
                                         </footer>
                                     </article>
 
-                                    <a href="live-video-event-subscription-free.html" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                    <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
                                     
                                 </div>
                                 <!-- /Featured live event Reduced -->
@@ -620,7 +644,7 @@
                                     <article class="fxs_entryFeatured_reduced">
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="live-video-event-subscription-free.html">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
+                                                <a href="/">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -649,7 +673,7 @@
                                         </footer>
                                     </article>
 
-                                    <a href="live-video-event-subscription-free.html" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
+                                    <a href="path-to-event" class="fxs_btn fxs_btn_line fxs_btn_small">Subscribe to event <i class="fa fa-angle-double-right"></i></a>
                                     
                                 </div>
                                 <!-- /Featured live event Reduced -->
@@ -687,13 +711,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr onClick="location.href='live-video-event-subscription-premium-false.html'">
+                                            <tr onclick="todo">
                                                 <td class="fxs_event_date">
                                                     <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
                                                     <span class="fxs_label fxs_label_featured">Premium</span>
                                                 </td>
                                                 <td class="fxs_event_title_author">
-                                                    <a href="live-video-event-subscription-premium-false.html" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                    <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
                                                     <span class="fxs_txt_neutral">Valeria Bednarik</span>
                                                 </td>
                                                 <td class="fxs_event_sponsor">
@@ -708,12 +732,12 @@
                                                     <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
                                                 </td>
                                             </tr>
-                                            <tr onClick="location.href='live-video-event-subscription-free.html'">
+                                            <tr onclick="todo">
                                                 <td class="fxs_event_date">
                                                     <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
                                                 </td>
                                                 <td class="fxs_event_title_author">
-                                                    <a href="live-video-event-subscription-free.html" class="fxs_mutedLink">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                    <a href="/" class="fxs_mutedLink">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
                                                     <span class="fxs_txt_neutral">Giuseppe Basile, SIAT/CSTA</span>
                                                 </td>
                                                 <td class="fxs_event_sponsor">
@@ -723,13 +747,13 @@
                                                     <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
                                                 </td>
                                             </tr>
-                                            <tr onClick="location.href='live-video-event-subscription-premium-false.html'">
+                                            <tr onclick="todo">
                                                 <td class="fxs_event_date">
                                                     <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
                                                     <span class="fxs_label fxs_label_featured">Premium</span>
                                                 </td>
                                                 <td class="fxs_event_title_author">
-                                                    <a href="live-video-event-subscription-premium-false.html" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                    <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
                                                     <span class="fxs_txt_neutral">Valeria Bednarik</span>
                                                 </td>
                                                 <td class="fxs_event_sponsor">
@@ -739,12 +763,12 @@
                                                     <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
                                                 </td>
                                             </tr>
-                                            <tr onClick="location.href='live-video-event-subscription-free.html'">
+                                            <tr onclick="todo">
                                                 <td class="fxs_event_date">
                                                     <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
                                                 </td>
                                                 <td class="fxs_event_title_author">
-                                                    <a href="live-video-event-subscription-free.html" class="fxs_mutedLink">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
+                                                    <a href="/" class="fxs_mutedLink">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
                                                     <span class="fxs_txt_neutral">Walter Peters</span>
                                                 </td>
                                                 <td class="fxs_event_sponsor">
@@ -759,12 +783,12 @@
                                                     <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
                                                 </td>
                                             </tr>
-                                            <tr onClick="location.href='live-video-event-subscription-free.html'">
+                                            <tr onclick="todo">
                                                 <td class="fxs_event_date">
                                                     <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
                                                 </td>
                                                 <td class="fxs_event_title_author">
-                                                    <a href="live-video-event-subscription-free.html" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                    <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
                                                     <span class="fxs_txt_neutral">Valeria Bednarik</span>
                                                 </td>
                                                 <td class="fxs_event_sponsor">
@@ -814,7 +838,7 @@
                                     <article class="fxs_entryFeatured_big">
                                         <header>
                                             <h2 class="fxs_entryHeadline">
-                                                <a href="video-detail-premium.html">FXStreet Sessions Barcelona - EUR/USD moving parts by Yohay Elam</a>
+                                                <a href="/">FXStreet Sessions Barcelona - EUR/USD moving parts by Yohay Elam</a>
                                             </h2>
                                             <!-- Author box medium -->
                                             <address class="fxs_contributorBox fxs_contributorBox_medium">
@@ -900,7 +924,7 @@
                                         </div>
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="video-detail-premium.html">US durable goods orders strong than expected in October</a>
+                                                <a href="/">US durable goods orders strong than expected in October</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -954,7 +978,7 @@
                                         </div>
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="video-detail-free.html">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -1013,7 +1037,7 @@
                                         </div>
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="video-detail-free.html">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -1067,7 +1091,7 @@
                                             
 
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="video-detail-premium.html">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                <a href="/">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
@@ -1117,7 +1141,7 @@
                                         </div>
                                         <header>
                                             <h3 class="fxs_entryHeadline">
-                                                <a href="video-detail-free.html">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
+                                                <a href="/">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
                                             </h3>
                                             <!-- Author box small -->
                                             <address class="fxs_contributorBox fxs_contributorBox_small">
