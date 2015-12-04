@@ -169,6 +169,14 @@
         <!-- Topics subnav -->
         <nav class="fxs_content_subnav">
             <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Videos</a>
+            <div class="fxs_topics_nav">
+                <span class="fxs_label">Popular topics</span>
+                <ul class="fxs_subnavInlined_list">
+                    <li><a href="#" class="fxs_mutedLink">Live room</a></li>
+                    <li><a href="#" class="fxs_mutedLink">Live coverages</a></li>
+                    <li><a href="#" class="fxs_mutedLink">Trading ideas</a></li>
+                </ul>
+            </div>
         </nav>
         <!-- /Topics subnav -->
 
@@ -1702,7 +1710,7 @@
 
     <script>
         // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-        $('#clock').countdown('2015-12-01 16:48:00')
+        $('#clock').countdown('2015-12-04 08:25:00')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
