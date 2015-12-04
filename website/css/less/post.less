@@ -6,9 +6,7 @@
   @media (min-width: @screen-m) {
     .fxs_headline_large { margin-right: @base_module_size*2; }
   }
-  @media (min-width: @screen-l) {
-    margin-bottom: 1.5rem;
-  }
+  @media (min-width: @screen-s) { margin-bottom: 1.5rem; }
 }
 
 .fxs_article_ad {
@@ -74,4 +72,8 @@
   }
 }
 
-//
+// Live video
+.fxs_video_post_container {
+  margin: -1rem 0 0;
+  @media (min-width: @screen-s) { margin-top: -1.5rem; }
+}
