@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Pivot points - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="cbp-spmenu-push fxs_modal_page">
+        <a id="" class="fxs_skip" href="#fxs_content fxs_blur">Skip to main content</a>
+        <header class="fxs_header">
+            <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
+            <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li class="active"><a href="" title="">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
+                    <li><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_overflowOptions">
+                        <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                        <ul class="fxs_dropdownList">
+                            <li class="fxs_dropdownHeader">Follow us on</li>
+                            <li>
+                                <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                            </li>
+                            <li class="fxs_divider_third">&nbsp;</li>
+                            <li class="fxs_dropdownHeader">RSS feeds</li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
+
+            <button type="button" id="showRightPush" class="fxs_show_usermenu">
+                <i class="fa fa-user"></i>
+                <span class="fxs_skip">User Settings</span>
+            </button>
+        </header>
+
+        <!-- The wrapper -->
+        <div class="fxs_wrapper">
+            
+            <!-- Sidebar left nav -->
+            <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+                <!-- Main-nav -->
+                <nav class="fxs_nav_menu" role="navigation">
+                    <ul>
+                        <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                        <li><a href="" title="">Rates & Charts</a></li>
+                        <li class="active"><a href="" title="">News</a></li>
+                        <li><a href="" title="">Analysis</a></li>
+                        <li><a href="" title="">Economic Calendar</a></li>
+                        <li><a href="" title="">Live Video</a></li>
+                        <li><a href="" title="">Education</a></li>
+                        <li><a href="" title="">Find a Broker</a></li>
+                    </ul>
+                </nav>
+                <!-- /Main-nav -->
+                <!-- trading resourses -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">Trading resources</li>
+                    <li><a href="" title="">Books</a></li>
+                    <li><a href="" title="">DVD's</a></li>
+                    <li><a href="" title="">Products</a></li>
+                </ul>
+                <!-- fsxtreet sites -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">Information</li>
+                    <li><a href="" title="">Advertise with us</a></li>
+                    <li><a href="" title="">Jobs</a></li>
+                </ul>
+                <!-- about -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">About</li>
+                    <li><a href="" title="">About fxstreet</a></li>
+                    <li><a href="" title="">Contributors</a></li>
+                </ul>
+                <!-- terms and conditions -->
+                <ul class="fxs_items_list_nav">
+                    <li><a href="" title="">Terms and conditions</a></li>
+                    <li><a href="" title="">Privacy policy</a></li>
+                    <li><a href="" title="">Contact us</a></li>
+                    <li><a href="" title="">Site map</a></li>
+                </ul>
+                <!-- /Complementary links -->
+                
+                <!-- Social Media share widget -->
+                <div class="fxs_socialLinks_nav">
+                    <ul class="fxs_shareOptions_boxed">
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                        </li>
+                        <!--
+                        -->
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                        </li>
+                        <!--
+                        -->
+                        <li class="fxs_overflowOptions">
+                            <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <!--
+                                -->
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end Social Media share widget -->
+                <!-- language widget -->
+
+                <div class="fxs_sidebar_language">
+                    <a id="fxs_lang_selected" href="#">English edition <i class="fa fa-caret-up"></i></a>
+                    <div class="fxs_lang_group">
+                        <p>Edition</p>
+                        <ul>
+                            <li>
+                                <a href="" title="">Yсский</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Español</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Deutsch</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Deutsch</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Français</a>
+                            </li>
+                        </ul>
+                        <p>Other sites</p>
+                        <ul>
+                            <li>
+                                <a href="" title="">体中文</a>
+                            </li>
+                            <li>
+                                <a href="" title="">繁體中文</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- end language widget -->
+            </div>
+            <!-- /Sidebar left -->
+
+            <nav class="fxs_content_subnav fxs_blur">
+                <a id="showLeft" class="fxs_toggleList"><i class="fa fa-chevron-left"></i> All News</a>
+            </nav>
+
+            <div class="fxs_content fxs_blur" id="fxs_content">
+
+                <!-- The content rail -->
+                <div class="fxs_contentView">
+
+                    <!-- Main Section -->
+                    <div class="fxs_detail">
+                        <!-- Empty -->
+                            &nbsp;
+                        <!-- /Empty -->
+                    </div>
+                    <!-- //Main Section -->
+
+                </div>
+                <!-- /The content rail -->
+
+            </div>
+
+            <!-- ListView -->
+            <div class="fxs_listView fxs_blur" id="cbp-spmenu-s3">
+                <div class="fxs_listview_subnav">
+                    <!-- Empty -->
+                        &nbsp;
+                    <!-- /Empty -->
+                </div>
+                <div class="fxs_listViewRail">
+                    <div class="fxs_listView_fill_layer">
+                        <!-- Empty -->
+                            &nbsp;
+                        <!-- /Empty -->
+                    </div>
+                </div>
+            </div>
+            <!-- /listView -->
+
+            <!-- Sidebar right -->
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
+
+            <!-- Timezones -->
+            <div class="fxs_pageSidebar fxs_timezone_items">
+                <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
+                <div class="fxs_nav_menu fxs_timezone_hours">
+
+                    <ol>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+                
+            </div>
+            <!-- /Timezones -->
+
+
+        </div>
+        <!-- /The wrapper -->
+
+        <!-- Modal -->
+        <div class="fxs_modal_wrap modal fade">
+            
+            <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close content">
+                <i class="fa fa-times"></i>
+                <span class="fxs_skip">Close content</span>
+            </button>
+
+            <!-- modal content -->
+            <div class="fxs_modal_content">
+
+                <div class="fxs_modal_add fxs_leaderboard">
+                    <div class="fxs_add esto_es_un_ejemplo_para_borrar">
+                        <a href="http://octaengine.com/c/?p=77&amp;b=882&amp;bt=gif" target="_blank">
+                            <img src="http://octaengine.com/a/33/en/octafx_supercharged_728x90_en.gif" width="728" height="90">
+                        </a>
+                    </div>
+                </div>
+                <!-- Main Section -->
+                <header class="fxs_sectionTitle">
+                    <div class="fxs_search_title_holder">
+                        <h1 class="fxs_sectionTitle_header">EUR/USD PIVOT POINTS</h1>
+                    </div>
+                    <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                        <div class="fxs_overflowOptions">
+                            <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <main id="fxs_it_detail" role="main">
+                    <!-- Main Setcion -->
+                    <section class="fxs_detail">
+                    
+                        <div class="fxs_widget_summary">
+
+                            <div class="fxs_widget_pivotPoints fxs_widget_big">
+                                
+                                <span class="fxs_label">Classic</span>
+
+                                <div class="fxs_widget_divider_module fxs_swipeContent_slider">
+                                    <ol class="fxs_pivotPoints_list">
+                                        <li class="fxs_resistance_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 3">R3</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 2">R2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 1">R1</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li class="fxs_pivotPoints_list_item fxs_pivot">
+                                            <span class="fxs_widget_custom_bold">
+                                                <abbr title="Pivot point">PP</abbr>
+                                            </span>
+                                            <span>1.1241</span>
+                                        </li>
+                                        <li class="fxs_support_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 1">S1</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 2">S2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 3">S3</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+
+                                </div>
+
+                                <span class="fxs_label">Camarilla</span>
+
+                                <div class="fxs_widget_divider_module fxs_swipeContent_slider">
+                                    <ol class="fxs_pivotPoints_list">
+                                        <li class="fxs_resistance_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 3">R3</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 2">R2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 1">R1</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li class="fxs_pivotPoints_list_item fxs_pivot">
+                                            <span class="fxs_widget_custom_bold">
+                                                <abbr title="Pivot point">PP</abbr>
+                                            </span>
+                                            <span>1.1241</span>
+                                        </li>
+                                        <li class="fxs_support_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 1">S1</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 2">S2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 3">S3</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+
+                                </div>
+
+                                <span class="fxs_label">Fibonacci</span>
+
+                                <div class="fxs_widget_divider_module fxs_swipeContent_slider">
+                                    <ol class="fxs_pivotPoints_list">
+                                        <li class="fxs_resistance_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 3">R3</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 2">R2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 1">R1</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li class="fxs_pivotPoints_list_item fxs_pivot">
+                                            <span class="fxs_widget_custom_bold">
+                                                <abbr title="Pivot point">PP</abbr>
+                                            </span>
+                                            <span>1.1241</span>
+                                        </li>
+                                        <li class="fxs_support_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 1">S1</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 2">S2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 3">S3</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+
+                                </div>
+
+                                <span class="fxs_label">Woodie</span>
+
+                                <div class="fxs_widget_divider_module fxs_swipeContent_slider">
+                                    <ol class="fxs_pivotPoints_list">
+                                        <li class="fxs_resistance_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 3">R3</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 2">R2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 1">R1</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li class="fxs_pivotPoints_list_item fxs_pivot">
+                                            <span class="fxs_widget_custom_bold">
+                                                <abbr title="Pivot point">PP</abbr>
+                                            </span>
+                                            <span>1.1241</span>
+                                        </li>
+                                        <li class="fxs_support_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 1">S1</abbr>
+                                                    </span>
+                                                    <span>1.1419</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 2">S2</abbr>
+                                                    </span>
+                                                    <span>1.1349</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 3">S3</abbr>
+                                                    </span>
+                                                    <span>1.1311</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+
+                                </div>
+
+                            </div>
+
+                        </div> 
+
+                        <div class="fxs_article_body">
+                            <h2 class="fxs_helperLabel_title">About this study</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.The latest data for the <a href="/">Trading Positions</a>, released by FXStreet on Friday the 3rd shows a distribution short-term Bearish among the 15 participants.
+                            </p>
+                        </div>
+
+                        <hr class="fxs_divider_wide"> 
+
+                        <aside class="fxs_relatedContent_holder">
+                            <header class="fxs_resetRow_margin fxs_marginBase_bottom">
+                                <h4 class="fxs_helperLabel_title">Related content</h4>
+                            </header>
+                            <ul class="fxs_swipeContent_slider">
+                                <li class="fxs_relatedContentSlot_x3_cols">
+                                    <div class="fxs_relatedItem">
+                                        <article>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                            </div>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October</a>
+                                            </h3>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x3_cols">
+                                    <div class="fxs_relatedItem">
+                                        <article>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
+                                            </div>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October</a>
+                                            </h3>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="fxs_relatedContentSlot_x3_cols">
+                                    <div class="fxs_relatedItem">
+                                        <article>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                            </div>
+                                            <h3 class="fxs_entryHeadline">
+                                                <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                            </h3>
+                                        </article>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>                 
+                    
+                    </section>
+                    <!-- /Main Section -->
+                </main>
+
+                <!-- Modal footer -->
+                <footer class="fxs_footer">
+                    <div class="fxs_copy_disclaimer">
+                        <div class="fxs_terms_nav">
+                            <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                        </div>
+                        <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                        <div class="fxs_disclaimer_block">
+                            <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                            <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                            <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- /Modal footer -->
+                
+            </div>
+            <!--/modal content -->
+            
+        </div>
+        <!-- /Modal -->
+
+        
+        <script src="../../../js/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../../js/bootstrap.min.js"></script>
+
+        <script src="../../../js/classie.js"></script>
+        <script src="../../../js/jquery.typeahead.min.js"></script>
+        <script src="../../../js/site.js"></script>
+
+        <script>
+            // Modal open //
+            $('.modal').modal('show');
+            $('.modal').on('hidden.bs.modal', function () {
+                parent.history.back();
+                return false;
+            });
+        </script>
+
+    </body>
+</html>

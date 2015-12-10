@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Live event: subscription page - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="cbp-spmenu-push fxs_modal_page">
+        <a id="" class="fxs_skip" href="#fxs_content fxs_blur">Skip to main content</a>
+        <header class="fxs_header">
+            <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
+            <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li><a href="" title="">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
+                    <li><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li class="active"><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_overflowOptions">
+                        <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                        <ul class="fxs_dropdownList">
+                            <li class="fxs_dropdownHeader">Follow us on</li>
+                            <li>
+                                <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                            </li>
+                            <li class="fxs_divider_third">&nbsp;</li>
+                            <li class="fxs_dropdownHeader">RSS feeds</li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
+
+            <button type="button" id="showRightPush" class="fxs_show_usermenu">
+                <i class="fa fa-user"></i>
+                <span class="fxs_skip">User Settings</span>
+            </button>
+        </header>
+
+        <!-- The wrapper -->
+        <div class="fxs_wrapper">
+            
+            <!-- Sidebar left nav -->
+            <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+                <!-- Main-nav -->
+                <nav class="fxs_nav_menu" role="navigation">
+                    <ul>
+                        <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                        <li><a href="" title="">Rates & Charts</a></li>
+                        <li><a href="" title="">News</a></li>
+                        <li><a href="" title="">Analysis</a></li>
+                        <li><a href="" title="">Economic Calendar</a></li>
+                        <li class="active"><a href="" title="">Live Video</a></li>
+                        <li><a href="" title="">Education</a></li>
+                        <li><a href="" title="">Find a Broker</a></li>
+                    </ul>
+                </nav>
+                <!-- /Main-nav -->
+                <!-- trading resourses -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">Trading resources</li>
+                    <li><a href="" title="">Books</a></li>
+                    <li><a href="" title="">DVD's</a></li>
+                    <li><a href="" title="">Products</a></li>
+                </ul>
+                <!-- fsxtreet sites -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">Information</li>
+                    <li><a href="" title="">Advertise with us</a></li>
+                    <li><a href="" title="">Jobs</a></li>
+                </ul>
+                <!-- about -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">About</li>
+                    <li><a href="" title="">About fxstreet</a></li>
+                    <li><a href="" title="">Contributors</a></li>
+                </ul>
+                <!-- terms and conditions -->
+                <ul class="fxs_items_list_nav">
+                    <li><a href="" title="">Terms and conditions</a></li>
+                    <li><a href="" title="">Privacy policy</a></li>
+                    <li><a href="" title="">Contact us</a></li>
+                    <li><a href="" title="">Site map</a></li>
+                </ul>
+                <!-- /Complementary links -->
+                
+                <!-- Social Media share widget -->
+                <div class="fxs_socialLinks_nav">
+                    <ul class="fxs_shareOptions_boxed">
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                        </li>
+                        <!--
+                        -->
+                        <li class="fxs_socialMedia_item">
+                            <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                        </li>
+                        <!--
+                        -->
+                        <li class="fxs_overflowOptions">
+                            <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                            <ul class="fxs_btnGroup_dropdownList">
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                </li>
+                                <!--
+                                -->
+                                <li class="fxs_socialMedia_item">
+                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end Social Media share widget -->
+                <!-- language widget -->
+
+                <div class="fxs_sidebar_language">
+                    <a id="fxs_lang_selected" href="#">English edition <i class="fa fa-caret-up"></i></a>
+                    <div class="fxs_lang_group">
+                        <p>Edition</p>
+                        <ul>
+                            <li>
+                                <a href="" title="">Yсский</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Español</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Deutsch</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Deutsch</a>
+                            </li>
+                            <li>
+                                <a href="" title="">Français</a>
+                            </li>
+                        </ul>
+                        <p>Other sites</p>
+                        <ul>
+                            <li>
+                                <a href="" title="">体中文</a>
+                            </li>
+                            <li>
+                                <a href="" title="">繁體中文</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- end language widget -->
+            </div>
+            <!-- /Sidebar left -->
+
+            <nav class="fxs_content_subnav fxs_blur">
+                <a id="showLeft" class="fxs_toggleList"><i class="fa fa-chevron-left"></i> All News</a>
+            </nav>
+
+            <div class="fxs_content fxs_blur" id="fxs_content">
+
+                <!-- The content rail -->
+                <div class="fxs_contentView">
+
+                    <!-- Main Section -->
+                    <div class="fxs_detail">
+                        <!-- Empty -->
+                            &nbsp;
+                        <!-- /Empty -->
+                    </div>
+                    <!-- //Main Section -->
+
+                </div>
+                <!-- /The content rail -->
+
+            </div>
+
+            <!-- ListView -->
+            <div class="fxs_listView fxs_blur" id="cbp-spmenu-s3">
+                <div class="fxs_listview_subnav">
+                    <!-- Empty -->
+                        &nbsp;
+                    <!-- /Empty -->
+                </div>
+                <div class="fxs_listViewRail">
+                    <div class="fxs_listView_fill_layer">
+                        <!-- Empty -->
+                            &nbsp;
+                        <!-- /Empty -->
+                    </div>
+                </div>
+            </div>
+            <!-- /listView -->
+
+            <!-- Sidebar right -->
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
+
+            <!-- Timezones -->
+            <div class="fxs_pageSidebar fxs_timezone_items">
+                <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
+                <div class="fxs_nav_menu fxs_timezone_hours">
+
+                    <ol>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+                
+            </div>
+            <!-- /Timezones -->
+
+
+        </div>
+        <!-- /The wrapper -->
+
+        <!-- Modal -->
+        <div class="fxs_modal_wrap modal fade">
+            
+            <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close content">
+                <i class="fa fa-times"></i>
+                <span class="fxs_skip">Close content</span>
+            </button>
+
+            <!-- modal content -->
+            <div class="fxs_modal_content">
+
+                <div class="fxs_modal_add fxs_leaderboard">
+                    <div class="fxs_add esto_es_un_ejemplo_para_borrar">
+                        <a href="http://octaengine.com/c/?p=77&amp;b=882&amp;bt=gif" target="_blank">
+                            <img src="http://octaengine.com/a/33/en/octafx_supercharged_728x90_en.gif" width="728" height="90">
+                        </a>
+                    </div>
+                </div>
+                <!-- Main Section -->
+                
+                <!-- IMPORTANT: No header widget!!! -->
+
+                <main id="fxs_it_detail" role="main">
+                    <!-- Main Setcion -->
+                    <section class="fxs_detail">
+
+                        <!-- Post goes here -->
+                        <article class="fxs_article">
+                            <!-- Post header -->
+                            <header class="fxs_article_header">
+                                <!-- No metainfo! -->
+                                <h1 class="fxs_headline_large">GBP/USD Forecast: bullish above 1.5630</h1>
+                                <!-- Author box Big -->
+                                <address class="fxs_contributorBox fxs_contributorBox_big">
+                                    <div class="fxs_avatar_circleImage_s">
+                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                            <img src="http://img.timeinc.net/time/daily/2009/0911/360_wmanny_1116.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                        </a>
+                                    </div>
+                                    <span class="fxs_article_author">
+                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                            Manny Pacquiao
+                                        </a>
+                                        <span class="fxs_author_description">
+                                            Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
+                                        </span>
+                                        <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
+                                            <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                            <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
+                                        </button>
+                                    </span>
+                                    <script type="application/ld+json">
+                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                    </script>
+                                </address>
+                                <!-- /Author box Big -->
+
+                                <!-- Social Media share widget WITH MARGIN!! -->
+                                <div class="fxs_shareContent_holder">
+                                    <span class="fxs_helperLabel_title">Share</span>
+                                     <ul class="fxs_shareOptions_boxed">
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                                        </li>
+                                        <!--
+                                        -->
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                                        </li>
+                                        <!--
+                                        -->
+                                        <li class="fxs_overflowOptions">
+                                            <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                                            <ul class="fxs_btnGroup_dropdownList">
+                                                <li class="fxs_socialMedia_item">
+                                                    <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                                </li>
+                                                <!--
+                                                -->
+                                                <li class="fxs_socialMedia_item">
+                                                    <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </header>
+
+                            <!-- >>>>Atention please!! This is the widget for dev<<<<<<<<<< -->
+                            <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+                            <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+
+                            <!-- CTA Free-Login* event -->
+                            <section class="fxs_live_event_module">
+
+                                <!-- Background video container -->
+                                <div class="fxs_background_video">
+                                    <video class="fxs_placeholder_video fxs_onAir_item" width="100%" autoplay loop muted>
+                                      <source src="../../video/Live1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <!-- Background video container -->
+
+                                <footer class="fxs_live_event_module_summary">
+                                    <div class="fxs_event_summary_data">
+                                        <ul class="fxs_plainInlined_list">
+                                            <li>
+                                                <span class="fxs_label fxs_label_error fxs_onAir_item">On air</span>
+                                            </li>
+                                            <li class="fxs_not_onAir_item">
+                                                <span class="fxs_event_time"><i class="fa fa-calendar-o"></i> <time datetime="2015-12-31 23:59:59"><strong>Dec 31</strong> | 23:59 UTC</time></span>
+                                            </li>
+                                            <li>
+                                                <span class="fxs_event_time"><i class="fa fa-clock-o"></i> <span class="fxs_hidden_xs_iBlock">Duration:</span> <time datetime="PT45M">45m</time></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="fxs_event_sponsor fxs_fRight">
+                                        <small class="fxs_hidden_xs_iBlock">Sponsored by</small>
+                                        <div class="fxs_squareImage_s">
+                                            <a href="/">
+                                                <img src="../../img/brokers/fx-pro.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </footer>
+
+                                <div class="fxs_live_event_cta_content fxs_mediaContainer">
+
+                                    <div class="fxs_timer_countdown_block fxs_absolute_center">
+                                        <div class="fxs_countdown fxs_clearfix">
+                                            <span class="fxs_helperLabel_title">Event Starts in</span>
+                                            <div id="clock" class="fxs_countdown_clock"></div>
+                                        </div>
+
+                                        <small>You need to be registered to view this content.</small>
+
+                                        <!-- NOT Live item -->
+                                        <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
+                                            Register for free
+                                        </button>
+                                        <!-- /NOT Live item -->
+
+                                        <!-- Live item -->
+                                        <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
+                                            Register to enter!
+                                        </button>
+                                        <!-- /Live item -->
+
+                                    </div>
+
+                                </div>
+                                <!-- If content sponsored -->
+                                <footer class="fxs_txt_center fxs_marginBase_bottom fxs_relativePositioning">
+                                    <small>By participating in FXStreet live events, you accept your personal details might be shared with the sponsor of the event or the speaker. They won’t be given to any other third party.</small>
+                                </footer>
+                                <!-- /If content sponsored -->
+                            </section>
+                            <!-- /CTA Free-Login* event -->
+
+                            <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+                            <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+                            <div class="fxs_article_body">
+
+                                <div class="fxs_article_ad">
+                                    <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                                </div>
+                                <!-- // -->
+
+                                <h2>Summary</h2>
+                                <p>
+                                    USDJPY bull trend extension bias into October Another nudge to a new recovery high to eye karly October, already a nudge this morning above a key upside targets at the psychological/option resistance.
+                                </p>
+
+                                <p>
+                                    <a href="/">Manny Pacquiao</a> will review the previous day close levels and calls given in his blog and present expected trading ranges in 4 majors and 2 commodity pairs.
+                                </p>
+
+                                <p>
+                                    The USD index is the major player in this market place. A solid forecast here (USD) can lead to substantial gains in the USD majors.
+                                </p>
+
+                            </div>
+
+                            <!-- Disclaimer in post! -->
+                            <!-- Don't know if it will be necessary!!!!! -->
+                            <div class="fxs_disclaimer_block">
+                                <h5>Legal disclaimer and risk disclosure</h5>
+                                <p>
+                                    Trendsetter does not warrant or guarantee the accuracy, timeliness or completeness to its service or information contained therein. Trendsetter does not give, whatsoever, warranties, expressed or implied, to the results to be obtained by using its services or information it provided. Users are trading on their own risk and Trendsetter shall not be responsnd its t limited to damages caused by negligence whether such damages were foreseen or unforeseen.
+                                </p>
+                            </div>
+                            <!-- /Disclaimer in post! -->
+
+                        </article>
+                        <!-- /Post ends here -->
+
+                        <hr class="fxs_divider_first">
+                    
+                        <!-- 1 = 100% -->
+                        <aside class="fxs_row">
+
+                            <h2 class="fxs_subsectionTitle">
+                                Upcoming live events
+                            </h2>
+
+                            <div class="fxs_col fxs_col_100">
+                                
+                                <!-- >>>>Atention please!! This is the widget for dev<<<<<<<<<< -->
+                                <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+                                <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+
+                                <!-- Events table -->
+                                <div class="fxs_swipeContent_slider">
+                                    <table class="fxs_table fxs_tableHover fxs_live_events_table">
+                                        <thead>
+                                            <tr>
+                                                <th><span class="fxs_skip">Date</span></th>
+                                                <th><span class="fxs_skip">Event title</span></th>
+                                                <th><span class="fxs_skip">Sponsor</span></th>
+                                                <th><span class="fxs_skip">More info</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr onclick="todo">
+                                                <td class="fxs_event_date">
+                                                    <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                    <span class="fxs_label fxs_label_featured">Premium</span>
+                                                </td>
+                                                <td class="fxs_event_title_author">
+                                                    <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                    <span class="fxs_txt_neutral">Valeria Bednarik</span>
+                                                </td>
+                                                <td class="fxs_event_sponsor">
+                                                    <small>Sponsored by</small>
+                                                    <div class="fxs_squareImage_s">
+                                                        <a href="/">
+                                                            <img src="../../img/brokers/fx-pro.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr onclick="todo">
+                                                <td class="fxs_event_date">
+                                                    <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                </td>
+                                                <td class="fxs_event_title_author">
+                                                    <a href="/" class="fxs_mutedLink">Vicki Schmelzer @MNIEyeOnFX: Fair EUR/USD price: 1.1050; 1.1500 possibler</a>
+                                                    <span class="fxs_txt_neutral">Giuseppe Basile, SIAT/CSTA</span>
+                                                </td>
+                                                <td class="fxs_event_sponsor">
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr onclick="todo">
+                                                <td class="fxs_event_date">
+                                                    <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                    <span class="fxs_label fxs_label_featured">Premium</span>
+                                                </td>
+                                                <td class="fxs_event_title_author">
+                                                    <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                    <span class="fxs_txt_neutral">Valeria Bednarik</span>
+                                                </td>
+                                                <td class="fxs_event_sponsor">
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr onclick="todo">
+                                                <td class="fxs_event_date">
+                                                    <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                </td>
+                                                <td class="fxs_event_title_author">
+                                                    <a href="/" class="fxs_mutedLink">Why "Sweet Spots" Appear On The Charts (And How To Trade Them)</a>
+                                                    <span class="fxs_txt_neutral">Walter Peters</span>
+                                                </td>
+                                                <td class="fxs_event_sponsor">
+                                                    <small>Sponsored by</small>
+                                                    <div class="fxs_squareImage_s">
+                                                        <a href="/">
+                                                            <img src="../../img/brokers/fx-pro.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                </td>
+                                            </tr>
+                                            <tr onclick="todo">
+                                                <td class="fxs_event_date">
+                                                    <time class="fxs_event_time" datetime="2016-02-14 09:34"><strong>Feb 02</strong>9:34 UTC</time>
+                                                </td>
+                                                <td class="fxs_event_title_author">
+                                                    <a href="/" class="fxs_mutedLink">Asian Session: Live Market Analysis</a>
+                                                    <span class="fxs_txt_neutral">Valeria Bednarik</span>
+                                                </td>
+                                                <td class="fxs_event_sponsor">
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    <a href="/" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Event details</span></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td class="fxs_widget_footer" colspan="4">
+                                                    <a href="live-video-events-table-modal.html" class="fxs_btn fxs_btn_line fxs_btn_small">All upcoming events <i class="fa fa-angle-double-right"></i></a>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <!-- /Events table -->
+
+                                <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+                                <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+                            </div>
+                        </aside>
+                        <!-- /1 = 100% -->
+
+                        <hr class="fxs_divider_wide">
+
+                        <div class="fxs_row">
+
+                            <div class="fxs_col_100">
+
+                                <header class="fxs_marginBase_bottom">
+                                    <h4 class="fxs_helperLabel_title">Related videos</h4>
+                                </header>
+
+                                <!-- Related content x3 cols -->
+                                <aside class="fxs_relatedContent_holder">
+                                    <ul class="fxs_swipeContent_slider">
+                                        <li class="fxs_relatedContentSlot_x3_cols">
+                                            <div class="fxs_relatedItem fxs_isVideo_content"><!-- For dev -->
+                                                <article>
+                                                    <div class="fxs_entryFeatured_img">
+                                                        <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                                        <span class="fxs_miniLabel_video">
+                                                            <i class="fa fa-play"></i> <span>42:20</span>
+                                                        </span>
+                                                    </div>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="/">US durable goods orders strong than expected in October</a>
+                                                    </h3>
+                                                </article>
+                                            </div>
+                                        </li>
+                                        <li class="fxs_relatedContentSlot_x3_cols">
+                                            <div class="fxs_relatedItem fxs_isVideo_content">
+                                                <article>
+                                                    <div class="fxs_entryFeatured_img">
+                                                        <img src="https://copelandcommunications.files.wordpress.com/2012/02/tumblr_ld54q6z8dc1qe4biho1_500.jpeg?w=500" alt="Dont enter!" width="" height="">
+                                                        <span class="fxs_miniLabel_video">
+                                                            <i class="fa fa-play"></i> <span>42:20</span>
+                                                        </span>
+                                                    </div>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="/">US durable goods orders strong than expected in October</a>
+                                                    </h3>
+                                                </article>
+                                            </div>
+                                        </li>
+                                        <li class="fxs_relatedContentSlot_x3_cols">
+                                            <div class="fxs_relatedItem fxs_isVideo_content">
+                                                <article>
+                                                    <div class="fxs_entryFeatured_img">
+                                                        <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                                        <!-- May or may not be premium!!!!! -->
+                                                        <span class="fxs_label fxs_label_featured">Premium</span>
+                                                        <!-- /May or may not be premium!!!!! -->
+                                                        <span class="fxs_miniLabel_video">
+                                                            <i class="fa fa-play"></i> <span>42:20</span>
+                                                        </span>
+                                                    </div>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                                    </h3>
+                                                </article>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </aside>
+                                <!-- /Related content -->
+
+                            </div>
+
+                        </div>
+                    
+                    
+                    </section>
+                    <!-- /Main Section -->
+                </main>
+
+                <!-- Modal footer -->
+                <footer class="fxs_footer">
+                    <div class="fxs_copy_disclaimer">
+                        <div class="fxs_terms_nav">
+                            <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                        </div>
+                        <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                        <div class="fxs_disclaimer_block">
+                            <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                            <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                            <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- /Modal footer -->
+                
+            </div>
+            <!--/modal content -->
+            
+        </div>
+        <!-- /Modal -->
+
+        
+        <script src="../../js/jquery-1.11.3.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <script src="../../js/bootstrap.min.js"></script>
+
+        <script src="../../js/classie.js"></script>
+        <script src="../../js/jquery.typeahead.min.js"></script>
+
+        <!-- Countdown plugin -->
+        <script src="../../js/jquery.countdown.min.js"></script>
+
+        <script src="../../js/site.js"></script>
+
+        <script>
+            // Modal open //
+            $('.modal').modal('show');
+            $('.modal').on('hidden.bs.modal', function () { parent.history.back(); });
+
+            // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
+            $('#clock').countdown('2015-12-31 23:59:59')
+            .on('update.countdown', function(event) {
+                var $this = $(this).html(event.strftime(''
+                // Añadir un 'if (pensando warramente') cuando los meses >0 = mostrar meses | las semanas >0 = mostrar semanas
+                    // + '<span><span class="fxs_widget_custom_data_lable">%m :</span>months</span>'
+                    // + '<span><span class="fxs_widget_custom_data_lable">%w :</span>weeks</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">%H :</span>hours</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">%M :</span>min</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">%S</span>sec</span>'));
+            })
+            .on('finish.countdown', function(event) {
+                $(this).html(''
+                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>days</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>hours</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>min</span>'
+                + '<span><span class="fxs_widget_custom_data_lable">00</span>sec</span>')
+                // .parent().addClass('disabled');
+                .closest('.fxs_live_event_module').addClass( "on_air" );
+            });
+
+            // METIDO A PIÑÓN PARA EJEMPLIFICAR COMPORTAMIENTO!!!!!!! NO REPLICAR!!!
+            $('[data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO"]').on('click', function(){
+                $('.cbp-spmenu-push').addClass('cbp-spmenu-push-toleft');
+                // Y hacer focus en el campo de username
+            });
+        
+        </script>
+
+    </body>
+</html>

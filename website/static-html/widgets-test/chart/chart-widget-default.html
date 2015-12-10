@@ -212,7 +212,7 @@
                                         <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
                                     </ul>
                                    <div class="fxs_indexes_tabpanel tab-content">
-                                       <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph" style="width:100%"></div>
+                                       <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph fxs_compare_performance_chart" style="width:100%"></div>
                                    </div> 
                                </div>
                                <footer class="fxs_widget_footer">                              
@@ -260,8 +260,8 @@
                         <div class="fxs_sidebar_divider"><span>or</span></div>
 
                         <div class="fxs_social_sidebar_nav">
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
                         </div>
 
                         <div class="fxs_login_message">
@@ -305,8 +305,8 @@
                         <div class="fxs_sidebar_divider"><span>or</span></div>
 
                         <div class="fxs_social_sidebar_nav">
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
                         </div>
 
                         <div class="fxs_login_message">
@@ -325,9 +325,12 @@
 
             <!-- Timezones -->
             <div class="fxs_pageSidebar fxs_timezone_items">
-                <nav class="fxs_timezone_nav">
-                    <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
-                </nav>
+                <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
                 <div class="fxs_nav_menu fxs_timezone_hours">
 
                     <ol>
@@ -516,7 +519,7 @@
                 // grid
                 "grid.show":true,
                 // custom graph
-                "main.chartType": 'mountain',
+                "main.chartType": 'candle',
                 // colors values down
                 //"main.lineColor": "rgba(51, 132, 115, 1)",
                 //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
@@ -541,7 +544,8 @@
                 "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
                 "data.maxAdditionalBars": 1000,
                 'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
+                'zoom.dateRange': '1w',
+                'data.period':'intraday 60',
                 'dialogs.limitingElementId': 'chartDiv'
             });
 
@@ -643,6 +647,8 @@
             ]);
 
             chart.symbols.setMainSymbol(strSymbolname, strLabelname);
+            chart.symbols.addIndicator( "sma", { period:100, shift:0 } );
+            chart.symbols.addIndicator( "rsi", "14","70","30","1" );
 
             chart.resize();
 

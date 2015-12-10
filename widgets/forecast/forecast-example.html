@@ -18,9 +18,22 @@
 
     <div class="fxs_content">
         <section class="fxs_detail">
-            
+        
             <!-- Widget container -->
             <section class="fxs_widget_summary">
+
+                <!--
+                 fxs preload, this must be loaded before widget appears,
+                is important to add class 'in' to display the preload,
+                to hide the preload delete this class
+                -->
+
+                <div class="fxs_preload fxs_txt_center fxs_marginBase_top fade in">
+                    <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
+                    <span class="fxs_preload_spin_text fxs_txt_neutral">Loading content...</span>
+                </div>
+
+                <!-- / fxs preload -->
                 <div class="fxs_widget_divider_module">
                     <!-- widget price -->
                     <div class="fxs_widget_price price_down">
@@ -272,7 +285,7 @@
                                 <span class="fxs_widget_custom_bold fxs_txt_neutral">Sideways</span>
                             </td>
                             <td>
-                                <a href="#comment_1" data-toggle="tooltip" data-placement="bottom" title="Author's Comment">
+                                <a href="#comment_1" title="Author's Comment">
                                     <i class="fa fa-comment"></i>
                                     <span class="fxs_skip">Author's comment</span>
                                 </a>
@@ -311,7 +324,7 @@
                                 <span class="fxs_widget_custom_bold fxs_txt_neutral">Sideways</span>
                             </td>
                             <td>
-                                <a href="#comment_2" data-toggle="tooltip" data-placement="bottom" title="Author's Comment">
+                                <a href="#comment_2"  title="Author's Comment">
                                     <i class="fa fa-comment"></i>
                                     <span class="fxs_skip">Author's comment</span>
                                 </a>
@@ -384,7 +397,7 @@
                                 <span class="fxs_widget_custom_bold fxs_txt_neutral">Sideways</span>
                             </td>
                             <td>
-                                <a href="#comment_3" data-toggle="tooltip" data-placement="bottom" title="Author's Comment">
+                                <a href="#comment_3"  title="Author's Comment">
                                     <i class="fa fa-comment"></i>
                                     <span class="fxs_skip">Author's comment</span>
                                 </a>

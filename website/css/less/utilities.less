@@ -9,18 +9,23 @@
 .fxs_transition { .transition(all .25s ease-in); }
 .fxs_pageSidebar_transition { .transition(transform .25s ease-in); }
 
-// Animations
-.keyframes(~'slide-from-top, from {margin-top: -35px; opacity:.1;} to {margin-top: 0; opacity:1;}');
-.keyframes(~'grow-and-show, from {height:0; opacity:0;} to {height: auto; opacity:1;}');
-.keyframes(~'just-appear, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
-.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:250px; opacity:1;}');
+/////////////////
+// Animations //
+
+// Generic from animate CSS - https://daneden.github.io/animate.css/
+.keyframes(~'fadeIn, from {opacity:0; visibility: hidden; } to {opacity:1; visibility: visible}');
+.keyframes(~'fadeInDown, from {transform: translate3d(0, -100%, 0); height:0; opacity:0;} to {transform: none; height: auto; opacity:1;}');
+.keyframes(~'fadeInUp, from {transform: translate3d(0, 100%, 0); height:0; opacity:0;} to {transform: none; height: auto; opacity:1;}');
+.keyframes(~'fadeInLeft, from {transform: translate3d(-100%, 0, 0); opacity:0;} to {transform: none; opacity:1;}');
+
+// Spescific for FXS layouts
+.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}');
 
 // blur modal effect
 .fxs_blur { .blur(4px); }
 
 //////////////////////////////
 // Extendable text classes //
-
 .fxs_entryPlain_txt {
   .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
   @media (min-width: @screen-s) {
@@ -32,6 +37,26 @@
   .fxs_plain_txt_rules(@txt_defaultsize_rem; @txt_lineheight_reset);
   @media (min-width: @screen-s) { font-size: @txt_size_large; }
 }
+
+// Text sizes
+.fxs_entryPlain_txt_small {
+  .fxs_plain_txt_rules(@txt_size_small; @txt_lineheight_small);
+}
+
+.fxs_txt_xsmall {
+  font-size: @txt_size_xsmall;
+  line-height: @txt_lineheight_xsmall;
+}
+
+.fxs_txt_large {
+  font-size: @txt_size_large;
+  line-height: @txt_lineheight_reset;
+}
+
+// Text aligments
+.fxs_txt_left { text-align: left; }
+.fxs_txt_right { text-align: right; }
+.fxs_txt_center { text-align: center; }
 
 // Text contectual colors
 .fxs_txt_success {
@@ -122,7 +147,7 @@
   &:extend(.fxs_boldAntialised_style);
   color: @dark_1_clr;
   letter-spacing: -0.02rem;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.33em;
   // Headline link
   a {
     color: @dark_1_clr;
@@ -161,15 +186,22 @@
 
 .fxs_headline_from_tiny_to_small {
   &:extend(.fxs_headline);
-  @media (min-width: @screen-s) {
+  @media (min-width: @screen-l) {
     font-size: @txt_size_large;
     line-height: @txt_lineheight;
   }
 }
 
-.fxs_headline_medium {
-  &:extend(.fxs_headline);
+.fxs_headline_from_tiny_to_medium { &:extend(.fxs_headline); }
+
+.fxs_headline_medium { font-size: @txt_size_large; }
+
+.fxs_headline_from_tiny_to_medium, .fxs_headline_medium {
   @media (min-width: @screen-s) {
+    font-size: @txt_size_xxlarge;
+    line-height: @txt_lineheight_reset;
+  }
+  @media (min-width: @screen-m) {
     font-size: @txt_size_huge;
     line-height: @txt_lineheight_large;
   }
@@ -183,25 +215,41 @@
     line-height: @txt_lineheight_xlarge;
   }
 }
+.fxs_headline_hero{
+  font-size: @txt_size_xhuge;
+  line-height: @txt_lineheight_xlarge;
+  @media (min-width: @screen-s) {
+    font-size: @txt_size_hero;
+    line-height: @txt_lineheight_xxlarge;
+  }
+}
 
 ///////////////////////////////////////////
 // Margins, positions, boxes & displays //
 
 .fxs_relativePositioning { position: relative; }
 .fxs_iBlock { display: inline-block; }
+.fxs_align_middle { vertical-align: middle; }
+.fxs_dBlock { display: block; }
 .fxs_dTable { display: table; width: 100%; }
 .fxs_fLeft { float: left; }
 .fxs_fRight { float: right; }
 .fxs_marginBase_top { margin-top: 1rem; }
-.fxs_marginHalf_top { margin-top: 0.5rem; }
+.fxs_marginHalf_top { margin-top: @half_base_spacer; }
 .fxs_marginBase_right { margin-right: 1rem; }
-.fxs_marginHalf_right { margin-right: 0.5rem; }
+.fxs_marginHalf_right { margin-right: @half_base_spacer; }
 .fxs_marginBase_bottom { margin-bottom: 1rem; }
-.fxs_marginHalf_bottom { margin-bottom: 0.5rem; }
+.fxs_marginHalf_bottom { margin-bottom: @half_base_spacer; }
 .fxs_marginBase_left { margin-left: 1rem; }
 .fxs_resetRow_margin {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: @half_base_spacer;
+  padding-right: @half_base_spacer;
+}
+
+// Absolute center element
+.fxs_absolute_center {
+  top: 50%;
+  left: 50%;
 }
 
 // Clear content rows
@@ -225,6 +273,7 @@
 .fxs_divider_base {
   background-color: @light_4_clr;
   margin-bottom: 1rem;
+  @media (min-width: @screen-s) { margin-bottom: 1.5rem; }
 }
 
 // Wide content containers
@@ -238,9 +287,23 @@
   }
 }
 
+// generic content pannels
+.fxs_content_panel {
+  padding: 1rem;
+  background-color: @light_5_clr;
+  margin-bottom: @half_base_spacer;
+}
+
+// contextual detail section
+.fxs_detail{
+  &.fxs_contextual_section{
+    &:extend(.fxs_label_info);
+  }
+}
+
 // Dropdown general style
 .fxs_dropdown_generic {
-  .animation(just-appear 0.25s ease-in);
+  .animation(fadeIn 0.25s ease-in);
   display: none;
   position: absolute;
   right: 0;
@@ -269,13 +332,25 @@
   display: none;
   @media (min-width: @screen-s) { display: block; }
 }
+.fxs_hidden_xs_iBlock {
+  display: none;
+  @media (min-width: @screen-s) { display: inline-block; }
+}
 .fxs_hidden_s {
   display: none;
   @media (min-width: @screen-m) { display: block; }
 }
+.fxs_hidden_s_iBlock {
+  display: none;
+  @media (min-width: @screen-m) { display: inline-block; }
+}
 .fxs_hidden_m {
   display: none;
   @media (min-width: @screen-l) { display: block; }
+}
+.fxs_hidden_m_iBlock {
+  display: none;
+  @media (min-width: @screen-l) { display: inline-block; }
 }
 
 // visible in small, hidden in big screens
@@ -293,7 +368,10 @@
 .fxs_wideItem_pre_space {
   margin-bottom: 1rem;
   padding: 1rem;
-  @media (min-width: @screen-s) { padding: 2rem 2rem 1rem; }
+  @media (min-width: @screen-s) {
+    padding: 1.5rem 2rem 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 // Scrollable content
@@ -321,13 +399,13 @@
 
 // Swipe content in mobile
 .fxs_swipeContent_slider {
-  &:extend(.fxs_scrollableContent all);
+  &:extend(.fxs_scrollableContent all, .fxs_clearfix all);
   overflow-x: auto;
   overflow-y: hidden;
-  .calc(width, ~'100% + 0.5rem');
+  .calc(width, ~'100% + @half_base_spacer');
   padding: 0 0 1rem;
   white-space: nowrap;
-  display: inline-block;
+  display: block;
   @media (min-width: @screen-s) {
     width: 100%;
   }

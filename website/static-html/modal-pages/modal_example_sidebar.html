@@ -206,11 +206,9 @@
 
                     <!-- Main Section -->
                     <div class="fxs_detail">
-
                         <!-- Empty -->
                             &nbsp;
                         <!-- /Empty -->
-                        
                     </div>
                     <!-- //Main Section -->
 
@@ -220,11 +218,12 @@
             </div>
 
             <!-- ListView -->
-            <section class="fxs_listView fxs_blur" id="cbp-spmenu-s3">
-                <header class="fxs_listview_subnav">
-                    <h2 class="fxs_helperLabel_title">Latest updates</h2>
-
-                </header>
+            <div class="fxs_listView fxs_blur" id="cbp-spmenu-s3">
+                <div class="fxs_listview_subnav">
+                    <!-- Empty -->
+                        &nbsp;
+                    <!-- /Empty -->
+                </div>
                 <div class="fxs_listViewRail">
                     <div class="fxs_listView_fill_layer">
                         <!-- Empty -->
@@ -232,7 +231,7 @@
                         <!-- /Empty -->
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- /listView -->
 
             <!-- Sidebar right -->
@@ -268,8 +267,8 @@
                         <div class="fxs_sidebar_divider"><span>or</span></div>
 
                         <div class="fxs_social_sidebar_nav">
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
                         </div>
 
                         <div class="fxs_login_message">
@@ -313,8 +312,8 @@
                         <div class="fxs_sidebar_divider"><span>or</span></div>
 
                         <div class="fxs_social_sidebar_nav">
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
-                            <button type="submit" class="fxs_btn fxs_btn_default fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
                         </div>
 
                         <div class="fxs_login_message">
@@ -333,9 +332,12 @@
 
             <!-- Timezones -->
             <div class="fxs_pageSidebar fxs_timezone_items">
-                <nav class="fxs_timezone_nav">
-                    <a href="#" class="fxs_timezone_close" title="cancel">Cancel</a> <span class="fxs_helperLabel_title">TIMEZONE</span> <a href="#" class="fxs_timezone_done" title="done">Done</a>
-                </nav>
+                <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
                 <div class="fxs_nav_menu fxs_timezone_hours">
 
                     <ol>
