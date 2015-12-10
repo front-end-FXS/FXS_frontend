@@ -527,10 +527,98 @@
                         <!-- content col outside -->
                         <div class="fxs_flex_col">
 
+                          
+                            <h3 class="fxs_subtitle">
+                                Widet indexes default
+                            </h3>
+                            
+                            <!-- table prices indexes -->
                             <div class="fxs_widget_summary">
-                                <h3 class="fxs_subtitle">
-                                    Most traded pairs (default)
-                                </h3>
+                                <div class="fxs_widget_divider_module">
+                                    <table class="fxs_table_index fxs_table">
+                                        <thead>
+                                            <tr>
+                                                <th>&nbsp;</th>
+
+                                                <th>TREND INDEX <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></th>
+
+                                                <th>OB/OS INDEX <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></th>
+
+                                                <th>VOLATILY INDEX <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">15m</th>
+                                                <td>
+                                                    <span class="fxs_txt_danger">Strongly Bearish</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_warning">Oversold</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_neutral">Expanding</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">1h</th>
+                                                <td>
+                                                    <span class="fxs_txt_danger">Strongly Bearish</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_warning">Overbought</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_neutral">Expanding</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4h</th>
+                                                <td>
+                                                    <span class="fxs_txt_neutral">Neutral</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_neutral">Neutral</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_warning">Low</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1d</th>
+                                                <td>
+                                                    <span class="fxs_txt_success">Slightly Bullish</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_warning">Oversold</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_neutral">Expanding</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1w</th>
+                                                <td>
+                                                    <span class="fxs_txt_success">Slightly Bullish</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_neutral">Neutral</span>
+                                                </td>
+                                                <td>
+                                                    <span class="fxs_txt_warning">High</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td class="fxs_widget_footer" colspan="4">
+                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>                                       
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table> 
+                                </div>
                             </div>
 
                         </div>
@@ -548,264 +636,93 @@
                             <div id="fxs_detail_ctl07_C037_Col00">
                                 
                                 <h3 class="fxs_subtitle">
-                                    Heatmap mini
+                                    Widget indexes mini
                                 </h3>
 
                                 <div class="fxs_widget_summary">
+                                    
+                                    <div class="fxs_widget_divider_module">
+                                        <ul class="fxs_tabs_nav">
+                                            <li class="active"><a data-toggle="tab" href="#myTab1" title="My tab">15m</a></li>
+                                            <li><a data-toggle="tab" href="#myTab2" title="My tab">1h</a></li>
+                                            <li><a data-toggle="tab" href="#myTab3" title="My tab">4h</a></li>
+                                            <li><a data-toggle="tab" href="#myTab4" title="My tab">1d</a></li>
+                                            <li><a data-toggle="tab" href="#myTab5" title="My tab">4w</a></li>
+                                        </ul>
+                                        <div class="fxs_indexes_tabpanel tab-content">
+                                            <div role="tabpanel" id="myTab1" class="tab-pane fade in active">
+                                                <span class="fxs_label">Trend Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                               
+                                                <span class="fxs_index_value fxs_txt_danger">Strongly Bearish</span>
 
-                                    <div class="fxs_widget_heatmap fxs_widget_mini">
-                                        <div class="fxs_widget_divider_module">
-                                            <ul class="fxs_tabs_nav fxs_marginHalf_bottom">
-                                                <li class="active"><a data-toggle="tab" href="#myTab1-2" title="4 hours">4H</a></li>
-                                                <li><a data-toggle="tab" href="#myTab2-2" title="1 Day">1D</a></li>
-                                                <li><a data-toggle="tab" href="#myTab3-2" title="1 Week">1W</a></li>
-                                                <li><a data-toggle="tab" href="#myTab4-2" title="1 Month">1M</a></li>
-                                            </ul>
-                                            <div class="tab-content fxs_clearfix fxs_marginHalf_bottom">
-                                                <div role="tabpanel" id="myTab1-2" class="fxs_authentication_form_content tab-pane fade in active">
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_down">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <span class="fxs_label">OB/OS Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_warning">Oversold</span>
 
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_up price_up_plus">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_neutral">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_down">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div role="tabpanel" id="myTab2-2" class="fxs_authentication_form_content tab-pane fade in">
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_neutral">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_up price_up_plus">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_down">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_up">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div role="tabpanel" id="myTab3-2" class="fxs_authentication_form_content tab-pane fade in">
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_down">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_up price_up_plus">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_neutral">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_down">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div role="tabpanel" id="myTab4-2" class="fxs_authentication_form_content tab-pane fade in">
-
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_neutral">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_up price_up_plus">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_down">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="fxs_widget_column">
-                                                        <div class="fxs_widget_price fxs_widget_mini price_up">
-                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                                <a href="/">EUR/USD</a>
-                                                            </abbr>                              
-                                                            <div class="fxs_widget_price_value">
-                                                                <span class="fxs_price_change">
-                                                                    <span class="fxs_change_pips">0.0026</span>
-                                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
+                                                <span class="fxs_label">Volatility Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_neutral">Expanding</span>
                                             </div>
 
-                                            <div class="fxs_clearfix">
-                                                <small class="fxs_widget_heatmap_legend">High %</small>
-                                                <div class="fxs_widget_heatmap_gradient_linear"></div>
-                                                <small class="fxs_widget_heatmap_legend">Low %</small>
+                                            <div role="tabpanel" id="myTab2" class="tab-pane fade">
+                                                <span class="fxs_label">Trend Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                               
+                                                <span class="fxs_index_value fxs_txt_danger">Strongly Bearish</span>
+
+                                                <span class="fxs_label">OB/OS Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_warning">Oversold</span>
+
+                                                <span class="fxs_label">Volatility Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_neutral">Expanding</span>
                                             </div>
 
-                                        </div>
+                                            <div role="tabpanel" id="myTab3" class="tab-pane fade">
+                                                <span class="fxs_label">Trend Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                               
+                                                <span class="fxs_index_value fxs_txt_neutral">Neutral</span>
 
-                                        <!-- widget footer -->
-                                        <footer class="fxs_widget_footer">
-                                            <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                        </footer>
-                                        <!-- /widget footer -->
-                                    </div>
+                                                <span class="fxs_label">OB/OS Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_neutral">Neutral</span>
+
+                                                <span class="fxs_label">Volatility Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_warning">Low</span>                        
+                                            </div>
+                                            <div role="tabpanel" id="myTab4" class="tab-pane fade">
+                                                  
+                                                  <span class="fxs_label">Trend Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                               
+                                                <span class="fxs_index_value fxs_txt_success">Slightly Bullish</span>
+
+                                                <span class="fxs_label">OB/OS Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_warning">Oversold</span>
+
+                                                <span class="fxs_label">Volatility Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_neutral">Expanding</span>                       
+                                            </div>
+                                            <div role="tabpanel" id="myTab5" class="tab-pane fade">
+                                                  <span class="fxs_label">Trend Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                               
+                                                <span class="fxs_index_value fxs_txt_success">Slightly Bullish</span>
+
+                                                <span class="fxs_label">OB/OS Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_neutral">Neutral</span>
+
+                                                <span class="fxs_label">Volatility Index <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i></span>
+                                                
+                                                <span class="fxs_index_value fxs_txt_neutral">Expanding</span>                        
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                    <footer class="fxs_widget_footer">
+                                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                    </footer>
 
                                 </div>
 
