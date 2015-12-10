@@ -197,6 +197,7 @@
                     </div>
                     <!-- Main Section -->
                     <main id="fxs_it_detail" role="main">
+                        
                         <div> <!-- dinamic div for dev -->
                             <header class="fxs_sectionTitle">
                                 <h1 class="fxs_sectionTitle_header">EURO - US DOLLAR RATE</h1>
@@ -233,10 +234,10 @@
 
                         In case of flex cols:
 
-                        <div class="fxs_row fxs_tableRow">
-                            <div class="fxs_col fxs_flex_col">
+                        <div class="fxs_row">
+                            <div class="fxs_flex_col">
                             </div>
-                            <div class="fxs_col fxs_flex_col fxs_flex_ad_col">
+                            <div class="fxs_flex_col fxs_flex_ad_col">
                             </div>
                         </div>
 
@@ -258,74 +259,68 @@
 
                         -->
 
+
                         <section class="fxs_detail">
 
-                            <!-- EUR/USD WIDGET PRICE HEADER -->
-                            <div class="fxs_row">
-                                <!-- fxs_col_100 -->
-                                <div class="fxs_col fxs_col_100">
-                                    <div class="fxs_widget_price fxs_widget_price_header price_down">
-                                        <div class="fxs_asset_label_block">
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                            <span class="fxs_price_change">
-                                                <span class="fxs_change_pips">0.0026</span>
-                                                <span class="fxs_change_percent">(-0.12%)</span>
-                                            </span>
-                                        </div>
-                                        <div class="fxs_widget_price_value">
-                                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </div>
-                                    </div>
+                            <!-- Price widget header -->
+                            <div class="fxs_widget_price fxs_widget_price_header price_down">
+                                <div class="fxs_asset_label_block">
+                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                        <a href="/">EUR/USD</a>
+                                    </abbr>
+                                    <span class="fxs_price_change">
+                                        <span class="fxs_change_pips">0.0026</span>
+                                        <span class="fxs_change_percent">(-0.12%)</span>
+                                    </span>
+                                </div>
+                                <div class="fxs_widget_price_value">
+                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                    <small class="fxs_price_ohl">
+                                        <span>Open 1.1872</span>
+                                        <span>High 1.1872</span>
+                                        <span>Low 1.1810</span>
+                                    </small>
                                 </div>
                             </div>
+                            <!-- /Price widget header -->
 
                             <!-- TELETRADER CHART WITH AD -->
-                            <div class="fxs_row fxs_tableRow">
-                                <div class="fxs_col fxs_flex_col">
+                            <div class="fxs_row">
+                                <div class="fxs_flex_col">
                                     <div class="fxs_widget_summary">
                                         <div class="fxs_widget_chart">   
                                             <div class="fxs_widget_divider_module fxs_relativePositioning">
-                                                <div class="fxs_fullreport_chart">
-                                                   
-                                                    <a href="#" class="fxs_btn_icon fxs_btn_default" data-toggle="tooltip" data-placement="top" title="" data-original-title="See full chart"><i class="fa fa-expand"></i>
-                                                    <span class="fxs_skip">See full chart</span>
-                                                    </a>
-                                                    
-                                                    
+
+                                                <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph fxs_compare_performance_chart">
                                                 </div>
-                                                <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph fxs_compare_performance_chart" style="width:100%">
+
+                                                <div class="fxs_fullreport_chart">
+                                                    <a href="#" class="fxs_btn_icon fxs_btn_default" data-toggle="tooltip" data-placement="top" title="" data-original-title="See full chart"><i class="fa fa-expand"></i>
+                                                        <span class="fxs_skip">See full chart</span>
+                                                    </a>                                                    
                                                 </div>
                                             </div>                                                      
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="fxs_col fxs_flex_col fxs_flex_ad_col">
-
+                                <div class="fxs_flex_col fxs_flex_ad_col">
                                     <!-- Content Ad container -->
-                                   <iframe src="http://octaengine.com/b/162/" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
-
+                                    <iframe src="http://octaengine.com/b/162/" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
                                     <!-- Content Ad container -->
-
                                 </div>
                             </div>
+                            <!-- /TELETRADER CHART WITH AD -->
 
-                            <!-- PIVOT POINTS WIDGET -->
+
+                            <!-- OB-OS-Vol indexes & Pivot points -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_67">
-                                     <h3 class="fxs_subtitle">
-                                        Indexes <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
+                                    <h3 class="fxs_subtitle">
+                                        Indexes <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="Breve texto explicativo"></i>
                                     </h3>
                                     <div class="fxs_widget_summary">
-                                        <!-- table prices indexes -->
-
+                                        <!-- table indexes -->
                                         <table class="fxs_table_index fxs_table">
                                             <thead>
                                                 <tr>
@@ -411,6 +406,7 @@
                                         </table>
                                     </div>
                                 </div>
+
                                 <div class="fxs_col fxs_col_33">
 
                                     <h3 class="fxs_subtitle">
@@ -488,12 +484,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- /OB-OS-Vol indexes & Pivot points -->
                             
                             <hr class="fxs_divider_wide">
 
-                             <!--  AD WIDGET                                       
-                                 "This ad must change in small sizes."
-                                 Talk with design department about the functionallity with advertisments in general .
+                            <!--  AD WIDGET                                       
+                                "This ad must change in small sizes."
+                                Talk with design about the functionallity with advertisments in general .
                             -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_100">
@@ -506,17 +503,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--  /AD WIDGET -->
 
                             <hr class="fxs_divider_wide">
 
                             <!-- FORECAST WIDGET -->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_100">
-                                    <!-- Widget big -->
 
                                     <h3 class="fxs_subtitle">
-                                        EUR/USD FORECAST POLL <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
+                                        EUR/USD FORECAST POLL <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i>
                                     </h3>
+
+                                    <!-- Widget big -->
                                     <div class="fxs_widget_summary">
 
                                         <!-- Forecast widget -->
@@ -679,28 +678,35 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <hr class="fxs_divider_wide">
+                            <!-- /FORECAST WIDGET -->
 
-                            <!-- TRADING POSITIONING WIDGET -->
+                            <hr class="fxs_divider_first">
+                        
+                            <!-- TRADING POSITIONING WIDGET in sticky container -->
                             <div class="fxs_row stickem-container">
+                                
+                                <!-- Ad col inside -->
                                 <div class="fxs_flex_col fxs_flex_ad_col">
-                                    <div class="fxs_content_adContainer stickem stickit-end">
-
-                                        <!-- Content Ad container -->
-                                       <iframe src="http://octaengine.com/b/162/" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
-
-                                        <!-- Content Ad container -->
+                                    
+                                    <!-- Content Ad container -->
+                                    <div class="fxs_content_adContainer stickem">
+                                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
                                     </div>
+                                    <!-- Content Ad container -->
 
                                 </div>
+                                <!-- /Ad col inside -->
+
                                 <div class="fxs_flex_col">
+
+                                    
                                     <h3 class="fxs_subtitle">
-                                        EUR/USD TRADING POSITIONS <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
+                                        EUR/USD Trading positions <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo"></i>
                                     </h3>
+
                                     <div class="fxs_widget_summary">
                                         <!-- ctp widget -->
-                                        <div class="fxs_ctp_widget fxs_widget_default">
+                                        <div class="fxs_ctp_widget fxs_widget_big">
                                             <div class="fxs_widget_divider_module">
                                                 <div class="fxs_gauge_container">
                                                     <div class="fxs_insideChart_centered_legend">
@@ -749,23 +755,25 @@
                                         </div>
                                         <!-- /ctp widget -->
                                     </div>
+
                                     <div class="fxs_entryPlain_txt">
                                         <p>The Average <strong>Sell Price</strong> among our contributors is <strong>1.3380</strong>, with no visible cluster ahead.Traders positioning shows <strong>Average Buy Price at 1.3350
                                         </strong>, and a lot of liquidity clustered around 1.3320.)</p>
                                     </div>
+
                                 </div>
+
                             </div>
+                            <!-- /TRADING POSITIONING WIDGET in sticky container -->
 
-                        
+                            <hr class="fxs_divider_first">
 
-                            <hr class="fxs_divider_wide">
-
-                            <!-- CORRELATION CHART + AD-->
+                            <!-- CORRELATION CHART-->
                             <div class="fxs_row">
                                 <div class="fxs_col fxs_col_100">
                                     <!-- Widget correlation chart -->
                                     <h3 class="fxs_subtitle">
-                                        EUR/USD CORRELATION CHART <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip656902"></i>
+                                        EUR/USD Correlation chart <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip656902"></i>
                                     </h3>
                                     <div class="fxs_widget_summary">
                                         <div class="fxs_widget_correlation fxs_widget_default">
@@ -788,171 +796,175 @@
                                     
                                 </div>
                             </div>
+                            <!-- /CORRELATION CHART-->
 
-                            <hr class="fxs_divider_wide">
+                            <hr class="fxs_divider_first">
                             
                             <!-- BULLISH PERCENTAGE + COT POSITIONING WIDGET  -->
                             <div class="fxs_row">
-                                    <div class="fxs_col fxs_col_33">
-                                        <h3 class="fxs_subtitle">
-                                            BULLISH PERCENTAGE <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip656902"></i>
-                                        </h3>
-                                        <div class="fxs_widget_summary">
-                                            <div class="fxs_widget_bullishPercentage fxs_widget_mini">
+                                <div class="fxs_col fxs_col_33">
+                                    <h3 class="fxs_subtitle">
+                                        Bullish percentage index <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip656902"></i>
+                                    </h3>
+                                    <div class="fxs_widget_summary">
+                                        <div class="fxs_widget_bullishPercentage fxs_widget_mini">
+                                            
+                                            <div class="fxs_widget_divider_module">
                                                 
-                                                <div class="fxs_widget_divider_module">
-                                                    
-                                                    <ul class="fxs_list_table fxs_list_table_item_split_widget">
-                                                        <li class="fxs_list_table_item">
-                                                            
-                                                            <div class="fxs_dTable">
-                                                                <span class="fxs_label">Euro</span>
-                                                            </div>
-
-                                                            <div class="fxs_dTable fxs_index_up">
-                                                                <div class="fxs_widget_cell_col">
-                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
-                                                                    <small class="fxs_index_date">
-                                                                        <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                                    </small>
-                                                                </div>
-                                                                <span class="fxs_widget_cell_col fxs_index_icon"></span>
-                                                                <div class="fxs_widget_cell_col">
-                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
-                                                                    <small class="fxs_index_date">
-                                                                        <time datetime="2015-03-21T00:00">Last</time>
-                                                                    </small>
-                                                                </div>
-                                                            </div>
-
-                                                        </li>
-
-                                                        <li class="fxs_list_table_item">
-                                                            
-                                                            <div class="fxs_dTable">
-                                                                <span class="fxs_label">US Dollar</span>
-                                                            </div>
-
-                                                            <div class="fxs_dTable fxs_index_down">
-                                                                <div class="fxs_widget_cell_col">
-                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
-                                                                    <small class="fxs_index_date">
-                                                                        <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                                    </small>
-                                                                </div>
-                                                                <span class="fxs_widget_cell_col fxs_index_icon"></span>
-                                                                <div class="fxs_widget_cell_col">
-                                                                    <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
-                                                                    <small class="fxs_index_date">
-                                                                        <time datetime="2015-03-21T00:00">Last</time>
-                                                                    </small>
-                                                                </div>
-                                                            </div>
-
-                                                        </li>       
-                                                    </ul>
-
-                                                </div>
-                                                <!-- widget footer -->
-                                                <footer class="fxs_widget_footer">
-                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
-                                                </footer>
-                                                <!-- /widget footer -->
-                                            </div>
-                                        </div>
-
-                                        <div class="fxs_entryPlain_txt">
-                                            <p>The <strong>EUR-Bullish Percentage</strong> Index soars above the <strong>70%</strong> level, considered <strong>overbougth</strong> territory</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="fxs_col fxs_col_67">
-
-                                        <h3 class="fxs_subtitle">
-                                            Cot net positioning <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
-                                        </h3>
-
-
-                                        <div class="fxs_widget_summary">
-
-                                            <div class="fxs_widget_cot fxs_widget_default">                     
-                                                <div class="fxs_widget_divider_module">
-                                                    
-                                                    <ul class="fxs_list_table fxs_list_table_item_split_widget">
-                                                        <li class="fxs_list_table_item">
-
-                                                            <div class="fxs_dTable">
-                                                                <span class="fxs_label">Non-Commercial</span>
-                                                            </div>
-                                                            
-                                                            <div class="fxs_widget_cot_box">                                    
-                                                                <strong class="fxs_widget_custom_data_lable">324.2k</strong>
-                                                                <small class="fxs_index_date">
-                                                                    <time datetime="2015-02-21T00:00">Feb 21</time>
-                                                                </small>
-                                                            </div>
-
-                                                            <div class="fxs_widget_cot_box fxs_widget_cot_graph">
-                                                                <div id="non_commercial_default" class="c3"></div>
-                                                           </div>
-                                                           <div class="fxs_widget_cot_box">
-                                                                <strong class="fxs_widget_custom_data_lable fxs_txt_danger">-45k</strong>
-                                                                <small class="fxs_index_date">
-                                                                    <time datetime="2015-03-21T00:00">Last</time>
-                                                                </small>
-                                                           </div>       
-                                                        </li>
+                                                <ul class="fxs_list_table fxs_list_table_item_split_widget">
+                                                    <li class="fxs_list_table_item">
                                                         
+                                                        <div class="fxs_dTable">
+                                                            <span class="fxs_label">Euro</span>
+                                                        </div>
 
-                                                        <li class="fxs_list_table_item">
-
-                                                            <div class="fxs_dTable">
-                                                                <span class="fxs_label">Commercial</span>
-                                                            </div>
-                                                            
-                                                            <div class="fxs_widget_cot_box">
-                                                                <strong class="fxs_widget_custom_data_lable">-300k</strong>
+                                                        <div class="fxs_dTable fxs_index_up">
+                                                            <div class="fxs_widget_cell_col">
+                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
                                                                 <small class="fxs_index_date">
                                                                     <time datetime="2015-02-21T00:00">Feb 21</time>
                                                                 </small>
                                                             </div>
-                                                            <div class="fxs_widget_cot_box fxs_widget_cot_graph">
-                                                                <div id="commercial_default" class="c3"></div>
-                                                           </div>
-                                                            <div class="fxs_widget_cot_box">
-                                                                <strong class="fxs_widget_custom_data_lable fxs_txt_success">50k</strong>
+                                                            <span class="fxs_widget_cell_col fxs_index_icon"></span>
+                                                            <div class="fxs_widget_cell_col">
+                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
                                                                 <small class="fxs_index_date">
                                                                     <time datetime="2015-03-21T00:00">Last</time>
                                                                 </small>
                                                             </div>
-                                                        </li>
-                                                    </ul>
+                                                        </div>
 
-                                                </div>
-                                                <footer class="fxs_widget_footer">
-                                                    <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
-                                                    <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
-                                                </footer>
+                                                    </li>
+
+                                                    <li class="fxs_list_table_item">
+                                                        
+                                                        <div class="fxs_dTable">
+                                                            <span class="fxs_label">US Dollar</span>
+                                                        </div>
+
+                                                        <div class="fxs_dTable fxs_index_down">
+                                                            <div class="fxs_widget_cell_col">
+                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold">50%</span>
+                                                                <small class="fxs_index_date">
+                                                                    <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                                </small>
+                                                            </div>
+                                                            <span class="fxs_widget_cell_col fxs_index_icon"></span>
+                                                            <div class="fxs_widget_cell_col">
+                                                                <span class="fxs_widget_custom_data_lable fxs_widget_custom_bold fxs_index_last">70%</span>
+                                                                <small class="fxs_index_date">
+                                                                    <time datetime="2015-03-21T00:00">Last</time>
+                                                                </small>
+                                                            </div>
+                                                        </div>
+
+                                                    </li>       
+                                                </ul>
+
                                             </div>
+                                            <!-- widget footer -->
+                                            <footer class="fxs_widget_footer">
+                                                <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
+                                            </footer>
+                                            <!-- /widget footer -->
+                                        </div>
+                                    </div>
 
+                                    <div class="fxs_entryPlain_txt">
+                                        <p>The <strong>EUR-Bullish Percentage</strong> Index soars above the <strong>70%</strong> level, considered <strong>overbougth</strong> territory</p>
+                                    </div>
+
+                                </div>
+                                
+                                <div class="fxs_col fxs_col_67">
+
+                                    <h3 class="fxs_subtitle">
+                                        Cot net positioning <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="breve texto explicativo" aria-describedby="tooltip383978"></i>
+                                    </h3>
+
+
+                                    <div class="fxs_widget_summary">
+
+                                        <div class="fxs_widget_cot fxs_widget_default">                     
+                                            <div class="fxs_widget_divider_module">
+                                                
+                                                <ul class="fxs_list_table fxs_list_table_item_split_widget">
+                                                    <li class="fxs_list_table_item">
+
+                                                        <div class="fxs_dTable">
+                                                            <span class="fxs_label">Non-Commercial</span>
+                                                        </div>
+                                                        
+                                                        <div class="fxs_widget_cot_box">                                    
+                                                            <strong class="fxs_widget_custom_data_lable">324.2k</strong>
+                                                            <small class="fxs_index_date">
+                                                                <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                            </small>
+                                                        </div>
+
+                                                        <div class="fxs_widget_cot_box fxs_widget_cot_graph">
+                                                            <div id="non_commercial_default" class="c3"></div>
+                                                       </div>
+                                                       <div class="fxs_widget_cot_box">
+                                                            <strong class="fxs_widget_custom_data_lable fxs_txt_danger">-45k</strong>
+                                                            <small class="fxs_index_date">
+                                                                <time datetime="2015-03-21T00:00">Last</time>
+                                                            </small>
+                                                       </div>       
+                                                    </li>
+                                                    
+
+                                                    <li class="fxs_list_table_item">
+
+                                                        <div class="fxs_dTable">
+                                                            <span class="fxs_label">Commercial</span>
+                                                        </div>
+                                                        
+                                                        <div class="fxs_widget_cot_box">
+                                                            <strong class="fxs_widget_custom_data_lable">-300k</strong>
+                                                            <small class="fxs_index_date">
+                                                                <time datetime="2015-02-21T00:00">Feb 21</time>
+                                                            </small>
+                                                        </div>
+                                                        <div class="fxs_widget_cot_box fxs_widget_cot_graph">
+                                                            <div id="commercial_default" class="c3"></div>
+                                                       </div>
+                                                        <div class="fxs_widget_cot_box">
+                                                            <strong class="fxs_widget_custom_data_lable fxs_txt_success">50k</strong>
+                                                            <small class="fxs_index_date">
+                                                                <time datetime="2015-03-21T00:00">Last</time>
+                                                            </small>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <footer class="fxs_widget_footer">
+                                                <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small">See Full Study <i class="fa fa-angle-double-right"></i></a>
+                                            </footer>
                                         </div>
 
-                                        <div class="fxs_entryPlain_txt">
-                                            <p>Net implied commercial USD long positions increased modestly over the previous week, while speculators pared their long positions</p>
-                                        </div>   
                                     </div>
+
+                                    <div class="fxs_entryPlain_txt">
+                                        <p>Net implied commercial USD long positions increased modestly over the previous week, while speculators pared their long positions</p>
+                                    </div>   
+                                </div>
                             </div>
+                            <!-- /BULLISH PERCENTAGE + COT POSITIONING WIDGET  -->
 
                             <hr class="fxs_divider_wide">
 
+                            <!-- Related content -->
                             <div class="fxs_row">
                                 <div class="fxs_col_100">
 
                                     <!-- Related content x4 cols -->
                                      <header class="fxs_marginBase_bottom">
                                         <h4 class="fxs_helperLabel_title">
-                                            related content to GBP/USD Forecast
+                                            Related content
                                         </h4>
                                     </header>
                                     <aside class="fxs_relatedContent_holder">
@@ -1002,9 +1014,10 @@
                                     <!-- /Related content -->
                                 </div>
                             </div>
-                            
-
+                            <!-- /Related content -->
+                        
                         </section>
+
                     </main>
                     <!-- //Main Section -->
 
@@ -1402,11 +1415,11 @@
             <!-- Timezones -->
             <div class="fxs_pageSidebar fxs_timezone_items">
                 <div class="fxs_timezone_nav">
-                <span class="fxs_helperLabel_title">Change timezone</span>
-                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
-                    Cancel
-                </button>
-            </div>
+                    <span class="fxs_helperLabel_title">Change timezone</span>
+                    <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                        Cancel
+                    </button>
+                </div>
                 <div class="fxs_nav_menu fxs_timezone_hours">
 
                     <ol>
@@ -1601,11 +1614,8 @@
 
         </div>
         <!-- /The wrapper -->
-        
 
         <script src="../../js/jquery-1.11.3.min.js"></script>
-        <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js">
-            </script>
         <!-- Bootstrap -->
         <script src="../../js/bootstrap.min.js"></script>
 
@@ -1613,24 +1623,29 @@
         <script src="../../js/jquery.typeahead.min.js"></script>
         <script src="../../js/jquery.stickem.js"></script>
         <script src="../../js/site.js"></script>
+
+        <script>
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            });
+
+            ////////////////////////////////
+            //// Stick em /////////////////
+            $('.fxs_detail').stickem({
+               containerScroll: $("#fxs_content"),
+               offset: 0
+            });
+        </script>
+
+        <!-- c3 javascript -->
         <script src="../../../widgets/core/js/c3.min.js"></script>
         <script src="../../../widgets/core/js/d3.min.js"></script>
 
+        <!-- Teletrader -->
+        <script src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js"></script>
+
         <script>
-
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        });
-
-        ////////////////////////////////
-        //// Stick em /////////////////
-        $('.fxs_detail').stickem({
-           containerScroll: $("#fxs_content"),
-           offset: 65
-        });
-
-
-    
+        
         // Gauge chart 3
         var gauge_chart = c3.generate({
             bindto: '#gauge_chart_3',
@@ -1949,9 +1964,6 @@
         setTimeout(function () {
             chartNew.load({
                 columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
-            });
-            chart2.load({
-                columns: [ ['data1', 0.99, 0.88, 0.4, 0.2, -0.1, -0.33, -0.55, -0.8] ]
             });
         }, 500);
 
