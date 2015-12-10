@@ -766,7 +766,7 @@
   line-height: @txt_lineheight_small;
   >tbody, >thead, >tfoot {
     >tr >td, >tr >th {
-      padding: @half_base_spacer;
+      padding: 5px;
       border-bottom: 1px solid @light_4_clr;
     }
   }
@@ -1006,7 +1006,7 @@
   &:extend(.fxs_clearfix all);
   margin-bottom: 0.5rem;
   @media(min-width:@screen-m){ margin-bottom: 1rem; }
-  .fxs_flex_col & { min-height: 265px; }
+  .fxs_flex_col:not(.fxs_flex_ad_col) & { min-height: 265px; }
 }
 
 // widget footer module
