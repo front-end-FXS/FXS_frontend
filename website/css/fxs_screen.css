@@ -1919,7 +1919,7 @@ width:calc(100% - 320px);
 .fxs_table > tbody > tr > th,
 .fxs_table > thead > tr > th,
 .fxs_table > tfoot > tr > th {
-  padding: 7.5px;
+  padding: 5px;
   border-bottom: 1px solid #ececf1;
 }
 .fxs_table > thead > tr > th {
@@ -2178,6 +2178,9 @@ width:calc(100% - 320px);
   .fxs_widget_summary {
     margin-bottom: 1rem;
   }
+}
+.fxs_flex_col:not(.fxs_flex_ad_col) .fxs_widget_summary {
+  min-height: 265px;
 }
 .fxs_widget_footer .fxs_btn,
 .fxs_widget_footer .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
@@ -2662,6 +2665,12 @@ lesshat-selector {
 }
 .fxs_txt_danger a {
   color: #aa3828;
+}
+.fxs_txt_warning {
+  color: #f0af19;
+}
+.fxs_txt_warning a {
+  color: #ca900d;
 }
 .fxs_txt_neutral {
   color: #8c8d91;
@@ -6165,10 +6174,7 @@ width:calc(100% - 210px - 2rem);
 .fxs_indexes_tabpanel .fxs_label {
   padding-left: 0;
 }
-.fxs_indexes_tabpanel .fxs_txt_danger,
-.fxs_indexes_tabpanel .fxs_txt_normal,
-.fxs_indexes_tabpanel .fxs_txt_neutral,
-.fxs_indexes_tabpanel .fxs_txt_success {
+.fxs_indexes_tabpanel .fxs_index_value {
   display: block;
   padding-bottom: 0.5rem;
 }
@@ -6187,7 +6193,7 @@ width:calc(100% - 210px - 2rem);
   display: block;
 }
 .fxs_pivotPoints_list_item {
-  padding: 0.5rem;
+  padding: 7px;
 }
 .fxs_resistance_points .fxs_widget_custom_bold {
   color: #338473;
