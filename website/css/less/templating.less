@@ -347,7 +347,10 @@
   padding: 5px 0.25rem 1rem;
   @media (min-width: @screen-s) { padding: 5px @half_base_spacer 1rem; }
   @media (min-width: @screen-l) { padding: 5px 0.75rem 1rem 1rem; }
-  @media (min-width: @screen-xl) { padding: 5px 1.75rem 1rem 2rem; }
+  @media (min-width: @screen-xl) {
+    padding: 5px 1.75rem 1rem 2rem;
+    .fxs_content_wide & { padding: 5px 8.75rem 1rem 9rem; }
+  }
   .fxs_isParent_section & { &:extend(.fxs_hidden_xs all); }
   .fxs_feedbackLoading_msg {
     &:extend(.fxs_contentRail_box);
@@ -390,14 +393,16 @@
   margin-bottom: @half_base_spacer;
   padding: 1rem;
   @media (min-width: @screen-s) { padding: 1.5rem 2rem; }
-  .fxs_modal_page .fxs_wrapper & { min-height: @content_wide_width;}
+  .fxs_modal_page .fxs_wrapper & { min-height: @content_wide_width; }
 }
 
 .fxs_content_wide {
-  .fxs_detail,
-  .fxs_leaderboard,
-  .fxs_sectionTitle,
-  .fxs_contentView .fxs_feedbackLoading_msg { max-width: @content_wide_width; }
+  @media (min-width: @screen-hd) {
+    .fxs_detail,
+    .fxs_leaderboard,
+    .fxs_sectionTitle,
+    .fxs_contentView .fxs_feedbackLoading_msg { max-width: @content_wide_width; }
+  }
 }
 
 /////////////////////////////////////////////////
