@@ -1041,13 +1041,19 @@
 .fxs_col_75 { .make-m-column(9); }
 
 // 67% //
-.fxs_col_67 { .make-s-column(8); }
+.fxs_col_67 { .make-m-column(8); }
 
 // 50% //
-.fxs_col_50 { .make-m-column(6); }
+.fxs_col_50 { .make-s-column(6); }
 
 // 33% //
-.fxs_col_33 { .make-s-column(4); }
+.fxs_col_33 {
+  &:not(.fxs_col_dismissible) { .make-s-column(4); }
+  &.fxs_col_dismissible {
+    &:extend(.fxs_hidden_s all);
+    .make-m-column(4);
+  }
+}
 
 // 25% //
 .fxs_col_25 {
