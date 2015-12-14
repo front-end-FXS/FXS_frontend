@@ -867,6 +867,36 @@
 
                     <hr class="fxs_divider_wide">
 
+                    <!-- Panels -->
+                    <h2 class="fxs_subsectionTitle">
+                        Panels
+                    </h2>
+                    <div class="fxs_clearfix">
+                        <h3 class="fxs_helperLabel_title">Basic Panel</h3>
+                    </div>
+                    <div class="fxs_content_panel">
+                        <h2 class="fxs_headline_medium">Some title here</h2>
+                        <div class="fxs_article_body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        </div>
+                    </div>
+
+                    <hr class="fxs_divider_third">
+
+                    <div class="fxs_clearfix">
+                        <h3 class="fxs_helperLabel_title">Wide Panel</h3>
+                    </div>
+                    <div class="fxs_wideContent fxs_content_panel">
+                        <h2 class="fxs_headline_medium">Some title here</h2>
+                        <div class="fxs_article_body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        </div>
+                    </div>
+
+                    <!-- /Panels -->
+
+                    <hr class="fxs_divider_wide">
+
                     <!-- Simple Buttons -->
                     <div class="fxs_clearfix">
                         <h2 class="fxs_subsectionTitle">
@@ -1071,10 +1101,22 @@
                                 </div>
 
                                 <!-- Toggle state button 1 -->
-                                <button type="button" class="fxs_btn fxs_btn_content_toggle fxs_btn_block btn" data-toggle="button" aria-pressed="false" >
+
+                                 <div class="collapse" id="collapseExample">
+                                        <div class="fxs_content_panel fxs_entryPlain_txt_small">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                                        </div>
+                                    </div>
+
+                                    <button type="button" class="fxs_btn fxs_btn_content_toggle fxs_btn_content_toggle_collapse fxs_btn_block btn" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <span class="fxs_togglebtn_txt init_txt">Show content <i class="fa fa-chevron-down"></i></span>
+                                        <span class="fxs_togglebtn_txt toggled_txt">Hide content <i class="fa fa-chevron-up"></i></span>
+                                    </button>
+
+                                <!--<button type="button" class="fxs_btn fxs_btn_content_toggle fxs_btn_block btn" data-toggle="button" aria-pressed="false" >
                                     <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Gimme' more">Show more content</span>
                                     <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Ok, shut it">Show less content</span>
-                                </button>
+                                </button>-->
                                 <!-- /Toggle state button 1 -->
 
                             </div>
@@ -6883,6 +6925,8 @@
         $(function () {
           $('[data-toggle="tooltip"]').tooltip()
         });
+
+        
 
         ////////////////////////////////
         //// Stick em /////////////////
