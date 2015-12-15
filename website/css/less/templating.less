@@ -347,10 +347,7 @@
   padding: 5px 0.25rem 1rem;
   @media (min-width: @screen-s) { padding: 5px @half_base_spacer 1rem; }
   @media (min-width: @screen-l) { padding: 5px 0.75rem 1rem 1rem; }
-  @media (min-width: @screen-xl) {
-    padding: 5px 1.75rem 1rem 2rem;
-    .fxs_content_wide & { padding: 5px 7.75rem 1rem 8rem; }
-  }
+  @media (min-width: @screen-xl) { padding: 5px 1.75rem 1rem 2rem; }
   .fxs_isParent_section & { &:extend(.fxs_hidden_xs all); }
   .fxs_feedbackLoading_msg {
     &:extend(.fxs_contentRail_box);
@@ -392,6 +389,7 @@
   background-color: @lightest_clr;
   margin-bottom: @half_base_spacer;
   padding: 1rem;
+  position: relative;
   @media (min-width: @screen-s) { padding: 1.5rem 2rem; }
   .fxs_modal_page .fxs_wrapper & { min-height: @content_wide_width; }
 }
