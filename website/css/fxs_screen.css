@@ -2446,32 +2446,31 @@ width:calc(100% - 320px);
   margin-bottom: 0;
   padding-bottom: 70px;
 }
-.fxs_modal_add.fxs_leaderboard {
-  background-color: #f3f3f8;
-  margin-bottom: 3px;
-  padding: 7.5px 0;
-}
-.fxs_modal_sm {
+.fxs_modal_content.fxs_modal_roadblock_sponsor {
   max-width: 680px;
 }
-.fxs_modal_sm .fxs_modal_sm_content {
+.fxs_modal_content.fxs_modal_roadblock_sponsor .fxs_detail {
   padding-bottom: 2rem;
-}
-.fxs_modal_sm .fxs_modal_sm_alert {
-  margin-bottom: 3px;
+  overflow: auto;
+  overflow-y: scroll;
 }
 @media (min-width: 680px) {
-  .fxs_modal_sm {
+  .fxs_modal_content.fxs_modal_roadblock_sponsor {
     max-height: calc(0%);
     position: fixed;
     top: 10%;
     left: 50%;
-    -webkit-transform: translate(-50%, -10%);
-    -moz-transform: translate(-50%, -10%);
-    -o-transform: translate(-50%, -10%);
-    -ms-transform: translate(-50%, -10%);
-    transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, -10%) !important;
+    -moz-transform: translate(-50%, -10%) !important;
+    -o-transform: translate(-50%, -10%) !important;
+    -ms-transform: translate(-50%, -10%) !important;
+    transform: translate(-50%, -10%) !important;
   }
+}
+.fxs_modal_add.fxs_leaderboard {
+  background-color: #f3f3f8;
+  margin-bottom: 3px;
+  padding: 7.5px 0;
 }
 .fxs_transition,
 a,
@@ -4706,38 +4705,6 @@ width:calc(100% - 35px - 5px);
     line-height: 35px;
   }
 }
-/*.fxs_sponsored_broker {
-  border-bottom: 6px solid @dark_4_clr;
-  position: relative;
-  &.fxs_sponsored_wrapper {
-    margin-top:-3px;
-    margin-bottom:-3px;
-    margin-left:-2rem;
-    margin-right:-2rem;
-    padding-top: @txt_defaultsize_px + 22px;
-    &::before, &::after {
-      display: block;
-      content: " ";
-      height: @base_module_size - @txt_defaultsize_px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      .background-image(repeating-linear-gradient(-45deg, @light_3_clr, @light_3_clr 5px, @light_4_clr 5px, @light_4_clr 10px));
-    }
-    &::before { top: -(@base_module_size - @txt_defaultsize_px); }
-    &::after { bottom: -(@base_module_size - @txt_defaultsize_px + 6px); }
-  }
-  &.fxs_listView_item {
-    margin-top: 1px;
-    margin-bottom: 3px;
-    padding-top: 32px;
-  }
-  .fxs_row, .fxs_broker_contact_footer{
-    margin-left:2rem;
-    margin-right:2rem;
-    padding-bottom:1rem;
-  }
-}*/
 .fxs_sponsored_broker {
   border-bottom: 6px solid #49494f;
   position: relative;

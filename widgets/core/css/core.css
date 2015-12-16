@@ -1908,32 +1908,31 @@ width:calc(100% - 320px);
   margin-bottom: 0;
   padding-bottom: 70px;
 }
-.fxs_modal_add.fxs_leaderboard {
-  background-color: #f3f3f8;
-  margin-bottom: 3px;
-  padding: 7.5px 0;
-}
-.fxs_modal_sm {
+.fxs_modal_content.fxs_modal_roadblock_sponsor {
   max-width: 680px;
 }
-.fxs_modal_sm .fxs_modal_sm_content {
+.fxs_modal_content.fxs_modal_roadblock_sponsor .fxs_detail {
   padding-bottom: 2rem;
-}
-.fxs_modal_sm .fxs_modal_sm_alert {
-  margin-bottom: 3px;
+  overflow: auto;
+  overflow-y: scroll;
 }
 @media (min-width: 680px) {
-  .fxs_modal_sm {
+  .fxs_modal_content.fxs_modal_roadblock_sponsor {
     max-height: calc(0%);
     position: fixed;
     top: 10%;
     left: 50%;
-    -webkit-transform: translate(-50%, -10%);
-    -moz-transform: translate(-50%, -10%);
-    -o-transform: translate(-50%, -10%);
-    -ms-transform: translate(-50%, -10%);
-    transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, -10%) !important;
+    -moz-transform: translate(-50%, -10%) !important;
+    -o-transform: translate(-50%, -10%) !important;
+    -ms-transform: translate(-50%, -10%) !important;
+    transform: translate(-50%, -10%) !important;
   }
+}
+.fxs_modal_add.fxs_leaderboard {
+  background-color: #f3f3f8;
+  margin-bottom: 3px;
+  padding: 7.5px 0;
 }
 .fxs_transition,
 .fxs_btn,

@@ -1286,6 +1286,23 @@
     margin-bottom: 0;
     padding-bottom: @base_module_size*2;
   }
+   // modal roadblock sponsor 
+  &.fxs_modal_roadblock_sponsor {
+    max-width:680px;
+    .fxs_detail{
+      padding-bottom:2rem;
+      overflow: auto;
+      overflow-y: scroll;
+    }
+    @media(min-width:@screen-s){ 
+      max-height: calc(100% - 100px);
+      //.calc(max-height, ~'100% - 100px');
+      position:fixed;
+      top:10%;
+      left:50%;
+      .translate(-50%, -10%)!important;
+    }
+  }
 }
 
 .fxs_modal_add.fxs_leaderboard {
@@ -1295,19 +1312,4 @@
 }
 
 // Modal sizes
-
-// modal small
-.fxs_modal_sm {
-  max-width:680px;
-  .fxs_modal_sm_content{ padding-bottom: 2rem;}
-  .fxs_modal_sm_alert{ margin-bottom:3px; }
-  @media(min-width:@screen-s){ 
-    max-height: calc(100% - 100px);
-    //.calc(max-height, ~'100% - 100px');
-    position:fixed;
-    top:10%;
-    left:50%;
-    .translate(-50%, -10%);
-  }
-}
 
