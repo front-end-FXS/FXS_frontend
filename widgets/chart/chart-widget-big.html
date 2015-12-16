@@ -22,7 +22,7 @@
                     <!-- inicio codigo html chart -->
                     <div class="fxs_widget_chart fxs_custom_box_sizing">
                        <div class="fxs_widget_divider_module">   
-                           <div id="chartDiv" class="fxs_widget_big fxs_custom_box_sizing fxs_widget_graph" style="width:100%"></div>
+                           <div id="chartDiv" class="fxs_widget_big fxs_custom_box_sizing fxs_widget_chart_graph" style="width:100%"></div>
                         </div>                                                           
                     </div> 
                     <!-- fin codigo html chart -->                            
@@ -106,15 +106,6 @@
                 'zoom.dateRange': '1m',
                 'dialogs.limitingElementId': 'chartDiv'
             };
-
-            /*
-            ojo: este fragmento de código manipula el css para que al visualizar el chart en fullscreen sobreescribe la clase 'fxs_modal_wrap' con la propiedad top:0, cuando se desactiva el fullscreen top retoma su valor por defecto.
-            */
-            chart.addEventListener('dataLoad',function(){
-             $('div.tt_fullscreen').on('click', function(){
-                $('.fxs_modal_wrap').toggleClass('fxs_custom_top');
-             });
-            });
 
             chart.setOptions(options);
 
