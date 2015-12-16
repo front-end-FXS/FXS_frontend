@@ -3014,6 +3014,8 @@ h5 a:hover,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .fxs_broker_contact_footer::before,
 .fxs_broker_contact_footer::after,
+.fxs_sponsor_container::before,
+.fxs_sponsor_container::after,
 .fxs_row::before,
 .fxs_row::after,
 .fxs_col_100::before,
@@ -3024,8 +3026,6 @@ h5 a:hover,
 .fxs_suscribeSocial::after,
 .fxs_entryFeatured_imgSide::before,
 .fxs_entryFeatured_imgSide::after,
-.fxs_sponsor_container::before,
-.fxs_sponsor_container::after,
 .fxs_live_event_module .fxs_sideImage_headline::before,
 .fxs_live_event_module .fxs_sideImage_headline::after,
 .fxs_article_body::before,
@@ -3064,12 +3064,12 @@ h5 a:hover,
 .fxs_detail::after,
 .fxs_detailInfo_page .fxs_entryPlain_txt::after,
 .fxs_broker_contact_footer::after,
+.fxs_sponsor_container::after,
 .fxs_row::after,
 .fxs_col_100::after,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::after,
 .fxs_entryFeatured_imgSide::after,
-.fxs_sponsor_container::after,
 .fxs_live_event_module .fxs_sideImage_headline::after,
 .fxs_article_body::after,
 .fxs_ctp_table .fxs_ctpTable_order a::after,
@@ -4839,6 +4839,115 @@ width:calc(100% - 35px - 5px);
   position: absolute;
   top: -5px;
 }
+.fxs_roadblock_slide {
+  -webkit-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
+  -moz-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
+  -o-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
+  animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
+  max-height: 0;
+  overflow: hidden;
+}
+@media (min-width: 1280px) {
+  .fxs_roadblock_slide {
+    margin: -0.5rem 0;
+  }
+}
+.fxs_roadblock_slide img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  min-height: inherit;
+  min-width: inherit;
+}
+.fxs_wallpaper_wrap {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .fxs_wallpaper_wrap {
+    -webkit-animation: fadeIn 1s ease-in forwards;
+    -moz-animation: fadeIn 1s ease-in forwards;
+    -o-animation: fadeIn 1s ease-in forwards;
+    animation: fadeIn 1s ease-in forwards;
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    /* saf3+, chrome1+ */
+  }
+}
+@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 0) {
+  .fxs_wallpaper_wrap {
+    right: 10px;
+  }
+}
+.fxs_wallpaper_wrap a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.fxs_wallpaper_img {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 580px;
+}
+.fxs_wallpaper_img.fxs_image_left {
+  margin-left: -1094px;
+  text-align: right;
+}
+@media (min-width: 1480px) {
+  .fxs_wallpaper_img.fxs_image_left {
+    margin-left: -1218px;
+  }
+}
+.fxs_wallpaper_img.fxs_image_right {
+  margin-left: 517px;
+  text-align: left;
+}
+@media (min-width: 1480px) {
+  .fxs_wallpaper_img.fxs_image_right {
+    margin-left: 641px;
+  }
+}
+.fxs_wallpaper_img img {
+  min-width: inherit;
+  max-width: 80.703%;
+}
+@media (min-width: 1480px) {
+  .fxs_wallpaper_img img {
+    max-width: inherit;
+  }
+}
+.fxs_sponsor_container {
+  margin: -5px -3px;
+  padding: 1rem 3px;
+}
+@media (min-width: 680px) {
+  .fxs_sponsor_container {
+    margin: -5px -0.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_sponsor_container {
+    padding: 1rem 0.5rem;
+    margin: -5px -7px -1rem -3px;
+  }
+}
+@media (min-width: 1100px) {
+  .fxs_sponsor_container {
+    padding: 5px 1.75rem 1rem 2rem;
+    margin: -5px -1.75rem -1rem -2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .fxs_sponsor_container .fxs_roadblock_slide {
+    margin: 0;
+  }
+}
 .fxs_row {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -5171,112 +5280,6 @@ max-width:calc(100% - ( 35px + 5px ));
 @media (min-width: 680px) {
   .fxs_entryFeatured_imgSide .fxs_entryExcerpt {
     display: inherit;
-  }
-}
-.fxs_sponsor_container {
-  background-image: none;
-  background-color: transparent;
-  margin: 0 -3px;
-  padding: 1rem 3px;
-}
-@media (min-width: 1024px) {
-  .fxs_sponsor_container {
-    padding: 1rem 5px;
-    margin: 0 -5px 0 0;
-  }
-}
-@media (min-width: 1100px) {
-  .fxs_sponsor_container {
-    padding: 1rem;
-    margin: 0 -1rem;
-  }
-}
-.fxs_roadblock_slide {
-  -webkit-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
-  -moz-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
-  -o-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
-  animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
-  display: none;
-  max-height: 0;
-  overflow: hidden;
-}
-.fxs_inVisualField .fxs_roadblock_slide,
-.fxs_roadblock_slide.fxs_isVisible_true {
-  display: block;
-}
-@media (min-width: 1280px) {
-  .fxs_roadblock_slide {
-    margin: -0.5rem 0;
-  }
-}
-.fxs_roadblock_slide img {
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  min-height: inherit;
-  min-width: inherit;
-}
-.fxs_wallpaper_wrap {
-  display: none;
-}
-@media (min-width: 1280px) {
-  .fxs_wallpaper_wrap {
-    -webkit-animation: fadeIn 1s ease-in forwards;
-    -moz-animation: fadeIn 1s ease-in forwards;
-    -o-animation: fadeIn 1s ease-in forwards;
-    animation: fadeIn 1s ease-in forwards;
-    display: block;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    /* saf3+, chrome1+ */
-  }
-}
-@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 0) {
-  .fxs_wallpaper_wrap {
-    right: 10px;
-  }
-}
-.fxs_wallpaper_wrap a {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.fxs_wallpaper_img {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  width: 580px;
-}
-.fxs_wallpaper_img.fxs_image_left {
-  margin-left: -1094px;
-  text-align: right;
-}
-@media (min-width: 1480px) {
-  .fxs_wallpaper_img.fxs_image_left {
-    margin-left: -1218px;
-  }
-}
-.fxs_wallpaper_img.fxs_image_right {
-  margin-left: 517px;
-  text-align: left;
-}
-@media (min-width: 1480px) {
-  .fxs_wallpaper_img.fxs_image_right {
-    margin-left: 641px;
-  }
-}
-.fxs_wallpaper_img img {
-  min-width: inherit;
-  max-width: 80.703%;
-}
-@media (min-width: 1480px) {
-  .fxs_wallpaper_img img {
-    max-width: inherit;
   }
 }
 .fxs_miniLabel_video {
