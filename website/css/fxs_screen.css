@@ -3971,6 +3971,7 @@ height:calc(100% - 45px);
 }
 .fxs_leaderboard {
   padding: 0.5rem 0;
+  position: relative;
   text-align: center;
 }
 .fxs_leaderboard img {
@@ -5223,8 +5224,18 @@ max-width:calc(100% - ( 35px + 5px ));
   -moz-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
   -o-animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
   animation: show-sponsor-from-top 0.6s ease-in 0.6s forwards;
-  overflow: hidden;
+  display: none;
   max-height: 0;
+  overflow: hidden;
+}
+.fxs_inVisualField .fxs_roadblock_slide,
+.fxs_roadblock_slide.fxs_isVisible_true {
+  display: block;
+}
+@media (min-width: 1280px) {
+  .fxs_roadblock_slide {
+    margin: -0.5rem 0;
+  }
 }
 .fxs_roadblock_slide img {
   display: block;
@@ -5232,18 +5243,6 @@ max-width:calc(100% - ( 35px + 5px ));
   margin: 0 auto;
   min-height: inherit;
   min-width: inherit;
-}
-.fxs_leaderboard_sponsor {
-  display: none;
-}
-.fxs_inVisualField .fxs_leaderboard_sponsor,
-.fxs_leaderboard_sponsor.fxs_isVisual_true {
-  display: block;
-}
-@media (min-width: 1280px) {
-  .fxs_leaderboard_sponsor {
-    padding: 0;
-  }
 }
 .fxs_wallpaper_wrap {
   display: none;
@@ -5258,10 +5257,15 @@ max-width:calc(100% - ( 35px + 5px ));
     position: fixed;
     top: 80px;
     left: 0;
-    right: 10px;
+    right: 0;
     bottom: 0;
     overflow: hidden;
-    background-color: #ED242A;
+    /* saf3+, chrome1+ */
+  }
+}
+@media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 0) {
+  .fxs_wallpaper_wrap {
+    right: 10px;
   }
 }
 .fxs_wallpaper_wrap a {
@@ -5277,16 +5281,16 @@ max-width:calc(100% - ( 35px + 5px ));
   width: 580px;
 }
 .fxs_wallpaper_img.fxs_image_left {
-  margin-left: -1091px;
+  margin-left: -1094px;
   text-align: right;
 }
 @media (min-width: 1480px) {
   .fxs_wallpaper_img.fxs_image_left {
-    margin-left: -1214px;
+    margin-left: -1218px;
   }
 }
 .fxs_wallpaper_img.fxs_image_right {
-  margin-left: 518px;
+  margin-left: 517px;
   text-align: left;
 }
 @media (min-width: 1480px) {
@@ -5296,11 +5300,11 @@ max-width:calc(100% - ( 35px + 5px ));
 }
 .fxs_wallpaper_img img {
   min-width: inherit;
-  width: 80.7%;
+  max-width: 80.703%;
 }
 @media (min-width: 1480px) {
   .fxs_wallpaper_img img {
-    width: auto;
+    max-width: inherit;
   }
 }
 .fxs_miniLabel_video {
