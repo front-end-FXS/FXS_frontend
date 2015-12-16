@@ -502,21 +502,28 @@
             
         </div>
 
-        <!-- modal roadblock form -->
+        <!-- modal roadblock sponsor image or something else -->
         <div class="fxs_modal_wrap modal fade" id="fxs_modal">
             <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close Modal">
                 <i class="fa fa-times"></i>
                 <span class="fxs_skip">Close Modal</span>
             </button>
+
+            <!-- fxs_modal_roadblock_sponsor rule to display sponsor modal -->
             <div class="fxs_modal_content fxs_modal_roadblock_sponsor">
 
                 <div class="fxs_detail">
                     
-                    <a href="link sponsor" title="sponsor name"><img src="../img/17958328625604535739.jpg"></a>
+                    <a href="link sponsor" title="sponsor name">
+                        <!-- fxs_visible_xs rule to display different sponsor image with different size -->
+                        <img class="fxs_visible_xs" src="../img/mobile-test.jpg">
+
+                        <!-- fxs_hidden_xs rule to display normal sponsor image size -->
+                        <img class="fxs_hidden_xs" src="../img/17958328625604535739.jpg">
+                    </a>
                     
                 </div>
-               
-                
+
                 <!-- /Modal body -->
             </div>
         </div>

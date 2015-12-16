@@ -1913,13 +1913,11 @@ width:calc(100% - 320px);
 }
 .fxs_modal_content.fxs_modal_roadblock_sponsor .fxs_detail {
   padding-bottom: 2rem;
-  overflow: auto;
-  overflow-y: scroll;
 }
 @media (min-width: 680px) {
   .fxs_modal_content.fxs_modal_roadblock_sponsor {
     max-height: calc(0%);
-    position: fixed;
+    position: absolute;
     top: 10%;
     left: 50%;
     -webkit-transform: translate(-50%, -10%) !important;

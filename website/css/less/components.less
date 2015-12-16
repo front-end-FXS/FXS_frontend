@@ -1291,13 +1291,11 @@
     max-width:680px;
     .fxs_detail{
       padding-bottom:2rem;
-      overflow: auto;
-      overflow-y: scroll;
     }
     @media(min-width:@screen-s){ 
       max-height: calc(100% - 100px);
       //.calc(max-height, ~'100% - 100px');
-      position:fixed;
+      position:absolute;
       top:10%;
       left:50%;
       .translate(-50%, -10%)!important;
