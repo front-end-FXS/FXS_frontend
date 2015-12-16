@@ -2452,8 +2452,7 @@ width:calc(100% - 320px);
   padding: 7.5px 0;
 }
 .fxs_modal_sm {
-  padding-top: 45px;
-  margin: 0 auto;
+  max-width: 680px;
 }
 .fxs_modal_sm .fxs_modal_sm_content {
   padding-bottom: 2rem;
@@ -2463,7 +2462,15 @@ width:calc(100% - 320px);
 }
 @media (min-width: 680px) {
   .fxs_modal_sm {
-    max-width: 680px;
+    max-height: calc(0%);
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -10%);
+    -moz-transform: translate(-50%, -10%);
+    -o-transform: translate(-50%, -10%);
+    -ms-transform: translate(-50%, -10%);
+    transform: translate(-50%, -10%);
   }
 }
 .fxs_transition,
