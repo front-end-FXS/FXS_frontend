@@ -2401,20 +2401,6 @@ lesshat-selector {
     margin-bottom: 1.5rem;
   }
 }
-.fxs_wideContent,
-.fxs_alert,
-.fxs_divider_wide {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-@media (min-width: 680px) {
-  .fxs_wideContent,
-  .fxs_alert,
-  .fxs_divider_wide {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
-}
 .fxs_content_panel {
   padding: 1rem;
   background-color: #f3f3f8;
@@ -2540,6 +2526,29 @@ lesshat-selector {
 @media (min-width: 1100px) {
   .fxs_visible_m {
     display: none;
+  }
+}
+.fxs_wideContent,
+.fxs_alert,
+.fxs_divider_wide {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+@media (min-width: 680px) {
+  .fxs_wideContent,
+  .fxs_alert,
+  .fxs_divider_wide {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_wideContent.no_wide_content,
+  .fxs_alert.no_wide_content,
+  .fxs_divider_wide.no_wide_content {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
   }
 }
 .fxs_wideItem_pre_space {
