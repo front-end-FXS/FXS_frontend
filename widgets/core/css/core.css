@@ -290,7 +290,7 @@ tbody.collapse.in {
 .fxs_plainInlined_list .fxs_btn_group {
   margin-top: -1px;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_subnavInlined_list.fxs_inlined_list_bordered > li,
   .fxs_plainInlined_list.fxs_inlined_list_bordered > li {
     border-left: 1px solid #a3a3a8;
@@ -405,23 +405,14 @@ tbody.collapse.in {
   border-left: 0;
 }
 .fxs_subscribeForm_group {
-  display: inline-block;
   margin-bottom: 1rem;
 }
-@media (min-width: 680px) {
-  .fxs_subscribeForm_group {
-    width: auto;
-  }
-}
-@media (min-width: 680px) {
-  .fxs_subscribeForm_group .fxs_textInput {
-    min-width: 250px;
-  }
-}
-@media (min-width: 1100px) {
-  .fxs_subscribeForm_group .fxs_textInput {
-    min-width: 320px;
-  }
+.fxs_subscribeForm_group .fxs_textInput {
+  -lh-property: 0;
+width:-webkit-calc(100% - 165px);
+width:-moz-calc(100% - 165px);
+width:calc(100% - 165px);
+;
 }
 .fxs_btn,
 .fxs_btn_icon {
@@ -959,7 +950,7 @@ width:calc(100% - 270px);
 ;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_global_alert {
     -lh-property: 0;
 width:-webkit-calc(100% - 320px);
@@ -1882,7 +1873,7 @@ width:calc(100% - 320px);
     top: 45px;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_modal_close {
     right: 1rem;
   }
@@ -2232,7 +2223,7 @@ lesshat-selector {
 .fxs_headline_tiny {
   margin-bottom: 0;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_headline_from_tiny_to_small,
   .fxs_relatedContentSlot_x3_cols .fxs_entryHeadline {
     font-size: 1.2rem;
@@ -2499,7 +2490,7 @@ lesshat-selector {
 .fxs_hidden_m {
   display: none;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_hidden_m {
     display: block;
   }
@@ -2507,7 +2498,7 @@ lesshat-selector {
 .fxs_hidden_m_iBlock {
   display: none;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_hidden_m_iBlock {
     display: inline-block;
   }
@@ -2523,7 +2514,7 @@ lesshat-selector {
     display: none;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_visible_m {
     display: none;
   }
@@ -2549,6 +2540,7 @@ lesshat-selector {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
+    border: 0;
   }
 }
 .fxs_wideItem_pre_space {
@@ -2568,7 +2560,7 @@ lesshat-selector {
   overflow-x: hidden;
   overflow-y: auto;
 }
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
   .fxs_scrollableContent,
   .fxs_modal_wrap,
   .fxs_swipeContent_slider {

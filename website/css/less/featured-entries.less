@@ -6,12 +6,21 @@
 
 .fxs_suscribeForm {
   &:extend(.fxs_clearfix all);
-  @media (min-width: @screen-s) { float: left; }
+  @media (min-width: @screen-s) {
+    float: left;
+    .calc(width, ~'100% - 220px'); 
+  }
 }
 
 .fxs_suscribeSocial {
   &:extend(.fxs_clearfix all);
   @media (min-width: @screen-s) { float: right; }
+}
+
+.fxs_suscribeForm, .fxs_suscribeSocial {
+  .no_wide_content & {
+    @media (min-width: @screen-s) { float: none; width: inherit; }
+  }
 }
 
 .fxs_suscribeText {
@@ -38,12 +47,12 @@
 .fxs_sexy_bannerText {
   position: absolute;
   z-index: 1;
-  width: 46%;
   top: 0;
   left: 0;
   padding: @txt_defaultsize_rem;
   background-color: fade(@dark_2_clr, 80%);
   height: 100%;
+  width: 48%;
   @media (min-width: @screen-s) { padding: 2rem; }
   .fxs_entryHeadline, .fxs_entryHeadline a, .fxs_entryPlain_txt, .fxs_helperLabel_title, .fxs_entry_metaInfo { color: @lightest_clr; }
   header, .fxs_helperLabel_title{
@@ -51,24 +60,26 @@
       @media (min-width: @screen-s) { margin-bottom: @txt_defaultsize_rem; }
   }
   .fxs_entryHeadline {
-      font-size: @txt_defaultsize_rem;
-      line-height: @txt_lineheight;
-      @media (min-width: @screen-s) {
-          font-size: @txt_size_huge;
-          line-height: @txt_lineheight_large;
-      }
+    font-size: @txt_size_large;
+    line-height: @txt_lineheight;
+    margin-bottom: 5px;
+    @media (min-width: @screen-s) {
+      font-size: @txt_size_xhuge;
+      line-height: @txt_lineheight_xlarge;
+    }
   }
-  .fxs_entryPlain_txt, .fxs_helperLabel_title {
-      display: none;
-      @media (min-width: @screen-s) { 
-          display: inherit;
-      }
+  .fxs_entryPlain_txt, .fxs_helperLabel_title { display: none; }
+  .fxs_helperLabel_title {
+    @media (min-width: @screen-l) { display: inherit; }
+  }
+  .fxs_entryPlain_txt {
+    @media (min-width: @screen-xl) { display: inherit; }
   }
 }
 
 .fxs_sexy_bannerImg {
   &:extend(.fxs_mediaContainer all);
-  max-height: 150px;
+  max-height: 160px;
   margin-bottom: 0;
   @media (min-width: @screen-s) {
     max-height: 350px;
