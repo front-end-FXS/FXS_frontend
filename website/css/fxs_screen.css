@@ -2963,7 +2963,9 @@ h5 a:hover,
 .fxs_marginHalf_right {
   margin-right: 7.5px;
 }
-.fxs_marginBase_bottom {
+.fxs_marginBase_bottom,
+.fxs_sexy_banner,
+.fxs_entryFeatured {
   margin-bottom: 1rem;
 }
 .fxs_marginHalf_bottom {
@@ -3024,6 +3026,8 @@ h5 a:hover,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::before,
 .fxs_suscribeSocial::after,
+.fxs_sexy_banner::before,
+.fxs_sexy_banner::after,
 .fxs_entryFeatured_imgSide::before,
 .fxs_entryFeatured_imgSide::after,
 .fxs_live_event_module .fxs_sideImage_headline::before,
@@ -3038,8 +3042,6 @@ h5 a:hover,
 .fxs_divider_wide::after,
 .fxs_suscribe::before,
 .fxs_suscribe::after,
-.fxs_sexy_banner::before,
-.fxs_sexy_banner::after,
 .fxs_live_event_module::before,
 .fxs_live_event_module::after,
 .fxs_widget_price.fxs_widget_price_header::before,
@@ -3069,6 +3071,7 @@ h5 a:hover,
 .fxs_col_100::after,
 .fxs_suscribeForm::after,
 .fxs_suscribeSocial::after,
+.fxs_sexy_banner::after,
 .fxs_entryFeatured_imgSide::after,
 .fxs_live_event_module .fxs_sideImage_headline::after,
 .fxs_article_body::after,
@@ -3076,7 +3079,6 @@ h5 a:hover,
 .fxs_alert::after,
 .fxs_divider_wide::after,
 .fxs_suscribe::after,
-.fxs_sexy_banner::after,
 .fxs_live_event_module::after,
 .fxs_widget_price.fxs_widget_price_header::after {
   clear: both;
@@ -3110,7 +3112,6 @@ h5 a:hover,
 .fxs_alert,
 .fxs_divider_wide,
 .fxs_suscribe,
-.fxs_sexy_banner,
 .fxs_live_event_module,
 .fxs_widget_price.fxs_widget_price_header {
   margin-left: -1rem;
@@ -3121,7 +3122,6 @@ h5 a:hover,
   .fxs_alert,
   .fxs_divider_wide,
   .fxs_suscribe,
-  .fxs_sexy_banner,
   .fxs_live_event_module,
   .fxs_widget_price.fxs_widget_price_header {
     margin-left: -2rem;
@@ -3284,7 +3284,6 @@ h5 a:hover,
 }
 .fxs_wideItem_pre_space,
 .fxs_suscribe,
-.fxs_sexy_banner,
 .fxs_live_event_module,
 .fxs_live_event_module .fxs_pricing_table,
 .fxs_live_event_cta_content,
@@ -3295,7 +3294,6 @@ h5 a:hover,
 @media (min-width: 680px) {
   .fxs_wideItem_pre_space,
   .fxs_suscribe,
-  .fxs_sexy_banner,
   .fxs_live_event_module,
   .fxs_live_event_module .fxs_pricing_table,
   .fxs_live_event_cta_content,
@@ -5125,8 +5123,6 @@ width:calc(100% - 320px);
   margin-bottom: 0.5rem;
 }
 .fxs_sexy_banner {
-  border-top: 3px solid #ececf1;
-  border-bottom: 0;
   position: relative;
 }
 .fxs_sexy_banner:hover {
@@ -5146,28 +5142,15 @@ width:calc(100% - 320px);
   position: absolute;
   z-index: 1;
   width: 46%;
-  top: 1rem;
-  left: 1rem;
+  top: 0;
+  left: 0;
   padding: 1rem;
   background-color: rgba(37, 37, 43, 0.8);
-  height: 82%;
-  -lh-property: 0;
-height:-webkit-calc(100% - 2rem);
-height:-moz-calc(100% - 2rem);
-height:calc(100% - 2rem);
-;
+  height: 100%;
 }
 @media (min-width: 680px) {
   .fxs_sexy_bannerText {
     padding: 2rem;
-    top: 1.5rem;
-    left: 2rem;
-    height: 85%;
-    -lh-property: 0;
-height:-webkit-calc(100% - 2.5rem);
-height:-moz-calc(100% - 2.5rem);
-height:calc(100% - 2.5rem);
-;
   }
 }
 .fxs_sexy_bannerText .fxs_entryHeadline,
@@ -5215,6 +5198,9 @@ height:calc(100% - 2.5rem);
   .fxs_sexy_bannerImg {
     max-height: 350px;
   }
+  .fxs_sexy_bannerImg img {
+    max-width: inherit;
+  }
 }
 .fxs_entriesList {
   margin-bottom: 1rem;
@@ -5241,9 +5227,6 @@ height:calc(100% - 2.5rem);
   .fxs_entriesList.fxs_crawling_page .fxs_entryHeadline {
     font-size: 1.46rem;
   }
-}
-.fxs_entryFeatured {
-  margin-bottom: 1rem;
 }
 .fxs_entryFeatured header {
   margin-bottom: 0.5rem;
