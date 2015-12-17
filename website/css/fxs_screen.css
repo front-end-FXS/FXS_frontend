@@ -6388,7 +6388,7 @@ width:calc(100% - 140px);
   }
 }
 .fxs_widget_heatmap .fxs_widget_price {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.33rem;
 }
 .fxs_widget_heatmap .fxs_widget_price.price_up {
   background-color: #41a993;
@@ -6430,11 +6430,12 @@ width:calc(100% - 140px);
   cursor: pointer;
 }
 @media (min-width: 680px) {
-  .fxs_widget_heatmap.fxs_widget_mini .fxs_widget_column {
-    width: 100%;
+  .fxs_widget_heatmap.fxs_widget_default .fxs_widget_column {
+    float: left;
+    width: 33.33333333%;
   }
 }
-@media (min-width: 680px) {
+@media (min-width: 1150px) {
   .fxs_widget_heatmap.fxs_widget_default .fxs_widget_column {
     float: left;
     width: 25%;
