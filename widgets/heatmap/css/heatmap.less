@@ -16,7 +16,7 @@
 // Properties & variants
 .fxs_widget_heatmap {
   .fxs_widget_price {
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0.33rem;
     &.price_up {
       background-color: lighten(@success_clr, 10%);
       &.price_up_plus { background-color: @success_clr; }
@@ -45,13 +45,12 @@
 
   // Widget sizes variants
   &.fxs_widget_mini{
-    @media (min-width: @screen-s) {
-      .fxs_widget_column { width:100%; }
-    }
+    //
   }
   &.fxs_widget_default{
     .fxs_widget_column {
-      .make-s-column(3);
+      .make-s-column(4);
+      .make-l-column(3);
     }
   }
   &.fxs_widget_big {
