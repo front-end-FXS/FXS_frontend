@@ -1119,6 +1119,35 @@
   }
 }
 
+///////////////////////////////////////////////////////////////////
+// marquee container  - cols to include mini or nano widget versions
+//////////////////////////////////////////////////////////////////
+
+.fxs_row{
+  &.fxs_marquee_container{
+    margin-top:-0.5rem;
+    margin-bottom:1rem;
+    .fxs_widget_divider_module{
+      padding:0 5px 5px 5px;
+      .fxs_widget_mini{
+        .fxs_widget_price_value{
+          float: right;
+        }
+      }
+    }
+    @media(min-width:@screen-s){
+      .fxs_col_25{
+        .make-s-column(6);
+      }
+    }
+    @media(min-width:@screen-m){
+      .fxs_col_25{
+        .make-s-column(3);
+      }
+    }
+  }
+}
+
 ///////////////////////////////////////////////////////////
 /////////////// Layouts grid system //////////////////////
 /////////////////////////////////////////////////////////
