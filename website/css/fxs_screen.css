@@ -3286,6 +3286,18 @@ h5 a:hover,
     border: 0;
   }
 }
+.fxs_wideContent.fxs_wideSponsor,
+.fxs_alert.fxs_wideSponsor,
+.fxs_divider_wide.fxs_wideSponsor,
+.fxs_suscribe.fxs_wideSponsor,
+.fxs_live_event_module.fxs_wideSponsor,
+.fxs_widget_price.fxs_widget_price_header.fxs_wideSponsor {
+  margin-bottom: 2rem;
+  border-top: 5px solid #ececf1;
+  border-bottom: 5px solid #ececf1;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
 .fxs_wideItem_pre_space,
 .fxs_suscribe,
 .fxs_live_event_module,
@@ -5718,6 +5730,12 @@ max-width:calc(100% - ( 35px + 5px ));
 .fxs_widget_price.fxs_widget_mini .fxs_widget_price_value {
   float: none;
   max-width: inherit;
+}
+@media (min-width: 1024px) {
+  .fxs_widget_price_marquee {
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 1rem;
+  }
 }
 .fxs_widget_price_marquee .fxs_widget_price_marquee_item_wrap {
   padding-left: 1rem;
