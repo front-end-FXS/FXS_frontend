@@ -93,6 +93,40 @@
 
 }
 
+// mrquee prices
+
+.fxs_widget_price_marquee{
+  @media(min-width:@screen-m){
+    border-bottom:3px solid #ccc;
+    padding-bottom:1rem;
+  }
+  .fxs_widget_price_marquee_item_wrap{
+    padding-left:1rem;
+    padding-right:1rem;
+    .fxs_widget_price_marquee_item{
+      border-bottom:1px solid @light_3_clr;
+      margin-bottom:1rem;
+      padding-bottom:1rem;
+    }
+    @media(min-width:@screen-s){
+      width:50%;
+      float:left;
+    }
+    @media(min-width:@screen-m){
+      width:25%;
+      border-left:1px solid @light_3_clr;
+      &:first-child{
+        border-left:0;
+      }
+      .fxs_widget_price_marquee_item{
+        border-bottom:0;
+        padding-bottom:0;
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
 // table prices
 .fxs_table_prices {
   tbody tr td { vertical-align: top; }
