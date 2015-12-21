@@ -1,0 +1,158 @@
+﻿// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+// Widget price variants
+.fxs_widget_price {
+  // Asset label width arrows up & down
+  .fxs_asset_label {
+    position:relative;
+    margin-bottom: 0;
+    a { padding-left: 1rem; }
+    &::before {
+      position: absolute;
+      margin: 2px 2px 0 0;
+      content: '\f062';
+      font: normal normal normal 14px FontAwesome;
+    }
+  }
+
+  // Asset label color & icon variants
+  &.price_up {
+    .fxs_asset_label::before { color: @success_clr; }
+    .fxs_price_change { .fxs_txt_color_variants(@success_clr); }
+  }
+  &.price_down {
+    .fxs_asset_label::before {
+      content: '\f063';
+      color: @error_clr;
+    }
+    .fxs_price_change { .fxs_txt_color_variants(@error_clr); }
+  }
+  &.price_neutral {
+    .fxs_asset_label::before { content: "\f068" }
+  }
+    
+  // Widget prices header
+  &.fxs_widget_price_header {
+    .fxs_wideWidget_pre(0; 3px solid @light_4_clr);
+    padding-top: 0;
+    @media(min-width:@screen-s) {
+      .fxs_asset_label_block {
+          .fxs_price_change{ padding-left: 1.5rem; }
+        }
+        .fxs_price_bidask{ margin-bottom: 0.5rem; }
+        .fxs_asset_label {
+          font-size:@txt_size_huge;
+          max-width: @base_module_size*10;
+          margin-bottom: 0.5rem;
+          a{ padding-left: 1.5rem; }
+          &::before{ font-size: @txt_size_xlarge; }
+        }
+        .fxs_price_bidask { font-size: @txt_size_xlarge; }
+        .fxs_price_big_figure { font-size:@txt_size_huge; }
+        sup { font-size: @txt_defaultsize_rem; }
+        .fxs_price_ohl {
+          font-size: @txt_size_small;
+          span:first-child { display: inline-block; }
+        }        
+      }
+  }
+  
+  &.fxs_widget_price_header, &.fxs_widget_price_listView {
+    .fxs_price_ohl{ display: block; }
+  }
+
+  // rules for widget prices listView
+  &.fxs_widget_price_listView {
+    padding: 0.5rem 0;
+    .fxs_asset_label_block { max-width: 45%; }
+    .fxs_price_ohl {
+      margin-top: 0.25rem;
+      span {  margin-left: 0.12rem; }
+    }
+  }
+
+  // rules for widget prices listView & mini
+  &.fxs_widget_price_listView, &.fxs_widget_mini {
+    .fxs_widget_price_value, .fxs_price_change {
+      font-size: @txt_size_small;
+      line-height: @txt_lineheight_small;
+    }
+  }
+
+  &.fxs_widget_mini {
+    .fxs_widget_price_value {
+      float: none;
+      max-width: inherit;
+    }
+  }
+
+}
+
+// table prices
+.fxs_table_prices {
+  tbody tr td { vertical-align: top; }
+  >tbody, >thead, >tfoot {
+    >tr >td, >tr >th {
+      &:first-child {
+        padding-left: 0;
+        width: @base_module_size*4;
+      }
+      &:last-child {
+        display: none;
+        width: auto;
+      }
+    }
+  }
+
+  .fxs_asset_label { font-size: @txt_size_small; }
+  .fxs_widget_price_value { max-width: inherit; }
+  .fxs_price_change { display: block; }
+
+  &.fxs_widget_default, &.fxs_widget_big {
+    @media(min-width:@screen-s) {
+      tbody tr td { vertical-align: middle; }
+      >tbody, >thead, >tfoot {
+        >tr >td, >tr >th {
+          &:last-child {
+            display: table-cell;
+          }
+        }
+      }
+      .fxs_widget_price_value {
+        float: none;
+        text-align: center;
+      }
+      .fxs_widget_price_value, .fxs_price_ohl{
+        display: table;
+        width: 100%;
+      }
+      .fxs_price_bidask, .fxs_price_change {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .fxs_price_ohl {
+        font-size: @txt_size_xsmall;
+        span {
+          padding-left: 0.5em;
+        }
+      }
+    }
+  }
+
+  &.fxs_widget_big {
+    @media(min-width:@screen-m) {
+      .fxs_price_ohl {
+        font-size: @txt_size_small;
+        span {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
