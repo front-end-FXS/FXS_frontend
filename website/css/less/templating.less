@@ -1064,6 +1064,7 @@
     overflow: hidden;
     /* saf3+, chrome1+ */
     @media (-webkit-min-device-pixel-ratio: 0) { right: 10px; }
+    .cbp-spmenu-push-toleft & { top: 0; right: 0; }
   }
   a {
     position: absolute;
@@ -1119,31 +1120,30 @@
   }
 }
 
+.fxs_add {
+  margin: 0 auto;
+  text-align: center;
+  * { margin: 0 auto; }
+  img { min-width: inherit; }
+}
+
 ///////////////////////////////////////////////////////////////////
 // marquee container  - cols to include mini or nano widget versions
 //////////////////////////////////////////////////////////////////
 
-.fxs_row{
-  &.fxs_marquee_container{
+.fxs_row {
+  &.fxs_marquee_container {
     margin-top:-0.5rem;
     margin-bottom:1rem;
-    .fxs_widget_divider_module{
+    .fxs_widget_divider_module {
       padding:0 5px 5px 5px;
-      .fxs_widget_mini{
-        .fxs_widget_price_value{
-          float: right;
-        }
+      .fxs_widget_mini {
+        .fxs_widget_price_value { float: right; }
       }
     }
-    @media(min-width:@screen-s){
-      .fxs_col_25{
-        .make-s-column(6);
-      }
-    }
-    @media(min-width:@screen-m){
-      .fxs_col_25{
-        .make-s-column(3);
-      }
+    .fxs_col_25 {
+      .make-s-column(6);
+      .make-m-column(3);
     }
   }
 }
