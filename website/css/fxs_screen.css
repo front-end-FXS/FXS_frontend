@@ -426,6 +426,9 @@ blockquote footer {
   line-height: 1.25rem;
   margin-bottom: 0.88em;
 }
+abbr {
+  cursor: help;
+}
 address,
 cite {
   font-style: normal;
@@ -476,9 +479,6 @@ pre {
   color: #25252b;
   background-color: rgba(221, 222, 223, 0.4);
   overflow: auto;
-}
-abbr {
-  cursor: help;
 }
 img {
   max-width: 100%;
@@ -1946,10 +1946,10 @@ width:calc(100% - 320px);
 }
 .fxs_tableHover tbody:hover > tr {
   zoom: 1;
-  filter: alpha(opacity=40);
-  -webkit-opacity: 0.4;
-  -moz-opacity: 0.4;
-  opacity: 0.4;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
 .fxs_tableHover tbody:hover > tr:hover {
   zoom: 1;
@@ -6518,8 +6518,8 @@ width:calc(100% - 140px);
   text-align: center;
 }
 .fxs_widget_spreads_table .fxs_widget_spreads_item.fxs_widget_spreads_item_lower {
-  background-color: #ddf2ee;
-  color: #338473;
+  background-color: rgba(51, 132, 115, 0.25);
+  color: #41a993;
 }
 .fxs_widget_spreads_table .fxs_article_author {
   white-space: normal;
@@ -6577,6 +6577,23 @@ width:calc(100% - 140px);
 .fxs_widget_spreads_table.fxs_widget_default > thead tr > th:nth-child(n+3),
 .fxs_widget_spreads_table.fxs_widget_big > thead tr > th:nth-child(n+3) {
   text-align: center;
+}
+.fxs_widget_spreads_table.fxs_widget_mini tbody > tr.fxs_sponsored_broker_row > td,
+.fxs_widget_spreads_table.fxs_widget_default tbody > tr.fxs_sponsored_broker_row > td,
+.fxs_widget_spreads_table.fxs_widget_big tbody > tr.fxs_sponsored_broker_row > td {
+  background-color: #212226;
+  border-bottom-color: transparent;
+}
+.fxs_widget_spreads_table.fxs_widget_mini tbody > tr.fxs_sponsored_broker_row > td,
+.fxs_widget_spreads_table.fxs_widget_default tbody > tr.fxs_sponsored_broker_row > td,
+.fxs_widget_spreads_table.fxs_widget_big tbody > tr.fxs_sponsored_broker_row > td,
+.fxs_widget_spreads_table.fxs_widget_mini tbody > tr.fxs_sponsored_broker_row > td .fxs_article_author a,
+.fxs_widget_spreads_table.fxs_widget_default tbody > tr.fxs_sponsored_broker_row > td .fxs_article_author a,
+.fxs_widget_spreads_table.fxs_widget_big tbody > tr.fxs_sponsored_broker_row > td .fxs_article_author a,
+.fxs_widget_spreads_table.fxs_widget_mini tbody > tr.fxs_sponsored_broker_row > td .fxs_btn_icon,
+.fxs_widget_spreads_table.fxs_widget_default tbody > tr.fxs_sponsored_broker_row > td .fxs_btn_icon,
+.fxs_widget_spreads_table.fxs_widget_big tbody > tr.fxs_sponsored_broker_row > td .fxs_btn_icon {
+  color: #fff;
 }
 .fxs_widget_spreads_table.fxs_widget_mini tbody > tr > td:first-child,
 .fxs_widget_spreads_table.fxs_widget_default tbody > tr > td:first-child,
