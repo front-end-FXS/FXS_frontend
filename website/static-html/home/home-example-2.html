@@ -1081,14 +1081,14 @@
                                     </div>
                                     <hr class="fxs_divider_first">
                                     <div class="fxs_row">
-                                        <div class="fxs_col fxs_col_100">
+                                        <div class="fxs_col fxs_col_50">
                                             <h3 class="fxs_subtitle">
                                                 Currencies heatmap
                                             </h3>
                                             
                                             <!-- Widget heatmap default-->
                                             <div class="fxs_widget_summary">
-                                                <div class="fxs_widget_heatmap fxs_widget_big">
+                                                <div class="fxs_widget_heatmap fxs_widget_default">
                                                     <div class="fxs_widget_divider_module">
                                                         <ul class="fxs_tabs_nav fxs_marginHalf_bottom">
                                                             <li class="active"><a data-toggle="tab" href="#myTab1-1" title="4 hours">4H</a></li>
@@ -1773,14 +1773,14 @@
                                             </div>
                                             <!-- /Widget heatmap default-->
                                         </div>
-                                        <div class="fxs_col fxs_col_100">
+                                        <div class="fxs_col fxs_col_50">
                                             <h3 class="fxs_subtitle">
                                                 Currencies Forecast Poll
                                             </h3>
                                             
                                             <section class="fxs_widget_summary">
                                                 <!-- Widget default -->
-                                                <div class="fxs_forecast_widget_multi fxs_widget_big">
+                                                <div class="fxs_forecast_widget_multi fxs_widget_default">
                                                     <ul class="fxs_tabs_nav fxs_table_tabs">
                                                         <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
                                                         <li class="active"><a id="tab_1_default" href="#">1 Week</a></li>
@@ -3021,10 +3021,13 @@
 
             ////////////////////////////////
             //// Stick em /////////////////
-            $('.fxs_detail').stickem({
-               containerScroll: $("#fxs_content"),
-               offset: 65
-            });
+            function checkSticky() {
+                $('.fxs_detail').stickem({
+                   containerScroll: $("#fxs_content"),
+                   offset: 65
+                });
+            }
+            setTimeout(checkSticky, 2000);
 
             // Live event example
             $('#clock_6').countdown('2016/01/13 09:16:00')
@@ -3243,163 +3246,7 @@
                     }
                 }
             }
-
-
-            var chart = TTChart.create({ id: "chartDiv" });
-
-            chart.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv'
-            });
-
-            chart.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart.resize();
-
-            chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart.symbols.addIndicator(objValue);
-                    chart.display();
-                }
-            }   
+  
 
             var chart_1 = TTChart.create({ id: "chartDiv_1" });
 
