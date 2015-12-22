@@ -2108,7 +2108,7 @@ width:calc(100% - 320px);
 }
 .fxs_relatedItem {
   padding-bottom: 1rem;
-  min-height: 245px;
+  min-height: 210px;
   font-size: 1rem;
 }
 .fxs_relatedItem:hover {
@@ -2144,7 +2144,7 @@ width:calc(100% - 320px);
 }
 @media (min-width: 680px) {
   .fxs_relatedContentSlot_x3_cols .fxs_relatedItem {
-    min-height: 280px;
+    min-height: 271.25px;
   }
 }
 .fxs_relatedContentSlot_x4_cols {
@@ -4956,8 +4956,13 @@ width:calc(100% - 35px - 5px);
   }
 }
 .fxs_add {
-  margin: 0 auto;
+  margin: 0 -1rem;
   text-align: center;
+}
+@media (min-width: 1150px) {
+  .fxs_add {
+    margin: 0 auto;
+  }
 }
 .fxs_add * {
   margin: 0 auto;
