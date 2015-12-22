@@ -1199,12 +1199,26 @@
       &.fxs_flex_ad_col_fRight { float: right; }
       .stickem { width: @left_rail_space_reduced - ((@txt_defaultsize_px / 1.5) * 2); }
     }
+    .fxs_col_50, .fxs_col_33:not(.fxs_col_dismissible) {
+      float: none;
+      width: 100%;
+    }
   }
   @media (min-width: @screen-l) {
     .calc(width, ~'100% - @{left_rail_space}');
     &.fxs_flex_ad_col {
       width: @left_rail_space;
       .stickem { width: @left_rail_space - ((@txt_defaultsize_px / 1.5) * 2); }
+    }
+  }
+  // 50% //
+  .fxs_col_50 { .make-m-column(6); }
+
+  // 33% //
+  .fxs_col_33 {
+    &:not(.fxs_col_dismissible) {
+      .make-s-column(6);
+      .make-m-column(4);
     }
   }
 }
