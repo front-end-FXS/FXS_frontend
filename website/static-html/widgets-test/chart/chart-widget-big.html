@@ -455,13 +455,14 @@
         <!-- /The wrapper -->
 
 
-        <script src="../../../website-js/jquery-1.11.3.min.js"></script>
+        <script src="../../../js/jquery-1.11.3.min.js"></script>
 
         <!-- Bootstrap -->
         
     
         <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js">
         </script>
+
         <script src="../../../js/classie.js"></script>
         <script src="../../../js/jquery.typeahead.min.js"></script>
         <script src="../../../js/site.js"></script>
@@ -493,8 +494,22 @@
                 }
             }
 
-
             var chart = TTChart.create({ id: "chartDiv" });
+
+            /*
+            ojo: este fragmento de código manipula el css para que al visualizar el chart en fullscreen sobreescribe la clase 'fxs_content' con la propiedad position:static, para que en modo fullscreen funcione correctamente.
+            */
+
+             chart.addEventListener('dataLoad',function(){
+             $('div.tt_fullscreen').on('click', function(){
+                if($('div.tt_fullscreen').attr('data-checked') == "on"){
+                    $('.fxs_content').css('position', 'static');
+                }else{
+                    $('.tt_chartContainer').css("top" , "0");
+                    $('.fxs_content').css('position', 'relative');
+                }
+             });
+            });
 
             chart.setOptions({
                 "global.locale": "en",

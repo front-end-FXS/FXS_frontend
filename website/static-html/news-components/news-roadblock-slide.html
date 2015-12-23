@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>News Sponsored - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+<body class="cbp-spmenu-push">
+    <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+    <header class="fxs_header">
+        <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
+        <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+        <nav class="fxs_nav_menu" role="navigation">
+            <ul>
+                <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                <li><a href="" title="">Rates & Charts</a></li>
+                <li class="active"><a href="" title="">News</a></li>
+                <li><a href="" title="">Analysis</a></li>
+                <li><a href="" title="">Economic Calendar</a></li>
+                <li><a href="" title="">Live Video</a></li>
+                <li><a href="" title="">Education</a></li>
+                <li><a href="" title="">Find a Broker</a></li>
+            </ul>
+        </nav>
+        <!-- Social & RSS links -->
+        <div class="fxs_socialLinks_nav">
+            <ul class="fxs_shareOptions_boxed">
+                <li class="fxs_socialMedia_item">
+                    <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                </li>
+                <li class="fxs_socialMedia_item">
+                    <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                </li>
+                <li class="fxs_overflowOptions">
+                    <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                    <ul class="fxs_dropdownList">
+                        <li class="fxs_dropdownHeader">Follow us on</li>
+                        <li>
+                            <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                        </li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">RSS feeds</li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /Social & RSS links -->
+
+        <button type="button" id="showRightPush" class="fxs_show_usermenu">
+            <i class="fa fa-user"></i>
+            <span class="fxs_skip">User Settings</span>
+        </button>
+    </header>
+    <div class="fxs_wrapper">
+        <!-- Sidebar left nav -->
+        <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+            <!-- Main-nav -->
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li><a href="" title="">Rates & Charts</a></li>
+                    <li class="active"><a href="" title="">News</a></li>
+                    <li><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- /Main-nav -->
+            <!-- trading resourses -->
+            <ul class="fxs_items_list_nav">
+                <li class="fxs_menuList_header">Trading resources</li>
+                <li><a href="" title="">Books</a></li>
+                <li><a href="" title="">DVD's</a></li>
+                <li><a href="" title="">Products</a></li>
+            </ul>
+            <!-- fsxtreet sites -->
+            <ul class="fxs_items_list_nav">
+                <li class="fxs_menuList_header">Information</li>
+                <li><a href="" title="">Advertise with us</a></li>
+                <li><a href="" title="">Jobs</a></li>
+            </ul>
+            <!-- about -->
+            <ul class="fxs_items_list_nav">
+                <li class="fxs_menuList_header">About</li>
+                <li><a href="" title="">About fxstreet</a></li>
+                <li><a href="" title="">Contributors</a></li>
+            </ul>
+            <!-- terms and conditions -->
+            <ul class="fxs_items_list_nav">
+                <li><a href="" title="">Terms and conditions</a></li>
+                <li><a href="" title="">Privacy policy</a></li>
+                <li><a href="" title="">Contact us</a></li>
+                <li><a href="" title="">Site map</a></li>
+            </ul>
+            <!-- /Complementary links -->
+            
+            <!-- Social Media links widget -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="https://www.linkedin.com/company/fxstreet" class="fxs_btn_icon" target="_blank" title="LinkedIn page"><i class="fa fa-linkedin"></i><span class="fxs_skip">LinkedIn page</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social Media links widget -->
+            <!-- lang-edition -->
+            <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                
+                <ul class="fxs_dropdownList dropup">
+                    <li class="fxs_dropdownHeader">Other sites</li>
+                    <li><a href="#">体中文</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                    <li><a href="#">Русский</a></li>
+                    <li><a href="#">Indonesia</a></li>
+                    <li><a href="#">العربية</a></li>
+                    <li><a href="#">Italiano</a></li>
+                    <li><a href="#">Português</a></li>
+                    <li><a href="#">Magyar</a></li>
+                    <li><a href="#">Türkçe</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li class="fxs_divider_third">&nbsp;</li>
+                    <li class="fxs_dropdownHeader">Edition</li>
+                    <li><a href="#">Yсский</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Français</a></li>
+                </ul>
+            </div>
+            <!-- /lang-edition -->
+        </div>
+        <!-- /Sidebar left -->
+
+        <nav class="fxs_content_subnav">
+            <a id="showLeft" class="fxs_toggleList"><i class="fa fa-chevron-left"></i> All News</a>
+        </nav>
+
+        <div class="fxs_content" id="fxs_content">
+            
+            <div class="fxs_contentView">
+
+                <div class="fxs_leaderboard">
+                    <!-- Roadblock -->
+                    <div class="fxs_roadblock_slide">
+                        
+                        <!-- Roadblock custom content -->
+                        <div class="fxs_content_panel">
+                            <h1>Trading demo contest</h1>
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_50">
+                                    <div class="fxs_mediaContainer">
+                                        <!-- Embed Youtube -->
+                                        <iframe class="fxs_media_item" width="640" height="360" src="https://www.youtube-nocookie.com/embed/j5y82DatggE" frameborder="0" allowfullscreen></iframe>
+                                        <!-- /Embed Youtube -->
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_50">
+                                    <h3>2016 will be your year</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <a href="path-to-contest" class="fxs_btn fxs_btn_cta">Subscribe now!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Roadblock custom content -->
+
+                        <!-- IMPORTANT, this is an example of css config for the ad, use the sf css widget to configure and errase this -->
+                        <style>
+                            .fxs_roadblock_slide .fxs_content_panel { text-align: left; }
+                        </style>
+                        <!-- /IMPORTANT -->
+                        
+                    </div>
+                    <!-- /Roadblock -->
+                </div>
+
+                <!-- Main Section -->
+                <section class="fxs_detail">
+
+                    <!-- Post goes here -->
+                    <article class="fxs_article">
+                        <header class="fxs_article_header">
+                            <aside class="fxs_entry_metaInfo">
+                                <a class="fxs_entry_sectionlink" href="/">News</a> | <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time>
+                            </aside>
+                            <h1 class="fxs_headline_large">EUR/USD Forecast: Shy upward correction underway</h1>
+                            <address class="fxs_entry_metaInfo">
+                                <span class="fxs_article_author">By <a href="#">Forex Trading.TV</a></span>
+                            </address>
+                                
+                            <!-- Social Media share widget -->
+                            <div class="fxs_shareContent_holder">
+                                <span class="fxs_helperLabel_title">Share</span>
+                                <ul class="fxs_shareOptions_boxed">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                                    </li><!--
+                                    --><li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                                    </li><!--
+                                    --><li class="fxs_overflowOptions">
+                                        <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                                        <ul class="fxs_btnGroup_dropdownList">
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                            </li><!--
+                                            --><li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <div class="fxs_article_body">
+                            <!-- Article main image + ad -->
+                            <figure class="fxs_article_mainMedia">
+                                <div class="fxs_mediaContainer">
+                                    <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" />
+                                </div>
+                                <figcaption>President Obama, during a speech about job gains in Hyattsville <small>© Olivier Douliery-Pool / Getty Images</small></figcaption>
+                            </figure>
+                            <div class="fxs_article_ad">
+                                Add
+                            </div>
+                            <!-- // -->
+                            <p>
+                                <a href="#">EUR/USD</a> remained little changed after the release of in line with expectations Eurozone consumer price index.
+                                Data showed consumer prices dropped 0.2% in November but rose 0.3% <a href="#">compared to the same month in 2013</a>, while the core CPI, which excludes food and energy, climbed lorem 0.7%. Figures were broadly in line with expectations while the core CPI, which excludes food and energy.
+                            </p>
+
+                            <h2>EUR/USD levels to watch</h2>
+
+                            <p>
+                                The data released by the UK Office for National Statistics (ONS) showed the UK ILO Unemployment rate for August to October 2014 was at a six-year low of 6.00%, compared to the median estimate of 5.9%.
+                                Official figures show, UK unemployment in the three months to October <strong>fell by 63,000 to 1.96 million</strong>. The Jobless Claims declined in November by 26.9K, beating the median estimate of -20.K. On a quarterly basis, average earnings excluding bonuses grew by 1.6%.
+                            </p>
+
+                            <h3>EUR/USD analysis</h3>
+                            <p>
+                                Official figures show, UK unemployment in the three months to October fell by 63,000 to 1.96 million. The Jobless Claims declined in November by 26.9K, beating the median estimate of -20.K. On a quarterly basis, average earnings excluding bonuses grew by 1.6%.
+                            </p>
+
+                            <ul>
+                                <li>U.K. Starts Exit From RBS</li>
+                                <li>
+                                    Heard on the Street: Opportunity for Taxpayer:
+                                    <ul>
+                                        <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                        <li>
+                                            Heard on the Street: Opportunity for Taxpayer:
+                                            <ul>
+                                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                                <li>Heard on the Street: Opportunity for Taxpayer:</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                <li>Heard on the Street: Opportunity for Taxpayer</li>
+                            </ul>
+
+                            <hr>
+
+                            <ol>
+                                <li>Within expectations: 279K to 287K: In such a case, EUR/USD is likely to rise within range, with a small chance of breaking higher.</li>
+                                <li>
+                                    Above expectations: 288K to 292K: An unexpected higher reading can send the pair above one resistance line:
+                                    <ol>
+                                        <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                        <li>
+                                            Heard on the Street: Opportunity for Taxpayer:
+                                            <ul>
+                                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                                <li>Heard on the Street: Opportunity for Taxpayer:</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>Well above expectations: Above 293K: A sharp increase in unemployment claims would be bearish for the dollar. Two or more resistance lines could be broken on such an outcome.</li>
+                                <li>Below expectations: 274K to 278K: A positive reading could push EUR/USD lower, and one support line could be broken.</li>
+                            </ol>
+
+                            <figure class="fxs_mediaContainer">
+                                <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                <figcaption>Khaleesi, trining her dragons <small>© Olivier Douliery-Pool / Getty Images</small></figcaption>
+                            </figure>
+
+                            <h2>Key Quotes</h2>
+                            <blockquote>
+                                <p>
+                                    <a href="">EUR/CAD</a> remains range bound.
+                                </p>
+                            </blockquote>
+                            <blockquote>
+                                <p>
+                                    <a href="">AUD/CAD</a> gains though 0.98 may prompt a retest of par
+                                    <footer>Someone famous in <cite title="Source Title"><a href="">Source Title</a></cite></footer>
+                                </p>
+                            </blockquote>
+                            <blockquote>
+                                <p>
+                                    GBP/CAD's move to new cycle highs keeps the broader bull trend intact.
+                                </p>
+                            </blockquote>
+                            <br>
+
+                            <hr>
+
+                            <h4>Currencies table</h3>
+
+                            <div class="fxs_swipeContent_slider">
+                                <table class="fxs_table">
+                                    <caption>Optional table caption.</caption>
+                                    <thead>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th>EUR/USD</th>
+                                        <th>AUD/USD</th>
+                                        <th>USD/JPY</th>
+                                        <th>EUR/USD</th>
+                                        <th>AUD/USD</th>
+                                        <th>USD/JPY</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1W</th>
+                                        <td>97,66%</td>
+                                        <td>65,52%</td>
+                                        <td>43,66%</td>
+                                        <td>97,66%</td>
+                                        <td>65,52%</td>
+                                        <td>43,66%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1M</th>
+                                        <td>65,52%</td>
+                                        <td>97,66%</td>
+                                        <td>65,52%</td>
+                                        <td>43,66%</td>
+                                        <td>97,66%</td>
+                                        <td>65,52%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3M</th>
+                                        <td>43,66%</td>
+                                        <td>97,66%</td>
+                                        <td>65,52%</td>
+                                        <td>97,66%</td>
+                                        <td>65,52%</td>
+                                        <td>43,66%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <footer class="fxs_article_tags">
+                            <h4 class="fxs_helperLabel_title">Related topics</h4>
+                            <ul>
+                                <li><a href="" title="USDJPY">USDJPY</a></li>
+                                <li><a href="" title="EURUSD">EURUSD</a></li>
+                                <li><a href="" title="Asia">Asia</a></li>
+                                <li><a href="" title="Russia levels">Russia levels</a></li>
+                            </ul>
+                        </footer>
+                    </article>
+                    <!-- //Post ends here -->
+                    <!-- Related content -->
+                    <aside class="fxs_relatedContent_holder">
+                        <ul class="fxs_swipeContent_slider">
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- //Related content -->
+                </section>
+                <!-- /Main Section -->
+
+            </div> 
+
+        </div>
+
+        <!-- ListView (la famosa barra lateral) -->
+        <section class="fxs_listView" id="cbp-spmenu-s3">
+            <header class="fxs_listview_subnav">
+                <h2 class="fxs_helperLabel_title">Latest News</h2>
+
+                <!-- Typeahead -->
+                <div class="fxs_filter">
+                    <form>
+                        <div class="fxs_typeaheadContainer">
+                            <label for="q" class="fxs_btn_filter" title="Search in news">
+                                <i class="fa fa-search"></i>
+                                <span class="fxs_skip">Search in news</span>
+                            </label>
+                            <div class="fxs_queryResults">
+                                <!-- Contador de resultados: activar cuando se selecciona uno -->
+                                <span class="fxs_queryResults_label">1238 Results</span>
+                                <!-- /Contador de resultados -->
+                                <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                            </div>
+                            <div class="fxs_typeaheadField">
+                                <div class="fxs_typeaheadQuery">
+                                    <input id="q" name="q" type="search" placeholder="Search in news" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /Typeahead -->
+
+            </header>
+            <nav class="fxs_listViewRail">
+                <a href="#" class="fxs_listView_newItemsAlert">
+                    See 2 New Updates
+                </a>
+                <ol class="fxs_listView_blockWrapper">
+                    <li class="fxs_listView_item listView_item_active">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">EUR/USD Forecast: Shy upward correction underway</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:32">22 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_adContiner">
+                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://www.placecage.com/300/200" alt="Cage">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/ERmerV5laR2Zq/giphy.gif" alt="Cute cat">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://www.placecage.com/c/460/300" alt="Cage">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:28">Sept 13, 09:28 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:27">Sept 13, 09:27 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:25">Sept 13, 09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 08:12">Sept 13, 08:12 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 08:00">Sept 13, 08:00 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-12 09:25">Sept 12, 09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-12 09:12">Sept 12, 09:12 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                </ol>
+                <div class="fxs_feedbackLoading_msg">
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <span class="fxs_loadingStatus">Loading More content</span>
+                </div>
+                <div class="fxs_feedbackLoading_msg">
+                    <span class="fxs_loadingStatus">No more content to load</span>
+                </div>
+            </nav>
+        </section>
+        <!-- /listView -->
+
+        <!-- Sidebar right -->
+        <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+            <ul class="fxs_tabs_nav">
+                <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                    <form class="fxs_authentication_form">
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Username" for="user-name">
+                                <i class="fa fa-user"></i>
+                                <span class="fxs_skip">Username</span>
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Password" for="password">
+                                <i class="fa fa-lock"></i>
+                                <span class="fxs_skip">Password</span>
+                            </label>
+                            <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                        </div>
+                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                        <a href="#" title="Forgot password">Forgot password</a>
+                    </form>
+
+                    <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                    <div class="fxs_social_sidebar_nav">
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                    </div>
+
+                    <div class="fxs_login_message">
+                        <span class="fxs_label">I'm not an fxstreet member</span>
+                        <a href="#">Sign up</a>
+                    </div>
+                </div>
+                <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                    <form class="fxs_authentication_form">
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="fxs_skip">Enter your email address</span>
+                            </label>
+                            <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                <i class="fa fa-user"></i>
+                                <span class="fxs_skip">Choose your username</span>
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                <i class="fa fa-lock"></i>
+                                <span class="fxs_skip">Set your password</span>
+                            </label>
+                            <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup">
+                                <input type="checkbox" id="terms" />
+                                I have read and accept the
+                            </label>
+                            <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                        </div>
+                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                    </form>
+                    
+                    <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                    <div class="fxs_social_sidebar_nav">
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                    </div>
+
+                    <div class="fxs_login_message">
+                        <span class="fxs_label">Already an fxstreet member?</span>
+                        <a href="#" title="login">login</a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="fxs_timezone_btn" title="select timezone">
+                <span class="fxs_helperLabel_title">Timezone</span>
+                <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+            </button>
+        </div>
+        <!-- /Sidebar right -->
+
+        <!-- Timezones -->
+        <div class="fxs_pageSidebar fxs_timezone_items">
+            <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
+            <div class="fxs_nav_menu fxs_timezone_hours">
+
+                <ol>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    
+                </ol>
+            </div>
+            
+        </div>
+        <!-- /Timezones -->
+
+        <!-- Site footer -->
+        <footer class="fxs_footer">
+            <div class="fxs_copy_disclaimer">
+                <div class="fxs_terms_nav">
+                    <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                    <ul class="fxs_subnavInlined_list">
+                        <li><a href="#" class="fxs_mutedLink">Terms and conditions</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Privacy policy</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Contact us</a></li>
+                        <!-- Button DropUp -->
+                        <li class="fxs_btn_group">
+                            <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                
+                            <ul class="fxs_dropdownList dropup">
+                                <li class="fxs_dropdownHeader">Edition</li>
+                                <li><a href="#">Yсский</a></li>
+                                <li><a href="#">Español</a></li>
+                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">Français</a></li>
+                                <li class="fxs_divider_third">&nbsp;</li>
+                                <li class="fxs_dropdownHeader">Other sites</li>
+                                <li><a href="#">体中文</a></li>
+                                <li><a href="#">繁體中文</a></li>
+                                <li><a href="#">Русский</a></li>
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">العربية</a></li>
+                                <li><a href="#">Italiano</a></li>
+                                <li><a href="#">Português</a></li>
+                                <li><a href="#">Magyar</a></li>
+                                <li><a href="#">Türkçe</a></li>
+                                <li><a href="#">Tiếng Việt</a></li>
+                                <li><a href="#">한국어</a></li>
+                            </ul>
+                        </li>
+                        <!-- /Button DropUp -->
+                    </ul>
+                </div>
+                <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                <div class="fxs_disclaimer_block">
+                    <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                    <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                    <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- /Site footer -->
+    </div>
+        <script src="../../js/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../js/bootstrap.min.js"></script>
+
+        <script src="../../js/classie.js"></script>
+        <script src="../../js/jquery.typeahead.min.js"></script>
+        <script src="../../js/site.js"></script>
+
+</body>
+</html>

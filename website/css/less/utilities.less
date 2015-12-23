@@ -19,7 +19,7 @@
 .keyframes(~'fadeInLeft, from {transform: translate3d(-100%, 0, 0); opacity:0;} to {transform: none; opacity:1;}');
 
 // Spescific for FXS layouts
-.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:550px; opacity:1;}');
+.keyframes(~'show-sponsor-from-top, 0% {max-height:0; opacity:0; } 70% {max-height:80px; opacity:0.6;} 100% {max-height:680px; opacity:1;}');
 
 // blur modal effect
 .fxs_blur { .blur(4px); }
@@ -65,6 +65,10 @@
 
 .fxs_txt_danger {
   .fxs_txt_color_variants(@error_clr);
+}
+
+.fxs_txt_warning {
+  .fxs_txt_color_variants(darken(@warning_clr, 15%));
 }
 
 .fxs_txt_neutral {
@@ -215,6 +219,7 @@
     line-height: @txt_lineheight_xlarge;
   }
 }
+
 .fxs_headline_hero{
   font-size: @txt_size_xhuge;
   line-height: @txt_lineheight_xlarge;
@@ -274,17 +279,6 @@
   background-color: @light_4_clr;
   margin-bottom: 1rem;
   @media (min-width: @screen-s) { margin-bottom: 1.5rem; }
-}
-
-// Wide content containers
-.fxs_wideContent {
-  &:extend(.fxs_clearfix all);
-  margin-left: -1rem;
-  margin-right: -1rem;
-  @media (min-width: @screen-s) {
-      margin-left: -2rem;
-      margin-right: -2rem;
-  }
 }
 
 // generic content pannels
@@ -362,6 +356,25 @@
 }
 .fxs_visible_m {
   @media (min-width: @screen-l) { display: none; }
+}
+
+// Wide content containers
+.fxs_wideContent {
+  &:extend(.fxs_clearfix all);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  @media (min-width: @screen-s) {
+      margin-left: -2rem;
+      margin-right: -2rem;
+  }
+  &.no_wide_content {
+    @media (min-width: @screen-s) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      border: 0;
+    }
+  }
 }
 
 // Pre space wide widgets

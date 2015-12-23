@@ -181,13 +181,12 @@
 //
 .fxs_subscribeForm_group {
   &:extend(.fxs_inlineForm_group all);
-  display: inline-block;
   margin-bottom: 1rem;
-  @media (min-width: @screen-s) { width: auto; }
   .fxs_textInput {
-    @media (min-width: @screen-s) { min-width: 250px; }
-    @media (min-width: @screen-l) { min-width: 320px; }
+    .calc(width, ~'100% - 165px');
+    max-width: 350px;
   }
+  .fxs_btn_group { margin-left: -2px; }
 }
 
 // BUTTONS
@@ -766,7 +765,7 @@
   line-height: @txt_lineheight_small;
   >tbody, >thead, >tfoot {
     >tr >td, >tr >th {
-      padding: @half_base_spacer;
+      padding: 5px;
       border-bottom: 1px solid @light_4_clr;
     }
   }
@@ -797,7 +796,7 @@
     }
     &:hover {
       > tr {
-        .opacity(.4);
+        .opacity(.5);
         &:hover {
           &:extend(.fxs_transition);
           .opacity(1);
@@ -955,7 +954,7 @@
 .fxs_relatedItem {
   &:extend(.fxs_transition);
   padding-bottom: 1rem;
-  min-height: @base_module_size*7;
+  min-height: @base_module_size*6;
   font-size: @txt_defaultsize_rem;
   &:hover {
     cursor: pointer;
@@ -974,7 +973,7 @@
 .fxs_relatedContentSlot_x3_cols {
   .make-xs-column(4);
   .fxs_relatedItem {
-    @media (min-width: @screen-s) { min-height: @base_module_size*8; }
+    @media (min-width: @screen-s) { min-height: @base_module_size*7.75; }
   }
   .fxs_entryHeadline {
     &:extend(.fxs_headline_from_tiny_to_small all);
@@ -1286,6 +1285,21 @@
     margin-bottom: 0;
     padding-bottom: @base_module_size*2;
   }
+   // modal roadblock sponsor 
+  &.fxs_modal_roadblock_sponsor {
+    max-width:680px;
+    .fxs_detail{
+      padding-bottom:2rem;
+    }
+    @media(min-width:@screen-s){ 
+      max-height: calc(100% - 100px);
+      //.calc(max-height, ~'100% - 100px');
+      position:absolute;
+      top:10%;
+      left:50%;
+      .translate(-50%, -10%)!important;
+    }
+  }
 }
 
 .fxs_modal_add.fxs_leaderboard {
@@ -1295,13 +1309,4 @@
 }
 
 // Modal sizes
-
-// modal small
-.fxs_modal_sm {
-  padding-top: @main_header_height;
-  margin: 0 auto;
-  .fxs_modal_sm_content{ padding-bottom: 2rem; }
-  .fxs_modal_sm_alert{ margin-bottom:3px; }
-  @media(min-width:@screen-s){ max-width:680px; }
-}
 

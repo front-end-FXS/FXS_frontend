@@ -201,17 +201,12 @@
 .fxs_wideWidget_pre(@widget-border-top; @widget-border-bottom) {
   &:extend(.fxs_wideContent all, .fxs_wideItem_pre_space all);
   border-top: @widget-border-top;
-  border-bottom: @widget-border-bottom
+  border-bottom: @widget-border-bottom;
 }
 
 //////////////////////////////////////
 ////////// GRID SYSTEMS /////////////
 ////////////////////////////////////
-
-// fxstreet grid systems vars
-@grid-columns: 12;
-@grid-gutter-width: 1rem;
-@grid-gutter-width-xs: 1px;
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
@@ -261,7 +256,7 @@
   }
 }
 
-// Generate the large columns 1100
+// Generate the large columns 1150
 .make-l-column(@columns) {
   @media (min-width: @screen-l) {
     float: left;
@@ -269,7 +264,7 @@
   }
 }
 
-// Generate the extra large columns 1220
+// Generate the extra large columns 1280
 .make_xl_column(@columns) {
   @media (min-width: @screen-xl) {
     width: percentage((@columns / @grid-columns));

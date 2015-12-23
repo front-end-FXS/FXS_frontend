@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Analysis - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+<body class="cbp-spmenu-push"><!-- fxs_isParent_section -->
+    <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+    <header class="fxs_header">
+        <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
+        <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+        <!-- Main-nav -->
+        <nav class="fxs_nav_menu" role="navigation">
+            <ul>
+                <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                <li><a href="" title="">Rates & Charts</a></li>
+                <li><a href="" title="">News</a></li>
+                <li class="active"><a href="" title="">Analysis</a></li>
+                <li><a href="" title="">Economic Calendar</a></li>
+                <li><a href="" title="">Live Video</a></li>
+                <li><a href="" title="">Education</a></li>
+                <li><a href="" title="">Find a Broker</a></li>
+            </ul>
+        </nav>
+        <!-- /Main-nav -->
+        <!-- Social & RSS links -->
+        <div class="fxs_socialLinks_nav">
+            <ul class="fxs_shareOptions_boxed">
+                <li class="fxs_socialMedia_item">
+                    <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                </li>
+                <li class="fxs_socialMedia_item">
+                    <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                </li>
+                <li class="fxs_overflowOptions">
+                    <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                    <ul class="fxs_dropdownList">
+                        <li class="fxs_dropdownHeader">Follow us on</li>
+                        <li>
+                            <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                        </li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">RSS feeds</li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /Social & RSS links -->
+
+        <button type="button" id="showRightPush" class="fxs_show_usermenu">
+            <i class="fa fa-user"></i>
+            <span class="fxs_skip">User Settings</span>
+        </button>
+    </header>
+     <!-- The wrapper -->
+    <div class="fxs_wrapper">
+        <!-- Sidebar left nav -->
+        <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+            <!-- Main-nav -->
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li><a href="" title="">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
+                    <li class="active"><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- /Main-nav -->
+
+            <!-- About -->
+            <ul class="fxs_items_list_nav">
+                <li class="fxs_menuList_header">About</li>
+                <li><a href="" title="">About fxstreet</a></li>
+                <li><a href="" title="">Advertise with us</a></li>
+            </ul>
+            <!-- terms and conditions -->
+            <ul class="fxs_items_list_nav">
+                <li><a href="" title="">Terms and conditions</a></li>
+                <li><a href="" title="">Privacy policy</a></li>
+                <li><a href="" title="">Contact us</a></li>
+                <li><a href="" title="">Site map</a></li>
+            </ul>
+            <!-- /Complementary links -->
+            
+            <!-- Social Media links widget -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="https://www.linkedin.com/company/fxstreet" class="fxs_btn_icon" target="_blank" title="LinkedIn page"><i class="fa fa-linkedin"></i><span class="fxs_skip">LinkedIn page</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social Media links widget -->
+            
+            <!-- lang-edition -->
+            <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                
+                <ul class="fxs_dropdownList dropup">
+                    <li class="fxs_dropdownHeader">Other sites</li>
+                    <li><a href="#">体中文</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                    <li><a href="#">Русский</a></li>
+                    <li><a href="#">Indonesia</a></li>
+                    <li><a href="#">العربية</a></li>
+                    <li><a href="#">Italiano</a></li>
+                    <li><a href="#">Português</a></li>
+                    <li><a href="#">Magyar</a></li>
+                    <li><a href="#">Türkçe</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li class="fxs_divider_third">&nbsp;</li>
+                    <li class="fxs_dropdownHeader">Edition</li>
+                    <li><a href="#">Yсский</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Français</a></li>
+                </ul>
+            </div>
+            <!-- /lang-edition -->
+        </div>
+        <!-- /Sidebar left -->
+        
+        <!-- Topics subnav -->
+        <nav class="fxs_content_subnav">
+            <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Analysis</a>
+            <div class="fxs_topics_nav">
+                <span class="fxs_label">Popular topics</span>
+                <ul class="fxs_subnavInlined_list">
+                    <li><a href="#" class="fxs_mutedLink">Technical analysis</a></li>
+                    <li><a href="#" class="fxs_mutedLink">Macrieconomics</a></li>
+                    <li><a href="#" class="fxs_mutedLink">Trading ideas</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /Topics subnav -->
+
+        <div class="fxs_content" id="fxs_content">
+
+            <!-- The content rail -->
+            <div class="fxs_contentView">
+
+                <div class="fxs_leaderboard">
+                    
+                    <!-- Roadblock -->
+                    <div class="fxs_roadblock_slide">
+                        
+                        <!-- Roadblock custom content -->
+                        <div class="fxs_detail fxs_contextual_section">
+                            <h2 class="fxs_headline_medium fxs_marginBase_bottom">Trader of the year 2015</h2>
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_67">
+                                    <div class="fxs_mediaContainer">
+                                        <!-- Embed Youtube -->
+                                        <iframe class="fxs_media_item" width="640" height="360" src="https://www.youtube-nocookie.com/embed/jv2WJMVPQi8" frameborder="0" allowfullscreen></iframe>
+                                        <!-- /Embed Youtube -->
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_33 fxs_col_dismissible" style="display:block;">
+                                    <h3>Win $10,000 in live trading accounts!</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                    <a href="path-to-contest" class="fxs_btn fxs_btn_cta fxs_btn_block">Subscribe now!</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /Roadblock custom content -->
+
+                        <!-- IMPORTANT, this is an example of css config for the ad, use the sf css widget to configure and errase this -->
+                        <style>
+                            .fxs_roadblock_slide .fxs_contextual_section { text-align: left; background-color: #242d38; }
+                            .fxs_roadblock_slide .fxs_contextual_section * { color: #fff; }
+                        </style>
+                        <!-- /IMPORTANT -->
+                        
+                    </div>
+                    <!-- /Roadblock -->
+
+                </div>
+
+                <!-- Main Section -->
+
+                <main id="fxs_it_detail" role="main">
+                    <div> <!-- dinamic div for dev -->
+                        <header class="fxs_sectionTitle">
+                            <h1 class="fxs_sectionTitle_header">Analysis & insights</h1>
+                            <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                                <div class="fxs_overflowOptions">
+                                    <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                                    <ul class="fxs_btnGroup_dropdownList">
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                        </li>
+                                        <!--
+                                        -->
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+
+                    <section class="fxs_detail">
+
+                        <div class="fxs_clearfix">
+                            <h2 class="fxs_subsectionTitle">
+                                Featured entries
+                            </h2>
+
+                            <div class="fxs_row">
+                                <div class="sf_colsOut fxs_col fxs_col_100">
+                                    
+                                    <!-- Featured entry Big -->
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_big">
+                                            <header>
+                                                <h2 class="fxs_entryHeadline">
+                                                    <a href="/">GBP/USD Forecast: bullish above 1.5630</a>
+                                                </h2>
+
+                                                <!-- Author box medium -->
+                                                <address class="fxs_contributorBox fxs_contributorBox_medium">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            Justin Timberlake
+                                                        </a>
+                                                        <span class="fxs_author_description">
+                                                            Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
+                                                        </span>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                                <!-- /Author box medium -->
+
+                                            </header>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg">
+                                            </div>
+
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    EN-Spiil pra fimadrox frufeema clledais oneinba chawhtrka cat. Bral ediv istuap nelsl wicag wwobloniz etesyw wisiefilo sisor ten eivirn fefia w brmfti setcever. Chepbome b wibess shilss wwop. On.
+                                                </p>
+                                            </div>
+
+                                        </article>
+                                    </div>
+                                    <!-- /Featured entry Big -->
+
+                                </div>
+
+                            </div>
+                            
+                            <hr class="fxs_divider_second">
+
+                            <div class="fxs_leaderboard">
+                                <div class="fxs_add esto_es_un_ejemplo_para_borrar" style="background-color: #E2E2E2;">
+                                    AD
+                                </div>
+                            </div>
+
+                            <hr class="fxs_divider_second">
+
+                            <div class="fxs_clearfix">
+                                <h2 class="fxs_subsectionTitle">
+                                    Author's quote
+                                </h2>
+                                <div class="fxs_clearfix">
+
+                                    <!-- Quote module -->
+                                    <blockquote class="fxs_featured_quote">
+                                        <div class="fxs_avatar_circleImage">
+                                            <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                            </a>
+                                        </div>
+                                        <p>
+                                            If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                            <footer>
+                                                <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                                <address class="fxs_entry_metaInfo">
+                                                    <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                                    <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                </address>
+                                            </footer>
+                                        </p>
+                                    </blockquote>
+                                    <!-- /Quote module -->
+
+                                    <h3 class="fxs_subtitle">Quotes inside list-table</h3>
+                                    
+                                    <!-- Quotes in list table -->
+                                    <ul class="fxs_list_table">
+                                        <li class="fxs_list_table_item">
+                                            <!-- Quote module -->
+                                            <blockquote class="fxs_featured_quote">
+                                                <div class="fxs_avatar_circleImage">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                                    </a>
+                                                </div>
+                                                <p>
+                                                    If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                                    <footer>
+                                                        <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                                        <address class="fxs_entry_metaInfo">
+                                                            <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                                            <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                        </address>
+                                                    </footer>
+                                                </p>
+                                            </blockquote>
+                                            <!-- /Quote module -->
+                                        </li>
+                                        <li class="fxs_list_table_item">
+                                            <!-- Quote module -->
+                                            <blockquote class="fxs_featured_quote">
+                                                <div class="fxs_avatar_circleImage">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                        <img src="https://s3.amazonaws.com/uifaces/faces/twitter/eduardo_olv/128.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                                    </a>
+                                                </div>
+                                                <p>
+                                                    If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                                    <footer>
+                                                        <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                                        <address class="fxs_entry_metaInfo">
+                                                            <span class="fxs_article_author">By <a href="path/to/author">Eduardo Oliveira</a></span> |
+                                                            <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                        </address>
+                                                    </footer>
+                                                </p>
+                                            </blockquote>
+                                            <!-- /Quote module -->
+                                        </li>
+                                        <li class="fxs_list_table_item">
+                                            <!-- Quote module -->
+                                            <blockquote class="fxs_featured_quote">
+                                                <div class="fxs_avatar_circleImage">
+                                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                        <img src="http://www.ps4-magazin.de/wcf/images/avatars/avatar-3974.jpg" alt="NOMBRE DEL CONTRIBUTOR" width="75" height="75">
+                                                    </a>
+                                                </div>
+                                                <p>
+                                                    If the NFP is a strong figure today, then the dollar’s run to higher ground will resume and the Euro will head back to 1.2300 and today’s session low at 1.2287
+                                                    <footer>
+                                                        <cite title="Source Title" class="fxs_cite"><a href="">Australian dollar lower as property market unwinds</a></cite>
+                                                        <address class="fxs_entry_metaInfo">
+                                                            <span class="fxs_article_author">By <a href="path/to/author">Ezio Auditore da Firenze</a></span> |
+                                                            <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                        </address>
+                                                    </footer>
+                                                </p>
+                                            </blockquote>
+                                            <!-- /Quote module -->
+                                        </li>
+                                    </ul>
+                                    <!-- /Quotes in list table -->
+
+                                </div>
+                                
+                                <hr class="fxs_divider_wide">
+
+                            </div>
+
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_50">
+                                    
+                                    <!-- Featured entry Medium -->
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_med">
+                                            <!-- No lleva imagen -->
+                                            <header>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="/">Aussie Dollar Sinks, Yen Gains as Risk Aversion Grips the Markets</a>
+                                                </h3>
+                                                <!-- Author box small -->
+                                                <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            José Manuel Figueroa
+                                                        </a>
+                                                        <span class="fxs_author_description">
+                                                            Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
+                                                        </span>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                                <!-- /Author box small -->
+                                            </header>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    The Non-Farm Payroll report, because of its importance to the reserve currency, tends to move all markets. No trader in the world ignores the "NFP" acronym. Some want to avoid it at all costs, others try and trade the high volatility it produces to make some pips.
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <!-- Featured entry Medium -->
+
+                                    <hr class="fxs_divider_second fxs_visible_xs">
+
+                                </div>
+
+
+                                <div class="fxs_col fxs_col_50">
+                                    
+                                    <!-- Featured entry Medium -->
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_med">
+                                            <!-- No lleva imagen -->
+                                            <header>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="/">Forex Technical Analysis: EUR/USD, GBP/USD, USD/CHF, USD/JPY, AUD/USD, USD/RUB, Gold</a>
+                                                </h3>
+                                                <!-- Author box small -->
+                                                <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            José Manuel Figueroa
+                                                        </a>
+                                                        <span class="fxs_author_description">
+                                                            Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
+                                                        </span>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                                <!-- /Author box small -->
+                                            </header>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    Eurodollar has extended the current ascending wave and almost reached its target. We think, today, the price may start forming a reversal structure to continue falling inside the downtrend.
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <!-- /Featured entry Medium -->
+
+                                </div>
+                                
+                            </div>
+
+                            <div class="fxs_clearfix">
+                                <hr class="fxs_divider_second">
+                            </div>
+                            <!-- Content Ad -->
+                            <div class="fxs_clearfix fxs_sponsored_content_row">
+
+                                <div class="fxs_sponsor_img fxs_fLeft">
+                                    <a href="/">
+                                        <img src="http://cdn.fxstreet.com/images/FxPro_100x33_Logob.jpg">
+                                    </a>
+                                </div>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="" title="">New record lows for European sovereign yields</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- /Content Ad -->
+
+                            <hr class="fxs_divider_wide">
+
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_33">
+
+                                    <!-- Featured entries list -->
+                                    <aside class="fxs_entriesList">
+                                        <ol>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">XAU/USD tests 100-DMA, will the rally sustain?</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Kathleen Brooks</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">China concerns gather pace</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Ilya Spivak</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">New record lows for European sovereign yields</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">Technical Outlook for Majors 21/08/2015</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Nenad Kerkez</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                        </ol>
+                                    </aside>
+                                    <!-- /Featured entries list -->
+
+                                </div>
+
+                                <div class="fxs_col fxs_col_33">
+                                    
+                                    <!-- Featured entries list -->
+                                    <aside class="fxs_entriesList">
+                                        <ol>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">XAU/USD tests 100-DMA, will the rally sustain?</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Kathleen Brooks</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">China concerns gather pace</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Ilya Spivak</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">New record lows for European sovereign yields</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">Technical Outlook for Majors 21/08/2015</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Nenad Kerkez</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                        </ol>
+                                    </aside>
+                                    <!-- /Featured entries list -->
+
+                                </div>
+
+                                <div class="fxs_col fxs_col_33">
+                                    
+                                    <!-- Featured entries list -->
+                                    <aside class="fxs_entriesList">
+                                        <ol>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">XAU/USD tests 100-DMA, will the rally sustain?</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Kathleen Brooks</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">China concerns gather pace</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Ilya Spivak</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">New record lows for European sovereign yields</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                            <li>
+                                                <article>
+                                                    <h3 class="fxs_entryHeadline">
+                                                        <a href="" title="">Technical Outlook for Majors 21/08/2015</a>
+                                                    </h3>
+                                                    <address class="fxs_entry_metaInfo">
+                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Nenad Kerkez</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                    </address>
+                                                </article>
+                                            </li>
+                                        </ol>
+                                    </aside>
+                                    <!-- /Featured entries list -->
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="fxs_alert fxs_alert_featured">
+                                <span class="fxs_alertLabel">Special Deal</span>
+                                <p class="fxs_alertText"><a href="/">Trading master of universe</a> Super price limited edition</p>
+                            </div>
+
+                            <!--  New template required!!!!! -->
+                            <div class="fxs_row fxs_tableRow">
+
+                                <div class="fxs_flex_col">
+                                    
+                                    <!-- Featured entry Big -->
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_big">
+                                            <header>
+                                                <h2 class="fxs_entryHeadline">
+                                                    <a href="/">GBP/USD Forecast: bullish above 1.5630</a>
+                                                </h2>
+
+                                                <!-- Author box medium -->
+                                                <address class="fxs_contributorBox fxs_contributorBox_medium">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                                            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                                            Justin Timberlake
+                                                        </a>
+                                                        <span class="fxs_author_description">
+                                                            Chief Technical Strategist <a href="path/to/company" class="fxs_mutedLink">ForexTrading.TV</a>
+                                                        </span>
+                                                    </span>
+                                                    <script type="application/ld+json">
+                                                    // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                                    </script>
+                                                </address>
+                                                <!-- /Author box medium -->
+
+                                            </header>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg">
+                                            </div>
+
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    EN-Spiil pra fimadrox frufeema clledais oneinba chawhtrka cat. Bral ediv istuap nelsl wicag wwobloniz etesyw wisiefilo sisor ten eivirn fefia w brmfti setcever. Chepbome b wibess shilss wwop. On.
+                                                </p>
+                                            </div>
+
+                                        </article>
+                                    </div>
+                                    <!-- /Featured entry Big -->
+
+                                </div>
+
+                                <!-- Ad col outside -->
+                                <div class="fxs_flex_col fxs_flex_ad_col">
+                                    
+                                    <!-- Content Ad container -->
+                                    <div class="fxs_content_adContainer">
+                                        <iframe frameborder="0" scrolling="no" id="creativeIframe573517059" src="https://s1.2mdn.net/4133302/1442006366860/300x600-SWH.html" width="300" height="600" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
+                                    </div>
+                                    <!-- Content Ad container -->
+
+                                </div>
+                                <!-- /Ad col outside -->
+
+                            </div>
+                            <!--  /New template required!!!!! -->
+
+                            <hr class="fxs_divider_first">
+
+                            <!--  New template required!!!!! -->
+                            <div class="fxs_row fxs_tableRow">
+                                
+                                <!-- Ad col inside -->
+                                <div class="fxs_flex_col fxs_flex_ad_col">
+                                    
+                                    <!-- Content Ad container -->
+                                    <div class="fxs_content_adContainer">
+                                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:16px;"></iframe>
+                                    </div>
+                                    <!-- Content Ad container -->
+
+                                </div>
+                                <!-- /Ad col inside -->
+
+                                <div class="fxs_flex_col">
+
+                                    
+                                    <h3 class="fxs_subtitle">
+                                        Forecast Poll <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Text that explains widget"></i>
+                                    </h3>
+
+                                     <!--
+                                         fxs preload, this must be loaded before widget appears,
+                                        is important to add class 'in' to display the preload,
+                                        to hide the preload delete this class
+                                    -->
+
+                                        <div class="fxs_preload fade in">
+                                            <div class="fxs_preload_spin">
+                                                <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
+                                                <span class="fxs_preload_spin_text fxs_txt_neutral">Loading content...</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- / fxs preload -->
+                                    
+                                    <section class="fxs_widget_summary">
+                                        
+                                        <!-- Widget default -->
+                                        <div class="fxs_forecast_widget_multi fxs_widget_default">
+                                            <ul class="fxs_tabs_nav fxs_table_tabs">
+                                                <!-- IDs metido a saco para simular funcionamiento de tabs de la tabla -->
+                                                <li class="active"><a id="tab_1_mini" href="#">1 Week</a></li>
+                                                <li><a id="tab_2_mini" href="#">1 Month</a></li>
+                                                <li><a id="tab_3_mini" href="#">1 Quarter</a></li>
+                                            </ul>
+                                            <table class="fxs_table fxs_tableHover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>&nbsp;</th>
+                                                        <th>1 Week</th>
+                                                        <th>1 Month</th>
+                                                        <th>1 Quarter</th>
+                                                        <th>&nbsp;</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr onclick="todo">
+                                                        <td>
+                                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                                <a href="/">EUR/USD</a>
+                                                            </abbr>
+                                                        </td>
+                                                        <td>
+                                                            <div class="forecast_timeframe avg_1w active">
+                                                                <div class="fxs_widget_slot_label">
+                                                                    <small class="fxs_widget_small">Avg.</small>
+                                                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                                </div>
+                                                                <div class="forecast_graphic_wrapper">
+                                                                    <div id="forecast_bar_stacked_1w_mini" class="c3"></div>
+                                                                </div>
+                                                                <div class="forecast_avg_result result_bearish">
+                                                                    <small>Bias</small>
+                                                                    <span class="fxs_widget_custom_bold">Bearish</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="forecast_timeframe avg_1m">
+                                                                <div class="fxs_widget_slot_label">
+                                                                    <small class="fxs_widget_small">Avg.</small>
+                                                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                                </div>
+                                                                <div class="forecast_graphic_wrapper">
+                                                                    <div id="forecast_bar_stacked_1m_mini" class="c3"></div>
+                                                                </div>
+                                                                <div class="forecast_avg_result result_bullish">
+                                                                    <small>Bias</small>
+                                                                    <span class="fxs_widget_custom_bold">Bullish</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="forecast_timeframe avg_1q">
+                                                                <div class="fxs_widget_slot_label">
+                                                                    <small class="fxs_widget_small">Avg.</small>
+                                                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                                </div>
+                                                                <div class="forecast_graphic_wrapper">
+                                                                    <div id="forecast_bar_stacked_1q_mini" class="c3"></div>
+                                                                </div>
+                                                                <div class="forecast_avg_result result_sideways">
+                                                                    <small>Bias</small>
+                                                                    <span class="fxs_widget_custom_bold">Sideways</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                        </td>
+                                                    </tr>
+
+                                                    <!---->
+
+                                                    <tr onclick="todo">
+                                                        <td>
+                                                            <abbr class="fxs_asset_label" title="US Dollar - Japanese Yen">
+                                                                <a href="/">USD/JPY</a>
+                                                            </abbr>
+                                                        </td>
+                                                        <td>
+                                                            <div class="forecast_timeframe avg_1w active">
+                                                                <div class="fxs_widget_slot_label">
+                                                                    <small class="fxs_widget_small">Avg.</small>
+                                                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                                </div>
+                                                                <div class="forecast_graphic_wrapper">
+                                                                    <div id="forecast_bar_stacked_1w_2_mini" class="c3"></div>
+                                                                </div>
+                                                                <div class="forecast_avg_result result_bearish">
+                                                                    <small>Bias</small>
+                                                                    <span class="fxs_widget_custom_bold">Bearish</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="forecast_timeframe avg_1m">
+                                                                <div class="fxs_widget_slot_label">
+                                                                    <small class="fxs_widget_small">Avg.</small>
+                                                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                                </div>
+                                                                <div class="forecast_graphic_wrapper">
+                                                                    <div id="forecast_bar_stacked_1m_2_mini" class="c3"></div>
+                                                                </div>
+                                                                <div class="forecast_avg_result result_bullish">
+                                                                    <small>Bias</small>
+                                                                    <span class="fxs_widget_custom_bold">Bullish</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="forecast_timeframe avg_1q">
+                                                                <div class="fxs_widget_slot_label">
+                                                                    <small class="fxs_widget_small">Avg.</small>
+                                                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                                                </div>
+                                                                <div class="forecast_graphic_wrapper">
+                                                                    <div id="forecast_bar_stacked_1q_2_mini" class="c3"></div>
+                                                                </div>
+                                                                <div class="forecast_avg_result result_sideways">
+                                                                    <small>Bias</small>
+                                                                    <span class="fxs_widget_custom_bold">Sideways</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <a title="Read complete Report" class="fxs_btn_icon" href="/"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                        </td>
+                                                    </tr>
+
+                                                    
+                                                </tbody>
+                                                <!-- footer -->
+                                                <tfoot>
+                                                    <tr>
+                                                        <td class="fxs_widget_footer" colspan="5">
+                                                            <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                                                            <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tfoot>
+                                                <!-- /footer -->
+                                            </table>
+                                        </div>
+                                        <!-- /Widget default -->
+
+                                    </section>
+
+                                </div>
+
+                            </div>
+                            <!--  /New template required!!!!! -->
+
+                        </div>
+                        
+                    </section>
+                </main>
+
+                <!-- /Main Section -->
+
+                <section class="fxs_detail">
+
+                    <!-- Post goes here -->
+                    <article class="fxs_article">
+                        <header class="fxs_article_header">
+                            <aside class="fxs_entry_metaInfo">
+                                <a class="fxs_entry_sectionlink" href="/">Analysis</a> | <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time>
+                            </aside>
+                            <h1 class="fxs_headline_large">GBP/USD Forecast: bullish above 1.5630</h1>
+                            <!-- Author box Big -->
+                            <address class="fxs_contributorBox fxs_contributorBox_big">
+                                <div class="fxs_avatar_circleImage_s">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                        <img src="http://img.timeinc.net/time/daily/2009/0911/360_wmanny_1116.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                    </a>
+                                </div>
+                                <span class="fxs_article_author">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                        Manny Pacquiao
+                                    </a>
+                                    <span class="fxs_author_description">
+                                        Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
+                                    </span>
+                                    <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
+                                        <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                        <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
+                                    </button>
+                                </span>
+                                <script type="application/ld+json">
+                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                </script>
+                            </address>
+                            <!-- /Author box Big -->
+
+                            <!-- Social Media share widget -->
+                            <div class="fxs_shareContent_holder">
+                                <span class="fxs_helperLabel_title">Share</span>
+                                 <ul class="fxs_shareOptions_boxed">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_overflowOptions">
+                                        <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                                        <ul class="fxs_btnGroup_dropdownList">
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                            </li>
+                                            <!--
+                                            -->
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+
+                        <div class="fxs_article_body">
+                            <!-- Article main image + ad -->
+                            <div class="fxs_article_mainMedia">
+                                <div class="fxs_mediaContainer">
+                                    <img src="http://www.teletrader.com//chartEngine.chart?EwEAAB_LCAAAAAAABAAtjs1qwzAQhN9Gp9YOcX4aGT1AoIXQ0rNZS1tJRNIaaR3Hlz57jd3bzMd8MGWOPQXFXF4vh8vboRGBNARUmF6_v8TkDTt1avbCobeOVXPeCcY4BGBcrGqgzBA6PRam_PA4ddpB5q4PoO9izT4ZfCqBOVO_RrCofut3mGnk2kdbr-zfOu53z_Z0roZkhaYYIRn1oDBGhIxQFUeT-IFQsI3gU2WWE5_QLMrmYyMDZk9GGvBhbm325raBCfG_kHVTeA4oe8hbtTAUSmgsFsl5xPYPGyNp_xMBAAA.&u=635757739654410034" />
+                                </div>
+                                <figcaption>EUR/USD Spot <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time><small>© Teletrader</small></figcaption>
+                            </div>
+
+                            <div class="fxs_article_ad">
+                                <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                            </div>
+                            <!-- // -->
+                            <p>
+                                The common currency is pointing to close the week above the 1.1300, its highest level in 2 months, boosted by market's sentiment.
+                            </p>
+
+                            <h2>EUR/USD levels to watch</h2>
+
+                            <p>
+                                There were two major catalyst spurring risk aversion these days, the latest FOMC Minutes, and Chinese turmoil:
+                            </p>
+
+                            <h3>EUR/USD analysis</h3>
+                            <p>
+                                Official figures show, UK unemployment in the three months to October fell by 63,000 to 1.96 million. The Jobless Claims declined in November by 26.9K, beating the median estimate of -20.K. On a quarterly basis, average earnings excluding bonuses grew by 1.6%.
+                            </p>
+
+                            <!-- Post related content -->
+                            <div class="fxs_article_related_mini">
+                                <h3 class="fxs_subtitle">
+                                    Related content
+                                </h3>
+
+                                <!-- Featured entry Image sided nano-->
+                                <div class="fxs_entryFeatured">
+                                    <article class="fxs_clearfix">
+                                        <div class="fxs_squareImage">
+                                            <a href="/">
+                                                <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" alt="Título de la imagen">
+                                            </a>
+                                        </div>
+                                        <div class="fxs_floatingMedia_textBody">
+                                            <h4 class="fxs_headline_tiny">
+                                                <a href="" title="">New record lows for European sovereign yields</a>
+                                            </h4>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author"><a href="http://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                            </address>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <hr class="fxs_divider_third">
+
+                                <!-- Sponsored content -->
+                                <div class="fxs_entryFeatured">
+                                    <article class="fxs_clearfix">
+                                        <div class="fxs_floatingMedia_textBody">
+                                            <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
+                                            <h4 class="fxs_headline_tiny">
+                                                <a href="" title="">New record lows for European sovereign yields</a>
+                                            </h4>
+                                            <a class="fxs_btn fxs_btn_cta fxs_btn_small" href="/">Button CTA</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- /Sponsored content -->
+
+                            </div>
+                            <!-- /Post related content -->
+
+                            <p>
+                                NZD has made an upside attack of the Daily negative Ichimoku cloud on Friday, but the cloud is very wide and powerful so the price was rejected but the Senkou Span A level and we are currently at the support area of 0.66-0.6590. A Daily close below this will be a signal for a new slide with possible target 0.6500 and 0.6450.
+                                AUD is clearly bearish below 0.7305. recovery is possible only above 0.7350, but this is pretty away from the current price. H4 and Daily indicators are bearish, while the H1 shows some correction is going on. However you may sell below 0.7270 and as long as we are below this every upside will be used to open sell positions at a better price.
+                            </p>
+
+                            <p>
+                                JPY dropped to 120.70 as the price has broken the 124 support. Downside move was capped by the Daily SMA200 which is exactly 120.70 at the moment. It is good to know that if we have any Daily close below this support this will signal that we have made a double top formation which is very likely to lead to further price drop of this pair.
+                            </p>
+
+                            <p>
+                                GBP still continues the consolidation and is away from the strong moves involving the dollar last week. The outlook here seems a bit bullish above 1.5640. So you may try small long positions, keeping an eye of the 1.5640. If there are signs of breaking it lower you'd better exit long.
+                            </p>
+
+                            <hr class="fxs_divider_second">
+                                
+                            <!-- Content Ad -->
+                            <div class="fxs_clearfix fxs_sponsored_content_row">
+                                <div class="fxs_sponsor_img fxs_fLeft">
+                                    <a href="/">
+                                        <img src="http://cdn.fxstreet.com/images/FxPro_100x33_Logob.jpg">
+                                    </a>
+                                </div>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="" title="">Live technical analysis TV</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- /Content Ad -->
+
+                            <hr class="fxs_divider_second">
+
+                            <ul>
+                                <li>U.K. Starts Exit From RBS</li>
+                                <li>
+                                    Heard on the Street: Opportunity for Taxpayer:
+                                    <ul>
+                                        <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                        <li>
+                                            Heard on the Street: Opportunity for Taxpayer:
+                                            <ul>
+                                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                                <li>Heard on the Street: Opportunity for Taxpayer:</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                <li>Heard on the Street: Opportunity for Taxpayer</li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Disclaimer in post! -->
+                        <div class="fxs_disclaimer_block">
+                            <h5>Legal disclaimer and risk disclosure</h5>
+                            <p>
+                                Trendsetter does not warrant or guarantee the accuracy, timeliness or completeness to its service or information contained therein. Trendsetter does not give, whatsoever, warranties, expressed or implied, to the results to be obtained by using its services or information it provided. Users are trading on their own risk and Trendsetter shall not be responsnd its t limited to damages caused by negligence whether such damages were foreseen or unforeseen.
+                            </p>
+                        </div>
+                        <!-- /Disclaimer in post! -->
+
+                        <!-- Article footer -->
+                        <footer class="fxs_article_tags">
+                            <h4 class="fxs_helperLabel_title">Related topics</h4>
+                            <ul>
+                                <li><a href="" title="USDJPY">USDJPY</a></li>
+                                <li><a href="" title="EURUSD">EURUSD</a></li>
+                                <li><a href="" title="Asia">Asia</a></li>
+                                <li><a href="" title="Russia levels">Russia levels</a></li>
+                            </ul>
+                        </footer>
+                        <!-- /Article footer -->
+
+                    </article>
+                    <!-- /Post ends here -->
+
+                    <!-- Related content -->
+                    <aside class="fxs_relatedContent_holder">
+                        <ul class="fxs_swipeContent_slider">
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- //Related content -->
+                </section>
+                <!-- //Main Section -->
+            </div>
+            <!-- /The content rail -->
+        </div>
+
+        <!-- ListView -->
+        <section class="fxs_listView" id="cbp-spmenu-s3">
+            <header class="fxs_listview_subnav">
+                <h2 class="fxs_helperLabel_title">Latest Analysis</h2>
+
+                <!-- Typeahead -->
+                <div class="fxs_filter">
+                    <form>
+                        <div class="fxs_typeaheadContainer">
+                            <label for="q" class="fxs_btn_filter" title="Search in news">
+                                <i class="fa fa-search"></i>
+                                <span class="fxs_skip">Search in Analysis</span>
+                            </label>
+                            <div class="fxs_queryResults">
+                                <!-- Contador de resultados: activar cuando se selecciona uno -->
+                                <span class="fxs_queryResults_label">1238 Results</span>
+                                <!-- /Contador de resultados -->
+                                <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                            </div>
+                            <div class="fxs_typeaheadField">
+                                <div class="fxs_typeaheadQuery">
+                                    <input id="q" name="q" type="search" placeholder="Search in news" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /Typeahead -->
+
+            </header>
+            <nav class="fxs_listViewRail">
+                <a href="#" class="fxs_listView_newItemsAlert">
+                    See 2 New Updates
+                </a>
+                <ol class="fxs_listView_blockWrapper">
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg" alt="Nombre del autor">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">EUR/USD Forecast: Shy upward correction underway</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">John Doe</span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg" alt="Nombre del autor">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Padme Amidala</span> | <time pubdate="" datetime="2015-09-14 09:32">22 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_adContiner">
+                        <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                        <img class="fxs_hidden_xs fxs_visible_m EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://www.denimblog.com/wp-content/uploads/2009/08/250x250.png" width="250" height="250">
+                        <img class="fxs_visible_xs EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://yaffacdn.s3.amazonaws.com/live/adnews/images/dmImage/SourceImage/opPICTURE06.jpg" width="320" height="49">
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/itsjonq/128.jpg" alt="Cage">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Akira Toriyama</span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" alt="Cute cat">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Masashi Kishimoto</span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" alt="Cage">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Sasuke Uchiha</span> | <time pubdate="" datetime="2015-09-13 09:28">Sept 13, 09:28 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Obi Wan Kenobi</span> | <time pubdate="" datetime="2015-09-13 09:27">Sept 13, 09:27 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Madara Uchiha</span> | <time pubdate="" datetime="2015-09-13 09:25">Sept 13, 09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://mediaserver.fxstreet.com/images/danske-research-team-author-photomedium.jpeg" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Danske Bank</span> | <time pubdate="" datetime="2015-09-13 08:00">Sept 13, 08:00 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Anakin Skiwalker</span> | <time pubdate="" datetime="2015-09-12 09:25">Sept 12, 09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Some Guy</span> | <time pubdate="" datetime="2015-09-12 09:12">Sept 12, 09:12 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                </ol>
+                <div class="fxs_feedbackLoading_msg">
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <span class="fxs_loadingStatus">Loading More content</span>
+                </div>
+
+                <!-- Link load more for Google -->
+                <!-- Important: When there's no more content to load, remove class "load_next_page" to hide link -->
+                <div class="fxs_feedbackLoading_msg load_next_page"> <!-- Forced style. Dont reprocuce the style="display:block"! -->
+                    <a href="#load-next-page" class="fxs_btn fxs_btn_line fxs_btn_block fxs_btn_small">
+                        Load more Analysis
+                    </a>
+                </div>
+                <!-- Link load more for Google -->
+
+                <div class="fxs_feedbackLoading_msg">
+                    <span class="fxs_loadingStatus">No more content to load</span>
+                </div>
+            </nav>
+        </section>
+        <!-- /ListView -->
+        
+        <!-- Sidebar right -->
+        <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+            <ul class="fxs_tabs_nav">
+                <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                    <form class="fxs_authentication_form">
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Username" for="user-name">
+                                <i class="fa fa-user"></i>
+                                <span class="fxs_skip">Username</span>
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Password" for="password">
+                                <i class="fa fa-lock"></i>
+                                <span class="fxs_skip">Password</span>
+                            </label>
+                            <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                        </div>
+                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                        <a href="#" title="Forgot password">Forgot password</a>
+                    </form>
+
+                    <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                    <div class="fxs_social_sidebar_nav">
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                    </div>
+
+                    <div class="fxs_login_message">
+                        <span class="fxs_label">I'm not an fxstreet member</span>
+                        <a href="#">Sign up</a>
+                    </div>
+                </div>
+                <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                    <form class="fxs_authentication_form">
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="fxs_skip">Enter your email address</span>
+                            </label>
+                            <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                <i class="fa fa-user"></i>
+                                <span class="fxs_skip">Choose your username</span>
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                <i class="fa fa-lock"></i>
+                                <span class="fxs_skip">Set your password</span>
+                            </label>
+                            <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup">
+                                <input type="checkbox" id="terms" />
+                                I have read and accept the
+                            </label>
+                            <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                        </div>
+                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                    </form>
+                    
+                    <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                    <div class="fxs_social_sidebar_nav">
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                    </div>
+
+                    <div class="fxs_login_message">
+                        <span class="fxs_label">Already an fxstreet member?</span>
+                        <a href="#" title="login">login</a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="fxs_timezone_btn" title="select timezone">
+                <span class="fxs_helperLabel_title">Timezone</span>
+                <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+            </button>
+        </div>
+        <!-- /Sidebar right -->
+
+        <!-- Timezones -->
+        <div class="fxs_pageSidebar fxs_timezone_items">
+            <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
+            <div class="fxs_nav_menu fxs_timezone_hours">
+
+                <ol>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    
+                </ol>
+            </div>
+            
+        </div>
+        <!-- /Timezones -->
+
+        <!-- Site footer -->
+        <footer class="fxs_footer">
+            <div class="fxs_copy_disclaimer">
+                <div class="fxs_terms_nav">
+                    <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                    <ul class="fxs_subnavInlined_list">
+
+                        <!-- Button DropUp 1 -->
+                        <li class="fxs_btn_group">
+                            <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">About <i class="fa fa-caret-up"></i></button>
+                            <ul class="fxs_dropdownList dropup">
+                                <li><a href="" title="">About fxstreet</a></li>
+                                <li><a href="" title="">Advertise with us</a></li>
+                            </ul>
+                        </li>
+                        <!-- /Button DropUp 1-->
+
+                        <li><a href="#" class="fxs_mutedLink">Terms and conditions</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Privacy policy</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Contact us</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Site map</a></li>
+
+                        <!-- Button DropUp 2-->
+                        <li class="fxs_btn_group">
+                            <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                
+                            <ul class="fxs_dropdownList dropup">
+                                <li class="fxs_dropdownHeader">Edition</li>
+                                <li><a href="#">Yсский</a></li>
+                                <li><a href="#">Español</a></li>
+                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">Français</a></li>
+                                <li class="fxs_divider_third">&nbsp;</li>
+                                <li class="fxs_dropdownHeader">Other sites</li>
+                                <li><a href="#">体中文</a></li>
+                                <li><a href="#">繁體中文</a></li>
+                                <li><a href="#">Русский</a></li>
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">العربية</a></li>
+                                <li><a href="#">Italiano</a></li>
+                                <li><a href="#">Português</a></li>
+                                <li><a href="#">Magyar</a></li>
+                                <li><a href="#">Türkçe</a></li>
+                                <li><a href="#">Tiếng Việt</a></li>
+                                <li><a href="#">한국어</a></li>
+                            </ul>
+                        </li>
+                        <!-- /Button DropUp 2-->
+
+                    </ul>
+                </div>
+                <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                <div class="fxs_disclaimer_block">
+                    <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                    <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                    <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- /Site footer -->
+
+    </div>
+    <!-- /The wrapper -->
+    
+
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <script src="../../js/classie.js"></script>
+    <script src="../../js/jquery.typeahead.min.js"></script>
+    <script src="../../js/site.js"></script>
+
+    <script>
+    
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+
+    </script>
+
+    <!-- javascript widget -->
+    <script src="../../../widgets/core/js/c3.min.js"></script>
+    <script src="../../../widgets/core/js/d3.min.js"></script>
+    <script>
+        
+        // Omar A. 'nice' code (mixed with Omar P. 'chapuza' code)
+
+        var forecastProgressBarObj = function () {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
+
+            var setVars = function (initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
+
+            var initChart = function () {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
+                        type: 'bar',
+                        groups: [
+                            ['Bullish', 'Bearish', 'Sideways']
+                        ],
+                        order: 'null',
+                        colors: {
+                            Bullish: '#338473',
+                            Bearish: '#D25746',
+                            Sideways: '#8b8c91'
+                        }
+                    },
+                    padding: {
+                        right: 0
+                    },
+                    axis: {
+                        y: {
+                            show: false
+                        },
+                        x: {
+                            show: false
+                        },
+                        rotated: true
+                    },
+                    bar: {
+                        width: 6
+                    },
+                    size: {
+                        height: 35,
+                        width: 90
+                    },
+                    legend: {
+                        show: false
+                    },
+                    tooltip: {
+                        format: {
+                            title: function (d) { return '1 Week'; },
+                            value: function (value, ratio, id) {
+                                var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                                return format(value);
+                            }
+                        }
+                    }
+                });
+            };
+
+            var delayLoad = function () {
+                setTimeout(function () {
+                    chart.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function () {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function () {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe").hasClass("active")) {
+                    chart.flush();
+                }
+            };
+
+            this.Init = function (initJson) {
+                setVars(initJson);
+                print();
+            };
+        };
+
+        var forecastWidgetObj = function () {
+
+            var charts = [];
+
+            var manageRenderedHtml = function () {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function () {
+                $.each(charts, function(i, chart) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+
+                // Mini widget
+                $('#tab_1_mini').on('click', function () {
+                    $('.avg_1w').addClass('active');
+                    $('#tab_2_mini, #tab_3_mini').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1m, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_2_mini').on('click', function () {
+                    $('.avg_1m').addClass('active');
+                    $('#tab_1_mini, #tab_3_mini').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_3_mini').on('click', function () {
+                    $('.avg_1q').addClass('active');
+                    $('#tab_1_mini, #tab_2_mini').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1m').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+
+            };
+
+            //#region Charts
+
+            var printCharts = function () {
+                // Mini widget
+                instanciateProgressBar("forecast_bar_stacked_1w_mini", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
+                instanciateProgressBar("forecast_bar_stacked_1m_mini", [['Bullish', 0.8], ['Bearish', 0.1], ['Sideways', 0.1]]);
+                instanciateProgressBar("forecast_bar_stacked_1q_mini", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
+
+                instanciateProgressBar("forecast_bar_stacked_1w_2_mini", [['Bullish', 0.25],['Bearish', 0.6],['Sideways', 0.15]]);
+                instanciateProgressBar("forecast_bar_stacked_1m_2_mini", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
+                instanciateProgressBar("forecast_bar_stacked_1q_2_mini", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+            };
+
+            var instanciateProgressBar = function (widgetId, colunms) {
+                var initJsonProgressBar = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpProgressBar = new forecastProgressBarObj();
+                ctpProgressBar.Init(initJsonProgressBar);
+
+                charts.push(ctpProgressBar);
+            };
+
+            //#endregion Charts
+
+            this.Init = function () {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
+
+    </script>
+
+</body>
+
+</html>
