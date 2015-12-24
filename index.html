@@ -7311,10 +7311,13 @@
 
         ////////////////////////////////
         //// Stick em /////////////////
-        $('.fxs_detail').stickem({
-           containerScroll: $("#fxs_content"),
-           offset: 65
-        });
+        function checkSticky() {
+            $('.fxs_detail').stickem({
+               containerScroll: $("#fxs_content"),
+               offset: 65
+            });
+        }
+        setTimeout(checkSticky, 2000);
 
 
         /////////////////////////////////////////////
