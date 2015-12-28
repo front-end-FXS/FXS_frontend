@@ -510,12 +510,18 @@
 [class*="fxs_avatar_circleImage"] {
   .fxs_aspectRatio_media(1, 1);
   display: inline-block;
-  img { height: 100%; }
+  img {
+    height: 100%;
+    min-width: 100%;
+  }
 }
 
 [class*="fxs_avatar_circleImage"] {
 	border-radius: 50%;
-  img { border-radius: 50%; }
+  img {
+    border-radius: 50%;
+    width: 100%;
+  }
 }
 
 .fxs_avatar_circleImage_s, .fxs_squareImage_s {
