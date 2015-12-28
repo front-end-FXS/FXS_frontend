@@ -236,10 +236,6 @@
                         <p>This guide lists the components of <strong>FXStreet's</strong> main website.</p>
                         <p>The project is built with <a href="http://lesscss.org/" target="_blank">LESS</a> and compiled into one single CSS file for the main site.</p>
                         <p>Aside from the custom LESS files, we also incorporate vendor components from <a href="http://getbootstrap.com/" target="_blank">Bootstrap v3.3.5</a>, LESS mixins from <a href="http://lesshat.madebysource.com/" target="_blank">Less Hat</a> and icons from <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Fontawesome</a>.</p>
-                        <p>In order to get started, you have to <strong>know the structure of the project</strong>, the LESS files and the compiled CSS files</p>
-                        <div class="fxs_marginBase_bottom">
-                            <a class="fxs_btn fxs_btn_default" href="https://github.com/PowellGuaglioneFXS/FXS_frontend.git" target="_blank">View the GitHub Project</a>
-                        </div>
                     </div>
 
                     <hr class="fxs_divider_first">
@@ -251,107 +247,10 @@
                         <p>The components are divided with the <a href="http://patternlab.io/about.html" target="_blank">Atomic design</a> aproach.</p>
                         <p>In order to ensure mantainance and scalability, each group of components are divided into different LESS files to import all into the final <strong>"fxs_screen.min.css"</strong> or use it separately in order to build third partie widgets.</p>
 
-                        <h3 class="fxs_subtitle">Folder's structure</h3>
-
-                        <ul>
-                            <li>
-                                <strong>website-css:</strong> LESS & compiled CSS for the site and the CMS overrides
-                                <ul>
-                                    <li><strong>fxs_sf_dashboard.less:</strong> CMS overrides</li>
-                                    <li><strong>fxs_screen.less:</strong> The main compiler file for the site, we import all LESS files <em>in the strict order</em>:
-                                        <ul>
-                                            <li><strong>Vendor imports</strong>: All external plugins & components styles (LESS if possible).</li>
-                                            <li><strong>General application styles</strong>: LESS vars, LESS mixins, basic HTML styles, and application components.</li>
-                                            <li><strong>Layouts & pages</strong>: Site layouts, Post pages, detail pages.</li>
-                                            <li><strong>Widgets</strong>: All the widgets built for FXS & clients (CTP, Forecast, Calendar, etc).</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <strong>less:</strong> Less base styles & components folder
-                                        <ul>
-                                            <li>
-                                                <strong>vars.less:</strong> All custom LESS variables (color, typo, dimensions, etc) and vendor vars overrides (bottom of file).
-                                            </li>
-                                            <li>
-                                                <strong>mixins.less:</strong> All custom mixins and vendor mixins overrides (bottom of file).
-                                                <div class="fxs_contextual_alert fxs_alert_warning">
-                                                    <span class="fxs_alertLabel">Heads Up!</span>
-                                                    <p class="fxs_alertText">Don't add any output class in this file.</p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <strong>reset.less:</strong> HTML normalize fixes (use it with caution: add styles to a tag may cause unexpected results).
-                                            </li>
-                                            <li>
-                                                <strong>base.less:</strong> Basic text and single components styles, the atoms.
-                                            </li>
-                                            <li>
-                                                <strong>components.less:</strong> Complex objects, group of atoms, molecules and organizms.
-                                            </li>
-                                            <li>
-                                                <strong>templating.less:</strong> Website layout, grid system, columns, etc.
-                                            </li>
-                                            <li>
-                                                <strong>featured-entries.less:</strong> Post entrie highlights for homes: news, analysis, video, education, ...
-                                            </li>
-                                            <li>
-                                                <strong>post.less:</strong> Post and final detail pages styles.
-                                            </li>
-                                            <li>
-                                                <strong>vendor:</strong> Bootstrap LESS components, lesshat, all external plugin styles.
-                                                <div class="fxs_contextual_alert fxs_alert_error">
-                                                    <span class="fxs_alertLabel">Heads Up!</span>
-                                                    <p class="fxs_alertText">Don't edit directly from vendor files, override styles & vars into the FXS custom LESS files.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>website-font:</strong> Font awesome assets, other icon fonts.
-                                <div class="fxs_contextual_alert fxs_alert_info">
-                                    <span class="fxs_alertLabel">Heads Up!</span>
-                                    <p class="fxs_alertText">The main font of the website is "Fira Sans" and is imported via Google fonts (head)</p>
-                                </div>
-                            </li>
-                            <li><strong>website-htmldesign:</strong> Static HTML templates</li>
-                            <li><strong>img:</strong> Global site images</li>
-                            <li><strong>js:</strong> All js assets for the general site</li>
-                            <li>
-                                <strong>widgets:</strong> Assets and plain examples HTML (not layout) for each widget.
-                                <ul>
-                                    <li>
-                                        <strong>core:</strong> The general assets that works for all widgets.
-                                        <ul>
-                                            <li><strong>css:</strong> core.less => core.min.css</li>
-                                            <li><strong>js:</strong> general js: Bootstrap, jQuery and c3 (charts library).</li>
-                                            <li><strong>website-font:</strong> Font awesome</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <strong>widget:</strong> Spescific widget assets
-                                        <ul>
-                                            <li>
-                                                <strong>css:</strong> widget.less => widget.min.css
-                                                <div class="fxs_contextual_alert fxs_alert_info">
-                                                    <span class="fxs_alertLabel">Heads Up!</span>
-                                                    <p class="fxs_alertText">This LESS will be imported from "fxs_screen.less" in order to have the same CSS. Avoid duplicity!</p>
-                                                </div>
-                                            </li>
-                                            <li>widget-example.html</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <strong>widgetmultiasset:</strong> The multiasset version of each widget, the assets are called from the single asset widget.
-                                        <ul>
-                                            <li>widgetmultiasset-example.html</li>
-                                        </ul>
-                                    </li>
-                                    <li>...</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <p>In order to get started, you have to <strong>know the structure of the project</strong>, the LESS files and the compiled CSS files</p>
+                        <div class="fxs_marginBase_bottom">
+                            <a class="fxs_btn fxs_btn_default" href="https://github.com/PowellGuaglioneFXS/FXS_frontend.git" target="_blank">View the GitHub Project</a>
+                        </div>
 
                         <div class="fxs_contextual_alert fxs_alert_warning">
                             <span class="fxs_alertLabel">Heads Up!</span>
