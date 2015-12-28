@@ -1980,12 +1980,25 @@
                             <a href="website/static-html/modal-pages/modal_example_sidebar.html" class="fxs_btn fxs_btn_line">Launch Modal sidebar page <i class="fa fa-angle-double-right"></i></a>
 
                             <a href="website/static-html/modal-pages/modal_example_wide.html" class="fxs_btn fxs_btn_line">Launch Modal wide page <i class="fa fa-angle-double-right"></i></a>
+
+                            <!-- open roadblock modal -->
+                            <a href="#" data-toggle="modal" data-target="#fxs_modal_sponsor" class="fxs_btn fxs_btn_default">
+                               Launch modal roadblock sponsor
+                            </a>
+                            <span class="fxs_skip">Launch modal roadblock sponsor</span>
+
+                            <!-- open modal roadblock form -->
+                            <a href="#" data-toggle="modal" data-target="#fxs_modal_form" class="fxs_btn fxs_btn_default">
+                               Launch modal roadblock form
+                            </a>
+                            <span class="fxs_skip">Launch modal roadblock form</span>
                         </div>
 
                         <div class="fxs_contextual_alert fxs_alert_info">
                             <span class="fxs_alertLabel">Heads Up!</span>
                             <p class="fxs_alertText">Load the modal marckup at the end of the site content, just before the <code>&lt;/body&gt;</code> tag (and the scripts of course) to ensure correct visualization.</p>
                         </div>
+
 
                         <pre>
     &lt;div class="fxs_modal_wrap modal fade" id="fxs_modal"&gt;
@@ -7194,6 +7207,87 @@
         </div>
     </div>
     <!-- /Modal -->
+
+    <!-- modal roadblock sponsor image or something else -->
+    <div class="fxs_modal_wrap modal fade" id="fxs_modal_sponsor">
+        <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close Modal">
+            <i class="fa fa-times"></i>
+            <span class="fxs_skip">Close Modal</span>
+        </button>
+
+        <!-- fxs_modal_roadblock_sponsor rule to display sponsor modal -->
+        <div class="fxs_modal_content fxs_modal_roadblock_sponsor">
+
+            <div class="fxs_detail">
+                
+                <a href="link sponsor" title="sponsor name">
+                    <!-- fxs_visible_xs rule to display different sponsor image with different size -->
+                    <img class="fxs_visible_xs" src="website/img/mobile-test.jpg">
+
+                    <!-- fxs_hidden_xs rule to display normal sponsor image size -->
+                    <img class="fxs_hidden_xs" src="website/img/17958328625604535739.jpg">
+                </a>
+                
+            </div>
+
+            <!-- /Modal body -->
+        </div>
+    </div>
+
+    <!-- modal roadblock form -->
+    <div class="fxs_modal_wrap modal fade" id="fxs_modal_form">
+        <button type="button" class="fxs_modal_close fxs_btn_icon fxs_btn_functional close" data-dismiss="modal" aria-label="Close Modal">
+            <i class="fa fa-times"></i>
+            <span class="fxs_skip">Close Modal</span>
+        </button>
+        <div class="fxs_modal_content fxs_modal_roadblock_sponsor">
+
+            <div class="fxs_detail">
+
+                <form>
+                    <fieldset class="fxs_fieldset">
+                        <legend>Form example</legend>
+
+                        <div class="fxs_formGroup">
+                            <label title="name" for="example-name">
+                                <abbr title="Required">*</abbr> Your Name
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Please write your complete name" id="example-name">
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label title="Password" for="example-email">
+                                <abbr title="Required">*</abbr> Your Email
+                            </label>
+                            <input type="email" class="fxs_textInput" placeholder="Your daily used email" id="example-email">
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup">
+                                <input type="checkbox" id="terms"> Check me out
+                            </label>
+                        </div>
+
+                        <div class="fxs_formGroup">
+                          <label class="fxs_checkboxGroup">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                            Choose this option
+                          </label>
+                          <label class="fxs_checkboxGroup">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Or this other option
+                          </label>
+                        </div>
+
+                        <button type="submit" class="fxs_btn fxs_btn_default">Send this thing</button>
+
+                    </fieldset>
+                </form>
+
+            </div>
+           
+            
+            <!-- /Modal body -->
+        </div>
+    </div>
     
 
     <script src="website/js/jquery-1.11.3.min.js"></script>
@@ -7217,10 +7311,13 @@
 
         ////////////////////////////////
         //// Stick em /////////////////
-        $('.fxs_detail').stickem({
-           containerScroll: $("#fxs_content"),
-           offset: 65
-        });
+        function checkSticky() {
+            $('.fxs_detail').stickem({
+               containerScroll: $("#fxs_content"),
+               offset: 65
+            });
+        }
+        setTimeout(checkSticky, 2000);
 
 
         /////////////////////////////////////////////
