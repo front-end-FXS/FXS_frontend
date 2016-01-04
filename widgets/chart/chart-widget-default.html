@@ -27,26 +27,25 @@
                     </div>
 
                     <!-- / fxs preload --> 
+                    <!-- bloque widget chart default -->
                     <div class="fxs_widget_chart">
-                        <div class="fxs_widget_divider_module">
-                            <!-- bloque widget chart default -->
-                            <div class="fxs_widget_chart_container">                            
-                                <ul class="fxs_tabs_nav">
-                                    <li class="active"><a data-toggle="tab" href="#myTab1" title="My tab">1d</a></li>
-                                    <li><a data-toggle="tab" href="#myTab2" title="My tab">1w</a></li>
-                                    <li><a data-toggle="tab" href="#myTab3" title="My tab">1m</a></li>
-                                    <li><a data-toggle="tab" href="#myTab4" title="My tab">1y</a></li>
-                                </ul>
-                                <div class="fxs_indexes_tabpanel tab-content">
-                                   <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph" style="width:100%"></div>
-                                </div>                                                       
+                        <div class="fxs_widget_divider_module fxs_relativePositioning">
+                           <div id="chartDiv" class="fxs_widget_default fxs_widget_chart_graph fxs_compare_performance_chart" style="width:100%"></div>
+                           <div class="fxs_fullreport_chart">
+                                <!-- 
+                                link to modal page 
+                                ver maqueta en: static-html/widgets-test/chart/chart-modal.html
+                                --> 
+                                <a href="../../website/static-html/widgets-test/chart/chart-modal.html" class="fxs_btn_icon fxs_btn_default" data-toggle="tooltip" data-placement="top" title="View chart detail" data-original-title="See full chart"><i class="fa fa-expand"></i>
+                                    <span class="fxs_skip">View chart detail</span>
+                                </a>                                                    
                             </div>
                             <!-- bloque widget chart -->
                         </div>
+                        <footer class="fxs_widget_footer"> 
+                            <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                        </footer> 
                     </div>
-                    <footer class="fxs_widget_footer">                              
-                        <a class="fxs_btn fxs_btn_line fxs_btn_small">Button Line <i class="fa fa-angle-double-right"></i></a>
-                    </footer> 
                 </section>
             </section>
         </div>
@@ -100,13 +99,13 @@
                 // grid
                 "grid.show":true,
                 // custom graph
-                "main.chartType": 'mountain',
+                "main.chartType": 'candle',
                 // colors values down
                 //"main.lineColor": "rgba(51, 132, 115, 1)",
                 //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
                 // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
+                //"main.lineColor": "rgba(60, 71, 53, 1)",
+                //"main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
 
                 // custom tootlbars and history
                 "volume.show": false,
@@ -125,7 +124,8 @@
                 "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
                 "data.maxAdditionalBars": 1000,
                 'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
+                'zoom.dateRange': '1w',
+                'data.period':'intraday 60',
                 'dialogs.limitingElementId': 'chartDiv'
             });
 
@@ -227,6 +227,8 @@
             ]);
 
             chart.symbols.setMainSymbol(strSymbolname, strLabelname);
+            chart.symbols.addIndicator( "sma", { period:100, shift:0 } );
+            chart.symbols.addIndicator( "rsi", "14","70","30","1" );
 
             chart.resize();
 
