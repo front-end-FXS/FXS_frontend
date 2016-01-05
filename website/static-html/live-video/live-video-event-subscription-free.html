@@ -611,8 +611,9 @@
                                         </div>
 
                                         <!-- NOT Live item -->
+                                        <!-- el usuario debe estar logeado para ver el evento -->
                                         <a href="/" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                            Subscribe now!
+                                            Send me a reminder!
                                         </a>
                                         <!-- /NOT Live item -->
 
@@ -920,7 +921,7 @@
             $('.modal').on('hidden.bs.modal', function () { parent.history.back(); });
 
             // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-            $('#clock').countdown('2015-12-31 23:59:59')
+            $('#clock').countdown('2016-12-31 23:59:59')
             .on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                 // Añadir un 'if (pensando warramente') cuando los meses >0 = mostrar meses | las semanas >0 = mostrar semanas

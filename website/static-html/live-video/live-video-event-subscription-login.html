@@ -610,17 +610,17 @@
                                             <div id="clock" class="fxs_countdown_clock"></div>
                                         </div>
 
-                                        <small>You need to be registered to view this content.</small>
+                                        <small>You need to be logged to view this content.</small>
 
                                         <!-- NOT Live item -->
                                         <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                            Register for free
+                                            Login
                                         </button>
                                         <!-- /NOT Live item -->
 
                                         <!-- Live item -->
                                         <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
-                                            Register to enter!
+                                            Login to enter!
                                         </button>
                                         <!-- /Live item -->
 
@@ -922,7 +922,7 @@
             $('.modal').on('hidden.bs.modal', function () { parent.history.back(); });
 
             // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-            $('#clock').countdown('2015-12-31 23:59:59')
+            $('#clock').countdown('2016-12-31 23:59:59')
             .on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                 // Añadir un 'if (pensando warramente') cuando los meses >0 = mostrar meses | las semanas >0 = mostrar semanas
