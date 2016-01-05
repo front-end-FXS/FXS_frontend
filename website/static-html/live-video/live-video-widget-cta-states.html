@@ -283,13 +283,15 @@
                                         </div>
 
                                         <!-- NOT Live item -->
-                                        <a href="/" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                            Subscribe now!
+                                        <!-- el evento no a comenzado -->
+                                        <a href="live-topic-page.html" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
+                                            Enter now!
                                         </a>
                                         <!-- /NOT Live item -->
 
                                         <!-- Live item -->
-                                        <a href="/" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
+                                        <!-- el contador a llegado a 0 el evento a coemnzado -->
+                                        <a href="live-topic-page.html" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
                                             <i class="fa fa-play"></i> Enter now!
                                         </a>
                                         <!-- /Live item -->
@@ -379,17 +381,19 @@
                                             <div id="clock_2" class="fxs_countdown_clock"></div>
                                         </div>
 
-                                        <small>You need to be registered to view this content.</small>
+                                        <small>You need to be logged to view this content.</small>
 
                                         <!-- NOT Live item -->
+                                        <!-- el evento no a comenzado -->
                                         <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                            Register for free
+                                            Login
                                         </button>
                                         <!-- /NOT Live item -->
 
                                         <!-- Live item -->
+                                        <!-- el contador a llegado a 0 el evento a coemnzado -->
                                         <button data-toggle="EJEMPLO-A-PIÑON-COMPORTAMIENTO" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
-                                            Register to enter!
+                                            Login to enter!
                                         </button>
                                         <!-- /Live item -->
 
@@ -485,12 +489,14 @@
                                         </div>
 
                                         <!-- NOT Live item -->
+                                        <!-- enlace que lleva a un registro externo -->
                                         <a href="path-to-webex-meeting" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
                                             Subscribe to event
                                         </a>
                                         <!-- /NOT Live item -->
 
                                         <!-- Live item -->
+                                        <!-- ya es premium -->
                                         <a href="path-to-webex-meeting" class="fxs_btn fxs_btn_danger fxs_btn_block fxs_onAir_item">
                                             Join to event now!
                                         </a>
@@ -573,6 +579,7 @@
                                         <!-- /Event author -->
 
                                         <!-- Premium label!!! -->
+                                        <!-- no es premium o no esta logeado -->
                                         <span class="fxs_label fxs_label_featured">Premium</span>
                                         <!-- Premium label!!! -->
                                 
@@ -1294,7 +1301,7 @@
 
     <script>
     // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-        $('#clock').countdown('2015/12/03 09:16:00')
+        $('#clock').countdown('2016/12/03 09:16:00')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
@@ -1313,7 +1320,7 @@
         });
 
         // otro ejemplo (free-login*)
-        $('#clock_2').countdown('2015/12/01 17:30:00')
+        $('#clock_2').countdown('2016/12/01 17:30:00')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
@@ -1332,7 +1339,7 @@
         });
 
         // otro ejemplo (Premium-user logged premium)
-        $('#clock_3').countdown('2015/11/30 13:00:30')
+        $('#clock_3').countdown('2016/11/30 13:00:30')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
@@ -1352,7 +1359,7 @@
 
 
         // otro ejemplo (Premium-user not-logged / not premium)
-        $('#clock_4').countdown('2015/11/30 17:00:30')
+        $('#clock_4').countdown('2016/11/30 17:00:30')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
@@ -1372,7 +1379,7 @@
 
 
         // otro ejemplo (subscribed)
-        $('#clock_5').countdown('2015/12/03 17:00:30')
+        $('#clock_5').countdown('2016/12/03 17:00:30')
         .on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime(''
             + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
