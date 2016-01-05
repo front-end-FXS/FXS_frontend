@@ -485,7 +485,7 @@
             <div class="fxs_modal_content">
 
                 <div class="fxs_modal_add fxs_leaderboard">
-                    <div class="fxs_add esto_es_un_ejemplo_para_borrar">
+                    <div class="fxs_ad">
                         <a href="http://octaengine.com/c/?p=77&amp;b=882&amp;bt=gif" target="_blank">
                             <img src="http://octaengine.com/a/33/en/octafx_supercharged_728x90_en.gif" width="728" height="90">
                         </a>
@@ -611,8 +611,9 @@
                                         </div>
 
                                         <!-- NOT Live item -->
+                                        <!-- el usuario debe estar logeado para ver el evento -->
                                         <a href="/" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_not_onAir_item">
-                                            Subscribe now!
+                                            Send me a reminder!
                                         </a>
                                         <!-- /NOT Live item -->
 
@@ -920,7 +921,7 @@
             $('.modal').on('hidden.bs.modal', function () { parent.history.back(); });
 
             // Está metido MUY A SACO!!!, ver documentación del plugin para hacerlo más fino, se puede configurar por [data-time="2015/11/27 12:22:00"] en lugar de #ID. Ver documentación: http://hilios.github.io/jQuery.countdown/
-            $('#clock').countdown('2015-12-31 23:59:59')
+            $('#clock').countdown('2016-12-31 23:59:59')
             .on('update.countdown', function(event) {
                 var $this = $(this).html(event.strftime(''
                 // Añadir un 'if (pensando warramente') cuando los meses >0 = mostrar meses | las semanas >0 = mostrar semanas
