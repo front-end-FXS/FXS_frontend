@@ -140,6 +140,9 @@
 .fxs_show_usermenu {
   float: right;
   position:relative;
+  &.fxs_user_logged{
+    background-color: @success_clr;
+  }
 }
 
 ////////// Subnav bar & Toggle list //////////
@@ -191,6 +194,12 @@
     .fxs_signup_conditions {
       margin-left: 1.5rem;
       display: block;
+    }
+  }
+  .fxs_user_logged_premium_features{
+    .fxs_list_unstyled li{
+      font-size: @txt_size_xsmall;
+      color:@light_3_clr;
     }
   }
 }
