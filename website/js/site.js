@@ -195,4 +195,25 @@ $(document).ready(function () {
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
     });
 
+    // USER ZONE
+
+    // user logout
+    $('.fxs_logout_user').click(function () {         
+        $('.fxs_user_logged').removeClass('fxs_show_user_logged'); // hide right column
+        $('.fxs_show_usermenu').removeClass('fxs_show_user_icon_logged') // change icon color
+    });
+
+    $(".fxs_login_btn").on("click", startLoading); // call startLoading function
+
+    var timer;
+    // display preload and after certain time display right column with user settings 
+    function startLoading(){
+      $(".fxs_custom_site_elements_preload").css('visibility', 'visible');
+      timer = setTimeout(function(){
+          $('.fxs_user_logged').addClass('fxs_show_user_logged');  
+          $('.fxs_show_usermenu').addClass('fxs_show_user_icon_logged');
+          $(".fxs_custom_site_elements_preload").css('visibility', 'hidden');
+      }, 2000);
+    }
+
 });
