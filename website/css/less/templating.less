@@ -140,6 +140,12 @@
 .fxs_show_usermenu {
   float: right;
   position:relative;
+  &.fxs_show_user_icon_logged{
+    background-color: transparent;
+    .fa-user{
+      color:@success_clr;
+    }
+  }
   &.fxs_user_logged{
     background-color: @success_clr;
   }
@@ -263,12 +269,27 @@
   i { padding-left: 1rem; }
   &:hover { background-color:@dark_4_clr; }
 }
+.fxs_timezone_btn{
+  background-color: @dark_1_clr;
+  border-top: 1px solid @dark_3_clr;
+  bottom: 0;
+  color: @lightest_clr;
+  display: block;
+  font-size: @txt_size_small;
+  height: @main_header_height;
+  position: fixed;
+  width: @slide_sidebar_space; 
+}
 
 // Timezone menu
-.fxs_timezone_items {
+.fxs_timezone_items, .fxs_user_logged {
   right: -@slide_sidebar_space;
   z-index: 1;
   &.fxs_show_timezoneHours {
+    visibility: visible;
+    right: 0;
+  }
+  &.fxs_show_user_logged {
     visibility: visible;
     right: 0;
   }

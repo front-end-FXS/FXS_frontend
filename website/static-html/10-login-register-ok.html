@@ -33,8 +33,9 @@
             </ul>
         </nav>
 
-        <button type="button" id="showRightPush" class="fxs_show_usermenu fxs_user_logged"> 
-            <i class="fa fa-user"></i> <span class="fxs_skip">User Settings</span> 
+        <button type="button" id="showRightPush" class="fxs_show_usermenu">
+            <i class="fa fa-user"></i>
+            <span class="fxs_skip">User Settings</span>
         </button>
 
     </header>
@@ -369,36 +370,112 @@
         <!-- /ListView -->
 
         <!-- Sidebar right -->
-        <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
-            <div class="fxs_user_area_content">
-                <div class="fxs_user_info">
-                    Username | <a href="#">Log out</a>
-                </div>
-            </div>
-           
-            <div class="fxs_user_logged_premium_features fxs_marginBase_left fxs_marginBase_right  fxs_marginBase_top">
-                <h2 class="fxs_headline_from_tiny_to_small" style="color:#fff" rel="author">
-                    Premium Webinars Services
-                </h2>
-                <strong>Premium features</strong>
-                <ul class="fxs_list_unstyled">
-                    <li>Premium Live Webinars + Archives.</li>
-                    <li>The most experienced traders and speakers.</li>
-                    <li>Small group sessions.</li>
-                    <li>The most advanced advice and market commentary.</li>
-                    <li>Archives: Premium webinars recordings since 2007.</li>
-                    <li>Multi-device: Participate from tablet, mobile* or desktop.</li>
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
                 </ul>
-                <a href="08-premium-paywall-layout.html" class="fxs_btn fxs_btn_cta fxs_btn_block" type="submit">Be premium</a>
-            </div>
-           
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="button" class="fxs_btn fxs_btn_cta fxs_btn_block fxs_login_btn">log in</button>
 
-            <button type="button" class="fxs_timezone_btn" title="select timezone">
-                <span class="fxs_helperLabel_title">Timezone</span>
-                <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
-            </button>
-        </div>
-        <!-- /Sidebar right -->
+                            <!-- preload login -->
+                            <div class="fxs_preload fxs_custom_site_elements_preload fxs_txt_center fade in">
+                                <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
+                            </div>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                                
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+
+                            <div class="fxs_contextual_alert fxs_alert_success">
+                                <span class="fxs_alertLabel">Congrats!</span>
+                                <p class="fxs_alertText"><strong>You're registered successfully!</strong> Verify your email, a confirmation email has been sent to elbroker@emailto.com</p>
+                            </div>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
 
         <!-- Timezones -->
         <div class="fxs_pageSidebar fxs_timezone_items">
@@ -534,10 +611,41 @@
                     </li>
                     
                 </ol>
-            </div>
-            
+            </div>            
         </div>
         <!-- /Timezones -->
+
+        <!-- user logged -->
+        <div class="fxs_pageSidebar fxs_user_logged">
+            <div class="fxs_user_area_content">
+                <div class="fxs_user_info">
+                    Username | <a href="#" class="fxs_logout_user">Log out</a>
+                </div>
+            </div>
+           
+            <div class="fxs_user_logged_premium_features fxs_marginBase_left fxs_marginBase_right  fxs_marginBase_top">
+                <h2 class="fxs_headline_from_tiny_to_small" style="color:#fff" rel="author">
+                    Premium Webinars Services
+                </h2>
+                <strong>Premium features</strong>
+                <ul class="fxs_list_unstyled">
+                    <li>Premium Live Webinars + Archives.</li>
+                    <li>The most experienced traders and speakers.</li>
+                    <li>Small group sessions.</li>
+                    <li>The most advanced advice and market commentary.</li>
+                    <li>Archives: Premium webinars recordings since 2007.</li>
+                    <li>Multi-device: Participate from tablet, mobile* or desktop.</li>
+                </ul>
+                <a href="08-premium-paywall-layout.html" class="fxs_btn fxs_btn_cta fxs_btn_block" type="submit">Be premium</a>
+            </div>
+           
+
+            <button type="button" class="fxs_timezone_btn" title="select timezone">
+                <span class="fxs_helperLabel_title">Timezone</span>
+                <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+            </button>
+        </div>
+        <!-- /user logged -->
 
         <!-- Site footer -->
         <footer class="fxs_footer">

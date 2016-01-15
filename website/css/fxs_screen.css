@@ -2314,6 +2314,10 @@ width:calc(100% - 320px);
 .fxs_preload {
   height: 100px;
 }
+.fxs_preload.fxs_custom_site_elements_preload {
+  visibility: hidden;
+  height: 30px;
+}
 .fxs_preload.fxs_ad_role {
   height: 2rem;
 }
@@ -3700,6 +3704,12 @@ fieldset[disabled] .fxs_show_usermenu {
   float: right;
   position: relative;
 }
+.fxs_show_usermenu.fxs_show_user_icon_logged {
+  background-color: transparent;
+}
+.fxs_show_usermenu.fxs_show_user_icon_logged .fa-user {
+  color: #338473;
+}
 .fxs_show_usermenu.fxs_user_logged {
   background-color: #338473;
 }
@@ -3831,11 +3841,29 @@ width:calc(100% - 320px);
 .fxs_timezone_btn:hover {
   background-color: #49494f;
 }
-.fxs_timezone_items {
+.fxs_timezone_btn {
+  background-color: #1b1c23;
+  border-top: 1px solid #2f2f33;
+  bottom: 0;
+  color: #ffffff;
+  display: block;
+  font-size: 0.92rem;
+  height: 45px;
+  position: fixed;
+  width: 276px;
+}
+.fxs_timezone_items,
+.fxs_user_logged {
   right: -276px;
   z-index: 1;
 }
-.fxs_timezone_items.fxs_show_timezoneHours {
+.fxs_timezone_items.fxs_show_timezoneHours,
+.fxs_user_logged.fxs_show_timezoneHours {
+  visibility: visible;
+  right: 0;
+}
+.fxs_timezone_items.fxs_show_user_logged,
+.fxs_user_logged.fxs_show_user_logged {
   visibility: visible;
   right: 0;
 }
