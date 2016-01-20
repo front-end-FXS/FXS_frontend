@@ -1,6 +1,37 @@
 ﻿body{
      &.sfPageEditor{
         // disable modal in sitefinity dashboard
+        .modal-header{
+            h3.modal-title{
+                font-size: 22px;
+                font-weight: 300;
+                color:#999;
+            }
+        }
+        .fxs_divider_editor{
+            width:100%;
+            background-color: #ccc;
+        }
+        .fxs_topic_title{
+            font-size: 18px;
+        }
+        input.fxs_ad_num_field{
+            border:1px solid #ccc;
+            height:30px;
+            width:100px;
+        }
+        label{
+            min-width:100px;
+        }
+        input.fxs_count_items{
+            width:30px;
+            padding:5px;
+        }
+        .fxs_info_fields{
+            font-size: 12px;
+            color:#666;
+            padding-left:5px;
+        }
         &.fxs_modal_page{
             .fxs_modal_wrap{
                 display:block;
@@ -33,6 +64,14 @@
             margin-top:-16px!important;
             cursor:move;
         }
+        .k-window-actions{
+            top:39px!important;
+            .k-window-action {
+                &.k-state-hover{
+                    background-color: transparent;
+                }
+            }
+        }
         .k-window-content{
             padding:20px;
             button{
@@ -63,6 +102,12 @@
                 }
                 button{
                     margin-top:10px;
+                    border-radius: 4px;
+                    &:hover{
+                        background-color: #ccc;
+                    }
+                    padding-left:10px;
+                    padding-right:10px;
                 }
                 input{
                     padding:2px;
@@ -72,6 +117,11 @@
                 }
                 select{
                     width:100%;
+                }
+                .k-state-hover{
+                    &:hover{
+                        background-color: transparent;
+                    }
                 }
             } 
             .k-header{
@@ -98,9 +148,6 @@
         }
         .field-group{
             padding-bottom:10px;
-            input{
-                padding:0;
-            }
         }
 
         // fxstreet dashboard rules
