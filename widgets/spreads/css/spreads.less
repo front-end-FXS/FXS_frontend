@@ -11,6 +11,20 @@
     >tr >td, >tr >th { padding: 0.25rem; }
   }
 
+  // disable state
+  >tbody, >thead, >tfoot {
+    >tr{
+      &.fxs_widget_broker_disable{ 
+        opacity: 0.2;
+        cursor:default;
+        &:hover{
+          opacity: 0.2;
+        }
+      }
+    }
+
+    }
+
 	// Spread txt item
 	.fxs_widget_spreads_item {
     font-size: @txt_size_large;
