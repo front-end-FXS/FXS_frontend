@@ -196,6 +196,9 @@
                     <main id="fxs_it_detail" role="main">
                         <!-- Main Setcion -->
                         <section class="fxs_detail">
+
+                            <!-- remember password section: email -->
+
                             <div class="fxs_remember_pass">
                                 <div class="fxs_clearfix fxs_txt_center">
                                     <h2 class="fxs_headline_medium">Forgot your password</h2>
@@ -207,30 +210,34 @@
                                     <div class="fxs_col fxs_col_50">
                                         <form class="fxs_remember_form">
                                             
-                                                <div class="fxs_formGroup">
-                                                    <label title="Password" for="example-email">
-                                                        <abbr title="Required">*</abbr> Please type your email
-                                                    </label>
-                                                    <input type="email" class="fxs_textInput" id="example-email">
-                                                </div>
+                                            <div class="fxs_formGroup">
+                                                <label title="Password" for="email">
+                                                    <abbr title="Required">*</abbr> Please type your email
+                                                </label>
+                                                <input type="email" class="fxs_textInput" id="example-email">
+                                            </div>
 
-                                                <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Forgot password</button>
+                                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Forgot password</button>
 
                                         </form>
-
+                                        <!-- successful message -->
                                         <div class="fxs_contextual_alert fxs_alert_success">
                                             <p class="fxs_alertText">Verify your email, a confirmation email has been sent to elbroker@emailto.com</p>
                                         </div>
-
+                                        <!-- error message -->
                                         <div class="fxs_contextual_alert fxs_alert_error">
                                             <span class="fxs_alertLabel">Sorry!</span>
                                             <p class="fxs_alertText">We couldn't find an account with this email: elbroker@emailto.com</p>
                                         </div>
+
                                     </div>
                                     <div class="fxs_col fxs_col_25">
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- /remember password section: email -->
+
                         </section>
                         <!-- /Main Section -->
                     </main>
