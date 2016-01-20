@@ -6555,6 +6555,17 @@ width:calc(100% - 140px);
 .fxs_widget_spreads_table > tfoot > tr > th {
   padding: 0.25rem;
 }
+.fxs_widget_spreads_table > tbody > tr.fxs_widget_broker_disable,
+.fxs_widget_spreads_table > thead > tr.fxs_widget_broker_disable,
+.fxs_widget_spreads_table > tfoot > tr.fxs_widget_broker_disable {
+  opacity: 0.2;
+  cursor: default;
+}
+.fxs_widget_spreads_table > tbody > tr.fxs_widget_broker_disable:hover,
+.fxs_widget_spreads_table > thead > tr.fxs_widget_broker_disable:hover,
+.fxs_widget_spreads_table > tfoot > tr.fxs_widget_broker_disable:hover {
+  opacity: 0.2;
+}
 .fxs_widget_spreads_table .fxs_widget_spreads_item {
   font-size: 1.2rem;
   display: block;
