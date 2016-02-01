@@ -132,8 +132,11 @@
   font-size: @icon_defaultsize;
   line-height: @main_header_height;
   width: @main_header_height - 5;
-  &:hover, &.active { background-color: @brand_highlight_clr; }
+  &:hover, &.active { 
+    background-color: @brand_highlight_clr; 
+  }
 }
+
 
 .fxs_show_navmenu { float: left; }
 
@@ -1008,6 +1011,13 @@
   }
 }
 
+.fxs_broker_country_disable{
+  h2,h1,strong,small,footer,aside,img,dt,dd,ul.fxs_plainInlined_list,.fxs_alert_info,a:not(.fxs_broker_country_link_enable){
+    opacity: .4;
+    pointer-events: none;
+  }
+}
+
 ///////////////////////////////////////////////////////////
 //////////////////// Live video //////////////////////////
 .fxs_live_events_table {
@@ -1092,6 +1102,7 @@
   }
 }
 
+
 // Wallpaper
 .fxs_wallpaper_wrap {
   display: none;
@@ -1106,7 +1117,7 @@
     overflow: hidden;
     /* saf3+, chrome1+ */
     @media (-webkit-min-device-pixel-ratio: 0) { right: 10px; }
-    .cbp-spmenu-push-toleft & { top: 0; right: 0; }
+    .cbp-spmenu-push-toleft & { top: 0; right: 0; position:inherit;}
   }
   a {
     position: absolute;
