@@ -143,12 +143,12 @@ $(document).ready(function () {
         $('.fxs_toggleList').removeClass('active');
         disableOther('showRightPush');
     };
+
     showLeft.onclick = function () {
         classie.toggle(this, 'active');
         classie.toggle(listView, 'cbp-spmenu-open');
         disableOther('showLeft');
     };
-
     function disableOther(button) {
         if (button !== 'showLeftPush') {
             classie.toggle(showLeftPush, 'disabled');
@@ -173,19 +173,19 @@ $(document).ready(function () {
         $(this).closest('.fxs_filter').toggleClass("active");
     }); 
 
-        // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA
-        $('.fxs_dismissQuery').click(function() {
-            $('.fxs_filter').removeClass("active");
-            $('.fxs_typeaheadContainer').removeClass("result");
-            $('.fxs_typeaheadContainer').removeClass("hint");
-            $('.fxs_typeaheadContainer').removeClass("backdrop");
-            $('.fxs_queryResults').removeClass("fxs_selectedQuery");
-        });
+    // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA
+    $('.fxs_dismissQuery').click(function() {
+        $('.fxs_filter').removeClass("active");
+        $('.fxs_typeaheadContainer').removeClass("result");
+        $('.fxs_typeaheadContainer').removeClass("hint");
+        $('.fxs_typeaheadContainer').removeClass("backdrop");
+        $('.fxs_queryResults').removeClass("fxs_selectedQuery");
+    });
 
-        // ESTO YA ES DE PENA PERO EJEMPLIFICA BIEN: ACTIVAR LA CLASE DEL FILTRO CON QUERY SELECCIONADA
-        $('.fxs_content_subnav').click(function() {
-            $('.fxs_queryResults').addClass("fxs_selectedQuery");
-        });
+    // ESTO YA ES DE PENA PERO EJEMPLIFICA BIEN: ACTIVAR LA CLASE DEL FILTRO CON QUERY SELECCIONADA
+    $('.fxs_content_subnav').click(function() {
+        $('.fxs_queryResults').addClass("fxs_selectedQuery");
+    });
 
     // Toggle timezone class to show menu (metido a saco)
     $('.fxs_timezone_btn').click(function () {
@@ -216,5 +216,35 @@ $(document).ready(function () {
           $(".fxs_custom_site_elements_preload").css('visibility', 'hidden');
       }, 2000);
     }
+
+    // hide and show listview left column in responive mode //
+
+    /*
+
+    this piece of code is only necesary in the next files:
+
+    rates and charts
+    news
+    analysis
+    live video
+    education
+    find a broker
+
+    */
+
+    $('a.fxs_show_item_detail').click(function(){
+        var bodyHasParentSection = $('body').hasClass('fxs_isParent_section');
+        var listViewHasMenuOpen = $('.fxs_listView').hasClass('cbp-spmenu-open');
+
+        if(bodyHasParentSection){
+            $('body').removeClass('fxs_isParent_section');
+        }else{
+            if(listViewHasMenuOpen) {
+                $('.fxs_listView').removeClass('cbp-spmenu-open');
+            }
+        }
+      
+        $('.fxs_toggleList').css('transform', 'translateX(0px)');
+    });
 
 });
