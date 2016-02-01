@@ -182,20 +182,6 @@
 
         <div class="fxs_content" id="fxs_content">
 
-            <!-- Space for Global Alerts & Notifications --><!-- For dev -->
-            <!-- Add class "in" to show alerts -->
-            <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
-                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
-                  <i class="fa fa-close"></i>
-                  <span class="fxs_skip">Close alert</span>
-                </button>
-                <span class="fxs_alertLabel">Hey you</span>
-                <p class="fxs_alertText">                       
-                You are only viewing brokers that operate in your country.
-                </p>
-            </div>
-            <!-- /Space for Global Alerts & Notifications -->
-
             <!-- The content rail -->
             <div class="fxs_contentView">
 
@@ -221,6 +207,7 @@
                             </div>
                         </header>
                     </div>
+
                     <section class="fxs_detail">
                         <article class="fxs_row">
                             <div class="fxs_flex_col">
@@ -412,13 +399,26 @@
                     </section>
 
                     <!-- sponsored content -->
-                    <section class="fxs_detail">
+
+                    <!-- 
+                    example of broker disabled, you must add fxs_broker_country_disable to broker section, 
+                    also add fxs_broker_country_link_enable to details link, to address the clients to details page 
+                    -->
+
+                    <section class="fxs_detail fxs_broker_country_disable">
                         <div class="fxs_sponsored_broker fxs_sponsored_wrapper">
                             <div class="fxs_sponsored_broker_title">
                                 <span class="fxs_label">Sponsored Broker</span>
-                                <i class="fa fa-question-circle fxs_fRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i>
                             </div>
                             <article class="fxs_row">
+
+                                <!-- display this message if the broker is not available -->
+                                <div class="fxs_contextual_alert fxs_alert_warning alert alert-dismissible fade in" role="alert">
+                                    <span class="fxs_alertLabel">Sorry!</span>
+                                    <p class="fxs_alertText">This broker is not available in your country</p>
+                                </div>
+                                <!-- /display this message if the broker is not available -->
+                                
                                 <div class="fxs_flex_col">
                                     <header class="fxs_contributorBox_header">
                                         <!-- Broker's image -->
@@ -551,7 +551,7 @@
                                         </li>
                                         <li class="fxs_list_table_item">
                                             <a href="#" class="fxs_mutedLink fxs_fLeft">Comissions <i class="fa fa-external-link"></i></a>
-                                            <a href="broker-detail.html" class="fxs_mutedLink fxs_fRight">More details <i class="fa fa-angle-double-right"></i></a>
+                                            <a href="broker-detail-disabled.html" class="fxs_mutedLink fxs_fRight fxs_broker_country_link_enable">More details <i class="fa fa-angle-double-right"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1173,7 +1173,6 @@
                     <li class="fxs_listView_item fxs_sponsored_broker">
                         <div class="fxs_sponsored_broker_title">
                             <span class="fxs_label">Sponsored Broker</span>
-                            <i class="fa fa-question-circle fxs_fRight" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i>
                         </div>
                         <article class="fxs_clearfix">
                             <figure class="fxs_listView_squareImage">
