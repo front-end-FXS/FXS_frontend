@@ -4794,6 +4794,21 @@ width:calc(100% - 35px - 5px);
     padding: 0 2rem;
   }
 }
+.fxs_broker_country_disable h2,
+.fxs_broker_country_disable h1,
+.fxs_broker_country_disable strong,
+.fxs_broker_country_disable small,
+.fxs_broker_country_disable footer,
+.fxs_broker_country_disable aside,
+.fxs_broker_country_disable img,
+.fxs_broker_country_disable dt,
+.fxs_broker_country_disable dd,
+.fxs_broker_country_disable ul.fxs_plainInlined_list,
+.fxs_broker_country_disable .fxs_alert_info,
+.fxs_broker_country_disable a:not(.fxs_broker_country_link_enable) {
+  opacity: .4;
+  pointer-events: none;
+}
 .fxs_live_events_table > thead tr > th {
   padding: 0;
 }
@@ -4904,6 +4919,7 @@ width:calc(100% - 35px - 5px);
   .cbp-spmenu-push-toleft .fxs_wallpaper_wrap {
     top: 0;
     right: 0;
+    position: inherit;
   }
 }
 @media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 0) {
