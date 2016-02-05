@@ -1023,6 +1023,13 @@ width:calc(100% - 320px);
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.fxs_cookies_content {
+  margin: 0 auto;
+  max-width: 1033px;
+}
+.fxs_cookies_content .fxs_alert_info {
+  width: 100%;
+}
 .fxs_alertLabel {
   color: #ffffff;
   float: left;
@@ -1357,6 +1364,11 @@ width:calc(100% - 320px);
   -moz-opacity: 0.5;
   opacity: 0.5;
   cursor: default;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 .fxs_toggleList.disabled:hover {
   text-decoration: none;
@@ -2275,6 +2287,14 @@ lesshat-selector {
 .fxs_fRight {
   float: right;
 }
+.fxs_positionAbsolute_right {
+  right: 0;
+  left: inherit;
+}
+.fxs_positionAbsolute_left {
+  left: 0;
+  right: inherit;
+}
 .fxs_marginBase_top {
   margin-top: 1rem;
 }
@@ -2599,6 +2619,14 @@ lesshat-selector {
   .fxs_modal_wrap::-webkit-scrollbar-button,
   .fxs_swipeContent_slider::-webkit-scrollbar-button {
     display: none;
+  }
+}
+.fxs_notSlider_topics .fxs_swipeContent_slider {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fxs_notSlider_topics .fxs_swipeContent_slider {
+    display: block;
   }
 }
 .fxs_swipeContent_slider {

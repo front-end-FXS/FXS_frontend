@@ -161,7 +161,6 @@ $(document).ready(function () {
         }
     }
 
-    
 
     ///////////////////////////////////////////
     ////////// Buttons active state //////////
@@ -232,7 +231,7 @@ $(document).ready(function () {
 
     */
 
-    $('a.fxs_show_item_detail').click(function(){
+    $('.fxs_show_item_detail').click(function(){
         var bodyHasParentSection = $('body').hasClass('fxs_isParent_section');
         var listViewHasMenuOpen = $('.fxs_listView').hasClass('cbp-spmenu-open');
 

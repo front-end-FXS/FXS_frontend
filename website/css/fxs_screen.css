@@ -1547,6 +1547,13 @@ width:calc(100% - 320px);
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.fxs_cookies_content {
+  margin: 0 auto;
+  max-width: 1033px;
+}
+.fxs_cookies_content .fxs_alert_info {
+  width: 100%;
+}
 .fxs_alertLabel {
   color: #ffffff;
   float: left;
@@ -1892,6 +1899,11 @@ width:calc(100% - 320px);
   -moz-opacity: 0.5;
   opacity: 0.5;
   cursor: default;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 .fxs_toggleList.disabled:hover {
   text-decoration: none;
@@ -2912,6 +2924,14 @@ h5 a:hover,
 .fxs_fRight {
   float: right;
 }
+.fxs_positionAbsolute_right {
+  right: 0;
+  left: inherit;
+}
+.fxs_positionAbsolute_left {
+  left: 0;
+  right: inherit;
+}
 .fxs_marginBase_top {
   margin-top: 1rem;
 }
@@ -3389,6 +3409,14 @@ h5 a:hover,
   .fxs_listViewRail::-webkit-scrollbar-button,
   .fxs_copy_disclaimer .fxs_terms_nav .fxs_dropdownList::-webkit-scrollbar-button {
     display: none;
+  }
+}
+.fxs_notSlider_topics .fxs_swipeContent_slider {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fxs_notSlider_topics .fxs_swipeContent_slider {
+    display: block;
   }
 }
 .fxs_swipeContent_slider {
@@ -4098,13 +4126,6 @@ height:calc(100% - 45px);
     width: 325px;
     padding-right: 5px;
   }
-}
-.fxs_tranlate_item_detail {
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
 }
 @media (min-width: 680px) {
   .fxs_listView_space,
