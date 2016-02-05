@@ -239,6 +239,8 @@
 .fxs_dTable { display: table; width: 100%; }
 .fxs_fLeft { float: left; }
 .fxs_fRight { float: right; }
+.fxs_positionAbsolute_right { right:0; left:inherit; }
+.fxs_positionAbsolute_left { left:0; right:inherit; }
 .fxs_marginBase_top { margin-top: 1rem; }
 .fxs_marginHalf_top { margin-top: @half_base_spacer; }
 .fxs_marginBase_right { margin-right: 1rem; }
@@ -411,6 +413,15 @@
     }
     &::-webkit-scrollbar-button { display: none; }
     -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+// disable topics in mobile devices
+.fxs_notSlider_topics{
+  .fxs_swipeContent_slider{
+    display: none;
+     @media (min-width: @screen-m) {
+      display:block;
+     }
   }
 }
 
