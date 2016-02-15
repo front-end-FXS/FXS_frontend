@@ -253,6 +253,19 @@
     &:extend(.fxs_hidden_xs all);
   }
 }
+.fxs_live_event_module{
+  .fxs_passed_item{
+    display: none;
+  }
+  &.finished_event{
+    .fxs_passed_item{
+      display: block;
+    }
+    .fxs_next_item,.fxs_onAir_item {
+      display: none;
+    }
+  }
+}
 
 .fxs_onAir_item {
   display: none;
