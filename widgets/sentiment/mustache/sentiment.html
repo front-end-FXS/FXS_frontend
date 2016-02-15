@@ -7,7 +7,7 @@
 
             <th>{{Translations.TrendIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.TrendIndexInfo}}"></i></th>
 
-            <th>{{Translations.ObOsIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.ObOsIndexInfo}}">></i></th>
+            <th>{{Translations.ObOsIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.ObOsIndexInfo}}"></i></th>
 
             <th>{{Translations.VolatilityIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.VolatilityIndexInfo}}"></i></th>
         </tr>
@@ -15,15 +15,15 @@
         <tbody>
         {{#Studies}}
         <tr>
-            <th scope="row">{{Type}}</th>
+            <th scope="row">{{TypeDisplay}}</th>
             <td>
-                <span class="{{TrendClass}}">{{TrendValue}}</span>
+                <span class="{{TrendClass}}">{{TrendDisplay}}</span>
             </td>
             <td>
-                <span class="{{ObOsClass}}">{{ObOsValue}}</span>
+                <span class="{{ObOsClass}}">{{ObOsDisplay}}</span>
             </td>
             <td>
-                <span class="{{VolatilityClass}}">{{Volatilityvalue}}</span>
+                <span class="{{VolatilityClass}}">{{VolatilityDisplay}}</span>
             </td>
         </tr>
         {{/Studies}}
