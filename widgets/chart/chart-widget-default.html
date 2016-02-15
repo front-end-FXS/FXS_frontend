@@ -52,16 +52,16 @@
         <script src="../core/js/jquery-1.11.3.min.js"></script>
         <script src="../core/js/bootstrap.min.js"></script>
         
-        <script type="text/javascript" src="css/TTChart.js"></script>
-         <!--
-         <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js">
-        </script>-->
+    
+        <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js">
+        </script>
 
         <script>
 
             //var canvasElem = document.querySelector('canvas');
-            //var ctx = canvasElem.getContext("2d");
-
+            //var canvasContext = canvasElem.getContext('2d');
+            //canvasContext.fillStyle = "#fff";
+            //canvasContext.strokeStyle = "#fff";
 
             var d = Date.now();
 
@@ -119,8 +119,8 @@
                 "contextMenu.show": false,
                 "data.usePush": false,
                 // custom panel
-                //"panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": false,
+                "panel.background.color": "#F7F7F7",
+                "global.verticalAxisZoom": true,
                 "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
                 "data.maxAdditionalBars": 1000,
                 'data.dynamicHistoryLoading': true,
