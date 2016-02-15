@@ -5020,7 +5020,6 @@ width:calc(100% - 35px - 5px);
   }
 }
 .fxs_ad {
-  margin: 0 -1rem;
   text-align: center;
 }
 @media (min-width: 1150px) {
@@ -5501,6 +5500,16 @@ max-width:calc(100% - ( 35px + 5px ));
   height: 100%;
   top: 0;
   left: 0;
+}
+.fxs_live_event_module .fxs_passed_item {
+  display: none;
+}
+.fxs_live_event_module.finished_event .fxs_passed_item {
+  display: block;
+}
+.fxs_live_event_module.finished_event .fxs_next_item,
+.fxs_live_event_module.finished_event .fxs_onAir_item {
+  display: none;
 }
 .fxs_onAir_item {
   display: none;
