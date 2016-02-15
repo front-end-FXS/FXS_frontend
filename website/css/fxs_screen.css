@@ -383,6 +383,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: normal;
+}
 h2 {
   font-size: 1.46rem;
 }
@@ -2268,6 +2275,7 @@ width:calc(100% - 320px);
 .fxs_asset_label {
   max-width: 140px;
   font-size: 1rem;
+  line-height: normal;
 }
 .fxs_asset_label a {
   display: inline-block;
@@ -5020,7 +5028,6 @@ width:calc(100% - 35px - 5px);
   }
 }
 .fxs_ad {
-  margin: 0 -1rem;
   text-align: center;
 }
 @media (min-width: 1150px) {
@@ -5501,6 +5508,16 @@ max-width:calc(100% - ( 35px + 5px ));
   height: 100%;
   top: 0;
   left: 0;
+}
+.fxs_live_event_module .fxs_passed_item {
+  display: none;
+}
+.fxs_live_event_module.finished_event .fxs_passed_item {
+  display: block;
+}
+.fxs_live_event_module.finished_event .fxs_next_item,
+.fxs_live_event_module.finished_event .fxs_onAir_item {
+  display: none;
 }
 .fxs_onAir_item {
   display: none;
@@ -6397,6 +6414,58 @@ width:calc(100% - 210px - 2rem);
 .fxs_indexes_tabpanel .fxs_index_value {
   display: block;
   padding-bottom: 0.5rem;
+}
+.fxs_sentimental_widget .fxs_sentimental_expanding {
+  height: 20px;
+  /* fallback */
+  /* Safari 5.1, Chrome 10+ */
+  background: linear-gradient(left, #ffffff, #000000 120%);
+  background: -webkit-linear-gradient(left, #ffffff, #000000 120%);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #ffffff, #000000 120%);
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #ffffff, #000000 120%);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #ffffff, #000000 120%);
+}
+.fxs_sentimental_widget .fxs_sentimental_shrinking {
+  height: 20px;
+  /* fallback */
+  /* Safari 5.1, Chrome 10+ */
+  background: linear-gradient(left, #000000 -20%, #ffffff);
+  background: -webkit-linear-gradient(left, #000000 -20%, #ffffff);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #000000 -20%, #ffffff);
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #000000 -20%, #ffffff);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #000000 -20%, #ffffff);
+}
+.fxs_sentimental_widget .fxs_sentimental_low {
+  height: 20px;
+  /* fallback */
+  /* Safari 5.1, Chrome 10+ */
+  background: linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
+  background: -webkit-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
+  /* IE 10 */
+  background: -ms-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
+}
+.fxs_sentimental_widget .fxs_sentimental_high {
+  height: 20px;
+  /* fallback */
+  /* Safari 5.1, Chrome 10+ */
+  background: linear-gradient(to left, #000000, #000000);
+  background: -webkit-linear-gradient(to left, #000000, #000000);
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(to left, #000000, #000000);
+  /* IE 10 */
+  background: -ms-linear-gradient(to left, #000000, #000000);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(to left, #000000, #000000);
 }
 .fxs_pivotPoints_list {
   list-style: none;
