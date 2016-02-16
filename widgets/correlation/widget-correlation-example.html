@@ -41,15 +41,39 @@
                         to hide the preload delete this class
                         -->
 
-                        <div class="fxs_preload fxs_txt_center fxs_marginBase_top fade in">
+                        <!--<div class="fxs_preload fxs_txt_center fxs_marginBase_top fade in">
                             <i class="fa fa-circle-o-notch fa-spin fa-2x"></i>
                             <span class="fxs_preload_spin_text fxs_txt_neutral">Loading content...</span>
-                        </div>
+                        </div>-->
 
                         <!-- / fxs preload -->
                           <div class="fxs_widget_correlation fxs_widget_default">
                             <div class="fxs_widget_divider_module">
-                              <div id="c_chart"></div>
+                                <ul class="fxs_tabs_nav">
+                                    <li class="active"><a data-toggle="tab" href="#myTab1" title="My tab">15m</a></li>
+                                    <li><a data-toggle="tab" href="#myTab2" title="My tab">1h</a></li>
+                                    <li><a data-toggle="tab" href="#myTab3" title="My tab">4h</a></li>
+                                    <li><a data-toggle="tab" href="#myTab4" title="My tab">1d</a></li>
+                                    <li><a data-toggle="tab" href="#myTab5" title="My tab">4w</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" id="myTab1" class="tab-pane fade in active">
+                                        <div id="c_chart"></div>
+                                    </div>
+                                    <div role="tabpanel" id="myTab2" class="tab-pane fade">
+                                        <div id="c_chart_2"></div>
+                                    </div>
+                                    <div role="tabpanel" id="myTab3" class="tab-pane fade">
+                                        <div id="c_chart_3"></div>
+                                    </div>
+                                    <div role="tabpanel" id="myTab4" class="tab-pane fade">
+                                        <div id="c_chart_4"></div>
+                                    </div>
+                                    <div role="tabpanel" id="myTab5" class="tab-pane fade">
+                                        <div id="c_chart_5"></div>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
                             <!-- widget footer -->
                             <footer class="fxs_widget_footer">
@@ -121,6 +145,174 @@
 
             setTimeout(function () {
                 chart.load({
+                    columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
+                });
+            }, 500);
+
+            // ################### chart 2 #########################
+
+            var chart_2 = c3.generate({
+                bindto: '#c_chart_2',
+                data: {
+                  columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
+                  type: 'bar',
+                  names: { data1: 'Correlation' },
+                  color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+                },
+                bar: { width: 15 },
+                legend: { hide: true },
+                axis: {
+                  rotated: true,
+                  x: {
+                    type: 'category',
+                    categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
+                  },
+                  y: {
+                    padding: {top: 10, bottom: 10 },
+                    max: 1,
+                    min: -1,
+                    center: 0,
+                    tick: { values: [-1, -0.5, 0, 0.5, 1] }
+                  }
+                },
+                grid: {
+                  y: {
+                    show: true,
+                    lines: [ {value: 0} ]
+                  }
+                },
+                padding: { bottom: 0 },
+                size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
+            });
+
+            setTimeout(function () {
+                chart_2.load({
+                    columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
+                });
+            }, 500);
+
+            // ################### chart 3 #########################
+
+            var chart_3 = c3.generate({
+                bindto: '#c_chart_3',
+                data: {
+                  columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
+                  type: 'bar',
+                  names: { data1: 'Correlation' },
+                  color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+                },
+                bar: { width: 15 },
+                legend: { hide: true },
+                axis: {
+                  rotated: true,
+                  x: {
+                    type: 'category',
+                    categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
+                  },
+                  y: {
+                    padding: {top: 10, bottom: 10 },
+                    max: 1,
+                    min: -1,
+                    center: 0,
+                    tick: { values: [-1, -0.5, 0, 0.5, 1] }
+                  }
+                },
+                grid: {
+                  y: {
+                    show: true,
+                    lines: [ {value: 0} ]
+                  }
+                },
+                padding: { bottom: 0 },
+                size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
+            });
+
+            setTimeout(function () {
+                chart_3.load({
+                    columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
+                });
+            }, 500);
+
+            // ################### chart 4 #########################
+
+            var chart_4 = c3.generate({
+                bindto: '#c_chart_4',
+                data: {
+                  columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
+                  type: 'bar',
+                  names: { data1: 'Correlation' },
+                  color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+                },
+                bar: { width: 15 },
+                legend: { hide: true },
+                axis: {
+                  rotated: true,
+                  x: {
+                    type: 'category',
+                    categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
+                  },
+                  y: {
+                    padding: {top: 10, bottom: 10 },
+                    max: 1,
+                    min: -1,
+                    center: 0,
+                    tick: { values: [-1, -0.5, 0, 0.5, 1] }
+                  }
+                },
+                grid: {
+                  y: {
+                    show: true,
+                    lines: [ {value: 0} ]
+                  }
+                },
+                padding: { bottom: 0 },
+                size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
+            });
+
+            setTimeout(function () {
+                chart_4.load({
+                    columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
+                });
+            }, 500);
+
+            // ################### chart 5 #########################
+
+            var chart_5 = c3.generate({
+                bindto: '#c_chart_5',
+                data: {
+                  columns: [ ['data1', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] ],
+                  type: 'bar',
+                  names: { data1: 'Correlation' },
+                  color: function (color, d) { return colors[d.index]; } // *!!Metido harcoded a saco, preguntar cómo funciona (son diferentes sólo el min y max)
+                },
+                bar: { width: 15 },
+                legend: { hide: true },
+                axis: {
+                  rotated: true,
+                  x: {
+                    type: 'category',
+                    categories: ['AUD/JPJ', 'USD/JPY', 'USD/CAD', 'AUD/USD', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY', 'EUR/CAD', 'GBP/JPY', 'NZO/JPY']
+                  },
+                  y: {
+                    padding: {top: 10, bottom: 10 },
+                    max: 1,
+                    min: -1,
+                    center: 0,
+                    tick: { values: [-1, -0.5, 0, 0.5, 1] }
+                  }
+                },
+                grid: {
+                  y: {
+                    show: true,
+                    lines: [ {value: 0} ]
+                  }
+                },
+                padding: { bottom: 0 },
+                size: { height: 300 } //Altura proporcional al número de items, hablar con maquetación
+            });
+
+            setTimeout(function () {
+                chart_5.load({
                     columns: [ ['data1', 0.99, 0.88, 0.6, 0.4, 0.2, -0.1, -0.22, -0.33, -0.55, -0.8] ]
                 });
             }, 500);
