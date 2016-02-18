@@ -231,19 +231,20 @@ $(document).ready(function () {
 
     */
 
-    $('.fxs_show_item_detail').click(function(){
+    $('.fxs_listView_item').click(function(){
         var bodyHasParentSection = $('body').hasClass('fxs_isParent_section');
-        var listViewHasMenuOpen = $('.fxs_listView').hasClass('cbp-spmenu-open');
 
+        // on the first list element click we destroy the fucking class 'fxs_isParent_section' 
         if(bodyHasParentSection){
             $('body').removeClass('fxs_isParent_section');
-        }else{
-            if(listViewHasMenuOpen) {
-                $('.fxs_listView').removeClass('cbp-spmenu-open');
-            }
-        }
-      
-        $('.fxs_toggleList').css('transform', 'translateX(0px)');
+        } 
+
+        // copy the same properties of event function "showLeftPush.onclick = function ()" line:129   
+        classie.toggle(this, 'active');
+        classie.toggle(menuLeft, 'cbp-spmenu-open');
+        $('.fxs_listView').removeClass('cbp-spmenu-open');
+        $('.fxs_toggleList').removeClass('active');
+        disableOther('showLeftPush');
     });
 
 });
