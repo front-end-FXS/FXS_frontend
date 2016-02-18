@@ -507,7 +507,7 @@
 
 
             var chart = TTChart.create({ id: "chartDiv" });
-
+            window.ttchart = chart;
             chart.setOptions({
                 "global.locale": "en",
                 "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
@@ -518,11 +518,6 @@
                 // custom graph
                 "main.chartType": 'candle',
                 // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
 
                 // custom tootlbars and history
                 "volume.show": false,
@@ -647,6 +642,13 @@
             chart.symbols.addIndicator( "sma", { period:100, shift:0 } );
             chart.symbols.addIndicator( "rsi", "14","70","30","1" );
 
+            chart.symbols.indicators[1].settings['#Upper'].setOption('areaColors', ["#096955"]);
+            chart.symbols.indicators[1].settings['#Lower'].setOption('areaColors', ["#a80000"]);
+
+            // to change indicators line
+            //chart.symbols.indicators[0].settings.MovS.setOption('lineColor', 'red')
+            //chart.symbols.indicators[1].settings.RSI.setOption('lineColor', 'black')
+
             chart.resize();
 
             chart.setOption("toolbar.file", [['*|menu_load|*', 'load'],
@@ -657,13 +659,15 @@
                 ['*|Save Template|*', 'saveTemplate'],
                 ['*|Save Default|*', 'saveDefault']
             ]);
+            chart.setOption('main.risingColor','#338473');
+            chart.setOption('main.fallingColor','#D25746');
             chart.display();
             function addIndicator(objValue) {
                 if (objValue != "") {
                     chart.symbols.addIndicator(objValue);
                     chart.display();
                 }
-            }   
+            } 
         </script>   
 
     </body>
