@@ -47,6 +47,9 @@
   font-size: @txt_size_xsmall;
   line-height: @txt_lineheight_xsmall;
 }
+.fxs_txt_normal{
+  font-size: @txt_defaultsize_px;
+}
 
 .fxs_txt_large {
   font-size: @txt_size_large;
@@ -251,6 +254,16 @@
 .fxs_resetRow_margin {
   padding-left: @half_base_spacer;
   padding-right: @half_base_spacer;
+}
+
+// add separator with seudo elements
+.fxs_add_separator li{
+  &:after{
+    content:',';
+  }
+  &:last-child:after{
+    content:'';
+  }
 }
 
 // Absolute center element
