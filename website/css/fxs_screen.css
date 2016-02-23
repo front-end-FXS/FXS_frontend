@@ -2615,6 +2615,9 @@ lesshat-selector {
   font-size: 0.8rem;
   line-height: 1.063rem;
 }
+.fxs_txt_normal {
+  font-size: 15px;
+}
 .fxs_txt_large {
   font-size: 1.2rem;
   line-height: 1.35em;
@@ -2958,6 +2961,12 @@ h5 a:hover,
 .fxs_resetRow_margin {
   padding-left: 7.5px;
   padding-right: 7.5px;
+}
+.fxs_add_separator li:after {
+  content: ',';
+}
+.fxs_add_separator li:last-child:after {
+  content: '';
 }
 .fxs_absolute_center {
   top: 50%;
