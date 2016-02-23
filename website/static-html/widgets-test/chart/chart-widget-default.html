@@ -642,12 +642,19 @@
             chart.symbols.addIndicator( "sma", { period:100, shift:0 } );
             chart.symbols.addIndicator( "rsi", "14","70","30","1" );
 
+            /* ################### custom colors ######################### */
+
+            // indicators colors bars
             chart.symbols.indicators[1].settings['#Upper'].setOption('areaColors', ["#096955"]);
             chart.symbols.indicators[1].settings['#Lower'].setOption('areaColors', ["#a80000"]);
 
-            // to change indicators line
-            //chart.symbols.indicators[0].settings.MovS.setOption('lineColor', 'red')
-            //chart.symbols.indicators[1].settings.RSI.setOption('lineColor', 'black')
+            //indicators colors line
+            chart.symbols.indicators[0].settings.MovS.setOption('lineColor', '#304c70')
+            chart.symbols.indicators[1].settings.RSI.setOption('lineColor', '#304c70')
+
+            // candles color chart
+            chart.setOption('main.risingColor','#338473');
+            chart.setOption('main.fallingColor','#D25746');
 
             chart.resize();
 
@@ -659,8 +666,7 @@
                 ['*|Save Template|*', 'saveTemplate'],
                 ['*|Save Default|*', 'saveDefault']
             ]);
-            chart.setOption('main.risingColor','#338473');
-            chart.setOption('main.fallingColor','#D25746');
+
             chart.display();
             function addIndicator(objValue) {
                 if (objValue != "") {
