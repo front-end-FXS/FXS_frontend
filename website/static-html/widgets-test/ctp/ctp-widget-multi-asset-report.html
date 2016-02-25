@@ -245,12 +245,12 @@
                                                         <div class="ctp_multi_percent_wrapper">
                                                             <div class="ctp_price_precent">
                                                                 <small class="fxs_widget_small">Sell</small>
-                                                                <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
+                                                                <span class="fxs_txt_danger fxs_widget_custom_data_lable">0%</span>
                                                             </div>
 
-                                                            <div class="ctp_price_precent fxs_fRight">
+                                                            <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
                                                                 <small class="fxs_widget_small">Buy</small>
-                                                                <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
+                                                                <span class="fxs_txt_success fxs_widget_custom_data_lable">100%</span>
                                                             </div>
                                                         </div>
 
@@ -293,12 +293,12 @@
                                                         <div class="ctp_multi_percent_wrapper">
                                                             <div class="ctp_price_precent">
                                                                 <small class="fxs_widget_small">Sell</small>
-                                                                <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
+                                                                <span class="fxs_txt_danger fxs_widget_custom_data_lable">70%</span>
                                                             </div>
 
-                                                            <div class="ctp_price_precent fxs_fRight">
+                                                            <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
                                                                 <small class="fxs_widget_small">Buy</small>
-                                                                <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
+                                                                <span class="fxs_txt_success fxs_widget_custom_data_lable">30%</span>
                                                             </div>
                                                         </div>
 
@@ -344,7 +344,7 @@
                                                                 <span class="fxs_txt_danger fxs_widget_custom_data_lable">10%</span>
                                                             </div>
 
-                                                            <div class="ctp_price_precent fxs_fRight">
+                                                            <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
                                                                 <small class="fxs_widget_small">Buy</small>
                                                                 <span class="fxs_txt_success fxs_widget_custom_data_lable">90%</span>
                                                             </div>
@@ -392,7 +392,7 @@
                                                                 <span class="fxs_txt_danger fxs_widget_custom_data_lable">40%</span>
                                                             </div>
 
-                                                            <div class="ctp_price_precent fxs_fRight">
+                                                            <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
                                                                 <small class="fxs_widget_small">Buy</small>
                                                                 <span class="fxs_txt_success fxs_widget_custom_data_lable">60%</span>
                                                             </div>
@@ -757,60 +757,14 @@
         <script src="../../../../widgets/core/js/c3.min.js"></script>
         <script src="../../../../widgets/core/js/d3.min.js"></script>
         <script>
-            // Gauge chart
-            var gauge_chart = c3.generate({
-                bindto: '#gauge_chart',
-                       
-                data: {
-                    columns: [
-                    ['Buy', 100],
-                    ['Sell', 70]
-                    ],
-
-                    type: 'gauge'
-                    //onclick: function (d, i) { console.log("onclick", d, i); },
-                    //onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                    //onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-                },
-                        
-                zoom: {
-                    enabled:false
-                },
-               
-                gauge: {
-                    label: {
-                        show: false
-                    },
-                    // },
-                    // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-                    // max: 100, // 100 is default
-                    // units: ' %',
-                    width: 6 // for adjusting arc thickness
-                },
-                color: {
-                    pattern: ['#D25746', '#D25746', '#328372'], // the three color levels for the percentage values.
-                    threshold: {
-                        // unit: 'value', // percentage is default
-                        // max: 200, // 100 is default
-                        values: [0, 100]
-                    }
-                },
-                size: {
-                    height: 100
-                },
-                tooltip: {
-                  show: false
-                }
-            });
-
-            // bar chart
+            
     
             var ctp_horitzontal_bar = c3.generate({
                 bindto: '#ctp_bar_stacked_1',
                 data: {
                     columns: [
-                        ['Sell',40],
-                        ['Buy', 60]
+                        ['Sell',0],
+                        ['Buy', 100]
                     ],
                     type: 'bar',
                     groups: [
