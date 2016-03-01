@@ -65,6 +65,25 @@
         min-height: :40px;
         text-align: center;
       }
+      .fxit-previous {
+          span {
+              border-bottom: 1px #333 dotted;
+              b {
+                  display: none;
+                  position: absolute;
+              }
+          }
+      }
+      .fxit-previous:hover {
+          cursor: pointer;
+          span {
+              border-bottom: none;
+              b {
+                  display: inline-block;
+                  position: absolute;
+              }
+          }
+      }
     }
     .fxs_text_numbers{
       font-size: 10px;
