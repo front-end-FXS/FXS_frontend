@@ -5103,6 +5103,69 @@ width:calc(100% - 60px - 5px);
     width: 25%;
   }
 }
+.tags-flag-custom {
+  display: inline-block;
+  width: 16px;
+  height: 13px;
+  background-image: url('../../website/img/sprite-flags5.png');
+  background-repeat: no-repeat;
+  margin-left: 5px;
+  border: 1px solid #ccc;
+}
+.i-ar-AE {
+  background-position: -14px 0;
+}
+.i-ca-ES {
+  background-position: -112px 0;
+}
+.i-zh-CN {
+  background-position: -154px 0;
+}
+.i-zh-CHT {
+  background-position: -336px 0;
+}
+.i-de-DE {
+  background-position: -196px 0;
+}
+.i-es-ES {
+  background-position: -280px 0;
+}
+.i-fr-FR {
+  background-position: -308px 0;
+}
+.i-hu-HU {
+  background-position: -350px 0;
+}
+.i-id-ID {
+  background-position: -364px 0;
+}
+.i-it-IT {
+  background-position: -448px 0;
+}
+.i-ja-JP {
+  background-position: -462px 0;
+}
+.i-ko-KR {
+  background-position: -476px 0;
+}
+.i-pl-PL {
+  background-position: -84px -11px;
+}
+.i-pt-PT {
+  background-position: -98px -11px;
+}
+.i-ru-RU {
+  background-position: -126px -11px;
+}
+.i-tr-TR {
+  background-position: -210px -11px;
+}
+.i-vi-VN {
+  background-position: -294px -11px;
+}
+.i-en-US {
+  background-position: -322px -11px;
+}
 .fxs_row {
   margin-left: -0.5rem;
   margin-right: -0.5rem;
@@ -5400,6 +5463,9 @@ width:calc(100% - 220px);
 .fxs_entriesList {
   margin-bottom: 1rem;
 }
+.fxs_entriesList.fxs_entriesList_alternative li {
+  padding: 0.5rem 0;
+}
 .fxs_entriesList li {
   padding: 1rem 0;
   border-bottom: 1px solid #ececf1;
@@ -5422,6 +5488,12 @@ width:calc(100% - 220px);
   .fxs_entriesList.fxs_crawling_page .fxs_entryHeadline {
     font-size: 1.46rem;
   }
+}
+.fxs_entriesList.fxs_links_list_module li article h3 a {
+  color: #e4871b;
+}
+.fxs_entriesList.fxs_links_list_module li article h3 a:hover {
+  color: #1b1c23;
 }
 .fxs_entryFeatured header {
   margin-bottom: 0.5rem;
@@ -6894,4 +6966,172 @@ width:calc(100% - 140px);
 .fxs_widget_spreads_table.fxs_widget_nano > thead .fxs_label,
 .fxs_widget_spreads_table.fxs_widget_nano tbody > tr > td .fxs_label {
   display: block;
+}
+.fxs_widget_event .fxs_event_list {
+  list-style: none;
+  display: table;
+  width: 100%;
+  padding: 0 0 1rem 1rem;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item {
+  color: #49494f;
+  display: table-cell;
+  vertical-align: middle;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_event_actual,
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_event_consensus,
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_event_previous {
+  display: block;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_txt_neutral {
+  font-size: 0.8rem;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_event_font {
+  font-size: 1.34rem;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_event_font_bis {
+  font-size: 0.92rem;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item.fxs_event_big_title {
+  display: none;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_subtitle {
+  border-bottom: none;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_list_item .fxs_event_font strong {
+  font-size: 0.92rem;
+}
+.fxs_widget_event .fxs_event_list.fxs_event_header {
+  border-bottom: 2px solid #dddedf;
+  padding: 0!important;
+}
+.fxs_widget_event .fxs_event_list.fxs_event_header li.fxs_event_list_item {
+  border-right: none!important;
+}
+.fxs_widget_event .fxs_event_list .fxs_event_flag {
+  display: inline-block;
+  vertical-align: middle;
+}
+.fxs_widget_event .fxs_event_actual {
+  color: #338473;
+  font-weight: 700;
+}
+.fxs_widget_event .fxs_event_previous {
+  font-weight: 700;
+  line-height: inherit;
+}
+.fxs_widget_event .fxs_countdown_clock {
+  font-size: 0.8rem;
+  color: #a3a3a8;
+}
+.fxs_widget_event .fxs_countdown_clock > span {
+  display: inline-block;
+  text-align: left;
+}
+.fxs_widget_event .fxs_countdown_clock > span:not(:first-child) {
+  margin-left: 0.33rem;
+}
+.fxs_widget_event .fxs_countdown_clock .fxs_widget_custom_data_lable {
+  font-size: 1.46rem;
+  font-weight: 700;
+  color: #49494f;
+}
+.fxs_widget_event .fxs_event_block.fxs_event_list_next_release {
+  background-color: #f3f3f8;
+}
+.fxs_widget_event .fxs_event_block.fxs_event_list_next_release li.fxs_event_list_item:nth-child(3),
+.fxs_widget_event .fxs_event_block.fxs_event_list_next_release li.fxs_event_list_item:nth-child(4) {
+  display: none;
+}
+.fxs_widget_event .fxs_event_block .fxs_subtitle {
+  padding-left: 1rem;
+  border-bottom: none;
+}
+.fxs_widget_event .fxs_event_font .fxs_subtitle_variant {
+  font-weight: 400;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.fxs_widget_event .fxs_subtitle .fxs_subtitle_variant {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.fxs_widget_event .fxs_subtitle time {
+  font-size: 11px;
+  font-style: normal;
+  color: #a3a3a8;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .fxs_widget_event.fxs_widget_big .fxs_event_block h3.fxs_event_mini_title {
+    display: none;
+  }
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list li.fxs_event_list_item {
+    border-right: 1px solid #ececf1;
+    padding: 1rem;
+    display: table-cell;
+  }
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(1) {
+    border-right: none;
+  }
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(4n) {
+    border-right: none;
+  }
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(2n),
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(3n) {
+    min-width: 180px;
+  }
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list.fxs_event_header li.fxs_event_list_item:nth-child(2) {
+    text-align: center;
+  }
+  .fxs_widget_event.fxs_widget_big .fxs_event_block .fxs_event_list.fxs_event_header li.fxs_event_list_item:nth-child(3) {
+    text-align: right;
+  }
+}
+@media (min-width: 680px) {
+  .fxs_widget_event.fxs_widget_default .fxs_event_block.fxs_event_list_next_release .fxs_event_list li.fxs_event_list_item:nth-child(3),
+  .fxs_widget_event.fxs_widget_default .fxs_event_block.fxs_event_list_next_release .fxs_event_list li.fxs_event_list_item:nth-child(4) {
+    display: table-cell;
+  }
+  .fxs_widget_event.fxs_widget_default .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(4) {
+    width: 120px;
+  }
+}
+@media (min-width: 320px) {
+  .fxs_widget_event.fxs_widget_mini ul.fxs_event_list {
+    padding: 0 0 1rem 1rem;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block h3.fxs_event_mini_title {
+    border-bottom: none;
+    margin: 0;
+    padding-top: 10px;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block .fxs_event_header li:nth-child(n) {
+    display: table-cell;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block.fxs_event_list_next_release .fxs_event_list li.fxs_event_list_item:nth-child(3n),
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block.fxs_event_list_next_release .fxs_event_list li.fxs_event_list_item:nth-child(4n) {
+    display: none;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block.fxs_event_list_next_release li:nth-child(3n),
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block.fxs_event_list_next_release li:nth-child(4n) {
+    display: none;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block .fxs_event_list li.fxs_event_list_item {
+    border-right: 1px solid #ececf1;
+    box-sizing: content-box;
+    border-right: none;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(3n),
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block .fxs_event_list li.fxs_event_list_item:nth-child(4n) {
+    padding-left: 2rem;
+    display: table-cell;
+  }
+  .fxs_widget_event.fxs_widget_mini .fxs_event_block .fxs_event_list .fxs_subtitle .fxs_subtitle_variant {
+    display: inline-block;
+  }
+  .fxs_widget_event.fxs_widget_mini.fxs_event_list_next_release li.fxs_event_list_item:nth-child(3),
+  .fxs_widget_event.fxs_widget_mini.fxs_event_list_next_release li.fxs_event_list_item:nth-child(4) {
+    display: table-cell !important;
+  }
 }
