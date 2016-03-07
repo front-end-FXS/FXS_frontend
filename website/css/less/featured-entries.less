@@ -90,6 +90,11 @@
 // Entries list
 .fxs_entriesList {
   margin-bottom: 1rem;
+  &.fxs_entriesList_alternative{ 
+    li{
+      padding: 0.5rem 0;
+    }
+  }
   ol { &:extend(.fxs_list_unstyled); }
   li {
     padding: 1rem 0;
@@ -105,6 +110,20 @@
     @media(min-width:@screen-l) { max-width: 75%; }
     .fxs_entryHeadline {
       @media(min-width:@screen-s){ font-size: @txt_size_xxlarge; }
+    }
+  }
+  &.fxs_links_list_module{
+    li{
+      article{
+        h3{
+          a{
+            color:@highlight_clr;
+            &:hover{
+              color:@dark_1_clr;
+            }
+          }
+        }
+      }
     }
   }
 }

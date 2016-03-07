@@ -1,0 +1,182 @@
+// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+// event
+.fxs_widget_event{
+	.fxs_event_list {
+		list-style: none;
+		display: table;
+		width: 100%;
+		padding: 0 0 1rem 1rem;
+		.fxs_event_list_item {
+			color: @dark_4_clr;
+			display: table-cell;
+			vertical-align: middle;
+			.fxs_event_actual, .fxs_event_consensus, .fxs_event_previous{ display: block; }
+			.fxs_txt_neutral{ font-size: @txt_size_xsmall; }
+			.fxs_event_font{ font-size: @txt_size_xlarge; }
+			.fxs_event_font_bis{ font-size: @txt_size_small;}
+			&.fxs_event_big_title{ display:none;}
+			//&:nth-child(1){display:none}
+			.fxs_subtitle{ border-bottom: none;} 
+			.fxs_event_font{
+				strong{
+					font-size: @txt_size_small;
+				}
+			}
+		}
+		&.fxs_event_header{
+			border-bottom: 2px solid @light_3_clr;
+			li.fxs_event_list_item{
+				border-right:none!important;
+			}
+			padding: 0!important;
+		}
+		.fxs_event_flag{
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
+	.fxs_event_actual { color: @success_clr; font-weight: @txt_fontweight_bold; }
+	.fxs_event_previous{ font-weight: @txt_fontweight_bold; line-height: inherit; }
+
+	// video countdown
+	.fxs_countdown_clock {
+		font-size: @txt_size_xsmall;
+		color: @light_2_clr;
+		>span {
+			display: inline-block;
+			text-align: left;
+			&:not(:first-child) { margin-left: 0.33rem; }
+		}
+		.fxs_widget_custom_data_lable {
+			font-size: @txt_size_xxlarge;
+			font-weight: @txt_fontweight_bold;
+			color:@dark_4_clr;
+			//&:extend(.fxs_boldAntialised_style);
+		}
+	}	  
+	.fxs_event_block{
+		&.fxs_event_list_next_release{
+			background-color: @light_5_clr;
+			li.fxs_event_list_item{
+				&:nth-child(3), &:nth-child(4){ display: none; }
+			}
+		}
+		.fxs_subtitle{ padding-left:1rem; border-bottom:none}
+
+	}
+	.fxs_event_font{
+		.fxs_subtitle_variant{
+			font-weight: @txt_fontweight;
+			font-size: @txt_size_xsmall;
+			font-style: italic;
+			//display: block;
+		}
+	}
+	.fxs_subtitle{
+		.fxs_subtitle_variant{
+			font-weight: @txt_fontweight;
+			font-size: @txt_size_xsmall;
+			//display: block;
+
+		}
+		time{
+			font-size: @txt_size_nano;
+			font-style: normal;
+			color: @light_2_clr;
+			font-weight: @txt_fontweight;
+		}
+	}
+	// big
+	&.fxs_widget_big {
+		@media (min-width: @screen-m) {
+			.fxs_event_block{
+				h3{ &.fxs_event_mini_title{ display:none; } }
+				.fxs_event_list {
+					li.fxs_event_list_item{
+						border-right:1px solid @light_4_clr;
+						&:nth-child(1){border-right:none;}
+						&:nth-child(4n){border-right:none;}
+						padding: 1rem;
+						display: table-cell;
+						&:nth-child(2n), &:nth-child(3n){ min-width: 180px; }
+					}
+					&.fxs_event_header{
+						li.fxs_event_list_item{
+							&:nth-child(2){ text-align: center } 
+							&:nth-child(3){ text-align: right }
+						}
+					}
+				}
+			}
+		}
+	}
+	// default
+	&.fxs_widget_default{
+		@media (min-width: @screen-s) {
+			.fxs_event_block{
+				&.fxs_event_list_next_release{
+					.fxs_event_list{
+						li.fxs_event_list_item {
+							&:nth-child(3), &:nth-child(4){ display: table-cell; }
+						}
+					}
+				}
+				.fxs_event_list{
+					li.fxs_event_list_item{
+						&:nth-child(4){width:120px;}
+					}
+				}
+			}
+		}
+	}
+	// mini
+	&.fxs_widget_mini {
+		@media (min-width: @screen-xs) {
+			ul.fxs_event_list{padding: 0 0 1rem 1rem;}
+			.fxs_event_block{
+				h3{
+					&.fxs_event_mini_title{ border-bottom: none; margin:0; padding-top:10px;  }
+				}
+				.fxs_event_header{
+				  	li:nth-child(n){
+				  		display: table-cell;
+				  	}
+				}
+				&.fxs_event_list_next_release{
+					.fxs_event_list{
+						li.fxs_event_list_item{
+							&:nth-child(3n), &:nth-child(4n){display:none;}
+						}
+					}
+					li:nth-child(3n),li:nth-child(4n){display:none;}
+				}
+				.fxs_event_list{
+					li.fxs_event_list_item { 
+						border-right:1px solid @light_4_clr;
+						//&:nth-child(1){border-right:none; display: none}
+						box-sizing: content-box;
+						&:nth-child(3n) ,&:nth-child(4n){padding-left:2rem; display:table-cell;}
+						border-right:none;
+					}
+					.fxs_subtitle{
+						.fxs_subtitle_variant{
+							display: inline-block;
+						}
+					}
+				}
+			}
+			&.fxs_event_list_next_release{
+				li.fxs_event_list_item {
+					&:nth-child(3), &:nth-child(4){ display: table-cell!important; }
+				}
+			}
+		}
+	}
+	
+}
