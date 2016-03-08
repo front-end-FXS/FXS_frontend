@@ -3035,6 +3035,8 @@ h5 a:hover,
 .fxs_live_event_module::before,
 .fxs_live_event_module::after,
 .fxs_widget_price.fxs_widget_price_header::before,
+.fxs_widget_price.fxs_widget_price_header::after,
+.fxs_widget_price.fxs_widget_price_header::before,
 .fxs_widget_price.fxs_widget_price_header::after {
   content: " ";
   display: table;
@@ -3070,6 +3072,7 @@ h5 a:hover,
 .fxs_divider_wide::after,
 .fxs_suscribe::after,
 .fxs_live_event_module::after,
+.fxs_widget_price.fxs_widget_price_header::after,
 .fxs_widget_price.fxs_widget_price_header::after {
   clear: both;
 }
@@ -3264,6 +3267,7 @@ h5 a:hover,
 .fxs_divider_wide,
 .fxs_suscribe,
 .fxs_live_event_module,
+.fxs_widget_price.fxs_widget_price_header,
 .fxs_widget_price.fxs_widget_price_header {
   margin-left: -1rem;
   margin-right: -1rem;
@@ -3274,6 +3278,7 @@ h5 a:hover,
   .fxs_divider_wide,
   .fxs_suscribe,
   .fxs_live_event_module,
+  .fxs_widget_price.fxs_widget_price_header,
   .fxs_widget_price.fxs_widget_price_header {
     margin-left: -2rem;
     margin-right: -2rem;
@@ -3285,6 +3290,7 @@ h5 a:hover,
   .fxs_divider_wide.no_wide_content,
   .fxs_suscribe.no_wide_content,
   .fxs_live_event_module.no_wide_content,
+  .fxs_widget_price.fxs_widget_price_header.no_wide_content,
   .fxs_widget_price.fxs_widget_price_header.no_wide_content {
     margin-left: 0;
     margin-right: 0;
@@ -3297,6 +3303,7 @@ h5 a:hover,
 .fxs_live_event_module,
 .fxs_live_event_module .fxs_pricing_table,
 .fxs_live_event_cta_content,
+.fxs_widget_price.fxs_widget_price_header,
 .fxs_widget_price.fxs_widget_price_header {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -3307,6 +3314,7 @@ h5 a:hover,
   .fxs_live_event_module,
   .fxs_live_event_module .fxs_pricing_table,
   .fxs_live_event_cta_content,
+  .fxs_widget_price.fxs_widget_price_header,
   .fxs_widget_price.fxs_widget_price_header {
     padding: 1.5rem 2rem 1rem;
     margin-bottom: 1.5rem;
@@ -5107,7 +5115,7 @@ width:calc(100% - 60px - 5px);
   display: inline-block;
   width: 16px;
   height: 13px;
-  background-image: url('../../website/img/sprite-flags5.png');
+  background-image: url('../img/sprite-flags5.png');
   background-repeat: no-repeat;
   margin-left: 5px;
   border: 1px solid #ccc;
@@ -5164,6 +5172,63 @@ width:calc(100% - 60px - 5px);
   background-position: -294px -11px;
 }
 .i-en-US {
+  background-position: -322px -11px;
+}
+.i-AR {
+  background-position: -14px 0;
+}
+.i-NZ {
+  background-position: -42px 0;
+}
+.i-CA {
+  background-position: -112px 0;
+}
+.i-CN {
+  background-position: -154px 0;
+}
+.i-ZH {
+  background-position: -336px 0;
+}
+.i-DE {
+  background-position: -196px 0;
+}
+.i-ES {
+  background-position: -280px 0;
+}
+.i-FR {
+  background-position: -308px 0;
+}
+.i-HU {
+  background-position: -350px 0;
+}
+.i-ID {
+  background-position: -364px 0;
+}
+.i-IT {
+  background-position: -448px 0;
+}
+.i-JA {
+  background-position: -462px 0;
+}
+.i-KP {
+  background-position: -476px 0;
+}
+.i-PL {
+  background-position: -84px -11px;
+}
+.i-PT {
+  background-position: -98px -11px;
+}
+.i-RU {
+  background-position: -126px -11px;
+}
+.i-TR {
+  background-position: -210px -11px;
+}
+.i-VN {
+  background-position: -294px -11px;
+}
+.i-EN {
   background-position: -322px -11px;
 }
 .fxs_row {
@@ -6709,6 +6774,193 @@ width:calc(100% - 140px);
     margin-left: 0.5rem;
   }
 }
+.fxs_widget_price .fxs_asset_label {
+  position: relative;
+  margin-bottom: 0;
+}
+.fxs_widget_price .fxs_asset_label a {
+  padding-left: 1rem;
+}
+.fxs_widget_price .fxs_asset_label::before {
+  position: absolute;
+  margin: 2px 2px 0 0;
+  content: '\f062';
+  font: normal normal normal 14px FontAwesome;
+}
+.fxs_widget_price.price_up .fxs_asset_label::before {
+  color: #338473;
+}
+.fxs_widget_price.price_up .fxs_price_change {
+  color: #338473;
+}
+.fxs_widget_price.price_up .fxs_price_change a {
+  color: #255f53;
+}
+.fxs_widget_price.price_down .fxs_asset_label::before {
+  content: '\f063';
+  color: #d25746;
+}
+.fxs_widget_price.price_down .fxs_price_change {
+  color: #d25746;
+}
+.fxs_widget_price.price_down .fxs_price_change a {
+  color: #b83e2d;
+}
+.fxs_widget_price.price_neutral .fxs_asset_label::before {
+  content: "\f068";
+}
+.fxs_widget_price.fxs_widget_price_header {
+  border-top: 0;
+  border-bottom: 3px solid #ececf1;
+  padding-top: 0;
+}
+@media (min-width: 680px) {
+  .fxs_widget_price.fxs_widget_price_header .fxs_asset_label_block .fxs_price_change {
+    padding-left: 1.5rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_price_bidask {
+    margin-bottom: 0.5rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_asset_label {
+    font-size: 1.68rem;
+    max-width: 350px;
+    margin-bottom: 0.5rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_asset_label a {
+    padding-left: 1.5rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_asset_label::before {
+    font-size: 1.34rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_price_bidask {
+    font-size: 1.34rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_price_big_figure {
+    font-size: 1.68rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header sup {
+    font-size: 1rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_price_ohl {
+    font-size: 0.92rem;
+  }
+  .fxs_widget_price.fxs_widget_price_header .fxs_price_ohl span:first-child {
+    display: inline-block;
+  }
+}
+.fxs_widget_price.fxs_widget_price_header .fxs_price_ohl,
+.fxs_widget_price.fxs_widget_price_listView .fxs_price_ohl {
+  display: block;
+}
+.fxs_widget_price.fxs_widget_price_listView {
+  padding: 0.5rem 0;
+}
+.fxs_widget_price.fxs_widget_price_listView .fxs_asset_label_block {
+  max-width: 45%;
+}
+.fxs_widget_price.fxs_widget_price_listView .fxs_price_ohl {
+  margin-top: 0.25rem;
+}
+.fxs_widget_price.fxs_widget_price_listView .fxs_price_ohl span {
+  margin-left: 0.12rem;
+}
+.fxs_widget_price.fxs_widget_price_listView .fxs_widget_price_value,
+.fxs_widget_price.fxs_widget_mini .fxs_widget_price_value,
+.fxs_widget_price.fxs_widget_price_listView .fxs_price_change,
+.fxs_widget_price.fxs_widget_mini .fxs_price_change {
+  font-size: 0.92rem;
+  line-height: 1.25rem;
+}
+.fxs_widget_price.fxs_widget_mini .fxs_widget_price_value {
+  float: none;
+  max-width: inherit;
+}
+.fxs_table_prices tbody tr td {
+  vertical-align: top;
+}
+.fxs_table_prices > tbody > tr > td:first-child,
+.fxs_table_prices > thead > tr > td:first-child,
+.fxs_table_prices > tfoot > tr > td:first-child,
+.fxs_table_prices > tbody > tr > th:first-child,
+.fxs_table_prices > thead > tr > th:first-child,
+.fxs_table_prices > tfoot > tr > th:first-child {
+  padding-left: 0;
+  width: 140px;
+}
+.fxs_table_prices > tbody > tr > td:last-child,
+.fxs_table_prices > thead > tr > td:last-child,
+.fxs_table_prices > tfoot > tr > td:last-child,
+.fxs_table_prices > tbody > tr > th:last-child,
+.fxs_table_prices > thead > tr > th:last-child,
+.fxs_table_prices > tfoot > tr > th:last-child {
+  display: none;
+  width: auto;
+}
+.fxs_table_prices .fxs_asset_label {
+  font-size: 0.92rem;
+}
+.fxs_table_prices .fxs_widget_price_value {
+  max-width: inherit;
+}
+.fxs_table_prices .fxs_price_change {
+  display: block;
+}
+@media (min-width: 680px) {
+  .fxs_table_prices.fxs_widget_default tbody tr td,
+  .fxs_table_prices.fxs_widget_big tbody tr td {
+    vertical-align: middle;
+  }
+  .fxs_table_prices.fxs_widget_default > tbody > tr > td:last-child,
+  .fxs_table_prices.fxs_widget_big > tbody > tr > td:last-child,
+  .fxs_table_prices.fxs_widget_default > thead > tr > td:last-child,
+  .fxs_table_prices.fxs_widget_big > thead > tr > td:last-child,
+  .fxs_table_prices.fxs_widget_default > tfoot > tr > td:last-child,
+  .fxs_table_prices.fxs_widget_big > tfoot > tr > td:last-child,
+  .fxs_table_prices.fxs_widget_default > tbody > tr > th:last-child,
+  .fxs_table_prices.fxs_widget_big > tbody > tr > th:last-child,
+  .fxs_table_prices.fxs_widget_default > thead > tr > th:last-child,
+  .fxs_table_prices.fxs_widget_big > thead > tr > th:last-child,
+  .fxs_table_prices.fxs_widget_default > tfoot > tr > th:last-child,
+  .fxs_table_prices.fxs_widget_big > tfoot > tr > th:last-child {
+    display: table-cell;
+  }
+  .fxs_table_prices.fxs_widget_default .fxs_widget_price_value,
+  .fxs_table_prices.fxs_widget_big .fxs_widget_price_value {
+    float: none;
+    text-align: center;
+  }
+  .fxs_table_prices.fxs_widget_default .fxs_widget_price_value,
+  .fxs_table_prices.fxs_widget_big .fxs_widget_price_value,
+  .fxs_table_prices.fxs_widget_default .fxs_price_ohl,
+  .fxs_table_prices.fxs_widget_big .fxs_price_ohl {
+    display: table;
+    width: 100%;
+  }
+  .fxs_table_prices.fxs_widget_default .fxs_price_bidask,
+  .fxs_table_prices.fxs_widget_big .fxs_price_bidask,
+  .fxs_table_prices.fxs_widget_default .fxs_price_change,
+  .fxs_table_prices.fxs_widget_big .fxs_price_change {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .fxs_table_prices.fxs_widget_default .fxs_price_ohl,
+  .fxs_table_prices.fxs_widget_big .fxs_price_ohl {
+    font-size: 0.8rem;
+  }
+  .fxs_table_prices.fxs_widget_default .fxs_price_ohl span,
+  .fxs_table_prices.fxs_widget_big .fxs_price_ohl span {
+    padding-left: 0.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_table_prices.fxs_widget_big .fxs_price_ohl {
+    font-size: 0.92rem;
+  }
+  .fxs_table_prices.fxs_widget_big .fxs_price_ohl span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
 .fxs_widget_column {
   position: relative;
   min-height: 1px;
@@ -6727,19 +6979,19 @@ width:calc(100% - 140px);
 .fxs_widget_heatmap .fxs_widget_price {
   padding: 0.25rem 0.33rem;
 }
-.fxs_widget_heatmap .fxs_widget_price.price_up {
+.fxs_widget_heatmap .fxs_widget_price.fxs_heatmap_slightlybullish {
   background-color: #41a993;
 }
-.fxs_widget_heatmap .fxs_widget_price.price_up.price_up_plus {
+.fxs_widget_heatmap .fxs_widget_price.fxs_heatmap_bullish {
   background-color: #338473;
 }
-.fxs_widget_heatmap .fxs_widget_price.price_down {
+.fxs_widget_heatmap .fxs_widget_price.fxs_heatmap_slightlybearish {
   background-color: #e6a298;
 }
-.fxs_widget_heatmap .fxs_widget_price.price_down.price_down_plus {
+.fxs_widget_heatmap .fxs_widget_price.fxs_heatmap_bearish {
   background-color: #d25746;
 }
-.fxs_widget_heatmap .fxs_widget_price.price_neutral {
+.fxs_widget_heatmap .fxs_widget_price.fxs_heatmap_neutral {
   background-color: #a3a3a8;
 }
 .fxs_widget_heatmap .fxs_widget_price .fxs_asset_label {
