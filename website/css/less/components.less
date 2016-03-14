@@ -212,7 +212,66 @@
   }
 }
 
+// custom fxs_btn to add dropdown to calendar 
 .fxs_btn_group {
+
+  // open - add this lines to modify button behavior
+  &.fxs_btn_group_align_calendar{
+      float:none;
+      margin-right:5px;
+      .fxs_btn, .fxs_btn_icon {
+        height:33px;
+        margin:0;
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        background: #DDD;
+        border:solid 1px #D6D6D6;
+        color:#333;
+        font-size: 13px;
+      }
+      &.open{
+        .fxs_btn_default{
+          &.fxs_btn_dd{
+            background-color: #DDD!important;
+            border:none!important;
+          }
+        }
+      }
+      .fxs_btn_icon{
+        width:32px;
+      }
+      .fxs_dropdownList{
+        margin-top:5px;
+      }
+    @media (min-width: @screen-m) {
+      float:right;
+      margin-right:5px;
+      .fxs_btn, .fxs_btn_icon {
+        height:33px;
+        margin:0;
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        background: #DDD;
+        border:solid 1px #D6D6D6;
+        color:#333;
+        font-size: 13px;
+      }
+      &.open{
+        .fxs_btn_default{
+          &.fxs_btn_dd{
+            background-color: #DDD!important;
+            border:none!important;
+          }
+        }
+      }
+      .fxs_btn_icon{
+        width:32px;
+      }
+      .fxs_dropdownList{
+        margin-top:5px;
+      }
+    }
+  }
+  // close - add this lines to modify button behavior
+
   vertical-align: middle;
   display: inline-block;
   position: relative;
@@ -221,6 +280,13 @@
   > .fxs_btn_dd:not(:first-child) { margin-left: 1px; }
 }
 
+// add divider responsive to apply in calendar( delete this line when calendar 3.0 is online )
+
+.fxs_divider_responsive{
+  clear:both;
+  @media (min-width: @screen-m) {clear:none;}
+
+}
 .fxs_btn_block {
   display: block;
   width: 100%;
@@ -1328,5 +1394,24 @@
   background-color: @light_5_clr;
   margin-bottom: 3px;
   padding: @half_base_spacer 0;
+}
+
+// captcha google
+
+.fxs_reCaptcha{
+  padding-top:0.5rem;
+  padding-bottom:0.3rem;
+  transform:scale(0.77);
+  -webkit-transform:scale(0.77);
+  transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+  @media(min-width:@screen-s){
+    transform:scale(1);
+   -webkit-transform:scale(1);
+   transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+
+  }
+  
 }
 
