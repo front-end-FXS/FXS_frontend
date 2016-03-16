@@ -1628,7 +1628,7 @@ width:calc(100% - 320px);
   color: #1b1c23;
 }
 .fxs_divider_wide {
-  height: 3px;
+  height: 7px;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -2431,6 +2431,9 @@ width:calc(100% - 320px);
   font-size: 0.8rem;
   letter-spacing: normal;
 }
+.ui-helper-hidden-accessible {
+  display: none;
+}
 .fxs_compare_performance_chart .tt_panelDiv .tt_symbolTitle {
   display: block!important;
 }
@@ -2966,6 +2969,7 @@ h5 a:hover,
   .fxs_entryFeatured_big .fxs_entryHeadline {
     font-size: 2.64rem;
     line-height: 2.75rem;
+    min-height: 90px;
   }
 }
 .fxs_headline_hero,
@@ -4135,6 +4139,15 @@ height:calc(100% - 45px);
     margin: 0 -2rem;
   }
 }
+.fxs_leaderboard.fxs_leaderboard_wide {
+  margin-top: -1.5rem;
+  margin-bottom: -2.3rem;
+}
+.fxs_leaderboard.fxs_leaderboard_wide_sidebar {
+  margin-left: -1rem;
+  margin-top: -2.5rem;
+  margin-bottom: -1.2rem;
+}
 .fxs_leaderboard.fxs_leaderboard_adjust {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -5177,8 +5190,12 @@ width:calc(100% - 60px - 5px);
   margin-bottom: 1rem;
 }
 .fxs_row.fxs_marquee_container .fxs_widget_divider_module {
-  border-bottom: none;
   padding: 0 5px 5px 5px;
+}
+@media (min-width: 1024px) {
+  .fxs_row.fxs_marquee_container .fxs_widget_divider_module {
+    border-bottom: none;
+  }
 }
 .fxs_row.fxs_marquee_container .fxs_widget_divider_module .fxs_widget_mini .fxs_widget_price_value {
   float: right;
