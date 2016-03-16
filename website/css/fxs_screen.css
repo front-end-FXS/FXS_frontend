@@ -3533,18 +3533,19 @@ width:calc(100% + @half_base_spacer);
 }
 .fxs_header {
   background-color: #242d38;
-  height: 45px;
+  height: 50px;
   width: 100%;
   position: fixed;
   z-index: 9999;
   left: 0;
+  border-top: 5px solid #e4871b;
 }
 .fxs_wrapper {
   background-color: #ececf1;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  padding-top: 45px;
+  padding-top: 50px;
   position: relative;
 }
 .fxs_content {
@@ -3886,6 +3887,19 @@ width:calc(100% - 320px);
 .fxs_content_wide .fxs_topics_nav .fxs_label {
   padding-left: 0;
 }
+.fxs_topics_nav.fxs_topics_nav_custom .fxs_label {
+  font-size: 0.8rem;
+}
+.fxs_topics_nav.fxs_topics_nav_custom .fxs_subnavInlined_list li {
+  line-height: 12px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  padding-left: 5px;
+  border-right: 1px solid #49494f;
+}
+.fxs_topics_nav.fxs_topics_nav_custom .fxs_subnavInlined_list li:nth-last-child(1) {
+  border-right: none;
+}
 .fxs_sidebar_user .fxs_authentication_form_content {
   margin-bottom: 45px;
   font-size: 0.8rem;
@@ -4180,7 +4194,7 @@ height:calc(100% - 45px);
   background-color: #ececf1;
   position: fixed;
   z-index: 5;
-  top: 45px;
+  top: 50px;
   left: -100%;
 }
 .fxs_isParent_section .fxs_listView {
@@ -4281,6 +4295,9 @@ height:calc(100% - 35px - 45px);
 }
 .fxs_modal_page .fxs_listViewRail {
   height: 100%;
+}
+.fxs_listViewRail.fxs_listViewRail_modified {
+  top: 70px;
 }
 .fxs_listview_subnav {
   width: 100%;
@@ -4435,6 +4452,9 @@ height:calc(100% - 35px - 45px);
   width: 35px;
   overflow: hidden;
 }
+.fxs_filter.fxs_filter_modified {
+  top: 36px;
+}
 .fxs_filter.active {
   width: 100%;
   overflow: visible;
@@ -4523,6 +4543,9 @@ fieldset[disabled] .fxs_dismissQuery {
   -o-animation: fadeIn 0.5s ease-in;
   animation: fadeIn 0.5s ease-in;
 }
+.fxs_dismissQuery.fxs_dismissQuery_disabled {
+  display: none;
+}
 .fxs_queryResults {
   position: absolute;
   top: 0;
@@ -4533,7 +4556,6 @@ fieldset[disabled] .fxs_dismissQuery {
   float: left;
   line-height: 35px;
   margin-top: 0;
-  margin-right: -5px;
 }
 .fxs_search_title_holder {
   position: relative;
