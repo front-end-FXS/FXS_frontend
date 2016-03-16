@@ -2,18 +2,19 @@
 .fxs_header {
   &:extend(.fxs_pageSidebar_transition);
   background-color: @corp_clr;
-  height: @main_header_height;
+  height: @main_header_height_custom;
   width: 100%;
   position: fixed;
   z-index: 9999;
   left: 0;
+  border-top:5px solid @highlight_clr;
 }
 .fxs_wrapper{
   background-color: @light_4_clr;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  padding-top: 45px;
+  padding-top: @main_header_height_custom;
   position: relative;
 }
 .fxs_content {
@@ -190,6 +191,22 @@
     display: block;
     margin-left: 0;
     .fxs_label { padding-left: 0; }
+  }
+  // modified 16/03/2016 first aproach by victor
+  &.fxs_topics_nav_custom{
+    .fxs_label{
+      font-size:@txt_size_xsmall;
+    }
+    .fxs_subnavInlined_list{
+      li{
+        line-height: 12px;
+        font-size: @txt_size_xsmall;
+        text-transform: uppercase;
+        padding-left: 5px;
+        border-right:1px solid @dark_4_clr;
+        &:nth-last-child(1){border-right:none}
+      }
+    }
   }
 }
 
@@ -475,7 +492,7 @@
   background-color: @light_4_clr;
   position: fixed;
   z-index: 5;
-  top: @main_header_height;
+  top: @main_header_height_custom;
   left: -100%;
   .fxs_isParent_section & { left: auto; }
   @media (min-width: @screen-s){ left: -(@left_rail_space_reduced + 5px)!important; }
@@ -519,6 +536,9 @@
     &:extend(.fxs_listView_space all);
   }
   .fxs_modal_page  & { height: 100%; }
+  &.fxs_listViewRail_modified{
+    top:@double_module_size;
+  }
 }
 
 .fxs_listview_subnav {
@@ -656,6 +676,9 @@
   right: 0;
   width: @base_module_size; 
   overflow: hidden;
+  &.fxs_filter_modified{
+    top:@base_module_size + 1px;
+  }
   &.active {
     width: 100%;
     overflow: visible;
@@ -697,7 +720,12 @@
   z-index: 100;
 }
 
-.fxs_dismissQuery{ .animation(fadeIn 0.5s ease-in); }
+.fxs_dismissQuery{ 
+  .animation(fadeIn 0.5s ease-in); 
+  &.fxs_dismissQuery_disabled{
+    display: none;
+  }
+}
 
 // Query results
 .fxs_queryResults {
@@ -712,7 +740,7 @@
     float: left;
     line-height: @base_module_size; 
     margin-top: 0;
-    margin-right: -5px;
+    //margin-right: -5px;
 }
 
 // Filter within titles
