@@ -532,7 +532,7 @@
 // DIVIDERS
 .fxs_divider_wide {
   &:extend(.fxs_divider_base, .fxs_wideContent all);
-  height: 3px;
+  height: 7px;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
@@ -1278,6 +1278,15 @@
 
 .c3-tooltip {
   th { .fxs_stiled_text_variants(table-cell; @lightest_clr; @txt_size_xsmall); }
+}
+
+/////////////////////////////////////////////////////////////////////////
+//////////////////// Override jquery-ui.css /////////////////////////////
+
+// hide logs messages at the bottom of every page
+
+.ui-helper-hidden-accessible{
+  display:none;
 }
 
 /////////////////////////////////////////////////////////////////////////
