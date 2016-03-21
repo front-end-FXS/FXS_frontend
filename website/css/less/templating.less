@@ -670,15 +670,42 @@
 }
 
 .fxs_filter{
+   &.fxs_filter_modified{
+    top:@base_module_size + 1px;
+    border-bottom:1px solid @light_4_clr;
+  }
   &:extend(.fxs_transition);
   position: absolute;
   top: 0;
   right: 0;
   width: @base_module_size; 
   overflow: hidden;
-  &.fxs_filter_modified{
+  &.active {
+    width: 100%;
+    overflow: visible;
+    .fxs_btn_filter { color: @light_2_clr; }
+    .fxs_queryResults {
+      display: block;
+      &.fxs_selectedQuery {
+        .fxs_queryResults_label {
+          .animation(fadeIn 0.33s ease-in);
+          display: block;
+        }
+      }
+    }
+  }
+}
+// new rule for filter enabled and also change position
+.fxs_filter_new{
+   &.fxs_filter_modified{
     top:@base_module_size + 1px;
   }
+  &:extend(.fxs_transition);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: @base_module_size; 
+  overflow: hidden;
   &.active {
     width: 100%;
     overflow: visible;

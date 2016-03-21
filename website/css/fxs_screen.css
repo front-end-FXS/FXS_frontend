@@ -1408,6 +1408,12 @@ fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_
   vertical-align: middle;
   white-space: nowrap;
 }
+.fxs_label.fxs_socialBox_header,
+.fxs_alertLabel.fxs_socialBox_header,
+.fxs_badge.fxs_socialBox_header {
+  margin-left: 0;
+  padding-left: 0;
+}
 .fxs_label,
 .fxs_alertLabel,
 .fxs_sidebar_divider span {
@@ -2154,6 +2160,7 @@ width:calc(100% - 320px);
   height: 25px;
   line-height: 23px;
   font-size: 1rem;
+  background-color: transparent;
 }
 .fxs_suscribeSocialBtn li {
   margin: 0 7.5px 0 0;
@@ -2588,6 +2595,7 @@ select,
 .fxs_show_usermenu,
 .fxs_listView_filterAlert,
 .fxs_filter,
+.fxs_filter_new,
 .fxs_btn_filter,
 .fxs_dismissQuery,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse,
@@ -4454,6 +4462,7 @@ height:calc(100% - 35px - 45px);
 }
 .fxs_filter.fxs_filter_modified {
   top: 36px;
+  border-bottom: 1px solid #ececf1;
 }
 .fxs_filter.active {
   width: 100%;
@@ -4466,6 +4475,33 @@ height:calc(100% - 35px - 45px);
   display: block;
 }
 .fxs_filter.active .fxs_queryResults.fxs_selectedQuery .fxs_queryResults_label {
+  -webkit-animation: fadeIn 0.33s ease-in;
+  -moz-animation: fadeIn 0.33s ease-in;
+  -o-animation: fadeIn 0.33s ease-in;
+  animation: fadeIn 0.33s ease-in;
+  display: block;
+}
+.fxs_filter_new {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  overflow: hidden;
+}
+.fxs_filter_new.fxs_filter_modified {
+  top: 36px;
+}
+.fxs_filter_new.active {
+  width: 100%;
+  overflow: visible;
+}
+.fxs_filter_new.active .fxs_btn_filter {
+  color: #a3a3a8;
+}
+.fxs_filter_new.active .fxs_queryResults {
+  display: block;
+}
+.fxs_filter_new.active .fxs_queryResults.fxs_selectedQuery .fxs_queryResults_label {
   -webkit-animation: fadeIn 0.33s ease-in;
   -moz-animation: fadeIn 0.33s ease-in;
   -o-animation: fadeIn 0.33s ease-in;
@@ -7541,15 +7577,4 @@ width:calc(100% - 140px);
 }
 .fxs_widget_compareprices .fxs_widget_cell_col.fxs_price_col {
   text-align: right;
-}
-.fxs_widget_compareprices .fxs_widget_custom_data_lable,
-.fxs_widget_compareprices .fxs_index_date {
-  display: block;
-}
-@media (min-width: 1150px) {
-  .fxs_widget_compareprices.fxs_widget_big .fxs_widget_custom_data_lable,
-  .fxs_widget_compareprices.fxs_widget_big .fxs_index_date {
-    display: inline-block;
-    margin-left: 0.5rem;
-  }
 }
