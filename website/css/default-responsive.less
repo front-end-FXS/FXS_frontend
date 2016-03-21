@@ -122,6 +122,24 @@ dl > dt,dd{
 #fxst_filter {
     display: block;
 }
+.fxit-event-info-desktop{
+  display:none!important;
+}
+.fxit-event-info-desktop{
+  @media (min-width: 800px) {
+    display:block!important;
+    width:18%!important;
+  }
+}
+.fxit-event-info-mobile{
+    display:none!important;
+  }
+@media (max-width: @screen-m) {
+  .fxit-event-info-mobile{
+    display:block!important;
+  }
+}
+  
 #fxst-calendartable {
 	tr {
 		td, th {
@@ -206,7 +224,7 @@ dl > dt,dd{
 			    }
 			}
 			.fxit-event {
-				width: 76%;
+				width: 83%;
 		        .fxit-event-url, .fxit-event-numbers {
 			        @media (max-width: @screen-m) {
 			        	width: 100%;
@@ -214,7 +232,7 @@ dl > dt,dd{
 		        }
 		        .fxit-event-url {
 		        	float: left;
-		        	width: 70%;
+		        	width: 60%;
 			        font-weight: 700;
                     span {
 			            font-weight: lighter;
@@ -234,13 +252,43 @@ dl > dt,dd{
 		        	float: right;
 		        	width: 35%;
 			        @media (max-width: @screen-m) {
-						float: left;
-		        		width: 100%;
-                        padding-left: 10px;
-			        }
+      						float: left;
+    		        	width: 100%;
+                    padding-left: 10px;
+    			        }
+                  &.fxit-move-volatily{
+                    .fxit-eventInfo-vol-c {
+    			    		    width: 50px;
+    			    		    height: 12px;
+    			    		    padding: 0;
+                      background-color: #E0E0E0;
+    			    		    color: transparent;
+    				    	    .fxst-i-vol {
+    				    		    display: block;
+    				    	    }
+    						    .fxst-i-vol0 {
+    						    }
+    						    .fxst-i-vol1 {
+    							    width: 30%;
+    							    height: 100%;
+    							    background-color: #ffcc00;
+    						    }
+    						    .fxst-i-vol2 {
+    							    width: 60%;
+    							    height: 100%;
+    							    background-color: #fa9900;
+    						    }
+    						    .fxst-i-vol3 {
+    							    width: 100%;
+    							    height: 100%;
+    							    background-color: #de3322;
+    						    }
+  			    	    }
+                }
+
 			        .fxit-actual, .fxit-consensus, .fxit-previous {
 			        	text-align: center;
-			        	width: 32%;
+			        	width: 25%;
 			        	height: 16px;
                         font-weight: 700;
                         color: #000;
@@ -265,19 +313,19 @@ dl > dt,dd{
 			        }
 			        .fxit-actual:after {
 				        @media (max-width: @screen-m) {
-    							content: 'ACTUAL';
-    				    }
-    				  }
+							content: 'ACTUAL';
+				        }
+				    }
 			        .fxit-consensus:after {
 				        @media (max-width: @screen-m) {
-  							content: 'CONSENSUS';
-  				        }
-  				    }
+							content: 'CONSENSUS';
+				        }
+				    }
 			        .fxit-previous:after {
 				        @media (max-width: @screen-m) {
-  							content: 'PREVIOUS';
-  				        }
-  				    }
+							content: 'PREVIOUS';
+				        }
+				    }
                     .fxst-revised > p {
 
                     }
