@@ -80,23 +80,6 @@ dd {
 #fxst_filter {
   display: block;
 }
-.fxit-event-info-desktop {
-  display: none!important;
-}
-@media (min-width: 800px) {
-  .fxit-event-info-desktop {
-    display: block!important;
-    width: 18%!important;
-  }
-}
-.fxit-event-info-mobile {
-  display: none!important;
-}
-@media (max-width: 768px) {
-  .fxit-event-info-mobile {
-    display: block!important;
-  }
-}
 #fxst-calendartable tr td,
 #fxst-calendartable tr th {
   padding: 10px 10px 8px;
@@ -214,7 +197,7 @@ dd {
 }
 #fxst-calendartable tr td .fxit-event,
 #fxst-calendartable tr th .fxit-event {
-  width: 83%;
+  width: 76%;
 }
 @media (max-width: 768px) {
   #fxst-calendartable tr td .fxit-event .fxit-event-url,
@@ -227,7 +210,7 @@ dd {
 #fxst-calendartable tr td .fxit-event .fxit-event-url,
 #fxst-calendartable tr th .fxit-event .fxit-event-url {
   float: left;
-  width: 60%;
+  width: 70%;
   font-weight: 700;
 }
 #fxst-calendartable tr td .fxit-event .fxit-event-url span,
@@ -261,36 +244,6 @@ dd {
     padding-left: 10px;
   }
 }
-#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c {
-  width: 50px;
-  height: 12px;
-  padding: 0;
-  background-color: #E0E0E0;
-  color: transparent;
-}
-#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol {
-  display: block;
-}
-#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol1,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol1 {
-  width: 30%;
-  height: 100%;
-  background-color: #ffcc00;
-}
-#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol2,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol2 {
-  width: 60%;
-  height: 100%;
-  background-color: #fa9900;
-}
-#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol3,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol3 {
-  width: 100%;
-  height: 100%;
-  background-color: #de3322;
-}
 #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-actual,
 #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-actual,
 #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus,
@@ -298,7 +251,7 @@ dd {
 #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous,
 #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous {
   text-align: center;
-  width: 25%;
+  width: 32%;
   height: 16px;
   font-weight: 700;
   color: #000;
