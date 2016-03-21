@@ -1,0 +1,941 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>FXStreet - The Forex Market</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+        <link rel="apple-touch-icon" sizes="76x76" href="touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="cbp-spmenu-push">
+
+        <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+        
+        <header class="fxs_header">
+            <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+                <i class="fa fa-bars"></i>
+                <span class="fxs_skip">Show navigation</span>
+            </button>
+            <a class="fxs_logo" href="#" title="FXStreet">
+                FXStreet - The forex market
+            </a>
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li class="active"><a href="" title="">Home</a></li>
+                    <li><a href="" title="">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
+                    <li><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_overflowOptions">
+                        <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                        <ul class="fxs_dropdownList">
+                            <li class="fxs_dropdownHeader">Follow us on</li>
+                            <li>
+                                <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                            </li>
+                            <li class="fxs_divider_third">&nbsp;</li>
+                            <li class="fxs_dropdownHeader">RSS feeds</li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
+
+            <button type="button" id="showRightPush" class="fxs_show_usermenu">
+                <i class="fa fa-user"></i>
+                <span class="fxs_skip">User Settings</span>
+            </button>
+        </header>
+
+        <!-- The wrapper -->
+        <div class="fxs_wrapper fxs_content_wide">
+
+            <!-- Sidebar left nav -->
+            <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+                <!-- Main-nav -->
+                <nav class="fxs_nav_menu" role="navigation">
+                    <ul>
+                        <li class="active"><a href="" title="">Home</a></li>
+                        <li><a href="" title="">Rates & Charts</a></li>
+                        <li><a href="" title="">News</a></li>
+                        <li><a href="" title="">Analysis</a></li>
+                        <li><a href="" title="">Economic Calendar</a></li>
+                        <li><a href="" title="">Live Video</a></li>
+                        <li><a href="" title="">Education</a></li>
+                        <li><a href="" title="">Find a Broker</a></li>
+                    </ul>
+                </nav>
+                <!-- /Main-nav -->
+
+                <!-- About -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">About</li>
+                    <li><a href="" title="">About fxstreet</a></li>
+                    <li><a href="" title="">Advertise with us</a></li>
+                </ul>
+                <!-- terms and conditions -->
+                <ul class="fxs_items_list_nav">
+                    <li><a href="" title="">Terms and conditions</a></li>
+                    <li><a href="" title="">Privacy policy</a></li>
+                    <li><a href="" title="">Contact us</a></li>
+                    <li><a href="" title="">Site map</a></li>
+                </ul>
+                <!-- /Complementary links -->
+                
+                <!-- Social Media links widget -->
+                <div class="fxs_socialLinks_nav">
+                    <ul class="fxs_shareOptions_boxed">
+                        <li class="fxs_socialMedia_item">
+                            <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="http://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.linkedin.com/company/fxstreet" class="fxs_btn_icon" target="_blank" title="LinkedIn page"><i class="fa fa-linkedin"></i><span class="fxs_skip">LinkedIn page</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Social Media links widget -->
+                
+                <!-- lang-edition -->
+                <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                    <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                    
+                    <ul class="fxs_dropdownList dropup">
+                        <li class="fxs_dropdownHeader">Other sites</li>
+                        <li><a href="#">体中文</a></li>
+                        <li><a href="#">繁體中文</a></li>
+                        <li><a href="#">Русский</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                        <li><a href="#">العربية</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Português</a></li>
+                        <li><a href="#">Magyar</a></li>
+                        <li><a href="#">Türkçe</a></li>
+                        <li><a href="#">Tiếng Việt</a></li>
+                        <li><a href="#">한국어</a></li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">Edition</li>
+                        <li><a href="#">Yсский</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                    </ul>
+                </div>
+                <!-- /lang-edition -->
+            </div>
+            <!-- /Sidebar left -->
+
+            <!-- Topics subnav -->
+            <nav class="fxs_content_subnav">
+                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All News</a>
+                <div class="fxs_topics_nav fxs_swipeContent_slider">
+                    <h1 class="fxs_label">Popular on FXStreet</h1>
+                    <ul class="fxs_subnavInlined_list">
+                        <li><a href="#" class="fxs_mutedLink">Forex technical analysis</a></li>
+                        <li><a href="#" class="fxs_mutedLink">FED's meeting</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 3</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 4</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /Topics subnav -->
+
+            <div class="fxs_content" id="fxs_content">
+
+                <!-- Space for Global Alerts & Notifications --><!-- For dev -->
+                <!-- Add class "in" to show alerts -->
+                <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
+                    <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                      <i class="fa fa-close"></i>
+                      <span class="fxs_skip">Close alert</span>
+                    </button>
+                    <span class="fxs_alertLabel">Welcome</span>
+                    <p class="fxs_alertText">                       
+                    We use cookies to enhance your experience like remembering your <a href="#" onclick="todo" role="button">Time Zone (GMT +1:00)</a>. By closing this message you are agreeing to our use of cookies. <a href="path-to-cookies-policies">Learn more</a>
+                    </p>
+                </div>
+                <!-- /Space for Global Alerts & Notifications -->
+
+                <!-- The content rail -->
+                <div class="fxs_contentView">
+
+                    <!-- Leaderboard -->
+                    <div class="fxs_leaderboard">
+                        
+                        <div class="fxs_ad">
+                            <a href="path-to-sponsor">
+                                <img src="http://static.mobiles.keygames.com/sites/8/2015/04/mr-flap-980x276.jpg">
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- /Leaderboard -->
+
+                    <main id="fxs_it_detail" role="main">
+                        <!-- Main Setcion -->
+                        <section class="fxs_detail">
+
+                            <div class="fxs_clearfix">
+                                <h2 class="fxs_subsectionTitle">
+                                    SF Cols
+                                </h2>
+                            </div>
+                        
+                            <!-- 1 = 100% -->
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_100">
+                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                            SF 1col 100%
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fxs_marginBase_top"></div>
+
+                                <div class="fxs_col fxs_col_50">
+                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                            SF 1col 50%
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_50">
+                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                            SF 1col 50%
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- /1 = 100% -->
+
+                            <hr class="fxs_divider_third">
+
+                            <!-- 8 - 4 -->
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_67">
+                                    <div id="fxs_detail_ctl00_C004_Col00">
+                                        <div>
+                                            
+                                            <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                                <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                    SF 2cols 67-33 - 67%
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="fxs_marginBase_top"></div>
+
+                                        <div class="fxs_row">
+                                            <div class="fxs_col fxs_col_50">
+                                                <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                                    <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                        SF 1col 50%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="fxs_col fxs_col_50">
+                                                <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                                    <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                        SF 1col 50%
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="fxs_marginBase_top"></div>
+
+                                    <div class="fxs_row">
+                                        
+                                        <div class="fxs_col fxs_col_33 fxs_col_dismissible">
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 1col 33%
+                                                <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis</p>
+                                            </div>
+                                        </div>
+                                        <div class="fxs_col fxs_col_33 fxs_col_dismissible">
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 1col 33%
+                                               <p> Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis</p>
+                                            </div>
+                                        </div>
+                                        <div class="fxs_col fxs_col_33 fxs_col_dismissible">
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 1col 33%
+                                               <p> Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis</p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_33 fxs_col_dismissible">
+                                    <div id="fxs_detail_ctl00_C004_Col01">
+
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 2cols 67-33 - 33%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="fxs_marginBase_top"></div>
+
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_100">
+                                            <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                                <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                    SF 1col 100%
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fxs_marginBase_top"></div>
+
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_100">
+                                            <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                                <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                    SF 1col 100%
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="fxs_divider_third">
+
+                            <!-- 9 - 3 -->
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_75">
+                                    <div id="fxs_detail_ctl04_ctl03_C024_Col00">
+                                        <div>
+                                            <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                                <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                    SF 2cols 75-25 - 75%
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fxs_col fxs_col_25 fxs_col_dismissible">
+                                    <div id="fxs_detail_ctl04_ctl03_C024_Col01">
+
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 2cols 75-25 - 25%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="fxs_divider_third">
+
+                            <!-- 6 - 6 -->
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_50">
+                                    <div id="fxs_detail_ctl05_C030_Col00">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 2cols 50-50 - 50%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_50">
+                                    <div id="fxs_detail_ctl05_C030_Col00">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 2cols 50-50 - 50%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="fxs_divider_third">
+
+                            <!-- 3 - 3 - 3 -->
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_33">
+                                    <div id="fxs_detail_ctl07_C037_Col00">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 3cols - 33%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_33">
+                                    <div id="fxs_detail_ctl07_C037_Col01">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 3cols - 33%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_33">
+                                    <div id="fxs_detail_ctl07_C037_Col02">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 3cols - 33%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="fxs_divider_third">
+
+                            <!-- 4 - 4 - 4 -->
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_25">
+                                    <div id="fxs_detail_ctl07_C037_Col00">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 4cols - 25%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_25">
+                                    <div id="fxs_detail_ctl07_C037_Col01">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 4cols - 25%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_25">
+                                    <div id="fxs_detail_ctl07_C037_Col02">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 4cols - 25%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="fxs_col fxs_col_25">
+                                    <div id="fxs_detail_ctl07_C037_Col02">
+                                        
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                SF 4cols - 25%
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="fxs_divider_third">
+
+                            <!--  Flex col Ad outside -->
+                            <div class="fxs_row fxs_tableRow">
+
+                                <div class="fxs_flex_col">
+                                    
+                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                            Flex col Ad outside - Content col
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Ad col outside -->
+                                <div class="fxs_flex_col fxs_flex_ad_col">
+                                    
+                                    <!-- Content Ad container -->
+                                    <div class="fxs_content_adContainer">
+
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                Flex col Ad outside - Ad col
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Content Ad container -->
+
+                                </div>
+                                <!-- /Ad col outside -->
+
+                            </div>
+                            <!--  /Flex col Ad outside -->
+
+                            <hr class="fxs_divider_third">
+
+                            <!--  Flex col Ad inside -->
+                            <div class="fxs_row fxs_tableRow">
+                                
+                                <!-- Ad col inside -->
+                                <div class="fxs_flex_col fxs_flex_ad_col">
+                                    
+                                    <!-- Content Ad container -->
+                                    <div class="fxs_content_adContainer">
+
+                                        <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                            <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                                Flex col Ad inside - Ad col
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Content Ad container -->
+
+                                </div>
+                                <!-- /Ad col inside -->
+
+                                <div class="fxs_flex_col">
+                                    
+                                    <div style="display: table; width: 100%;" class="ESTO-ES-UN-EJEMPLO">
+
+                                        <div style="background-color:#58a3dd; color:#fff; text-align:center; height:100px; display:table-cell; width:100%; vertical-align: middle;" class="ESTO-ES-UN-EJEMPLO">
+                                            Flex col Ad inside - Content col
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--  /Flex col Ad inside -->                    
+                        
+                        </section>
+                        <!-- /Main Section -->
+                    </main>
+                </div>
+                <!-- /The content rail -->
+
+
+                <!-- Site footer -->
+                <footer class="fxs_footer">
+                    <div class="fxs_copy_disclaimer">
+                        <div class="fxs_terms_nav">
+                            <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                            <ul class="fxs_subnavInlined_list">
+
+                                <!-- Button DropUp 1 -->
+                                <li class="fxs_btn_group">
+                                    <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">About <i class="fa fa-caret-up"></i></button>
+                                    <ul class="fxs_dropdownList dropup">
+                                        <li><a href="" title="">About fxstreet</a></li>
+                                        <li><a href="" title="">Advertise with us</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /Button DropUp 1-->
+
+                                <li><a href="#" class="fxs_mutedLink">Terms and conditions</a></li>
+                                <li><a href="#" class="fxs_mutedLink">Privacy policy</a></li>
+                                <li><a href="#" class="fxs_mutedLink">Contact us</a></li>
+                                <li><a href="#" class="fxs_mutedLink">Site map</a></li>
+
+                                <!-- Button DropUp 2-->
+                                <li class="fxs_btn_group">
+                                    <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                        
+                                    <ul class="fxs_dropdownList dropup">
+                                        <li class="fxs_dropdownHeader">Edition</li>
+                                        <li><a href="#">Yсский</a></li>
+                                        <li><a href="#">Español</a></li>
+                                        <li><a href="#">Deutsch</a></li>
+                                        <li><a href="#">Français</a></li>
+                                        <li class="fxs_divider_third">&nbsp;</li>
+                                        <li class="fxs_dropdownHeader">Other sites</li>
+                                        <li><a href="#">体中文</a></li>
+                                        <li><a href="#">繁體中文</a></li>
+                                        <li><a href="#">Русский</a></li>
+                                        <li><a href="#">Indonesia</a></li>
+                                        <li><a href="#">العربية</a></li>
+                                        <li><a href="#">Italiano</a></li>
+                                        <li><a href="#">Português</a></li>
+                                        <li><a href="#">Magyar</a></li>
+                                        <li><a href="#">Türkçe</a></li>
+                                        <li><a href="#">Tiếng Việt</a></li>
+                                        <li><a href="#">한국어</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /Button DropUp 2-->
+
+                            </ul>
+                        </div>
+                        <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                        <div class="fxs_disclaimer_block">
+                            <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                            <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                            <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- /Site footer -->
+
+            </div>
+
+            <!-- Sidebar right -->
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
+
+            <!-- Timezones -->
+            <div class="fxs_pageSidebar fxs_timezone_items">
+                <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
+                <div class="fxs_nav_menu fxs_timezone_hours">
+
+                    <ol>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+            </div>
+            <!-- /Timezones -->
+
+            
+        </div>
+        <!-- /The wrapper -->
+        
+        <script src="../js/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../js/bootstrap.min.js"></script>
+
+        <script src="../js/classie.js"></script>
+        <script src="../js/jquery.typeahead.min.js"></script>
+        <script src="../js/site.js"></script>
+        
+        
+    </body>
+</html>

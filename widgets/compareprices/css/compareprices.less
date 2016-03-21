@@ -5,7 +5,6 @@
 @import "../../../website/css/less/vars.less";
 @import "../../../website/css/less/mixins.less";
 
-// Bullish percentage index
 .fxs_widget_compareprices {
   ul.fxs_list_table{
     border-bottom:1px solid #ececf1;
@@ -28,31 +27,6 @@
     }
     &.fxs_price_col{ 
       text-align: right;
-    }
-  }
-  .fxs_widget_custom_data_lable, .fxs_index_date { display: block; }
-  
-
-
-  // Mini rules
-  // &.fxs_widget_mini {
-  //   @media(min-width:@screen-s) {
-  //     // Any rules here
-  //   }
-  // }
-
-  // Default rules
-  // &.fxs_widget_default {
-  //   // Any rules here
-  // }
-
-  // Big rules
-  &.fxs_widget_big {
-    @media(min-width:@screen-l) {
-      .fxs_widget_custom_data_lable, .fxs_index_date {
-        display: inline-block;
-        margin-left: 0.5rem;
-      }
     }
   }
 
