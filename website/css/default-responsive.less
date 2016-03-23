@@ -225,6 +225,9 @@ dl > dt,dd{
 			}
 			.fxit-event {
 				width: 83%;
+              @media (max-width: @screen-m) {
+                width: 70%;
+              }
 		        .fxit-event-url, .fxit-event-numbers {
 			        @media (max-width: @screen-m) {
 			        	width: 100%;
@@ -290,9 +293,10 @@ dl > dt,dd{
 			        	text-align: center;
 			        	width: 25%;
 			        	height: 16px;
-                        font-weight: 700;
-                        color: #000;
+                font-weight: 700;
+                color: #000;
 				        @media (max-width: @screen-m) {
+                  width:33%;
 				        	position: relative;
 				        	float: left;
 				        	min-height: 40px;
