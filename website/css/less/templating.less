@@ -747,11 +747,13 @@
   top: 0;
   z-index: 100;
 }
-
 .fxs_dismissQuery{ 
   .animation(fadeIn 0.5s ease-in); 
   &.fxs_dismissQuery_disabled{
     display: none;
+  }
+  &.fxs_dismissQuery_enabled{
+    display:block;
   }
 }
 
@@ -790,7 +792,6 @@
   &.hint .typeahead-hint { visibility: visible!important; }
   .typeahead-hint { visibility: hidden!important; }
 }
-
 .fxs_typeaheadQuery {
   background: @lightest_clr;
   position: relative;

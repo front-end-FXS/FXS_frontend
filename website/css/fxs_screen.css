@@ -767,7 +767,17 @@ input[type=submit] {
   font-size: 0.8rem;
   letter-spacing: normal;
 }
-.fxs_formGroup {
+.fxs_contactUs_form .sf-fieldWrp input,
+.fxs_contactUs_form .sf-fieldWrp textarea,
+.fxs_contactUs_form .sf-fieldWrp select {
+  width: 100%;
+  margin-bottom: 0.22rem;
+}
+.fxs_contactUs_form .sf-fieldWrp textarea {
+  height: 100px;
+}
+.fxs_formGroup,
+.fxs_contactUs_form .sf-fieldWrp {
   margin-bottom: 1rem;
 }
 .fxs_formGroup .fxs_formGroup {
@@ -783,7 +793,8 @@ input[type=submit] {
 .fxs_textInput_mini {
   max-width: 70px;
 }
-.fxs_checkboxGroup {
+.fxs_checkboxGroup,
+.fxs_contactUs_form {
   font-size: 0.92rem;
   display: block;
 }
@@ -855,6 +866,7 @@ width:calc(100% - 165px);
 }
 .fxs_btn,
 .fxs_btn_icon,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   background-color: transparent;
   border: 1px solid transparent;
@@ -873,6 +885,7 @@ width:calc(100% - 165px);
 .fxs_btn_icon:hover,
 .fxs_btn:hover,
 .fxs_btn_icon:hover,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed:hover {
@@ -903,6 +916,7 @@ fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.c
   z-index: 1;
 }
 .fxs_btn,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   font-size: 0.92rem;
 }
@@ -1042,7 +1056,8 @@ fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.c
 .open > .fxs_btn_phantom {
   background-color: #dddedf;
 }
-.fxs_btn_default {
+.fxs_btn_default,
+.fxs_contactUs_form .sf-fieldWrp button {
   color: #ffffff;
   background-color: #304c70;
   border-color: #304c70;
@@ -2599,6 +2614,7 @@ select,
 .fxs_btn_filter,
 .fxs_dismissQuery,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_entryFeatured_img,
 .fxs_floatingMedia_imageContainer,
 .fxs_listView_squareImage,
@@ -2812,6 +2828,7 @@ h2,
 h3,
 h4,
 h5,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_asset_label,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
   -webkit-font-smoothing: antialiased;
@@ -4585,6 +4602,9 @@ fieldset[disabled] .fxs_dismissQuery {
 }
 .fxs_dismissQuery.fxs_dismissQuery_disabled {
   display: none;
+}
+.fxs_dismissQuery.fxs_dismissQuery_enabled {
+  display: block;
 }
 .fxs_queryResults {
   position: absolute;

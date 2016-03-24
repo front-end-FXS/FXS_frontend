@@ -333,7 +333,17 @@ tbody.collapse.in {
   font-size: 0.8rem;
   letter-spacing: normal;
 }
-.fxs_formGroup {
+.fxs_contactUs_form .sf-fieldWrp input,
+.fxs_contactUs_form .sf-fieldWrp textarea,
+.fxs_contactUs_form .sf-fieldWrp select {
+  width: 100%;
+  margin-bottom: 0.22rem;
+}
+.fxs_contactUs_form .sf-fieldWrp textarea {
+  height: 100px;
+}
+.fxs_formGroup,
+.fxs_contactUs_form .sf-fieldWrp {
   margin-bottom: 1rem;
 }
 .fxs_formGroup .fxs_formGroup {
@@ -349,7 +359,8 @@ tbody.collapse.in {
 .fxs_textInput_mini {
   max-width: 70px;
 }
-.fxs_checkboxGroup {
+.fxs_checkboxGroup,
+.fxs_contactUs_form {
   font-size: 0.92rem;
   display: block;
 }
@@ -420,7 +431,8 @@ width:calc(100% - 165px);
   margin-left: -2px;
 }
 .fxs_btn,
-.fxs_btn_icon {
+.fxs_btn_icon,
+.fxs_contactUs_form .sf-fieldWrp button {
   background-color: transparent;
   border: 1px solid transparent;
   height: 35px;
@@ -437,7 +449,8 @@ width:calc(100% - 165px);
 .fxs_btn:hover,
 .fxs_btn_icon:hover,
 .fxs_btn:hover,
-.fxs_btn_icon:hover {
+.fxs_btn_icon:hover,
+.fxs_contactUs_form .sf-fieldWrp button {
   text-decoration: none!important;
 }
 .fxs_btn.disabled,
@@ -460,7 +473,8 @@ fieldset[disabled] .fxs_btn_icon {
   top: 0;
   z-index: 1;
 }
-.fxs_btn {
+.fxs_btn,
+.fxs_contactUs_form .sf-fieldWrp button {
   font-size: 0.92rem;
 }
 .fxs_btn_icon {
@@ -597,7 +611,8 @@ fieldset[disabled] .fxs_btn_icon {
 .open > .fxs_btn_phantom {
   background-color: #dddedf;
 }
-.fxs_btn_default {
+.fxs_btn_default,
+.fxs_contactUs_form .sf-fieldWrp button {
   color: #ffffff;
   background-color: #304c70;
   border-color: #304c70;
@@ -2045,6 +2060,7 @@ width:calc(100% - 320px);
 .fxs_mediaContainer,
 [class^="fxs_widget_"] a,
 .fxs_table a,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_entryFeatured_img,
 .fxs_floatingMedia_imageContainer {
   -webkit-transition: all 0.25s ease-in;
@@ -2216,6 +2232,7 @@ lesshat-selector {
 .fxs_headline_base_rules,
 [class^="fxs_widget_"] a,
 .fxs_table a,
+.fxs_contactUs_form .sf-fieldWrp button,
 .fxs_asset_label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
