@@ -247,4 +247,13 @@ $(document).ready(function () {
         disableOther('showLeftPush');
     });
 
+
+    $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
+    $('.fxs_filter_modified').focusin(function(){
+        $('.fxs_dismissQuery').removeClass('fxs_dismissQuery_disabled');
+    })
+    /*$('.fxs_filter_modified').focusout(function(){
+        $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
+    })*/
+
 });

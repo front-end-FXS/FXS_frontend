@@ -105,6 +105,22 @@
 }
 ///////////////////////////////////////////////////////////
 ////////// Forms grouped layouts & input groups //////////
+.fxs_contactUs_form{
+  .sf-fieldWrp{
+    &:extend(.fxs_formGroup);
+    input, textarea, select{
+      width:100%;
+      margin-bottom:0.22rem;
+    }
+    textarea{
+      height:100px;
+    }
+    button{
+      &:extend(.fxs_btn, .fxs_btn_default);
+    }
+  }
+  &:extend(.fxs_checkboxGroup);
+}
 .fxs_formGroup {
   margin-bottom: 1rem;
   .fxs_formGroup {
