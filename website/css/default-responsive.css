@@ -217,6 +217,12 @@ dd {
   width: 83%;
 }
 @media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-event,
+  #fxst-calendartable tr th .fxit-event {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
   #fxst-calendartable tr td .fxit-event .fxit-event-url,
   #fxst-calendartable tr th .fxit-event .fxit-event-url,
   #fxst-calendartable tr td .fxit-event .fxit-event-numbers,
@@ -310,6 +316,7 @@ dd {
   #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus,
   #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous,
   #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous {
+    width: 33%;
     position: relative;
     float: left;
     min-height: 40px;
