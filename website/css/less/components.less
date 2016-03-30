@@ -556,6 +556,12 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+.fxs_divider_wide_clean{
+  &:extend(.fxs_divider_base, .fxs_wideContent all);
+  height: 7px;
+  margin-bottom: 0;
+  @media (min-width: @screen-s) { margin-bottom: 0!important; }
+}
 
 .fxs_divider_first {
 	&:extend(.fxs_divider_base, .fxs_clearfix all);
@@ -1321,7 +1327,7 @@
 }
 .fxs_fullreport_chart{
   position: absolute;
-  right:4.5rem;
+  right:5rem;
   top:0.2rem;
   z-index: 9999;
 }
