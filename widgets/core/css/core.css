@@ -1128,6 +1128,15 @@ width:calc(100% - 320px);
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+.fxs_divider_wide_clean {
+  height: 7px;
+  margin-bottom: 0;
+}
+@media (min-width: 680px) {
+  .fxs_divider_wide_clean {
+    margin-bottom: 0!important;
+  }
+}
 .fxs_divider_first {
   height: 3px;
 }
@@ -1922,7 +1931,7 @@ width:calc(100% - 320px);
 }
 .fxs_fullreport_chart {
   position: absolute;
-  right: 4.5rem;
+  right: 5rem;
   top: 0.2rem;
   z-index: 9999;
 }
@@ -2425,6 +2434,9 @@ lesshat-selector {
 .fxs_marginBase_left {
   margin-left: 1rem;
 }
+.fxs_paddingBase_top {
+  padding-top: 1rem;
+}
 .fxs_resetRow_margin {
   padding-left: 7.5px;
   padding-right: 7.5px;
@@ -2470,7 +2482,9 @@ lesshat-selector {
 .fxs_alert::before,
 .fxs_alert::after,
 .fxs_divider_wide::before,
-.fxs_divider_wide::after {
+.fxs_divider_wide::after,
+.fxs_divider_wide_clean::before,
+.fxs_divider_wide_clean::after {
   content: " ";
   display: table;
 }
@@ -2489,7 +2503,8 @@ lesshat-selector {
 .fxs_wideContent::after,
 .fxs_swipeContent_slider::after,
 .fxs_alert::after,
-.fxs_divider_wide::after {
+.fxs_divider_wide::after,
+.fxs_divider_wide_clean::after {
   clear: both;
 }
 .fxs_contentRail_box {
@@ -2498,6 +2513,7 @@ lesshat-selector {
 }
 .fxs_divider_base,
 .fxs_divider_wide,
+.fxs_divider_wide_clean,
 .fxs_divider_first,
 .fxs_divider_second,
 .fxs_divider_third {
@@ -2507,6 +2523,7 @@ lesshat-selector {
 @media (min-width: 680px) {
   .fxs_divider_base,
   .fxs_divider_wide,
+  .fxs_divider_wide_clean,
   .fxs_divider_first,
   .fxs_divider_second,
   .fxs_divider_third {
@@ -2648,14 +2665,16 @@ lesshat-selector {
 }
 .fxs_wideContent,
 .fxs_alert,
-.fxs_divider_wide {
+.fxs_divider_wide,
+.fxs_divider_wide_clean {
   margin-left: -1rem;
   margin-right: -1rem;
 }
 @media (min-width: 680px) {
   .fxs_wideContent,
   .fxs_alert,
-  .fxs_divider_wide {
+  .fxs_divider_wide,
+  .fxs_divider_wide_clean {
     margin-left: -2rem;
     margin-right: -2rem;
   }
@@ -2663,7 +2682,8 @@ lesshat-selector {
 @media (min-width: 680px) {
   .fxs_wideContent.no_wide_content,
   .fxs_alert.no_wide_content,
-  .fxs_divider_wide.no_wide_content {
+  .fxs_divider_wide.no_wide_content,
+  .fxs_divider_wide_clean.no_wide_content {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
