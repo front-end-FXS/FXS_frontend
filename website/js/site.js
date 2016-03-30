@@ -249,11 +249,13 @@ $(document).ready(function () {
 
 
     $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
-    $('.fxs_filter_modified').focusin(function(){
+
+    $('.fxs_typeheadContainer_custom').focusin(function(){
         $('.fxs_dismissQuery').removeClass('fxs_dismissQuery_disabled');
     })
-    /*$('.fxs_filter_modified').focusout(function(){
+    $('.fxs_queryResults').on('click', function(){
         $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
-    })*/
+    })
+
 
 });
