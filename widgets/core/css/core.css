@@ -921,6 +921,7 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   color: #ffffff;
 }
 .fxs_label_info,
+.fxs_content_panel.fxs_wide_panel_info,
 .fxs_detail.fxs_contextual_section {
   background-color: #6289ac;
   color: #ffffff;
@@ -1577,6 +1578,9 @@ width:calc(100% - 320px);
   color: #a3a3a8;
   font-size: 11px;
   margin-bottom: 0;
+}
+.fxs_disclaimer_block span {
+  display: block;
 }
 .fxs_shareOptions_boxed {
   font-size: 5px;
@@ -2534,6 +2538,13 @@ lesshat-selector {
   padding: 1rem;
   background-color: #f3f3f8;
   margin-bottom: 7.5px;
+}
+.fxs_content_panel.fxs_wide_panel_info {
+  margin-bottom: -2rem;
+  margin-top: -1.5rem;
+}
+.fxs_content_panel.fxs_wide_panel_info .fxs_headline_medium {
+  padding-left: 1rem;
 }
 .fxs_dropdown_generic,
 .fxs_dropdownList,
