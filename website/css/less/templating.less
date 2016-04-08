@@ -444,7 +444,7 @@
 
 .fxs_leaderboard {
   &:extend(.fxs_contentRail_box);
-  padding: 0.5rem 0;
+  padding: 0;
   position: relative;
   text-align: center;
   .fxs_detail & {
@@ -461,8 +461,12 @@
       margin-bottom: -1.2rem;
   }
   &.fxs_leaderboard_adjust{
-    margin-top:1rem;
-    margin-bottom:1rem;
+    padding-top:0;
+    margin-top:0;
+    img, iframe, a{
+      margin-top:1rem;
+      margin-bottom:1rem;
+    }
   }
 }
 // this sticky goes at the bottom of the left sidebar
@@ -1246,7 +1250,7 @@
   .animation(show-sponsor-from-top 0.6s ease-in 0.6s forwards);
   max-height: 0;
   overflow: hidden;
-  @media(min-width: @screen-xl){ margin: -0.5rem 0; }
+  @media(min-width: @screen-xl){ margin: -0.32rem 0; }
   img {
     display: block;
     margin: 0 auto;
@@ -1523,7 +1527,7 @@
 /////////// FXS cols /////////
 // 12 columns based system //
 .fxs_row { .make-row(); }
-.fxs_col, .fxs_flex_col { .column-default-parameters(); }
+.fxs_col, .fxs_flex_col, .fxs_flex_small_col { .column-default-parameters(); }
 
 // 100% //
 .fxs_col_100 { &:extend(.fxs_clearfix all); }
@@ -1576,6 +1580,39 @@
     &.fxs_flex_ad_col {
       width: @left_rail_space;
       .stickem { width: @left_rail_space - ((@txt_defaultsize_px / 1.5) * 2); }
+    }
+  }
+  // 50% //
+  .fxs_col_50 { .make-m-column(6); }
+
+  // 33% //
+  .fxs_col_33 {
+    &:not(.fxs_col_dismissible) { .make-m-column(4); }
+  }
+}
+
+// only use this rules for small ads max width 140px in big layout
+
+.fxs_flex_small_col {
+  @media (min-width: @screen-s) {
+    float: left;
+    .calc(width, ~'100% - ((@{left_rail_space_reduced_small}) - 5px)');
+    &.fxs_flex_ad_col {
+      width: @left_rail_space_reduced_small - (@txt_defaultsize_px / 3);
+      position: static;
+      &.fxs_flex_ad_col_fRight { float: right; }
+      .stickem { width: @left_rail_space_reduced_small - ((@txt_defaultsize_px / 1.5) * 2); }
+    }
+    .fxs_col_50, .fxs_col_33:not(.fxs_col_dismissible) {
+      float: none;
+      width: 100%;
+    }
+  }
+  @media (min-width: @screen-l) {
+    .calc(width, ~'100% - @{left_rail_space_small}');
+    &.fxs_flex_ad_col {
+      width: @left_rail_space_small;
+      .stickem { width: @left_rail_space_small - ((@txt_defaultsize_px / 1.5) * 2); }
     }
   }
   // 50% //
