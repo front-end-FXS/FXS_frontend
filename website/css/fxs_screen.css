@@ -3062,6 +3062,9 @@ h5 a:hover,
 .fxs_marginBase_top {
   margin-top: 1rem;
 }
+.fxs_marginBase_top_big {
+  margin-top: 45px;
+}
 .fxs_marginHalf_top {
   margin-top: 7.5px;
 }
@@ -4208,7 +4211,7 @@ height:calc(100% - 45px);
   padding: 0;
 }
 .fxs_leaderboard {
-  padding: 0.5rem 0;
+  padding: 0;
   position: relative;
   text-align: center;
 }
@@ -4230,6 +4233,12 @@ height:calc(100% - 45px);
   margin-bottom: -1.2rem;
 }
 .fxs_leaderboard.fxs_leaderboard_adjust {
+  padding-top: 0;
+  margin-top: 0;
+}
+.fxs_leaderboard.fxs_leaderboard_adjust img,
+.fxs_leaderboard.fxs_leaderboard_adjust iframe,
+.fxs_leaderboard.fxs_leaderboard_adjust a {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -5206,7 +5215,7 @@ width:calc(100% - 60px - 5px);
 }
 @media (min-width: 1280px) {
   .fxs_roadblock_slide {
-    margin: -0.5rem 0;
+    margin: -0.32rem 0;
   }
 }
 .fxs_roadblock_slide img {
@@ -5791,6 +5800,7 @@ width:calc(100% - 220px);
   font-size: 1.2rem;
   line-height: 1.38rem;
   margin-bottom: 5px;
+  z-index: 2;
 }
 @media (min-width: 680px) {
   .fxs_sexy_bannerText .fxs_entryHeadline {

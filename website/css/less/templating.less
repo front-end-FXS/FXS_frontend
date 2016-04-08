@@ -444,7 +444,7 @@
 
 .fxs_leaderboard {
   &:extend(.fxs_contentRail_box);
-  padding: 0.5rem 0;
+  padding: 0;
   position: relative;
   text-align: center;
   .fxs_detail & {
@@ -461,8 +461,12 @@
       margin-bottom: -1.2rem;
   }
   &.fxs_leaderboard_adjust{
-    margin-top:1rem;
-    margin-bottom:1rem;
+    padding-top:0;
+    margin-top:0;
+    img, iframe, a{
+      margin-top:1rem;
+      margin-bottom:1rem;
+    }
   }
 }
 // this sticky goes at the bottom of the left sidebar
@@ -1246,7 +1250,7 @@
   .animation(show-sponsor-from-top 0.6s ease-in 0.6s forwards);
   max-height: 0;
   overflow: hidden;
-  @media(min-width: @screen-xl){ margin: -0.5rem 0; }
+  @media(min-width: @screen-xl){ margin: -0.32rem 0; }
   img {
     display: block;
     margin: 0 auto;
