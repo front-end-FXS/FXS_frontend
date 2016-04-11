@@ -253,7 +253,36 @@ dd {
 #fxst-calendartable tr td .fxit-event .fxit-eventurl,
 #fxst-calendartable tr th .fxit-event .fxit-eventurl {
   padding-right: 15px;
-  padding-left: 100px;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-name,
+#fxst-calendartable tr th .fxit-event .fxit-event-name,
+#fxst-calendartable tr td .fxit-event .fxit-event-title,
+#fxst-calendartable tr th .fxit-event .fxit-event-title {
+  display: inline-block;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-title,
+#fxst-calendartable tr th .fxit-event .fxit-event-title {
+  max-width: 250px;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-name,
+#fxst-calendartable tr th .fxit-event .fxit-event-name {
+  width: 20px;
+}
+@media (min-width: 500px) {
+  #fxst-calendartable tr td .fxit-event .fxit-event-name,
+  #fxst-calendartable tr th .fxit-event .fxit-event-name,
+  #fxst-calendartable tr td .fxit-event .fxit-event-title,
+  #fxst-calendartable tr th .fxit-event .fxit-event-title {
+    display: inline-block;
+  }
+  #fxst-calendartable tr td .fxit-event .fxit-event-title,
+  #fxst-calendartable tr th .fxit-event .fxit-event-title {
+    max-width: 250px;
+  }
+  #fxst-calendartable tr td .fxit-event .fxit-event-name,
+  #fxst-calendartable tr th .fxit-event .fxit-event-name {
+    width: 140px;
+  }
 }
 #fxst-calendartable tr td .fxit-event .fxit-event-numbers,
 #fxst-calendartable tr th .fxit-event .fxit-event-numbers {
