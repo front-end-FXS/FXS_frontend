@@ -204,7 +204,7 @@
                                 </h2>
                             </div>
                             <div class="fxs_row">
-                                <div class="fxs_flex_col">
+                                <div class="fxs_col fxs_col_100">
                                     <div id="fxst_filter" class="fxst-gnral">
                                         <div id="fxst-filter" class="" data-start="" data-end="">
                                             <form id="fxst-filterform" class="fxst-calendar-filter-form">
@@ -221,11 +221,9 @@
                                                         <a class="fxst-btn-showfilters fxst-advlink-normal" id="fxit-advlink" href="#">Show Filters</a>
                                                         <div id="fxst_export">
                                                             <div class="fxs_btn_group fxs_btn_group_align_calendar">
-                                                                <button type="submit" class="fxs_btn fxs_btn_default" onclick="return false;">
-                                                                    Export calendar
-                                                                </button>
-                                                                <button type="button" class="fxs_btn_icon fxs_btn_default fxs_btn_dd" data-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="fa fa-caret-down"></i>
+                                                               
+                                                                <button type="button" title="Download calendar" class="fxs_btn_icon fxs_btn_default fxs_btn_dd" data-toggle="dropdown" aria-expanded="false">
+                                                                    <i class="fa fa-download fa-lg"></i>
                                                                     <span class="fxs_skip">More options</span>
                                                                 </button>
                                                                 <ul class="fxs_dropdownList">
@@ -251,20 +249,18 @@
                                                     <thead>
                                                         <tr class="fxst-calendarhead">
                                                             <th colspan="11">
-
                                                                 <div class="fxit-event">
-                                                                <div class="fxit-eventInfo">
-                                                                    <div id="fxst-thtime" class="fxit-eventInfo-time" style=" font-weight: 700; font-size: 12px; color: #333;">GMT</div>
-                                                                        <div id="fxst-thcountdown" class="fxit-eventInfo-time" style=" font-weight: 700; font-size: 12px; color: #333;">Time left</div>
-                                                                    <div class="fxit-eventInfo-country">&nbsp;</div>
-                                                                    <div id="fxst-thevent" class="fxit-event-url" style="font-weight: 400; text-align: left; padding-left: 45px; width: auto; font-weight: 700; font-size: 12px; color: #333;">Event</div>
-                                                                    
-                                                                </div>
-                                                                    
+                                                                    <div class="fxit-eventInfo">
+                                                                        <div id="fxst-thtime" class="fxit-eventInfo-time" style=" font-weight: 700; font-size: 12px; color: #333;">GMT</div>
+                                                                            <div id="fxst-thcountdown" class="fxit-eventInfo-time" style=" font-weight: 700; font-size: 12px; color: #333;">Time left</div>
+                                                                        <div class="fxit-eventInfo-country">&nbsp;</div>
+                                                                        <div id="fxst-thevent" class="fxit-event-url" style="font-weight: 400; text-align: left; padding-left: 45px; width: auto; font-weight: 700; font-size: 12px; color: #333;">Event</div>
+                                                                        
+                                                                    </div>
                                                                     <div class="fxit-event-numbers">
                                                                         <div id="fxst-thvolatility" style="font-size: 12px; color: #333;" class="fxit-eventInfo-vol fxit-event-info-desktop fxit-actual">Vol.</div>
                                                                         <div id="fxst-thactual" class="fxit-actual" style=" font-size: 12px; color: #333;" data-actual="">Actual</div>
-                                                                        <div id="fxst-thconsensus" class="fxit-consensus" style=" font-size: 12px; color: #333;">Consensus</div>
+                                                                        <div id="fxst-thconsensus" class="fxit-consensus" style=" font-size: 12px; color: #333;">Cons</div>
                                                                         <div id="fxst-thprevious" class="fxst-td-previous fxit-previous" style=" font-size: 12px; color: #333;">Previous</div>
                                                                     </div>
                                                                 </div>
@@ -294,9 +290,11 @@
                                                             </div>
                                                             <div class="fxit-event">
                                                                 <div class="fxit-event-url">
-                                                                        <span>CNY</span>
+                                                                    <div class="fxit-event-name">CNY</div>
+                                                                    <div class="fxit-event-title">
                                                                     <a class="fxit-noleftclick fxit-eventurl" data-idevent="65e6efe8-5058-4f51-a061-a42ac5e93f36" href="./event?id=65e6efe8-5058-4f51-a061-a42ac5e93f36">Caixin China Services PMI (Mar)</a>
-                                                                                                    </div>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="fxit-event-numbers fxit-move-volatily">
                                                                     
                                                                     <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
@@ -330,9 +328,11 @@
                                                             </div>
                                                             <div class="fxit-event">
                                                                 <div class="fxit-event-url">
-                                                                        <span>JPY</span>
+                                                                    <div class="fxit-event-name">JPY</div>
+                                                                    <div class="fxit-event-title">
                                                                     <a class="fxit-noleftclick fxit-eventurl" data-idevent="ace93e5e-f249-452c-8c63-883ff2ee8732" href="./event?id=ace93e5e-f249-452c-8c63-883ff2ee8732">Coincident Index (Feb)</a><b title="Preliminary Release" class="fxst-icon fxst-i-10 fxst-preliminar">Preliminar</b>
-                                                                                                    </div>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="fxit-event-numbers fxit-move-volatily">
                                                                     
                                                                     <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
@@ -346,8 +346,8 @@
                                                             </div>
                                                         </td>
                                                     </tr>                           
-                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;"><td colspan="11" class="fxst-eventDetails"></td></tr>
-                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="6ee82149-21a4-4693-adf9-6282c1343ab9" data-actual="99.800" data-unit="" data-precision="1" data-pot="" data-isbetter="" data-countryname="Japan">
+                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;">
+                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="1c96cf20-3e01-4378-9ea4-e3ed0af31590" data-actual="110.300" data-unit="" data-precision="1" data-pot="" data-isbetter="" data-countryname="Japan">
 
                                                         <td colspan="11">
                                                             <div class="fxit-eventInfo">
@@ -366,154 +366,35 @@
                                                             </div>
                                                             <div class="fxit-event">
                                                                 <div class="fxit-event-url">
-                                                                        <span>JPY</span>
-                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="e8108ab7-3be8-4778-92b4-a9c9c2d62963" href="./event?id=e8108ab7-3be8-4778-92b4-a9c9c2d62963">Leading Economic Index (Feb)</a><b title="Preliminary Release" class="fxst-icon fxst-i-10 fxst-preliminar">Preliminar</b>
-                                                                                                    </div>
+                                                                    <div class="fxit-event-name">JPY</div>
+                                                                    <div class="fxit-event-title">
+                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="ace93e5e-f249-452c-8c63-883ff2ee8732" href="./event?id=ace93e5e-f249-452c-8c63-883ff2ee8732">Coincident Index (Feb)</a><b title="Preliminary Release" class="fxst-icon fxst-i-10 fxst-preliminar">Preliminar</b>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="fxit-event-numbers fxit-move-volatily">
                                                                     
                                                                     <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
                                                                         <span class="fxst-i-vol fxst-i-vol2" title="Moderate volatility expected">2</span>
                                                                     </div>
                                                                     
-                                                                    <div class=" fxit-actual" data-actual="99.800">99.8</div>
+                                                                    <div class=" fxit-actual" data-actual="110.300">110.3</div>
                                                                     <div class="fxit-consensus"></div>
-                                                                    <div class="fxst-td-previous fxit-previous" data-revised="">101.8</div>
+                                                                    <div class="fxst-td-previous fxit-previous" data-revised="">113.5</div>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                    </tr>
-                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;"><td colspan="11" class="fxst-eventDetails"></td></tr>
-                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="14b96ccd-134e-4cbc-b048-5870d693edaa" data-actual="-0.500" data-unit="%" data-precision="1" data-pot="" data-isbetter="True" data-countryname="Germany">
+                                                    </tr>                           
+                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;">
+                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="1c96cf20-3e01-4378-9ea4-e3ed0af31590" data-actual="110.300" data-unit="" data-precision="1" data-pot="" data-isbetter="" data-countryname="Japan">
 
                                                         <td colspan="11">
                                                             <div class="fxit-eventInfo">
-                                                                <div class="fxit-eventInfo-time">06:00</div>
+                                                                <div class="fxit-eventInfo-time">05:00</div>
                                                                 <div class="fxit-eventInfo-time fxs_cal_timeLeft">
                                                                     <div><i class="fa fa-check"></i></div>
                                                                 </div>
                                                                 <div class="fxit-eventInfo-country">
-                                                                    <a href="./country?id=0fec4aa3-5b4e-4ff3-b4fd-dff6ada762ac" class="fxit-noleftclick fxit-countryurl" data-idcountry="0fec4aa3-5b4e-4ff3-b4fd-dff6ada762ac"><b class="fxst-flag fxst-i-de" title="Germany">DE</b></a>
-                                                                </div>
-                                                                <div class="fxit-eventInfo-vol fxit-event-info-mobile">
-                                                                    <div class="fxit-eventInfo-vol-c">
-                                                                        <span class="fxst-i-vol fxst-i-vol1" title="Low volatility expected">1</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="fxit-event">
-                                                                <div class="fxit-event-url">
-                                                                        <span>EUR</span>
-                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="f49af918-a45d-4b0d-843a-9f0ea3b801a0" href="./event?id=f49af918-a45d-4b0d-843a-9f0ea3b801a0">Industrial Production s.a. (MoM) (Feb)</a>
-                                                                                                    </div>
-                                                                <div class="fxit-event-numbers fxit-move-volatily">
-                                                                    
-                                                                    <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
-                                                                        <span class="fxst-i-vol fxst-i-vol1" title="Low volatility expected">1</span>
-                                                                    </div>
-                                                                    
-                                                                    <div class="fxst-better  fxit-actual" data-actual="-0.500">-0.5%</div>
-                                                                    <div class="fxit-consensus">-1.8%</div>
-                                                                    <div class="fxst-td-previous fxit-previous" data-revised="2.300">
-                                                                            <span>
-                                                                                3.3%
-                                                                                <i class="fa fa-info-circle fxs_cal_yellow"></i>
-                                                                                <b class="fxst-revised" title="Revised from 2.3%">Revised from 2.3%</b>
-                                                                            </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;"><td colspan="11" class="fxst-eventDetails"></td></tr>
-                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="3f3d2408-3b0f-4bf7-9c1c-e5063d602b61" data-actual="1.300" data-unit="%" data-precision="1" data-pot="" data-isbetter="" data-countryname="Germany">
-
-                                                        <td colspan="11">
-                                                            <div class="fxit-eventInfo">
-                                                                <div class="fxit-eventInfo-time">06:00</div>
-                                                                <div class="fxit-eventInfo-time fxs_cal_timeLeft">
-                                                                    <div><i class="fa fa-check"></i></div>
-                                                                </div>
-                                                                <div class="fxit-eventInfo-country">
-                                                                    <a href="./country?id=0fec4aa3-5b4e-4ff3-b4fd-dff6ada762ac" class="fxit-noleftclick fxit-countryurl" data-idcountry="0fec4aa3-5b4e-4ff3-b4fd-dff6ada762ac"><b class="fxst-flag fxst-i-de" title="Germany">DE</b></a>
-                                                                </div>
-                                                                <div class="fxit-eventInfo-vol fxit-event-info-mobile">
-                                                                    <div class="fxit-eventInfo-vol-c">
-                                                                        <span class="fxst-i-vol fxst-i-vol1" title="Low volatility expected">1</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="fxit-event">
-                                                                <div class="fxit-event-url">
-                                                                        <span>EUR</span>
-                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="9c223ec9-aaca-4cbf-becf-a9728d5427dd" href="./event?id=9c223ec9-aaca-4cbf-becf-a9728d5427dd">Industrial Production n.s.a. w.d.a. (YoY) (Feb)</a>
-                                                                                                    </div>
-                                                                <div class="fxit-event-numbers fxit-move-volatily">
-                                                                    
-                                                                    <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
-                                                                        <span class="fxst-i-vol fxst-i-vol1" title="Low volatility expected">1</span>
-                                                                    </div>
-                                                                    
-                                                                    <div class=" fxit-actual" data-actual="1.300">1.3%</div>
-                                                                    <div class="fxit-consensus"></div>
-                                                                    <div class="fxst-td-previous fxit-previous" data-revised="1.800">
-                                                                            <span>
-                                                                                2.2%
-                                                                                <i class="fa fa-info-circle fxs_cal_yellow"></i>
-                                                                                <b class="fxst-revised" title="Revised from 1.8%">Revised from 1.8%</b>
-                                                                            </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;"><td colspan="11" class="fxst-eventDetails"></td></tr>
-                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="c5c84f78-498c-4d8f-8be2-453d3eb6220c" data-actual="" data-unit="" data-precision="0" data-pot="" data-isbetter="" data-countryname="European Monetary Union">
-
-                                                        <td colspan="11">
-                                                            <div class="fxit-eventInfo">
-                                                                <div class="fxit-eventInfo-time">07:00</div>
-                                                                <div class="fxit-eventInfo-time fxs_cal_timeLeft">
-                                                                    <div><i class="fa fa-check"></i></div>
-                                                                </div>
-                                                                <div class="fxit-eventInfo-country">
-                                                                    <a href="./country?id=c9822cb1-6cee-45f4-a9a2-89d136990308" class="fxit-noleftclick fxit-countryurl" data-idcountry="c9822cb1-6cee-45f4-a9a2-89d136990308"><b class="fxst-flag fxst-i-emu" title="European Monetary Union">EMU</b></a>
-                                                                </div>
-                                                                <div class="fxit-eventInfo-vol fxit-event-info-mobile">
-                                                                    <div class="fxit-eventInfo-vol-c">
-                                                                        <span class="fxst-i-vol fxst-i-vol3" title="High volatility expected">3</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="fxit-event">
-                                                                <div class="fxit-event-url">
-                                                                        <span>EUR</span>
-                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="fae57ab7-009f-4302-8590-6af96d2f8ac9" href="./event?id=fae57ab7-009f-4302-8590-6af96d2f8ac9">Non-monetary policy's ECB meeting</a>
-                                                                                                    </div>
-                                                                <div class="fxit-event-numbers fxit-move-volatily">
-                                                                    
-                                                                    <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
-                                                                        <span class="fxst-i-vol fxst-i-vol3" title="High volatility expected">3</span>
-                                                                    </div>
-                                                                    
-                                                                    <div class=" fxit-actual" data-actual=""></div>
-                                                                    <div class="fxit-consensus"></div>
-                                                                    <div class="fxst-td-previous fxit-previous" data-revised="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;"><td colspan="11" class="fxst-eventDetails"></td></tr>
-                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="b35f8a81-dd62-4100-a6d0-c18fc2cc128d" data-actual="" data-unit="" data-precision="0" data-pot="" data-isbetter="" data-countryname="Australia">
-
-                                                        <td colspan="11">
-                                                            <div class="fxit-eventInfo">
-                                                                <div class="fxit-eventInfo-time">07:00</div>
-                                                                <div class="fxit-eventInfo-time fxs_cal_timeLeft">
-                                                                    <div><i class="fa fa-check"></i></div>
-                                                                </div>
-                                                                <div class="fxit-eventInfo-country">
-                                                                    <a href="./country?id=f0b72088-34bb-4752-9337-c41f329c7798" class="fxit-noleftclick fxit-countryurl" data-idcountry="f0b72088-34bb-4752-9337-c41f329c7798"><b class="fxst-flag fxst-i-au" title="Australia">AU</b></a>
+                                                                    <a href="./country?id=c153160e-ef4c-4e2a-92ac-831807b980a4" class="fxit-noleftclick fxit-countryurl" data-idcountry="c153160e-ef4c-4e2a-92ac-831807b980a4"><b class="fxst-flag fxst-i-jp" title="Japan">JP</b></a>
                                                                 </div>
                                                                 <div class="fxit-eventInfo-vol fxit-event-info-mobile">
                                                                     <div class="fxit-eventInfo-vol-c">
@@ -523,32 +404,68 @@
                                                             </div>
                                                             <div class="fxit-event">
                                                                 <div class="fxit-event-url">
-                                                                        <span>AUD</span>
-                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="9b82a4e8-4e1f-4be1-a10d-b6620f41c298" href="./event?id=9b82a4e8-4e1f-4be1-a10d-b6620f41c298">RBA Assistant Governor Kent Speech</a>
-                                                                        <b class="fxst-i-16 fxst-i-report" title="Speech">Speech</b>
-                                                                                                    </div>
+                                                                    <div class="fxit-event-name">JPY</div>
+                                                                    <div class="fxit-event-title">
+                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="ace93e5e-f249-452c-8c63-883ff2ee8732" href="./event?id=ace93e5e-f249-452c-8c63-883ff2ee8732">Coincident Index (Feb)</a><b title="Preliminary Release" class="fxst-icon fxst-i-10 fxst-preliminar">Preliminar</b>
+                                                                    </div>
+                                                                </div>
                                                                 <div class="fxit-event-numbers fxit-move-volatily">
                                                                     
                                                                     <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
                                                                         <span class="fxst-i-vol fxst-i-vol2" title="Moderate volatility expected">2</span>
                                                                     </div>
                                                                     
-                                                                    <div class=" fxit-actual" data-actual=""></div>
+                                                                    <div class=" fxit-actual" data-actual="110.300">110.3</div>
                                                                     <div class="fxit-consensus"></div>
-                                                                    <div class="fxst-td-previous fxit-previous" data-revised="">
-                                                                    </div>
+                                                                    <div class="fxst-td-previous fxit-previous" data-revised="">113.5</div>
                                                                 </div>
                                                             </div>
                                                         </td>
+                                                    </tr>                           
+                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;">
+                                                    <tr class="fxst-tr-event fxst-oddRow  fxit-eventrow fxst-evenRow " data-eventdateid="1c96cf20-3e01-4378-9ea4-e3ed0af31590" data-actual="110.300" data-unit="" data-precision="1" data-pot="" data-isbetter="" data-countryname="Japan">
+
+                                                        <td colspan="11">
+                                                            <div class="fxit-eventInfo">
+                                                                <div class="fxit-eventInfo-time">05:00</div>
+                                                                <div class="fxit-eventInfo-time fxs_cal_timeLeft">
+                                                                    <div><i class="fa fa-check"></i></div>
+                                                                </div>
+                                                                <div class="fxit-eventInfo-country">
+                                                                    <a href="./country?id=c153160e-ef4c-4e2a-92ac-831807b980a4" class="fxit-noleftclick fxit-countryurl" data-idcountry="c153160e-ef4c-4e2a-92ac-831807b980a4"><b class="fxst-flag fxst-i-jp" title="Japan">JP</b></a>
+                                                                </div>
+                                                                <div class="fxit-eventInfo-vol fxit-event-info-mobile">
+                                                                    <div class="fxit-eventInfo-vol-c">
+                                                                        <span class="fxst-i-vol fxst-i-vol2" title="Moderate volatility expected">2</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="fxit-event">
+                                                                <div class="fxit-event-url">
+                                                                    <div class="fxit-event-name">JPY</div>
+                                                                    <div class="fxit-event-title">
+                                                                    <a class="fxit-noleftclick fxit-eventurl" data-idevent="ace93e5e-f249-452c-8c63-883ff2ee8732" href="./event?id=ace93e5e-f249-452c-8c63-883ff2ee8732">Coincident Index (Feb)</a><b title="Preliminary Release" class="fxst-icon fxst-i-10 fxst-preliminar">Preliminar</b>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="fxit-event-numbers fxit-move-volatily">
+                                                                    
+                                                                    <div class="fxit-eventInfo-vol-c fxit-event-info-desktop">
+                                                                        <span class="fxst-i-vol fxst-i-vol2" title="Moderate volatility expected">2</span>
+                                                                    </div>
+                                                                    
+                                                                    <div class=" fxit-actual" data-actual="110.300">110.3</div>
+                                                                    <div class="fxit-consensus"></div>
+                                                                    <div class="fxst-td-previous fxit-previous" data-revised="">113.5</div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>                           
+                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;">
                                                     </tr>
-                                                    <tr class="fxst-tr-detail fxst-detailRow" style="display:none;"><td colspan="11" class="fxst-eventDetails"></td></tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="fxs_flex_col fxs_flex_ad_col">
-                                    
                                 </div>
                             </div>
                         </section>
