@@ -2,6 +2,7 @@
 
 /*Responsive Layout Breaks*/
 @screen-s: 320px;
+@screen-sm: 425px;
 @screen-m: 768px;
 @screen-l: 1025px;
 @screen-xl: 1200px;
@@ -23,7 +24,72 @@
 @negativeColorText: #ffffff;
 @negativeColorTextSencondary: #cccccc;
 
+.fxit-event-name{
+  padding-right: 5px;
+  font-weight: 400;
+}
+.fxit-event-numbers{
+  @media(max-width:@screen-sm){
+    width:80%!important;
+  }
+}
 
+
+.fxs_new_calendar_header_item{
+  .fxit-eventInfo-time, .fxit-eventInfo-country, .fxit-event-url{
+    padding-left: 10px;
+    font-weight: 700;
+    color: #000;
+  }
+}
+
+.fxs_event_hedaer {
+  @media(max-width:@screen-sm){
+    display: none!important;
+  }
+}
+
+.fxs_cal_yellow {
+    color: #FA9900;
+}
+
+.fxs_cal_timeLeft, .fxs_event_info_time_header {
+  @media (max-width: @screen-sm) {
+        display: none !important;
+    }
+}
+.fxs_cal_timeLeft{
+  padding-left: 10px;
+  padding-right:10px;
+}
+.fxit-eventInfo-country{
+  @media(max-width: @screen-sm){
+    padding-left: 10px;
+    padding-right:10px;
+  }
+}
+.fxs_divider_mobile{
+  display:none;
+  @media (max-width: @screen-sm) {
+    clear: both;
+    height: 1px;
+    border:0;
+    background-color: #fff;
+    display:block;
+  }
+}
+.fxit-event-title{
+  @media (max-width: @screen-m) {
+    max-width:250px;
+  }
+  @media (max-width: @screen-sm) {
+    max-width:200px;
+    font-size: 11px;
+  }
+  @media(max-width:@screen-s){
+    max-width:150px;
+  }
+}
 
 // Clear content rows
 .fxs_clearfix {
@@ -117,13 +183,14 @@ dl > dt,dd{
 	a {
 		color: #474747;
 		text-decoration: none;
+    //display:inline-block;
 	}
 }
 #fxst_filter {
     display: block;
 }
 .fxit-event-info-desktop{
-  display:none!important;
+  //display:none!important;
 }
 .fxit-event-info-desktop{
   @media (min-width: 800px) {
@@ -136,7 +203,7 @@ dl > dt,dd{
   }
 @media (max-width: @screen-m) {
   .fxit-event-info-mobile{
-    display:block!important;
+    //display:block!important;
   }
 }
   
@@ -154,38 +221,38 @@ dl > dt,dd{
 					float: left;
 					width: auto;
 			        @media (max-width: @screen-m) {
-						display: inherit;
+						/*display: inherit;
 						float: none;
-						width: 100%;
+						width: 100%;*/
 			        }
 				}
 			}
 			.fxit-eventInfo {
 				//width: 24%;
-		        .fxit-eventInfo-time, .fxit-eventInfo-country, .fxit-eventInfo-vol {
-			        @media (max-width: @screen-m) {
-			        	width: 100%;
-						padding-right: 10px;
+		      .fxit-eventInfo-time, .fxit-eventInfo-country, .fxit-eventInfo-vol {
+			      @media (max-width: @screen-m) {
+			      /*width: 100%;
+						padding-right: 10px;*/
 					}
 		        }
 				.fxit-eventInfo-time {
-					width: 70px;
+
 			        @media (max-width: @screen-m) {
 						min-width: 0px;
-			        	margin: 8px 0px 12px;
+			        	//margin: 8px 0px 12px;
 			        	font-weight: lighter;
 			        }
 			    }
 				.fxit-eventInfo-country {
-					width: 55px;
+              
 			        @media (min-width: @screen-m) and (max-width: @screen-l) {
 						min-width: 20px;
 					}
 			        @media (max-width: @screen-m) {
-						min-width: 0px;
+						    min-width: 0px;
 			        	position: relative;
 			        	height: 12px;
-						text-align: left;
+						    text-align: left;
 			        	margin: 0 0 14px;
 			        }
 			    }
@@ -195,10 +262,10 @@ dl > dt,dd{
 						min-width: 0px;
 			        }
 			    	.fxit-eventInfo-vol-c {
-			    		width: 50px;
+			    		width: 25%;
 			    		height: 12px;
 			    		padding: 0;
-                        background-color: #E0E0E0;
+              background-color: #E0E0E0;
 			    		color: transparent;
 				    	.fxst-i-vol {
 				    		display: block;
@@ -226,65 +293,40 @@ dl > dt,dd{
 			.fxit-event {
 				width:100%;
               @media (max-width: @screen-m) {
-                width: 70%;
+                //width: 70%;
               }
 		        .fxit-event-url, .fxit-event-numbers {
 			        @media (max-width: @screen-m) {
-			        	width: 100%;
+			        	//width: 100%;
 			        }
 		        }
 		        .fxit-event-url {
 		        	float: left;
-		        	width: 60%;
+		        	//width: 60%;
 			        font-weight: 700;
-                    span {
-			            font-weight: lighter;
-                        color: #555;
-                        padding-right: 10px;
-                    }
+
+              span {
+                font-weight: lighter;
+                color: #555;
+                padding-right: 10px;
+              }
 			        @media (max-width: @screen-m) {
-			        	width: auto;
+			        	/*width: auto;
 			        	margin: 6px 0px 12px;
-                        padding-left: 10px;
+                padding-left: 10px;*/
 			        }
 		        }
-                .fxit-eventurl {
-                    padding-right: 15px;
-                    
-                }
-                .fxit-event-name, .fxit-event-title{
-                    display: inline-block;
-                  }
-                  .fxit-event-title{
-                    max-width:250px
-
-                  }
-                  .fxit-event-name{
-                    width:20px
-                }
-                @media (min-width: 500px) {
-                  .fxit-event-name, .fxit-event-title{
-                    display: inline-block;
-                  }
-                  .fxit-event-title{
-                    max-width:250px
-
-                  }
-                  .fxit-event-name{
-                    width:140px;
-                  }
-                }
 		        .fxit-event-numbers {
 		        	float: right;
-		        	width: 35%;
+		        	width:35%;
 			        @media (max-width: @screen-m) {
-      						float: left;
+      						/*float: left;
     		        	width: 100%;
-                    padding-left: 10px;
+                    padding-left: 10px;*/
     			        }
                   &.fxit-move-volatily{
                     .fxit-eventInfo-vol-c {
-    			    		    width: 50px;
+    			    		    width: 25%;
     			    		    height: 12px;
     			    		    padding: 0;
                       background-color: #E0E0E0;
@@ -319,38 +361,38 @@ dl > dt,dd{
                 font-weight: 700;
                 color: #000;
 				        @media (max-width: @screen-m) {
-                  width:33%;
+                  /*width:33%;
 				        	position: relative;
 				        	float: left;
 				        	min-height: 40px;
-				        	border-left: 1px solid #dedede;
+				        	border-left: 1px solid #dedede;*/
 				        }
 			        }
 			        .fxit-actual:after, .fxit-consensus:after, .fxit-previous:after { 
 			        	display: none;
 				        @media (max-width: @screen-m) {
-							display: block;
+							/*display: block;
 							position: absolute;
 							bottom: 0;
 							width: 100%;
 							text-align: center;
 							font-size: 10px;
-							color: #808080;
+							color: #808080;*/
 				        }
 			        }
 			        .fxit-actual:after {
-				        @media (max-width: @screen-m) {
+				        @media (max-width: @screen-sm) {
 							content: 'ACTUAL';
 				        }
 				    }
 			        .fxit-consensus:after {
-				        @media (max-width: @screen-m) {
-							content: 'CONSENSUS';
+				        @media (max-width: @screen-sm) {
+							//content: 'CONSENSUS';
 				        }
 				    }
 			        .fxit-previous:after {
-				        @media (max-width: @screen-m) {
-							content: 'PREVIOUS';
+				        @media (max-width: @screen-sm) {
+							//content: 'PREVIOUS';
 				        }
 				    }
                     .fxst-revised > p {
@@ -383,7 +425,7 @@ dl > dt,dd{
 	tr.fxst-calendarhead {
 		display: table-row;
         @media (max-width: @screen-m) {
-			display: none;
+			//display: none;
         }
 		th {
 			background-color: #eeeeee;
@@ -681,7 +723,7 @@ dl > dt,dd{
   font-weight: bold;
   border: solid 1px #D6D6D6;
   @media (max-width: @screen-m) {
-      margin: 14px 0px 0px 50px;
+      //margin: 14px 0px 0px 50px;
   }
 }
 .fxst-calendar-filter-form .fxst-btn-showfilters:hover {
@@ -1662,7 +1704,7 @@ fxst-olsendata {
 	@media (max-width: @screen-m) {
 		text-indent: -24px;
 		color: #333333;
-		position: absolute;
+		//position: absolute;
         left: 24px;
 	}
 }
@@ -2631,19 +2673,6 @@ fxst-olsendata {
   clear: left !important;
 }
 
-.fxit-event-url {
-  line-height: 1.4;
-}
-
-.fxs_cal_yellow {
-    color: #FA9900;
-}
-
-.fxs_cal_timeLeft {
-	@media (max-width: @screen-m) {
-        display: none !important;
-    }
-}
 
 .fxs_cal_nextEvent td {
     background-color: #ffffff !important;
