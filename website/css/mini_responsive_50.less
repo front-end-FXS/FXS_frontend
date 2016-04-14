@@ -17,121 +17,35 @@
 // new rules add to mini responsive beta version
 .fxst-gnral{
   &.fxs_calendar_50{
-    @media(max-width:@screen-m){
-      .fxit-eventInfo-vol{
-        margin-top:15px;
-      }
-      .fxit-event-numbers{ 
-        .fxit-actual:after {
-          content: 'ACTUAL';
-          font-size: 10px;
-        }
-        .fxit-consensus:after {
-          content: 'CONSENSUS';
-          font-size: 10px;
-        }
-        .fxit-previous:after {
-          content: 'PREVIOUS';
-          font-size: 10px;
-        }
-      }
+    .fxit-event-info-desktop{
+      font-weight: 700;
     }
-    .fxst-calendarhead{
-      &.fxs_eventInfo_header{
-        .fxit-eventInfo, .fxit-event, .fxit-event-numbers{
-          font-weight: 700; font-size: 12px; color: #333;
-        } 
-      }
+    .fxit-eventInfo-vol-c{
+      width:50px!important;
     }
-    .fxit-event-numbers{
-      &.fxs_event_numbers_header{
-        width:50%;
-        float:right;
-        .fxit-actual, .fxit-consensus, .fxit-previous{
-          display: inline-block;
-          width:30%;
-        }
-      }
-    }
-    .fxst-tr-event{
-      .fxit-event-numbers{
-        width:50%;
-        float: right;
-        @media(max-width:@screen-m){
-          float: none;
-          width:100%;
-          clear: both;
-        }
-        .fxit-actual, .fxit-consensus, .fxit-previous{
-          display: inline-block;
-          width:30%;
-          text-align: right;
-          font-weight: 700;
-          @media(max-width:@screen-m){
-            text-align: center;
-          }
-        }
-        .fxit-previous {
-            span {
-                border-bottom: 1px #333 dotted;
-                b {
-                    display: none;
-                    position: absolute;
-                }
-            }
-        }
-        .fxit-previous:hover {
-            cursor: pointer;
-            span {
-                border-bottom: none;
-                b {
-                    display: inline-block;
-                    position: absolute;
-                }
-            }
-        }
-      }
-    }
-    .fxit-eventInfo{
-      .fxit-eventInfo-time{
-        width:auto!important;
-        &.fxs_eventInfo_custom{
-          padding-left:20px;
-        }
-        @media(max-width:@screen-m){
-          margin:0!important;
-        }
-      }
-      .fxs_country_name{
-        display: none;
-      }
-    }
-    .fxit-countryurl{
-      .fxst-flag{
-        vertical-align: middle!important;
-        margin-left:5px;
-      }
+    .fxit-event-title{
+      max-width:180px;
     }
     .fxit-event{
-      width:30%!important;
-      @media(max-width:@screen-m){
-        width:70%!important;
-      }
-      .fxit-event-url{
-        width:100%!important;
-      }
+      font-size:12px;
+    }
+    .fxit-countryurl{
+      padding-left:5px;
+      padding-right:5px;
+    }
+    .fxit-event-numbers{
+      width:40%!important;
+    }
+    @media(max-width:@screen-l){
+    .fxit-event-numbers{
+      width:80%!important;
+    }
+    .fxs_divider_mobile{
+      display: block;
+    }
+    .fxs_event_header{
+      display:none!important;
+    }
     }
   }
-}
-.fxit-first-row{
-    .fxst-td-currency{
-        display:none;
-        @media only screen and (min-width: 768px) {
-            display:block;
-        }
-    }
-    .fxst-td-time, .fxst-td-flag, .fxst-td-currency{
-        float:none;
-        width:30%;
-    }
 }

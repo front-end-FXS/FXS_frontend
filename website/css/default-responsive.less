@@ -33,6 +33,18 @@
     width:80%!important;
   }
 }
+.fxs_show_d{
+  display:block;
+  @media(max-width:@screen-m){
+    display:none;
+  }
+}
+.fxs_show_m{
+  display:none;
+  @media(max-width:@screen-m){
+    display:block;
+  }
+}
 
 
 .fxs_new_calendar_header_item{
@@ -61,6 +73,10 @@
 .fxs_cal_timeLeft{
   padding-left: 10px;
   padding-right:10px;
+  min-width:63px;
+}
+.fxs_event_time{
+  min-width:32px;
 }
 .fxit-eventInfo-country{
   @media(max-width: @screen-sm){
@@ -238,7 +254,7 @@ dl > dt,dd{
 				.fxit-eventInfo-time {
 
 			        @media (max-width: @screen-m) {
-						min-width: 0px;
+						//min-width: 0px;
 			        	//margin: 8px 0px 12px;
 			        	font-weight: lighter;
 			        }

@@ -11,6 +11,22 @@
     width: 80%!important;
   }
 }
+.fxs_show_d {
+  display: block;
+}
+@media (max-width: 768px) {
+  .fxs_show_d {
+    display: none;
+  }
+}
+.fxs_show_m {
+  display: none;
+}
+@media (max-width: 768px) {
+  .fxs_show_m {
+    display: block;
+  }
+}
 .fxs_new_calendar_header_item .fxit-eventInfo-time,
 .fxs_new_calendar_header_item .fxit-eventInfo-country,
 .fxs_new_calendar_header_item .fxit-event-url {
@@ -35,6 +51,10 @@
 .fxs_cal_timeLeft {
   padding-left: 10px;
   padding-right: 10px;
+  min-width: 63px;
+}
+.fxs_event_time {
+  min-width: 32px;
 }
 @media (max-width: 425px) {
   .fxit-eventInfo-country {
@@ -203,7 +223,6 @@ dd {
 @media (max-width: 768px) {
   #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-time,
   #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-time {
-    min-width: 0px;
     font-weight: lighter;
   }
 }
