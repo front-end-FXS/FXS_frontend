@@ -2562,10 +2562,11 @@ width:calc(100% - 320px);
   padding-bottom: 70px;
 }
 .fxs_modal_content.fxs_modal_roadblock_sponsor {
-  max-width: 680px;
+  max-width: 1340px;
 }
 .fxs_modal_content.fxs_modal_roadblock_sponsor .fxs_detail {
   padding-bottom: 2rem;
+  max-width: 100%!important;
 }
 @media (min-width: 680px) {
   .fxs_modal_content.fxs_modal_roadblock_sponsor {
@@ -4212,6 +4213,7 @@ height:calc(100% - 45px);
 }
 .fxs_leaderboard {
   padding: 0;
+  z-index: 1;
   position: relative;
   text-align: center;
 }
@@ -4818,7 +4820,8 @@ width:calc(100% - 320px);
 .fxs_content_wide .fxs_footer {
   margin-left: 0;
   width: 100%;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 .fxs_copy_disclaimer {
   background-color: #f3f3f8;
