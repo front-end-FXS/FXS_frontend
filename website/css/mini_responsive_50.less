@@ -1,0 +1,51 @@
+// estilos padre
+@import "default-responsive.less";
+
+.clearfix:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+ }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+// new rules add to mini responsive beta version
+.fxst-gnral{
+  &.fxs_calendar_50{
+    .fxit-event-info-desktop{
+      font-weight: 700;
+    }
+    .fxit-eventInfo-vol-c{
+      width:50px!important;
+    }
+    .fxit-event-title{
+      max-width:180px;
+    }
+    .fxit-event{
+      font-size:12px;
+    }
+    .fxit-countryurl{
+      padding-left:5px;
+      padding-right:5px;
+    }
+    .fxit-event-numbers{
+      width:40%!important;
+    }
+    @media(max-width:@screen-l){
+    .fxit-event-numbers{
+      width:80%!important;
+    }
+    .fxs_divider_mobile{
+      display: block;
+    }
+    .fxs_event_header{
+      display:none!important;
+    }
+    }
+  }
+}
