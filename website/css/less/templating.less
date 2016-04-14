@@ -445,6 +445,7 @@
 .fxs_leaderboard {
   &:extend(.fxs_contentRail_box);
   padding: 0;
+  z-index: 1;
   position: relative;
   text-align: center;
   .fxs_detail & {
@@ -909,7 +910,8 @@
   .fxs_content_wide & {
     margin-left: 0;
     width: 100%;
-    position: relative;
+    position: absolute;
+    bottom:0;
   }
 }
 
