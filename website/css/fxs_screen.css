@@ -1441,6 +1441,10 @@ fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_
   background-color: #e4871b;
   color: #ffffff;
 }
+.fxs_label_featured.fxs_liveEvent_v2 {
+  display: block;
+  width: 70px;
+}
 .fxs_label_success {
   background-color: #338473;
   color: #ffffff;
@@ -3011,7 +3015,6 @@ h5 a:hover,
   .fxs_entryFeatured_big .fxs_entryHeadline {
     font-size: 2.64rem;
     line-height: 2.75rem;
-    min-height: 90px;
   }
 }
 .fxs_headline_hero,
@@ -3064,7 +3067,7 @@ h5 a:hover,
   margin-top: 1rem;
 }
 .fxs_marginBase_top_big {
-  margin-top: 45px !important;
+  margin-top: 1rem!important;
 }
 .fxs_marginHalf_top {
   margin-top: 7.5px;
@@ -3748,8 +3751,8 @@ height:calc(100% - 35px);
   float: left;
   width: 111px;
   height: 0;
-  background: url("../img/fxs_logo.png") 0 0 no-repeat;
-  background-image: url("../img/fxs_logo.svg");
+  background: url("../img/fxs_logo_2.png") 0 0 no-repeat;
+  background-image: url("../img/fxs_logo_2.svg");
   background-size: contain;
   font-size: 15px;
   overflow: hidden;
@@ -4248,7 +4251,13 @@ height:calc(100% - 45px);
   z-index: 9999;
   position: absolute;
   bottom: 0;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
+  display: none;
+}
+@media (min-width: 1150px) {
+  .fxs_stickyAd_sidebar {
+    display: block;
+  }
 }
 .fxs_detail {
   background-color: #ffffff;
@@ -4820,7 +4829,7 @@ width:calc(100% - 320px);
 .fxs_content_wide .fxs_footer {
   margin-left: 0;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .fxs_copy_disclaimer {
@@ -5160,11 +5169,6 @@ width:calc(100% - 60px - 5px);
 .fxs_live_events_table .fxs_event_date {
   width: 70px;
 }
-@media (min-width: 680px) {
-  .fxs_live_events_table .fxs_event_date {
-    width: 155px;
-  }
-}
 .fxs_live_events_table .fxs_event_title_author a,
 .fxs_live_events_table .fxs_event_title_author span {
   display: block;
@@ -5272,7 +5276,7 @@ width:calc(100% - 60px - 5px);
 }
 @media (min-width: 1480px) {
   .fxs_wallpaper_img.fxs_image_left {
-    margin-left: -1218px;
+    margin-left: -1215px;
   }
 }
 .fxs_wallpaper_img.fxs_image_right {
@@ -5281,7 +5285,7 @@ width:calc(100% - 60px - 5px);
 }
 @media (min-width: 1480px) {
   .fxs_wallpaper_img.fxs_image_right {
-    margin-left: 641px;
+    margin-left: 633px;
   }
 }
 .fxs_wallpaper_img img {

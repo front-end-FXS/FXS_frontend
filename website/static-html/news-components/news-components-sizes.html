@@ -12,7 +12,8 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-<body class="cbp-spmenu-push fxs_isParent_section">
+    <!-- fxs_isParent_section -->
+<body class="cbp-spmenu-push">
     <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
     <header class="fxs_header">
         <button type="button" id="showLeftPush" class="fxs_show_navmenu">
@@ -181,6 +182,13 @@
         <!-- /Topics subnav -->
 
         <div class="fxs_content" id="fxs_content">
+
+            <div id="notificationExample" class="fxs_global_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
+                <span class="fxs_alertLabel">Welcome</span>
+                <p class="fxs_alertText">
+                 to the new FXStreet! <a href="http://tour.fxstreet.com/" onclick="todo" role="button">What’s this?</a>
+                </p>
+            </div>
 
             <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
                 <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
@@ -1134,6 +1142,7 @@
 
         <!-- ListView -->
         <section class="fxs_listView" id="cbp-spmenu-s3">
+
             <header class="fxs_listview_subnav">
                 <h2 class="fxs_helperLabel_title">Latest News</h2>
 
