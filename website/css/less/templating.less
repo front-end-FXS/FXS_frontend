@@ -85,8 +85,8 @@
   float: left;
   width: 111px;
   height: 0;
-  background: url("../img/fxs_logo.png") 0 0 no-repeat;
-  background-image: url("../img/fxs_logo.svg");
+  background: url("../img/fxs_logo_2.png") 0 0 no-repeat;
+  background-image: url("../img/fxs_logo_2.svg");
   background-size: contain;
   font-size: @txt_defaultsize_px;
   overflow: hidden;
@@ -475,7 +475,11 @@
   z-index:9999; 
   position:absolute; 
   bottom:0; 
-  margin-bottom:45px;
+  margin-bottom:25px;
+  display:none;
+  @media (min-width: @screen-l) {
+    display:block;
+  }
 }
 
 .fxs_detail {
@@ -910,7 +914,7 @@
   .fxs_content_wide & {
     margin-left: 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom:0;
   }
 }
@@ -1192,7 +1196,7 @@
   .fxs_event_date {
     width: @double_module_size;
     @media (min-width: @screen-s) {
-      width: 155px;
+      //width: 155px;
     }
   }
   .fxs_event_title_author {
@@ -1293,14 +1297,14 @@
     margin-left: (floor(@content_rail_width / 2) + 578px) * -1;
     text-align: right;
     @media(min-width: @screen-hd){
-      margin-left: ((@content_wide_width / 2) + 578px) * -1;
+      margin-left: (((@content_wide_width / 2) + 578px) * -1) + 3px;
     }
   }
   &.fxs_image_right {
     margin-left: floor(@content_rail_width / 2) + 1px;
     text-align: left;
     @media(min-width: @screen-hd){
-      margin-left:( @content_wide_width / 2) + 1px;
+      margin-left:( @content_wide_width / 2) - 7px;
     }
   }
   img {
