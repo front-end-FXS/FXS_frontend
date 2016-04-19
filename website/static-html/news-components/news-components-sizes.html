@@ -11,6 +11,18 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style type="text/css">
+            .sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+            .sticky:before,
+            .sticky:after {
+                content: '';
+                display: table;
+            }
+        </style>
     </head>
     <!-- fxs_isParent_section -->
 <body class="cbp-spmenu-push">
@@ -458,6 +470,75 @@
                         </div>
 
                         <hr class="fxs_divider_first">
+
+                        <h2 class="fxs_subtitle">
+                            Test sticky
+                        </h2>
+
+                        <div class="fxs_row">
+                            <div class="fxs_flex_col">
+
+                                <!-- ################ Widget news large size ###################### -->
+
+                                <section class="fxs_widget_summary">
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_big">
+                                            <header>
+                                                <h2 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October</a>
+                                                </h2>
+                                                <address class="fxs_entry_metaInfo">
+                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                                </address>
+                                            </header>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://placekitten.com/g/500/350" />
+                                            </div>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+
+                                <section class="fxs_widget_summary">
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_big">
+                                            <header>
+                                                <h2 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October</a>
+                                                </h2>
+                                                <address class="fxs_entry_metaInfo">
+                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                                </address>
+                                            </header>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://placekitten.com/g/500/350" />
+                                            </div>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+
+                                <!-- /Widget news large size -->
+
+
+                            </div>
+
+                            <!-- column with sticky -->
+                            <div class="fxs_flex_col fxs_flex_ad_col sticky">
+                                <div class="">
+                                    <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                                    
+                                </div>
+                            </div>
+                        </div>
 
                         <h2 class="fxs_subtitle">
                             Widget news medium size
@@ -1354,7 +1435,7 @@
                 </div>
             </nav>
             <div style="z-index:9999; position:absolute; bottom:0; margin-bottom:45px;">              
-                <img src="https://tpc.googlesyndication.com/simgad/7182725869303407209" border="0" width="320" height="40" alt="" class="img_ad" onload="tick('1ad')">
+                <img src="https://tpc.googlesyndication.com/simgad/7182725869303407209" border="0" width="320" height="40" alt="" class="img_ad">
             </div>
         </section>
         <!-- /ListView -->
@@ -1664,7 +1745,8 @@
 
     <script src="../../js/classie.js"></script>
     <script src="../../js/jquery.typeahead.min.js"></script>
-    <script src="../../js/site.js"></script>
+    <script src="../../js/stickyfill.min.js" sync></script>
+    <script src="../../js/site.js" sync></script>
 
 </body>
 

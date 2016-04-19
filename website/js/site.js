@@ -257,5 +257,7 @@ $(document).ready(function () {
         $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
     })
 
+    $('.sticky').Stickyfill();
+
 
 });

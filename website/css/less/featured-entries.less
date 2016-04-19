@@ -137,6 +137,19 @@
     cursor: pointer;
     .fxs_entryFeatured_img img { .opacity(.75); }
   }
+  // for small colls
+  &.fxs_article_author_small_cols{
+    //max-height:0;
+    @media(min-width:@screen-s){
+      min-height:130px;
+    }
+    @media(min-width:@screen-l){
+      min-height:100px;
+    }
+    .fxs_article_author{
+      .calc(max-width, ~'100% - ( @{avatar_l} + 10px )');
+    }
+  }
   .fxs_article_author {
     .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
   }
