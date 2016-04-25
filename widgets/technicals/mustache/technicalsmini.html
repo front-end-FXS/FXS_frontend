@@ -1,0 +1,37 @@
+﻿<section class="fxs_detail" role="main">
+    <div class="fxs_widget_divider_module">
+        <ul class="fxs_tabs_nav">
+            {{#Studies}}
+            <li><a data-toggle="tab" href="#tab_{{TypeDisplay}}" title="{{Type}}">{{TypeDisplay}}</a></li>
+            {{/Studies}}
+        </ul>
+        <div class="fxs_indexes_tabpanel tab-content">
+            {{#Studies}}
+            <div role="tabpanel" id="tab_{{TypeDisplay}}" class="tab-pane">
+                <span class="fxs_label">{{Translations.TrendIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.TrendIndexInfo}}"></i></span>
+
+                <span class="fxs_index_value {{TrendClass}}">{{TrendDisplay}}</span>
+
+                <span class="fxs_label">{{Translations.ObOsIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.ObOsIndexInfo}}"></i></span>
+
+                <span class="fxs_index_value {{ObOsClass}}">{{ObOsDisplay}}</span>
+
+                <span class="fxs_label">{{Translations.VolatilityIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.VolatilityIndexInfo}}"></i></span>
+
+                <span class="fxs_index_value {{VolatilityClass}}">{{VolatilityDisplay}}</span>
+
+                {{#Seo}}
+                <script type="application/ld+json">
+                    {
+                    <!-- seo de cristian -->
+                    }
+                </script>
+                {{/Seo}}
+            </div>
+            {{/Studies}}
+        </div>
+    </div>
+    <footer class="fxs_widget_footer">
+        <small><time datetime="{{Study.DateUtc}}">{{Translations.Updated}} {{Study.HourUtc}} UTC</time></small>
+    </footer>
+</section>
