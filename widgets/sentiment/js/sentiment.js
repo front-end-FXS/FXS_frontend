@@ -138,14 +138,14 @@
             && this.mustachesLoadedCount === this.mustachesCount;
     };
 }(FXStreetWidgets.$));
-///#source 1 1 /widgets/technicals/js/base.js
+///#source 1 1 /widgets/sentiment/js/base.js
 (function ($) {
-    FXStreetWidgets.Widget.TechnicalsBase = function (loaderBase) {
+    FXStreetWidgets.Widget.SentimentBase = function (loaderBase) {
         var parent = FXStreetWidgets.Widget.Base(loaderBase),
             _this = FXStreetWidgets.Util.extendObject(parent);
 
         _this.Container = null;
-        _this.Pair = "";
+        _this.AssetId = "";
         _this.WidgetId = null;
         _this.Seo = false;
         _this.MustacheKey = "";
@@ -173,7 +173,7 @@
 
         _this.init = function (json) {
             _this.setSettingsByObject(json);
-            _this.loadDataFromUrl(_this.loaderBase.config.EndPoint + "/" + _this.Pair);
+            _this.loadDataFromUrl(_this.loaderBase.config.EndPoint + "/" + _this.AssetId);
         };
 
         _this.renderHtml = function () {
@@ -192,7 +192,6 @@
             var jsonData = {
                 Studies: studies,
                 Translations: _this.loaderBase.config.Translations,
-                PairName: _this.Pair,
                 Seo: _this.Seo
             };
 
@@ -213,10 +212,10 @@
         return _this;
     };
 }(FXStreetWidgets.$));
-///#source 1 1 /widgets/technicals/js/widget.js
+///#source 1 1 /widgets/sentiment/js/widget.js
 (function ($) {
-    FXStreetWidgets.Widget.Technicals = function (loaderBase) {
-        var parent = FXStreetWidgets.Widget.TechnicalsBase(loaderBase),
+    FXStreetWidgets.Widget.Sentiment = function (loaderBase) {
+        var parent = FXStreetWidgets.Widget.SentimentBase(loaderBase),
             _this = FXStreetWidgets.Util.extendObject(parent);
 
         parent.MustacheKey = _this.loaderBase.config.WidgetName;
@@ -224,13 +223,13 @@
         return _this;
     };
 }(FXStreetWidgets.$));
-///#source 1 1 /widgets/technicals/js/widgetmini.js
+///#source 1 1 /widgets/sentiment/js/widgetmini.js
 (function () {
-    FXStreetWidgets.Widget.TechnicalsMini = function (loaderBase) {
-        var parent = FXStreetWidgets.Widget.TechnicalsBase(loaderBase),
+    FXStreetWidgets.Widget.SentimentMini = function (loaderBase) {
+        var parent = FXStreetWidgets.Widget.SentimentBase(loaderBase),
             _this = FXStreetWidgets.Util.extendObject(parent);
 
-        parent.MustacheKey = 'technicalsmini';
+        parent.MustacheKey = 'sentimentmini';
         
         parent.manageRenderedHtml = function () {
             _this.setFirstTabActive();
@@ -245,17 +244,17 @@
         return _this;
     };
 }());
-///#source 1 1 /widgets/technicals/js/loader.js
+///#source 1 1 /widgets/sentiment/js/loader.js
 (function ($) {
-    FXStreetWidgets.Widget.LoaderTechnicals = function () {
+    FXStreetWidgets.Widget.LoaderSentiment = function () {
         var options = {
-            WidgetName: "technicals",
-            EndPoint: "technicals/getstudy",
-            EndPointTranslation: "technicals/getlocalization",
-            DefaultHost: "http://technicals.api.fxstreet.com/",
+            WidgetName: "sentiment",
+            EndPoint: "sentiment/study",
+            EndPointTranslation: "sentiment/localization",
+            DefaultHost: "http://markettools.api.fxstreet.com/",
             Mustaches: {
-                "technicals": "",
-                "technicalsmini": ""
+                "sentiment": "",
+                "sentimentmini": ""
             }
         };
 
@@ -263,24 +262,24 @@
             _this = FXStreetWidgets.Util.extendObject(parent);
 
         parent.initWidgets = function () {
-            var technicals = $("div[fxs_widget][fxs_name='" + _this.config.WidgetName + "']");
+            var sentiments = $("div[fxs_widget][fxs_name='" + _this.config.WidgetName + "']");
 
-            $.each(technicals, function (i, technical) {
-                var jTechnicals = $(technical);
+            $.each(sentiments, function (i, sentiment) {
+                var jSentiment = $(sentiment);
 
-                var type = jTechnicals.attr("fxs_type");
+                var type = jSentiment.attr("fxs_type");
 
                 var initJson = {
-                    Container: jTechnicals,
-                    Pair: jTechnicals.attr("fxs_pair"),
+                    Container: jSentiment,
+                    AssetId: jSentiment.attr("fxs_asset"),
                     WidgetId: i,
-                    Seo: FXStreetWidgets.Util.isUndefined(jTechnicals.attr("fxs_seo")) ? false : true
+                    Seo: FXStreetWidgets.Util.isUndefined(jSentiment.attr("fxs_seo")) ? false : true
                 };
                 
-                if (FXStreetWidgets.Util.isUndefined(initJson.Pair) || initJson.Pair.length !== 6) {
-                    console.log("fxserror unable to create " + _this.config.WidgetName + ", pair not valid: " + initJson.Pair);
+                if (FXStreetWidgets.Util.isUndefined(initJson.AssetId) || !initJson.AssetId.startsWith('fxs-')) {
+                    console.log("fxserror unable to create " + _this.config.WidgetName + ", asset not valid: " + initJson.AssetId);
                 } else {
-                    var widget = type === "mini" ? FXStreetWidgets.Widget.TechnicalsMini(_this) : new FXStreetWidgets.Widget.Technicals(_this);
+                    var widget = type === "mini" ? FXStreetWidgets.Widget.SentimentMini(_this) : new FXStreetWidgets.Widget.Sentiment(_this);
                     widget.init(initJson);
                 }
             });
@@ -290,7 +289,7 @@
     };
 
     (function () {
-        var loader = new FXStreetWidgets.Widget.LoaderTechnicals();
+        var loader = new FXStreetWidgets.Widget.LoaderSentiment();
         loader.init();
     })();
 }(FXStreetWidgets.$));

@@ -1,10 +1,10 @@
 ﻿(function ($) {
-    FXStreetWidgets.Widget.TechnicalsBase = function (loaderBase) {
+    FXStreetWidgets.Widget.SentimentBase = function (loaderBase) {
         var parent = FXStreetWidgets.Widget.Base(loaderBase),
             _this = FXStreetWidgets.Util.extendObject(parent);
 
         _this.Container = null;
-        _this.Pair = "";
+        _this.AssetId = "";
         _this.WidgetId = null;
         _this.Seo = false;
         _this.MustacheKey = "";
@@ -32,7 +32,7 @@
 
         _this.init = function (json) {
             _this.setSettingsByObject(json);
-            _this.loadDataFromUrl(_this.loaderBase.config.EndPoint + "/" + _this.Pair);
+            _this.loadDataFromUrl(_this.loaderBase.config.EndPoint + "/" + _this.AssetId);
         };
 
         _this.renderHtml = function () {
@@ -51,7 +51,6 @@
             var jsonData = {
                 Studies: studies,
                 Translations: _this.loaderBase.config.Translations,
-                PairName: _this.Pair,
                 Seo: _this.Seo
             };
 

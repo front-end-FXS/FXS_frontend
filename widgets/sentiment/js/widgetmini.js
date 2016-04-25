@@ -1,9 +1,9 @@
 ﻿(function () {
-    FXStreetWidgets.Widget.TechnicalsMini = function (loaderBase) {
-        var parent = FXStreetWidgets.Widget.TechnicalsBase(loaderBase),
+    FXStreetWidgets.Widget.SentimentMini = function (loaderBase) {
+        var parent = FXStreetWidgets.Widget.SentimentBase(loaderBase),
             _this = FXStreetWidgets.Util.extendObject(parent);
 
-        parent.MustacheKey = 'technicalsmini';
+        parent.MustacheKey = 'sentimentmini';
         
         parent.manageRenderedHtml = function () {
             _this.setFirstTabActive();
