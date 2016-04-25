@@ -1,0 +1,39 @@
+﻿<section class="fxs_widget_summary">
+
+    <table class="fxs_table_index fxs_table">
+        <thead>
+        <tr>
+            <th>&nbsp;</th>
+
+            <th>{{Translations.TrendIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.TrendIndexInfo}}"></i></th>
+
+            <th>{{Translations.ObOsIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.ObOsIndexInfo}}"></i></th>
+
+            <th>{{Translations.VolatilityIndex}} <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title="" data-original-title="{{Translations.VolatilityIndexInfo}}"></i></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#Studies}}
+        <tr>
+            <th scope="row">{{TypeDisplay}}</th>
+            <td>
+                <span class="{{TrendClass}}">{{TrendDisplay}}</span>
+            </td>
+            <td>
+                <span class="{{ObOsClass}}">{{ObOsDisplay}}</span>
+            </td>
+            <td>
+                <span class="{{VolatilityClass}}">{{VolatilityDisplay}}</span>
+            </td>
+        </tr>
+        {{/Studies}}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td class="fxs_widget_footer" colspan="4">
+                <small><time datetime="{{Study.0.DateUtc}}">{{Translations.Updated}} {{Study.0.HourUtc}} UTC</time></small>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</section>   
