@@ -1279,6 +1279,7 @@
     /* saf3+, chrome1+ */
     @media (-webkit-min-device-pixel-ratio: 0) { right: 10px; }
     .cbp-spmenu-push-toleft & { top: 0; right: 0; position:inherit;}
+    @media (-moz-min-device-pixel-ratio: 0 ){ right: 23px; }
   }
   a {
     position: absolute;
@@ -1297,14 +1298,14 @@
     margin-left: (floor(@content_rail_width / 2) + 578px) * -1;
     text-align: right;
     @media(min-width: @screen-hd){
-      margin-left: (((@content_wide_width / 2) + 578px) * -1) + 3px;
+      margin-left: (((@content_wide_width / 2) + 578px) * -1) - 4px;
     }
   }
   &.fxs_image_right {
     margin-left: floor(@content_rail_width / 2) + 1px;
     text-align: left;
     @media(min-width: @screen-hd){
-      margin-left:( @content_wide_width / 2) - 7px;
+      margin-left:( @content_wide_width / 2) + 2px;
     }
   }
   img {
