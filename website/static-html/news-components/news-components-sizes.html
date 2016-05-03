@@ -12,16 +12,26 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <style type="text/css">
-            .sticky {
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
+            .gallery .container {  position: relative;  border: 1px dashed rgba(0,0,0,0.2); }
+            .fxs_chart_container {
+              margin-left: 5px;
+              margin-right: 5px;
             }
-            .sticky:before,
-            .sticky:after {
-                content: '';
-                display: table;
+            .fxs_chart_container .fxs_chart_bo_default, .fxs_chart_container .fxs_chart_bo_mini, .fxs_chart_container .fxs_chart_bo_big{
+                width:100%;
             }
+            @media (min-width: 680px) {
+              .fxs_chart_container .fxs_chart_bo_default {
+                width:315px;
+              }
+              .fxs_chart_container .fxs_chart_bo_big {
+                width:645px;
+              }
+              .fxs_chart_container .fxs_chart_bo_mini{
+                width:225px;
+              }
+            }
+
         </style>
     </head>
     <!-- fxs_isParent_section -->
@@ -180,6 +190,12 @@
         <!-- /Sidebar left -->
         
         <!-- Topics subnav -->
+      
+        <!-- /Topics subnav -->
+
+        <div class="fxs_content" id="fxs_content">
+
+        <!-- Topics subnav -->
         <nav class="fxs_content_subnav">
             <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All News</a>
             <div class="fxs_topics_nav">
@@ -193,14 +209,14 @@
         </nav>
         <!-- /Topics subnav -->
 
-        <div class="fxs_content" id="fxs_content">
+            
 
-            <div id="notificationExample" class="fxs_global_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
+            <!--<div id="notificationExample" class="fxs_global_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
                 <span class="fxs_alertLabel">Welcome</span>
                 <p class="fxs_alertText">
                  to the new FXStreet! <a href="http://tour.fxstreet.com/" onclick="todo" role="button">What’s this?</a>
                 </p>
-            </div>
+            </div>-->
 
             <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
                 <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
@@ -246,6 +262,75 @@
                         </header>
                     </div>
                     <section class="fxs_detail">
+
+                    <h2 class="fxs_subtitle">
+                            Test sticky
+                        </h2>
+                        
+                        
+                        <div class="fxs_row container fxs_clearfix">
+                            <div class="fxs_flex_col">
+
+                                <!-- ################ Widget news large size ###################### -->
+
+                                <section class="fxs_widget_summary">
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_big">
+                                            <header>
+                                                <h2 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October</a>
+                                                </h2>
+                                                <address class="fxs_entry_metaInfo">
+                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                                </address>
+                                            </header>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://placekitten.com/g/500/350" />
+                                            </div>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+
+                                <section class="fxs_widget_summary">
+                                    <div class="fxs_entryFeatured">
+                                        <article class="fxs_entryFeatured_big">
+                                            <header>
+                                                <h2 class="fxs_entryHeadline">
+                                                    <a href="/">US durable goods orders strong than expected in October</a>
+                                                </h2>
+                                                <address class="fxs_entry_metaInfo">
+                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                                </address>
+                                            </header>
+                                            <div class="fxs_entryFeatured_img">
+                                                <img src="http://placekitten.com/g/500/350" />
+                                            </div>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    Following a short-lived recovery, EUR/USD came under renewed pressure and fell to fresh 14-month lows after Draghi’s speech before the Committee on Economic and Monetary Affairs of the European Parliament. Among remarks, Draghi said the economic recovery.
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </section>
+
+                                <!-- /Widget news large size -->
+
+
+                            </div>
+
+                            <!-- column with sticky -->
+                            <div class="fxs_flex_col fxs_flex_ad_col">
+                                <div class="pinned">
+                                    <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                                </div>
+                            </div>
+                        </div>
 
                         <h2 class="fxs_subtitle">
                             Widget news big
@@ -474,8 +559,9 @@
                         <h2 class="fxs_subtitle">
                             Test sticky
                         </h2>
-
-                        <div class="fxs_row">
+                        
+                        
+                        <div class="fxs_row container fxs_clearfix">
                             <div class="fxs_flex_col">
 
                                 <!-- ################ Widget news large size ###################### -->
@@ -532,10 +618,9 @@
                             </div>
 
                             <!-- column with sticky -->
-                            <div class="fxs_flex_col fxs_flex_ad_col sticky">
-                                <div class="">
+                            <div class="fxs_flex_col fxs_flex_ad_col">
+                                <div class="pinned">
                                     <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -1008,7 +1093,7 @@
                             </div>
                         </header>
                         <div class="fxs_article_body">
-                            <!-- Article main image + ad -->
+                            <!-- Article main image + ad -->                           
                             <figure class="fxs_article_mainMedia">
                                 <div class="fxs_mediaContainer">
                                     <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" />
@@ -1035,6 +1120,7 @@
                             <p>
                                 Official figures show, UK unemployment in the three months to October fell by 63,000 to 1.96 million. The Jobless Claims declined in November by 26.9K, beating the median estimate of -20.K. On a quarterly basis, average earnings excluding bonuses grew by 1.6%.
                             </p>
+                            
 
                             <ul>
                                 <li>U.K. Starts Exit From RBS</li>
@@ -1745,7 +1831,7 @@
 
     <script src="../../js/classie.js"></script>
     <script src="../../js/jquery.typeahead.min.js"></script>
-    <script src="../../js/stickyfill.min.js" sync></script>
+    <script src="../../js/jquery.pin.js" sync></script>
     <script src="../../js/site.js" sync></script>
 
 </body>
