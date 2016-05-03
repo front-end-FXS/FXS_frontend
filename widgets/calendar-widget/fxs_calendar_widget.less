@@ -20,6 +20,22 @@
 clean rules for new calendar widget
 
 **********************************/
+// SIZES to include in bo
+.fxs_calendar_bo_mini{
+  max-width:300px;
+  margin:5px;
+}
+.fxs_calendar_bo_default{
+  max-width:500px;
+  margin:5px;
+}
+.fxs_calendar_bo_big{
+  max-width:970px;
+  float:none;
+  margin:5px;
+}
+
+
 // HEADER
 .fxs_calendar_date{
   background-color: @headerRowBg;
@@ -137,6 +153,31 @@ clean rules for new calendar widget
 // FLAGS
 .fxst-ui-icon-flag {
   background-position: -16px -112px;
+}
+
+// NEXT EVENT
+.fxs_cal_nextEvent td {
+    background-color: #ffffff !important;
+}
+
+// ADD CALENDAR RULES TO DEFAULT TABLE
+.fxs_table{
+  &.fxs_calendar_table{
+    font-size: @txt_size_xsmall;
+    a{
+      text-decoration: none;
+      color: @dark_4_clr;
+    }
+    .fxit-noleftclick{
+      padding-left: 5px;
+    }
+    >tbody, >thead, >tfoot {
+      >tr >td, >tr >th {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 .fxst-flag {
   display: inline-block;
