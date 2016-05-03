@@ -1441,10 +1441,6 @@ fieldset[disabled] .fxs_pageSidebar .fxs_broker_contact_footer .fxs_btn_content_
   background-color: #e4871b;
   color: #ffffff;
 }
-.fxs_label_featured.fxs_liveEvent_v2 {
-  display: block;
-  width: 70px;
-}
 .fxs_label_success {
   background-color: #338473;
   color: #ffffff;
@@ -2052,13 +2048,6 @@ width:calc(100% - 320px);
   color: #8c8d91;
   padding: 7.5px 0;
   text-align: left;
-}
-.fxs_table.fxs_calendar_table {
-  font-size: 0.8rem;
-}
-.fxs_table.fxs_calendar_table a {
-  text-decoration: none;
-  color: #49494f;
 }
 .fxs_tableHover tbody > tr > td:last-child {
   width: 35px;
@@ -3623,9 +3612,7 @@ width:calc(100% + @half_base_spacer);
 }
 .fxs_wrapper {
   background-color: #ececf1;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
   padding-top: 50px;
   position: relative;
 }
@@ -3633,7 +3620,7 @@ width:calc(100% + @half_base_spacer);
   position: relative;
   background-color: #ececf1;
   height: 100%;
-  margin-top: 35px;
+  padding-top: 35px;
   -lh-property: 0;
 height:-webkit-calc(100% - 70px);
 height:-moz-calc(100% - 70px);
@@ -3674,6 +3661,7 @@ height:calc(100% - 35px);
   top: 0;
   bottom: 0;
   visibility: hidden;
+  z-index: 2;
 }
 .fxs_pageSidebar.fxs_sidebar_nav {
   left: 0;
@@ -3743,8 +3731,6 @@ height:calc(100% - 35px);
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_sidebar_user {
   visibility: visible;
 }
-.cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_content,
-.cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_header,
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_listView,
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_content_subnav,
 .cbp-spmenu-push.cbp-spmenu-push-toleft .fxs_footer,
@@ -3924,11 +3910,12 @@ fieldset[disabled] .fxs_show_usermenu {
   position: fixed;
   z-index: 2;
   width: 100%;
+  top: 50px;
   border-bottom: 1px solid #f3f3f8;
 }
 @media (min-width: 1024px) {
   .fxs_content_subnav {
-    position: absolute;
+    position: fixed;
     left: 270px;
     -lh-property: 0;
 width:-webkit-calc(100% - 270px);
@@ -4083,7 +4070,7 @@ width:calc(100% - 320px);
 .fxs_timezone_items,
 .fxs_user_logged {
   right: -276px;
-  z-index: 1;
+  z-index: 3;
 }
 .fxs_timezone_items.fxs_show_timezoneHours,
 .fxs_user_logged.fxs_show_timezoneHours {
@@ -4811,7 +4798,7 @@ fieldset[disabled] .fxs_dismissQuery {
   display: block;
 }
 .fxs_footer {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   bottom: 0;
   width: 100%;
@@ -5258,14 +5245,17 @@ width:calc(100% - 60px - 5px);
     /* saf3+, chrome1+ */
   }
   .cbp-spmenu-push-toleft .fxs_wallpaper_wrap {
-    top: 0;
     right: 0;
-    position: inherit;
   }
 }
 @media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 0) {
   .fxs_wallpaper_wrap {
-    right: 10px;
+    /*right: 10px;*/
+  }
+}
+@media (min-width: 1280px) and (-moz-min-device-pixel-ratio: 0) {
+  .fxs_wallpaper_wrap {
+    /*right: 23px;*/
   }
 }
 .fxs_wallpaper_wrap a {
@@ -5286,7 +5276,7 @@ width:calc(100% - 60px - 5px);
 }
 @media (min-width: 1480px) {
   .fxs_wallpaper_img.fxs_image_left {
-    margin-left: -1215px;
+    margin-left: -1222px;
   }
 }
 .fxs_wallpaper_img.fxs_image_right {
@@ -5295,7 +5285,7 @@ width:calc(100% - 60px - 5px);
 }
 @media (min-width: 1480px) {
   .fxs_wallpaper_img.fxs_image_right {
-    margin-left: 633px;
+    margin-left: 640px;
   }
 }
 .fxs_wallpaper_img img {
@@ -5674,35 +5664,25 @@ width:calc(100% - 150px);
     width: 33.33333333%;
   }
 }
-.stickem-container {
-  position: relative;
-}
-@media (min-width: 680px) {
-  .stickit {
-    position: fixed;
+/*.stickem-container { position: relative; }
+
+.stickit {
+  @media(min-width:@screen-s) { position: fixed; }
+  .fxs_content & {
+    @media(min-width:@screen-s) { top: 80px + @txt_defaultsize_px; }
+  }
+  .fxs_modal_content & {
+    @media(min-width:@screen-s) { top: 45px + @txt_defaultsize_px; }
+    @media(min-width:@screen-m) { top: 45px + (@txt_defaultsize_px*1.5); } 
   }
 }
-@media (min-width: 680px) {
-  .fxs_content .stickit {
-    top: 95px;
-  }
-}
-@media (min-width: 680px) {
-  .fxs_modal_content .stickit {
-    top: 60px;
-  }
-}
-@media (min-width: 1024px) {
-  .fxs_modal_content .stickit {
-    top: 67.5px;
-  }
-}
-@media (min-width: 680px) {
-  .stickit-end {
+
+.stickit-end {
+  @media(min-width:@screen-s) {
     position: absolute;
     bottom: 0;
   }
-}
+}*/
 .fxs_content_adContainer {
   margin: 0 auto;
   overflow: hidden;
