@@ -20,6 +20,11 @@
 clean rules for new calendar widget
 
 **********************************/
+
+// General utilities rules
+.fxs_centering_data{
+  text-align:center!important;
+}
 // SIZES to include in bo
 .fxs_calendar_bo_mini{
   max-width:300px;
@@ -49,6 +54,7 @@ clean rules for new calendar widget
   th{
     font-style: normal!important;
     color:#000!important;
+    text-transform: capitalize!important;    
   }
 }
 
@@ -164,6 +170,12 @@ clean rules for new calendar widget
 .fxs_table{
   &.fxs_calendar_table{
     font-size: @txt_size_xsmall;
+    @media(min-width:@screen-s){
+      font-size: @txt_size_small;
+      th{
+        font-size: @txt_size_small;
+      }
+    }
     a{
       text-decoration: none;
       color: @dark_4_clr;

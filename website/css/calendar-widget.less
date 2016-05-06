@@ -29,6 +29,10 @@
 clean rules for new calendar widget
 
 **********************************/
+// General utilities rules
+.fxs_centering_data{
+  text-align:center!important;
+}
 // HEADER
 .fxs_calendar_date{
   background-color: @headerRowBg;
@@ -42,6 +46,7 @@ clean rules for new calendar widget
   th{
     font-style: normal!important;
     color:#000!important;
+    text-transform: none;
   }
 }
 
@@ -158,6 +163,12 @@ clean rules for new calendar widget
 .fxs_table{
   &.fxs_calendar_table{
     font-size: @txt_size_xsmall;
+    @media(min-width:@screen-s){
+      font-size: @txt_size_small;
+      th{
+        font-size: @txt_size_small;
+      }
+    }
     a{
       text-decoration: none;
       color: @dark_4_clr;

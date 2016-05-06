@@ -1,0 +1,2674 @@
+/*************** Variables ***************/
+/*Responsive Layout Breaks*/
+/*Color*/
+/*Font*/
+.fxit-event-name {
+  padding-right: 5px;
+  font-weight: 400;
+}
+.fxit-eventurl {
+  padding-left: 7px;
+}
+@media (max-width: 425px) {
+  .fxit-event-numbers {
+    width: 80%!important;
+  }
+}
+.fxs_show_d {
+  display: block;
+}
+@media (max-width: 768px) {
+  .fxs_show_d {
+    display: none;
+  }
+}
+.fxs_show_m {
+  display: none;
+}
+@media (max-width: 768px) {
+  .fxs_show_m {
+    display: block;
+  }
+}
+.fxs_new_calendar_header_item .fxit-eventInfo-time,
+.fxs_new_calendar_header_item .fxit-eventInfo-country,
+.fxs_new_calendar_header_item .fxit-event-url {
+  padding-left: 10px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 425px) {
+  .fxs_event_hedaer {
+    display: none!important;
+  }
+}
+.fxs_cal_yellow {
+  color: #FA9900;
+}
+@media (max-width: 425px) {
+  .fxs_cal_timeLeft,
+  .fxs_event_info_time_header {
+    display: none !important;
+  }
+}
+.fxs_cal_timeLeft {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 70px;
+}
+.fxs_event_time {
+  min-width: 32px;
+}
+@media (max-width: 425px) {
+  .fxit-eventInfo-country {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.fxs_divider_mobile {
+  display: none;
+}
+@media (max-width: 425px) {
+  .fxs_divider_mobile {
+    clear: both;
+    height: 1px;
+    border: 0;
+    background-color: #fff;
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .fxit-event-title {
+    max-width: 250px;
+  }
+}
+@media (max-width: 425px) {
+  .fxit-event-title {
+    max-width: 200px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 320px) {
+  .fxit-event-title {
+    max-width: 150px;
+  }
+}
+.fxs_clearfix::before,
+.fxs_clearfix::after {
+  content: " ";
+  display: table;
+}
+.fxs_clearfix::after {
+  clear: both;
+}
+/*************** Styles ***************/
+.chart_path_line .c3-grid line {
+  stroke: #ccc;
+}
+.chart_path_line .c3-axis path,
+.chart_path_line .c3-axis line {
+  stroke: #ccc;
+}
+.chart_path_line .c3-axis .tick {
+  opacity: 0.5!important;
+}
+.chart_path_line .c3-axis-y-label,
+.chart_path_line .c3-axis-x-label,
+.chart_path_line .c3-axis-y2-label {
+  font-weight: bold;
+  font-style: italic;
+}
+.fxs-external_chart {
+  color: #2F4B6F!important;
+  text-decoration: underline!important;
+  font-weight: 600;
+}
+dl > dt,
+dd {
+  padding-bottom: 5px;
+  color: #777777;
+}
+.fxst_hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 15px;
+  padding: 0;
+}
+.fxst_custom_content {
+  margin: 15px 0 15px 15px;
+  color: #777777;
+  display: block;
+}
+.fxst_custom_content.fxst_chart_title {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .fxst_custom_content {
+    display: inline-block;
+  }
+}
+.fxst_select_label,
+.fxst_custom_select {
+  display: inline-block;
+  padding-right: 10px;
+}
+.fxst_mp_description {
+  color: #152532;
+}
+.c3-tooltip th {
+  color: #152532 !important;
+}
+.fxst-gnral {
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.fxst-gnral a {
+  color: #474747;
+  text-decoration: none;
+}
+#fxst_filter {
+  display: block;
+}
+@media (min-width: 800px) {
+  .fxit-event-info-desktop {
+    display: block!important;
+    width: 18%!important;
+  }
+}
+.fxit-event-info-mobile {
+  display: none!important;
+}
+#fxst-calendartable tr td,
+#fxst-calendartable tr th {
+  padding: 5px 10px 5px;
+  border-bottom: 1px solid #DEDEDE;
+  background-color: #F1F1F1;
+  /*******************************************************************************************************/
+}
+#fxst-calendartable tr td .fxit-eventInfo,
+#fxst-calendartable tr th .fxit-eventInfo,
+#fxst-calendartable tr td .fxit-event,
+#fxst-calendartable tr th .fxit-event {
+  display: inherit;
+  float: left;
+}
+#fxst-calendartable tr td .fxit-eventInfo div,
+#fxst-calendartable tr th .fxit-eventInfo div,
+#fxst-calendartable tr td .fxit-event div,
+#fxst-calendartable tr th .fxit-event div {
+  display: inline-block;
+  float: left;
+  width: auto;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-eventInfo div,
+  #fxst-calendartable tr th .fxit-eventInfo div,
+  #fxst-calendartable tr td .fxit-event div,
+  #fxst-calendartable tr th .fxit-event div {
+    /*display: inherit;
+						float: none;
+						width: 100%;*/
+  }
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-time,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-time,
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-country,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-country,
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol {
+    /*width: 100%;
+						padding-right: 10px;*/
+  }
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-time,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-time {
+    font-weight: lighter;
+  }
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-country,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-country {
+    min-width: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-country,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-country {
+    min-width: 0px;
+    position: relative;
+    height: 12px;
+    text-align: left;
+    margin: 0 0 14px;
+  }
+}
+#fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol,
+#fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol {
+  width: 70px;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol,
+  #fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol {
+    min-width: 0px;
+  }
+}
+#fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c,
+#fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c {
+  width: 25%;
+  height: 12px;
+  padding: 0;
+  background-color: #E0E0E0;
+  color: transparent;
+}
+#fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol,
+#fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol {
+  display: block;
+}
+#fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol1,
+#fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol1 {
+  width: 30%;
+  height: 100%;
+  background-color: #ffcc00;
+}
+#fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol2,
+#fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol2 {
+  width: 60%;
+  height: 100%;
+  background-color: #fa9900;
+}
+#fxst-calendartable tr td .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol3,
+#fxst-calendartable tr th .fxit-eventInfo .fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol3 {
+  width: 100%;
+  height: 100%;
+  background-color: #de3322;
+}
+#fxst-calendartable tr td .fxit-event,
+#fxst-calendartable tr th .fxit-event {
+  width: 100%;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-url,
+#fxst-calendartable tr th .fxit-event .fxit-event-url {
+  float: left;
+  font-weight: 700;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-url span,
+#fxst-calendartable tr th .fxit-event .fxit-event-url span {
+  font-weight: lighter;
+  color: #555;
+  padding-right: 10px;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-event .fxit-event-url,
+  #fxst-calendartable tr th .fxit-event .fxit-event-url {
+    /*width: auto;
+			        	margin: 6px 0px 12px;
+                padding-left: 10px;*/
+  }
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers {
+  float: right;
+  width: 35%;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers {
+    /*float: left;
+    		        	width: 100%;
+                    padding-left: 10px;*/
+  }
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c {
+  width: 25%;
+  height: 12px;
+  padding: 0;
+  background-color: #E0E0E0;
+  color: transparent;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol {
+  display: block;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol1,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol1 {
+  width: 30%;
+  height: 100%;
+  background-color: #ffcc00;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol2,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol2 {
+  width: 60%;
+  height: 100%;
+  background-color: #fa9900;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol3,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers.fxit-move-volatily .fxit-eventInfo-vol-c .fxst-i-vol3 {
+  width: 100%;
+  height: 100%;
+  background-color: #de3322;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-actual,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-actual,
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus,
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous {
+  text-align: center;
+  width: 25%;
+  height: 16px;
+  font-weight: 700;
+  color: #000;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-actual,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-actual,
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus,
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous {
+    /*width:33%;
+				        	position: relative;
+				        	float: left;
+				        	min-height: 40px;
+				        	border-left: 1px solid #dedede;*/
+  }
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-actual:after,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-actual:after,
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus:after,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus:after,
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous:after,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous:after {
+  display: none;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-actual:after,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-actual:after,
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus:after,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus:after,
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous:after,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous:after {
+    /*display: block;
+							position: absolute;
+							bottom: 0;
+							width: 100%;
+							text-align: center;
+							font-size: 10px;
+							color: #808080;*/
+  }
+}
+@media (max-width: 425px) {
+  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-actual:after,
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-actual:after {
+    content: 'ACTUAL';
+  }
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous span,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous span {
+  border-bottom: 1px #333 dotted;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous span b,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous span b {
+  display: none;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous:hover,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous:hover {
+  cursor: pointer;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous:hover span,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous:hover span {
+  border-bottom: none;
+}
+#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous:hover span b,
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous:hover span b {
+  display: inline-block;
+}
+#fxst-calendartable tr.fxst-calendarhead {
+  display: table-row;
+}
+#fxst-calendartable tr.fxst-calendarhead th {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ebebeb));
+  background-image: -webkit-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: -moz-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: -o-linear-gradient(top, #fafafa, #ebebeb);
+  background-image: linear-gradient(to bottom, #fafafa, #ebebeb);
+  padding: 6px 0px 4px;
+  font-size: 11px;
+  font-weight: 400;
+  vertical-align: middle;
+  text-align: center;
+  color: #555;
+  border: solid 1px #bbb;
+  border-width: 1px 0 2px 0;
+}
+#fxst-calendartable tr.check td {
+  background-color: #EAEAEA;
+}
+#fxst-calendartable tr.check td .fxit-event .fxit-event-url a {
+  color: #939393;
+}
+#fxst-calendartable tr.fxst-dateRow td {
+  height: 22px;
+  padding: 8px 0px 6px;
+  background-color: #dddddd;
+  color: #666666;
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.2;
+}
+/*************************************************
+      Calendar Pro Filter And Controls
+**************************************************/
+.fxst-calendar-filter-advanced fieldset {
+  border-bottom: solid 1px #d5d5d5;
+  padding-bottom: 10px;
+}
+.fxst-calendar-filter-advanced .all-none {
+  float: left;
+  width: 107px;
+  top: 2.5em;
+  padding: 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .fxst-calendar-filter-advanced .all-none {
+    float: none;
+    top: auto;
+    display: inline-block;
+    color: #2a2687;
+  }
+}
+.fxst-calendar-filter-advanced .all-none a {
+  color: #E28703;
+  padding: 0px 5px;
+}
+.fxst-calendar-filter-advanced ul {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 0 100px;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .fxst-calendar-filter-advanced ul {
+    margin: 0 0 0 0px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .fxst-calendar-filter-advanced ul .fxst-country {
+    width: 90px;
+    padding: 12px 0px;
+    display: inline-block;
+    float: none;
+  }
+}
+.fxst-calendar-filter-advanced ul .fxst-country .fxst-flag {
+  display: inline-block;
+  height: 11px;
+  width: 14px;
+  margin-right: 2px;
+  background-image: url("http://cdn.fxstreet.com/img/sprites/sprite-flags5.png");
+}
+@media (max-width: 768px) {
+  .fxst-calendar-filter-advanced ul .fxst-country .fxst-flag {
+    position: relative;
+    right: 0px;
+    text-indent: 24px;
+    color: #5C5C5C;
+  }
+}
+@media (max-width: 768px) {
+  .fxst-calendar-filter-advanced ul .fxst-country label {
+    display: none;
+  }
+}
+.fxst-calendar-filter-advanced li {
+  display: block;
+  float: left;
+  list-style: none;
+  text-align: left;
+  width: 220px;
+  padding: 7px 0 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .fxst-category {
+    padding: 12px 0 1px !important;
+  }
+}
+.fxst-field-countrysearch input {
+  float: left;
+  margin: 0 8px 0 0;
+}
+.fxst-field-countrysearch label,
+.fxst-field-categorysearch label,
+.fxst-field-volatilitysearch label {
+  text-align: left;
+  margin-left: 4px;
+  font-weight: 500;
+}
+.fxst-field-categorysearch label {
+  left: 18px;
+}
+.fxst-field-volatilitysearch label {
+  left: 18px;
+}
+.fxst-calendar-filter-advanced h3,
+.fxst-field-keywordsearch label {
+  font-size: 12px;
+  margin-left: 4px;
+  font-weight: 700;
+  float: left;
+  margin-right: -111px;
+  width: 107px;
+}
+@media (max-width: 768px) {
+  .fxst-calendar-filter-advanced h3,
+  .fxst-field-keywordsearch label {
+    font-size: 15px;
+    margin-left: 0px;
+    float: none;
+    display: inline-block;
+    margin-right: 0px;
+    width: auto;
+  }
+}
+.fxst-calendar-filter-advanced .fxst-field-volatilitysearch {
+  margin: 20px 0px;
+}
+.fxst-calendar-filter-advanced .fxst-field-volatilitysearch h3 {
+  margin-top: 5px;
+}
+.fxst-volatilityicons .fxst-i-vol,
+.fxst-gnral .fxst-i-vol {
+  display: none;
+}
+.fxst-i-vol0,
+.fxst-i-vol1,
+.fxst-i-vol2,
+.fxst-i-vol3 {
+  background-image: none;
+}
+.fxst-field-volatilitysearch .fxst-i-vol,
+.fxst-field-volatilitysearch .fxst-i-tick {
+  position: absolute;
+}
+.fxst-field-volatilitysearch .fxst-i-vol0,
+.fxst-field-volatilitysearch .fxst-i-tick0 {
+  left: 0;
+  background-color: #ccc;
+}
+.fxst-field-volatilitysearch .fxst-i-vol1,
+.fxst-field-volatilitysearch .fxst-i-tick1 {
+  left: 33%;
+  background-color: #ffcc00;
+}
+.fxst-field-volatilitysearch .fxst-i-vol2,
+.fxst-field-volatilitysearch .fxst-i-tick2 {
+  left: 66.4%;
+  background-color: #fa9900;
+}
+.fxst-field-volatilitysearch .fxst-i-vol3,
+.fxst-field-volatilitysearch .fxst-i-tick3 {
+  left: 101%;
+  background-color: #de3322;
+}
+.fxst-calendar-filter-form input[type='checkbox'] {
+  -webkit-appearance: checkbox;
+}
+.fxst-calendar-filter-form .fxst-volatilityicons {
+  position: relative;
+  height: 20px;
+  border: 0;
+  float: left;
+  width: 79%;
+  margin: 2px 0 2px 100px;
+  display: inline;
+}
+.fxst-basicfilter {
+  font-weight: bold;
+  font-size: 12px;
+}
+.fxst-basicfilter .fxst-btn-filter {
+  float: right !important;
+}
+.fxst-calendar-filter-advanced .fxst-category input {
+  float: left;
+  margin: 0;
+}
+.fxst-calendar-filter-form .fxst-clear,
+.fxst-calendar-filter-form .fxst-clear:link,
+.fxst-calendar-filter-form .fxst-clear:visited {
+  margin-right: 30px;
+  color: #acacac !important;
+  text-decoration: underline !important;
+}
+.fxst-calendar-filter-form .fxst-clear:hover {
+  margin-right: 30px;
+  color: #666 !important;
+  text-decoration: underline !important;
+}
+.fxst-field-volatility-slider {
+  width: 80%;
+  float: left;
+  margin-left: 104px;
+  display: inline;
+}
+#fxst-calendar-filter-dateshortcuts a:link,
+#fxst-calendar-filter-dateshortcuts a:visited {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555 !important;
+  border: solid 1px #D4D4D4;
+  float: left;
+  border-left-width: 0;
+  text-shadow: 0 1px 0 #fff;
+  background-color: #f7f7f7;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
+  background-image: -webkit-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
+  background-image: -o-linear-gradient(top, #ffffff, #dddddd);
+  background-image: linear-gradient(to bottom, #ffffff, #dddddd);
+}
+#fxst-calendar-filter-dateshortcuts .fxst-datefirst {
+  border-left-width: 1px !important;
+}
+#fxst-calendar-filter-dateshortcuts .fxst-datelast {
+  border-right: solid 1px #aaa;
+}
+#fxst-calendar-filter-dateshortcuts a:hover {
+  background: white;
+  text-decoration: underline;
+}
+#fxst-calendar-filter-dateshortcuts .fxst-selected:link,
+#fxst-calendar-filter-dateshortcuts .fxst-selected:visited,
+#fxst-calendar-filter-dateshortcuts .fxst-selected:hover {
+  background: #ccc;
+  text-shadow: 0 0 0;
+  text-decoration: none;
+  box-shadow: inset 1px 1px 3px #b1b1b1;
+}
+.fxst-form-buttons {
+  clear: both;
+  padding: 10px 0;
+  border-top: solid 1px #ddd;
+  padding-top: 15px;
+}
+@media (max-width: 768px) {
+  .fxst-form-buttons {
+    margin-top: 30px;
+  }
+}
+.fxst-checksavesettings {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .fxst-checksavesettings {
+    margin: 15px 20px 15px 0px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}
+.fxst-calendar-filter-form .fxst-btn-showfilters {
+  float: right;
+  padding: 5px 13px 6px 14px;
+  background: #DDD;
+  color: #333 !important;
+  font-weight: bold;
+  border: solid 1px #D6D6D6;
+}
+.fxst-calendar-filter-form .fxst-btn-showfilters:hover {
+  text-decoration: underline !important;
+}
+.fxst-calendar-filter-advanced .fxst-flag {
+  float: left;
+}
+/* Filter Form styles */
+.fxst-calendar-filter {
+  box-shadow: inset 0 1px 0 white;
+  border: solid 1px #D6D6D6;
+  margin: 0 auto auto;
+  padding: 10px !important;
+  width: auto;
+  color: #555;
+  overflow: hidden;
+}
+.fxst-calendar-filter-basic label {
+  font-weight: 700;
+  color: #666666;
+}
+@media (max-width: 768px) {
+  #fxst-daterange,
+  #fxst-keywordsearch,
+  #fxst-volatilitysearch,
+  #fxit-custom-button {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  #fxst-categorysearch {
+    margin-top: 20px;
+  }
+}
+#fxst-daterange .fxst-container {
+  margin-left: 100px;
+  margin-top: 12px;
+}
+.fxst-field-keywordsearch.fxst-keywordanddatesearch .fxst-container {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.fxst-calendar-filter-basic .fxst-container {
+  display: inline;
+  overflow: hidden;
+  float: left;
+}
+.fxst-advlink {
+  width: 100px !important;
+  margin-top: 4px;
+}
+.fxst-calendar-filter-basic .fxst-search-clear {
+  float: right;
+  margin-top: 4px;
+}
+.fxst-r1,
+.fxst-r2,
+.fxst-keyword {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  color: #A0A0A0;
+  vertical-align: middle;
+  background: #ffffff url('http://cdn.fxstreet.com/img/economic-calendar/calendar/datepicker.png') no-repeat 105px 50%;
+  margin-right: 10px;
+  width: 120px;
+  padding: 5px 0 5px 5px;
+}
+.fxst-keyword {
+  margin-left: 111px;
+  background-image: none;
+}
+/*Datepicker*/
+.fxst-datepicker {
+  width: 570px;
+  background: #FAFAFA;
+  box-shadow: 1px 1px 3px #ddd;
+  position: absolute;
+  z-index: 100;
+  left: 160px;
+}
+.fxst-datepicker .fxst-datepicker-inner {
+  padding: 16px 10px 11px 24px;
+  border: solid 1px #ddd;
+}
+.fxst-datepicker-block {
+  float: left;
+}
+.fxst-datepicker-block-01 {
+  width: 160px;
+}
+.fxst-datepicker .fxst-datepicker-block-01 .fxst-btn-apply {
+  padding: 3px 12px;
+  color: #555 !important;
+}
+.fxst-datepicker-block-02 {
+  font-size: 9px;
+}
+.fxst-datepicker .fxst-datepicker-block-02 .ui-datepicker {
+  width: 364px !important;
+  background: #f1f1f1;
+  margin-right: 0;
+  box-shadow: 0 0 0 #fff;
+  border: 0;
+  padding: 0 3px;
+  border-radius: 6px;
+}
+#ui-datepicker-div {
+  background: #f1f1f1;
+  box-shadow: 1px 1px 3px #dddddd, inset 0 0 0 4px #ffffff;
+}
+#ui-datepicker-div {
+  width: 548px !important;
+}
+.ui-datepicker th {
+  font-weight: normal;
+}
+.ui-datepicker td {
+  padding: 0;
+}
+.ui-datepicker .ui-datepicker-title {
+  font-size: 12px;
+  margin-top: 0;
+  font-weight: bold;
+}
+.ui-datepicker .ui-datepicker-header {
+  background: #e1e1e1;
+  font-size: 12px;
+}
+.ui-datepicker .ui-datepicker-header select {
+  margin: 0;
+}
+.fxst-calendar-filter-form .fxst-datepicker a {
+  color: #333 !important;
+}
+.fxst-calendar-filter-form .fxst-datepicker-block-02 a,
+#ui-datepicker-div a {
+  font-weight: normal;
+  border-color: #f1f1f1;
+  padding: 2px 3px;
+}
+.fxst-calendar-filter-form .fxst-datepicker-block-02 a {
+  padding: 0 3px;
+}
+.fxst-calendar-filter-form .fxst-datepicker-block-02 td.ui-state-active,
+.ui-datepicker td.ui-state-active {
+  border: 0;
+}
+.ui-datepicker td.ui-state-ative a,
+.ui-datepicker a.ui-state-active,
+.fxst-calendar-filter-form .fxst-datepicker-block-02 td.ui-state-active a,
+.fxst-calendar-filter-form .fxst-datepicker-block-02 a.ui-state-active {
+  background: #D17807;
+  color: #fff !important;
+}
+.fxst-datepicker .fxst-input-text {
+  margin: 2px;
+  padding: 3px;
+  width: 100px;
+  border: solid 1px #ccc;
+  outline: none;
+}
+.fxst-datepicker .fxst-field {
+  padding: 4px 0;
+}
+.fxst-datepicker .fxst-label {
+  display: block;
+  float: none;
+  color: #888;
+  font-weight: bold;
+}
+.fxst-datepicker .fxst-datepicker-title {
+  margin-bottom: 7px;
+  font-size: 15px;
+  margin-top: 0;
+}
+.fxst-datepicker .fxst-module-buttons {
+  padding-top: 8px;
+}
+.fxst-datepicker .fxst-input-text-active {
+  margin: 0;
+  border: solid 3px #D17807;
+}
+/**************************************************/
+#fxst-clear {
+  margin-right: 24px;
+}
+/* Calendar styles */
+.fxst-infobox {
+  margin-top: 10px;
+  border-top: 2px solid #f1f1f1;
+  padding-top: 10px !important;
+  border-collapse: separate;
+}
+.fxst-activeRow {
+  background-color: #E2ECF0 !important;
+}
+.fxst-dateRow {
+  border-top: solid 1px #E1E1E1;
+  color: #777;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 white;
+  background: #EEE !important;
+}
+.fxst-dateRow td {
+  padding: 2px !important;
+}
+.fxst-tr-nexteventline td {
+  border-top: solid 4px #e1e1e1;
+}
+.fxst-tr-event:hover,
+.fxst-selectedRow {
+  cursor: pointer;
+}
+.fxst-tr-event:hover td,
+.fxst-selectedRow td {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+}
+.fxst-keyshortcut {
+  background-color: #eeeeee;
+}
+/*clase para marcar la linea del calendar que esta seleccionada. Con esta clase, el usuario se puede desplazar con el teclado e ir seleccionando la linia que quiere. */
+.fxst-txt-left {
+  text-align: left;
+}
+/* New styles actual, cons & prev event calendar*/
+#fxst-calendartable .fxst-td-ecocalevent {
+  border-right: 1px solid #dcdcdc;
+  padding: 10px 10px !important;
+  text-align: center;
+  width: 153px;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+#fxst-calendartable .fxst-td-ecocalevent .fxst-worst,
+#fxst-calendartable .fxst-td-ecocalevent .fxst-better {
+  font-weight: 400;
+}
+#fxst-calendartable .fxst-td-revised {
+  padding-left: 0;
+  padding-right: 0;
+}
+.fxst-nextactual-date {
+  font-size: 19px;
+}
+.fxst-nextactual-hour {
+  font-size: 1.2em;
+}
+/* Opened event styles */
+#fxst-calendartable .fxst-infobox {
+  border-top: solid 2px #e0e0e0;
+  padding-top: 13px !important;
+  overflow: hidden;
+}
+#fxst-calendartable .fxst-eventDetails {
+  background: #FFF;
+  padding: 20px !important;
+  border-bottom: solid 1px #f1f1f1;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable .fxst-eventDetails {
+    padding: 10px !important;
+  }
+}
+#fxst-calendartable .fxst-eventDetails p {
+  line-height: 1.5em;
+  font-size: 13px;
+}
+.fxst-innerlinks {
+  margin: 15px 0;
+}
+#fxst-calendartable .fxst-eventDetails table {
+  float: left;
+  border-style: solid;
+  border-color: #eee;
+  border-width: 1px;
+  margin-bottom: 18px;
+}
+@media (max-width: 768px) {
+  #fxst-calendartable .fxst-eventDetails table {
+    width: 100% !important;
+  }
+}
+#fxst-calendartable .fxst-eventDetails .fxst-table-links {
+  border-style: solid;
+  border-color: #eee;
+  border-width: 0px;
+  margin-bottom: 18px;
+  margin-right: 35px;
+  width: 100%;
+  height: 80px;
+}
+#fxst-calendartable.fxst-loading {
+  text-align: center;
+  padding-right: 5px !important;
+  vertical-align: middle;
+}
+#fxst-calendartable .fxst-adcalendar {
+  margin-left: 40px;
+  margin-bottom: 18px;
+  height: 80px;
+}
+.fxst-eventdescription {
+  width: 50%;
+  clear: left;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .fxst-eventdescription {
+    width: 100%;
+    line-height: 1.5;
+  }
+}
+.fxst-linkspages-container {
+  float: right !important;
+  clear: right;
+  width: 47%;
+}
+@media (max-width: 768px) {
+  .fxst-linkspages-container {
+    width: 100%;
+  }
+}
+.fxst-title-linkspages {
+  font-size: 15px!important;
+  color: #666;
+  margin-top: 0;
+}
+.fxst-linkspages {
+  width: 100%;
+  float: left;
+  clear: right;
+  margin-left: 20px;
+}
+.fxst-eventDetails .fxst-table-links,
+.fxst-eventDetails .fxst-table-links tr {
+  border-width: 0 !important;
+}
+.fxst-linkspages ul {
+  padding: 0 !important;
+  margin: 0 !important;
+  list-style-type: none;
+  width: 100%;
+}
+.fxst-linkspages li {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.fxst-linkspages li a {
+  color: #2F4B6F;
+  text-decoration: underline;
+}
+.fxst-linkspages li a:hover {
+  color: #E4871B;
+  text-decoration: none;
+}
+.fxst-linkpage-event,
+.fxst-linkpage-country {
+  font-size: 12px;
+  font-weight: 400;
+}
+/*************************************************
+      Navs - Tabs
+**************************************************/
+#fxst-calendartable .fxst-tabNavigation-box {
+  clear: both;
+  height: 2.2em;
+  background-color: #EEE;
+  border: 1px solid #DDD;
+  margin-top: 25px;
+}
+.fxst-tabNavigation {
+  margin: 0;
+}
+.fxst-tabNavigation li {
+  float: left;
+  display: inline;
+  position: relative;
+  left: 2px;
+}
+#fxst-calendartable .fxst-historytable {
+  border: 0 !important;
+}
+/* Content TABS*/
+.fxst-tabContent {
+  border: solid 1px #ddd;
+  border-width: 0px 1px 1px 1px;
+  padding-top: 11px;
+  padding-bottom: 12px;
+}
+.fxst-tabContent ul {
+  margin: 10px 20px;
+  padding: 5px 0 !important;
+}
+.fxst-tabContent li {
+  line-height: 1.3em;
+  margin: 0;
+  list-style: none;
+  color: #777;
+  padding: 5px 0 4px !important;
+}
+.fxst-tabContent li a {
+  color: #2F4B6F;
+  text-decoration: none;
+  font-weight: bold;
+}
+.fxst-tabContent li a:hover {
+  color: #E4871B;
+}
+.fxst-layout-tabs a {
+  display: block;
+  padding: .6em .8em;
+  border-width: 0 1px;
+  line-height: 1em;
+  border-right: 1px solid #ddd;
+  border-left: solid 1px #f6f6f6;
+  cursor: pointer;
+  color: #717171 !important;
+}
+.fxst-layout-tabs .fxst-ui-state-active a,
+.fxst-layout-tabs .fxst-ui-state-active a {
+  background: white;
+  color: #E4871B;
+}
+.fxst-tabNavigation-box .ui-tabs-active a {
+  background: #fff;
+  border-left: solid 1px #bbb;
+  border-right: solid 1px #bbb;
+  color: #E4871B !important;
+}
+.fxst-layout-tabs .ui-tabs-active a {
+  padding-bottom: 1em;
+  margin-top: -0.4em;
+  border-top: solid 1px #d6d6d6;
+  background: #fff;
+  position: relative;
+  top: 1px;
+  font-weight: 700;
+}
+/* History tab */
+#fxst-calendartable .fxst-graph .annotatedtimelinetable {
+  border-width: 0px;
+  margin-right: 0px !important;
+}
+.fxst-historygraph td {
+  padding: 0!important;
+}
+.annotatedtimelinetable td {
+  padding: 0 !important;
+}
+.annotationsdiv {
+  display: none;
+}
+.fxst-lastreleases {
+  font-weight: 400;
+  padding: 0 0 15px 5px;
+}
+.fxst-pg {
+  display: inline;
+  border: 1px solid #d5d5d5;
+}
+.fxst-pg:hover {
+  color: #fa8802;
+}
+.fxst-pg-normal {
+  background-color: #f1f1f1;
+}
+.fxst-pg-selected {
+  background-color: #fafafa;
+}
+.fxst-paginationHistoryTable {
+  text-align: center;
+}
+.fxst-pg-normal:hover {
+  background: #fff;
+  color: #FA8802;
+}
+#FXstreetCalendar .fxst-pg-selected {
+  background: #fff;
+  border: 0;
+  color: #626466;
+  font-weight: 700;
+}
+/* Olsen Scale Tab */
+.fxst-olseninfo {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  right: 0;
+}
+.fxst-olsenscale {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.fxst-currency,
+.fxst-olseninfoimg,
+fxst-olsendata {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.fxst-olsencurrency {
+  border: 1px solid #CCC;
+  margin-left: 10px;
+}
+.fxst-olsenscale-info {
+  background-color: white;
+  margin: 0px 3px 10px 10px;
+}
+.fxst-olsenscale .fxst-fecha {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-left: 11px;
+  line-height: 2.2em;
+  color: #555555;
+}
+.fxst-olsenscale .fxst-olseninfo {
+  float: right;
+  margin-top: 3px;
+  margin-right: 10px;
+}
+.fxst-olsendata .fxst-olseninfoimg img {
+  float: right;
+  border: 0;
+}
+.fxst-olsenbacklink {
+  padding: 15px !important;
+  margin-bottom: 20px;
+}
+.fxst-eventpage .fxst-olsendata {
+  margin: 0;
+}
+.fxst-i-less,
+.fxst-i-plus {
+  background-image: url("http://cdn.fxstreet.com/img/sprites/sprite-mega16i4.png");
+  width: 16px;
+  height: 16px;
+}
+.fxst-i-plus {
+  background-position: -143px 0px !important;
+}
+.fxst-i-less {
+  background-position: -160px 0px !important;
+}
+/* Autochartist/Econoday Tab */
+.fxst-olseninfo {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  right: 0;
+}
+.fxst-autochartist {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.fxst-autochartist-img {
+  width: 360px;
+  float: left;
+}
+.fxst-autochartistcurrency {
+  border: 1px solid #CCC;
+  margin-left: 10px;
+}
+.fxst-autochartist-info {
+  border-style: solid;
+  border-width: 1px 1px 2px 1px;
+  border-color: #EAEAEA;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.fxst-autochartist .fxst-fecha {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-left: 11px;
+  line-height: 2.2em;
+  color: #555555;
+}
+.fxst-autochartistlink {
+  padding: 15px !important;
+}
+.fxst-autochartistdata {
+  margin: 0 20px;
+}
+/*This message appears when new information is available while you have an event open */
+/* It generates HTML similar to this:  <div class="fxec_noticebox">	 New Information <a href="#">Refresh&nbsp;</a></div> */
+#fxst-calendartable .fxst-noticebox {
+  padding: 10px;
+  background: #F7EDBE;
+  border: solid 1px #f7e8a4;
+  -webkit-border-radius: 3px;
+  /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+  border-radius: 3px;
+  /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  margin-bottom: 16px;
+  float: left;
+  width: 97%;
+}
+/* Webinars tab */
+#fxst-calendartable .fxst-webinars {
+  margin: 10px;
+}
+/* Color coding */
+#fxst-calendartable .fxst-better {
+  color: #6B8B2F !important;
+  font-weight: 700 !important;
+}
+#fxst-calendartable .fxst-worst {
+  color: #BC422D !important;
+  font-weight: 700 !important;
+}
+#fxst-redbox-legend {
+  background-color: #BC422D;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+#fxst-greenbox-legend {
+  background-color: #6B8B2F;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+#fxst-calendartable .fxst-normal {
+  color: #333;
+}
+#fxst-calendartable .fxst-releaseat {
+  color: gray;
+  font-size: 1em;
+}
+/*NEW*/
+.fxst-contentrelated-info {
+  padding: 10px 0px !important;
+  background-color: #fcfcfc;
+}
+.fxst-actual {
+  margin-right: 0px !important;
+}
+.fxst-cons,
+.fxst-previous {
+  color: #333;
+  margin-right: 0px !important;
+}
+#fxecocal_FXstreetCalendar p {
+  color: #333333;
+}
+/***********  HISTORY TABLE *******/
+.fxst-historytable {
+  border-collapse: collapse;
+  width: 98%;
+  margin: 6px 6px 10px;
+  font-size: 12px;
+}
+.fxst-historytable th,
+.fxst-tr-event td {
+  border-bottom: solid 1px #eee;
+  vertical-align: middle;
+}
+.fxst-historytable .fxst-evenRow:hover,
+.fxst-historytable .fxst-oddRow:hover {
+  background-color: #eaeaea;
+}
+.fxst-historytable td {
+  border-width: 1px 1px 1px 1px;
+}
+.fxst-historylinks {
+  text-align: right;
+  padding: 0 20px;
+}
+.fxst-historylinks a.fxst-active {
+  color: #333 !important;
+}
+.fxst-historylinks .fxst-active:hover {
+  color: #333 !important;
+  cursor: text;
+}
+/***********  Tab Navigation *******/
+.fxst-tab-navigation {
+  padding: 0 10px;
+  overflow: hidden;
+}
+.fxst-tab-navigation .fxst-module-listing {
+  background: transparent;
+  border: 0;
+}
+.fxst-tab-navigation .fxst-ui-widget-content {
+  border-color: #D6D6D6;
+}
+.fxst-tab-navigation .fxst-layout-tabs {
+  height: 2.2em;
+  border-bottom: solid 1px #D6D6D6;
+}
+.fxst-tab-navigation .fxst-layout-tabs li {
+  float: left;
+  display: inline;
+  position: relative;
+  left: 2px;
+}
+.fxst-tab-navigation .fxst-layout-tabs .fxst-active a,
+.fxst-tab-navigation .fxst-layout-tabs .fxst-ui-tabs-selected a {
+  background-color: #CCC;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cccccc), to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top, #cccccc, #f1f1f1);
+  background-image: -moz-linear-gradient(top, #cccccc, #f1f1f1);
+  background-image: -ms-linear-gradient(top, #cccccc, #f1f1f1);
+  background-image: -o-linear-gradient(top, #cccccc, #f1f1f1);
+  background-image: linear-gradient(top, #cccccc, #f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#cccccc', EndColorStr='#f1f1f1');
+  border: solid 1px #DDD;
+  border-color: #AAA #CCC #DDD;
+  border-radius: 0;
+  border-width: 1px 1px 0;
+  border-style: solid;
+  color: #444 !important;
+  text-decoration: none !important;
+  padding-bottom: 0.7em;
+  margin-top: 0em;
+  top: -1px;
+}
+.fxst-tab-navigation .fxst-layout-tabs a {
+  display: block;
+  padding: .6em .8em;
+  border-width: 0 1px;
+  line-height: 1em;
+  border-right: 1px solid #DDD;
+  border-left: solid 1px #F6F6F6;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  color: #666666 !important;
+}
+.fxst-tab-navigation .fxst-layout-tabs .fxst-active a:hover,
+.fxst-tab-navigation .fxst-layout-tabs .fxst-ui-tabs-selected a:hover {
+  background: #fff;
+  color: #E4871B;
+}
+/* buttons pagination history table*/
+.fxst-paginationHistoryTable {
+  text-align: center;
+}
+.fxst-paginationHistoryTable .fxst-pg {
+  padding: 4px 5px;
+}
+.fxst-paginationHistoryTable .fxst-pg-selected {
+  background: white;
+  border: 0;
+  color: #626466;
+  font-weight: 700;
+}
+.fxst-paginationHistoryTable .fxst-pg {
+  background: #fff;
+  border: 1px solid #d5d5d5;
+  margin: 10px 2px 0;
+  padding: 4px 5px;
+}
+.fxst-paginationHistoryTable a {
+  border: 1px solid #eaeaea;
+}
+.fxst-paginationHistoryTable .fxst-pg-selected {
+  background-color: whiteSmoke;
+}
+.fxst-exportcsv {
+  border-right: 0;
+}
+.fxst-exportcsv:hover {
+  background-color: #fff;
+  color: #fa8802;
+}
+.fxst-exportcsv {
+  float: right;
+  padding: 0px 15px 6px 0;
+}
+/* FI HISTORY TABLE*/
+/* GRAPH */
+.fxst-chart {
+  border-color: #eee;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+}
+/* FILTER GRAPHIC EVENT PAGE*/
+#fxst-tablefilter-event .fxst-detailevent {
+  width: 100px;
+}
+#fxst-tablefilter-event .fxst-detailactual {
+  width: 20px;
+}
+#fxst-tablefilter-event .fxst-detailcons {
+  width: 20px;
+}
+#fxst-tablefilter-event .fxst-detailprev {
+  width: 20px;
+}
+#fxst-tablefilter-event th {
+  padding: 4px 8px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.1em;
+  color: #666;
+  text-align: left;
+  color: #555;
+  border-left: 1px solid #f1f1f1;
+  border-bottom: 1px solid #E4E4E4;
+  background-color: #f4f4f4;
+}
+#fxst-tablefilter-event .fxst-tablefilter-thead {
+  background-color: #f4f4f4;
+}
+#fxst-tablefilter-event .fxst-eventrows {
+  padding: 10px 8px 7px 8px;
+  border-bottom: 1px solid #eee;
+}
+.fxst-filterevent {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #f1f1f1;
+  margin-top: -5px;
+}
+.fxst-filterevent-title {
+  font-weight: 400;
+  padding-left: 5px;
+  text-align: left;
+  font-size: 18px;
+  color: #555;
+  padding-top: 10px;
+}
+.fxst-listevent {
+  padding-left: 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #F1F1F1;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 0px 7px 0px;
+}
+.fxst-listitem-info {
+  width: 270px;
+  float: left;
+  padding-left: 70px;
+}
+.fxst-infoevent {
+  padding-left: 10px;
+}
+.fxst-event-date {
+  padding-left: 23px;
+  font-size: 11px;
+  color: #777;
+}
+.fxst-list-item .fxst-box1 {
+  margin-right: 20px;
+}
+.fxst-listingfilter {
+  padding: 0;
+  height: 240px !important;
+  /* El !important es para que se cumpla el height en IE*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-bottom: 2px solid #eee;
+  position: relative;
+}
+.fxst-listingfilter .fxst-eventrows span {
+  font-size: 13px;
+}
+.fxst-contentfilter .fxst-eventrows:hover {
+  background-color: #fff;
+}
+.fxst-listingfilter-pair {
+  padding: 10px 8px 0px 8px;
+}
+.fxst-listingfilter ul {
+  padding: 0;
+}
+.fxst-list-item ul {
+  padding-left: 20px;
+}
+.fxst-listevent .fxst-flag {
+  margin-top: 3px;
+  margin-right: 1px;
+  margin-left: -18px;
+}
+.fxst-filterevent .fxst-i-openclose {
+  margin-left: 3px;
+}
+.fxst-filterevent .fxst-i-openclose {
+  background-position: -16px 0;
+}
+.fxst-filterevent .fxst-i-closed {
+  background-position: 0 0;
+}
+.fxst-filterevent .fxst-i-openclose:hover {
+  background-position: -16px -32px;
+}
+.fxst-filterevent .fxst-i-closed:hover {
+  background-position: 0px -32px;
+}
+.fxst-i-openclose,
+.fxst-i-closed {
+  width: 16px;
+  height: 16px;
+  background: url("http://cdn.fxstreet.com/img/sprites/sprite-cag1.png") no-repeat;
+  text-indent: 0 !important;
+}
+.fxst-filterevent .fxst-module-title {
+  background: #fafafa;
+  text-align: left;
+  padding: 8px;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  border-width: 1px 0px 2px 0px;
+  border-style: solid;
+  border-color: #eee;
+}
+.fxst-filterevent-title {
+  width: 457px;
+  float: left;
+}
+.fxst-ib {
+  display: -moz-inline-block;
+  display: -moz-inline-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+.fxst-hidden {
+  display: none;
+}
+.fxst-subtitle {
+  padding: 4px 8px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.1em;
+  color: #666;
+  text-align: left;
+  color: #555;
+  border-left: 1px solid #F1F1F1;
+  border-bottom: 1px solid #E4E4E4;
+  border-top: 1px solid #D5D5D5;
+  margin: 0;
+  background: #F4F4F4;
+}
+.fxst-contentfilter {
+  background-color: #fafafa;
+  padding-bottom: 20px;
+}
+.fxst-listpair {
+  width: 160px;
+  float: left;
+  padding: 5px 0 !important;
+}
+.fxst-list-item-even {
+  background-color: #fafafa;
+}
+.fxst-list-item-odd {
+  background-color: #ffffff;
+}
+/**********   Flags    ***********/
+.fxst-ui-icon-flag {
+  background-position: -16px -112px;
+}
+.fxst-flag {
+  display: inline-block;
+  height: 11px;
+  width: 14px;
+  margin-right: 2px;
+  background-image: url("http://cdn.fxstreet.com/img/sprites/sprite-flags5.png");
+  color: transparent;
+  left: 0;
+}
+@media (max-width: 768px) {
+  .fxst-flag {
+    text-indent: -24px;
+    color: #333333;
+    left: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .fxst-country .fxst-flag {
+    left: 0;
+  }
+}
+.fxst-i-ae {
+  background-position: 0 0;
+}
+/* emirates arabes */
+.fxst-i-ar {
+  background-position: -14px 0;
+}
+/* Argentina  */
+.fxst-i-at {
+  background-position: -28px 0;
+}
+/* Austria  */
+.fxst-i-au {
+  background-position: -42px 0;
+}
+/* Australia  */
+.fxst-i-be {
+  background-position: -56px 0;
+}
+/* Belgica  */
+.fxst-i-bg {
+  background-position: -70px 0;
+}
+/* Bulgaria  */
+.fxst-i-br {
+  background-position: -84px 0;
+}
+/* Brazil  */
+.fxst-i-ca {
+  background-position: -98px 0;
+}
+/* Canada  */
+.fxst-i-cat {
+  background-position: -112px 0;
+}
+/* Catalonia  */
+.fxst-i-ch {
+  background-position: -126px 0;
+  background-color: #F00;
+}
+/* Suiza (schweiz)  */
+.fxst-i-cl {
+  background-position: -140px 0;
+}
+/* Chile  */
+.fxst-i-cn {
+  background-position: -154px 0;
+}
+/* China  */
+.fxst-i-co {
+  background-position: -168px 0;
+}
+/* Colombia  */
+.fxst-i-cz {
+  background-position: -182px 0;
+}
+/* Republica Checa (czech) */
+.fxst-i-de {
+  background-position: -196px 0;
+}
+/* Alemania  */
+.fxst-i-dk {
+  background-position: -210px 0;
+}
+/* Dinamarca */
+.fxst-i-dz {
+  background-position: -224px 0;
+}
+/* Algeria */
+.fxst-i-ee {
+  background-position: -238px 0;
+}
+/* Estonia */
+.fxst-i-eg {
+  background-position: -252px 0;
+}
+/* Egipto */
+.fxst-i-emu {
+  background-position: -266px 0;
+}
+/* European Monetary Union */
+.fxst-i-es {
+  background-position: -280px 0;
+}
+/* Espanya*/
+.fxst-i-fi {
+  background-position: -294px 0;
+}
+/* Finland */
+.fxst-i-fr {
+  background-position: -308px 0;
+}
+/* Francia */
+.fxst-i-gr {
+  background-position: -322px 0;
+}
+/* Grecia  */
+.fxst-i-hk {
+  background-position: -336px 0;
+}
+/* Hong Kong */
+.fxst-i-hu {
+  background-position: -350px 0;
+}
+/* Hungria */
+.fxst-i-id {
+  background-position: -364px 0;
+}
+/* Indonesia */
+.fxst-i-ie {
+  background-position: -378px 0;
+}
+/* Ireland */
+.fxst-i-il {
+  background-position: -392px 0;
+}
+/* Israel */
+.fxst-i-in {
+  background-position: -406px 0;
+}
+/* India */
+.fxst-i-ir {
+  background-position: -420px 0;
+}
+/* Iran */
+.fxst-i-is {
+  background-position: -434px 0;
+}
+/* Islandia */
+.fxst-i-it {
+  background-position: -448px 0;
+}
+/* Italia */
+.fxst-i-jp {
+  background-position: -462px 0;
+}
+/* Japon */
+.fxst-i-kr {
+  background-position: -476px 0;
+}
+/* Korea del sur */
+.fxst-i-lt {
+  background-position: -490px 0;
+}
+/* Lithuania */
+.fxst-i-lv {
+  background-position: -504px 0;
+}
+/* Latvia */
+.fxst-i-mt {
+  background-position: -518px 0;
+}
+/* Malta */
+.fxst-i-mx {
+  background-position: -532px 0;
+}
+/* Mexico */
+.fxst-i-my {
+  background-position: -546px 0;
+}
+/* Malaysia */
+.fxst-i-ng {
+  background-position: -560px 0;
+}
+/* Nigeria */
+.fxst-i-nl {
+  background-position: 0 -11px;
+}
+/* Netherlands */
+.fxst-i-no {
+  background-position: -14px -11px;
+}
+/* Noruega */
+.fxst-i-nz {
+  background-position: -28px -11px;
+}
+/* Nueva Zelanda */
+.fxst-i-pe {
+  background-position: -42px -11px;
+}
+/* Peru */
+.fxst-i-ph {
+  background-position: -56px -11px;
+}
+/* Phillippines/Filipinas */
+.fxst-i-pk {
+  background-position: -70px -11px;
+}
+/* Pakistan */
+.fxst-i-pl {
+  background-position: -84px -11px;
+}
+/* Polonia */
+.fxst-i-pt {
+  background-position: -98px -11px;
+}
+/* Portugal */
+.fxst-i-ro {
+  background-position: -112px -11px;
+}
+/* Romania */
+.fxst-i-ru {
+  background-position: -126px -11px;
+}
+/* Rusia */
+.fxst-i-sa {
+  background-position: -140px -11px;
+}
+/* Saudi Arabia */
+.fxst-i-se {
+  background-position: -154px -11px;
+}
+/* Suecia */
+.fxst-i-sg {
+  background-position: -168px -11px;
+}
+/* Singapur */
+.fxst-i-sk {
+  background-position: -182px -11px;
+}
+/* Slovakia */
+.fxst-i-th {
+  background-position: -196px -11px;
+}
+/* Thailand */
+.fxst-i-tr {
+  background-position: -210px -11px;
+}
+/* Turquia */
+.fxst-i-tw {
+  background-position: -224px -11px;
+}
+/* Taiwan */
+.fxst-i-ua {
+  background-position: -238px -11px;
+}
+/* Ukrania */
+.fxst-i-uk,
+.fxst-i-en {
+  background-position: -252px -11px;
+}
+/* UK, Reino Unido */
+.fxst-i-us {
+  background-position: -266px -11px;
+}
+/* USA */
+.fxst-i-ve {
+  background-position: -280px -11px;
+}
+/* Venezuela */
+.fxst-i-vn {
+  background-position: -294px -11px;
+}
+/* Vietnam */
+.fxst-i-za {
+  background-position: -308px -11px;
+}
+/**********   Large Flags    ***********/
+.fxst-i-ae-l {
+  background-position: 0 -22px;
+}
+/* emirates arabes */
+.fxst-i-ar-l {
+  background-position: -24px -22px;
+}
+/* Argentina  */
+.fxst-i-at-l {
+  background-position: -48px -22px;
+}
+/* Austria  */
+.fxst-i-au-l {
+  background-position: -72px -22px;
+}
+/* Australia  */
+.fxst-i-be-l {
+  background-position: -96px -22px;
+}
+/* Belgica  */
+.fxst-i-bg-l {
+  background-position: -120px -22px;
+}
+/* Bulgaria  */
+.fxst-i-br-l {
+  background-position: -144px -22px;
+}
+/* Brazil  */
+.fxst-i-ca-l {
+  background-position: -168px -22px;
+}
+/* Canada  */
+.fxst-i-cat-l {
+  background-position: -192px -22px;
+}
+/* Catalonia  */
+.fxst-i-ch-l {
+  background-position: -216px -22px;
+}
+/* Suiza (schweiz)  */
+.fxst-i-cl-l {
+  background-position: -240px -22px;
+}
+/* Chile  */
+.fxst-i-cn-l {
+  background-position: -264px -22px;
+}
+/* China  */
+.fxst-i-co-l {
+  background-position: -288px -22px;
+}
+/* Colombia  */
+.fxst-i-cz-l {
+  background-position: -312px -22px;
+}
+/* Republica Checa (czech) */
+.fxst-i-de-l {
+  background-position: -336px -22px;
+}
+/* Alemania  */
+.fxst-i-dk-l {
+  background-position: -360px -22px;
+}
+/* Dinamarca */
+.fxst-i-dz-l {
+  background-position: -384px -22px;
+}
+/* Algeria */
+.fxst-i-ee-l {
+  background-position: -408px -22px;
+}
+/* Estonia */
+.fxst-i-eg-l {
+  background-position: -432px -22px;
+}
+/* Egipto */
+.fxst-i-emu-l {
+  background-position: -456px -22px;
+}
+/* Espanya */
+.fxst-i-es-l {
+  background-position: -480px -22px;
+}
+/* European Monetary Union */
+.fxst-i-fi-l {
+  background-position: -504px -22px;
+}
+/* Finland */
+.fxst-i-fr-l {
+  background-position: -528px -22px;
+}
+/* Francia */
+.fxst-i-gr-l {
+  background-position: -552px -22px;
+}
+/* Grecia  */
+.fxst-i-hk-l {
+  background-position: 0 -38px;
+}
+/* Hong Kong */
+.fxst-i-hu-l {
+  background-position: -24px -38px;
+}
+/* Hungria */
+.fxst-i-id-l {
+  background-position: -48px -38px;
+}
+/* Indonesia */
+.fxst-i-ie-l {
+  background-position: -72px -38px;
+}
+/* Ireland */
+.fxst-i-il-l {
+  background-position: -96px -38px;
+}
+/* Israel */
+.fxst-i-in-l {
+  background-position: -120px -38px;
+}
+/* India */
+.fxst-i-ir-l {
+  background-position: -144px -38px;
+}
+/* Iran */
+.fxst-i-is-l {
+  background-position: -168px -38px;
+}
+/* Islandia */
+.fxst-i-it-l {
+  background-position: -192px -38px;
+}
+/* Italia */
+.fxst-i-jp-l {
+  background-position: -216px -38px;
+}
+/* Japon */
+.fxst-i-kr-l {
+  background-position: -240px -38px;
+}
+/* Korea del sur */
+.fxst-i-lt-l {
+  background-position: -264px -38px;
+}
+/* Lithuania */
+.fxst-i-lv-l {
+  background-position: -288px -38px;
+}
+/* Latvia */
+.fxst-i-mt-l {
+  background-position: -312px -38px;
+}
+/* Malta */
+.fxst-i-mx-l {
+  background-position: -336px -38px;
+}
+/* Mexico */
+.fxst-i-my-l {
+  background-position: -360px -38px;
+}
+/* Malaysia */
+.fxst-i-ng-l {
+  background-position: -384px -38px;
+}
+/* Nigeria */
+.fxst-i-nl-l {
+  background-position: -408px -38px;
+}
+/* Netherlands */
+.fxst-i-no-l {
+  background-position: -432px -38px;
+}
+/* Noruega */
+.fxst-i-nz-l {
+  background-position: -456px -38px;
+}
+/* Nueva Zelanda */
+.fxst-i-pe-l {
+  background-position: -480px -38px;
+}
+/* Peru */
+.fxst-i-ph-l {
+  background-position: -504px -38px;
+}
+/* Phillippines/Filipinas */
+.fxst-i-pk-l {
+  background-position: -528px -38px;
+}
+/* Pakistan */
+.fxst-i-pl-l {
+  background-position: -552px -38px;
+}
+/* Polonia */
+.fxst-i-pt-l {
+  background-position: 0 -54px;
+}
+/* Portugal */
+.fxst-i-ro-l {
+  background-position: -24px -54px;
+}
+/* Romania */
+.fxst-i-ru-l {
+  background-position: -48px -54px;
+}
+/* Rusia */
+.fxst-i-sa-l {
+  background-position: -72px -54px;
+}
+/* Saudi Arabia */
+.fxst-i-se-l {
+  background-position: -96px -54px;
+}
+/* Suecia */
+.fxst-i-sg-l {
+  background-position: -120px -54px;
+}
+/* Singapur */
+.fxst-i-sk-l {
+  background-position: -144px -54px;
+}
+/* Slovakia */
+.fxst-i-th-l {
+  background-position: -168px -54px;
+}
+/* Thailand */
+.fxst-i-tr-l {
+  background-position: -192px -54px;
+}
+/* Turquia */
+.fxst-i-tw-l {
+  background-position: -216px -54px;
+}
+/* Taiwan */
+.fxst-i-ua-l {
+  background-position: -240px -54px;
+}
+/* Ukrania */
+.fxst-i-uk-l,
+.fxst-i-en-l {
+  background-position: -264px -54px;
+}
+/* UK, Reino Unido */
+.fxst-i-us-l {
+  background-position: -288px -54px;
+}
+/* USA */
+.fxst-i-ve-l {
+  background-position: -312px -54px;
+}
+/* Venezuela */
+.fxst-i-vn-l {
+  background-position: -336px -54px;
+}
+/* Vietnam */
+.fxst-i-za-l {
+  background-position: -360px -54px;
+}
+/* Sud Africa */
+.fxst-i-noflag,
+.fxst-i-noflag-l {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: 0 0 0 #fff;
+}
+.fxst-i-tip-m {
+  background-position: -60px -64px;
+}
+.fxst-i-check {
+  background-position: 100px 100px;
+  border: solid 1px #d5d5d5;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+.fxst-i-check.fxst-active {
+  background-position: -128px -16px;
+}
+.fxst-i-tick {
+  display: -moz-inline-block;
+  display: -moz-inline-box;
+  display: inline-block;
+  height: 16px;
+  width: 5px;
+  text-indent: -9999px;
+  border-left: solid 1px #c4ccd7;
+  background: transparent;
+  margin-top: -35px;
+}
+.fxst-i-arrow-d {
+  background-position: -147px -19px;
+  margin-right: 3px;
+}
+.fxst-i-report {
+  background-color: #ccc;
+  color: #333333;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.fxst-i-speech {
+  background-color: #ccc;
+  color: #333333;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.fxst-revised {
+  background-color: #E2E2E2;
+  color: #333333;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100000;
+}
+.fxst-preliminar {
+  color: #868686;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.fxst-closedFull {
+  background-position: -240px -48px;
+}
+.fxst-closedEmpty {
+  background-position: -256px -48px;
+}
+.fxst-openFull {
+  background-position: -272px -48px;
+}
+.fxst-openEmpty {
+  background-position: -288px -48px;
+}
+.fxst-eventdetail {
+  opacity: 0.5;
+}
+.fxst-btnresetsettings {
+  padding: 5px 13px 6px 14px;
+  background: #DDD;
+  color: #333 !important;
+  font-weight: bold;
+  border: solid 1px #D6D6D6;
+}
+@media (max-width: 768px) {
+  .fxst-btnresetsettings {
+    display: inline-block;
+  }
+}
+.fxst-btnresetsettings:hover {
+  text-decoration: underline;
+}
+.ui-datepicker-calendar .ui-state-default {
+  border: 1px solid #D1D8E0;
+  color: #3F627C;
+  font-size: 11px;
+  background: #FEFEFE;
+}
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid #fcefa1 /*{borderColorHighlight}*/;
+  background: #e1e1e1 /*{bgColorHighlight}*/;
+  color: #363636 /*{fcHighlight}*/;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: 1px solid #999999;
+  background: #dadada url(images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x;
+  font-weight: normal;
+  color: #212121;
+}
+.fxst-oddRow:hover .fxst-eventdetail,
+.fxst-evenRow:hover .fxst-eventdetail {
+  opacity: 1;
+}
+.fxst-selectedRow {
+  background-color: #ffffff;
+}
+.fxst-greenbox-legend {
+  background: #6b8b2f;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.fxst-redbox-legend {
+  background: #bc422d;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.fxst-btn-s6,
+.fxst-btn-s6:link,
+.fxst-btn-s6:visited {
+  padding: 6px 15px;
+  font-size: 12px;
+  margin: 0;
+  border: solid 1px #AAA;
+  border-color: #b6b6b6 #aaa #aaa #b6b6b6;
+  -webkit-border-radius: 3px;
+  /* Saf3-4, iOS 1-3.2, Android 1.6 */
+  border-radius: 3px;
+  /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: #115979;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #ffffff, #dddddd);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
+  /* FF3.6+ */
+  background-image: -o-linear-gradient(top, #ffffff, #dddddd);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, #ffffff, #dddddd);
+}
+.fxst-btn-s6:hover {
+  border-color: #666;
+  color: #115979;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#f1f1f1));
+  /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #dddddd, #f1f1f1);
+  /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(top, #dddddd, #f1f1f1);
+  /* FF3.6+ */
+  background-image: -o-linear-gradient(top, #dddddd, #f1f1f1);
+  /* Opera 11.10+ */
+  background-image: linear-gradient(to bottom, #dddddd, #f1f1f1);
+}
+.fxst-btn-s7,
+.fxst-btn-s7:link,
+.fxst-btn-s7:visited {
+  padding: 4px 15px;
+  margin-bottom: 5px;
+  border: 1px solid #D17807;
+  color: white !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 #A60;
+  white-space: nowrap;
+  background-color: #EB9807;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f1aa01), to(#db7807));
+  background-image: -webkit-linear-gradient(top, #f1aa01, #db7807);
+  background-image: -moz-linear-gradient(top, #f1aa01, #db7807);
+  background-image: -ms-linear-gradient(top, #f1aa01, #db7807);
+  background-image: -o-linear-gradient(top, #f1aa01, #db7807);
+  background-image: linear-gradient(to bottom, #f1aa01, #db7807);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f1aa01', EndColorStr='#dB7807');
+}
+@media (max-width: 768px) {
+  .fxst-btn-s7,
+  .fxst-btn-s7:link,
+  .fxst-btn-s7:visited {
+    margin-right: 20px;
+  }
+}
+.fxst-gnral .fxst-btn-s7:hover {
+  color: white !important;
+  border-color: #a13807;
+}
+.fxst-calendar-filter-form .fxst-btn-s7:link,
+.fxst-calendar-filter-form .fxst-btn-s7:visited,
+.fxst-calendar-filter-form .fxst-btn-s7:hover,
+.fxst-calendar-filter-form .fxst-btn-s7:active {
+  color: #fff !important;
+}
+.fxst-gnral fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.ui-slider .ui-widget-header {
+  background: transparent url('http://cdn.fxstreet.com/img/economic-calendar/calendar/bar_sel.png') repeat-x 50% 50%;
+  top: 3px;
+}
+.fxst-volatilityicons span {
+  cursor: pointer;
+}
+/*Promo columna derecha de nuestro site. Estilos de reduced3 pero que sirven solo para las paginas de evento y country del calendar*/
+.selfpromo1 h3 {
+  padding: 9px 10px;
+  margin: 0 -5px 10px;
+  border-bottom: solid 1px #EAEAEA;
+  font-size: 16px;
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f1f1f1));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: -moz-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: -ms-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: -o-linear-gradient(top, #ffffff, #f1f1f1);
+  background-image: linear-gradient(to bottom, #ffffff, #f1f1f1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#f1f1f1');
+}
+/*************************************************
+      CSS Overrides for specific language
+**************************************************/
+/**********   Arab    ***********/
+.fxst-lang-ae .fxst-filterevent .fxst-module-title,
+.fxst-lang-ae .fxst-historytable-event th,
+.fxst-lang-ae .fxst-country-info,
+.fxst-lang-ae .fxst-country-map,
+.fxst-lang-ae .fxst-subtitle {
+  text-align: right !important;
+}
+.fxst-lang-ae .fxst-country-map,
+.fxst-lang-ae .fxst-listpair,
+.fxst-lang-ae .fxst-country-info {
+  float: right !important;
+}
+.fxst-lang-ae .fxst-country-details {
+  float: right !important;
+  margin: 20px 10px 0px 15px !important;
+  border-right: 2px solid #EEE !important;
+  padding-right: 10px !important;
+  border-left: 0px !important;
+}
+.fxst-lang-ae .fxst-event-details .fxst-date {
+  float: right !important;
+  border-left: 2px solid #EEE;
+}
+.fxst-lang-ae .fxst-event-map {
+  margin: 25px 10px 10px 0;
+  float: right;
+}
+.fxst-lang-ae .fxst-listpair .fxst-icon,
+.fxst-lang-ae #fxst-tablefilter-event .fxst-icon {
+  margin-left: 8px;
+  float: right;
+}
+.fxst-lang-ae .fxst-historylinks {
+  text-align: left;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced ul {
+  margin: 0 100px 0 0px !important;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced li {
+  float: right;
+  text-align: right;
+  padding: 7px 0 1px !important;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-field-countrysearch label,
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-field-categorysearch label {
+  text-align: right;
+  margin-left: 4px;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-field-categorysearch label {
+  right: 18px;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced h3,
+.fxst-lang-ae .fxst-field-keywordsearch label {
+  margin-right: 4px;
+  float: right;
+  margin-left: -111px;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-category input {
+  float: right;
+}
+.fxst-lang-ae .fxst-calendar-filter-form .fxst-clear,
+.fxst-calendar-filter-form .fxst-clear:link,
+.fxst-calendar-filter-form .fxst-clear:visited,
+.fxst-calendar-filter-form .fxst-clear:hover {
+  margin-left: 30px;
+}
+.fxst-lang-ae #fxst-volatility {
+  float: right;
+  margin-right: 104px;
+}
+.fxst-lang-ae .fxst-calendar-filter-form .fxst-advlink-hide {
+  padding: 6px 14px 7px 35px !important;
+}
+.fxst-lang-ae .fxst-calendar-filter-form {
+  text-align: right;
+}
+.fxst-lang-ae .fxst-ui-slider {
+  text-align: right;
+}
+.fxst-lang-ae .fxst-ui-slider-horizontal .fxst-ui-slider-handle {
+  margin-right: -0.6em;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-flag {
+  float: right;
+}
+.fxst-lang-ae .fxst-advlink {
+  margin-right: 30px;
+}
+.fxst-lang-ae #fxst-keyword,
+.fxst-lang-ae .fxst-keyword {
+  margin-right: 111px;
+  background-image: none;
+}
+.fxst-lang-ae #fxst-basicsearch .fxst-container {
+  float: right;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-country input {
+  float: right !important;
+  margin-right: 8px;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .fxst-flag {
+  float: right;
+}
+.fxst-lang-ae .fxst-country label {
+  text-align: right;
+  float: right;
+  margin-right: 8px;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced h3 {
+  float: right;
+}
+.fxst-lang-ae .fxst-calendar-filter-advanced .all-none {
+  float: right;
+}
+.fxst-lang-ae .fxst-calendar-filter-form .fxst-volatilityicons,
+.fxst-lang-ae #fxst-volatility {
+  margin: 0 0 0 15px;
+  float: left;
+}
+.fxst-lang-ae #fxst-tick0,
+.fxst-lang-ae #fxst-tick1,
+.fxst-lang-ae #fxst-tick2,
+.fxst-lang-ae #fxst-tick3 {
+  border-left: solid 1px #c4ccd7;
+  text-align: right !important;
+}
+.fxst-lang-ae .fxst-basicfilter .fxst-btn-filter,
+.fxst-lang-ae #fxst-basicsearch .fxst-search-clear {
+  float: left !important;
+}
+.fxst-lang-ae.fxst-r1,
+.fxst-lang-ae.fxst-r2 {
+  margin-left: 10px;
+}
+.fxst-lang-ae .fxst-olsenscale .fxst-olseninfo {
+  margin-right: 725px;
+}
+.fxst-lang-ae #fxst-calendartable .fxst-tabNavigation-box ul {
+  float: right;
+}
+.fxst-lang-ae .fxst-table-s1 td {
+  text-align: right !important;
+}
+.fxst-lang-ae .fxst-tr-event td {
+  text-align: right;
+}
+.ie .lang-ae .fxst-openFull,
+.ie .lang-ae .fxst-closedFull,
+.ie .lang-ae .fxst-closedEmpty,
+.ie .lang-ae .fxst-openEmpty {
+  text-indent: -1px !important;
+}
+/**********   Russian    ***********/
+.fxst-lang-ru #fxst-thvolatility {
+  width: 78px !important;
+}
+.fxst-lang-ru .fxst-advlink {
+  width: 125px !important;
+  margin-top: 4px;
+}
+/**********   Indonesian    ***********/
+.fxst-lang-id .fxst-advlink {
+  width: 116px !important;
+}
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  /*background-position: center center;*/
+  background-repeat: no-repeat;
+  text-indent: -999px;
+  text-align: left;
+}
+.i-loading-s2 {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-image: url('http://cdn.fxstreet.com/img/icons/i-loading-16x16-01.gif');
+}
+.fxit-eventInfo-vol {
+  clear: left !important;
+}
+.fxs_cal_nextEvent td {
+  background-color: #ffffff !important;
+}
+.fxst-i-16 {
+  width: 16px;
+  height: 16px;
+}
