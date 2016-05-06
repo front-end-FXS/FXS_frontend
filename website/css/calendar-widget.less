@@ -1,3 +1,12 @@
+// VENDOR IMPORTS
+@import "../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+// IMPORTS FOR GENERAL APLICATION
+@import "../../website/css/less/vars.less"; // Application variables
+@import "../../website/css/less/mixins.less"; // Application variables
+@import "../../website/css/less/components.less";  // Molecular-combined componentss
+// UTILITIES, HELPERS & EXTENDIBLE CLASSES
+@import "../../website/css/less/utilities.less";  // Helper classes
+//@import "../../website/css/less/templating.less";  // Styles for templates, structural sections etc...
 /*************** Variables ***************/ 
 /*Color*/
 @baseColor: #e6ecf0;
@@ -20,27 +29,10 @@
 clean rules for new calendar widget
 
 **********************************/
-
 // General utilities rules
 .fxs_centering_data{
   text-align:center!important;
 }
-// SIZES to include in bo
-.fxs_calendar_bo_mini{
-  max-width:300px;
-  margin:5px;
-}
-.fxs_calendar_bo_default{
-  max-width:500px;
-  margin:5px;
-}
-.fxs_calendar_bo_big{
-  max-width:970px;
-  float:none;
-  margin:5px;
-}
-
-
 // HEADER
 .fxs_calendar_date{
   background-color: @headerRowBg;
@@ -54,7 +46,7 @@ clean rules for new calendar widget
   th{
     font-style: normal!important;
     color:#000!important;
-    text-transform: capitalize!important;    
+    text-transform: none;
   }
 }
 
@@ -100,6 +92,7 @@ clean rules for new calendar widget
     }
     td, th {
       border-bottom: 1px solid #DEDEDE;
+      text-transform: normal!important;
       .fxit-eventInfo, .fxit-event {
         display: inherit;
         float: left;
@@ -185,8 +178,8 @@ clean rules for new calendar widget
     }
     >tbody, >thead, >tfoot {
       >tr >td, >tr >th {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 2px;
+        padding-bottom: 2px;
       }
     }
   }
@@ -331,4 +324,3 @@ clean rules for new calendar widget
 
 
 /**********************************/
-

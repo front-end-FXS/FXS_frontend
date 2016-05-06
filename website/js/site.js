@@ -141,7 +141,6 @@ $(document).ready(function () {
         $('.fxs_listView').removeClass('cbp-spmenu-open');
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
         $('.fxs_toggleList').removeClass('active');
-        //$('.pinned').css('position', 'static');
         disableOther('showRightPush');
     };
 
@@ -161,31 +160,6 @@ $(document).ready(function () {
             classie.toggle(showLeft, 'disabled');
         }
     }
-
-    $('#showRightPush').on('click', function(){
-        $('.fxs_content').animate({
-            'left' : $('.fxs_content').css('left') == '-276px' ? '0px' : '-276px'
-        }, 340);
-        $('.fxs_contentView').animate({
-            'left' : $('.fxs_contentView').css('left') == '-276px' ? '0px' : '-276px'
-        }, 340);
-        $('.fxs_header').animate({
-            'left' : $('.fxs_header').css('left') == '-276px' ? '0px' : '-276px'
-        }, 340);
-        $('.fxs_wallpaper_wrap').animate({
-            'left' : $('.fxs_wallpaper_wrap').css('left') == '-550px' ? '0px' : '-550px'
-        }, 340);
-       /* $('.fxs_footer').animate({
-            'left' : $('.fxs_footer').css('left') == '-276px' ? '0px' : '-276px'
-        }, 400);  
-        $('.fxs_content_subnav').animate({
-            'left' : $('.fxs_content_subnav').css('left') == '-276px' ? '0px' : '-276px'
-        }, 400);*/
-
-        $('.fxs_pageSidebar').animate({
-            'right' : $('.fxs_pageSidebar').css('right') == '0px' ? '-276px' : '0px'
-        }, 0);
-    });
 
     ///////////////////////////////////////////
     ////////// Buttons active state //////////
@@ -211,7 +185,7 @@ $(document).ready(function () {
         $('.fxs_queryResults').addClass("fxs_selectedQuery");
     });
 
-    // Toggle timezone class to show menu (metido a saco)
+    //////////////// Toggle timezone class to show menu (metido a saco) //////////////////
     $('.fxs_timezone_btn').click(function () {
         $('.fxs_timezone_items').addClass('fxs_show_timezoneHours');
     });
@@ -219,6 +193,14 @@ $(document).ready(function () {
     $('[data-toggle="fxs_timezone_items"]').click(function () {         
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
     });
+
+    //////////////// toggle timezone nabvar button //////////////////
+
+    $('.fxs_timezone_btn_navbar').on('click', function(){
+        $(body).addClass('cbp-spmenu-push-toleft');
+        $('.fxs_timezone_items').toggleClass('fxs_show_timezoneHours');
+    });
+
 
     // USER ZONE
 
@@ -282,7 +264,12 @@ $(document).ready(function () {
         $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
     })
 
+
     // sticky
+    // disable when sidebar is active
+    $('#showRightPush').on('click',function(){
+        $(".pinned" ).toggle();
+    })
     $(".pinned").pin({
         containerSelector: ".container", minWidth: 940, padding: {top: 120, bottom: 10}
     })
