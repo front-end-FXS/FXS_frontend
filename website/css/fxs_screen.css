@@ -2480,6 +2480,21 @@ width:calc(100% - 320px);
 .ui-helper-hidden-accessible {
   display: none;
 }
+.fxs_fixed_height {
+  height: 450px!important;
+}
+.fxs_fixed_height .fxs_widget_big {
+  height: 450px!important;
+}
+.fxs_fixed_height .fxs_widget_big .tt_chartContainer {
+  height: 450px!important;
+}
+.fxs_fixed_height .fxs_widget_big .tt_chartContainer .tt_copyrightSign {
+  display: none;
+}
+.fxs_fixed_height .fxs_widget_big .tt_chartContainer .tt_panelDiv {
+  height: 341px!important;
+}
 .fxs_compare_performance_chart .tt_panelDiv .tt_symbolTitle {
   display: block!important;
 }
@@ -5562,6 +5577,9 @@ width:calc(100% - 60px - 5px);
     float: left;
     width: 50%;
   }
+}
+.fxs_col_50.fxs_fixed_height {
+  height: 350px;
 }
 @media (min-width: 680px) {
   .fxs_col_33:not(.fxs_col_dismissible) {

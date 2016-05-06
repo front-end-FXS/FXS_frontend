@@ -1334,6 +1334,23 @@
 
 /////////////////////////////////////////////////////////////////////////
 /////////////////// Overrides teletrader library
+
+// to use with custom columns - fxs_col_2_50_fixed_height
+.fxs_fixed_height{
+  height:450px!important;
+  .fxs_widget_big {
+    height:450px!important;
+    .tt_chartContainer{
+      .tt_copyrightSign{
+        display: none;
+      }
+      height:450px!important;
+      .tt_panelDiv{
+        height:341px!important;
+      }
+    }    
+  }
+}
 .fxs_compare_performance_chart{
   .tt_panelDiv{
     .tt_symbolTitle{
