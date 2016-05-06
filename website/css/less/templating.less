@@ -1565,7 +1565,12 @@ body.cbp-spmenu-push-toright{
 .fxs_col_67 { .make-m-column(8); }
 
 // 50% //
-.fxs_col_50 { .make-s-column(6); }
+.fxs_col_50 { 
+  .make-s-column(6);
+   &.fxs_fixed_height{
+    height: 350px;
+  } 
+}
 
 // 33% //
 .fxs_col_33 {
