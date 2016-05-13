@@ -1697,6 +1697,18 @@ width:calc(100% - 320px);
     margin-right: -0.66666667rem;
   }
 }
+.fxs_brokerContent_holder {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  overflow: hidden;
+  font-size: 0;
+}
+@media (min-width: 1024px) {
+  .fxs_brokerContent_holder {
+    margin-left: -0.66666667rem;
+    margin-right: -0.66666667rem;
+  }
+}
 .fxs_relatedItem {
   padding-bottom: 1rem;
   min-height: 210px;
@@ -1711,6 +1723,12 @@ width:calc(100% - 320px);
 }
 .fxs_relatedItem:hover .fxs_entryFeatured_img {
   opacity: 0.8;
+}
+.fxs_relatedItem.fxs_brokerItem:hover {
+  border-bottom: none;
+}
+.fxs_relatedItem.fxs_brokerItem:hover a {
+  color: #ffffff;
 }
 .fxs_relatedContentSlot_x3_cols,
 .fxs_relatedContentSlot_x4_cols {
@@ -2043,6 +2061,7 @@ width:calc(100% - 320px);
 .fxs_modal_content .fxs_footer {
   margin-left: 0;
   width: 100%;
+  position: absolute;
 }
 .fxs_modal_content .fxs_detail {
   margin-bottom: 0;
@@ -2509,6 +2528,8 @@ lesshat-selector {
 .fxs_dateIndicator_divider::after,
 .fxs_relatedContent_holder::before,
 .fxs_relatedContent_holder::after,
+.fxs_brokerContent_holder::before,
+.fxs_brokerContent_holder::after,
 .fxs_widget_divider_module::before,
 .fxs_widget_divider_module::after,
 .fxs_widget_summary::before,
@@ -2538,6 +2559,7 @@ lesshat-selector {
 .fxs_divider_third::after,
 .fxs_dateIndicator_divider::after,
 .fxs_relatedContent_holder::after,
+.fxs_brokerContent_holder::after,
 .fxs_widget_divider_module::after,
 .fxs_widget_summary::after,
 .fxs_widget_footer::after,
@@ -2928,7 +2950,7 @@ width:calc(100% + @half_base_spacer);
   display: inline-block;
   width: 16px;
   height: 13px;
-  background-image: url('../../website/img/sprite-flags5.png');
+  background-image: url('http://az687397.vo.msecnd.net/website/img/sprite-flags5.png');
   background-repeat: no-repeat;
   margin-left: 5px;
   border: 1px solid #ccc;
@@ -2990,6 +3012,13 @@ width:calc(100% + @half_base_spacer);
 .i-AR {
   background-position: -14px 0;
 }
+.i-AU {
+  background-position: -42px 0;
+}
+.i-br {
+  background-position: -84px 0;
+  /* (no) */
+}
 .i-NZ {
   background-position: -42px 0;
 }
@@ -3001,6 +3030,9 @@ width:calc(100% + @half_base_spacer);
 }
 .i-ZH {
   background-position: -336px 0;
+}
+.i-CH {
+  background-position: -126px 0;
 }
 .i-DE {
   background-position: -196px 0;
@@ -3020,7 +3052,7 @@ width:calc(100% + @half_base_spacer);
 .i-IT {
   background-position: -448px 0;
 }
-.i-JA {
+.i-JP {
   background-position: -462px 0;
 }
 .i-KP {

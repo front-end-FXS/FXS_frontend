@@ -1,0 +1,1954 @@
+/*
+DO NOT MODIFY THIS FILE. ADD ANY CUSTOMIZATIONS IN A SEPARATE FILE AS THIS FILE MAY BE OVERWRITTEN DURING UPDATE.
+*/
+
+.tt_chartContainer {
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	font: 11px Arial, Helvetica, sans-serif;
+	background-color: #eeeff3;
+	border:1px solid #d0d6e5;
+	padding:3px !important;
+	/*background: url(img/teletrader_logo.png) no-repeat right top #EEEFF3;
+	background-size: 10% 40px;*/
+}
+.tt_canvasContainer {
+    -ms-touch-action: none;
+}
+.tt_popupOverlay {
+	background: rgba(100,100,100,0.5);
+}
+.tt_popupOverlayInfo, .tt_popUp_nodata  {
+    background: rgba(0,0,0,0.5);
+    color: #FFFFFF;
+    font-family: Arial;
+    padding: 20px;
+    text-align: center;
+}
+.tt_popUp_nodata {
+	position: absolute;
+	left: 40%;
+	top: 30%;
+	font-size:18px;
+	padding:20px 40px;
+	font-weight: bold;
+}
+.tt_mainLineHighlighter {
+    /*stroke: black;
+    stroke-width: 2;*/
+    fill: #1B58A3;
+}
+.tt_dataInfo {
+	border-spacing: 0;
+	text-transform: capitalize;
+	color: #fff;
+	position: absolute;
+	left: 10px;
+	z-index:1000;
+}
+.tt_dataInfo_topLeft {
+	position:relative;
+	margin-left:5px;
+	clear:both;
+	top:0!important;
+	left:0!important;
+}
+.tt_dataInfo > tr > td {
+	padding: 2px 6px 2px 4px;
+	background-color: rgba(110,110,110,0.8);
+	border-bottom: 1px solid #fff;
+	font-size: 10px;
+	font-weight: bold;
+	width: 35px;
+	white-space:nowrap
+}
+.tt_dataInfo > tr:last-child > td {
+	border-bottom: none;
+}
+.tt_dataInfo > tr > td:last-child {
+	text-align: right;
+	width: 60px;
+}
+.tt_dataInfo > tr:first-child > td {
+	text-align: left;
+	padding-left: 7px;
+}
+.tt_dataInfo > tr:first-child > td:last-child {
+	text-align: right;
+}
+.tt_dataInfo > tr > td.tt_dataInfoHeader {
+	background-color: rgba(70,70,70,0.8);
+	text-align: left !important;
+	padding-left: 7px;
+}
+.tt_dataInfo > tr > td.tt_symbolColor {
+	padding: 0;
+	width: 3px;
+}
+.tt_zeroPointTool {
+    stroke: black;
+    stroke-width: 2px;
+}
+.tt_minLabel {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: red;
+	fill: red; /* used for printing */
+	line-height: 20px
+}
+.tt_maxLabel {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: green;
+	fill: green; /* used for printing */
+}
+.tt_crosshairVertical, .tt_crosshairHorizontal {
+    stroke: #999;
+}
+.tt_XcrossHairLabel {
+	background: url(img/crosshair-labels-gray.png) no-repeat center top;
+	color: white;
+	padding: 5px 6px 1px 6px;
+	margin-top: 1px;
+	font-weight: bold;
+}
+.tt_lastLabel, .tt_YcrossHairLabel {
+	color: white;
+	padding: 1px 4px;
+	font-weight: bold;
+ 	margin-left:3px;
+	background: rgba(0,75,165,0.6);
+	position: absolute;
+}
+.tt_lastLabel {
+	z-index:101	
+}
+
+.tt_YcrossHairLabel {
+	background: rgba(50,50,50,0.6);
+}
+.tt_lastLabel:before, .tt_YcrossHairLabel:before {
+   content:"";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-top: 3px solid transparent;
+   border-right: 4px solid rgba(0,75,165,0.6);
+   border-bottom: 3px solid transparent;
+   margin: 4px 0 0 -8px;
+}
+.tt_YcrossHairLabel:before {
+	border-right: 4px solid rgba(50,50,50,0.6);
+}
+
+/* cursors */
+
+.tt_cursorDefault {
+  cursor: default;
+}
+
+.tt_cursorScrolling {
+  cursor: url(img/cursor_closed_hand.png), auto;
+}
+
+.tt_cursorPanelResize {
+  cursor: s-resize;
+}
+
+.tt_cursorHistoryScroll {
+  cursor: url(img/cursor_closed_hand.png), auto;
+}
+
+.tt_cursorHistoryResize {
+  cursor: col-resize;
+}
+
+.tt_cursorXAxisZoomIn {
+  cursor: url(img/zoom-black.png), auto;
+}
+
+.tt_cursorDrawingToolAboutToCreate {
+  cursor: crosshair;
+}
+
+.tt_cursorDrawingToolHover {
+  cursor: move;
+}
+
+.tt_cursorControlPointHover {
+  cursor: crosshair;
+}
+
+.tt_cursorXAxisZoomInIE { 
+  cursor: url(img/zoom-in.cur), auto;
+}
+
+.tt_cursorScrollingIE {
+  cursor: url(img/cursor_closed_hand.cur), auto;
+}
+
+.tt_cursorHistoryScrollIE {
+  cursor: url(img/cursor_closed_hand.cur), auto;
+}
+
+/* end of cursors */
+
+.tt_drawingToolsDialog {
+	position: absolute;
+	top: 80px;
+}
+.tt_textDrawingTool {
+	min-height: 10px;
+	background: none;
+	border: none;
+	word-wrap: break-word;
+}
+.tt_textDrawingToolEditMode {
+    border: 1px solid black;
+    font-family: inherit;
+}
+/* toolbar settings START */
+.tt_topToolbar {
+	padding-bottom: 3px;
+	position: relative;
+	/*width: 90%*/
+}
+.tt_leftToolbar {
+	float: left;
+	padding-right: 3px;
+}
+/*clearfix*/
+.tt_topToolbar:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden; 
+}
+.tt_topToolbar > div, .tt_leftToolbar > div {
+	height: 35px;
+	line-height: 22px; /*IE seems to need this*/
+}
+.tt_topToolbar > div {
+	float: left;
+}
+.tt_topToolbar > div:not(.tt_spacer), .tt_leftToolbar > div:not(.tt_spacer) {
+	min-width: 35px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	-moz-box-shadow: inset 0 0 4px white;
+	-webkit-box-shadow: inset 0 0 4px white;
+	box-shadow: inset 0 0 4px white;
+	border:1px solid #d0d6e5;
+	background-image:url(img/Toolbar_gray_sprite_new.png);
+}
+.tt_topToolbar > div:not(.tt_spacer) {
+	border-left:none
+}
+.tt_leftToolbar > div:not(.tt_spacer) {
+	border-top:none
+}
+.tt_leftToolbar > div:not(.tt_spacer):first-child {
+	border-top:1px solid #d0d6e5;
+}
+.tt_topToolbar > div:not(.tt_spacer):first-child {
+	border-left:1px solid #d0d6e5;
+}
+.tt_topToolbar > div:hover:not(.tt_spacer):not(.tt_disabled), .tt_leftToolbar > div:hover:not(.tt_spacer), .tt_topToolbar > .tt_dropDown > div > ul > li:hover, .tt_dropDown > div > ul > li:hover, .tt_topToolbar > .tt_dropDown > div > ul > li > ul > li:hover {
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	-moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+	box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+}
+.tt_mobile .tt_topToolbar > div:hover:not(.tt_spacer):not(.tt_disabled), .tt_mobile .tt_leftToolbar > div:hover:not(.tt_spacer) {
+	background-color: transparent;
+	color:#666;
+	-moz-box-shadow: inset 0 0 4px white;
+	-webkit-box-shadow: inset 0 0 4px white;
+	box-shadow: inset 0 0 4px white;
+	background-image:url(img/Toolbar_gray_sprite_new.png)
+}
+.tt_topToolbar > .tt_dropDown > div > ul > li:hover, .tt_topToolbar > .tt_dropDown > div > ul > li > ul > li:hover, .tt_leftToolbar > .tt_dropDown > div > ul > li:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+.tt_topToolbar > .tt_dropDown, .tt_topToolbar > div.tt_dropDown > div > ul > li {
+	padding: 6px 30px 6px 8px;
+	white-space: nowrap;
+	height: 23px;
+   	color: #fff;
+}
+.tt_topToolbar > .tt_dropDown > div > ul, .tt_leftToolbar > div.tt_merge > div > ul, .tt_topToolbar > div.tt_addIndicator > div, .tt_topToolbar > div.tt_addCompare > div, .tt_topToolbar > div.tt_symbols > div, .tt_topToolbar > div.tt_period > div > ul > li > ul, .tt_topToolbar > div.tt_dateRange> div > ul > li > ul, .tt_topToolbar > div.tt_numOfRecords > div {
+	position: absolute;
+	z-index: 1002;
+	list-style: none;
+	padding: 0;
+	margin: 7px 0 0 -8px;
+	background-color: rgba(90,90,90,0.9);
+	border:1px solid rgba(0,0,0,0.2)
+}
+.tt_leftToolbar > div.tt_merge > div > ul {
+	margin: 0 0 0 35px
+}
+.tt_topToolbar > .tt_dropDown > div > ul {
+	max-height:308px
+}
+.tt_topToolbar > .tt_numOfRecords > div > ul, .tt_topToolbar > .tt_addCompare > div > ul, .tt_topToolbar > .tt_symbols > div > ul, .tt_topToolbar > .tt_addIndicator > div > ul {
+	overflow:auto
+}
+.tt_topToolbar > .tt_dropDown:not(.tt_merge) > div , .tt_topToolbar > .tt_dropDown.tt_merge > div > ul , .tt_leftToolbar > .tt_dropDown.tt_merge > div > ul, .tt_topToolbar > div.tt_addIndicator > div, .tt_topToolbar > div.tt_period > div > ul > li > ul {
+    display: none;
+}
+.tt_topToolbar > .tt_chartType {
+	background-repeat: no-repeat;
+}
+.tt_topToolbar > .tt_chartType > span {
+	float: right;
+}
+.tt_topToolbar > .tt_chartType > div > ul, .tt_topToolbar > .tt_merge > div > ul {
+	margin-top: 29px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li, .tt_topToolbar > .tt_merge > div > ul > li, .tt_leftToolbar > .tt_merge > div > ul > li, .tt_topToolbar > div.tt_period > div > ul > li > ul > li , .tt_topToolbar > div.tt_dateRange > div > ul > li > ul > li {
+	width: 22px;
+	background-image: url(img/Toolbar_white_sprite_new.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align:center
+}
+.tt_topToolbar > .tt_chartType > div > ul {
+	width:235px;
+}
+.tt_topToolbar > .tt_chartType > div > ul, .tt_topToolbar > div.tt_period > div > ul > li > ul,
+.tt_topToolbar > div.tt_dateRange > div > ul > li > ul, .tt_topToolbar > div.tt_merge > div > ul, 
+.tt_leftToolbar > div.tt_merge > div > ul {
+	border-right:none;
+	border-bottom:none
+}
+.tt_topToolbar > div.tt_chartType > div > ul > li, .tt_topToolbar > div.tt_period > div > ul > li > ul > li,
+.tt_topToolbar > div.tt_dateRange > div > ul > li > ul > li, .tt_topToolbar > div.tt_merge > div > ul > li, 
+.tt_leftToolbar > div.tt_merge > div > ul > li {
+	border-bottom:1px solid rgba(0,0,0,0.3);
+	border-right:1px solid rgba(0,0,0,0.3);
+	float:left;
+	padding:9px 12px
+}
+.tt_topToolbar > div.tt_mouseDragMode {
+	background-image: url(img/HandDrag_on.png);
+}
+.tt_topToolbar > .tt_mouseDragMode[data-checked=on] {
+	background-image: url(img/HandDrag_off.png);
+}
+.tt_topToolbar > .tt_dropDown[data-checked=on] {
+	 background-color: rgba(130, 130, 130, 0.9);
+}
+.tt_topToolbar > .tt_addIndicator > span {
+	margin-left: 26px;
+}
+.tt_topToolbar > div.tt_dropDown {
+    background-position: right -23px;
+    min-width: 20px;
+    padding-right: 20px;
+	color: #666;
+}
+.tt_topToolbar > div:hover:not(.tt_spacer):not(.tt_disabled), .tt_leftToolbar > div:hover:not(.tt_spacer) {
+	background-image: url(img/Toolbar_white_sprite_new.png);
+}
+.tt_topToolbar > div.tt_chartType, .tt_topToolbar > div.tt_addIndicator, .tt_topToolbar > div.tt_merge, .tt_leftToolbar > div.tt_merge, .tt_mobile .tt_topToolbar > div.tt_chartType:hover, .tt_mobile .tt_topToolbar > div.tt_addIndicator:hover, .tt_mobile .tt_topToolbar > div.tt_merge:hover, .tt_mobile .tt_leftToolbar > div.tt_merge:hover {
+	background-image: url(img/Toolbar_gray_sprite_new.png), url(img/Toolbar_gray_sprite_new.png);
+}
+.tt_topToolbar > div.tt_chartType:hover, .tt_topToolbar > div.tt_addIndicator:hover, .tt_topToolbar > div.tt_merge:hover, .tt_leftToolbar > div.tt_merge:hover  {
+	background-image: url(img/Toolbar_white_sprite_new.png), url(img/Toolbar_white_sprite_new.png)!important;
+}
+.tt_mobile .tt_topToolbar > div.tt_chartType:hover, .tt_mobile .tt_topToolbar > div.tt_addIndicator:hover, .tt_mobile .tt_topToolbar > div.tt_merge:hover, .tt_mobile .tt_leftToolbar > div.tt_merge:hover  {
+	background-image: url(img/Toolbar_gray_sprite_new.png), url(img/Toolbar_gray_sprite_new.png)!important;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=line] {
+	background-position: center -293px
+}
+.tt_topToolbar > .tt_chartType[data-value=line] {
+	background-position: 8px -293px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=candle] {
+	background-position: center -83px
+}
+.tt_topToolbar > .tt_chartType[data-value=candle] {
+	background-position: 8px -83px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value='ohlc'] {
+	background-position: center -263px
+}
+.tt_topToolbar > .tt_chartType[data-value='ohlc'] {
+	background-position: 8px -263px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value='hlc'] {
+	background-position: center -233px
+}
+.tt_topToolbar > .tt_chartType[data-value='hlc'] {
+	background-position: 8px -233px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=mountain] {
+	background-position: center -323px
+}
+.tt_topToolbar > .tt_chartType[data-value=mountain] {
+	background-position: 8px -323px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=area] {
+	background-position: center -53px
+}
+.tt_topToolbar > .tt_chartType[data-value=area] {
+	background-position: 8px -53px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=column] {
+	background-position: center -113px
+}
+.tt_topToolbar > .tt_chartType[data-value=column] {
+	background-position: 8px -113px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=stepstair] {
+	background-position: center -383px
+}
+.tt_topToolbar > .tt_chartType[data-value=stepstair] {
+	background-position: 8px -383px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=point] {
+	background-position: center -353px
+}
+.tt_topToolbar > .tt_chartType[data-value=point] {
+	background-position: 8px -353px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=equivolume] {
+	background-position: center -173px
+}
+.tt_topToolbar > .tt_chartType[data-value=equivolume] {
+	background-position: 8px -173px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=heikinashi] {
+	background-position: center -203px
+}
+.tt_topToolbar > .tt_chartType[data-value=heikinashi] {
+	background-position: 8px -203px, right -23px;
+}
+.tt_topToolbar > .tt_chartType > div > ul > li[data-value=pointandfigure] {
+	background-position: center -1585px;
+	border-bottom:none
+}
+.tt_topToolbar > .tt_chartType[data-value=pointandfigure] {
+	background-position: 8px -1585px, right -23px;
+}
+.tt_topToolbar > div.tt_relativeScale, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=relativeScale] {
+	background-position: center -1163px
+}
+.tt_topToolbar > .tt_dropDown[data-value=relativeScale] {
+	background-position: 8px -1163px, right -23px;
+}
+.tt_topToolbar > div.tt_logarithmicScale, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=logarithmicScale] {
+	background-position: center -1133px
+}
+.tt_topToolbar > .tt_dropDown[data-value=logarithmicScale] {
+	background-position: 8px -1133px, right -23px;
+}
+.tt_topToolbar > div.tt_showVolume, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=volume] {
+	background-position: center -1463px
+}
+.tt_topToolbar > .tt_dropDown[data-value=volume] {
+	background-position: 8px -1463px, right -23px;
+}
+.tt_topToolbar > div.tt_showMinMax, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=showMinMax] {
+	background-position: center -1343px
+}
+.tt_topToolbar > .tt_dropDown[data-value=showMinMax] {
+	background-position: 8px -1343px, right -23px;
+}
+.tt_topToolbar > div.tt_showHistory, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=history] {
+	background-position: center -1403px
+}
+.tt_topToolbar > .tt_dropDown[data-value=history] {
+	background-position: 8px -1403px, right -23px;
+}
+.tt_topToolbar > div.tt_showDataInfo, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=dataInfo] {
+	background-position: center -1313px
+}
+.tt_topToolbar > .tt_dropDown[data-value=dataInfo] {
+	background-position: 8px -1313px, right -23px;
+}
+.tt_topToolbar > div.tt_showLastValue, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=last] {
+	background-position: center -1433px
+}
+.tt_topToolbar > .tt_dropDown[data-value=last] {
+	background-position: 8px -1433px, right -23px;
+}
+.tt_topToolbar > div.tt_showCrosshair, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=crosshair] {
+	background-position: center -1283px
+}
+.tt_topToolbar > .tt_dropDown[data-value=crosshair] {
+	background-position: 8px -1283px, right -23px;
+}
+.tt_topToolbar > div.tt_showCrosshairLast, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=crosshairlast] {
+	background-position: center -413px
+}
+.tt_topToolbar > .tt_dropDown[data-value=crosshairlast] {
+	background-position: 8px -413px, right -23px;
+}
+.tt_topToolbar > div.tt_showGrid, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=grid] {
+	background-position: center -1373px
+}
+.tt_topToolbar > .tt_dropDown[data-value=grid] {
+	background-position: 8px -1373px, right -23px;
+}
+.tt_topToolbar > div.tt_print, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=print] {
+	background-position: center -1223px
+}
+.tt_topToolbar > .tt_dropDown[data-value=print] {
+	background-position: 8px -1223px, right -23px;
+}
+.tt_topToolbar > div.tt_popup, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=popup] {
+	background-position: center -1193px
+}
+.tt_topToolbar > div.tt_zeroPointTool, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=zeroPointTool] {
+	background-position: center -1614px
+}
+.tt_topToolbar > .tt_dropDown[data-value=popup] {
+	background-position: 8px -1193px, right -23px;
+}
+.tt_topToolbar > div.tt_popin, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=popin] {
+	background-position: center -1193px
+}
+.tt_topToolbar > .tt_dropDown[data-value=popin] {
+	background-position: 8px -1193px, right -23px;
+}
+.tt_topToolbar > div.tt_exportPNG, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=exportPng] {
+	background-position: center -1043px
+}
+.tt_topToolbar > .tt_dropDown[data-value=exportPng] {
+	background-position: 8px -1043px, right -23px;
+}
+.tt_topToolbar > div.tt_reload, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=reload] {
+	background-position: center -1253px
+}
+.tt_topToolbar > .tt_dropDown[data-value=reload] {
+	background-position: 8px -1253px, right -23px;
+}
+.tt_topToolbar > div.tt_zoomOut, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=zoomOut] {
+	background-position: center -1523px
+}
+.tt_topToolbar > .tt_dropDown[data-value=zoomOut] {
+	background-position: 8px -1523px, right -23px;
+}
+.tt_topToolbar > div.tt_zoomIn, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=zoomIn] {
+	background-position: center -1553px
+}
+.tt_topToolbar > .tt_dropDown[data-value=zoomIn] {
+	background-position: 8px -1553px, right -23px;
+}
+.tt_topToolbar > div.tt_fullscreen, .tt_topToolbar > .tt_dropDown > div > ul > li[data-value=fullscreen] {
+	background-position: center -1103px
+}
+.tt_topToolbar > .tt_dropDown[data-value=fullscreen] {
+	background-position: 8px -1103px, right -23px;	
+}
+.tt_topToolbar > div[data-checked=on], .tt_leftToolbar > div[data-checked=on], .tt_topToolbar > .tt_merge[data-checked=on], .tt_leftToolbar > .tt_merge[data-checked=on], .tt_mobile .tt_topToolbar > div[data-checked=on]:hover:not(.tt_disabled), .tt_mobile .tt_leftToolbar > div[data-checked=on]:hover, .tt_mobile .tt_topToolbar > .tt_merge[data-checked=on]:hover, .tt_mobile .tt_leftToolbar > .tt_merge[data-checked=on]:hover {
+	background-color: rgba(150,150,150,0.1);
+	-moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+	border-color:rgba(0,0,0,0.1);
+}
+.tt_topToolbar div.tt_disabled {
+    cursor: default;
+	opacity:0.7
+}
+.tt_leftToolbar > .tt_merge[data-checked=on] {
+	border-color:#D0D6E5	
+}
+.tt_topToolbar > div.tt_addIndicator {
+	background-position: 8px 8px, right -23px;
+}
+.tt_topToolbar > div.tt_dropDown > div > ul > li {
+	height:16px;
+	line-height:16px;
+	position:relative
+}
+.tt_topToolbar > div.tt_merge > div > ul > li {
+	opacity: 0.4;
+}
+.tt_leftToolbar > div.tt_merge > div > ul > li {
+	height:15px;
+	width:15px;
+}
+.tt_topToolbar > .tt_merge > div > ul > li[data-checked=on] {
+	opacity: 1;
+}
+.tt_topToolbar > .tt_dropDown > div > ul > li[data-value="fullscreen"][data-checked="on"] {
+	opacity:0.4	
+}
+.tt_topToolbar > .tt_dropDown > div > ul > li[data-value="fullscreen"][data-checked="on"]:hover {
+	opacity:1	
+}
+.tt_topToolbar > .tt_merge > div > ul > li[data-checked=on]:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+.tt_topToolbar > div.tt_period > div > ul > li.tt_dropDown_submenu, .tt_topToolbar > div.tt_dateRange > div > ul > li.tt_dropDown_submenu {
+	background:url(img/Icons_sprite.png) no-repeat right -6px;
+}
+.tt_topToolbar > div.tt_period > div > ul > li.tt_dropDown_submenu:hover, .tt_topToolbar > div.tt_dateRange > div > ul > li.tt_dropDown_submenu:hover {
+	background-color:rgba(0, 0, 0, 0.3)
+}
+.tt_topToolbar > div.tt_period > div > ul > li, .tt_topToolbar > div.tt_dateRange > div > ul > li {
+	width:55px	
+}
+.tt_topToolbar > div.tt_period > div > ul > li > ul, .tt_topToolbar > div.tt_dateRange > div > ul > li > ul {
+	left:93px;
+	top:-1px;
+	margin:0;
+	width:234px
+}
+.tt_topToolbar > div.tt_period > div > ul > li > ul > li, .tt_topToolbar > div.tt_dateRange > div > ul > li > ul > li {
+	padding:6px 8px;
+	background:none;
+	overflow:hidden
+}
+.tt_leftToolbar > div.tt_tool_hand {
+	background-position: center -923px
+}
+.tt_leftToolbar > div.tt_tool_line, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_line] {
+	background-position: center -773px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_line] {
+	background-position: center -773px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_horizontalLine, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_horizLine] {
+	background-position: center -743px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_horizLine] {
+	background-position: center -743px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_trendChannel, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_trendChannel] {
+	background-position: center -803px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_trendChannel] {
+	background-position: center -803px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_rectangle, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_rectangle] {
+	background-position: center -833px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_rectangle] {
+	background-position: center -833px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_ellipse, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_circle] {
+	background-position: center -533px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_circle] {
+	background-position: center -533px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_fibonacciFan, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_fibFan] {
+	background-position: center -623px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_fibFan] {
+	background-position: center -623px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_fibonacciVerticalRetracements, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_fibVertRet] {
+	background-position: center -683px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_fibVertRet] {
+	background-position: center -683px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_fibonacciRetracements, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_fibRet] {
+	background-position: center -653px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_fibRet] {
+	background-position: center -653px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_fibonacciArc, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_fibArc] {
+	background-position: center -593px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_fibArc] {
+	background-position: center -593px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_regressionLine, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_regresionLine],
+.tt_leftToolbar > div.tt_tool_regressionLine, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_regressionLine]  {
+	background-position: center -893px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_regresionLine],
+.tt_leftToolbar > .tt_dropDown[data-value=dt_regressionLine] {
+	background-position: center -893px, right -1655px;
+}
+.tt_leftToolbar > .tt_tool_regressionChannel, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_regresionChannel],
+.tt_leftToolbar > .tt_tool_regressionChannel, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_regressionChannel]  {
+	background-position: center -863px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_regresionChannel],
+.tt_leftToolbar > .tt_dropDown[data-value=dt_regressionChannel] {
+	background-position: center -863px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_andrewsPitchfork, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_andrewsPitch] {
+	background-position: center -443px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_andrewsPitch] {
+	background-position: center -443px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_arrowUp, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_arrow_up] {
+	background-position: center -503px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_arrow_up] {
+	background-position: center -503px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_arrowDown, .tt_leftToolbar > .tt_dropDown > div > ul > li[data-value=dt_arrow_down] {
+	background-position: center -473px
+}
+.tt_leftToolbar > .tt_dropDown[data-value=dt_arrow_down] {
+	background-position: center -473px, right -1655px;
+}
+.tt_leftToolbar > div.tt_tool_addText {
+	background-position: center -983px
+}
+.tt_leftToolbar > div.tt_tool_delete {
+	background-position: center -563px
+}
+.tt_leftToolbar > div.tt_tool_drawRepeatedly {
+	background-position: center -1013px
+}
+/* toolbar settings END */
+
+.tt_disclaimer {
+	clear: both;
+	color: #666666;
+	font-size: 10px;
+	padding-top: 10px;
+	padding-right: 60px;
+}
+/* panel and symbol title settings START */
+.tt_panelDiv, .tt_historyDiv {
+	border:1px solid #d0d6e5 !important
+}
+.tt_panelDiv
+{
+	overflow: hidden;
+	padding-top:5px !important
+}
+.tt_symbolTitle {
+	color: #fff;
+	position: relative;
+	/*width:5%;*/
+	overflow:visible;
+	white-space:nowrap;
+	margin:0 5px 5px 5px;
+	float:left;
+	clear:both
+}
+.tt_symbolTitle > div {
+	display: inline-block;
+	padding: 0px 7px;
+	background-color: rgba(0,0,0,0.6);
+	cursor: pointer;
+	line-height: 22px;
+	height:22px;
+	width:22px;
+	float:left
+}
+.tt_symbolTitle > div:first-child {
+	text-transform: capitalize;
+	width:auto!important
+}
+.tt_symbolTitle > div:nth-child(2), .tt_symbolTitle > div:nth-of-type(2n) {
+	visibility: hidden;
+	margin-left: 1px;
+	padding: 0!important;
+	background: url(img/Icons_sprite.png) no-repeat center -90px rgba(0,0,0,0.6); 
+}
+.tt_mobile .tt_symbolTitle > div:nth-child(2), .tt_mobile .tt_symbolTitle > div:nth-of-type(2n){
+	visibility:visible;
+}
+.tt_symbolTitle:hover > div:nth-child(2), .tt_symbolTitle:hover > div:nth-of-type(2n) {
+	visibility: visible;
+}
+.tt_symbolTitle > div.tt_symbol_reload {
+	background: url(img/Icons_sprite.png) no-repeat center -169px rgba(0,0,0,0.6); 
+	visibility: visible;
+}
+.tt_symbolTitle:hover > div.tt_symbol_reload {
+	background-color: rgba(0,0,0,0.8);
+}
+.tt_symbolTitle > div.tt_symbol_reload_PushOff {
+	background-image: url(img/reload.png), url(img/pushOff.png);
+}
+.tt_symbolTitle > div.tt_symbol_reload_PushOn {
+	background-image: url(img/reload.png), url(img/pushOn.gif);
+}
+.tt_symbolTitle:hover > div {
+	background-color: rgba(0,0,0,0.8); 
+}
+.tt_symbolTitle > div > span.tt_symbolColor {
+	margin-right: 6px;
+	margin-left: -7px;
+	width: 3px;
+	height: 100%;
+	display: inline-block;
+}
+.tt_symbolTitle > .tt_infoHeader {
+    margin-left: 1px;
+    cursor: default!important;
+	/*display:none*/
+	width:auto;
+	background:transparent;
+	padding:0
+}
+.tt_infoHeader > span {
+    padding-right: 10px;
+	background-color: rgba(0,0,0,0.6); 
+	height:100%;
+	display:inline-block
+}
+.tt_infoHeader > span:first-child {
+	padding-left:10px	
+}
+.tt_symbolTitle:hover > .tt_infoHeader {
+	background-color: rgba(0,0,0,0.4); 
+}
+/* Pop-up START */
+.tt_popUp {
+	background-color: rgba(85,85,85,0.9);
+	color: white;
+	position: absolute;
+	left: 120px;
+    z-index: 1000;
+	padding: 0;
+	width:203px;
+	font: 11px Arial,Helvetica,sans-serif;
+}
+.tt_popUp > div, .tt_popUp > div > div, .tt_popUp > div > div > div {
+	clear: both;
+	text-align: center;
+}
+.tt_popUp > h1 {
+	padding: 4px 10px 3px 14px;
+	height: 14px;
+	font-size: 11px;
+	margin: 0;
+	border-bottom: 1px solid white;
+	overflow: hidden;
+	line-height: 14px;
+	background:url(img/Icons_sprite.png) no-repeat -11px -250px transparent;
+	cursor:move;
+	white-space: nowrap;
+	width:156px
+}
+.tt_drawingToolsDialog > h1 {
+	width:133px	
+}
+.tt_popUp .tt_chartTypes > ul {
+	padding: 0;
+	margin: 0;
+}
+.tt_popUp .tt_chartTypes > ul > li {
+	list-style: none;
+	width: 50px;
+	height: 40px;
+	border: 1px solid white;
+	margin: 0;
+	float: left;
+	border-left: none;
+	border-top: none;
+	cursor: pointer;
+	padding: 0;
+	background: url(img/ChartTypes_sprite.png) no-repeat;
+}
+.tt_popUp .tt_chartTypes > ul > li:nth-child(4) {
+	border-right: none;
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='ohlc'] {
+	background-position: center -359px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='hlc'] {
+	background-position: center -239px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='candle'] {
+	background-position: center -79px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='line'] {
+	background-position: center -280px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='mountain'] {
+	background-position: center -319px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='area'] {
+	background-position: center 0px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='column'] {
+	background-position: center -39px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='dash'] {
+	background-position: center -119px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='heikinashi'] {
+	background-position: center -199px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='equivolume'] {
+	background-position: center -159px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='stepstair'] {
+	background-position: center -399px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='point'] {
+	background-position: center -440px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='marker'] {
+	background-position: center -481px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='bar'] {
+	background-position: center -521px
+}
+.tt_popUp .tt_chartTypes > ul > li[data-value='pointandfigure'] {
+	background-position: center -561px
+}
+.tt_popUp .tt_chartTypes > ul > li:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.tt_popUp .tt_chartTypes > ul > li.tt_selected, .tt_popUp .tt_chartTypes > ul > li.tt_selected:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.tt_popUp .tt_setColor {
+	display: inline-block;
+}
+.tt_popUp .tt_setColor > input, .tt_popUp .tt_chartTypes > input {
+	padding: 0;
+	float: none;
+	text-indent: -100px;
+	cursor: pointer;
+	background-image: none;
+	margin: 10px;
+	width: 35px;
+	height: 35px;
+	border: none;
+	font-size: 0;
+}
+.tt_popUp > .tt_parameters > input[type="radio"] {
+	height: auto;
+}
+#tradingForm .tt_parameters > label {
+	width:50px;
+	text-align:left;
+}
+#tradingForm .tt_parameters > input[type="text"] {
+	width:60px;
+	margin: 5px 0 5px 10px;
+}
+#tradingForm > input[type="button"] {
+	background:rgba(50, 50, 50, 0.7);
+	border:none;
+	color:#fff;
+	padding:4px 5px;
+	margin:10px 0 10px 10px;
+	cursor:pointer;
+	width:84px
+}
+#tradingForm > input[type="button"]:hover {
+	background:rgba(50, 50, 50, 0.9);
+}
+#tradingForm .tt_parameters {
+	padding:10px
+}
+.tt_popUp .tt_setColor > input {
+	background-image: url(img/Toolbar_white_sprite_new.png)!important;
+	background-repeat: no-repeat;
+	background-position: right -1655px;
+}
+.tt_popUp .tt_chartTypes > input {
+	width: 30px;
+	height: 28px;
+	margin: -8px 5px 5px;
+}
+.tt_popUp .tt_setColor > input:hover {
+	opacity: 0.9;
+}
+.tt_popUp .tt_setColor > div {
+	margin: -8px 0 6px;
+}
+.tt_popUp .tt_tabs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+.tt_popUp .tt_tabs > li {
+	float: left;
+	font-weight: bold;
+	color: #fff;
+	line-height: 28px;
+	text-align: center;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	width: 101px;
+}
+.tt_popUp .tt_tabs > li:first-child {
+	border-right: 1px solid white;
+}
+.tt_popUp .tt_tabs > li.tt_selected, .tt_popUp .tt_tabs > li.tt_selected:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.tt_popUp .tt_tabs > li:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.tt_popUp .tt_chartTypes > div {
+	border-bottom: 1px solid white;
+	line-height: 22px;
+}
+.tt_popUp .tt_parameters {
+	padding: 10px 50px 0 10px;
+	position: relative;
+}
+.tt_popUp .tt_parameters:last-child {
+	padding-bottom: 10px;
+}
+.tt_popUp .tt_parameters > input {
+	border: none;
+	font-size: 11px;
+	margin: 0 0 0 10px;
+	width: 28px;
+	height: 26px;
+	padding: 0 5px;
+}
+.tt_popUp .tt_parameters > input.tt_on_off {
+	background:transparent;
+	border:1px solid #fff;
+	width:38px;
+	color:#fff;
+	text-transform:uppercase;
+	text-align:center;
+	padding: 5px 0px;
+	height:auto;
+	cursor:pointer
+}
+.tt_popUp .tt_parameters > input.tt_on {
+	background:rgba(0,0,0,0.4);
+}
+.tt_popUp .tt_parameters > input.tt_on_off:hover {
+	background:rgba(0,0,0,0.2);
+}
+.tt_popUp .tt_parameters > input.tt_on_off:focus {
+    outline: 0;
+}
+.tt_popUp .tt_parameters > label {
+	/*line-height: 28px;*/
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+}
+.tt_popUp .tt_parameterContainer > p {
+    padding: 20px;
+    margin: 0;
+	text-align: center;
+}
+.tt_popUp .tt_validator {
+	color: red;
+	font-size: 16px;
+	float: right;
+	font-weight: bold;
+	position: absolute;
+	right: 45px;
+	top: 15px;
+}
+.tt_popUp .tt_close, .tt_popUp .tt_ok, .tt_popUp .tt_remove {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	width: 22px;
+	height: 21px;
+	background: url(img/Icons_sprite.png) no-repeat;
+	margin: 0;
+	border-left: 1px solid white;
+	text-indent: -100px;
+	overflow: hidden;
+	border-bottom:1px solid #fff
+}
+.tt_popUp .tt_close {
+	background-position: center -90px
+}
+.tt_popUp .tt_ok {
+	background: url(img/Icons_sprite.png) no-repeat center -129px;
+	right: 23px;
+}
+.tt_popUp .tt_close:hover, .tt_popUp .tt_ok:hover, .tt_popUp .tt_remove:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.tt_popUp .tt_remove {
+	right:23px;
+	background: url(img/Icons_sprite.png) no-repeat center -289px;
+}
+.tt_popUp span.tt_down, .tt_popUp span.tt_up {
+	background: url(img/Icons_sprite.png) no-repeat center -449px;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 0;
+	top: 52px;
+	cursor: pointer;
+	border-left: 1px solid white;
+}
+.tt_popUp span.tt_down:hover, .tt_popUp span.tt_up:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.tt_popUp span.tt_up {
+	background: url(img/Icons_sprite.png) no-repeat center -410px;
+	right: 23px;
+}
+.tt_popUp span.tt_inactive {
+	opacity: 0.5;
+}
+.tt_popUp .tt_plotTypes > span, .tt_popUp .tt_barColorBase > span {
+	display: inline-block;
+	line-height: 22px;
+	width: 67px;
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	cursor: pointer;
+}
+.tt_popUp .tt_plotTypes > span:hover, .tt_popUp .tt_barColorBase > span:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+.tt_popUp .tt_plotTypes > span.tt_selected, .tt_popUp .tt_barColorBase > span.tt_selected {
+	background: rgba(0, 0, 0, 0.4);
+}
+.tt_popUp .tt_plotTypes > span:last-child, .tt_popUp .tt_barColorBase > span:last-child {
+	border-right: none;
+}
+.tt_popUp .tt_dialogGroup, .tt_popUp .tt_dialogGroup_width, .tt_popUp .tt_dialogGroup_lineStyle {
+	margin: 10px;
+}
+.tt_popUp .tt_barColorBase > span {
+    padding: 0 5px;
+	white-space:nowrap;
+	display:table-cell;
+	width:91px
+}
+.tt_dialogGroup_lineWidth {
+	display: inline-block;
+	/*float: right;*/
+	margin: 10px 10px 0 5px;
+	vertical-align:top
+}
+.tt_dialog_lineUnbounded, .tt_popUp .tt_dialog_InlineGroup {
+	display: inline-block;
+}
+.tt_popUp .tt_dialog_width, .tt_popUp .tt_dialog_lineWidth {
+	background: url(img/DrawingTools_sprite.png) no-repeat center -82px;
+	width: 34px;
+	height: 34px;
+	display: inline-block;
+	margin: 0 4px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.tt_popUp .tt_dialog_width:nth-child(2), .tt_popUp .tt_dialog_lineWidth:nth-child(2) {
+	background-position: center -122px;
+}
+.tt_popUp .tt_dialog_width:nth-child(3), .tt_popUp .tt_dialog_lineWidth:nth-child(3) {
+	background-position: center -162px;
+}
+.tt_popUp .tt_dialogGroup_lineWidth > .tt_selected, .tt_popUp .tt_dialogGroup_width > .tt_selected, .tt_popUp .tt_dialogGroup_lineWidth > .tt_selected:hover, .tt_popUp .tt_dialogGroup_width > .tt_selected:hover {
+	opacity: 1;
+}
+.tt_popUp .tt_dialog_width:hover, .tt_popUp .tt_dialog_lineWidth:hover {
+	opacity: 0.7;
+}
+.tt_popUp .tt_dialog_lineStyle {
+	background: url(img/DrawingTools_sprite.png) no-repeat center -6px;
+	width: 28px;
+	height: 28px;
+	display: inline-block;
+	margin: 0 4px;
+	cursor: pointer;
+	opacity: 0.5;
+}
+.tt_popUp .tt_dialog_lineStyle:nth-child(2) {
+	background-position: center -46px;
+}
+.tt_popUp .tt_dialog_lineStyle:hover, .tt_popUp .tt_dialogGroup_lineStyle > .tt_selected {
+	opacity: 1;
+}
+.tt_dialog_lineUnbounded > div {
+	height: 34px;
+	width: 34px;
+	display: inline-block;
+	margin: 0 4px;
+	opacity: 1;
+}
+.tt_dialog_lineUnbounded > div[data-value='1'] {
+	background: url(img/DrawingTools_sprite.png) no-repeat center -200px;
+	cursor: pointer;
+}
+.tt_dialog_lineUnbounded > div[data-value='2'] {
+	background: url(img/DrawingTools_sprite.png) no-repeat center -240px;
+	cursor: pointer;
+}
+.tt_dialog_lineUnbounded > div[data-checked='true']{
+	opacity: 0.5;
+}
+.tt_dialog_lineUnbounded > div:hover {
+	opacity: 1;
+}
+.tt_dialog_lineUnbounded > .tt_dialog_groupName {
+	display: block;
+	width: 100%!important;
+	margin: 0!important;
+	height: auto!important;
+	opacity: 1;
+}
+.tt_font-weight, .tt_font-style, .tt_text-decoration, .tt_font-size {
+	height: 34px;
+	width: 34px;
+	display: inline-block;
+	margin: 0 4px;
+	cursor: pointer;
+	background: url(img/DrawingTools_sprite.png) no-repeat center -283px;
+	color:transparent;
+	opacity: 0.5;
+}
+.tt_font-style {
+	background-position: center -323px;
+}
+.tt_text-decoration {
+	background-position: center -363px;
+}
+.tt_font-weight[data-checked='on'], .tt_font-style[data-checked='on'], .tt_text-decoration[data-checked='on'], .tt_font-weight:hover, .tt_font-style:hover, .tt_text-decoration:hover, .tt_font-size:hover {
+	opacity: 1;
+}
+.tt_font-size {
+	background-position: center -403px;
+}
+.tt_font-size[data-value='1'] {
+	background-position: center -445px;
+}
+.tt_textInput {
+	margin:10px;
+	width:120px;
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif
+}
+.tt_colorPicker {
+	background-color: rgba(50,50,50,0.9);
+	height: 155px;
+}
+.tt_colorPickerSet {
+	padding: 10px;
+	display: inline-block;
+	height:105px
+}
+.tt_colorPicker > div > div { 
+	height:125px
+}
+.tt_colorPickerSet td {
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	padding: 0;
+}
+.tt_colorPickerSet td.tt_selected {
+	border: 2px solid rgba(255, 255, 255, 0.7);
+	width: 26px;
+	height: 26px;
+}
+.tt_colorPickerButton {
+	padding:0!important;
+	height:22px!important;
+	background-color: #222;
+	margin:10px;
+	display:inline-block!important;
+	position:relative!important;
+	left:0!important;
+	font-size:0
+}
+.tt_colorPickerButton:nth-child(2) {
+	margin-right:0;
+	float:left
+}
+.tt_colorPickerButton > span {
+	color: white;
+	line-height: 22px;
+	font-size: 11px;
+	display: inline-block;
+	width:22px;
+	height:22px;
+	overflow:hidden
+}
+.tt_colorPickerButton > span {
+	background: url(img/Icons_sprite.png) no-repeat center -50px;
+	text-indent:-200px;
+}
+.tt_colorPickerButton:nth-child(2) > span {
+	background: url(img/Icons_sprite.png) no-repeat center -129px;
+}
+.tt_colorPickerButton:last-child > span {
+	background-image:none;
+	text-indent:0;
+	width:auto
+}
+.tt_colorPickerButton:last-child {
+	background: url(img/Icons_sprite.png) no-repeat -5px -10px #222;
+	padding: 0 12px 0 20px!important;
+	float:right;
+}
+
+/* END of Pop-up */
+.tt_historyDiv {
+	padding: 5px;
+}
+.tt_historyDateLabel, .tt_historyTimeLabel, .tt_historyClose, .tt_history_selectAll {
+	padding: 3px 7px;
+	background-color: rgba(0,0,0,0.6);
+	color: white;
+	margin-left: 1px;
+	margin-top: 1px;
+	white-space: nowrap;
+	z-index: 1;
+	float: left;
+	cursor: pointer;
+}
+.tt_historyTimeLabel {
+	margin-left: 0;
+    padding-left: 3px;
+}
+.tt_historyDateLabel.tt_intraday {
+    padding-right: 3px;
+}
+.tt_historyDateLabel:hover, .tt_historyTimeLabel:hover, .tt_historyClose:hover, .tt_history_selectAll:hover, .tt_historyDiv > .tt_selected {
+	background-color: rgba(0,0,0,0.8);
+}
+.tt_historyClose, .tt_history_selectAll {
+	margin-left: 1px;
+	background: url(img/Icons_sprite.png) no-repeat rgba(0,0,0,0.6);
+	color: transparent;
+}
+.tt_historyClose {
+	background-position:center -91px 
+}
+.tt_history_selectAll {
+	background-position:center -211px 
+}
+.tt_historySubRegionLabel {
+	padding: 2px 4px;
+	color: #666;
+	bottom: 0;
+}
+/* datePicker START */
+.tt_datePicker, .tt_timePicker {
+	background-color: rgba(50, 50, 50, 0.85);
+	color: white;
+	margin: -1px 0 0 6px;
+	text-align: center;
+	bottom: 95px;
+    z-index: 1002!important;
+}
+.tt_datePicker > table {
+	padding: 5px;
+}
+.tt_datePicker > table.tt_yearPicker {
+	padding: 3px;
+}
+.tt_datePicker th {
+	background: none;
+	color: #fff;
+	border: none;
+}
+.tt_datePicker td {
+	padding: 2px 4px;
+	cursor: pointer;
+}
+.tt_datePicker-prev {
+	float: left;
+	border-right: 1px solid white;
+	width: 30px;
+	cursor: pointer;
+	color: #fff!important;
+}
+.tt_datePicker-next {
+	float: right;
+	border-left: 1px solid white;
+	width: 30px;
+	cursor: pointer;
+	color: #fff!important;
+}
+.tt_datePicker-title {
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+	display: inline-block;
+}
+.tt_datePicker-title > span:hover, .tt_datePicker > div > a:hover {
+	color: #93C8FF;
+}
+.tt_datePicker > div {
+	line-height: 24px;
+	border-bottom: 1px solid white;
+}
+.tt_datePicker .tt_selected {
+	color: #93c8ff;
+	font-weight: bold;
+}
+.tt_datePicker .tt_unavailable {
+	color: #fff;
+	opacity: 0.4;
+}
+.tt_monthPicker {
+	background-color: rgba(50, 50, 50, 0.85);
+	padding: 5px;
+	left: 0;
+	width: 100px;
+}
+.tt_yearPicker {
+	right: 0;
+	background-color: rgba(50, 50, 50, 0.85);
+}
+.tt_yearPicker tr {
+	float: left;
+}
+.tt_timePicker {
+	padding:12px;
+	text-align:center
+}
+.tt_timePicker input{
+	width:16px;
+	border:none;
+	padding: 5px 5px;
+	margin:4px 0;
+	font-size:11px;
+	text-align:center
+}
+.tt_timePicker_arrowUp, .tt_timePicker_arrowDown {
+	float:left;
+	width:26px;
+	height:23px;
+	background:rgba(50, 50, 50, 0.85) url(img/Icons_sprite.png) no-repeat center -409px;
+	text-indent:100px;
+	overflow:hidden;
+	cursor:pointer
+}
+.tt_timePicker_arrowDown {
+	background-position: center -448px
+}
+.tt_timePicker_arrowUp:nth-child(2n), .tt_timePicker_arrowDown:nth-child(2n) {
+	float:right
+}
+.tt_timePicker span {
+	width:7px;
+	display:inline-block	
+}
+.tt_inactive {
+	opacity:0.5	
+}
+/* datePicker END */
+
+.tt_loading {
+	background: url(img/loading.gif) no-repeat 0 0;
+	width: 31px;
+	height: 31px;
+	position: absolute;
+	top: 38%;
+	left: 45%;
+}
+.ttColorPickerHS {
+	background-image: url(img/hs_small.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	width: 181px;
+	height: 101px;
+}
+.ttColorPickerHV {
+	background-image: url(img/hv_small.png);
+	background-position: 0px 4px;
+	background-repeat: no-repeat;
+	width: 181px;
+	height: 101px;
+}
+/* events */
+ul.collapseDown, ul.collapseUp {
+	list-style: none;
+	border-left: 1px solid #666;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.1);
+	z-index:3;
+}
+ul.collapseDown > li, ul.collapseUp > li {
+	background: white;
+	border-right: 1px solid #666;
+	border-top: 1px solid #666;
+	line-height: 3px;
+	height:3px;
+	font-size: 0;
+	padding: 0 3px;
+	cursor: pointer;
+	font-weight:bold;
+}
+ul.collapseDown > li:last-child, ul.collapseDown:hover > li {
+	font-size: 10px;
+	line-height: 14px;
+	height:14px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #666;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+ul.collapseDown > li:first-child,  ul.collapseDown:hover > li {
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+ul.collapseDown:hover > li {
+	margin-bottom: 5px;
+}
+ul.collapseDown:hover > li:last-child {
+	margin-bottom: 20px;
+}
+ul.collapseUp > li {
+	border-bottom: 1px solid #666;
+	border-top:none
+}
+ul.collapseUp > li:first-child, ul.collapseUp:hover > li 
+{
+	font-size: 10px;
+	line-height: 14px;
+	height:14px;
+	margin-top: 20px;
+	border-top: 1px solid #666;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	border-top-right-radius: 5px;	
+}
+ul.collapseUp > li:last-child,  ul.collapseUp:hover > li {
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+ul.collapseUp:hover > li {
+	margin-top: 5px;
+}
+ul.collapseUp:hover > li:first-child {
+	margin-top: 20px;
+}
+ul.collapseUp > li:hover, ul.collapseDown > li:hover {
+	background:rgba(0,0,0,0.8);
+	color:#fff
+}
+ul.collapseUp > li.analysen, ul.collapseDown > li.analysen {
+	background:#09F;
+	color:#fff
+}
+.eventIconBuy, .eventIconSell, .eventcallout {
+	background:url(img/events-icons.png) no-repeat center 0;
+	height:22px;
+	width:22px;
+	display:block;
+	position: absolute;
+	margin-left: -11px;
+}
+.eventIconBuy
+{
+	margin-top: 0px;
+}
+.eventIconSell {
+	background-position: center -22px;
+	margin-top: -22px;
+}
+.eventcallout {
+	background-position: center -44px;
+	height: 14px !important;
+	padding: 4px 0;
+    text-indent: 7px;
+	color:#fff;
+	font-weight: bold;
+}
+/* end events */
+.tt_saveDialog {
+    top:41px;
+    left: 200px;
+}
+.tt_saveDialog > div {
+	padding:0 10px 10px 10px
+}
+.tt_saveDialog > h1 {
+	margin-bottom:10px
+}
+.tt_saveDialog .tt_selectBox {
+	 display:inline-block; 
+	 overflow:hidden; 
+	 width:90%
+}
+.tt_saveDialog select {
+	width:100%;
+	border:none;
+	padding:0
+}
+.tt_saveDialog option {
+	padding:2px 6px
+}
+.tt_saveDialog option.selected {
+}
+.tt_saveDialog * {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.tt_saveDialog label {
+	margin-right:5px;
+	min-width: 40px;
+	display:inline-block;
+	text-align:left
+}
+.tt_saveDialog input {
+	border:none;
+	padding:3px
+}
+.tt_saveDialog input[type="button"] {
+	background:rgba(0,0,0,0.5); 
+	color:#fff; 
+	cursor:pointer; 
+	padding: 3px 10px;	
+	margin-left:5px
+}
+.tt_saveDialog input[type="button"]:first-child {
+	margin-left:0
+}
+.tt_saveDialog input[type="button"]:hover {
+	background:rgba(0,0,0,1); 
+}
+.eventIconBuy, .eventIconSell, .eventcallout {
+	background:url(img/events-icons.png) no-repeat center 0;
+	height:22px;
+	width:22px;
+}
+.eventIconSell {
+	background-position: center -22px;
+}
+.eventcallout {
+	background-position: center -44px;
+}
+/* Trading lines START */
+.tt_tradingLineContainer.tt_movable {
+    cursor: move;
+}
+.tt_tradingLineMainLine {
+    stroke-width: 1px;
+    stroke: rgba(0,40,100,0.7);
+}
+.tt_tradingLineLabelBox {
+    fill: rgba(0,40,100,0.7);
+}
+.tt_tradingLineLabelText {
+    font-size: 12px;
+	fill:white
+}
+/* Trading lines END */
+/*css for switch html to svg */
+.tt_symbolTitle_svg{
+	fill: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+.tt_symbolTitle_rect_svg {
+	fill: rgba(0,0,0,0.6);
+}
+.tt_historyDateLabel_svg {
+	fill: #fff;
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+.tt_historyDateLabel_rect_svg, .tt_historyTimeLabel_rect_svg {
+	fill: rgba(0,0,0,0.6);
+}
+.tt_historySubRegionLabel_svg {
+	fill: #666;
+	color: #666;
+}
+.collapseUp_font_svg, .collapseDown_font_svg
+{
+	font: 10px Arial, Helvetica, sans-serif;
+	fill: #000; /* used for printing */
+	color: #000;
+}
+.analysen_font_svg 
+{
+	font: 10px Arial, Helvetica, sans-serif;
+	color: #fff;
+	fill: #fff /* used for printing */
+}
+
+.eventcallout_svg
+{
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #fff;
+	fill: #fff;
+	font-weight: bold;
+}
+.tt_lastLabel_svg
+{
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #fff;
+	fill: #fff;
+	font-weight: bold;
+}
+.tt_xAxisZoomInOverlay {
+    background-color:rgba(100,100,100,0.5)
+} 
+
+/* scrollbar - chrome */
+.tt_dropDown ::-webkit-scrollbar {
+      width: 10px;
+} /* this targets the default scrollbar (compulsory) */
+.tt_dropDown ::-webkit-scrollbar-track {
+      background-color: none;
+} /* the new scrollbar will have a flat appearance with the set background color */
+.tt_dropDown ::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.4);
+} /* this will style the thumb, ignoring the track */
+.tt_dropDown ::-webkit-scrollbar-button {
+      background-color: none;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+.tt_dropDown ::-webkit-scrollbar-corner {
+      background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+input.tt_toolbar_search {
+	border:none;
+	font-size:11px;
+	padding:4px 42px 4px 4px;
+	background:url(img/Icons_sprite.png) no-repeat right -330px #fff;
+	z-index:1003;
+	margin:8px
+}
+.tt_topToolbar > div.tt_addIndicator > div, .tt_topToolbar > div.tt_numOfRecords > div {
+	overflow:hidden;
+}
+.tt_topToolbar > div.tt_addIndicator > div > ul, .tt_topToolbar > div.tt_addCompare > div > ul, .tt_topToolbar > div.tt_symbols > div > ul, .tt_topToolbar > div.tt_numOfRecords > div > ul {
+	background:none;
+	margin-left:0;
+	position:relative;
+	margin-top:0;
+	border:none
+}
+.tt_topToolbar > div.tt_addIndicator > div > ul > li {
+	overflow:hidden;
+	display:block;
+}
+div > .tt_lastLabel:nth-child(2) {
+	background: rgba(230,92,0,0.8);
+	z-index:100
+}
+div > .tt_lastLabel:nth-child(2):before {
+	border-right-color: rgba(230,92,0,0.8);
+}
+div > .tt_lastLabel:nth-child(3) {
+	background: rgba(165,149,0,0.8);
+	z-index:99
+}
+div > .tt_lastLabel:nth-child(3):before {
+	border-right-color: rgba(165,149,0,0.8);
+}
+div > .tt_lastLabel:nth-child(4) {
+	background: rgba(77,181,3,0.8);
+	z-index:98
+}
+div > .tt_lastLabel:nth-child(4):before {
+	border-right-color: rgba(77,181,3,0.8);
+}
+div > .tt_lastLabel:nth-child(5) {
+	background: rgba(97,192,255,0.8);
+	z-index:97
+}
+div > .tt_lastLabel:nth-child(5):before {
+	border-right-color: rgba(97,192,255,0.8);
+}
+div > .tt_lastLabel:nth-child(6) {
+	background: rgba(92,0,230,0.8);
+	z-index:96
+}
+div > .tt_lastLabel:nth-child(6):before {
+	border-right-color: rgba(92,0,230,0.8);
+}
+div > .tt_lastLabel:nth-child(7) {
+	background: rgba(207,0,230,0.8);
+	z-index:95
+}
+div > .tt_lastLabel:nth-child(7):before {
+	border-right-color: rgba(207,0,230,0.8);
+}
+div > .tt_lastLabel:nth-child(8) {
+	background: rgba(255,38,38,0.8);
+	z-index:94
+}
+div > .tt_lastLabel:nth-child(8):before {
+	border-right-color: rgba(255,38,38,0.8);
+}
+div > .tt_lastLabel:nth-child(9) {
+	background: rgba(56,255,38,0.8);
+	z-index:93
+}
+div > .tt_lastLabel:nth-child(9):before {
+	border-right-color: rgba(56,255,38,0.8);
+}
+.tt_contextDiv {
+	visibility: hidden;
+	background-color: #fff;
+	color: #333;
+	border:1px solid #bbb;
+	-moz-box-shadow: 2px 2px 5px #bbb; 
+	-webkit-box-shadow: 2px 2px 5px #bbb;
+	box-shadow: 2px 2px 5px #bbb
+}
+.tt_contextDiv ul {
+	margin:0;
+	padding:0;
+	list-style:none
+}
+.tt_contextDiv ul li {
+	padding:7px 15px;
+	border-top:1px solid #ddd;
+	cursor:pointer;
+	min-width:80px
+}
+.tt_contextDiv ul li:first-child {
+	border-top:none
+}
+.tt_contextDiv ul li:hover {
+	background-color: #efefef
+}
+/* Droppable elements START */
+.tt_droppable {
+background-color: gray;
+}
+.tt_activeDroppable {
+background-color: blue;
+}
+/* Droppable elements END */
+/* Fibonacci drawing tool dialog - checkbox list */
+ul.tt_checkboxList {
+	margin:0;
+	padding:10px 60px;
+	list-style:none;
+	height:100px;
+	overflow:auto;
+}
+ul.tt_checkboxList > li {
+	line-height:22px;
+	height:22px;
+}
+ul.tt_checkboxList > li > input {
+	margin-right:5px
+}
+ul.tt_checkboxList > li > label {
+	display: inline-block;
+    text-align: left;
+    width: 35px;
+}
+.tt_option {
+	font:12px Arial,Helvetica,sans-serif;
+	margin:10px 10px 0 10px;
+	background-color: #EEEFF3;
+    border: 1px solid #D0D6E5;
+	padding:0 3px;
+	width:90%;
+	display:inline-block;
+	text-indent:10px
+}
+.tt_option input {
+	margin-left:20px;
+	margin-right:5px
+}
+#selectedNews {
+	font:12px Arial,Helvetica,sans-serif;
+	padding:10px
+}
+.tt_option input[type="button"] {
+	-moz-box-shadow: inset 0 0 4px white;
+	-webkit-box-shadow: inset 0 0 4px white;
+	box-shadow: inset 0 0 4px white;
+	border: 1px solid #d2d4db;
+	padding:5px 15px;
+	text-transform:uppercase;
+	font-weight:bold;
+	cursor:pointer
+}
+.tt_option input[type="button"]:hover {
+	background-color: rgba(150,150,150,0.1);
+	-moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 8px rgba(0,0,0,0.1);
+	border-color:rgba(0,0,0,0.1);
+	
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	-moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+	-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+	box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+}
+.tt_option input[type="button"] {
+	margin:0 0 0 20px
+}
+.tt_option h3 {
+	text-transform:uppercase;	
+	font-size:1em
+}
+.tt_popUp .tt_baseSelection {
+	padding-right:10px
+}
+.tt_popUp .tt_baseSelection > input.tt_on_off {
+	margin:0;
+	border-left:none;
+	width:28px
+}
+.tt_popUp .tt_baseSelection > input:first-of-type {
+	border-left:1px solid #fff
+}
+.tt_popUp .tt_baseSelection > label {
+	width:auto !important;
+	margin-right:10px
+}
+.tt_popUp input:not([type=checkbox]) {
+	-webkit-appearance: none;
+    border-radius: 0;	
+}
+/* Copyright sign */
+.tt_copyrightSign {
+    width:16px;
+	height:16px;
+	background:url(img/Icons_sprite.png) no-repeat center -496px;
+	position:absolute;
+	bottom:10px;
+	left:10px;
+}
+.tt_copyrightTooltip {
+    display: none;
+}
+.tt_copyrightTooltip > div {
+	position:absolute;
+	bottom:24px;
+	left:-7px;
+	background-color:rgba(70,70,70,0.9);
+	color:#fff;
+	padding:15px 25px;
+	white-space:nowrap;
+	text-align:center
+}
+.tt_copyrightTooltip > div > div:first-child {
+	font-size:14px;
+	font-weight:bold
+}
+.tt_copyrightTooltip > div:nth-child(2){
+	width:10px;
+	height:10px;
+	background:url(img/Icons_sprite.png) no-repeat center -540px;
+	bottom:-16px;
+	left:-22px
+}
+.tt_copyrightTooltip a {
+	color:#b6b9c1; 
+	text-decoration:none;
+}
+.tt_copyrightTooltip a:hover {
+	text-decoration:underline	
+}
