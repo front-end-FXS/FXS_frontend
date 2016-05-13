@@ -125,7 +125,7 @@
       }
       .fxs_widget_price_value {
         float: none;
-        text-align: center;
+        text-align: right;
       }
       .fxs_widget_price_value, .fxs_price_ohl{
         display: table;
@@ -134,12 +134,14 @@
       .fxs_price_bidask, .fxs_price_change {
         display: table-cell;
         vertical-align: middle;
+        min-width:120px;
       }
       .fxs_price_ohl {
         font-size: @txt_size_xsmall;
         span {
           padding-left: 0.5em;
         }
+        text-align: right;
       }
     }
   }

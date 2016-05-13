@@ -1077,6 +1077,13 @@
   font-size: 0;
   .fxs_swipeContent_slider { &:extend(.fxs_list_unstyled); }
 }
+// holder for columns
+.fxs_brokerContent_holder{
+  .make-row();
+  overflow: hidden;
+  font-size: 0;
+  //.fxs_swipeContent_slider { &:extend(.fxs_list_unstyled); }
+}
 
 .fxs_relatedItem {
   &:extend(.fxs_transition);
@@ -1088,6 +1095,14 @@
     border-bottom: 4px solid @highlight_clr;
     a { color: @highlight_clr; }
     .fxs_entryFeatured_img { opacity: 0.8; }
+  }
+  &.fxs_brokerItem{ // custom styles for broker transition
+    &:hover{
+      border-bottom: none;
+     a {
+        color: @lightest_clr; 
+      } 
+    }
   }
 }
 
@@ -1112,6 +1127,7 @@
     &:extend(.fxs_headline_from_nano_to_tiny all);
   }
 }
+
 
 //////////////////////////////////////////////////////////////////////////
 ////////////////////// FXStreet WIDGETS components //////////////////////
@@ -1437,6 +1453,7 @@
   .fxs_footer{
     margin-left: 0;
     width: 100%;
+    position:absolute;
   }
   .fxs_detail {
     margin-bottom: 0;

@@ -1,0 +1,39 @@
+﻿<div class="fxs_widget_heatmap fxs_widget_default">
+    <div class="fxs_widget_divider_module">
+        <ul class="fxs_tabs_nav fxs_marginHalf_bottom">
+            {{#Studies}}
+            <li><a data-toggle="tab" href="#{{WidgetId}}_{{PeriodTypeCode}}" title="{{PeriodTypeCode}}">{{PeriodTypeCode}}</a></li>
+            {{/Studies}}
+        </ul>
+        <div class="tab-content fxs_clearfix fxs_marginHalf_bottom">
+            {{#Studies}}
+            <div role="tabpanel" id="{{WidgetId}}_{{PeriodTypeCode}}" class="tab-pane">
+                {{#Items}}
+                <div class="fxs_widget_column">
+                    <div class="fxs_widget_price fxs_widget_mini {{PerformanceStatusCssClasess}} {{TrendCssClasess}}">
+                        <abbr class="fxs_asset_label" title="{{Asset.Name}}">
+                            <a href="{{Url}}">{{Asset.Name}}</a>
+                        </abbr>
+                        <div class="fxs_widget_price_value">
+                            <span class="fxs_price_change">
+                                <span class="fxs_change_pips">{{PerformancePipe}}</span>
+                                <span class="fxs_change_percent">({{PerformancePercentage}}%)</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                {{/Items}}
+            </div>
+            {{/Studies}}
+        </div>
+        <div class="fxs_clearfix">
+            <small class="fxs_widget_heatmap_legend">{{Translations.High}}</small>
+                <div class="fxs_widget_heatmap_gradient_linear"></div>
+            <small class="fxs_widget_heatmap_legend">{{Translations.Low}}</small>
+        </div>
+    </div>
+    <footer class="fxs_widget_footer">
+        <small><time datetime="{{LastUpdatedDate}}">{{Translations.Updated}} {{LastUpdatedHour}} GMT</time></small>
+    </footer>
+</div>
+
