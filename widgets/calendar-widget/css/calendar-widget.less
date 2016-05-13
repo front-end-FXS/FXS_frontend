@@ -1,12 +1,9 @@
 // VENDOR IMPORTS
-@import "../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
 // IMPORTS FOR GENERAL APLICATION
-@import "../../website/css/less/vars.less"; // Application variables
-@import "../../website/css/less/mixins.less"; // Application variables
-@import "../../website/css/less/components.less";  // Molecular-combined componentss
-// UTILITIES, HELPERS & EXTENDIBLE CLASSES
-@import "../../website/css/less/utilities.less";  // Helper classes
-//@import "../../website/css/less/templating.less";  // Styles for templates, structural sections etc...
+@import "../../../website/css/less/vars.less"; // Application variables
+@import "../../../website/css/less/mixins.less"; // Application variables
+
 /*************** Variables ***************/ 
 /*Color*/
 @baseColor: #e6ecf0;
@@ -46,7 +43,7 @@ clean rules for new calendar widget
   th{
     font-style: normal!important;
     color:#000!important;
-    text-transform: none;
+    text-transform: none!important;
   }
 }
 
@@ -92,7 +89,6 @@ clean rules for new calendar widget
     }
     td, th {
       border-bottom: 1px solid #DEDEDE;
-      text-transform: normal!important;
       .fxit-eventInfo, .fxit-event {
         display: inherit;
         float: left;
@@ -321,6 +317,5 @@ clean rules for new calendar widget
 .fxst-i-vn { background-position: -294px -11px; }
 /* Vietnam */
 .fxst-i-za { background-position: -308px -11px; }
-
 
 /**********************************/

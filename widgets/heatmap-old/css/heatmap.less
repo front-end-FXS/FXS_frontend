@@ -3,6 +3,7 @@
 // Application variables & mixins
 @import "../../../website/css/less/vars.less";
 @import "../../../website/css/less/mixins.less";
+@import "heatmap-custom-price.less";
 
 
 // heatmap layout
@@ -15,17 +16,14 @@
 
 // Properties & variants
 .fxs_widget_heatmap {
+
   .fxs_widget_price {
-    padding: 0.25rem 0.5rem;
-    &.price_up {
-      background-color: lighten(@success_clr, 10%);
-      &.price_up_plus { background-color: @success_clr; }
-    }
-    &.price_down {
-      background-color: lighten(@error_clr, 20%);
-      &.price_down_plus { background-color: @error_clr; }
-    }
-    &.price_neutral { background-color: @light_2_clr; }
+    padding: 0.25rem 0.33rem;
+    &.fxs_heatmap_slightlybullish { background-color: lighten(@success_clr, 10%); }
+    &.fxs_heatmap_bullish{ background-color: @success_clr; }
+    &.fxs_heatmap_slightlybearish { background-color: lighten(@error_clr, 20%); }
+    &.fxs_heatmap_bearish { background-color: @error_clr; }
+    &.fxs_heatmap_neutral { background-color: @light_2_clr; }
 
     .fxs_asset_label {
       font-size: @txt_size_small;
@@ -41,17 +39,17 @@
       opacity: 0.75;
       cursor: pointer;
     }
+
   }
 
   // Widget sizes variants
   &.fxs_widget_mini{
-    @media (min-width: @screen-s) {
-      .fxs_widget_column { width:100%; }
-    }
+    //
   }
   &.fxs_widget_default{
     .fxs_widget_column {
-      .make-s-column(3);
+      .make-s-column(4);
+      .make-l-column(3);
     }
   }
   &.fxs_widget_big {
