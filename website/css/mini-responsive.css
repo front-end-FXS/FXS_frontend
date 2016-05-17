@@ -1926,7 +1926,7 @@ width:calc(100% - 320px);
   position: absolute;
   right: 5rem;
   top: 0.2rem;
-  z-index: 9999;
+  z-index: 2;
 }
 .tab-content > .tab-pane {
   display: none;
@@ -2446,6 +2446,9 @@ lesshat-selector {
 .fxs_fRight {
   float: right;
 }
+.fxs_aCenter {
+  text-align: center;
+}
 .fxs_positionAbsolute_right {
   right: 0;
   left: inherit;
@@ -2927,8 +2930,14 @@ width:calc(100% + @half_base_spacer);
 .fxs_wrapper {
   background-color: #ececf1;
   width: 100%;
+  overflow: hidden;
   padding-top: 50px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .fxs_wrapper {
+    overflow: inherit;
+  }
 }
 .fxs_content {
   position: relative;
@@ -3262,8 +3271,6 @@ width:calc(100% - 320px);
   top: 50px;
   left: 0;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .fxs_content_wide .fxs_content_subnav .fxs_toggleList {
   display: none;
@@ -3553,8 +3560,8 @@ height:calc(100% - 45px);
   }
 }
 .fxs_leaderboard.fxs_leaderboard_wide {
-  margin-top: -1.5rem;
-  margin-bottom: -2.3rem;
+  margin-top: -3rem;
+  margin-bottom: -2rem;
 }
 .fxs_leaderboard.fxs_leaderboard_wide_sidebar {
   margin-left: -1rem;
