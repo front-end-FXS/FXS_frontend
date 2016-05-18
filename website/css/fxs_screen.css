@@ -2520,7 +2520,7 @@ width:calc(100% - 320px);
   position: absolute;
   right: 5rem;
   top: 0.2rem;
-  z-index: 9999;
+  z-index: 2;
 }
 .tab-content > .tab-pane {
   display: none;
@@ -3102,6 +3102,9 @@ h5 a:hover,
 .fxs_fRight {
   float: right;
 }
+.fxs_aCenter {
+  text-align: center;
+}
 .fxs_positionAbsolute_right {
   right: 0;
   left: inherit;
@@ -3656,8 +3659,14 @@ width:calc(100% + @half_base_spacer);
 .fxs_wrapper {
   background-color: #ececf1;
   width: 100%;
+  overflow: hidden;
   padding-top: 50px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .fxs_wrapper {
+    overflow: inherit;
+  }
 }
 .fxs_content {
   position: relative;
@@ -3991,8 +4000,6 @@ width:calc(100% - 320px);
   top: 50px;
   left: 0;
   width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .fxs_content_wide .fxs_content_subnav .fxs_toggleList {
   display: none;
@@ -4282,8 +4289,8 @@ height:calc(100% - 45px);
   }
 }
 .fxs_leaderboard.fxs_leaderboard_wide {
-  margin-top: -1.5rem;
-  margin-bottom: -2.3rem;
+  margin-top: -3rem;
+  margin-bottom: -2rem;
 }
 .fxs_leaderboard.fxs_leaderboard_wide_sidebar {
   margin-left: -1rem;
@@ -7028,58 +7035,6 @@ width:calc(100% - 210px - 2rem);
 .fxs_indexes_tabpanel .fxs_index_value {
   display: block;
   padding-bottom: 0.5rem;
-}
-.fxs_sentimental_widget .fxs_sentimental_expanding {
-  height: 20px;
-  /* fallback */
-  /* Safari 5.1, Chrome 10+ */
-  background: linear-gradient(left, #ffffff, #000000 120%);
-  background: -webkit-linear-gradient(left, #ffffff, #000000 120%);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(left, #ffffff, #000000 120%);
-  /* IE 10 */
-  background: -ms-linear-gradient(left, #ffffff, #000000 120%);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(left, #ffffff, #000000 120%);
-}
-.fxs_sentimental_widget .fxs_sentimental_shrinking {
-  height: 20px;
-  /* fallback */
-  /* Safari 5.1, Chrome 10+ */
-  background: linear-gradient(left, #000000 -20%, #ffffff);
-  background: -webkit-linear-gradient(left, #000000 -20%, #ffffff);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(left, #000000 -20%, #ffffff);
-  /* IE 10 */
-  background: -ms-linear-gradient(left, #000000 -20%, #ffffff);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(left, #000000 -20%, #ffffff);
-}
-.fxs_sentimental_widget .fxs_sentimental_low {
-  height: 20px;
-  /* fallback */
-  /* Safari 5.1, Chrome 10+ */
-  background: linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
-  background: -webkit-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
-  /* IE 10 */
-  background: -ms-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(to right, #000000, #cccccc 10%, #ffffff);
-}
-.fxs_sentimental_widget .fxs_sentimental_high {
-  height: 20px;
-  /* fallback */
-  /* Safari 5.1, Chrome 10+ */
-  background: linear-gradient(to left, #000000, #000000);
-  background: -webkit-linear-gradient(to left, #000000, #000000);
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(to left, #000000, #000000);
-  /* IE 10 */
-  background: -ms-linear-gradient(to left, #000000, #000000);
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(to left, #000000, #000000);
 }
 .fxs_pivotPoints_list {
   list-style: none;

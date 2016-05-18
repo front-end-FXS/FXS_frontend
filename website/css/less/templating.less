@@ -13,9 +13,12 @@
   background-color: @light_4_clr;
   //height: 100%;
   width: 100%;
-  //overflow: hidden;
+  overflow: hidden;
   padding-top: @main_header_height_custom;
   position: relative;
+  @media(min-width:@screen-m){
+    overflow: inherit;
+  }
 }
 .fxs_content {
   &:extend(.fxs_pageSidebar_transition, .fxs_scrollableContent all);
@@ -196,8 +199,6 @@ body.cbp-spmenu-push-toright{
     top:50px;
     left: 0;
     width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
     .fxs_toggleList { display: none; }
   }
 }
@@ -475,8 +476,8 @@ body.cbp-spmenu-push-toright{
     @media (min-width: @screen-s) { margin: 0 -2rem; }
   }
   &.fxs_leaderboard_wide{
-    margin-top:-1.5rem;
-    margin-bottom: -2.3rem;
+    margin-top: -3rem;
+    margin-bottom: -2rem;
   }
   &.fxs_leaderboard_wide_sidebar{
       margin-left: -1rem;
