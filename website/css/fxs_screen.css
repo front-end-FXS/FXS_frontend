@@ -5211,6 +5211,17 @@ width:calc(100% - 60px - 5px);
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+.fxs_responsive_media {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  padding-top: 5px;
+}
+.fxs_responsive_media iframe {
+  position: absolute;
+  width: 100%!important;
+  height: 100%!important;
+}
 .fxs_live_events_table > thead tr > th {
   padding: 0;
 }
