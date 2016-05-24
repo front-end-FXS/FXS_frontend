@@ -271,7 +271,7 @@ $(document).ready(function () {
         $(".pinned" ).toggle();
     })
     $(".pinned").pin({
-        containerSelector: ".container", minWidth: 940, padding: {top: 120, bottom: 10}
+        containerSelector: ".container", minWidth: 940, padding: {top: 0, bottom: 10}
     })
 
 
