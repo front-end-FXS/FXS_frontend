@@ -52,6 +52,9 @@ strong {
     color: #333;
 }
 
+// scrollbars
+
+
 .profile-pic {
     width: 65px;
     height: 65px;
@@ -1034,33 +1037,6 @@ strong {
         }
     }
 }
-/*.transRow.pending {
-    border-left: 6px solid @yellow;
-}
-.transLangCol {
-    width: 1080px;
-    position: absolute;
-    z-index: 100;
-    left: 265px;
-}
-.transLang {
-    position: relative;
-    width: 60px; //85
-    display: inline-block;
-    float: left;
-    color: #333; 
-    text-align: center;
-    font-weight: normal;
-    font-size: 16px;
-    padding: 14px 10px;
-    label {
-        display: block;
-        font-weight: lighter;
-        margin-bottom: 0px;
-        font-size: 15px;
-    }
-    
-}*/
 .general-back-pagination{
     margin-top:20px;
 }
@@ -1301,6 +1277,13 @@ strong {
 /* clients section */
 .table > tbody > tr > td {
     word-break:break-all;
+}
+
+// custom localization table, delete this rule after html refactor
+.fxs_localization_form{
+    .table > tbody > tr > td {
+        word-break:normal;
+    }
 }
 .fxs_add_domain{
     position:relative;

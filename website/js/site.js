@@ -198,7 +198,7 @@ $(document).ready(function () {
 
     $('.fxs_timezone_btn_navbar').on('click', function(){
         $(body).addClass('cbp-spmenu-push-toleft');
-        $('.fxs_timezone_items').toggleClass('fxs_show_timezoneHours');
+        //$('.fxs_timezone_items').toggleClass('fxs_show_timezoneHours');
     });
 
 
@@ -209,6 +209,8 @@ $(document).ready(function () {
         $('.fxs_user_logged').removeClass('fxs_show_user_logged'); // hide right column
         $('.fxs_show_usermenu').removeClass('fxs_show_user_icon_logged') // change icon color
     });
+
+    // user preload button
 
     $(".fxs_login_btn").on("click", startLoading); // call startLoading function
 
@@ -222,6 +224,15 @@ $(document).ready(function () {
           $(".fxs_custom_site_elements_preload").css('visibility', 'hidden');
       }, 2000);
     }
+
+    // prototype show and hide preload
+
+     //hide
+     $('.fxs_simulate_preload').hide();
+     // hide preload and show widget
+     $('.fxs_preload_modules').delay(10000).hide(0); 
+     $('.fxs_simulate_preload').delay(10100).show(0); 
+
 
     // hide and show listview left column in responive mode //
 
@@ -273,7 +284,5 @@ $(document).ready(function () {
     $(".pinned").pin({
         containerSelector: ".container", minWidth: 940, padding: {top: 0, bottom: 10}
     })
-
-
 
 });
