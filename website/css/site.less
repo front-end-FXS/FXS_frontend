@@ -133,6 +133,10 @@ strong {
         background-color: #ee970c;
     }
 }
+.fxs_scollable_box{
+    max-height:100px;
+    overflow-y: auto;
+}
  
 .cbp-spmenu-left {
     left: -260px;
@@ -405,6 +409,13 @@ strong {
         input {
             //border: 1px solid transparent !important;
         }
+        &.fxs_wide_field{
+            display:block;
+            textarea{
+                min-height:100px;
+            }
+        }
+
     }
     .input-group:hover {
         input {
@@ -1280,9 +1291,9 @@ strong {
 }
 
 // custom localization table, delete this rule after html refactor
-.fxs_localization_form{
-    .table > tbody > tr > td {
-        word-break:normal;
+.fxs_localization_result{
+    .col-md-4{
+        padding-bottom: 5px;
     }
 }
 .fxs_add_domain{
@@ -1454,11 +1465,17 @@ strong {
 .cke_button__chartimage_icon{
     background: url(../../scripts/ckeditor/plugins/widgets/icons/chartimage.png) no-repeat!important;
 }
-.cke_button__sentiment_icon{
-    background: url(../../scripts/ckeditor/plugins/widgets/icons/sentiment.png) no-repeat!important;
+.cke_button__sentiment_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/sentiment_cke.png) no-repeat!important;
 }
-.cke_button__ctp_icon{
-    background: url(../../scripts/ckeditor/plugins/widgets/icons/ctp.png) no-repeat!important;
+.cke_button__ctp_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/ctp_cke.png) no-repeat!important;
+}
+.cke_button__pivotpoints_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/pivotpoints_cke.png) no-repeat!important;
+}
+.cke_button__forecast_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/forecast_cke.png) no-repeat!important;
 }
 // ctp signals
 .ctp-filter-form{

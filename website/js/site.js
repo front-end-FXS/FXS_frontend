@@ -120,29 +120,51 @@ $(document).ready(function () {
 
     var menuLeft = document.getElementById('cbp-spmenu-s1'),
         menuRight = document.getElementById('cbp-spmenu-s2'),
+        itemsTimezone = document.getElementById('cbp-spmenu-s4'), // add
         listView = document.getElementById('cbp-spmenu-s3'),
         showLeftPush = document.getElementById('showLeftPush'),
         showRightPush = document.getElementById('showRightPush'),
+        showTimezoneClock = document.getElementById('showTimezoneClock'), // add
+        close_timezone_sidebar = document.getElementById('close_timezone_sidebar'), // add
         showLeft = document.getElementById('showLeft'),
-        body = document.body;
+        body = document.body
 
     showLeftPush.onclick = function () {
         classie.toggle(this, 'active');
         classie.toggle(body, 'cbp-spmenu-push-toright');
         classie.toggle(menuLeft, 'cbp-spmenu-open');
+        $(body).removeClass('fxs_push_timezone'); //add 
         $('.fxs_listView').removeClass('cbp-spmenu-open');
         $('.fxs_toggleList').removeClass('active');
         disableOther('showLeftPush');
     };
+
     showRightPush.onclick = function () {
         classie.toggle(this, 'active');
         classie.toggle(body, 'cbp-spmenu-push-toleft');
         classie.toggle(menuRight, 'cbp-spmenu-open');
+        $(body).removeClass('fxs_push_timezone'); // add
         $('.fxs_listView').removeClass('cbp-spmenu-open');
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
         $('.fxs_toggleList').removeClass('active');
         disableOther('showRightPush');
     };
+
+    // display timezone sidebar
+    showTimezoneClock.onclick = function () {
+        classie.toggle(this, 'active');
+        classie.toggle(body, 'fxs_push_timezone');
+        classie.toggle(itemsTimezone, 'fxs_show_timezoneHours');
+    };
+
+    // close all, timezone and sidebar
+    close_timezone_sidebar.onclick = function(){
+        $(showTimezoneClock).removeClass('active');
+        $(body).removeClass('fxs_push_timezone');
+        $(itemsTimezone).removeClass('fxs_show_timezoneHours');
+        //$(body).removeClass('fxs_push_timezone');
+        //disableOther('close_timezone_sidebar');
+    }
 
     showLeft.onclick = function () {
         classie.toggle(this, 'active');
@@ -196,10 +218,10 @@ $(document).ready(function () {
 
     //////////////// toggle timezone nabvar button //////////////////
 
-    $('.fxs_timezone_btn_navbar').on('click', function(){
+    /*$('.fxs_timezone_btn_navbar').on('click', function(){
         $(body).addClass('cbp-spmenu-push-toleft');
         //$('.fxs_timezone_items').toggleClass('fxs_show_timezoneHours');
-    });
+    });*/
 
 
     // USER ZONE
@@ -266,11 +288,11 @@ $(document).ready(function () {
     });
 
 
-    $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
 
     $('.fxs_typeheadContainer_custom').focusin(function(){
         $('.fxs_dismissQuery').removeClass('fxs_dismissQuery_disabled');
     })
+
     $('.fxs_queryResults').on('click', function(){
         $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
     })
