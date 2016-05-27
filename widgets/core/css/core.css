@@ -1917,24 +1917,32 @@ width:calc(100% - 320px);
     border-right: 1px solid #ececf1;
   }
 }
-.fxs_preload {
-  height: 100px;
-}
-.fxs_preload.fxs_custom_site_elements_preload {
-  visibility: hidden;
+.fxs_preload_modules {
+  background-image: url('../img/fxs_preloader.gif');
+  width: 30px;
   height: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 50%;
 }
-.fxs_preload.fxs_ad_role {
-  height: 2rem;
-}
-.fxs_preload .fa {
-  color: #6289ac;
-  vertical-align: middle;
-}
-.fxs_preload .fxs_preload_spin_text {
-  padding-left: 7.5px;
-  vertical-align: middle;
-}
+/*.fxs_preload{
+  &.fxs_custom_site_elements_preload{
+    visibility: hidden;
+    height:30px;
+  }
+  height:100px;
+  &.fxs_ad_role{
+    height:2rem;
+  }
+  .fa{
+    color:@info_clr;
+    vertical-align: middle;
+  }
+  .fxs_preload_spin_text{
+    padding-left:@half_base_spacer;
+    vertical-align: middle;
+  }
+}*/
 .c3 .tick line {
   zoom: 1;
   filter: alpha(opacity=0);
