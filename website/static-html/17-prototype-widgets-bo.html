@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>News - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../css/fxs_screen.min.css">
+        <link rel="stylesheet" href="../css/fxs_widgets_bo.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            .fxs_chart_container {
+              margin-left: 5px;
+              margin-right: 5px;
+            }
+            .fxs_chart_container .fxs_chart_bo_default, .fxs_chart_container .fxs_chart_bo_mini, .fxs_chart_container .fxs_chart_bo_big{
+                width:100%;
+            }
+            @media (min-width: 680px) {
+              .fxs_chart_container .fxs_chart_bo_default {
+                width:315px;
+              }
+              .fxs_chart_container .fxs_chart_bo_big {
+                width:645px;
+              }
+              .fxs_chart_container .fxs_chart_bo_mini{
+                width:225px;
+              }
+            }
+
+        </style>
+    </head>
+    <!-- fxs_isParent_section -->
+    <body class="cbp-spmenu-push">
+        <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+        <header class="fxs_header">
+            <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+                <i class="fa fa-bars"></i>
+                <span class="fxs_skip">Show navigation</span>
+            </button>
+            <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+            <!-- Main-nav -->
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li><a href="" title="">Rates & Charts</a></li>
+                    <li class="active"><a href="" title="">News</a></li>
+                    <li><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- /Main-nav -->
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_overflowOptions">
+                        <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                        <ul class="fxs_dropdownList">
+                            <li class="fxs_dropdownHeader">Follow us on</li>
+                            <li>
+                                <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                            </li>
+                            <li class="fxs_divider_third">&nbsp;</li>
+                            <li class="fxs_dropdownHeader">RSS feeds</li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
+
+            <button type="button" id="showRightPush" class="fxs_show_usermenu">
+                <i class="fa fa-user"></i>
+                <span class="fxs_skip">User Settings</span>
+            </button>
+        </header>
+         <!-- The wrapper -->
+        <div class="fxs_wrapper">
+            <!-- Sidebar left nav -->
+            <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+                <!-- Main-nav -->
+                <nav class="fxs_nav_menu" role="navigation">
+                    <ul>
+                        <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                        <li><a href="" title="">Rates & Charts</a></li>
+                        <li class="active"><a href="" title="">News</a></li>
+                        <li><a href="" title="">Analysis</a></li>
+                        <li><a href="" title="">Economic Calendar</a></li>
+                        <li><a href="" title="">Live Video</a></li>
+                        <li><a href="" title="">Education</a></li>
+                        <li><a href="" title="">Find a Broker</a></li>
+                    </ul>
+                </nav>
+                <!-- /Main-nav -->
+
+                <!-- About -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">About</li>
+                    <li><a href="" title="">About fxstreet</a></li>
+                    <li><a href="" title="">Advertise with us</a></li>
+                </ul>
+                <!-- terms and conditions -->
+                <ul class="fxs_items_list_nav">
+                    <li><a href="" title="">Terms and conditions</a></li>
+                    <li><a href="" title="">Privacy policy</a></li>
+                    <li><a href="" title="">Contact us</a></li>
+                    <li><a href="" title="">Site map</a></li>
+                </ul>
+                <!-- /Complementary links -->
+                
+                <!-- Social Media links widget -->
+                <div class="fxs_socialLinks_nav">
+                    <ul class="fxs_shareOptions_boxed">
+                        <li class="fxs_socialMedia_item">
+                            <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="http://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.linkedin.com/company/fxstreet" class="fxs_btn_icon" target="_blank" title="LinkedIn page"><i class="fa fa-linkedin"></i><span class="fxs_skip">LinkedIn page</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Social Media links widget -->
+                
+                <!-- lang-edition -->
+                <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                    <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                    
+                    <ul class="fxs_dropdownList dropup">
+                        <li class="fxs_dropdownHeader">Other sites</li>
+                        <li><a href="#">体中文</a></li>
+                        <li><a href="#">繁體中文</a></li>
+                        <li><a href="#">Русский</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                        <li><a href="#">العربية</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Português</a></li>
+                        <li><a href="#">Magyar</a></li>
+                        <li><a href="#">Türkçe</a></li>
+                        <li><a href="#">Tiếng Việt</a></li>
+                        <li><a href="#">한국어</a></li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">Edition</li>
+                        <li><a href="#">Yсский</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                    </ul>
+                </div>
+                <!-- /lang-edition -->
+            </div>
+            <!-- /Sidebar left -->
+            <div class="fxs_content" id="fxs_content">
+
+                <!-- Topics subnav -->
+                <nav class="fxs_content_subnav">
+                    <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All News</a>
+                    <div class="fxs_topics_nav">
+                        <span class="fxs_label">Popular topics</span>
+                        <ul class="fxs_subnavInlined_list">
+                            <li><a href="#" class="fxs_mutedLink">EUR/USD News</a></li>
+                            <li><a href="#" class="fxs_mutedLink">Fundamental news</a></li>
+                            <li><a href="#" class="fxs_mutedLink">Economic indicators</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /Topics subnav -->
+
+                <div id="notificationExample" class="fxs_global_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
+                    <span class="fxs_alertLabel">Welcome</span>
+                    <p class="fxs_alertText">
+                     to the new FXStreet! <a href="http://tour.fxstreet.com/" onclick="todo" role="button">What’s this?</a>
+                    </p>
+                </div>
+
+                <div id="notificationExample" class="fxs_global_alert fxs_alert_info alert alert-dismissible fade in" role="alert">
+                    <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                        <i class="fa fa-close"></i>
+                        <span class="fxs_skip">Close alert</span>
+                    </button>
+                    <span class="fxs_alertLabel">Welcome</span>
+                    <p class="fxs_alertText">
+                        We use cookies to enhance your experience like remembering your <a href="#" onclick="todo" role="button">Time Zone (GMT +1:00)</a>. By closing this message you are agreeing to our use of cookies. <a href="path-to-cookies-policies">Learn more</a>
+                    </p>
+                </div>
+
+                <!-- The content rail -->
+                <div class="fxs_contentView">
+
+                    <div class="fxs_leaderboard">
+                        <div class="fxs_ad">
+                            <a target="_blank" href="http://adclick.g.doubleclick.net/aclk?sa=L&amp;ai=B1Pglz6MwVuumLozVWv-1rvAMjP_31AgAAAAQASAAOABYhK_YiqoCYNWN04K8CIIBF2NhLXB1Yi03OTQ1ODMxMTc0NjM1NzM2sgEQd3d3LmZ4c3RyZWV0LmNvbboBCWdmcF9pbWFnZcgBCdoBGGh0dHA6Ly93d3cuZnhzdHJlZXQuY29tL6kCDulDWfCJsj7AAgLgAgDqAgovNzEzOC9Ib21l-AL30R6AAwGQA4wGmAOMBqgDAeAEAZAGAaAGHtgHAA&amp;num=0&amp;cid=5GhaUeCSlgPdQSI4NDWiO48f&amp;sig=AOD64_0u0AD4PkhtvnnKORhLXm19_9UqfA&amp;client=ca-pub-7945831174635736&amp;adurl=https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuFNC9Slw3OH0TWavbWdfoN7hz6yuJX7LdGuWt0ylb3TwL9WC1g5k1FCwUhkFRi9e7004ohodpERx10VGDI4NQmiDTlGLeRZOFmZPcnpQzC3HxTdPhO&amp;sig=Cg0ArKJSzJBmQD6gBKal&amp;urlfix=1&amp;adurl=http://www.fxpro.co.uk/promo/fxpro/%3Futm_source%3DFxStreet%2Bcom%26utm_medium%3DBanner%26utm_term%3DBrand%26utm_content%3DUK%26utm_campaign%3D728x90%2BBanner%2Bon%2BFxStreet%26source%3D20">
+                                <img src="https://s1.2mdn.net/viewad/4310423/6-all_three_spreads_banner_728x90.jpg" alt="Advertisement" border="0" width="728" height="90">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Main Section -->
+                    <main id="fxs_it_detail" role="main">
+                        <div> <!-- dinamic div for dev -->
+                            <header class="fxs_sectionTitle">
+                                <h1 class="fxs_sectionTitle_header">Forex News</h1>
+                                <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                                    <div class="fxs_overflowOptions">
+                                        <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                                        <ul class="fxs_btnGroup_dropdownList">
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                            </li>
+                                            <!--
+                                            -->
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </header>
+                        </div>
+                    </main>
+                    
+                    <section class="fxs_detail">
+                        <h3 class="fxs_subtitle"> pivot points </h3>
+                        <p>Fresh selling seen in the Japanese currency over the last hour, lifted<a href="http://www.fxstreet.com/analysis/jpy-usd-forecast/"><strong>&nbsp;USD/JPY</strong></a>back on the bids above 111 handle, while markets now await the US economic data for further incentives.</p>
+
+                        <p><strong>USD/JPY finds support above daily pivot at 110.86</strong></p>
+
+                        <p>The bulls fight back control as we progress towards the mind-European session, with the Japanese currency once again sold into increasing uncertainty surrounding Japan&rsquo;s sales tax delay announcement, while reports that Japan&#39;s Lower House rejected motion of No Confidence in ruling government, also weighed somewhat on the local currency.</p>
+                        <div class="fxs_bo_mini_wrapper fxs_fLeft">
+                            <div class="fxs_widget_pivotPoints fxs_widget_mini">
+                                <div class="fxs_widget_divider_module fxs_swipeContent_slider">
+                                    <ol class="fxs_pivotPoints_list">
+                                        <li class="fxs_resistance_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 3">R3</abbr>
+                                                    </span>
+                                                    <span>1.1133</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 2">R2</abbr>
+                                                    </span>
+                                                    <span>1.1125</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Resistance 1">R1</abbr>
+                                                    </span>
+                                                    <span>1.1114</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li class="fxs_pivotPoints_list_item fxs_pivot">
+                                            <span class="fxs_widget_custom_bold">
+                                                <abbr title="Pivot point">PP</abbr>
+                                            </span>
+                                            <span>1.1106</span>
+                                        </li>
+                                        <li class="fxs_support_points">
+                                            <ol class="fxs_pivotPoints_list">
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 1">S1</abbr>
+                                                    </span>
+                                                    <span>1.1095</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 2">S2</abbr>
+                                                    </span>
+                                                    <span>1.1087</span>
+                                                </li>
+                                                <li class="fxs_pivotPoints_list_item">
+                                                    <span class="fxs_widget_custom_bold">
+                                                        <abbr title="Support 3">S3</abbr>
+                                                    </span>
+                                                    <span>1.1076</span>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <footer class="fxs_widget_footer">
+                                    <small><time datetime="2016-05-30T00:00:00">Updated May 1, 00:00 GMT</time></small>
+                                    
+                                </footer>
+                            </div>
+                        </div>
+
+                        <p>Moreover, the US treasury yields remain on a solid footing heading into the US core PCE and consumer confidence data due later in the NA session and thus, keep the downside capped in the USD/JPY pair. At the moment, USD/JPY trades modestly flat at 111.07, reversing a dip to 110.90, session lows.</p>
+
+                        <p>Apart from the US macro releases, the sentiment on the global equities and oil markets will be closely monitored for further impetus on the major.</p>
+
+
+                        <div class="fxs_bo_mini_wrapper fxs_fRight"><section class="fxs_widget_summary">
+    <!-- ctp widget -->
+    <div class="fxs_ctp_widget fxs_widget_mini">
+        <div class="fxs_widget_divider_module">
+            <div class="fxs_gauge_container">
+                <div class="fxs_insideChart_centered_legend">
+                    <div class="ctp_price_precent">
+                        <small class="fxs_widget_small">Sell</small>
+                        <span class="fxs_txt_danger fxs_widget_custom_data_lable">60%</span>
+                    </div>
+
+                    <div class="ctp_price_precent ctp_divider">
+                        <small class="fxs_widget_small">Buy</small>
+                        <span class="fxs_txt_success fxs_widget_custom_data_lable">40%</span>
+                    </div>
+                </div>
+
+                <div id="gauge_chartefed9432-77ae-5772-8ad6-e8a76da3b9f6" class="c3" style="max-height: 100px; position: relative;"><svg width="190" height="100" style="overflow: hidden;"><defs><clipPath id="c3-1464706777512-clip"><rect width="190" height="96"></rect></clipPath><clipPath id="c3-1464706777512-clip-xaxis"><rect x="-31" y="-20" width="252" height="20"></rect></clipPath><clipPath id="c3-1464706777512-clip-yaxis"><rect x="-29" y="-4" width="20" height="120"></rect></clipPath><clipPath id="c3-1464706777512-clip-grid"><rect width="190" height="96"></rect></clipPath><clipPath id="c3-1464706777512-clip-subchart"><rect width="190"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="95" y="48" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="190" height="96" style="opacity: 0;"></rect><g clip-path="url(http://localhost:12731/#c3-1464706777512-clip)" class="c3-regions" style="visibility: hidden;"></g><g clip-path="url(http://localhost:12731/#c3-1464706777512-clip-grid)" class="c3-grid" style="visibility: hidden;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="96" style="visibility: hidden;"></line></g></g><g clip-path="url(http://localhost:12731/#c3-1464706777512-clip)" class="c3-chart"><g class="c3-event-rects" style="fill-opacity: 0;"></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-Buy  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-bars c3-bars-Buy" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-Sell  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-bars c3-bars-Sell" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-Buy  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-lines c3-lines-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-areas c3-areas-Buy"></g><g class=" c3-selected-circles c3-selected-circles-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-circles c3-circles-Buy" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-Sell  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-lines c3-lines-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-areas c3-areas-Sell"></g><g class=" c3-selected-circles c3-selected-circles-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-circles c3-circles-Sell" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(95,91)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 1;"></text><path class="c3-chart-arcs-background" d="M-86.45,-1.0587071578628869e-14A86.45,86.45 0 0,1 86.45,0L80.45,0A80.45,80.45 0 0,0 -80.45,-9.852283499140457e-15Z"></path><text class="c3-chart-arcs-gauge-unit" dy=".75em" style="text-anchor: middle; pointer-events: none;"></text><text class="c3-chart-arcs-gauge-min" dx="-83.45px" dy="1.2em" style="text-anchor: middle; pointer-events: none;"></text><text class="c3-chart-arcs-gauge-max" dx="83.45px" dy="1.2em" style="text-anchor: middle; pointer-events: none;"></text><g class="c3-chart-arc c3-target c3-target-Buy  "><g class=" c3-shapes c3-shapes-Buy c3-arcs c3-arcs-Buy"><path class=" c3-shape c3-shape c3-arc c3-arc-Buy" transform="" d="M-86.45,-1.0587071578628869e-14A86.45,86.45 0 1,1 86.45,3.8391512191537914e-14L80.45,3.572697693243754e-14A80.45,80.45 0 1,0 -80.45,-9.852283499140457e-15Z" style="fill: rgb(50, 131, 114); opacity: 1;"></path></g><text dy="-.1em" class="c3-gauge-value" transform="" style="opacity: 1; text-anchor: middle; pointer-events: none; font-size: 17px;">100.0%</text></g><g class="c3-chart-arc c3-target c3-target-Sell  "><g class=" c3-shapes c3-shapes-Sell c3-arcs c3-arcs-Sell"><path class=" c3-shape c3-shape c3-arc c3-arc-Sell" transform="" d="M-86.45,-1.0587071578628869e-14A86.45,86.45 0 0,1 26.71451916371423,-82.21883583371603L24.860417197464542,-76.5124967359451A80.45,80.45 0 0,0 -80.45,-9.852283499140457e-15Z" style="fill: rgb(206, 71, 53); opacity: 1;"></path></g><text dy="-.1em" class="c3-gauge-value" transform="" style="opacity: 1; text-anchor: middle; pointer-events: none; font-size: 17px;">60.0%</text></g></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-Buy  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Buy"></g></g><g class="c3-chart-text c3-target c3-target-Sell  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Sell"></g></g></g></g><g clip-path="url(http://localhost:12731/#c3-1464706777512-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://localhost:12731/#c3-1464706777512-clip-xaxis)" transform="translate(0,96)" style="visibility: visible; opacity: 0;"><text class="c3-axis-x-label" transform="" x="190" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(95, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H190V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://localhost:12731/#c3-1464706777512-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 0;"><text class="c3-axis-y-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,89)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">60</tspan></text></g><g class="tick" transform="translate(0,79)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">65</tspan></text></g><g class="tick" transform="translate(0,69)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">70</tspan></text></g><g class="tick" transform="translate(0,59)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">75</tspan></text></g><g class="tick" transform="translate(0,49)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">80</tspan></text></g><g class="tick" transform="translate(0,39)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">85</tspan></text></g><g class="tick" transform="translate(0,29)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">90</tspan></text></g><g class="tick" transform="translate(0,19)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">95</tspan></text></g><g class="tick" transform="translate(0,9)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">100</tspan></text></g><path class="domain" d="M-6,1H0V96H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(190,0)" style="visibility: hidden; opacity: 0;"><text class="c3-axis-y2-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,96)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,87)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,78)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,68)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,58)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,49)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,40)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,30)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,20)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,11)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V96H6"></path></g></g><g transform="translate(0.5,100.5)" style="visibility: hidden;"><g clip-path="url(http://localhost:12731/#c3-1464706777512-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(http://localhost:12731/#c3-1464706777512-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" x="0" width="190" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" x="0" width="0" style="cursor: move;"></rect><g class="resize e" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize w" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="url(http://localhost:12731/#c3-1464706777512-clip-xaxis)" style="opacity: 0;"><g class="tick" transform="translate(95, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H190V6"></path></g></g><g transform="translate(0,100)" style="visibility: hidden;"></g></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+            </div>
+
+            <div class="fxs_widget_avg_col">
+                <div class="fxs_module_cols_avg">
+                    <small class="fxs_widget_small">Avg Sell Price</small>
+                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.0825</span>
+                </div>
+
+                <div class="fxs_module_cols_avg">
+                    <small class="fxs_widget_small">Avg Buy Price</small>
+                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.1301</span>
+                </div>
+            </div>
+        </div>
+        <!-- ctp barras content -->
+        <div class="fxs_widget_divider_module">
+            <span class="fxs_widget_legend">Liquidity Distribution</span>
+
+            <div id="orders_chartefed9432-77ae-5772-8ad6-e8a76da3b9f6" class="c3 fxs_widget_bars" style="max-height: 105px; position: relative;"><svg width="310" height="105" style="overflow: hidden;"><defs><clipPath id="c3-1464706777936-clip"><rect width="227.25" height="71"></rect></clipPath><clipPath id="c3-1464706777936-clip-xaxis"><rect x="-31" y="-20" width="326" height="50"></rect></clipPath><clipPath id="c3-1464706777936-clip-yaxis"><rect x="-29" y="-4" width="36" height="95"></rect></clipPath><clipPath id="c3-1464706777936-clip-grid"><rect width="227.25" height="71"></rect></clipPath><clipPath id="c3-1464706777936-clip-subchart"><rect width="227.25"></rect></clipPath></defs><g transform="translate(16.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="113.625" y="35.5" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="227.25" height="71" style="opacity: 0;"></rect><g clip-path="url(http://localhost:12731/#c3-1464706777936-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://localhost:12731/#c3-1464706777936-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="71" style="visibility: hidden;"></line></g></g><g clip-path="url(http://localhost:12731/#c3-1464706777936-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="1.5" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-1" x="3" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-2" x="3" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-3" x="3" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-4" x="3" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-5" x="3" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-6" x="3" y="0" width="30" height="71"></rect><rect class=" c3-event-rect c3-event-rect-7" x="33" y="0" width="31" height="71"></rect><rect class=" c3-event-rect c3-event-rect-8" x="64" y="0" width="2.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-9" x="66.5" y="0" width="15" height="71"></rect><rect class=" c3-event-rect c3-event-rect-10" x="81.5" y="0" width="14" height="71"></rect><rect class=" c3-event-rect c3-event-rect-11" x="95.5" y="0" width="1" height="71"></rect><rect class=" c3-event-rect c3-event-rect-12" x="96.5" y="0" width="2" height="71"></rect><rect class=" c3-event-rect c3-event-rect-13" x="98.5" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-14" x="100" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-15" x="100" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-16" x="101.5" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-17" x="103" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-18" x="103" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-19" x="104.5" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-20" x="106" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-21" x="106.5" y="0" width="1" height="71"></rect><rect class=" c3-event-rect c3-event-rect-22" x="107.5" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-23" x="108" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-24" x="108" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-25" x="108.5" y="0" width="1" height="71"></rect><rect class=" c3-event-rect c3-event-rect-26" x="109.5" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-27" x="110" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-28" x="110" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-29" x="110.5" y="0" width="1" height="71"></rect><rect class=" c3-event-rect c3-event-rect-30" x="111.5" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-31" x="112" y="0" width="0.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-32" x="112.5" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-33" x="114" y="0" width="1" height="71"></rect><rect class=" c3-event-rect c3-event-rect-34" x="115" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-35" x="115" y="0" width="1.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-36" x="116.5" y="0" width="2.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-37" x="119" y="0" width="2.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-38" x="121.5" y="0" width="52.5" height="71"></rect><rect class=" c3-event-rect c3-event-rect-39" x="174" y="0" width="51" height="71"></rect><rect class=" c3-event-rect c3-event-rect-40" x="225" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-41" x="225" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-42" x="225" y="0" width="0" height="71"></rect><rect class=" c3-event-rect c3-event-rect-43" x="225" y="0" width="1.5" height="71"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-Sell  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-bars c3-bars-Sell" style="cursor: pointer;"><path class=" c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 1,71 L1,71 L3,71 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-1 c3-bar c3-bar-1" d="M 1,71 L1,71 L3,71 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-2 c3-bar c3-bar-2" d="M 1,71 L1,7.363636363636366 L3,7.363636363636366 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-3 c3-bar c3-bar-3" d="M 1,71 L1,7.363636363636366 L3,7.363636363636366 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-4 c3-bar c3-bar-4" d="M 1,71 L1,71 L3,71 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-5 c3-bar c3-bar-5" d="M 1,71 L1,71 L3,71 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-6 c3-bar c3-bar-6" d="M 1,71 L1,7.363636363636366 L3,7.363636363636366 L3,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-7 c3-bar c3-bar-7" d="M 61,71 L61,71 L63,71 L63,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-8 c3-bar c3-bar-8" d="M 63,71 L63,71 L65,71 L65,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-9 c3-bar c3-bar-9" d="M 66,71 L66,71 L68,71 L68,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-10 c3-bar c3-bar-10" d="M 93,71 L93,71 L95,71 L95,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-11 c3-bar c3-bar-11" d="M 94,71 L94,71 L96,71 L96,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-12 c3-bar c3-bar-12" d="M 95,71 L95,71 L97,71 L97,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-13 c3-bar c3-bar-13" d="M 98,71 L98,71 L100,71 L100,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-14 c3-bar c3-bar-14" d="M 98,71 L98,71 L100,71 L100,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-15 c3-bar c3-bar-15" d="M 98,71 L98,71 L100,71 L100,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-16 c3-bar c3-bar-16" d="M 101,71 L101,71 L103,71 L103,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-17 c3-bar c3-bar-17" d="M 101,71 L101,71 L103,71 L103,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-18 c3-bar c3-bar-18" d="M 101,71 L101,71 L103,71 L103,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-19 c3-bar c3-bar-19" d="M 104,71 L104,71 L106,71 L106,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-20 c3-bar c3-bar-20" d="M 104,71 L104,71 L106,71 L106,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-21 c3-bar c3-bar-21" d="M 105,71 L105,7.363636363636366 L107,7.363636363636366 L107,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-22 c3-bar c3-bar-22" d="M 106,71 L106,7.363636363636366 L108,7.363636363636366 L108,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-23 c3-bar c3-bar-23" d="M 106,71 L106,71 L108,71 L108,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-24 c3-bar c3-bar-24" d="M 106,71 L106,7.363636363636366 L108,7.363636363636366 L108,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-25 c3-bar c3-bar-25" d="M 107,71 L107,7.363636363636366 L109,7.363636363636366 L109,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-26 c3-bar c3-bar-26" d="M 108,71 L108,7.363636363636366 L110,7.363636363636366 L110,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-27 c3-bar c3-bar-27" d="M 108,71 L108,71 L110,71 L110,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-28 c3-bar c3-bar-28" d="M 108,71 L108,71 L110,71 L110,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-29 c3-bar c3-bar-29" d="M 109,71 L109,71 L111,71 L111,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-30 c3-bar c3-bar-30" d="M 110,71 L110,7.363636363636366 L112,7.363636363636366 L112,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-31 c3-bar c3-bar-31" d="M 110,71 L110,71 L112,71 L112,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-32 c3-bar c3-bar-32" d="M 111,71 L111,7.363636363636366 L113,7.363636363636366 L113,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-33 c3-bar c3-bar-33" d="M 113,71 L113,7.363636363636366 L115,7.363636363636366 L115,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-34 c3-bar c3-bar-34" d="M 113,71 L113,7.363636363636366 L115,7.363636363636366 L115,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-35 c3-bar c3-bar-35" d="M 113,71 L113,7.363636363636366 L115,7.363636363636366 L115,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-36 c3-bar c3-bar-36" d="M 116,71 L116,71 L118,71 L118,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-37 c3-bar c3-bar-37" d="M 118,71 L118,7.363636363636366 L120,7.363636363636366 L120,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-38 c3-bar c3-bar-38" d="M 121,71 L121,71 L123,71 L123,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-39 c3-bar c3-bar-39" d="M 223,71 L223,71 L225,71 L225,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-40 c3-bar c3-bar-40" d="M 223,71 L223,71 L225,71 L225,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-41 c3-bar c3-bar-41" d="M 223,71 L223,71 L225,71 L225,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-42 c3-bar c3-bar-42" d="M 223,71 L223,7.363636363636366 L225,7.363636363636366 L225,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path><path class=" c3-shape c3-shape-43 c3-bar c3-bar-43" d="M 223,71 L223,7.363636363636366 L225,7.363636363636366 L225,71 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path></g></g><g class="c3-chart-bar c3-target c3-target-Buy  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-bars c3-bars-Buy" style="cursor: pointer;"><path class=" c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 3,71 L3,7.363636363636366 L5,7.363636363636366 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-1 c3-bar c3-bar-1" d="M 3,71 L3,7.363636363636366 L5,7.363636363636366 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-2 c3-bar c3-bar-2" d="M 3,71 L3,71 L5,71 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-3 c3-bar c3-bar-3" d="M 3,71 L3,71 L5,71 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-4 c3-bar c3-bar-4" d="M 3,71 L3,7.363636363636366 L5,7.363636363636366 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-5 c3-bar c3-bar-5" d="M 3,71 L3,7.363636363636366 L5,7.363636363636366 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-6 c3-bar c3-bar-6" d="M 3,71 L3,71 L5,71 L5,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-7 c3-bar c3-bar-7" d="M 63,71 L63,7.363636363636366 L65,7.363636363636366 L65,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-8 c3-bar c3-bar-8" d="M 65,71 L65,7.363636363636366 L67,7.363636363636366 L67,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-9 c3-bar c3-bar-9" d="M 68,71 L68,7.363636363636366 L70,7.363636363636366 L70,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-10 c3-bar c3-bar-10" d="M 95,71 L95,7.363636363636366 L97,7.363636363636366 L97,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-11 c3-bar c3-bar-11" d="M 96,71 L96,7.363636363636366 L98,7.363636363636366 L98,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-12 c3-bar c3-bar-12" d="M 97,71 L97,7.363636363636366 L99,7.363636363636366 L99,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-13 c3-bar c3-bar-13" d="M 100,71 L100,7.363636363636366 L102,7.363636363636366 L102,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-14 c3-bar c3-bar-14" d="M 100,71 L100,7.363636363636366 L102,7.363636363636366 L102,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-15 c3-bar c3-bar-15" d="M 100,71 L100,7.363636363636366 L102,7.363636363636366 L102,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-16 c3-bar c3-bar-16" d="M 103,71 L103,7.363636363636366 L105,7.363636363636366 L105,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-17 c3-bar c3-bar-17" d="M 103,71 L103,7.363636363636366 L105,7.363636363636366 L105,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-18 c3-bar c3-bar-18" d="M 103,71 L103,7.363636363636366 L105,7.363636363636366 L105,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-19 c3-bar c3-bar-19" d="M 106,71 L106,7.363636363636366 L108,7.363636363636366 L108,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-20 c3-bar c3-bar-20" d="M 106,71 L106,7.363636363636366 L108,7.363636363636366 L108,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-21 c3-bar c3-bar-21" d="M 107,71 L107,71 L109,71 L109,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-22 c3-bar c3-bar-22" d="M 108,71 L108,71 L110,71 L110,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-23 c3-bar c3-bar-23" d="M 108,71 L108,7.363636363636366 L110,7.363636363636366 L110,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-24 c3-bar c3-bar-24" d="M 108,71 L108,71 L110,71 L110,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-25 c3-bar c3-bar-25" d="M 109,71 L109,71 L111,71 L111,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-26 c3-bar c3-bar-26" d="M 110,71 L110,71 L112,71 L112,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-27 c3-bar c3-bar-27" d="M 110,71 L110,7.363636363636366 L112,7.363636363636366 L112,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-28 c3-bar c3-bar-28" d="M 110,71 L110,7.363636363636366 L112,7.363636363636366 L112,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-29 c3-bar c3-bar-29" d="M 111,71 L111,7.363636363636366 L113,7.363636363636366 L113,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-30 c3-bar c3-bar-30" d="M 112,71 L112,71 L114,71 L114,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-31 c3-bar c3-bar-31" d="M 112,71 L112,7.363636363636366 L114,7.363636363636366 L114,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-32 c3-bar c3-bar-32" d="M 113,71 L113,71 L115,71 L115,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-33 c3-bar c3-bar-33" d="M 115,71 L115,71 L117,71 L117,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-34 c3-bar c3-bar-34" d="M 115,71 L115,71 L117,71 L117,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-35 c3-bar c3-bar-35" d="M 115,71 L115,71 L117,71 L117,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-36 c3-bar c3-bar-36" d="M 118,71 L118,7.363636363636366 L120,7.363636363636366 L120,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-37 c3-bar c3-bar-37" d="M 120,71 L120,71 L122,71 L122,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-38 c3-bar c3-bar-38" d="M 123,71 L123,7.363636363636366 L125,7.363636363636366 L125,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-39 c3-bar c3-bar-39" d="M 225,71 L225,7.363636363636366 L227,7.363636363636366 L227,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-40 c3-bar c3-bar-40" d="M 225,71 L225,7.363636363636366 L227,7.363636363636366 L227,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-41 c3-bar c3-bar-41" d="M 225,71 L225,7.363636363636366 L227,7.363636363636366 L227,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-42 c3-bar c3-bar-42" d="M 225,71 L225,71 L227,71 L227,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path><path class=" c3-shape c3-shape-43 c3-bar c3-bar-43" d="M 225,71 L225,71 L227,71 L227,71 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-Sell  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-lines c3-lines-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-areas c3-areas-Sell"></g><g class=" c3-selected-circles c3-selected-circles-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-circles c3-circles-Sell" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-Buy  " style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-lines c3-lines-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-areas c3-areas-Buy"></g><g class=" c3-selected-circles c3-selected-circles-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-circles c3-circles-Buy" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(86.25,35.5)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-Sell  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Sell"></g></g><g class="c3-chart-text c3-target c3-target-Buy  " style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Buy"></g></g></g></g><g clip-path="url(http://localhost:12731/#c3-1464706777936-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://localhost:12731/#c3-1464706777936-clip-xaxis)" transform="translate(0,71)" style="visibility: visible; opacity: 1;"><text class="c3-axis-x-label" transform="" x="227.25" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(3, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0.6328</tspan></text></g><g class="tick" transform="translate(102, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">1.0777</tspan></text></g><g class="tick" transform="translate(225, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">1.63353</tspan></text></g><path class="domain" d="M0,6V0H227.25V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://localhost:12731/#c3-1464706777936-clip-yaxis)" transform="translate(0,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,71)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,65)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,59)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,52)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,46)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,40)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,33)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,27)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,21)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,14)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,8)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">1.1</tspan></text></g><path class="domain" d="M-6,1H0V71H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(227.25,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,71)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,64)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,58)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,50)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,43)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,36)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,30)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,23)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,8)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V71H6"></path></g></g><g transform="translate(16.5,105.5)" style="visibility: hidden;"><g clip-path="url(http://localhost:12731/#c3-1464706777936-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(http://localhost:12731/#c3-1464706777936-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" x="0" width="272" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" x="0" width="0" style="cursor: move;"></rect><g class="resize e" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize w" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="url(http://localhost:12731/#c3-1464706777936-clip-xaxis)" style="opacity: 1;"><g class="tick" transform="translate(3, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0.6328</tspan></text></g><g class="tick" transform="translate(102, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">1.0777</tspan></text></g><g class="tick" transform="translate(225, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">1.63353</tspan></text></g><path class="domain" d="M0,6V0H227.25V6"></path></g></g><g transform="translate(265.25,0)"><g class=" c3-legend-item c3-legend-item-Sell" style="visibility: visible; cursor: pointer;"><text x="14" y="43.5" style="pointer-events: none;">Sell</text><rect class="c3-legend-item-event" x="0" y="29.5" width="44.296875" height="18" style="fill-opacity: 0;"></rect><rect class="c3-legend-item-tile" x="0" y="34.5" width="10" height="10" style="pointer-events: none; fill: rgb(206, 71, 53);"></rect></g><g class=" c3-legend-item c3-legend-item-Buy" style="visibility: visible; cursor: pointer;"><text x="14" y="61.5" style="pointer-events: none;">Buy</text><rect class="c3-legend-item-event" x="0" y="47.5" width="44.75" height="18" style="fill-opacity: 0;"></rect><rect class="c3-legend-item-tile" x="0" y="52.5" width="10" height="10" style="pointer-events: none; fill: rgb(51, 132, 115);"></rect></g></g></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+
+        </div>
+        <!-- /ctp barras content -->
+        <!-- widget footer -->
+        <footer class="fxs_widget_footer">
+            <small><time datetime="2016-05-31T14:59:37.4477142Z">Updated May 2, 14:59 GMT</time></small>
+            <a class="fxs_btn fxs_btn_line fxs_btn_small" href="">See Full Study<i class="fa fa-angle-double-right"></i></a>
+        </footer>
+        <!-- /widget footer -->
+
+    </div>
+    <!-- /ctp widget -->
+</section>
+</div>
+
+                        <p><strong>USD/JPY Technical levels to watch</strong></p>
+
+                        <p>In terms of technicals, the immediate resistance is located at 111.36/45 (April 5 &amp; May 30 High). A break above the last, the major could test 111.91 (100-DMA). While to the downside, the immediate support is seen at 110.55/54 (5-DMA/ Daily low) and below that at 110.27/23 (daily S1/ 10-DMA).</p>
+                        <p><strong>USD/JPY Technical levels to watch</strong></p>
+
+                        <p>In terms of technicals, the immediate resistance is located at 111.36/45 (April 5 &amp; May 30 High). A break above the last, the major could test 111.91 (100-DMA). While to the downside, the immediate support is seen at 110.55/54 (5-DMA/ Daily low) and below that at 110.27/23 (daily S1/ 10-DMA).</p>
+
+                        <p>Fresh selling seen in the Japanese currency over the last hour, lifted<a href="http://www.fxstreet.com/analysis/jpy-usd-forecast/"><strong>&nbsp;USD/JPY</strong></a>back on the bids above 111 handle, while markets now await the US economic data for further incentives.</p>
+
+                        <p><strong>USD/JPY finds support above daily pivot at 110.86</strong></p>
+
+                        <p>The bulls fight back control as we progress towards the mind-European session, with the Japanese currency once again sold into increasing uncertainty surrounding Japan&rsquo;s sales tax delay announcement, while reports that Japan&#39;s Lower House rejected motion of No Confidence in ruling government, also weighed somewhat on the local currency.</p>
+
+                        <p>Moreover, the US treasury yields remain on a solid footing heading into the US core PCE and consumer confidence data due later in the NA session and thus, keep the downside capped in the USD/JPY pair. At the moment, USD/JPY trades modestly flat at 111.07, reversing a dip to 110.90, session lows.</p>
+
+                        <p>Apart from the US macro releases, the sentiment on the global equities and oil markets will be closely monitored for further impetus on the major.</p>
+
+                        <h3 class="fxs_subtitle">chart </h3>
+
+
+                        <p><strong>USD/JPY Technical levels to watch</strong></p>
+
+                        <p>In terms of technicals, the immediate resistance is located at 111.36/45 (April 5 &amp; May 30 High). A break above the last, the major could test 111.91 (100-DMA). While to the downside, the immediate support is seen at 110.55/54 (5-DMA/ Daily low) and below that at 110.27/23 (daily S1/ 10-DMA).</p>
+                        <p><strong>USD/JPY Technical levels to watch</strong></p>
+
+                        <p>In terms of technicals, the immediate resistance is located at 111.36/45 (April 5 &amp; May 30 High). A break above the last, the major could test 111.91 (100-DMA). While to the downside, the immediate support is seen at 110.55/54 (5-DMA/ Daily low) and below that at 110.27/23 (daily S1/ 10-DMA).</p>
+
+                        <p>Fresh selling seen in the Japanese currency over the last hour, lifted<a href="http://www.fxstreet.com/analysis/jpy-usd-forecast/"><strong>&nbsp;USD/JPY</strong></a>back on the bids above 111 handle, while markets now await the US economic data for further incentives.</p>
+
+                        <p><strong>USD/JPY finds support above daily pivot at 110.86</strong></p>
+                        <div class="fxs_chart_container fxs_chart_bo_mini fxs_fRight">
+                            <img src="http://editorial.fxstreet.com/charts/fxs-3212164_20160531133559.png" style="-webkit-user-select: none">
+                        </div>
+
+                        <p>The bulls fight back control as we progress towards the mind-European session, with the Japanese currency once again sold into increasing uncertainty surrounding Japan&rsquo;s sales tax delay announcement, while reports that Japan&#39;s Lower House rejected motion of No Confidence in ruling government, also weighed somewhat on the local currency.</p>
+
+                        <p>Moreover, the US treasury yields remain on a solid footing heading into the US core PCE and consumer confidence data due later in the NA session and thus, keep the downside capped in the USD/JPY pair. At the moment, USD/JPY trades modestly flat at 111.07, reversing a dip to 110.90, session lows.</p>
+
+                        <p>Apart from the US macro releases, the sentiment on the global equities and oil markets will be closely monitored for further impetus on the major.</p>
+
+
+                        <h3 class="fxs_subtitle">sentiment </h3>
+
+                        <p>The bulls fight back control as we progress towards the mind-European session, with the Japanese currency once again sold into increasing uncertainty surrounding Japan&rsquo;s sales tax delay announcement, while reports that Japan&#39;s Lower House rejected motion of No Confidence in ruling government, also weighed somewhat on the local currency.</p>
+
+                        <p>Moreover, the US treasury yields remain on a solid footing heading into the US core PCE and consumer confidence data due later in the NA session and thus, keep the downside capped in the USD/JPY pair. At the moment, USD/JPY trades modestly flat at 111.07, reversing a dip to 110.90, session lows.</p>
+
+                        <p>Apart from the US macro releases, the sentiment on the global equities and oil markets will be closely monitored for further impetus on the major.</p>
+
+                        <div class="fxs_bo_default_wrapper fxs_fLeft">
+                            <section class="fxs_widget_summary">
+                                <table class="fxs_table_index fxs_table fxs_sentimental_widget">
+                                    <thead>
+                                        <tr>
+                                            <th>&nbsp;</th>
+
+                                            <th>TREND INDEX</th>
+
+                                            <th>OB/OS INDEX</th>
+
+                                            <th>VOLATILY INDEX</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">15M</th>
+                                            <td>
+                                                <span class="fxs_txt_danger">Bearish</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_neutral">Neutral</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_warning">
+                                                    <span>High</span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1H</th>
+                                            <td>
+                                                <span class="fxs_txt_success">Slightly Bullish</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_warning">Overbought</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_warning">
+                                                    <span>High</span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4H</th>
+                                            <td>
+                                                <span class="fxs_txt_danger">Bearish</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_neutral">Neutral</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_warning">
+                                                    <span>Low</span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1D</th>
+                                            <td>
+                                                <span class="fxs_txt_success">Bullish</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_neutral">Neutral</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_neutral">
+                                                    <span>Shrinking</span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1W</th>
+                                            <td>
+                                                <span class="fxs_txt_success">Bullish</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_neutral">Neutral</span>
+                                            </td>
+                                            <td>
+                                                <span class="fxs_txt_neutral">
+                                                    <span>Shrinking</span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td class="fxs_widget_footer" colspan="4">
+                                                <small><time datetime="2016-03-16T13:15:00">Updated Mar 3, 13:15 GMT</time></small>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </section>   
+                        </div>
+                        <p><strong>USD/JPY Technical levels to watch</strong></p>
+
+                        <p>In terms of technicals, the immediate resistance is located at 111.36/45 (April 5 &amp; May 30 High). A break above the last, the major could test 111.91 (100-DMA). While to the downside, the immediate support is seen at 110.55/54 (5-DMA/ Daily low) and below that at 110.27/23 (daily S1/ 10-DMA).</p>
+                        <p><strong>USD/JPY Technical levels to watch</strong></p>
+
+                        <p>In terms of technicals, the immediate resistance is located at 111.36/45 (April 5 &amp; May 30 High). A break above the last, the major could test 111.91 (100-DMA). While to the downside, the immediate support is seen at 110.55/54 (5-DMA/ Daily low) and below that at 110.27/23 (daily S1/ 10-DMA).</p>
+                    </section>
+
+                    <!-- Loading more content msg -->
+                    <div class="fxs_feedbackLoading_msg" style="display: block;">
+                        <i class="fa fa-refresh fa-spin"></i>
+                        <span class="fxs_loadingStatus">Loading More content</span>
+                    </div>
+                    <div class="fxs_feedbackLoading_msg">
+                        <span class="fxs_loadingStatus">No more content to load</span>
+                    </div>
+                    <!-- /Loading more content msg -->
+
+                </div>
+                <!-- /The content rail -->
+            </div>
+
+            <!-- ListView -->
+            <section class="fxs_listView" id="cbp-spmenu-s3">
+
+                <header class="fxs_listview_subnav">
+                    <h2 class="fxs_helperLabel_title">Latest News</h2>
+
+                    <!-- Typeahead -->
+                    <div class="fxs_filter active fxs_filter_modified">
+                        <form>
+                            <div class="fxs_typeaheadContainer">
+                                <label for="q" class="fxs_btn_filter" title="Search in news">
+                                    <i class="fa fa-search"></i>
+                                    <span class="fxs_skip">Search in news</span>
+                                </label>
+                                <div class="fxs_queryResults">
+                                    <!-- Contador de resultados: activar cuando se selecciona uno -->
+                                    <span class="fxs_queryResults_label">1238 Results</span>
+                                    <!-- /Contador de resultados -->
+                                    <button type="reset" title="Clear search" class="fxs_dismissQuery fxs_dismissQuery_disabled"><i class="fa fa-times-circle"></i></button>
+                                </div>
+                                <div class="fxs_typeaheadField">
+                                    <div class="fxs_typeaheadQuery">
+                                        <input id="q" name="q" type="search" placeholder="Search in news" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /Typeahead -->
+
+                </header>
+                <nav class="fxs_listViewRail fxs_listViewRail_modified">
+                    <a href="#" class="fxs_listView_newItemsAlert">
+                        See 2 New Updates
+                    </a>
+                    <ol class="fxs_listView_blockWrapper">
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">EUR/USD Forecast: Shy upward correction underway</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:32">22 <abbr title="Minutes">min</abbr> ago</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_adContiner">
+                            <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                            <img class="fxs_hidden_xs fxs_visible_m EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://www.denimblog.com/wp-content/uploads/2009/08/250x250.png" width="250" height="250">
+                            <img class="fxs_visible_xs EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://yaffacdn.s3.amazonaws.com/live/adnews/images/dmImage/SourceImage/opPICTURE06.jpg" width="320" height="49">
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://www.placecage.com/300/200" alt="Cage">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/ERmerV5laR2Zq/giphy.gif" alt="Cute cat">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://www.placecage.com/c/460/300" alt="Cage">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:28">Sept 13, 09:28 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:27">Sept 13, 09:27 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 09:25">Sept 13, 09:25 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 08:12">Sept 13, 08:12 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-13 08:00">Sept 13, 08:00 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-12 09:25">Sept 12, 09:25 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="fxs_listView_item">
+                            <article class="fxs_clearfix">
+                                <figure class="fxs_listView_squareImage">
+                                    <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                                </figure>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="/">Some awesome tittle with many fucking words and some stunning content</a>
+                                    </h3>
+                                    <address class="fxs_entry_metaInfo">
+                                        <span class="fxs_article_author">FXStreet</span> | <time pubdate="" datetime="2015-09-12 09:12">Sept 12, 09:12 UTC</time>
+                                    </address>
+                                </div>
+                            </article>
+                        </li>
+                    </ol>
+                    <div class="fxs_feedbackLoading_msg">
+                        <i class="fa fa-refresh fa-spin"></i>
+                        <span class="fxs_loadingStatus">Loading More content</span>
+                    </div>
+                    <div class="fxs_feedbackLoading_msg">
+                        <span class="fxs_loadingStatus">No more content to load</span>
+                    </div>
+                </nav>
+                <div class="fxs_stickyAd_sidebar">              
+                    <img src="../../img/imgad.png" border="0" width="320" height="65" alt="" class="img_ad">
+                </div>
+            </section>
+            <!-- /ListView -->
+            
+            <!-- Sidebar right -->
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
+
+            <!-- Timezones -->
+            <div class="fxs_pageSidebar fxs_timezone_items">
+                <div class="fxs_timezone_nav">
+                    <span class="fxs_helperLabel_title">Change timezone</span>
+                    <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                        Cancel
+                    </button>
+                </div>
+                <div class="fxs_nav_menu fxs_timezone_hours">
+
+                    <ol>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+                
+            </div>
+            <!-- /Timezones -->
+
+            <!-- Site footer -->
+            <footer class="fxs_footer">
+                <div class="fxs_copy_disclaimer">
+                    <div class="fxs_terms_nav">
+                        <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                        <ul class="fxs_subnavInlined_list">
+
+                            <!-- Button DropUp 1 -->
+                            <li class="fxs_btn_group">
+                                <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">About <i class="fa fa-caret-up"></i></button>
+                                <ul class="fxs_dropdownList dropup">
+                                    <li><a href="" title="">About fxstreet</a></li>
+                                    <li><a href="" title="">Advertise with us</a></li>
+                                </ul>
+                            </li>
+                            <!-- /Button DropUp 1-->
+
+                            <li><a href="#" class="fxs_mutedLink">Terms and conditions</a></li>
+                            <li><a href="#" class="fxs_mutedLink">Privacy policy</a></li>
+                            <li><a href="#" class="fxs_mutedLink">Contact us</a></li>
+                            <li><a href="#" class="fxs_mutedLink">Site map</a></li>
+
+                            <!-- Button DropUp 2-->
+                            <li class="fxs_btn_group">
+                                <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                    
+                                <ul class="fxs_dropdownList dropup">
+                                    <li class="fxs_dropdownHeader">Edition</li>
+                                    <li><a href="#">Yсский</a></li>
+                                    <li><a href="#">Español</a></li>
+                                    <li><a href="#">Deutsch</a></li>
+                                    <li><a href="#">Français</a></li>
+                                    <li class="fxs_divider_third">&nbsp;</li>
+                                    <li class="fxs_dropdownHeader">Other sites</li>
+                                    <li><a href="#">体中文</a></li>
+                                    <li><a href="#">繁體中文</a></li>
+                                    <li><a href="#">Русский</a></li>
+                                    <li><a href="#">Indonesia</a></li>
+                                    <li><a href="#">العربية</a></li>
+                                    <li><a href="#">Italiano</a></li>
+                                    <li><a href="#">Português</a></li>
+                                    <li><a href="#">Magyar</a></li>
+                                    <li><a href="#">Türkçe</a></li>
+                                    <li><a href="#">Tiếng Việt</a></li>
+                                    <li><a href="#">한국어</a></li>
+                                </ul>
+                            </li>
+                            <!-- /Button DropUp 2-->
+
+                        </ul>
+                    </div>
+                    <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                    <div class="fxs_disclaimer_block">
+                        <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                        <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                        <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- /Site footer -->
+
+        </div>
+        <!-- /The wrapper -->
+        
+
+        <script src="../../js/jquery-1.11.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../js/bootstrap.min.js"></script>
+
+        <script src="../../js/classie.js"></script>
+        <script src="../../js/jquery.typeahead.min.js"></script>
+        <script src="../../js/jquery.pin.js" sync></script>
+        <script src="../../js/site.js" sync></script>
+
+    </body>
+
+</html>
