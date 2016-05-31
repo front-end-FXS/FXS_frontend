@@ -134,8 +134,10 @@ strong {
     }
 }
 .fxs_scollable_box{
-    max-height:100px;
-    overflow-y: auto;
+    overflow: auto;
+    resize:vertical;
+    border:1px solid;
+    max-height:100px
 }
  
 .cbp-spmenu-left {
@@ -1476,6 +1478,9 @@ strong {
 }
 .cke_button__forecast_cke_icon{
     background: url(../../scripts/ckeditor/plugins/widgets/icons/forecast_cke.png) no-repeat!important;
+}
+.cke_button__lastcandle_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/lastcandle_cke.png) no-repeat!important;
 }
 // ctp signals
 .ctp-filter-form{
