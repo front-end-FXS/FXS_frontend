@@ -127,8 +127,10 @@ strong {
   background-color: #ee970c;
 }
 .fxs_scollable_box {
+  overflow: auto;
+  resize: vertical;
+  border: 1px solid;
   max-height: 100px;
-  overflow-y: auto;
 }
 .cbp-spmenu-left {
   left: -260px;
@@ -1334,6 +1336,9 @@ strong {
 }
 .cke_button__forecast_cke_icon {
   background: url(../../scripts/ckeditor/plugins/widgets/icons/forecast_cke.png) no-repeat !important;
+}
+.cke_button__lastcandle_cke_icon {
+  background: url(../../scripts/ckeditor/plugins/widgets/icons/lastcandle_cke.png) no-repeat !important;
 }
 .ctp-filter-form {
   max-width: 900px;
