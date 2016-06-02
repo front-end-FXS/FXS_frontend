@@ -986,8 +986,12 @@
   margin-left:5px;
   a{
     color:@light_3_clr;
+    font-size: @txt_size_xsmall;
     &:hover{
-      color:@lightest_clr;
+      color:@lightest_clr; 
+    }
+    @media(min-width:@screen-s){
+      font-size: @txt_defaultsize_rem;
     }
   }
 }

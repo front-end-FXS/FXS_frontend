@@ -2134,9 +2134,15 @@ width:calc(100% - 320px);
 }
 .fxs_site_clock a {
   color: #dddedf;
+  font-size: 0.8rem;
 }
 .fxs_site_clock a:hover {
   color: #ffffff;
+}
+@media (min-width: 680px) {
+  .fxs_site_clock a {
+    font-size: 1rem;
+  }
 }
 .fxs_shareOptions_boxed {
   font-size: 5px;
@@ -3908,8 +3914,7 @@ height:calc(100% - 35px);
 .fxs_header .fxs_nav_menu a {
   border-bottom-color: transparent;
 }
-.fxs_header .fxs_nav_menu,
-.fxs_header .fxs_socialLinks_nav {
+.fxs_header .fxs_nav_menu {
   display: none;
 }
 @media (min-width: 1150px) {
