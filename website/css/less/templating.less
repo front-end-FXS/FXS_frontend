@@ -583,7 +583,7 @@ body.cbp-spmenu-push-toright{
 .fxs_listViewRail {
   &:extend(.fxs_scrollableContent all);
   position: absolute;
-  top: @base_module_size;
+  top: @base_module_size + 1;
   width: 100%;
   .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
   @media (min-width: @screen-l) {
@@ -726,7 +726,6 @@ body.cbp-spmenu-push-toright{
     }
   }
 }
-
 .fxs_filter{
    &.fxs_filter_modified{
     top:@base_module_size + 1px;
@@ -759,6 +758,10 @@ body.cbp-spmenu-push-toright{
     top:@base_module_size + 1px;
     border-bottom:1px solid @light_4_clr;
   }
+  &.fxs_advanced_filter{
+    position:relative;
+    border-bottom: 1px solid @light_4_clr; 
+  }
   &:extend(.fxs_transition);
   position: absolute;
   top: 0;
@@ -782,7 +785,7 @@ body.cbp-spmenu-push-toright{
 }
 
 // Filter buttons
-.fxs_btn_filter, .fxs_dismissQuery {
+.fxs_btn_filter, .fxs_dismissQuery, .fxs_rates_addPair {
   .fxs_btn_properties(none; @base_module_size; 0; 0);
   background-color: transparent;
   color: @dark_3_clr;
@@ -792,7 +795,7 @@ body.cbp-spmenu-push-toright{
   &:hover { .opacity(.75); }
 }
 
-.fxs_dismissQuery.fxs_btn {
+.fxs_dismissQuery.fxs_btn, .fxs_rates_addPair.fxs_btn {
   width: auto;
   padding: 0 1rem;
   font-size: @txt_size_small;
@@ -805,7 +808,7 @@ body.cbp-spmenu-push-toright{
   top: 0;
   z-index: 100;
 }
-.fxs_dismissQuery{ 
+.fxs_dismissQuery, .fxs_rates_addPair{ 
   .animation(fadeIn 0.5s ease-in); 
   &.fxs_dismissQuery_disabled{
     display: none;
@@ -842,6 +845,24 @@ body.cbp-spmenu-push-toright{
   }
 }
 
+// query rates and charts results
+
+.fxs_rates_filter_list{
+  li{
+    font-size: @txt_size_small;
+    font-weight: 700;
+    margin-bottom: 5px;
+    div{
+      min-width:65px;
+      display: inline-block;
+    }
+  }
+  .fa-minus-circle{
+    color:@error_clr;
+    cursor: pointer;
+  }
+}
+
 // TYPEAHEAD
 .fxs_typeaheadContainer {
   position: relative;
@@ -853,7 +874,6 @@ body.cbp-spmenu-push-toright{
 .fxs_typeaheadQuery {
   background: @lightest_clr;
   position: relative;
-  z-index: 10;
 }
 
 // Typeahead results list
@@ -908,7 +928,7 @@ body.cbp-spmenu-push-toright{
 //////////////////////////
 // Filter rail in listView
 
-.fxs_filter_rail { z-index: 1; }
+.fxs_filter_rail { z-index: 2; }
 
 .fxs_filter_rail_container {
   &:extend(.fxs_listView_space all);

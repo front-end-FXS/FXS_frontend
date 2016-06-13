@@ -70,6 +70,11 @@ $(document).ready(function () {
         indexes: ["DB FTSE MIB FUTURES", "DB DOW JONES FUTURES", "DB NASDAQ 100 FUTURES", "DB S&P 500 FUTURES", "DB SMI FUTURES", "DB EURO STOXX 50 FUTURES", "DB DAX FUTURES", "DB NIKKEI 225 FUTURES"]
     };
 
+    var ratesFilter = {
+        pairs: ["EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+            "NZD/USD", "GBP/JPY"]
+    }
+
     $('#q').typeahead({
         minLength: 1,
         order: "asc",
@@ -109,6 +114,23 @@ $(document).ready(function () {
             },
             Indexes: {
                 data: rates.indexes,
+                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
+            }
+        },
+        debug: true
+    });
+
+    $('#f').typeahead({
+        minLength: 1,
+        order: "asc",
+        group: true,
+        groupMaxItem: 6,
+        hint: true,
+        dropdownFilter: false,
+        emptyTemplate: 'No result for "{{query}}"',
+        source: {
+            pairs: {
+                data: ratesFilter.pairs,
                 template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
             }
         },
@@ -287,24 +309,38 @@ $(document).ready(function () {
         disableOther('showLeftPush');
     });
 
+    /////////////////////// CHAPUZON /////////////////////////////////
 
-
-    $('.fxs_typeheadContainer_custom').focusin(function(){
+    // SEARCH CLOSE BUTON simulate focus in and out
+    /*$('.fxs_typeheadContainer_custom').focusin(function(){
         $('.fxs_dismissQuery').removeClass('fxs_dismissQuery_disabled');
     })
 
     $('.fxs_queryResults').on('click', function(){
         $('.fxs_dismissQuery').addClass('fxs_dismissQuery_disabled');
+    })*/
+
+    // FILTER CLOSE BUTTON simulate focus in and focus out
+    $('.fxs_typeheadContainer_custom').focusin(function(){
+        $('.fxs_rates_addPair').removeClass('fxs_dismissQuery_disabled');
+    })
+
+    $('.fxs_queryResults').on('click', function(){
+        $('.fxs_rates_addPair').addClass('fxs_dismissQuery_disabled');
+    })
+
+    var sticky = new Waypoint.Sticky({
+      element: $('.basic-sticky-example')[0]
     })
 
 
     // sticky
     // disable when sidebar is active
-    $('#showRightPush').on('click',function(){
+    /*$('#showRightPush').on('click',function(){
         $(".pinned" ).toggle();
     })
     $(".pinned").pin({
         containerSelector: ".container", minWidth: 940, padding: {top: 0, bottom: 10}
-    })
+    })*/
 
 });
