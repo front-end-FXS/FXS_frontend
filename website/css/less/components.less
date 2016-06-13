@@ -1297,6 +1297,16 @@
     &:first-child { display: none; }
   }
 }
+// rule to display just first letter in mobile devices
+.fxs_first_char{
+  font-weight: normal;
+  visibility:hidden;
+  display: inline-block;
+  &:first-letter{
+    visibility: visible!important;
+    font-weight: 700;
+  }
+}
 
 // List table split widget (COT & Bullish index)
 .fxs_list_table_item_split_widget {

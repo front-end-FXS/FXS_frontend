@@ -1907,6 +1907,15 @@ width:calc(100% - 320px);
 .fxs_price_ohl span:first-child {
   display: none;
 }
+.fxs_first_char {
+  font-weight: normal;
+  visibility: hidden;
+  display: inline-block;
+}
+.fxs_first_char:first-letter {
+  visibility: visible!important;
+  font-weight: 700;
+}
 .fxs_list_table_item_split_widget {
   margin-bottom: 0;
 }
