@@ -121,6 +121,10 @@
           &:last-child {
             display: table-cell;
           }
+          &:first-child {
+            padding-left: 0;
+            width: @base_module_size*2;
+          }
         }
       }
       .fxs_widget_price_value {
@@ -134,27 +138,70 @@
       .fxs_price_bidask, .fxs_price_change {
         display: table-cell;
         vertical-align: middle;
-        min-width:120px;
       }
       .fxs_price_ohl {
         font-size: @txt_size_xsmall;
         span {
-          padding-left: 0.5em;
+          padding-left: 0.1em;
         }
         text-align: right;
       }
     }
   }
 
-  &.fxs_widget_big {
+  &.fxs_widget_big, &.fxs_widget_default {
+    .fxs_price_ohl{
+      span{
+        margin-left: 0.1em;
+        padding-left: 0.1em;
+        &:first-child{
+          display: inline-block;
+        }
+      }
+    }
     @media(min-width:@screen-m) {
       .fxs_price_ohl {
-        font-size: @txt_size_small;
+        font-size: @txt_size_xsmall;
         span {
           display: table-cell;
           vertical-align: middle;
+          margin-left: 0.2em;
+          padding-left: 0.2em;
         }
       }
+    }
+
+    .fxs_price_change{ 
+      padding-left:5px!important; 
+      font-size: @txt_size_xsmall; 
+      min-width: 100px;
+      @media(min-width:@screen-l){
+        font-size: @txt_size_small;
+      }
+      @media(min-width:@screen-hd){
+        min-width:120px; 
+      }
+    }
+    .fxs_price_bidask{
+      min-width:70px!important;
+      font-size: @txt_size_xsmall;
+      .fxs_price_big_figure{
+        font-size: @txt_size_small;
+      }
+      @media(min-width:@screen-hd){
+        min-width: 120px!important;
+        font-size: inherit;
+        .fxs_price_big_figure{
+          font-size: @txt_size_xlarge;
+        }
+      } 
+    }
+  }
+  .fxs_first_char{
+    width:10px;
+    @media(min-width:@screen-hd){
+      width:auto;
+      visibility: visible!important;
     }
   }
 }

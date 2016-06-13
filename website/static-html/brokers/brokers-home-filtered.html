@@ -166,7 +166,10 @@
         </div>
         <!-- /Sidebar left -->
         
-        <!-- Topics subnav -->
+
+        <div class="fxs_content" id="fxs_content">
+
+         <!-- Topics subnav -->
         <nav class="fxs_content_subnav">
             <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Brokers</a>
             <div class="fxs_topics_nav">
@@ -179,8 +182,6 @@
             </div>
         </nav>
         <!-- /Topics subnav -->
-
-        <div class="fxs_content" id="fxs_content">
 
             <!-- The content rail -->
             <div class="fxs_contentView">
@@ -1036,26 +1037,24 @@
             <header class="fxs_listview_subnav">
                 <h2 class="fxs_helperLabel_title">All brokers</h2>
                 <div class="fxs_filter">
-                    
-                        <div class="fxs_typeaheadContainer">
-                            <button type="button" class="fxs_btn_filter" title="Filter results" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
-                                <!-- 2 Active filters!!! -->
-                                <span class="fxs_badge">2</span>
-                                <!-- /2 Active filters!!! -->
+                    <div class="fxs_typeaheadContainer">
+                        <button type="button" class="fxs_btn_filter" title="Filter results" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
+                            <!-- 2 Active filters!!! -->
+                            <span class="fxs_badge">2</span>
+                            <!-- /2 Active filters!!! -->
 
-                                <i class="fa fa-sliders"></i>
-                                <span class="fxs_skip">Filter results</span>
+                            <i class="fa fa-sliders"></i>
+                            <span class="fxs_skip">Filter results</span>
+                        </button>
+                        <div class="fxs_queryResults">
+                            <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
+                                Cancel
                             </button>
-                            <div class="fxs_queryResults">
-                                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="collapse" data-target="#brokers-filter-block" aria-controls="brokers-filter-block">
-                                    Cancel
-                                </button>
-                            </div>
-                            <div class="fxs_typeaheadField fxs_txt_center">
-                                <span class="fxs_helperLabel_title">Filter brokers</span>
-                            </div>
                         </div>
-                    
+                        <div class="fxs_typeaheadField fxs_txt_center">
+                            <span class="fxs_helperLabel_title">Filter brokers</span>
+                        </div>
+                    </div>
                 </div>
             </header>
             <div id="brokers-filter-block" class="fxs_listViewRail fxs_filter_rail collapse">
