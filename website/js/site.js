@@ -329,11 +329,11 @@ $(document).ready(function () {
         $('.fxs_rates_addPair').addClass('fxs_dismissQuery_disabled');
     })
 
-    var sticky = new Waypoint.Sticky({
-      element: $('.basic-sticky-example')[0]
-    })
+    $('.sticky').fixTo('.sticky-holder',{
+        top: 130
+    });
 
-
+    //$('.sticky').fixTo('.sticky-holder');
     // sticky
     // disable when sidebar is active
     /*$('#showRightPush').on('click',function(){
