@@ -159,7 +159,7 @@
             <!-- ListView -->
             <section class="fxs_listView" id="cbp-spmenu-s3">
                 <header class="fxs_listview_subnav">
-                    <h2 class="fxs_helperLabel_title">LATEST RATES & CHARTS</h2>
+                    <h2 class="fxs_helperLabel_title">LATEST RATES & CHARTS <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="breve texto" data-original-title="breve texto explicativo"></i></h2>
 
                     <!-- ///////////////////////////  filter button  /////////////////////////// -->
 
@@ -179,41 +179,15 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- ///////////////////////////  filter button  /////////////////////////// -->
-
-                    <!-- Typeahead -->
-                    <div class="fxs_filter_new active fxs_filter_modified">
-                        <form>
-                            <div class="fxs_typeaheadContainer fxs_typeheadContainer_custom">
-                                <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
-                                    <i class="fa fa-search"></i>
-                                    <span class="fxs_skip">Search in Rates & Charts</span>
-                                </label>
-                                <div class="fxs_queryResults">
-                                    <!-- Contador de resultados: activar cuando se agregan items-->
-                                    <span class="fxs_queryResults_label">4 items added from filter</span>
-                                    <!-- /Contador de resultados -->
-                                    <button type="reset" title="Clear search" class="fxs_dismissQuery fxs_dismissQuery_disabled"><i class="fa fa-times-circle"></i></button>
-                                </div>
-                                <div class="fxs_typeaheadField">
-                                    <div class="fxs_typeaheadQuery">
-                                        <input id="q" name="q" type="search" placeholder="Search in rates and charts" autocomplete="off">
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- /Typeahead -->
                 </header>
 
                 <!-- ///////////////////////////  filter and results /////////////////////////// -->
 
                 <div id="rates-filter-block" class="fxs_listViewRail fxs_filter_rail collapse">
                     <!-- rates typeahead filter -->
-                    <div class="fxs_filter_new fxs_rates_filter active">
+                    <div class="fxs_filter_new fxs_advanced_filter active" id="fxs_typeahead">
                         <form>
-                            <div class="fxs_typeaheadContainer fxs_typeheadContainer_custom">
+                            <div class="fxs_typeaheadContainer">
                                 <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
                                     <i class="fa fa-search"></i>
                                     <span class="fxs_skip">Add pairs to list</span>
@@ -369,138 +343,8 @@
                                 </div>
                             </div>>
                         </li>
-                        <li class="fxs_listView_item">
-                            <div class="fxs_widget_price fxs_widget_price_listView price_down">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0026</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </span>
-
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="fxs_listView_item">
-                            <div class="fxs_widget_price fxs_widget_price_listView price_down">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0026</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </span>
-
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="fxs_listView_item">
-                            <div class="fxs_widget_price fxs_widget_price_listView price_up">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0032</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </span>
-
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="fxs_listView_item">
-                            <div class="fxs_widget_price fxs_widget_price_listView price_down">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0026</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </span>
-
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="fxs_listView_item">
-                            <div class="fxs_widget_price fxs_widget_price_listView price_down">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0026</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </span>
-
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="fxs_listView_item">
-                            <div class="fxs_widget_price fxs_widget_price_listView price_up">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0032</span>
-                                        <span class="fxs_change_percent">(-0.15%)</span>
-                                    </span>
-                                </span>
-
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                        </li>
+                    
+                    
                     </ol>
                     <div class="fxs_feedbackLoading_msg">
                         <i class="fa fa-refresh fa-spin"></i>
