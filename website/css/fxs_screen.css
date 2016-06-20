@@ -1021,6 +1021,9 @@ fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.c
 .fxs_btn_block.fxs_sidebar_language {
   margin: 0;
 }
+.fxs_btn_medium_block {
+  width: 40%;
+}
 .fxs_block_xs_to_inline_s_btn {
   display: block;
   width: 100%;
@@ -1690,7 +1693,8 @@ width:calc(100% - 320px);
   float: left;
   margin-right: 1rem;
 }
-.fxs_floatingMedia_textBody {
+.fxs_floatingMedia_textBody,
+.fxs_headline_title_ctrl {
   overflow: hidden;
 }
 .fxs_squareImage,
@@ -3080,6 +3084,7 @@ h5 a:hover,
   }
 }
 .fxs_headline_medium,
+.fxs_headline_title_ctrl,
 .fxs_entryFeatured_med .fxs_entryHeadline,
 .fxs_live_event_module .fxs_entryHeadline {
   font-size: 1.2rem;
@@ -3087,6 +3092,7 @@ h5 a:hover,
 @media (min-width: 680px) {
   .fxs_headline_from_tiny_to_medium,
   .fxs_headline_medium,
+  .fxs_headline_title_ctrl,
   .fxs_entryFeatured_med .fxs_entryHeadline,
   .fxs_entryFeatured_imgSide .fxs_entryHeadline,
   .fxs_live_event_module .fxs_entryHeadline {
@@ -3097,6 +3103,7 @@ h5 a:hover,
 @media (min-width: 1024px) {
   .fxs_headline_from_tiny_to_medium,
   .fxs_headline_medium,
+  .fxs_headline_title_ctrl,
   .fxs_entryFeatured_med .fxs_entryHeadline,
   .fxs_entryFeatured_imgSide .fxs_entryHeadline,
   .fxs_live_event_module .fxs_entryHeadline {
@@ -3115,6 +3122,9 @@ h5 a:hover,
     font-size: 2.64rem;
     line-height: 2.75rem;
   }
+}
+.fxs_headline_title_ctrl {
+  color: #ffffff;
 }
 .fxs_headline_hero,
 .fxs_pricing_table_value {
