@@ -429,6 +429,15 @@
   margin: 1px 5px 0 0;
   padding: 1px 5px 0;
 }
+.fxs_alertTitle_dissmisible{
+  .fxs_alertLabel{
+    display: none;
+    @media(min-width:@screen-s){
+      display: inherit;
+    }
+  }
+
+}
 
 .fxs_label_featured  {
   .fxs_label_variants(@highlight_clr; @lightest_clr);
