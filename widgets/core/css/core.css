@@ -921,6 +921,14 @@ fieldset[disabled] .fxs_pageSidebar .fxs_btn_line.active {
   margin: 1px 5px 0 0;
   padding: 1px 5px 0;
 }
+.fxs_alertTitle_dissmisible .fxs_alertLabel {
+  display: none;
+}
+@media (min-width: 680px) {
+  .fxs_alertTitle_dissmisible .fxs_alertLabel {
+    display: inherit;
+  }
+}
 .fxs_label_featured {
   background-color: #e4871b;
   color: #ffffff;
