@@ -43,6 +43,9 @@ strong {
   font-weight: 800;
   color: #333;
 }
+.fxs_custom_panel .panel-body {
+  padding-bottom: 0px;
+}
 .profile-pic {
   width: 65px;
   height: 65px;
@@ -125,12 +128,6 @@ strong {
   text-decoration: none;
   color: #1B1E24;
   background-color: #ee970c;
-}
-.fxs_scollable_box {
-  overflow: auto;
-  resize: vertical;
-  border: 1px solid #ccc;
-  height: 100px;
 }
 .cbp-spmenu-left {
   left: -260px;
@@ -353,13 +350,6 @@ strong {
 .workingForm input:hover {
   cursor: default !important;
   border-radius: 0px 4px 4px 0px !important;
-}
-.workingForm .input-group.fxs_wide_field {
-  display: block;
-}
-.workingForm .input-group.fxs_wide_field textarea {
-  min-height: 100px;
-  resize: vertical;
 }
 .workingForm .input-group:hover input {
   border: 1px solid #B1B1B1 !important;
@@ -1176,8 +1166,8 @@ strong {
 .table > tbody > tr > td {
   word-break: break-all;
 }
-.fxs_localization_result .col-md-4 {
-  padding-bottom: 5px;
+.fxs_localization_form .table > tbody > tr > td {
+  word-break: normal;
 }
 .fxs_add_domain {
   position: relative;
@@ -1329,17 +1319,8 @@ strong {
 .cke_button__sentiment_cke_icon {
   background: url(../../scripts/ckeditor/plugins/widgets/icons/sentiment_cke.png) no-repeat !important;
 }
-.cke_button__ctp_cke_icon {
+.cke_button__ctp_icon {
   background: url(../../scripts/ckeditor/plugins/widgets/icons/ctp_cke.png) no-repeat !important;
-}
-.cke_button__pivotpoints_cke_icon {
-  background: url(../../scripts/ckeditor/plugins/widgets/icons/pivotpoints_cke.png) no-repeat !important;
-}
-.cke_button__forecast_cke_icon {
-  background: url(../../scripts/ckeditor/plugins/widgets/icons/forecast_cke.png) no-repeat !important;
-}
-.cke_button__lastcandle_cke_icon {
-  background: url(../../scripts/ckeditor/plugins/widgets/icons/lastcandle_cke.png) no-repeat !important;
 }
 .ctp-filter-form {
   max-width: 900px;
