@@ -562,6 +562,10 @@ body.cbp-spmenu-push-toright{
     }
     @media (min-width: @screen-m) { .translate(0); }
   }
+  .fxs_listView_item_high{
+    padding-top: 0px;
+    padding-bottom:0px;
+  }
 }
 
 // Absolute dimension spaces in layout
@@ -943,8 +947,8 @@ body.cbp-spmenu-push-toright{
   display: none;
   background-color: @lightest_clr;
   border-top: 1px solid @light_5_clr;
-  position: fixed;
-  bottom: 60px;
+  position: absolute;
+  bottom: 100px;
   padding: 0.5rem 1rem;
   .in & {
     .animation(fadeInUp 0.33s ease-in);
