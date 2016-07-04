@@ -51,7 +51,7 @@
                 </ul>
             </nav>
 
-            <!-- Social & RSS links -->
+            <!-- Social & RSS links
             <div class="fxs_socialLinks_nav">
                 <ul class="fxs_shareOptions_boxed">
                     <li class="fxs_socialMedia_item">
@@ -88,6 +88,21 @@
                                 <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
                             </li>
                         </ul>
+                    </li>
+                </ul>
+            </div>
+           Social & RSS links -->
+
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_site_clock">
+                        <a href="#" title="change timezone" class="fxs_timezone_btn_navbar" id="showTimezoneClock">
+                            <span class="fxs_event_time">
+                                <i class="fa fa-clock-o"></i> 
+                                <time datetime="2015-12-01 12:44:00">12:44:29 UTC</time>
+                            </span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -237,7 +252,7 @@
                         <!-- roadblock slide instead a leaderboard-->
                         <div class="fxs_roadblock_slide">
                             <a href="http://path-to-sponsor" target="_blank">
-                                <img src="../../img/ad_C.jpg">
+                                <img class="lazy" data-original="../../img/ad_C.jpg">
                             </a>
                         </div>
                         <!--/ roadblock slide -->
@@ -3284,12 +3299,12 @@
             <!-- /Sidebar right -->
 
             <!-- Timezones -->
-            <div class="fxs_pageSidebar fxs_timezone_items">
+             <div class="fxs_pageSidebar fxs_timezone_items" id="cbp-spmenu-s4">
                 <div class="fxs_timezone_nav">
                     <span class="fxs_helperLabel_title">Change timezone</span>
-                    <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
-                        Cancel
-                    </button>
+                    <button type="button" class="fxs_btn fxs_dismissQuery" id="close_timezone_sidebar">
+                            Cancel
+                        </button>
                 </div>
                 <div class="fxs_nav_menu fxs_timezone_hours">
 
@@ -3442,6 +3457,9 @@
         <script src="../../../widgets/core/js/c3.min.js"></script>
         <script src="../../../widgets/core/js/d3.min.js"></script>
         <!-- javascript widget mini -->
+
+        <script src="../../js/fixto.min.js"></script>
+
         <script type="text/javascript">
              // otro ejemplo (Premium-user logged premium)
             $('#clock_3').countdown('2017/11/30 13:00:30')
