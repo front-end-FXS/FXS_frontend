@@ -37,6 +37,21 @@
                     <li><a href="" title="">Find a Broker</a></li>
                 </ul>
             </nav>
+
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_site_clock">
+                        <a href="#" title="change timezone" class="fxs_timezone_btn_navbar" id="showTimezoneClock">
+                            <span class="fxs_event_time">
+                                <i class="fa fa-clock-o"></i> 
+                                <time datetime="2015-12-01 12:44:00">12:44:29 UTC</time>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
             <button type="button" id="showRightPush" class="fxs_show_usermenu">
                 <i class="fa fa-user"></i>
                 <span class="fxs_skip">User Settings</span>
@@ -223,6 +238,7 @@
                                                             <a href="#" class="fxit-prefiltered-date" data-typefilter="thisweek">This Week</a>
                                                             <a href="#" class="fxit-prefiltered-date" data-typefilter="nextweek">Next Week</a>
                                                             <a href="#" class="fxst-datelast fxit-prefiltered-date" data-typefilter="custom" id="fxit-custom-button"><i class="fa fa-calendar"></i></a>
+                                                            <a class="fxs_notify_btn" href="#"> <span>Notifications</span> <i class="fa fa-volume-up"></i> </a>
                                                         </div>
 
                                                         <!-- add divider into nav -->
@@ -428,14 +444,16 @@
             </div>
             <!-- /Sidebar right -->
 
+
+
             <!-- Timezones -->
-            <div class="fxs_pageSidebar fxs_timezone_items">
+            <div class="fxs_pageSidebar fxs_timezone_items" id="cbp-spmenu-s4">
                 <div class="fxs_timezone_nav">
-                <span class="fxs_helperLabel_title">Change timezone</span>
-                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
-                    Cancel
-                </button>
-            </div>
+                    <span class="fxs_helperLabel_title">Change timezone</span>
+                    <button type="button" class="fxs_btn fxs_dismissQuery" id="close_timezone_sidebar">
+                            Cancel
+                        </button>
+                </div>
                 <div class="fxs_nav_menu fxs_timezone_hours">
 
                     <ol>
@@ -573,10 +591,18 @@
         <script src="../../js/jquery-1.11.3.min.js"></script>
         <!-- Bootstrap -->
         <script src="../../js/bootstrap.min.js"></script>
-
+        
         <script src="../../js/classie.js"></script>
         <script src="../../js/jquery.typeahead.min.js"></script>
+        <script src="../../js/fixto.min.js"></script>
         <script src="../../js/site.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('a.fxs_notify_btn').click(function() {
+                    $(this).find('i').toggleClass('fa-volume-off fa-volume-up');
+                });
+            });
+        </script>
         
         
     </body>
