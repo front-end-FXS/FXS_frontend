@@ -339,6 +339,9 @@ tbody.collapse.in {
   font-size: 0.8rem;
   letter-spacing: normal;
 }
+.fxs_fieldset.fxs_scrollable_list {
+  max-height: 500px;
+}
 .fxs_contactUs_form .sf-fieldWrp input,
 .fxs_contactUs_form .sf-fieldWrp textarea,
 .fxs_contactUs_form .sf-fieldWrp select {
@@ -482,6 +485,9 @@ fieldset[disabled] .fxs_btn_icon {
 .fxs_btn,
 .fxs_contactUs_form .sf-fieldWrp button {
   font-size: 0.92rem;
+}
+.fxs_btn.fxs_brokersList_button {
+  margin: 0;
 }
 .fxs_btn_icon {
   font-size: 1.34rem;
@@ -2861,6 +2867,7 @@ lesshat-selector {
   }
 }
 .fxs_scrollableContent,
+.fxs_fieldset.fxs_scrollable_list,
 .fxs_modal_wrap,
 .fxs_swipeContent_slider {
   -webkit-overflow-scrolling: touch;
@@ -2869,6 +2876,7 @@ lesshat-selector {
 }
 @media (min-width: 1150px) {
   .fxs_scrollableContent,
+  .fxs_fieldset.fxs_scrollable_list,
   .fxs_modal_wrap,
   .fxs_swipeContent_slider {
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -2877,6 +2885,10 @@ lesshat-selector {
   .fxs_scrollableContent::-webkit-scrollbar-track,
   .fxs_scrollableContent::-webkit-scrollbar-corner,
   .fxs_scrollableContent::-webkit-scrollbar-button,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar-track,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar-corner,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar-button,
   .fxs_modal_wrap::-webkit-scrollbar,
   .fxs_modal_wrap::-webkit-scrollbar-track,
   .fxs_modal_wrap::-webkit-scrollbar-corner,
@@ -2888,6 +2900,7 @@ lesshat-selector {
     background-color: transparent;
   }
   .fxs_scrollableContent::-webkit-scrollbar,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar,
   .fxs_modal_wrap::-webkit-scrollbar,
   .fxs_swipeContent_slider::-webkit-scrollbar {
     width: 5px;
@@ -2895,6 +2908,7 @@ lesshat-selector {
     border-radius: 0;
   }
   .fxs_scrollableContent::-webkit-scrollbar-track,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar-track,
   .fxs_modal_wrap::-webkit-scrollbar-track,
   .fxs_swipeContent_slider::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
@@ -2902,6 +2916,7 @@ lesshat-selector {
     box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.33);
   }
   .fxs_scrollableContent::-webkit-scrollbar-thumb,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar-thumb,
   .fxs_modal_wrap::-webkit-scrollbar-thumb,
   .fxs_swipeContent_slider::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.75);
@@ -2911,6 +2926,7 @@ lesshat-selector {
     border-radius: 0;
   }
   .fxs_scrollableContent::-webkit-scrollbar-button,
+  .fxs_fieldset.fxs_scrollable_list::-webkit-scrollbar-button,
   .fxs_modal_wrap::-webkit-scrollbar-button,
   .fxs_swipeContent_slider::-webkit-scrollbar-button {
     display: none;
