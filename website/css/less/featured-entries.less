@@ -52,7 +52,9 @@
   padding: @txt_defaultsize_rem;
   background-color: fade(@dark_2_clr, 80%);
   height: 100%;
-  width: 48%;
+  width: 100%;
+  @media (min-width: @screen-l) {width:80%;}
+  @media (min-width: @screen-xl) {width:70%;}
   @media (min-width: @screen-s) { padding: 2rem; }
   .fxs_entryHeadline, .fxs_entryHeadline a, .fxs_entryPlain_txt, .fxs_helperLabel_title, .fxs_entry_metaInfo { color: @lightest_clr; }
   header, .fxs_helperLabel_title{

@@ -112,6 +112,10 @@
   padding: 0.5rem 1rem;
   border-bottom: 1px solid @light_3_clr;
   legend { .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall;); }
+  &.fxs_scrollable_list{
+    max-height: 500px;
+    &:extend(.fxs_scrollableContent all);
+  }
 }
 ///////////////////////////////////////////////////////////
 ////////// Forms grouped layouts & input groups //////////
@@ -223,6 +227,9 @@
 
 .fxs_btn { 
   font-size: @txt_size_small; 
+  &.fxs_brokersList_button{
+    margin:0;
+  }
 }
 
 .fxs_btn_icon {
