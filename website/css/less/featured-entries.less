@@ -51,9 +51,7 @@
   left: 0;
   padding: @txt_defaultsize_rem;
   background-color: fade(@dark_2_clr, 80%);
-  @media(min-width:@screen-s){
-    height: 100%;
-  }
+  height:100%;
   width: 100%;
   @media (min-width: @screen-l) {width:80%;}
   @media (min-width: @screen-xl) {width:70%;}
@@ -84,6 +82,9 @@
 
 .fxs_sexy_bannerImg {
   &:extend(.fxs_mediaContainer all);
+  &:before{
+    padding-top:100%;
+  }
   margin-bottom: 0;
   @media (min-width: @screen-s) {
     max-height: 350px;
