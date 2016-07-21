@@ -1423,12 +1423,12 @@ body.cbp-spmenu-push-toright{
   }
 }
 
-/*.fxs_ad {
+.fxs_ad {
   //margin: 0 -1rem;
   text-align: center;
   @media(min-width: @screen-l) { margin: 0 auto; }
   * { margin: 0 auto; }
-}*/
+}
 
 
 
@@ -1627,7 +1627,16 @@ body.cbp-spmenu-push-toright{
 // 12 columns based system //
 .fxs_row { .make-row(); }
 .fxs_col, .fxs_flex_col, .fxs_flex_small_col { .column-default-parameters(); }
-
+.fxs_col{
+  &.fxs_narrow_cols{
+    .fxs_col_15{
+    @media(min-width:@screen-s){
+        padding-left:0.2rem;
+        padding-right:0.2rem;
+      }
+    }
+  }
+}
 // 100% //
 .fxs_col_100 { &:extend(.fxs_clearfix all); }
 
@@ -1662,6 +1671,9 @@ body.cbp-spmenu-push-toright{
     .make-m-column(3);
   }
 }
+
+// 15% //
+.fxs_col_15 { min-height: 100px; .make-s-column(2); .make-m-column(2); }
 
 /////////////// Flexible cols //
 .fxs_flex_col {

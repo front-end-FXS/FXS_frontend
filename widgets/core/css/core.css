@@ -585,6 +585,11 @@ fieldset[disabled] .fxs_btn_icon {
 .fxs_btn_medium_block {
   width: 40%;
 }
+@media (min-width: 1024px) {
+  .fxs_btn_medium_block {
+    width: 30%;
+  }
+}
 .fxs_block_xs_to_inline_s_btn {
   display: block;
   width: 100%;
@@ -1723,8 +1728,20 @@ width:calc(100% - 320px);
   -moz-opacity: 0.75;
   opacity: 0.75;
 }
+.fxs_form_bg {
+  background-color: #ffffff;
+  padding: 0.5rem;
+}
 .fxs_transition_module {
   background-color: #ffffff;
+}
+@media (min-width: 1150px) {
+  .fxs_transition_module.fxs_transition_modal img {
+    width: 70%;
+  }
+}
+.fxs_transition_module.fxs_transition_modal {
+  margin-top: 1rem;
 }
 .fxs_transition_module .fxs_transition_wrapper {
   background-color: #25252b;
@@ -1737,9 +1754,29 @@ width:calc(100% - 320px);
   color: #ffffff;
   text-decoration: underline;
 }
-.fxs_transition_module .fxs_transition_wrapper .fxs_form_bg {
-  background-color: #ffffff;
-  padding: 0.5rem;
+.fxs_transition_module .fxs_transition_wrapper.fxs_trans_form_flex {
+  width: 100%;
+}
+.fxs_transition_module .fxs_transition_wrapper.fxs_trans_form_flex label {
+  color: #ffffff;
+}
+@media (min-width: 1024px) {
+  .fxs_transition_module .fxs_transition_wrapper.fxs_trans_form_flex {
+    width: 33%;
+  }
+}
+@media (min-width: 1024px) {
+  .fxs_transition_module .fxs_transition_wrapper.fxs_trans_form_flex .fxs_btn_medium_block {
+    width: 100%;
+  }
+}
+.fxs_transition_module .fxs_transition_wrapper .fxs_col_50.fxs_trans_form_flex {
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  .fxs_transition_module .fxs_transition_wrapper .fxs_col_50.fxs_trans_form_flex {
+    width: 100%!important;
+  }
 }
 .fxs_transition_module .fxs_btn_cta {
   margin: 0.1rem 0 0 0;
@@ -2578,7 +2615,7 @@ lesshat-selector {
   margin-top: 1rem;
 }
 .fxs_marginBase_top_big {
-  margin-top: 1rem!important;
+  margin-top: 2rem!important;
 }
 .fxs_marginHalf_top {
   margin-top: 7.5px;
@@ -2678,7 +2715,7 @@ lesshat-selector {
   clear: both;
 }
 .fxs_contentRail_box {
-  margin: 0 auto;
+  margin: 0 auto!important;
   max-width: 1033px;
 }
 .fxs_divider_base,
