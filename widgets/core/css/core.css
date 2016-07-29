@@ -1079,7 +1079,7 @@ width:calc(100% - 320px);
   display: block;
 }
 .fxs_global_alert.in + .fxs_contentView {
-  margin-top: 45px;
+  padding-top: 45px;
 }
 .cbp-spmenu-push-toleft .fxs_global_alert,
 .cbp-spmenu-push-toright .fxs_global_alert {
@@ -1202,14 +1202,14 @@ width:calc(100% - 320px);
 }
 .fxs_squareImage,
 .fxs_squareImage_s,
-[class*="fxs_avatar_circleImage"] {
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"] {
   position: relative;
   overflow: hidden;
   display: inline-block;
 }
 .fxs_squareImage::before,
 .fxs_squareImage_s::before,
-[class*="fxs_avatar_circleImage"]::before {
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"]::before {
   display: block;
   content: " ";
   width: 100%;
@@ -1217,10 +1217,10 @@ width:calc(100% - 320px);
 }
 .fxs_squareImage img,
 .fxs_squareImage_s img,
-[class*="fxs_avatar_circleImage"] img,
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"] img,
 .fxs_squareImage .fxs_media_item,
 .fxs_squareImage_s .fxs_media_item,
-[class*="fxs_avatar_circleImage"] .fxs_media_item {
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"] .fxs_media_item {
   display: block;
   position: absolute;
   left: 0;
@@ -1228,13 +1228,13 @@ width:calc(100% - 320px);
 }
 .fxs_squareImage .fxs_media_item,
 .fxs_squareImage_s .fxs_media_item,
-[class*="fxs_avatar_circleImage"] .fxs_media_item {
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"] .fxs_media_item {
   width: 100%;
   height: 100%;
 }
 .fxs_squareImage img,
 .fxs_squareImage_s img,
-[class*="fxs_avatar_circleImage"] img {
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"] img {
   height: 100%;
   min-width: 100%;
 }
@@ -1244,6 +1244,10 @@ width:calc(100% - 320px);
 [class*="fxs_avatar_circleImage"] img {
   border-radius: 50%;
   width: 100%;
+}
+.fxs_squareImage_brokers {
+  width: 100px;
+  height: 35px;
 }
 .fxs_avatar_circleImage_s,
 .fxs_squareImage_s {
@@ -2247,7 +2251,7 @@ width:calc(100% - 320px);
 .fxs_btn_icon,
 .fxs_squareImage,
 .fxs_squareImage_s,
-[class*="fxs_avatar_circleImage"],
+.fxs_squareImage_brokers [class*="fxs_avatar_circleImage"],
 .fxs_tableHover tbody:hover > tr:hover,
 .fxs_relatedItem,
 .fxs_mediaContainer,
