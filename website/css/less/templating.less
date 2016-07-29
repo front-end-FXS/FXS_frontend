@@ -452,9 +452,10 @@ body.cbp-spmenu-push-toright{
 }
 
 .fxs_sectionTitle {
-  &:extend(.fxs_contentRail_box);
+  margin:auto auto 6px auto;
+  max-width: @content_rail_width;
   background-color: @lightest_clr;
-  margin-bottom: 6px;
+  //margin-bottom: 6px;
   padding: @half_base_spacer 1rem;
   height: @base_module_size;
   position: relative;
@@ -482,9 +483,10 @@ body.cbp-spmenu-push-toright{
 }
 
 .fxs_leaderboard {
-  &:extend(.fxs_contentRail_box);
+  margin:0 auto;
   padding: 0;
   z-index: 1;
+  max-width: @content_rail_width;
   position: relative;
   text-align: center;
   .fxs_detail & {
