@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Forecast example - FXStreet</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../core/css/core.min.css">
+    <link rel="stylesheet" href="css/forecast.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+   
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <div class="fxs_content">
+        <section class="fxs_detail">
+        
+            <!-- Widget container -->
+            <section class="fxs_widget_summary">
+
+                <!-- / fxs preload -->
+                <div class="fxs_widget_divider_module">
+                    <!-- widget price -->
+                    <div class="fxs_widget_price price_down">
+                        <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                            <a href="/">EUR/USD</a>
+                        </abbr>
+                        <div class="fxs_widget_price_value">
+                            <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                            <span class="fxs_price_change">
+                                <span class="fxs_change_pips">0.0026</span>
+                                <span class="fxs_change_percent">(-0.12%)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /widget price -->
+                </div>
+
+                <div class="fxs_widget_divider_module">
+                    
+                    <div style="float:left"><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i> date </a></div> <div style="float:right"><a href="#">date <i class="fa fa-angle-double-right" aria-hidden="true"></i></a></div>
+
+                </div>
+                
+                <!-- Forecast widget -->
+                <div class="fxs_forecast_widget fxs_widget_big">
+                    <ul class="fxs_tabs_nav">
+                        <li class="active"><a data-toggle="tab" href="#forecast_1w">1 Week</a></li>
+                        <li><a data-toggle="tab" href="#forecast_1m">1 Month</a></li>
+                        <li><a data-toggle="tab" href="#forecast_1q">1 Quarter</a></li>
+                    </ul>
+                    <div class="fxs_widget_divider_module tab-content">
+
+                        <div role="tabpanel" id="forecast_1w" class="forecast_timeframe_slot tab-pane fade in active">
+                            <!-- Timeframe -->
+                            <div class="fxs_widget_slot_label">
+                                <span class="fxs_label">1 Week</span>
+                            </div>
+                            <!-- /Timeframe -->
+
+                            <!-- Gauge chart -->
+                            <div class="fxs_gauge_container">
+                                
+                                <div class="fxs_insideChart_centered_legend">
+                                    <small class="fxs_widget_small">Avg. Forecast</small>
+                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                </div>
+
+                                <div id="forecast_chart_1w" class="c3"></div>
+
+                            </div>
+                            <!-- /Gauge chart -->
+
+                            <!-- Results -->
+                            <div class="fxs_widget_avg_col">
+                                <ul class="forecast_results_list">
+                                    <li>
+                                        <span class="fxs_txt_success fxs_widget_custom_bold">40%</span>
+                                        <span class="forecast_result_txt">Bullish</span>
+                                    </li>
+                                    <li>
+                                        <span class="fxs_txt_danger fxs_widget_custom_bold">50%</span>
+                                        <span class="forecast_result_txt">Bearish</span>
+                                    </li>
+                                    <li>
+                                        <span class="fxs_txt_neutral fxs_widget_custom_bold">10%</span>
+                                        <span class="forecast_result_txt">Sideways</span>
+                                    </li>
+                                </ul>
+                                <div class="forecast_avg_result result_bearish">
+                                    <small>Bias</small>
+                                    <span class="fxs_widget_custom_bold">Bearish</span>
+                                </div>
+                            </div>
+                            <!-- /Results -->
+                        </div>
+
+                        <div role="tabpanel" id="forecast_1m" class="forecast_timeframe_slot tab-pane fade">
+                            <!-- Timeframe -->
+                            <div class="fxs_widget_slot_label">
+                                <span class="fxs_label">1 Month</span>
+                            </div>
+                            <!-- /Timeframe -->
+
+                            <!-- Gauge chart -->
+                            <div class="fxs_gauge_container">
+                                
+                                <div class="fxs_insideChart_centered_legend">
+                                    <small class="fxs_widget_small">Avg. Forecast</small>
+                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                </div>
+
+                                <div id="forecast_chart_1m" class="c3"></div>
+
+                            </div>
+                            <!-- /Gauge chart -->
+
+                            <!-- Results -->
+                            <div class="fxs_widget_avg_col">
+                                <ul class="forecast_results_list">
+                                    <li>
+                                        <span class="fxs_txt_success fxs_widget_custom_bold">25%</span>
+                                        <span class="forecast_result_txt">Bullish</span>
+                                    </li>
+                                    <li>
+                                        <span class="fxs_txt_danger fxs_widget_custom_bold">25%</span>
+                                        <span class="forecast_result_txt">Bearish</span>
+                                    </li>
+                                    <li>
+                                        <span class="fxs_txt_neutral fxs_widget_custom_bold">50%</span>
+                                        <span class="forecast_result_txt">Sideways</span>
+                                    </li>
+                                </ul>
+                                <div class="forecast_avg_result">
+                                    <small>Bias</small>
+                                    <span class="fxs_widget_custom_bold">Sideways</span>
+                                </div>
+                            </div>
+                            <!-- /Results -->
+                        </div>
+
+                        <div role="tabpanel" id="forecast_1q" class="forecast_timeframe_slot tab-pane fade">
+                            <!-- Timeframe -->
+                            <div class="fxs_widget_slot_label">
+                                <span class="fxs_label">1 Quarter</span>
+                            </div>
+                            <!-- /Timeframe -->
+
+                            <!-- Gauge chart -->
+                            <div class="fxs_gauge_container">
+                                
+                                <div class="fxs_insideChart_centered_legend">
+                                    <small class="fxs_widget_small">Avg. Forecast</small>
+                                    <span class="fxs_widget_custom_data_lable">1.0321</span>
+                                </div>
+
+                                <div id="forecast_chart_1q" class="c3"></div>
+
+                            </div>
+                            <!-- /Gauge chart -->
+
+                            <!-- Results -->
+                            <div class="fxs_widget_avg_col">
+                                <ul class="forecast_results_list">
+                                    <li>
+                                        <span class="fxs_txt_success fxs_widget_custom_bold">60%</span>
+                                        <span class="forecast_result_txt">Bullish</span>
+                                    </li>
+                                    <li>
+                                        <span class="fxs_txt_danger fxs_widget_custom_bold">30%</span>
+                                        <span class="forecast_result_txt">Bearish</span>
+                                    </li>
+                                    <li>
+                                        <span class="fxs_txt_neutral fxs_widget_custom_bold">10%</span>
+                                        <span class="forecast_result_txt">Sideways</span>
+                                    </li>
+                                </ul>
+                                <div class="forecast_avg_result result_bullish">
+                                    <small>Bias</small>
+                                    <span class="fxs_widget_custom_bold">Bullish</span>
+                                </div>
+                            </div>
+                            <!-- /Results -->
+                        </div>
+                        
+                    </div>
+
+                    <!-- widget footer -->
+                    <footer class="fxs_widget_footer">
+                        <small><time datetime="2015-02-10T00:00">Updated FEB 10, 00:00 GMT</time></small>
+                        <!-- 
+                        link to modal page 
+                        ver maqueta en: static-html/widgets-test/forecast/forecast-single-asset-modal.html
+                        --> 
+                        <a href="../../website/static-html/widgets-test/forecast/forecast-single-asset-modal.html" title="See full study" class="fxs_btn fxs_btn_line fxs_btn_small">See full study <i class="fa fa-angle-double-right"></i></a>
+                    </footer>
+                    <!-- /widget footer -->
+                </div>
+                <!-- /Forecast widget -->
+
+            </section>
+            <!-- /Widget container -->
+        </section>
+        
+    </div>
+
+    <script src="../core/js/jquery-1.11.3.min.js"></script>
+    <script src="../core/js/bootstrap.min.js"></script>
+    <script src="../core/js/d3.min.js"></script>
+    <script src="../core/js/c3.min.js"></script>
+    
+    <script>
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        // Omar A. 'nice' code (mixed with Omar P. 'chapuza' code)
+
+        var forecastSpeedometerObj = function() {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
+
+            var setVars = function(initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
+
+            var initChart = function() {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Sideways', 0], ['Bearish', 0], ['Bullish', 0]],
+                        type: 'gauge'
+                    },
+                    zoom: { enabled: false },
+                    gauge: {
+                        label: { show: false },
+                        units: ' %',
+                        width: 6 // for adjusting arc thickness
+                    },
+                    color: {
+                        pattern: ['#8B8C91', '#D25746', '#338473'] // the three color levels for the percentage values
+                    },
+                    size: {
+                        height: 90,
+                        width: 190
+                    },
+                    tooltip: {
+                        show: false
+                    },
+                    interaction: { enabled: false }
+                });
+            };
+
+            var delayLoad = function() {
+                setTimeout(function() {
+                    chart.resize({
+                        height: 90,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function() {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function() {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe_slot").hasClass("active")) {
+                    chart.flush();
+                }
+            };
+
+            this.Init = function(initJson) {
+                setVars(initJson);
+                print();
+            };
+        };
+
+        var forecastWidgetObj = function() {
+
+            var charts = [];
+
+            var manageRenderedHtml = function() {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function() {
+                $.each(charts, function (i, chart) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+                $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function(e) {
+                    notifyChartsActiveChange();
+                });
+            };
+
+            //#region Charts
+
+            var printCharts = function() {
+                instanciateSpeedometer("forecast_chart_1w", [['Bullish', 40], ['Bearish', 90], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1m", [['Bullish', 25], ['Bearish', 50], ['Sideways', 100]]);
+                instanciateSpeedometer("forecast_chart_1q", [['Bullish', 60], ['Bearish', 90], ['Sideways', 100]]);
+            };
+
+            var instanciateSpeedometer = function(widgetId, colunms) {
+                var initJsonSpeedometer = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpSpeedometer = new forecastSpeedometerObj();
+                ctpSpeedometer.Init(initJsonSpeedometer);
+
+                charts.push(ctpSpeedometer);
+            };
+
+            //#endregion Charts
+
+            this.Init = function() {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
+
+    </script>
+
+</body>
+
+</html>

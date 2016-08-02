@@ -1,0 +1,2218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Analysis - FXStreet</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="../../css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+<body class="cbp-spmenu-push"><!-- fxs_isParent_section -->
+    <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+    <header class="fxs_header">
+        <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+            <i class="fa fa-bars"></i>
+            <span class="fxs_skip">Show navigation</span>
+        </button>
+        <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
+        <!-- Main-nav -->
+        <nav class="fxs_nav_menu" role="navigation">
+            <ul>
+                <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                <li><a href="" title="">Rates & Charts</a></li>
+                <li><a href="" title="">News</a></li>
+                <li class="active"><a href="" title="">Analysis</a></li>
+                <li><a href="" title="">Economic Calendar</a></li>
+                <li><a href="" title="">Live Video</a></li>
+                <li><a href="" title="">Education</a></li>
+                <li><a href="" title="">Find a Broker</a></li>
+            </ul>
+        </nav>
+        <!-- /Main-nav -->
+        <!-- Social & RSS links -->
+        <div class="fxs_socialLinks_nav">
+            <ul class="fxs_shareOptions_boxed">
+                <li class="fxs_socialMedia_item">
+                    <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                </li>
+                <li class="fxs_socialMedia_item">
+                    <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                </li>
+                <li class="fxs_overflowOptions">
+                    <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                    <ul class="fxs_dropdownList">
+                        <li class="fxs_dropdownHeader">Follow us on</li>
+                        <li>
+                            <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
+                        </li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">RSS feeds</li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /Social & RSS links -->
+
+        <button type="button" id="showRightPush" class="fxs_show_usermenu">
+            <i class="fa fa-user"></i>
+            <span class="fxs_skip">User Settings</span>
+        </button>
+    </header>
+     <!-- The wrapper -->
+    <div class="fxs_wrapper">
+        <!-- Sidebar left nav -->
+        <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+            <!-- Main-nav -->
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li><a href="/FXS_frontend" title="FXS Home">Home</a></li>
+                    <li><a href="" title="">Rates & Charts</a></li>
+                    <li><a href="" title="">News</a></li>
+                    <li class="active"><a href="" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+            <!-- /Main-nav -->
+
+            <!-- About -->
+            <ul class="fxs_items_list_nav">
+                <li class="fxs_menuList_header">About</li>
+                <li><a href="" title="">About fxstreet</a></li>
+                <li><a href="" title="">Advertise with us</a></li>
+            </ul>
+            <!-- terms and conditions -->
+            <ul class="fxs_items_list_nav">
+                <li><a href="" title="">Terms and conditions</a></li>
+                <li><a href="" title="">Privacy policy</a></li>
+                <li><a href="" title="">Contact us</a></li>
+                <li><a href="" title="">Site map</a></li>
+            </ul>
+            <!-- /Complementary links -->
+            
+            <!-- Social Media links widget -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_socialMedia_item">
+                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="http://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
+                    </li>
+                    <li class="fxs_socialMedia_item">
+                        <a href="https://www.linkedin.com/company/fxstreet" class="fxs_btn_icon" target="_blank" title="LinkedIn page"><i class="fa fa-linkedin"></i><span class="fxs_skip">LinkedIn page</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social Media links widget -->
+            
+            <!-- lang-edition -->
+            <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                
+                <ul class="fxs_dropdownList dropup">
+                    <li class="fxs_dropdownHeader">Other sites</li>
+                    <li><a href="#">体中文</a></li>
+                    <li><a href="#">繁體中文</a></li>
+                    <li><a href="#">Русский</a></li>
+                    <li><a href="#">Indonesia</a></li>
+                    <li><a href="#">العربية</a></li>
+                    <li><a href="#">Italiano</a></li>
+                    <li><a href="#">Português</a></li>
+                    <li><a href="#">Magyar</a></li>
+                    <li><a href="#">Türkçe</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">한국어</a></li>
+                    <li class="fxs_divider_third">&nbsp;</li>
+                    <li class="fxs_dropdownHeader">Edition</li>
+                    <li><a href="#">Yсский</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                    <li><a href="#">Français</a></li>
+                </ul>
+            </div>
+            <!-- /lang-edition -->
+        </div>
+        <!-- /Sidebar left -->
+        
+
+        <div class="fxs_content" id="fxs_content">
+
+            <!-- Topics subnav -->
+            <nav class="fxs_content_subnav">
+                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Analysis</a>
+                <div class="fxs_topics_nav">
+                    <span class="fxs_label">Popular topics</span>
+                    <ul class="fxs_subnavInlined_list">
+                        <li><a href="#" class="fxs_mutedLink">Technical analysis</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Macrieconomics</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Trading ideas</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /Topics subnav -->
+
+            <!-- The content rail -->
+            <div class="fxs_contentView">
+
+                <div class="fxs_leaderboard">
+                    <div class="fxs_ad">
+                        <a target="_blank" href="http://adclick.g.doubleclick.net/aclk?sa=L&amp;ai=B1Pglz6MwVuumLozVWv-1rvAMjP_31AgAAAAQASAAOABYhK_YiqoCYNWN04K8CIIBF2NhLXB1Yi03OTQ1ODMxMTc0NjM1NzM2sgEQd3d3LmZ4c3RyZWV0LmNvbboBCWdmcF9pbWFnZcgBCdoBGGh0dHA6Ly93d3cuZnhzdHJlZXQuY29tL6kCDulDWfCJsj7AAgLgAgDqAgovNzEzOC9Ib21l-AL30R6AAwGQA4wGmAOMBqgDAeAEAZAGAaAGHtgHAA&amp;num=0&amp;cid=5GhaUeCSlgPdQSI4NDWiO48f&amp;sig=AOD64_0u0AD4PkhtvnnKORhLXm19_9UqfA&amp;client=ca-pub-7945831174635736&amp;adurl=https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuFNC9Slw3OH0TWavbWdfoN7hz6yuJX7LdGuWt0ylb3TwL9WC1g5k1FCwUhkFRi9e7004ohodpERx10VGDI4NQmiDTlGLeRZOFmZPcnpQzC3HxTdPhO&amp;sig=Cg0ArKJSzJBmQD6gBKal&amp;urlfix=1&amp;adurl=http://www.fxpro.co.uk/promo/fxpro/%3Futm_source%3DFxStreet%2Bcom%26utm_medium%3DBanner%26utm_term%3DBrand%26utm_content%3DUK%26utm_campaign%3D728x90%2BBanner%2Bon%2BFxStreet%26source%3D20">
+                            <img src="https://s1.2mdn.net/viewad/4310423/6-all_three_spreads_banner_728x90.jpg" alt="Advertisement" border="0" width="728" height="90">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Main Section -->
+
+                <main id="fxs_it_detail" role="main">
+                    <div> <!-- dinamic div for dev -->
+                        <header class="fxs_sectionTitle">
+                            <h1 class="fxs_sectionTitle_header">Analysis</h1>
+                            <div class="fxs_shareContent_holder fxs_shareOptions_boxed">
+                                <div class="fxs_overflowOptions">
+                                    <span class="fxs_btn_icon" title="Share options" data-toggle="dropdown"><i class="fa fa-share-alt"></i><span class="fxs_skip">Share options</span></span>
+                                    <ul class="fxs_btnGroup_dropdownList">
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                        </li>
+                                        <!--
+                                        -->
+                                        <li class="fxs_socialMedia_item">
+                                            <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+
+                    <section class="fxs_detail">
+                        <div class="fxs_row">
+                            <div class="fxs_flex_col">
+                                <div id="Details_C100_Col00" class="sf_colsIn">
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_100">
+                                            <div id="Details_C008_Col00" class="sf_colsIn">
+                                                <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMediumClean">
+                                                    <article class="fxs_entryFeatured_med">
+                                                        <header>
+                                                            <h3 class="fxs_entryHeadline">
+                                                                <a href="http://www.fxstreet.com/analysis/gbp-usd-forecast-stuck-in-a-range-ahead-of-thursday-s-boe-decision-201608020609" title="GBP/USD Forecast: Stuck in a range ahead of Thursday’s BOE decision">GBP/USD Forecast: Stuck in a range ahead of Thursday’s BOE decision</a>
+                                                            </h3>
+                                                            <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                                <div class="fxs_avatar_circleImage_s">
+                                                                    <a href="/author/haresh-menghani" title="Haresh Menghani">
+                                                                        <img src="https://editorial.azureedge.net/authors/Haresh%20Menghani.png" alt="Haresh Menghani" width="35" height="35">
+                                                                    </a>
+                                                                </div>
+                                                                <span class="fxs_article_author">
+                                                                    <a href="/author/haresh-menghani" title="Haresh Menghani" rel="author">
+                                                                        <strong>Haresh Menghani</strong>
+                                                                    </a>
+                                                                    <span class="fxs_author_description">
+                                                                         <a href="/company/fxstreet" title="FXStreet" class="fxs_mutedLink" target="_blank">FXStreet</a>
+                                                                    </span>
+                                                                </span>
+                                                            </address>
+                                                        </header>
+                                                    </article>
+                                                </div>
+                                                <section class="fxs_widget_summary" id="singlechartmanager_817f53e5-2718-4a22-9de0-ad95b24cf1b9">
+                                                    <div class="fxs_widget_chart">
+                                                        <div class="fxs_relativePositioning">
+                                                           chart
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="fxs_marginBase_top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fxs_flex_col fxs_flex_ad_col">
+                                <div id="Details_C100_Col01" class="sf_colsIn">
+                                    <h2 class="fxs_subsectionTitle">sponsor broker</h2>
+                                    <div id="brokersspreads_0d5b2252-975f-483a-95ea-18e45040be31">
+                                        <div class="fxs_widget_summary">
+                                            <table class="fxs_table fxs_tableHover fxs_widget_spreads_table fxs_widget_mini">
+                                                <thead>
+                                                    <tr data-original-title="" title="">
+                                                        <th><span class="fxs_hidden_xs">Broker</span></th>
+                                                        <th>&nbsp;</th>
+                                                        <th>GBP/USD</th>
+                                                        <th>EUR/USD</th>
+                                                        <th>USD/JPY</th>
+                                                        <th>&nbsp;</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr onclick="window.location = '/brokers/details/fxpro-financial-services-ltd'" class=" " data-original-title="" title="">
+                                                        <td>
+                                                            <div class="fxs_squareImage_s">
+                                                                <a href="/brokers/details/fxpro-financial-services-ltd">
+                                                                    <img src="http://editorial.fxstreet.com/brokers/FxPro_Gran.png" alt="FxPro Financial Services Ltd" width="35" height="35">
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <address class="fxs_contributorBox">
+                                                                <span class="fxs_article_author">
+                                                                    <a href="/brokers/details/fxpro-financial-services-ltd" title="FxPro Financial Services Ltd" rel="author">
+                                                                        FxPro Financial Services Ltd
+                                                                    </a>
+                                                                </span>
+                                                            </address>
+                                                        </td>
+                                                        <td fxs_spreadserver="2279" fxs_spreadid="2"><span class="fxs_widget_spreads_item fxs_widget_spreads_item_lower" fxs_content="spreadPrice">1.5</span></td>
+                                                        <td fxs_spreadserver="2279" fxs_spreadid="1"><span class="fxs_widget_spreads_item fxs_widget_spreads_item_lower" fxs_content="spreadPrice">0.5</span></td>
+                                                        <td fxs_spreadserver="2279" fxs_spreadid="3"><span class="fxs_widget_spreads_item fxs_widget_spreads_item_lower" fxs_content="spreadPrice">0.9</span></td>
+                                                        <td>
+                                                            <a href="/brokers/details/fxpro-financial-services-ltd" class="fxs_btn_icon" title="Read complete Report"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">Read complete Report</span></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div><hr class="fxs_divider_first"></div>
+                                    <div class="fxs_ad">
+                                       <div style="width:300px; height:300px; background-color: #ccc"></div>
+                                    </div>
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_100">
+                                            <div id="Details_C164_Col00" class="sf_colsIn">
+                                                <div class="fxs_marginBase_top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><hr class="fxs_divider_third"></div>
+
+                        <div class="fxs_col fxs_col_100">
+                            <div id="Details_C187_Col00" class="sf_colsIn">
+                                <div class="fxs_row">
+                                    <div class="fxs_col fxs_col_33">
+                                        <div id="Details_C167_Col00" class="sf_colsIn">
+                                            <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMedium">
+                                                <article class="fxs_entryFeatured_med">
+                                                    <div class="fxs_entryFeatured_img">
+                                                        <a href="http://www.fxstreet.com/analysis/well-well-well-do-you-still-think-the-fed-will-hike-rates-201608011747" title="Well, well, well ... Do you still think the Fed will hike rates?"><img src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/federal-reserve-building-gm490074826-75019399_Medium.jpg" alt="USA"></a>
+                                                    </div>
+                                                    <header>
+                                                        <h3 class="fxs_entryHeadline">
+                                                            <a href="http://www.fxstreet.com/analysis/well-well-well-do-you-still-think-the-fed-will-hike-rates-201608011747" title="Well, well, well ... Do you still think the Fed will hike rates?">Well, well, well ... Do you still think the Fed will hike rates?</a>
+                                                        </h3>
+                                                        <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                            <div class="fxs_avatar_circleImage_s">
+                                                                <a href="/author/ross-j-burland" title="Ross J Burland">
+                                                                    <img src="https://editorial.azureedge.net/authors/Ross%20J%20Burland.jpg" alt="Ross J Burland" width="35" height="35">
+                                                                </a>
+                                                            </div>
+                                                            <span class="fxs_article_author">
+                                                                <a href="/author/ross-j-burland" title="Ross J Burland" rel="author">
+                                                                    <strong>Ross J Burland</strong>
+                                                                </a>
+                                                                <span class="fxs_author_description">
+                                                                     <a href="/company/fxstreet" class="fxs_mutedLink" target="_blank">FXStreet</a>
+                                                                </span>
+                                                            </span>
+                                                        </address>
+                                                    </header>
+                                                    <div class="fxs_entryExcerpt">
+                                                        <p>
+                                                            
+                                                        </p>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fxs_col fxs_col_33">
+                                        <div id="Details_C167_Col01" class="sf_colsIn">
+
+
+                                    <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMedium">
+                                        <article class="fxs_entryFeatured_med">
+                                            <div class="fxs_entryFeatured_img">
+                                                <a href="http://www.fxstreet.com/analysis/gold-forecast-h2-2016-bulls-to-emerge-winners-$-1500-on-the-cards-201608011518" title="Gold Forecast H2 2016: Bulls to emerge winners, $ 1500 on the cards?"><img src="https://editorial.azureedge.net/images/Markets/Commodities/Metals/Gold/gold-on-weight-scale-gm165418687-21879510_Medium.jpg" alt="Gold"></a>
+                                            </div>
+                                            <header>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="http://www.fxstreet.com/analysis/gold-forecast-h2-2016-bulls-to-emerge-winners-$-1500-on-the-cards-201608011518" title="Gold Forecast H2 2016: Bulls to emerge winners, $ 1500 on the cards?">Gold Forecast H2 2016: Bulls to emerge winners, $ 1500 on the cards?</a>
+                                                </h3>
+                                                <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/author/dhwani-mehta" title="Dhwani Mehta">
+                                                            <img src="https://editorial.azureedge.net/authors/Dhwani%20Mehta.JPG" alt="Dhwani Mehta" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="/author/dhwani-mehta" title="Dhwani Mehta" rel="author">
+                                                            <strong>Dhwani Mehta</strong>
+                                                        </a>
+                                                        <span class="fxs_author_description">
+                                                             <a href="/company/fxstreet" class="fxs_mutedLink" target="_blank">FXStreet</a>
+                                                        </span>
+                                                    </span>
+                                                </address>
+                                            </header>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="fxs_col fxs_col_33">
+                                        <div id="Details_C167_Col02" class="sf_colsIn">
+
+
+                                    <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMedium">
+                                        <article class="fxs_entryFeatured_med">
+                                            <div class="fxs_entryFeatured_img">
+                                                <a href="http://www.fxstreet.com/analysis/crude-oil-extends-plunge-below-$40-barrel-as-oversupply-worries-persist-201608012249" title="Crude oil extends plunge below $40/barrel as oversupply worries persist"><img src="https://editorial.azureedge.net/images/Markets/Commodities/Energy/Oil/man-filling-gas-pump-gm458242949-22775242_Medium.jpg" alt="Crude Oil"></a>
+                                            </div>
+                                            <header>
+                                                <h3 class="fxs_entryHeadline">
+                                                    <a href="http://www.fxstreet.com/analysis/crude-oil-extends-plunge-below-$40-barrel-as-oversupply-worries-persist-201608012249" title="Crude oil extends plunge below $40/barrel as oversupply worries persist">Crude oil extends plunge below $40/barrel as oversupply worries persist</a>
+                                                </h3>
+                                                <address class="fxs_contributorBox fxs_contributorBox_small">
+                                                    <div class="fxs_avatar_circleImage_s">
+                                                        <a href="/author/james-chen-cmt" title="James Chen, CMT">
+                                                            <img src="https://editorial.azureedge.net/authors/James%20Chen.jpg" alt="James Chen, CMT" width="35" height="35">
+                                                        </a>
+                                                    </div>
+                                                    <span class="fxs_article_author">
+                                                        <a href="/author/james-chen-cmt" title="James Chen, CMT" rel="author">
+                                                            <strong>James Chen, CMT</strong>
+                                                        </a>
+                                                        <span class="fxs_author_description">
+                                                             <a href="/company/cityindex" class="fxs_mutedLink" target="_blank">CityIndex</a>
+                                                        </span>
+                                                    </span>
+                                                </address>
+                                            </header>
+                                            <div class="fxs_entryExcerpt">
+                                                <p>
+                                                    
+                                                </p>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><hr class="fxs_divider_third"></div>
+
+                        <div class="fxs_row">
+                            <div class="fxs_col fxs_col_100">
+                                <div id="Details_C188_Col00" class="sf_colsIn">
+
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_33">
+                                            <div id="Details_C175_Col00" class="sf_colsIn">
+                                                <h3 class="fxs_subtitle">
+                                                    EUR/USD
+                                                </h3>
+                                                <aside fxs_sf_widget="" class="fxs_entriesList" fxs_name="analysisList">
+                                                    <ol>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/daily-technical-analysis-201608020822" title="Daily Technical Analysis">Daily Technical Analysis</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/stoyan-mihaylov">Stoyan Mihaylov</a>
+                                                                    </span> | <time pubdate="" datetime="">Aug 02, 10:22</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "Daily Technical Analysis",
+                                                                "headline": "Daily Technical Analysis",
+                                                                "datePublished": "8/2/2016 10:22:07 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/daily-technical-analysis-201608020822",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"Stoyan Mihaylov",
+                                                                "url": "/author/stoyan-mihaylov",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "DeltaStock.com",
+                                                                "url": "/company/deltastockcom"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/murrey-math-lines-eur-usd-usd-jpy-201608020805" title="Murrey Math Lines: EUR/USD, USD/JPY">Murrey Math Lines: EUR/USD, USD/JPY</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/roboforex">RoboForex</a>
+                                                                    </span> | <time pubdate="" datetime="">Aug 02, 10:05</time>
+                                                                </address>
+                                                            </article>
+                                                            <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "Murrey Math Lines: EUR/USD, USD/JPY",
+                                                                "headline": "Murrey Math Lines: EUR/USD, USD/JPY",
+                                                                "datePublished": "8/2/2016 10:05:23 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/murrey-math-lines-eur-usd-usd-jpy-201608020805",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"RoboForex",
+                                                                "url": "/author/roboforex",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "RoboForex",
+                                                                "url": "/company/roboforex"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/eur-range-bound-ahead-of-boe-201608020736" title="EUR range bound ahead of BoE">EUR range bound ahead of BoE</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/arnaud-masset">Arnaud Masset</a>
+                                                                    </span> | <time pubdate="" datetime="">Aug 02, 09:36</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "EUR range bound ahead of BoE",
+                                                                "headline": "EUR range bound ahead of BoE",
+                                                                "datePublished": "8/2/2016 9:36:21 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/eur-range-bound-ahead-of-boe-201608020736",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"Arnaud Masset",
+                                                                "url": "/author/arnaud-masset",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "Swissquote Bank SA",
+                                                                "url": "/company/swissquote-bank-sa"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                    </ol>
+                                                </aside>
+
+                                            </div>
+                                        </div>
+                                        <div class="fxs_col fxs_col_33">
+                                            <div id="Details_C175_Col01" class="sf_colsIn">
+                                                <h3 class="fxs_subtitle">
+                                                    GBP/USD
+                                                </h3>
+                                                <aside fxs_sf_widget="" class="fxs_entriesList" fxs_name="analysisList">
+                                                    <ol>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/daily-technical-analysis-201608020822" title="Daily Technical Analysis">Daily Technical Analysis</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/stoyan-mihaylov">Stoyan Mihaylov</a>
+                                                                    </span> | <time pubdate="" datetime="">Aug 02, 10:22</time>
+                                                                </address>
+                                                            </article>
+                                                            <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "Daily Technical Analysis",
+                                                                "headline": "Daily Technical Analysis",
+                                                                "datePublished": "8/2/2016 10:22:07 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/daily-technical-analysis-201608020822",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"Stoyan Mihaylov",
+                                                                "url": "/author/stoyan-mihaylov",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "DeltaStock.com",
+                                                                "url": "/company/deltastockcom"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/gbpusd-must-hold-good-support-at-1-3155-65-to-re-target-first-resistance-at-1-3230-40-201608020623" title="GBPUSD must hold good support at 1.3155/65 to re-target first resistance at 1.3230/40">GBPUSD must hold good support at 1.3155/65 to re-target first resistance at 1.3230/40</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/jason-sen">Jason Sen</a>
+                                                                    </span> | <time pubdate="" datetime="">31 minutes ago</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "GBPUSD must hold good support at 1.3155/65 to re-target first resistance at 1.3230/40",
+                                                                "headline": "GBPUSD must hold good support at 1.3155/65 to re-target first resistance at 1.3230/40",
+                                                                "datePublished": "8/2/2016 8:23:32 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/gbpusd-must-hold-good-support-at-1-3155-65-to-re-target-first-resistance-at-1-3230-40-201608020623",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"Jason Sen",
+                                                                "url": "/author/jason-sen",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "DayTradeIdeas.com",
+                                                                "url": "/company/daytradeideascom"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/gbp-usd-forecast-stuck-in-a-range-ahead-of-thursday-s-boe-decision-201608020609" title="GBP/USD Forecast: stuck in a range ahead of Thursday’s BOE decision">GBP/USD Forecast: stuck in a range ahead of Thursday’s BOE decision</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/haresh-menghani">Haresh Menghani</a>
+                                                                    </span> | <time pubdate="" datetime="">45 minutes ago</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "GBP/USD Forecast: stuck in a range ahead of Thursday&#8217;s BOE decision",
+                                                                "headline": "GBP/USD Forecast: stuck in a range ahead of Thursday&#8217;s BOE decision",
+                                                                "datePublished": "8/2/2016 8:09:20 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/gbp-usd-forecast-stuck-in-a-range-ahead-of-thursday-s-boe-decision-201608020609",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"Haresh Menghani",
+                                                                "url": "/author/haresh-menghani",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "FXStreet",
+                                                                "url": "/company/fxstreet"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                    </ol>
+                                                </aside>
+                                            </div>
+                                        </div>
+                                        <div class="fxs_col fxs_col_33">
+                                            <div id="Details_C175_Col02" class="sf_colsIn">
+                                                <h3 class="fxs_subtitle">
+                                                    Fed
+                                                </h3>
+                                                <aside fxs_sf_widget="" class="fxs_entriesList" fxs_name="analysisList">
+                                                    <ol>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/uk-manufacturing-data-reveal-the-consequences-of-the-brexit-decision-201608020713" title="UK manufacturing data reveal the consequences of the Brexit decision">UK manufacturing data reveal the consequences of the Brexit decision</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/alpesh-patel">Alpesh Patel</a>
+                                                                    </span> | <time pubdate="" datetime="">Aug 02, 09:13</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "UK manufacturing data reveal the consequences of the Brexit decision",
+                                                                "headline": "UK manufacturing data reveal the consequences of the Brexit decision",
+                                                                "datePublished": "8/2/2016 9:13:06 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/uk-manufacturing-data-reveal-the-consequences-of-the-brexit-decision-201608020713",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"Alpesh Patel",
+                                                                "url": "/author/alpesh-patel",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "InvestingBetter.com",
+                                                                "url": "/company/investingbettercom"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/dollar-edges-higher-on-short-covering-despite-weak-u-s-data-aug-2-2016-201608020656" title="Dollar edges higher on short covering despite weak U.S. data: Aug 2, 2016">Dollar edges higher on short covering despite weak U.S. data: Aug 2, 2016</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/acetrader-team">AceTrader Team</a>
+                                                                    </span> | <time pubdate="" datetime="">Aug 02, 08:56</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "Dollar edges higher on short covering despite weak U.S. data: Aug 2, 2016",
+                                                                "headline": "Dollar edges higher on short covering despite weak U.S. data: Aug 2, 2016",
+                                                                "datePublished": "8/2/2016 8:56:45 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/dollar-edges-higher-on-short-covering-despite-weak-u-s-data-aug-2-2016-201608020656",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"AceTrader Team",
+                                                                "url": "/author/acetrader-team",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "AceTrader",
+                                                                "url": "/company/acetrader"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                        <li>
+                                                            <article>
+                                                                <h3 class="fxs_entryHeadline">
+                                                                    <a href="http://www.fxstreet.com/analysis/us-dollar-s-next-move-in-question-201608020620" title="US Dollar’s Next Move in Question">US Dollar’s Next Move in Question</a>
+                                                                </h3>
+                                                                <address class="fxs_entry_metaInfo">
+                                                                    <span class="fxs_article_author">
+                                                                        By <a href="/author/LMAX-Exchange-Research-Desk">LMAX Exchange Research Desk</a>
+                                                                    </span> | <time pubdate="" datetime="">33 minutes ago</time>
+                                                                </address>
+                                                            </article>
+                                                           <script type="application/ld+json">
+                                                                {
+                                                                "@context": "http://schema.org",
+                                                                "@type": "AnalysisArticle",
+                                                                "name": "US Dollar&#8217;s Next Move in Question",
+                                                                "headline": "US Dollar&#8217;s Next Move in Question",
+                                                                "datePublished": "8/2/2016 8:20:48 AM"
+                                                                "url" : "http://www.fxstreet.com/analysis/us-dollar-s-next-move-in-question-201608020620",
+                                                                "author": {
+                                                                "@type":"Person",
+                                                                "name":"LMAX Exchange Research Desk",
+                                                                "url": "/author/LMAX-Exchange-Research-Desk",
+                                                                "worksfor": {
+                                                                "@type": "Organization",
+                                                                "name": "LMAX Exchange",
+                                                                "url": "/company/LMAX-Exchange"
+                                                                }
+                                                                }
+                                                                }
+                                                            </script>            
+                                                        </li>
+                                                    </ol>
+                                                </aside>
+                                                <div>
+                                                    <div><a class="fxs_btn fxs_btn_line" href="http://www.fxstreet.com/macroeconomics/central-banks/fed" title="All you need to know about Fed">All you need to know about Fed <em></em></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><hr class="fxs_divider_third"></div>
+
+                        <div class="fxs_row">
+                            <div class="fxs_flex_col fxs_flex_ad_col">
+                                <div id="Details_C106_Col00" class="sf_colsIn">
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_100">
+                                            <div id="Details_C085_Col00" class="sf_colsIn">
+                                                <div class="fxs_ad">
+                                                    <div style="width:300px; height:300px; background-color: #ccc"></div>
+                                                </div>
+
+                                                <div class="fxs_marginBase_top"></div>
+                                            </div>
+                                        </div>
+                                    </div>            
+                                </div>       
+                            </div>
+                            <div class="fxs_flex_col">
+                                <div id="Details_C106_Col01" class="sf_colsIn ">
+                                    <div class="fxs_row">
+                                        <div class="fxs_col fxs_col_100">
+                                            <div id="Details_C150_Col00" class="sf_colsIn">
+                                                <blockquote class="fxs_featured_quote" fxs_name="highlightedAnalysisQuote">
+                                                    <div class="fxs_avatar_circleImage">
+                                                        <a href="/author/dhwani-mehta" title="Dhwani Mehta">
+                                                            <img src="https://editorial.azureedge.net/authors/Dhwani%20Mehta.JPG" alt="Dhwani Mehta" width="75" height="75">
+                                                        </a>
+                                                    </div>
+                                                    <p>
+                                                        Any dip in the gold prices in the months ahead should be considered a good buying opportunity
+                                                    </p>
+                                                    <footer>
+                                                        <cite title="Gold Forecast H2 2016: Bulls to emerge winners, $ 1500 on the cards?" class="fxs_cite"><a href="http://www.fxstreet.com/analysis/gold-forecast-h2-2016-bulls-to-emerge-winners-$-1500-on-the-cards-201608011518">Gold Forecast H2 2016: Bulls to emerge winners, $ 1500 on the cards?</a></cite>
+                                                        <address class="fxs_entry_metaInfo">
+                                                            <span class="fxs_article_author">By <a href="/author/dhwani-mehta">Dhwani Mehta</a></span> |
+                                                            <time pubdate="" datetime="">AUG 01, 17:18 GMT</time>
+                                                        </address>
+                                                    </footer>
+                                                    <p></p>
+                                                </blockquote>
+                                                <div class="fxs_row">
+                                                    <div class="fxs_col fxs_col_50">
+                                                        <div id="Details_C151_Col00" class="sf_colsIn">
+                                                        </div>
+                                                    </div>
+                                                    <div class="fxs_col fxs_col_50">
+                                                        <div id="Details_C151_Col01" class="sf_colsIn">
+                                                <a class="fxs_btn fxs_btn_line fxs_btn_small fxs_fLeft" href="http://www.fxstreet.com/analysis/all">See all the analysis here <i class="fa fa-angle-double-right"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><hr class="fxs_divider_third"></div>
+                        
+                        <h3 class="fxs_subtitle">
+                            current trading positions 
+ 
+                        </h3>
+                        <div class="fxs_row">
+    <div class="fxs_col fxs_col_100">
+        <div id="Details_C127_Col00" class="sf_colsIn">
+
+<div class="fxs_row">
+    <div class="fxs_col fxs_col_33">
+        <div id="Details_C073_Col00" class="sf_colsIn"><div fxs_widget="" fxs_name="ctpmultiasset" fxs_host="https://markettools.fxstreet.com/" fxs_assets="fxs-3212164" fxs_class_size="fxs_widget_mini" fxs_fullreport_url="//www.fxstreet.com/rates-charts/{{asset}}/trading-positions" fxs_fullstudy_url="//www.fxstreet.com/rates-charts/trading-positions" fxs_hide_fullreport="" fxs_seo="true"><section class="fxs_widget_summary">
+    <table class="fxs_table fxs_tableHover">
+        <tbody>
+            <tr onclick="window.document.location='//www.fxstreet.com/rates-charts/eurusd/trading-positions'">
+                <td>
+                    <div class="fxs_ctp_widget_multi fxs_widget_mini">
+                        <div class="fxs_widget_cell_col">
+                            <div class="fxs_widget_cell_col">
+                                <abbr class="fxs_asset_label" title="EUR/USD">
+                                    EUR/USD
+                                </abbr>
+                            </div>
+                            <div class="ctp_multi_percent_wrapper">
+                                <div class="ctp_price_precent">
+                                    <small class="fxs_widget_small">Sell</small>
+                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">38%</span>
+                                </div>
+
+                                <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
+                                    <small class="fxs_widget_small">Buy</small>
+                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">62%</span>
+                                </div>
+                            </div>
+
+                            <div class="ctp_graphic_wrapper">
+                                <div id="ctp_bar_stacked_1b7d29bfa-691e-90a8-ed9f-ea16af0d3b650" class="c3" style="width: 100%; max-height: 35px; position: relative;"><svg width="200" height="35" style="overflow: hidden;"><defs><clipPath id="c3-1470128052091-clip"><rect width="198" height="29"></rect></clipPath><clipPath id="c3-1470128052091-clip-xaxis"><rect x="-29" y="-5" width="21" height="54"></rect></clipPath><clipPath id="c3-1470128052091-clip-yaxis"><rect x="-31" y="-20" width="260" height="21"></rect></clipPath><clipPath id="c3-1470128052091-clip-grid"><rect width="198" height="29"></rect></clipPath><clipPath id="c3-1470128052091-clip-subchart"><rect width="198" height="28"></rect></clipPath></defs><g transform="translate(1.5,5.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="99" y="14.5" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="198" height="29" style="opacity: 0;"></rect><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="0" x2="198" y1="-10" y2="-10" style="visibility: hidden;"></line></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="0" y="1" width="198" height="28"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-bars c3-bars-Sell" style="cursor: pointer;"><path class="c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 0,12 L68.4,12 L68.4,18 L0,18 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path></g></g><g class="c3-chart-bar c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-bars c3-bars-Buy" style="cursor: pointer;"><path class="c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 68.4,12 L180,12 L180,18 L68.4,18 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-lines c3-lines-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-areas c3-areas-Sell"></g><g class=" c3-selected-circles c3-selected-circles-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-circles c3-circles-Sell" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-lines c3-lines-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-areas c3-areas-Buy"></g><g class=" c3-selected-circles c3-selected-circles-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-circles c3-circles-Buy" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(99,9.5)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Sell"></g></g><g class="c3-chart-text c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Buy"></g></g></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip-xaxis)" transform="translate(0,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-x-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end; display: block;"><tspan x="-9" dy="3">0</tspan></text></g><path class="domain" d="M-6,1H0V29H-6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip-yaxis)" transform="translate(0,29)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y-label" transform="" x="198" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0, 0)" style="opacity: 1;"><line y2="0" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><g class="tick" transform="translate(18, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">10</tspan></text></g><g class="tick" transform="translate(36, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">20</tspan></text></g><g class="tick" transform="translate(54, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">30</tspan></text></g><g class="tick" transform="translate(72, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">40</tspan></text></g><g class="tick" transform="translate(90, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">50</tspan></text></g><g class="tick" transform="translate(108, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">60</tspan></text></g><g class="tick" transform="translate(126, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">70</tspan></text></g><g class="tick" transform="translate(144, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">80</tspan></text></g><g class="tick" transform="translate(162, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">90</tspan></text></g><g class="tick" transform="translate(180, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">100</tspan></text></g><g class="tick" transform="translate(198, 0)" style="opacity: 1;"><line y2="0" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">110</tspan></text></g><path class="domain" d="M0,6V0H198V6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(0,1)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="" x="198" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0</tspan></text></g><g class="tick" transform="translate(20, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.1</tspan></text></g><g class="tick" transform="translate(40, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.2</tspan></text></g><g class="tick" transform="translate(60, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.3</tspan></text></g><g class="tick" transform="translate(80, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.4</tspan></text></g><g class="tick" transform="translate(99, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.5</tspan></text></g><g class="tick" transform="translate(119, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.6</tspan></text></g><g class="tick" transform="translate(139, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.7</tspan></text></g><g class="tick" transform="translate(159, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.8</tspan></text></g><g class="tick" transform="translate(179, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.9</tspan></text></g><g class="tick" transform="translate(198, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">1</tspan></text></g><path class="domain" d="M0,-6V0H198V-6"></path></g></g><g transform="translate(30.5,5.5)" style="visibility: hidden;"><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052091-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" y="1" height="28" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" y="0" height="0" style="cursor: move;"></rect><g class="resize n" transform="translate(0,0)" style="cursor: ns-resize; display: none;"><rect y="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize s" transform="translate(0,0)" style="cursor: ns-resize; display: none;"><rect y="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="" style="opacity: 1;"><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end; display: block;"><tspan x="-9" dy="3">0</tspan></text></g><path class="domain" d="M-6,1H0V29H-6"></path></g></g><g transform="translate(0,35)" style="visibility: hidden;"></g></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="fxs_widget_cell_col">
+                            <div class="fxs_widget_avg_col">
+                                <div class="fxs_module_cols_avg">
+                                    <small class="fxs_widget_small">Avg Sell Price</small>
+                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">1.1095</span>
+                                </div>
+
+                                <div class="fxs_module_cols_avg">
+                                    <small class="fxs_widget_small">Avg Buy Price</small>
+                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1.1159</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="application/ld+json">
+                            {
+                            "@type": "Review",
+                            "datePublished": "2016-08-02T08:54:14.283065Z",
+                            "description": "Current Trading Position regarding EUR/USD including Sell, Buy, Average Sell Price, Average Buy Price.",
+                            "name": "EUR/USD Trading Position by FXStreet",
+                            "reviewBody": {
+                            "@type": "Text",
+                            "value": "Sell 38% Buy 62% Average Sell Price 1.1095 Average Buy Price 1.1159" },
+                            "itemReviewed": {
+                            "@type": "Thing",
+                            "Name": "EUR/USD",
+                            "sameAs": "https://en.wikipedia.org/wiki/Currency_pair",
+                            "ratingValue": "1",
+                            "url": "EURUSD"
+                            }
+                            }
+                        </script>
+                    </div>
+                </td>
+                <td>
+                    <a title="See Full Study" class="fxs_btn_icon"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">See Full Study</span></a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="fxs_widget_footer" colspan="2">
+                    <small><time datetime="2016-08-02T08:54:14.283065Z">Updated Aug 2, 08:54 GMT</time></small>
+                    
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+</div>
+
+
+    <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMediumClean">
+        <article class="fxs_entryFeatured_med">
+            <header>
+                <h3 class="fxs_entryHeadline">
+                    <a href="http://www.fxstreet.com/analysis/murrey-math-lines-eur-usd-usd-jpy-201608010806" title="Murrey Math Lines: EUR/USD, USD/JPY">Murrey Math Lines: EUR/USD, USD/JPY</a>
+                </h3>
+                <address class="fxs_contributorBox fxs_contributorBox_small">
+                    <div class="fxs_avatar_circleImage_s">
+                        <a href="/author/roboforex" title="RoboForex">
+                            <img src="https://editorial.azureedge.net/authors/roboforex-author-photoMedium.jpeg" alt="RoboForex" width="35" height="35">
+                        </a>
+                    </div>
+                    <span class="fxs_article_author">
+                        <a href="/author/roboforex" title="RoboForex" rel="author">
+                            <strong>RoboForex</strong>
+                        </a>
+                        <span class="fxs_author_description">
+                             <a href="/company/roboforex" title="RoboForex" class="fxs_mutedLink" target="_blank">RoboForex</a>
+                        </span>
+                    </span>
+                </address>
+            </header>
+            <div class="fxs_entryExcerpt">
+                <p>
+                    
+                </p>
+            </div>
+        </article>
+    </div>
+
+        </div>
+    </div>
+    <div class="fxs_col fxs_col_33">
+        <div id="Details_C073_Col01" class="sf_colsIn"><div fxs_widget="" fxs_name="ctpmultiasset" fxs_host="https://markettools.fxstreet.com/" fxs_assets="fxs-3212155" fxs_class_size="fxs_widget_mini" fxs_fullreport_url="//www.fxstreet.com/rates-charts/{{asset}}/trading-positions" fxs_fullstudy_url="//www.fxstreet.com/rates-charts/trading-positions" fxs_hide_fullreport="" fxs_seo="true"><section class="fxs_widget_summary">
+    <table class="fxs_table fxs_tableHover">
+        <tbody>
+            <tr onclick="window.document.location='//www.fxstreet.com/rates-charts/usdjpy/trading-positions'">
+                <td>
+                    <div class="fxs_ctp_widget_multi fxs_widget_mini">
+                        <div class="fxs_widget_cell_col">
+                            <div class="fxs_widget_cell_col">
+                                <abbr class="fxs_asset_label" title="USD/JPY">
+                                    USD/JPY
+                                </abbr>
+                            </div>
+                            <div class="ctp_multi_percent_wrapper">
+                                <div class="ctp_price_precent">
+                                    <small class="fxs_widget_small">Sell</small>
+                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">50%</span>
+                                </div>
+
+                                <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
+                                    <small class="fxs_widget_small">Buy</small>
+                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">50%</span>
+                                </div>
+                            </div>
+
+                            <div class="ctp_graphic_wrapper">
+                                <div id="ctp_bar_stacked_152358770-3f80-ed0a-9b5c-e17a41a8aae80" class="c3" style="width: 100%; max-height: 35px; position: relative;"><svg width="200" height="35" style="overflow: hidden;"><defs><clipPath id="c3-1470128051979-clip"><rect width="198" height="29"></rect></clipPath><clipPath id="c3-1470128051979-clip-xaxis"><rect x="-29" y="-5" width="21" height="54"></rect></clipPath><clipPath id="c3-1470128051979-clip-yaxis"><rect x="-31" y="-20" width="260" height="21"></rect></clipPath><clipPath id="c3-1470128051979-clip-grid"><rect width="198" height="29"></rect></clipPath><clipPath id="c3-1470128051979-clip-subchart"><rect width="198" height="28"></rect></clipPath></defs><g transform="translate(1.5,5.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="99" y="14.5" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="198" height="29" style="opacity: 0;"></rect><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="0" x2="198" y1="-10" y2="-10" style="visibility: hidden;"></line></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="0" y="1" width="198" height="28"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-bars c3-bars-Sell" style="cursor: pointer;"><path class="c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 0,12 L90,12 L90,18 L0,18 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path></g></g><g class="c3-chart-bar c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-bars c3-bars-Buy" style="cursor: pointer;"><path class="c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 90,12 L180,12 L180,18 L90,18 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-lines c3-lines-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-areas c3-areas-Sell"></g><g class=" c3-selected-circles c3-selected-circles-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-circles c3-circles-Sell" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-lines c3-lines-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-areas c3-areas-Buy"></g><g class=" c3-selected-circles c3-selected-circles-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-circles c3-circles-Buy" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(99,9.5)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Sell"></g></g><g class="c3-chart-text c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Buy"></g></g></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip-xaxis)" transform="translate(0,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-x-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end; display: block;"><tspan x="-9" dy="3">0</tspan></text></g><path class="domain" d="M-6,1H0V29H-6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip-yaxis)" transform="translate(0,29)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y-label" transform="" x="198" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0, 0)" style="opacity: 1;"><line y2="0" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><g class="tick" transform="translate(18, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">10</tspan></text></g><g class="tick" transform="translate(36, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">20</tspan></text></g><g class="tick" transform="translate(54, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">30</tspan></text></g><g class="tick" transform="translate(72, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">40</tspan></text></g><g class="tick" transform="translate(90, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">50</tspan></text></g><g class="tick" transform="translate(108, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">60</tspan></text></g><g class="tick" transform="translate(126, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">70</tspan></text></g><g class="tick" transform="translate(144, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">80</tspan></text></g><g class="tick" transform="translate(162, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">90</tspan></text></g><g class="tick" transform="translate(180, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">100</tspan></text></g><g class="tick" transform="translate(198, 0)" style="opacity: 1;"><line y2="0" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">110</tspan></text></g><path class="domain" d="M0,6V0H198V6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(0,1)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="" x="198" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0</tspan></text></g><g class="tick" transform="translate(20, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.1</tspan></text></g><g class="tick" transform="translate(40, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.2</tspan></text></g><g class="tick" transform="translate(60, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.3</tspan></text></g><g class="tick" transform="translate(80, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.4</tspan></text></g><g class="tick" transform="translate(99, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.5</tspan></text></g><g class="tick" transform="translate(119, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.6</tspan></text></g><g class="tick" transform="translate(139, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.7</tspan></text></g><g class="tick" transform="translate(159, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.8</tspan></text></g><g class="tick" transform="translate(179, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.9</tspan></text></g><g class="tick" transform="translate(198, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">1</tspan></text></g><path class="domain" d="M0,-6V0H198V-6"></path></g></g><g transform="translate(30.5,5.5)" style="visibility: hidden;"><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128051979-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" y="1" height="28" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" y="0" height="0" style="cursor: move;"></rect><g class="resize n" transform="translate(0,0)" style="cursor: ns-resize; display: none;"><rect y="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize s" transform="translate(0,0)" style="cursor: ns-resize; display: none;"><rect y="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="" style="opacity: 1;"><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end; display: block;"><tspan x="-9" dy="3">0</tspan></text></g><path class="domain" d="M-6,1H0V29H-6"></path></g></g><g transform="translate(0,35)" style="visibility: hidden;"></g></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="fxs_widget_cell_col">
+                            <div class="fxs_widget_avg_col">
+                                <div class="fxs_module_cols_avg">
+                                    <small class="fxs_widget_small">Avg Sell Price</small>
+                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">102.59</span>
+                                </div>
+
+                                <div class="fxs_module_cols_avg">
+                                    <small class="fxs_widget_small">Avg Buy Price</small>
+                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">102.59</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="application/ld+json">
+                            {
+                            "@type": "Review",
+                            "datePublished": "2016-08-02T08:54:14.1513499Z",
+                            "description": "Current Trading Position regarding USD/JPY including Sell, Buy, Average Sell Price, Average Buy Price.",
+                            "name": "USD/JPY Trading Position by FXStreet",
+                            "reviewBody": {
+                            "@type": "Text",
+                            "value": "Sell 50% Buy 50% Average Sell Price 102.59 Average Buy Price 102.59" },
+                            "itemReviewed": {
+                            "@type": "Thing",
+                            "Name": "USD/JPY",
+                            "sameAs": "https://en.wikipedia.org/wiki/Currency_pair",
+                            "ratingValue": "1",
+                            "url": "USDJPY"
+                            }
+                            }
+                        </script>
+                    </div>
+                </td>
+                <td>
+                    <a title="See Full Study" class="fxs_btn_icon"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">See Full Study</span></a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="fxs_widget_footer" colspan="2">
+                    <small><time datetime="2016-08-02T08:54:14.1513499Z">Updated Aug 2, 08:54 GMT</time></small>
+                    
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+</div>
+
+
+    <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMediumClean">
+        <article class="fxs_entryFeatured_med">
+            <header>
+                <h3 class="fxs_entryHeadline">
+                    <a href="http://www.fxstreet.com/analysis/usd-jpy-hidden-bullish-divergence-on-h4-time-frame-201608011051" title="USD/JPY hidden bullish divergence on H4 time frame">USD/JPY hidden bullish divergence on H4 time frame</a>
+                </h3>
+                <address class="fxs_contributorBox fxs_contributorBox_small">
+                    <div class="fxs_avatar_circleImage_s">
+                        <a href="/author/nenad-kerkez" title="Nenad Kerkez">
+                            <img src="https://editorial.azureedge.net/authors/Nenad%20Kerkez.jpg" alt="Nenad Kerkez" width="35" height="35">
+                        </a>
+                    </div>
+                    <span class="fxs_article_author">
+                        <a href="/author/nenad-kerkez" title="Nenad Kerkez" rel="author">
+                            <strong>Nenad Kerkez</strong>
+                        </a>
+                        <span class="fxs_author_description">
+                             <a href="/company/admiral-markets" title="Admiral Markets" class="fxs_mutedLink" target="_blank">Admiral Markets</a>
+                        </span>
+                    </span>
+                </address>
+            </header>
+            <div class="fxs_entryExcerpt">
+                <p>
+                    
+                </p>
+            </div>
+        </article>
+    </div>
+
+        </div>
+    </div>
+    <div class="fxs_col fxs_col_33">
+        <div id="Details_C073_Col02" class="sf_colsIn"><div fxs_widget="" fxs_name="ctpmultiasset" fxs_host="https://markettools.fxstreet.com/" fxs_assets="fxs-3230110" fxs_class_size="fxs_widget_mini" fxs_fullreport_url="//www.fxstreet.com/rates-charts/{{asset}}/trading-positions" fxs_fullstudy_url="//www.fxstreet.com/rates-charts/trading-positions" fxs_hide_fullreport="" fxs_seo="true"><section class="fxs_widget_summary">
+    <table class="fxs_table fxs_tableHover">
+        <tbody>
+            <tr onclick="window.document.location='//www.fxstreet.com/rates-charts/xauusd/trading-positions'">
+                <td>
+                    <div class="fxs_ctp_widget_multi fxs_widget_mini">
+                        <div class="fxs_widget_cell_col">
+                            <div class="fxs_widget_cell_col">
+                                <abbr class="fxs_asset_label" title="XAU/USD">
+                                    XAU/USD
+                                </abbr>
+                            </div>
+                            <div class="ctp_multi_percent_wrapper">
+                                <div class="ctp_price_precent">
+                                    <small class="fxs_widget_small">Sell</small>
+                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">0%</span>
+                                </div>
+
+                                <div class="ctp_price_precent fxs_fRight ctp_price_percent_fixed">
+                                    <small class="fxs_widget_small">Buy</small>
+                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">100%</span>
+                                </div>
+                            </div>
+
+                            <div class="ctp_graphic_wrapper">
+                                <div id="ctp_bar_stacked_17d783d46-7553-a638-d71d-471fd22df3e20" class="c3" style="width: 100%; max-height: 35px; position: relative;"><svg width="200" height="35" style="overflow: hidden;"><defs><clipPath id="c3-1470128052125-clip"><rect width="198" height="29"></rect></clipPath><clipPath id="c3-1470128052125-clip-xaxis"><rect x="-29" y="-5" width="21" height="54"></rect></clipPath><clipPath id="c3-1470128052125-clip-yaxis"><rect x="-31" y="-20" width="260" height="21"></rect></clipPath><clipPath id="c3-1470128052125-clip-grid"><rect width="198" height="29"></rect></clipPath><clipPath id="c3-1470128052125-clip-subchart"><rect width="198" height="28"></rect></clipPath></defs><g transform="translate(1.5,5.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="99" y="14.5" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="198" height="29" style="opacity: 0;"></rect><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip)" class="c3-regions" style="visibility: visible;"></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip-grid)" class="c3-grid" style="visibility: visible;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="0" x2="198" y1="-10" y2="-10" style="visibility: hidden;"></line></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="0" y="1" width="198" height="28"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-bars c3-bars-Sell" style="cursor: pointer;"><path class="c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 0,12 L0,12 L0,18 L0,18 z" style="stroke: rgb(206, 71, 53); fill: rgb(206, 71, 53); opacity: 1;"></path></g></g><g class="c3-chart-bar c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-bars c3-bars-Buy" style="cursor: pointer;"><path class="c3-shape c3-shape-0 c3-bar c3-bar-0" d="M 0,12 L180,12 L180,18 L0,18 z" style="stroke: rgb(51, 132, 115); fill: rgb(51, 132, 115); opacity: 1;"></path></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Sell c3-lines c3-lines-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-areas c3-areas-Sell"></g><g class=" c3-selected-circles c3-selected-circles-Sell"></g><g class=" c3-shapes c3-shapes-Sell c3-circles c3-circles-Sell" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-Buy c3-lines c3-lines-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-areas c3-areas-Buy"></g><g class=" c3-selected-circles c3-selected-circles-Buy"></g><g class=" c3-shapes c3-shapes-Buy c3-circles c3-circles-Buy" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(99,9.5)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-Sell" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Sell"></g></g><g class="c3-chart-text c3-target c3-target-Buy" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-Buy"></g></g></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip-xaxis)" transform="translate(0,0)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-x-label" transform="rotate(-90)" x="0" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end; display: block;"><tspan x="-9" dy="3">0</tspan></text></g><path class="domain" d="M-6,1H0V29H-6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip-yaxis)" transform="translate(0,29)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y-label" transform="" x="198" dx="-0.5em" dy="-0.5em" style="text-anchor: end;"></text><g class="tick" transform="translate(0, 0)" style="opacity: 1;"><line y2="0" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><g class="tick" transform="translate(18, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">10</tspan></text></g><g class="tick" transform="translate(36, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">20</tspan></text></g><g class="tick" transform="translate(54, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">30</tspan></text></g><g class="tick" transform="translate(72, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">40</tspan></text></g><g class="tick" transform="translate(90, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">50</tspan></text></g><g class="tick" transform="translate(108, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">60</tspan></text></g><g class="tick" transform="translate(126, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">70</tspan></text></g><g class="tick" transform="translate(144, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">80</tspan></text></g><g class="tick" transform="translate(162, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">90</tspan></text></g><g class="tick" transform="translate(180, 0)" style="opacity: 1;"><line y2="6" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">100</tspan></text></g><g class="tick" transform="translate(198, 0)" style="opacity: 1;"><line y2="0" x1="0" x2="0"></line><text y="9" x="0" transform="" style="text-anchor: middle;"><tspan x="0" dy=".71em" dx="0">110</tspan></text></g><path class="domain" d="M0,6V0H198V6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(0,1)" style="visibility: hidden; opacity: 1;"><text class="c3-axis-y2-label" transform="" x="198" dx="-0.5em" dy="1.2em" style="text-anchor: end;"></text><g class="tick" transform="translate(0, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0</tspan></text></g><g class="tick" transform="translate(20, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.1</tspan></text></g><g class="tick" transform="translate(40, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.2</tspan></text></g><g class="tick" transform="translate(60, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.3</tspan></text></g><g class="tick" transform="translate(80, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.4</tspan></text></g><g class="tick" transform="translate(99, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.5</tspan></text></g><g class="tick" transform="translate(119, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.6</tspan></text></g><g class="tick" transform="translate(139, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.7</tspan></text></g><g class="tick" transform="translate(159, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.8</tspan></text></g><g class="tick" transform="translate(179, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">0.9</tspan></text></g><g class="tick" transform="translate(198, 0)" style="opacity: 1;"><line y2="-6" x2="0"></line><text y="-9" x="0" style="text-anchor: middle;"><tspan x="0" dy="0em">1</tspan></text></g><path class="domain" d="M0,-6V0H198V-6"></path></g></g><g transform="translate(30.5,5.5)" style="visibility: hidden;"><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(http://www.fxstreet.com/analysis#c3-1470128052125-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" y="1" height="28" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" y="0" height="0" style="cursor: move;"></rect><g class="resize n" transform="translate(0,0)" style="cursor: ns-resize; display: none;"><rect y="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize s" transform="translate(0,0)" style="cursor: ns-resize; display: none;"><rect y="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="" style="opacity: 1;"><g class="tick" transform="translate(0,15)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end; display: block;"><tspan x="-9" dy="3">0</tspan></text></g><path class="domain" d="M-6,1H0V29H-6"></path></g></g><g transform="translate(0,35)" style="visibility: hidden;"></g></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="fxs_widget_cell_col">
+                            <div class="fxs_widget_avg_col">
+                                <div class="fxs_module_cols_avg">
+                                    <small class="fxs_widget_small">Avg Sell Price</small>
+                                    <span class="fxs_txt_danger fxs_widget_custom_data_lable">N/A</span>
+                                </div>
+
+                                <div class="fxs_module_cols_avg">
+                                    <small class="fxs_widget_small">Avg Buy Price</small>
+                                    <span class="fxs_txt_success fxs_widget_custom_data_lable">1171.48</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script type="application/ld+json">
+                            {
+                            "@type": "Review",
+                            "datePublished": "2016-08-02T08:54:14.6543789Z",
+                            "description": "Current Trading Position regarding XAU/USD including Sell, Buy, Average Sell Price, Average Buy Price.",
+                            "name": "XAU/USD Trading Position by FXStreet",
+                            "reviewBody": {
+                            "@type": "Text",
+                            "value": "Sell 0% Buy 100% Average Sell Price N&#x2F;A Average Buy Price 1171.48" },
+                            "itemReviewed": {
+                            "@type": "Thing",
+                            "Name": "XAU/USD",
+                            "sameAs": "https://en.wikipedia.org/wiki/Currency_pair",
+                            "ratingValue": "1",
+                            "url": "XAUUSD"
+                            }
+                            }
+                        </script>
+                    </div>
+                </td>
+                <td>
+                    <a title="See Full Study" class="fxs_btn_icon"><i class="fa fa-angle-double-right"></i><span class="fxs_skip">See Full Study</span></a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="fxs_widget_footer" colspan="2">
+                    <small><time datetime="2016-08-02T08:54:14.6543789Z">Updated Aug 2, 08:54 GMT</time></small>
+                    
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+</div>
+
+
+    <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisMediumClean">
+        <article class="fxs_entryFeatured_med">
+            <header>
+                <h3 class="fxs_entryHeadline">
+                    <a href="http://www.fxstreet.com/analysis/gold-shot-higher-to-1355-on-friday-201608011258" title="Gold shot higher to 1355 on Friday">Gold shot higher to 1355 on Friday</a>
+                </h3>
+                <address class="fxs_contributorBox fxs_contributorBox_small">
+                    <div class="fxs_avatar_circleImage_s">
+                        <a href="/author/jason-sen" title="Jason Sen">
+                            <img src="https://editorial.azureedge.net/authors/Jason%20Sen.jpg" alt="Jason Sen" width="35" height="35">
+                        </a>
+                    </div>
+                    <span class="fxs_article_author">
+                        <a href="/author/jason-sen" title="Jason Sen" rel="author">
+                            <strong>Jason Sen</strong>
+                        </a>
+                        <span class="fxs_author_description">
+                             <a href="/company/daytradeideascom" title="DayTradeIdeas.com" class="fxs_mutedLink" target="_blank">DayTradeIdeas.com</a>
+                        </span>
+                    </span>
+                </address>
+            </header>
+            <div class="fxs_entryExcerpt">
+                <p>
+                    
+                </p>
+            </div>
+        </article>
+    </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="fxs_row">
+    <div class="fxs_col fxs_col_33">
+        <div id="Details_C140_Col00" class="sf_colsIn">
+<div>
+    <div><p class="fxs_entryExcerpt">Have you seen these <a href="http://www.fxstreet.com/rates-charts/chart">interesting charts</a>?</p></div>
+</div>
+
+        </div>
+    </div>
+    <div class="fxs_col fxs_col_33">
+        <div id="Details_C140_Col01" class="sf_colsIn">
+<div>
+    <div><p class="fxs_entryExcerpt"><a href="http://www.fxstreet.com/rates-charts/nzdcad/chart/"></a>Have you visited our&nbsp;<a href="http://www.fxstreet.com/rates-charts/forecast">Forex Forecast page</a>?</p></div>
+</div>
+
+        </div>
+    </div>
+    <div class="fxs_col fxs_col_33">
+        <div id="Details_C140_Col02" class="sf_colsIn">
+<div>
+    <div><p class="fxs_entryExcerpt">What do you know about <a href="http://www.fxstreet.com/rates-charts/rates">Forex rates</a>?</p></div>
+</div>
+
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+                    </section>
+                </main>
+
+                <!-- /Main Section -->
+
+                <section class="fxs_detail">
+
+                    <!-- Post goes here -->
+                    <article class="fxs_article">
+                        <header class="fxs_article_header">
+                            <aside class="fxs_entry_metaInfo">
+                                <a class="fxs_entry_sectionlink" href="/">Analysis</a> | <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time>
+                            </aside>
+                            <h1 class="fxs_headline_large">GBP/USD Forecast: bullish above 1.5630</h1>
+                            <!-- Author box Big -->
+                            <address class="fxs_contributorBox fxs_contributorBox_big">
+                                <div class="fxs_avatar_circleImage_s">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR">
+                                        <img src="http://img.timeinc.net/time/daily/2009/0911/360_wmanny_1116.jpg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                    </a>
+                                </div>
+                                <span class="fxs_article_author">
+                                    <a href="path/to/author" title="NOMBRE DEL AUTOR" rel="author">
+                                        Manny Pacquiao
+                                    </a>
+                                    <span class="fxs_author_description">
+                                        Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
+                                    </span>
+                                    <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
+                                        <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                        <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
+                                    </button>
+                                </span>
+                                <script type="application/ld+json">
+                                // AQUÍ IRÁ LO DEL JSON DE CRISTIAN
+                                </script>
+                            </address>
+                            <!-- /Author box Big -->
+
+                            <!-- Social Media share widget -->
+                            <div class="fxs_shareContent_holder">
+                                <span class="fxs_helperLabel_title">Share</span>
+                                 <ul class="fxs_shareOptions_boxed">
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Twitter"><i class="fa fa-twitter"></i><span class="fxs_skip">Share on Twitter</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_socialMedia_item">
+                                        <a href="/" class="fxs_btn_icon" title="Share on Facebook"><i class="fa fa-facebook"></i><span class="fxs_skip">Share on Facebook</span></a>
+                                    </li>
+                                    <!--
+                                    -->
+                                    <li class="fxs_overflowOptions">
+                                        <span class="fxs_btn_icon" title="More options" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
+                                        <ul class="fxs_btnGroup_dropdownList">
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on linkedIn"><i class="fa fa-linkedin"></i><span class="fxs_skip">Share on linkedIn</span></a>
+                                            </li>
+                                            <!--
+                                            -->
+                                            <li class="fxs_socialMedia_item">
+                                                <a href="/" class="fxs_btn_icon" title="Share on Google+"><i class="fa fa-google-plus"></i><span class="fxs_skip">Share on Google+</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+
+                        <div class="fxs_article_body">
+                            <!-- Article main image + ad -->
+                            <div class="fxs_article_mainMedia">
+                                <div class="fxs_mediaContainer">
+                                    <img src="http://www.teletrader.com//chartEngine.chart?EwEAAB_LCAAAAAAABAAtjs1qwzAQhN9Gp9YOcX4aGT1AoIXQ0rNZS1tJRNIaaR3Hlz57jd3bzMd8MGWOPQXFXF4vh8vboRGBNARUmF6_v8TkDTt1avbCobeOVXPeCcY4BGBcrGqgzBA6PRam_PA4ddpB5q4PoO9izT4ZfCqBOVO_RrCofut3mGnk2kdbr-zfOu53z_Z0roZkhaYYIRn1oDBGhIxQFUeT-IFQsI3gU2WWE5_QLMrmYyMDZk9GGvBhbm325raBCfG_kHVTeA4oe8hbtTAUSmgsFsl5xPYPGyNp_xMBAAA.&u=635757739654410034" />
+                                </div>
+                                <figcaption>EUR/USD Spot <time pubdate="" datetime="2015-09-14 09:34">Sept 09, 2015</time><small>© Teletrader</small></figcaption>
+                            </div>
+
+                            <div class="fxs_article_ad">
+                                <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                            </div>
+                            <!-- // -->
+                            <p>
+                                The common currency is pointing to close the week above the 1.1300, its highest level in 2 months, boosted by market's sentiment.
+                            </p>
+
+                            <h2>EUR/USD levels to watch</h2>
+
+                            <p>
+                                There were two major catalyst spurring risk aversion these days, the latest FOMC Minutes, and Chinese turmoil:
+                            </p>
+
+                            <h3>EUR/USD analysis</h3>
+                            <p>
+                                Official figures show, UK unemployment in the three months to October fell by 63,000 to 1.96 million. The Jobless Claims declined in November by 26.9K, beating the median estimate of -20.K. On a quarterly basis, average earnings excluding bonuses grew by 1.6%.
+                            </p>
+
+                            <!-- Post related content -->
+                            <div class="fxs_article_related_mini">
+                                <h3 class="fxs_subtitle">
+                                    Related content
+                                </h3>
+
+                                <!-- Featured entry Image sided nano-->
+                                <div class="fxs_entryFeatured">
+                                    <article class="fxs_clearfix">
+                                        <div class="fxs_squareImage">
+                                            <a href="/">
+                                                <img src="http://a.abcnews.com/images/Politics/ap_obama_presser_01_lb_141219_16x9_992.jpg" alt="Título de la imagen">
+                                            </a>
+                                        </div>
+                                        <div class="fxs_floatingMedia_textBody">
+                                            <h4 class="fxs_headline_tiny">
+                                                <a href="" title="">New record lows for European sovereign yields</a>
+                                            </h4>
+                                            <address class="fxs_entry_metaInfo">
+                                                <span class="fxs_article_author"><a href="http://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                            </address>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <hr class="fxs_divider_third">
+
+                                <!-- Sponsored content -->
+                                <div class="fxs_entryFeatured">
+                                    <article class="fxs_clearfix">
+                                        <div class="fxs_floatingMedia_textBody">
+                                            <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
+                                            <h4 class="fxs_headline_tiny">
+                                                <a href="" title="">New record lows for European sovereign yields</a>
+                                            </h4>
+                                            <a class="fxs_btn fxs_btn_cta fxs_btn_small" href="/">Button CTA</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <!-- /Sponsored content -->
+
+                            </div>
+                            <!-- /Post related content -->
+
+                            <p>
+                                NZD has made an upside attack of the Daily negative Ichimoku cloud on Friday, but the cloud is very wide and powerful so the price was rejected but the Senkou Span A level and we are currently at the support area of 0.66-0.6590. A Daily close below this will be a signal for a new slide with possible target 0.6500 and 0.6450.
+                                AUD is clearly bearish below 0.7305. recovery is possible only above 0.7350, but this is pretty away from the current price. H4 and Daily indicators are bearish, while the H1 shows some correction is going on. However you may sell below 0.7270 and as long as we are below this every upside will be used to open sell positions at a better price.
+                            </p>
+
+                            <p>
+                                JPY dropped to 120.70 as the price has broken the 124 support. Downside move was capped by the Daily SMA200 which is exactly 120.70 at the moment. It is good to know that if we have any Daily close below this support this will signal that we have made a double top formation which is very likely to lead to further price drop of this pair.
+                            </p>
+
+                            <p>
+                                GBP still continues the consolidation and is away from the strong moves involving the dollar last week. The outlook here seems a bit bullish above 1.5640. So you may try small long positions, keeping an eye of the 1.5640. If there are signs of breaking it lower you'd better exit long.
+                            </p>
+
+                            <hr class="fxs_divider_second">
+                                
+                            <!-- Content Ad -->
+                            <div class="fxs_clearfix fxs_sponsored_content_row">
+                                <div class="fxs_sponsor_img fxs_fLeft">
+                                    <a href="/">
+                                        <img src="http://cdn.fxstreet.com/images/FxPro_100x33_Logob.jpg">
+                                    </a>
+                                </div>
+                                <div class="fxs_floatingMedia_textBody">
+                                    <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="Text that explain sponsored content"></i></span>
+                                    <h3 class="fxs_headline_tiny">
+                                        <a href="" title="">Live technical analysis TV</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- /Content Ad -->
+
+                            <hr class="fxs_divider_second">
+
+                            <ul>
+                                <li>U.K. Starts Exit From RBS</li>
+                                <li>
+                                    Heard on the Street: Opportunity for Taxpayer:
+                                    <ul>
+                                        <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                        <li>
+                                            Heard on the Street: Opportunity for Taxpayer:
+                                            <ul>
+                                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                                <li>Heard on the Street: Opportunity for Taxpayer:</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Why Osborne Might Be Forced to Fork Out Fees</li>
+                                <li>Heard on the Street: Opportunity for Taxpayer</li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Disclaimer in post! -->
+                        <div class="fxs_disclaimer_block">
+                            <h5>Legal disclaimer and risk disclosure</h5>
+                            <p>
+                                Trendsetter does not warrant or guarantee the accuracy, timeliness or completeness to its service or information contained therein. Trendsetter does not give, whatsoever, warranties, expressed or implied, to the results to be obtained by using its services or information it provided. Users are trading on their own risk and Trendsetter shall not be responsnd its t limited to damages caused by negligence whether such damages were foreseen or unforeseen.
+                            </p>
+                        </div>
+                        <!-- /Disclaimer in post! -->
+
+                        <!-- Article footer -->
+                        <footer class="fxs_article_tags">
+                            <h4 class="fxs_helperLabel_title">Related topics</h4>
+                            <ul>
+                                <li><a href="" title="USDJPY">USDJPY</a></li>
+                                <li><a href="" title="EURUSD">EURUSD</a></li>
+                                <li><a href="" title="Asia">Asia</a></li>
+                                <li><a href="" title="Russia levels">Russia levels</a></li>
+                            </ul>
+                        </footer>
+                        <!-- /Article footer -->
+
+                    </article>
+                    <!-- /Post ends here -->
+
+                    <!-- Related content -->
+                    <aside class="fxs_relatedContent_holder">
+                        <ul class="fxs_swipeContent_slider">
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_thescene.jpg,fl_progressive,g_face,h_450,q_80,w_800/v1406915389/wired_design-fx-game-of-thrones-combining-cgi-and-live-action-to-create-the-dragons-fights-scenes-in-season-4.jpg" alt="khaleesi" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://media.giphy.com/media/XTJzFN8rUtx7i/giphy.gif" alt="Cute cat" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                            <li class="fxs_relatedContentSlot_x3_cols">
+                                <div class="fxs_relatedItem">
+                                    <article>
+                                        <div class="fxs_entryFeatured_img">
+                                            <img src="http://nerdist.com/wp-content/uploads/2015/05/sansa-stark-thrones-970x545.jpg" alt="Sansa" width="" height="">
+                                        </div>
+                                        <h3 class="fxs_entryHeadline">
+                                            <a href="/">US durable goods orders strong than expected in October UK unemployment in the three months</a>
+                                        </h3>
+                                    </article>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- //Related content -->
+                </section>
+                <!-- //Main Section -->
+
+                <!-- Loading more content msg -->
+                <div class="fxs_feedbackLoading_msg" style="display: block;">
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <span class="fxs_loadingStatus">Loading More content</span>
+                </div>
+                <div class="fxs_feedbackLoading_msg">
+                    <span class="fxs_loadingStatus">No more content to load</span>
+                </div>
+                <!-- /Loading more content msg -->
+
+            </div>
+            <!-- /The content rail -->
+        </div>
+
+        <!-- ListView -->
+        <section class="fxs_listView" id="cbp-spmenu-s3">
+            <header class="fxs_listview_subnav">
+                <h2 class="fxs_helperLabel_title">Latest Analysis</h2>
+
+                <!-- Typeahead -->
+                <div class="fxs_filter">
+                    <form>
+                        <div class="fxs_typeaheadContainer">
+                            <label for="q" class="fxs_btn_filter" title="Search in news">
+                                <i class="fa fa-search"></i>
+                                <span class="fxs_skip">Search in Analysis</span>
+                            </label>
+                            <div class="fxs_queryResults">
+                                <!-- Contador de resultados: activar cuando se selecciona uno -->
+                                <span class="fxs_queryResults_label">1238 Results</span>
+                                <!-- /Contador de resultados -->
+                                <button type="reset" title="Clear search" class="fxs_dismissQuery"><i class="fa fa-times-circle"></i></button>
+                            </div>
+                            <div class="fxs_typeaheadField">
+                                <div class="fxs_typeaheadQuery">
+                                    <input id="q" name="q" type="search" placeholder="Search in news" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- /Typeahead -->
+
+            </header>
+            <nav class="fxs_listViewRail">
+                <a href="#" class="fxs_listView_newItemsAlert">
+                    See 2 New Updates
+                </a>
+                <ol class="fxs_listView_blockWrapper">
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/sauro/128.jpg" alt="Nombre del autor">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">EUR/USD Forecast: Shy upward correction underway</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">John Doe</span> | <time pubdate="" datetime="2015-09-14 09:34">20 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg" alt="Nombre del autor">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Padme Amidala</span> | <time pubdate="" datetime="2015-09-14 09:32">22 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_adContiner">
+                        <iframe class="fxs_hidden_m EJEMPLO-DE-ANUNCIO-SCREEN-L" src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true"></iframe>
+                        <img class="fxs_hidden_xs fxs_visible_m EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://www.denimblog.com/wp-content/uploads/2009/08/250x250.png" width="250" height="250">
+                        <img class="fxs_visible_xs EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://yaffacdn.s3.amazonaws.com/live/adnews/images/dmImage/SourceImage/opPICTURE06.jpg" width="320" height="49">
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/itsjonq/128.jpg" alt="Cage">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Akira Toriyama</span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" alt="Cute cat">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Masashi Kishimoto</span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" alt="Cage">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Sasuke Uchiha</span> | <time pubdate="" datetime="2015-09-13 09:28">Sept 13, 09:28 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Obi Wan Kenobi</span> | <time pubdate="" datetime="2015-09-13 09:27">Sept 13, 09:27 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Madara Uchiha</span> | <time pubdate="" datetime="2015-09-13 09:25">Sept 13, 09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://mediaserver.fxstreet.com/images/danske-research-team-author-photomedium.jpeg" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <span class="fxs_mutedContent_label">Sponsored content <i class="fa fa-external-link" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Text that explain sponsored content"></i></span>
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Danske Bank</span> | <time pubdate="" datetime="2015-09-13 08:00">Sept 13, 08:00 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Anakin Skiwalker</span> | <time pubdate="" datetime="2015-09-12 09:25">Sept 12, 09:25 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="fxs_listView_item">
+                        <article class="fxs_clearfix">
+                            <figure class="fxs_listView_squareImage fxs_avatar_circleImage">
+                                <img src="http://media.giphy.com/media/er19eYafoFxrq/giphy.gif" alt="Cute cat actual">
+                            </figure>
+                            <div class="fxs_floatingMedia_textBody">
+                                <h3 class="fxs_headline_tiny">
+                                    <a href="/">Some awesome tittle with many words and some stunning content</a>
+                                </h3>
+                                <address class="fxs_entry_metaInfo">
+                                    <span class="fxs_article_author">Some Guy</span> | <time pubdate="" datetime="2015-09-12 09:12">Sept 12, 09:12 UTC</time>
+                                </address>
+                            </div>
+                        </article>
+                    </li>
+                </ol>
+                <div class="fxs_feedbackLoading_msg">
+                    <i class="fa fa-refresh fa-spin"></i>
+                    <span class="fxs_loadingStatus">Loading More content</span>
+                </div>
+
+                <!-- Link load more for Google -->
+                <!-- Important: When there's no more content to load, remove class "load_next_page" to hide link -->
+                <div class="fxs_feedbackLoading_msg load_next_page"> <!-- Forced style. Dont reprocuce the style="display:block"! -->
+                    <a href="#load-next-page" class="fxs_btn fxs_btn_line fxs_btn_block fxs_btn_small">
+                        Load more Analysis
+                    </a>
+                </div>
+                <!-- Link load more for Google -->
+
+                <div class="fxs_feedbackLoading_msg">
+                    <span class="fxs_loadingStatus">No more content to load</span>
+                </div>
+            </nav>
+        </section>
+        <!-- /ListView -->
+        
+        <!-- Sidebar right -->
+        <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+            <ul class="fxs_tabs_nav">
+                <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                    <form class="fxs_authentication_form">
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Username" for="user-name">
+                                <i class="fa fa-user"></i>
+                                <span class="fxs_skip">Username</span>
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Password" for="password">
+                                <i class="fa fa-lock"></i>
+                                <span class="fxs_skip">Password</span>
+                            </label>
+                            <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                        </div>
+                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                        <a href="#" title="Forgot password">Forgot password</a>
+                    </form>
+
+                    <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                    <div class="fxs_social_sidebar_nav">
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                    </div>
+
+                    <div class="fxs_login_message">
+                        <span class="fxs_label">I'm not an fxstreet member</span>
+                        <a href="#">Sign up</a>
+                    </div>
+                </div>
+                <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                    <form class="fxs_authentication_form">
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="fxs_skip">Enter your email address</span>
+                            </label>
+                            <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                <i class="fa fa-user"></i>
+                                <span class="fxs_skip">Choose your username</span>
+                            </label>
+                            <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                        </div>
+                        <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                            <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                <i class="fa fa-lock"></i>
+                                <span class="fxs_skip">Set your password</span>
+                            </label>
+                            <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                        </div>
+                        <div class="fxs_formGroup">
+                            <label class="fxs_checkboxGroup">
+                                <input type="checkbox" id="terms" />
+                                I have read and accept the
+                            </label>
+                            <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                        </div>
+                        <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                    </form>
+                    
+                    <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                    <div class="fxs_social_sidebar_nav">
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                        <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                    </div>
+
+                    <div class="fxs_login_message">
+                        <span class="fxs_label">Already an fxstreet member?</span>
+                        <a href="#" title="login">login</a>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="fxs_timezone_btn" title="select timezone">
+                <span class="fxs_helperLabel_title">Timezone</span>
+                <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+            </button>
+        </div>
+        <!-- /Sidebar right -->
+
+        <!-- Timezones -->
+        <div class="fxs_pageSidebar fxs_timezone_items">
+            <div class="fxs_timezone_nav">
+                <span class="fxs_helperLabel_title">Change timezone</span>
+                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                    Cancel
+                </button>
+            </div>
+            <div class="fxs_nav_menu fxs_timezone_hours">
+
+                <ol>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            <span class="fxs_timezone_item_location">hawaii</span>
+                        </a>
+                    </li>
+                    
+                </ol>
+            </div>
+            
+        </div>
+        <!-- /Timezones -->
+
+        <!-- Site footer -->
+        <footer class="fxs_footer">
+            <div class="fxs_copy_disclaimer">
+                <div class="fxs_terms_nav">
+                    <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                    <ul class="fxs_subnavInlined_list">
+
+                        <!-- Button DropUp 1 -->
+                        <li class="fxs_btn_group">
+                            <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">About <i class="fa fa-caret-up"></i></button>
+                            <ul class="fxs_dropdownList dropup">
+                                <li><a href="" title="">About fxstreet</a></li>
+                                <li><a href="" title="">Advertise with us</a></li>
+                            </ul>
+                        </li>
+                        <!-- /Button DropUp 1-->
+
+                        <li><a href="#" class="fxs_mutedLink">Terms and conditions</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Privacy policy</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Contact us</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Site map</a></li>
+
+                        <!-- Button DropUp 2-->
+                        <li class="fxs_btn_group">
+                            <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                
+                            <ul class="fxs_dropdownList dropup">
+                                <li class="fxs_dropdownHeader">Edition</li>
+                                <li><a href="#">Yсский</a></li>
+                                <li><a href="#">Español</a></li>
+                                <li><a href="#">Deutsch</a></li>
+                                <li><a href="#">Français</a></li>
+                                <li class="fxs_divider_third">&nbsp;</li>
+                                <li class="fxs_dropdownHeader">Other sites</li>
+                                <li><a href="#">体中文</a></li>
+                                <li><a href="#">繁體中文</a></li>
+                                <li><a href="#">Русский</a></li>
+                                <li><a href="#">Indonesia</a></li>
+                                <li><a href="#">العربية</a></li>
+                                <li><a href="#">Italiano</a></li>
+                                <li><a href="#">Português</a></li>
+                                <li><a href="#">Magyar</a></li>
+                                <li><a href="#">Türkçe</a></li>
+                                <li><a href="#">Tiếng Việt</a></li>
+                                <li><a href="#">한국어</a></li>
+                            </ul>
+                        </li>
+                        <!-- /Button DropUp 2-->
+
+                    </ul>
+                </div>
+                <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                <div class="fxs_disclaimer_block">
+                    <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                    <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                    <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- /Site footer -->
+
+    </div>
+    <!-- /The wrapper -->
+    
+
+    <script src="../../js/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <script src="../../js/classie.js"></script>
+    <script src="../../js/jquery.typeahead.min.js"></script>
+    <script src="../../js/site.js"></script>
+
+    <script>
+    
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        });
+
+    </script>
+
+    <!-- javascript widget -->
+    <script src="../../../widgets/core/js/c3.min.js"></script>
+    <script src="../../../widgets/core/js/d3.min.js"></script>
+    <script>
+        
+        // Omar A. 'nice' code (mixed with Omar P. 'chapuza' code)
+
+        var forecastProgressBarObj = function () {
+            var id = "";
+            var chart = null;
+            var container = null;
+            var colunms = null;
+
+            var setVars = function (initJson) {
+                id = initJson.Id;
+                colunms = initJson.Colunms;
+                container = $('#' + id);
+            };
+
+            var initChart = function () {
+                chart = c3.generate({
+                    bindto: '#' + id,
+                    data: {
+                        columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
+                        type: 'bar',
+                        groups: [
+                            ['Bullish', 'Bearish', 'Sideways']
+                        ],
+                        order: 'null',
+                        colors: {
+                            Bullish: '#338473',
+                            Bearish: '#D25746',
+                            Sideways: '#8b8c91'
+                        }
+                    },
+                    padding: {
+                        right: 0
+                    },
+                    axis: {
+                        y: {
+                            show: false
+                        },
+                        x: {
+                            show: false
+                        },
+                        rotated: true
+                    },
+                    bar: {
+                        width: 6
+                    },
+                    size: {
+                        height: 35,
+                        width: 90
+                    },
+                    legend: {
+                        show: false
+                    },
+                    tooltip: {
+                        format: {
+                            title: function (d) { return '1 Week'; },
+                            value: function (value, ratio, id) {
+                                var format = id === 'data1' ? d3.format(',') : d3.format('%');
+                                return format(value);
+                            }
+                        }
+                    }
+                });
+            };
+
+            var delayLoad = function () {
+                setTimeout(function () {
+                    chart.resize({
+                        height: 35,
+                        width: undefined
+                    });
+                }, 100);
+                setTimeout(function () {
+                    chart.load({
+                        columns: colunms
+                    });
+                }, 250);
+            };
+
+            var print = function () {
+                initChart();
+                delayLoad();
+            };
+
+            this.ActiveChange = function() {
+                if (container.closest(".forecast_timeframe").hasClass("active")) {
+                    chart.flush();
+                }
+            };
+
+            this.Init = function (initJson) {
+                setVars(initJson);
+                print();
+            };
+        };
+
+        var forecastWidgetObj = function () {
+
+            var charts = [];
+
+            var manageRenderedHtml = function () {
+                addTabOnClick();
+            };
+
+            var notifyChartsActiveChange = function () {
+                $.each(charts, function(i, chart) {
+                    chart.ActiveChange();
+                });
+            };
+
+            var addTabOnClick = function () {
+
+                // Mini widget
+                $('#tab_1_mini').on('click', function () {
+                    $('.avg_1w').addClass('active');
+                    $('#tab_2_mini, #tab_3_mini').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1m, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_2_mini').on('click', function () {
+                    $('.avg_1m').addClass('active');
+                    $('#tab_1_mini, #tab_3_mini').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1q').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+                $('#tab_3_mini').on('click', function () {
+                    $('.avg_1q').addClass('active');
+                    $('#tab_1_mini, #tab_2_mini').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                    $('.avg_1w, .avg_1m').removeClass('active');
+                    notifyChartsActiveChange();
+                });
+
+            };
+
+            //#region Charts
+
+            var printCharts = function () {
+                // Mini widget
+                instanciateProgressBar("forecast_bar_stacked_1w_mini", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
+                instanciateProgressBar("forecast_bar_stacked_1m_mini", [['Bullish', 0.8], ['Bearish', 0.1], ['Sideways', 0.1]]);
+                instanciateProgressBar("forecast_bar_stacked_1q_mini", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
+
+                instanciateProgressBar("forecast_bar_stacked_1w_2_mini", [['Bullish', 0.25],['Bearish', 0.6],['Sideways', 0.15]]);
+                instanciateProgressBar("forecast_bar_stacked_1m_2_mini", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
+                instanciateProgressBar("forecast_bar_stacked_1q_2_mini", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
+            };
+
+            var instanciateProgressBar = function (widgetId, colunms) {
+                var initJsonProgressBar = {
+                    Id: widgetId,
+                    Colunms: colunms
+                };
+
+                var ctpProgressBar = new forecastProgressBarObj();
+                ctpProgressBar.Init(initJsonProgressBar);
+
+                charts.push(ctpProgressBar);
+            };
+
+            //#endregion Charts
+
+            this.Init = function () {
+                manageRenderedHtml();
+                printCharts();
+            };
+        };
+
+        var forecast = new forecastWidgetObj();
+        forecast.Init();
+
+    </script>
+
+</body>
+
+</html>
