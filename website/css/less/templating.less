@@ -1242,9 +1242,7 @@ body.cbp-spmenu-push-toright{
     }
   } 
 }
-
 // responsive iframe videos
-
 .fxs_responsive_media {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -1253,6 +1251,15 @@ body.cbp-spmenu-push-toright{
     position: absolute;
     width: 100%!important;
     height: 100%!important;
+  }
+}
+
+// custom class to responsive media
+.fxs_rMedia{
+  margin-right:0px;
+  &:extend(.fxs_responsive_media all);
+  @media (min-width: @screen-s) { 
+    margin-right:320px; 
   }
 }
 
