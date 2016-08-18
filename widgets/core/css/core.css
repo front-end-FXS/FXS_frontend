@@ -1075,10 +1075,16 @@ width:calc(100% - 320px);
 .fxs_content_wide .fxs_global_alert {
   width: 100%;
 }
+.fxs_global_alert.fxs_alertCookies {
+  z-index: 1000;
+}
 .fxs_global_alert.in {
   display: block;
 }
 .fxs_global_alert.in + .fxs_contentView {
+  padding-top: 50px;
+}
+.fxs_global_alert.in + .fxs_contentView .fxs_wallpaper_wrap .fxs_wallpaper_img {
   padding-top: 45px;
 }
 .cbp-spmenu-push-toleft .fxs_global_alert,
