@@ -1696,15 +1696,15 @@ body.cbp-spmenu-push-toright{
 .fxs_flex_col {
   @media (min-width: @screen-s) {
     float: left;
-    .calc(width, ~'100% - ((@{left_rail_space}) - 5px)');
+    .calc(width, ~'100% - ((@{left_rail_space}) - 5px)'); //left_rail_space_reduced
     &.fxs_flex_ad_col {
-      width: @left_rail_space - (@txt_defaultsize_px / 3);
+      width: @left_rail_space - (@txt_defaultsize_px / 3); //left_rail_space_reduced
       position: static;
       &.fxs_flex_ad_col_fRight { float: right; }
       .stickem { width: @left_rail_space_reduced - ((@txt_defaultsize_px / 1.5) * 2); }
     }
     &.fxs_flex_col_bro{
-      border-bottom:2px solid @light_5_clr;
+      border-bottom:2px solid #ccc;
     }
     .fxs_col_50, .fxs_col_33:not(.fxs_col_dismissible) {
       float: none;
