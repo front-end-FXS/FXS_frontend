@@ -98,6 +98,35 @@
     }
   }
 
+  &.fxs_widget_big_v2{
+    .fxs_widget_spreads_item{
+      height: auto;
+      line-height: normal;
+      &.fxs_widget_spreads_item_lower{
+        line-height: @base_module_size;
+      }
+    }
+    .fxs_btn_small{
+      font-size: @txt_size_xsmall;
+    }
+    >thead tr> th, tbody> tr> td {
+      &:nth-child(n+6) { display: table-cell; }
+      &:nth-child(4) { display: none; }
+      &:nth-child(2) { display: none; }
+      &:nth-child(5) { display: none; }
+      &:nth-child(3) { width: @base_module_size*5; }
+    }
+    @media(min-width:@screen-m) {
+      >thead tr> th, tbody> tr> td {
+        &:nth-child(n+6) { display: table-cell; }
+        &:nth-child(4) { display: table-cell; }
+        &:nth-child(2) { display: table-cell; }
+        &:nth-child(5) { display: table-cell; }
+        &:nth-child(3) { width: @base_module_size*5; }
+      }
+    }
+  }
+
 	// rules for spreads mini widget
 	&.fxs_widget_mini {
     @media(min-width:@screen-s) {
