@@ -98,30 +98,27 @@
     }
   }
 
+  // rule for new custom big spreads widget
   &.fxs_widget_big_v2{
+    tbody{
+      &:hover {
+        > tr { .opacity(1); }
+      }
+    }
     .fxs_widget_spreads_item{
       height: auto;
       line-height: normal;
-      &.fxs_widget_spreads_item_lower{
-        line-height: @base_module_size;
-      }
+      &.fxs_widget_spreads_item_lower{ line-height: @base_module_size; }
     }
-    .fxs_btn_small{
-      font-size: @txt_size_xsmall;
-    }
+    .fxs_btn_small{ font-size: @txt_size_xsmall; }
     >thead tr> th, tbody> tr> td {
       &:nth-child(n+6) { display: table-cell; }
-      &:nth-child(4) { display: none; }
-      &:nth-child(2) { display: none; }
-      &:nth-child(5) { display: none; }
+      &:nth-child(4), &:nth-child(2), &:nth-child(5) { display: none; } 
       &:nth-child(3) { width: @base_module_size*5; }
     }
     @media(min-width:@screen-m) {
       >thead tr> th, tbody> tr> td {
-        &:nth-child(n+6) { display: table-cell; }
-        &:nth-child(4) { display: table-cell; }
-        &:nth-child(2) { display: table-cell; }
-        &:nth-child(5) { display: table-cell; }
+        &:nth-child(4),&:nth-child(2),&:nth-child(5),&:nth-child(n+6) { display: table-cell; }
         &:nth-child(3) { width: @base_module_size*5; }
       }
     }
@@ -135,6 +132,11 @@
         .fxs_btn_icon { padding-left: 0!important; }
       }
       .fxs_hidden_xs { display: none; }
+    }
+    >tbody, >thead, >tfoot {
+      >tr >td, >tr >th { 
+        padding: 0.20rem; 
+      }
     }
 	}
 	
