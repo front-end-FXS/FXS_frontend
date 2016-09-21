@@ -292,6 +292,9 @@ $(document).ready(function () {
     find a broker
 
     */
+    if ( $('#idTestBtnFollow').hasClass('active') ){
+        $('#idTestMsgOk').removeClass('fxs_hideElements');
+    }
 
     $('.fxs_listView_item').click(function(){
         var bodyHasParentSection = $('body').hasClass('fxs_isParent_section');
@@ -336,11 +339,11 @@ $(document).ready(function () {
     //$('.sticky').fixTo('.sticky-holder');
     // sticky
     // disable when sidebar is active
-    /*$('#showRightPush').on('click',function(){
+    $('#showRightPush').on('click',function(){
         $(".pinned" ).toggle();
     })
     $(".pinned").pin({
         containerSelector: ".container", minWidth: 940, padding: {top: 0, bottom: 10}
-    })*/
+    })
 
 });

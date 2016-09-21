@@ -54,7 +54,7 @@
         //padding-left: 0; 
       }
       &:nth-child(2) { display: none; }
-      &:nth-child(n+6) { display: none; }
+      &:nth-child(n+6) { display: none ; }
       &:last-child { display: table-cell; }
     }
     >thead tr> th {
@@ -63,9 +63,10 @@
     tbody >tr {
       &.fxs_sponsored_broker_row {
         >td {
-          background-color: #212226;
+          background-color: @alternate_clr;
           border-bottom-color: transparent;
-          &, .fxs_article_author a, .fxs_btn_icon { color: #fff; }
+          padding-top: 8px;
+          &, .fxs_article_author a, .fxs_btn_icon, span { color: #fff; }
         }
       }
       >td {
