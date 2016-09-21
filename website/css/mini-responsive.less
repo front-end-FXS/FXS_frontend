@@ -1,0 +1,180 @@
+﻿// estilos padre
+@import "default-responsive.less";
+
+.clearfix:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+ }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+// new rules add to mini responsive beta version
+.fxst-gnral{
+  &.fxs_calendar_mini{
+    .fxit-event-numbers{ 
+      clear: both;
+      .fxit-actual:after {
+        content: 'ACTUAL';
+        font-size: 10px;
+      }
+      .fxit-consensus:after {
+        content: 'CONSENSUS';
+        font-size: 10px;
+      }
+      .fxit-previous:after {
+        content: 'PREVIOUS';
+        font-size: 10px;
+      }
+    }
+    .fxst-flag{
+      position:inherit;
+    }
+    .fxst-calendarhead{
+      display: none!important;
+    }
+    .fxit-eventInfo-country{
+      width:20px!important;
+    }
+    .fxit-eventInfo-time{
+      margin:0!important;
+      padding-top:5px;
+      padding-bottom:5px;
+    }
+    .fxit-event {
+      width:100%!important;
+      float:none!important;
+      @media(min-width:@screen-m){
+        float: left;
+      }
+      .fxit-event-url{
+        width:100%!important;
+      }
+    }
+    .fxit-event-numbers{
+      width:100%;
+      padding-top:20px;
+      .fxit-actual, .fxit-consensus, .fxit-previous{
+        display:inline-block;
+        width:32%;
+        min-height: :40px;
+        text-align: center;
+      }
+    }
+    .fxs_text_numbers{
+      font-size: 10px;
+      @media(min-width:@screen-m){
+        font-size: 8px;
+      }
+      @media(min-width:@screen-l){
+        font-size: 10px;
+      }
+      color: #808080;
+      font-weight: 700;
+    }
+  }
+  &.fxs_calendar_default{
+    @media(max-width:@screen-m){
+      .fxit-eventInfo-vol{
+        margin-top:15px;
+      }
+      .fxit-event-numbers{ 
+        .fxit-actual:after {
+          content: 'ACTUAL';
+          font-size: 10px;
+        }
+        .fxit-consensus:after {
+          content: 'CONSENSUS';
+          font-size: 10px;
+        }
+        .fxit-previous:after {
+          content: 'PREVIOUS';
+          font-size: 10px;
+        }
+      }
+    }
+    .fxst-calendarhead{
+      &.fxs_eventInfo_header{
+        .fxit-eventInfo, .fxit-event, .fxit-event-numbers{
+          font-weight: 700; font-size: 12px; color: #333;
+        } 
+      }
+    }
+    .fxit-event-numbers{
+      &.fxs_event_numbers_header{
+        width:50%;
+        float:right;
+        .fxit-actual, .fxit-consensus, .fxit-previous{
+          display: inline-block;
+          width:30%;
+        }
+      }
+    }
+    .fxst-tr-event{
+      .fxit-event-numbers{
+        width:50%;
+        float: right;
+        @media(max-width:@screen-m){
+          float: none;
+          width:100%;
+          clear: both;
+        }
+        .fxit-actual, .fxit-consensus, .fxit-previous{
+          display: inline-block;
+          width:30%;
+          text-align: right;
+          font-weight: 700;
+          @media(max-width:@screen-m){
+            text-align: center;
+          }
+        }
+      }
+    }
+    .fxit-eventInfo{
+      .fxit-eventInfo-time{
+        width:auto!important;
+        &.fxs_eventInfo_custom{
+          padding-left:20px;
+        }
+        @media(max-width:@screen-m){
+          margin:0!important;
+        }
+      }
+      .fxs_country_name{
+        display: none;
+      }
+    }
+    .fxit-countryurl{
+      .fxst-flag{
+        vertical-align: middle!important;
+        margin-left:5px;
+      }
+    }
+    .fxit-event{
+      width:30%!important;
+      @media(max-width:@screen-m){
+        width:70%!important;
+      }
+      .fxit-event-url{
+        width:100%!important;
+      }
+    }
+  }
+}
+.fxit-first-row{
+    .fxst-td-currency{
+        display:none;
+        @media only screen and (min-width: 768px) {
+            display:block;
+        }
+    }
+    .fxst-td-time, .fxst-td-flag, .fxst-td-currency{
+        float:none;
+        width:30%;
+    }
+}

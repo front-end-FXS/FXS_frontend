@@ -1992,9 +1992,15 @@ width:calc(100% - 320px);
   display: inline-block;
   white-space: nowrap;
   margin-top: -0.25rem;
+  font-size: 0.8rem;
 }
 .fxs_price_bidask .fxs_price_big_figure {
-  font-size: 1.34rem;
+  font-size: 0.92rem;
+}
+@media (min-width: 1150px) {
+  .fxs_price_bidask .fxs_price_big_figure {
+    font-size: 1.34rem;
+  }
 }
 .fxs_price_ohl {
   display: none;
@@ -2196,6 +2202,10 @@ width:calc(100% - 320px);
   position: relative;
   max-width: 1033px;
   margin: 0 auto;
+}
+.fxs_modal_content .fxs_global_alert {
+  position: inherit;
+  width: 100%!important;
 }
 @media (min-width: 680px) {
   .fxs_modal_content {
@@ -2424,6 +2434,9 @@ lesshat-selector {
   text-transform: uppercase;
   font-style: italic;
 }
+.fxs_styledIndicator_label.fxs_indicator_broker {
+  font-size: 0.8rem;
+}
 .fxs_boldAntialised_style,
 .fxs_items_list_nav .fxs_menuList_header,
 .fxs_sectionTitle_header,
@@ -2536,6 +2549,9 @@ lesshat-selector {
 .fxs_headline_tiny {
   margin-bottom: 0;
 }
+.fxs_headline_tiny.fxs_headline_muted {
+  color: #1b1c23;
+}
 @media (min-width: 1150px) {
   .fxs_headline_from_tiny_to_small,
   .fxs_relatedContentSlot_x3_cols .fxs_entryHeadline {
@@ -2588,6 +2604,9 @@ lesshat-selector {
 }
 .fxs_toUppercase {
   text-transform: uppercase;
+}
+.fxs_hideElements {
+  display: none;
 }
 .fxs_align_center {
   text-align: center;
@@ -3005,6 +3024,9 @@ lesshat-selector {
     display: block;
   }
 }
+.fxs_wide_element {
+  width: 100%;
+}
 .fxs_swipeContent_slider {
   overflow-x: auto;
   overflow-y: hidden;
@@ -3120,7 +3142,7 @@ width:calc(100% + @half_base_spacer);
   display: inline-block;
   width: 16px;
   height: 13px;
-  background-image: url('http://az687397.vo.msecnd.net/website/img/sprite-flags5.png');
+  background-image: url('https://staticcontent.azureedge.net/website/img/sprite-flags5.png');
   background-repeat: no-repeat;
   margin-left: 5px;
   border: 1px solid #ccc;

@@ -1390,8 +1390,15 @@
   display: inline-block;
   white-space: nowrap;
   margin-top: -0.25rem;
+  font-size: @txt_size_xsmall;
   .fxs_price_big_figure {
-    font-size: @txt_size_xlarge;
+    font-size: @txt_size_small;
+  }
+  @media(min-width:@screen-l) {
+    
+    .fxs_price_big_figure {
+      font-size: @txt_size_xlarge;
+    }
   }
 }
 
@@ -1608,6 +1615,10 @@
 }
 
 .fxs_modal_content {
+  .fxs_global_alert {
+    position:inherit;
+    width:100%!important;
+  }
   position:relative;
   max-width: @content_rail_width;
   margin: 0 auto;
