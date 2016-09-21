@@ -511,6 +511,33 @@
                     <section class="fxs_detail">
                     
                        <div class="fxs_row">
+                       
+                       <!-- //////////////////////////////// AUTHOR FOLLOW MESSAGE //////////////////////////////////// -->
+
+                            <!-- following author message -->
+                                <div id="idTestMsgOk" class="fxs_contextual_alert fxs_alert_success alert alert-dismissible fade in fxs_hideElements" role="alert">
+                                    <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                                      <i class="fa fa-close"></i>
+                                      <span class="fxs_skip">Close alert</span>
+                                    </button>
+                                    <span class="fxs_alertLabel">Thanks!</span>
+                                    <p class="fxs_alertText">For following this author!</p>
+                                </div>
+                            <!-- /following author message -->
+
+                            <!-- stop following author message -->
+                                <div class="fxs_contextual_alert fxs_alert_error alert alert-dismissible fade in fxs_hideElements" role="alert">
+                                    <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                                      <i class="fa fa-close"></i>
+                                      <span class="fxs_skip">Close alert</span>
+                                    </button>
+                                    <span class="fxs_alertLabel">You've unfollowed this author!</span>
+                                    <p class="fxs_alertText">You won't receive any more email notifications.</p>
+                                </div>
+                            <!-- /stop following author message -->
+
+                     <!-- //////////////////////////////// /AUTHOR FOLLOW MESSAGE //////////////////////////////////// -->
+
                                 <header class="fxs_contributorBox_header fxs_clearfix">
                                     <div class="fxs_col fxs_col_67">
                                         
@@ -527,31 +554,16 @@
                                                 Professional Boxer <a href="path/to/company" class="fxs_mutedLink">Mahindra Enforcers</a>
                                             </span>
 
-                                            <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false">
-                                                <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
-                                                <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
-                                            </button>
-                                            <!-- following author message -->
-                                            <div class="fxs_contextual_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
-                                                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
-                                                  <i class="fa fa-close"></i>
-                                                  <span class="fxs_skip">Close alert</span>
-                                                </button>
-                                                <span class="fxs_alertLabel">Yea!</span>
-                                                <p class="fxs_alertText">You did it awesome dude!</p>
-                                            </div>
-                                            <!-- /following author message -->
+                                            <!-- //////////////////////////////// BUTTON AUTHOR FOLLOW //////////////////////////////////// -->
 
-                                            <!-- stop following author message -->
-                                            <div class="fxs_contextual_alert fxs_alert_error alert alert-dismissible fade in" role="alert">
-                                                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
-                                                  <i class="fa fa-close"></i>
-                                                  <span class="fxs_skip">Close alert</span>
+                                                <!-- author follow button -->
+                                                <button id="idTestBtnFollow" type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false">
+                                                    <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                                    <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
                                                 </button>
-                                                <span class="fxs_alertLabel">Oops!</span>
-                                                <p class="fxs_alertText">Your password must contain more than 1,000 characters</p>
-                                            </div>
-                                            <!-- /stop following author message -->
+                                                <!-- /author follow button -->
+
+                                            <!-- //////////////////////////////// / BUTTON AUTHOR FOLLOW //////////////////////////////////// -->
 
                                         </div>
 

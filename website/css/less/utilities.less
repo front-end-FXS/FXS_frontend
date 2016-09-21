@@ -95,6 +95,9 @@
 .fxs_styledIndicator_label {
   text-transform: uppercase;
   font-style: italic;
+  &.fxs_indicator_broker{
+    font-size: @txt_size_xsmall;
+  }
 }
 
 // Bolds & strongs with smooth borders
@@ -191,6 +194,9 @@
 .fxs_headline_tiny {
   &:extend(.fxs_headline);
   margin-bottom: 0;
+  &.fxs_headline_muted{
+    color: @dark_1_clr;
+  }
 }
 
 .fxs_headline_from_tiny_to_small {
@@ -244,6 +250,7 @@
 
 ///////////////////////////////////////////
 // Margins, positions, boxes & displays //
+.fxs_hideElements { display: none };
 .fxs_align_center{ text-align: center; }
 .fxs_relativePositioning { position: relative; }
 .fxs_absolutePositioning { position: absolute; }
@@ -459,6 +466,10 @@
       display:block;
      }
   }
+}
+
+.fxs_wide_element{
+  width:100%;
 }
 
 // Swipe content in mobile

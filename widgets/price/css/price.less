@@ -20,6 +20,23 @@
     }
   }
 
+  .fxs_price_change_bg, .fxs_pips_percent_size {
+    padding:5px;
+    width:110px;
+    display: block;
+    float: right;
+    @media(min-width:@screen-l) {
+      //font-size: @txt_size_xsmall;
+      width:130px;
+    }
+    &.up{
+      background-color: lighten(@success_clr, 50%);
+    }
+    &.down{
+      background-color: lighten(@error_clr, 30%);
+    }
+  }
+
   // Asset label color & icon variants
   &.price_up {
     .fxs_asset_label::before { color: @success_clr; }
