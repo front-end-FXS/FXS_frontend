@@ -53,7 +53,7 @@ a {
 
 strong { &:extend(.fxs_boldAntialised_style); }
 
-h1, h2, h3, h4, h5 { &:extend(.fxs_headline_base_rules all); }
+h1, h2, h3, h4, h5, .fxs_headline_muted { &:extend(.fxs_headline_base_rules all); }
 
 h2 { font-size: @txt_size_xxlarge; }
 
@@ -94,7 +94,9 @@ blockquote {
   }
 }
 
-abbr { cursor: help; }
+abbr { 
+  //cursor: help; 
+}
 
 address, cite { font-style: normal; }
 

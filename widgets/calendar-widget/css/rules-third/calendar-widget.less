@@ -1,8 +1,8 @@
 // VENDOR IMPORTS
-@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+@import "../../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
 // IMPORTS FOR GENERAL APLICATION
-@import "../../../website/css/less/vars.less"; // Application variables
-@import "../../../website/css/less/mixins.less"; // Application variables
+@import "../../../../website/css/less/vars.less"; // Application variables
+@import "../../../../website/css/less/mixins.less"; // Application variables
 
 /*************** Variables ***************/ 
 /*Color*/
@@ -185,10 +185,20 @@ clean rules for new calendar widget
   height: 11px;
   width: 14px;
   margin-right: 2px;
-  background-image: url("http://cdn.fxstreet.com/img/sprites/sprite-flags5.png");
+  background-image: url("https://staticcontent.azureedge.net/website/img/sprites/sprite-flags5.png");
   color: transparent;
   left:0;
 }
+
+/* For right to left (RTL) languages */
+.fxst-lang-ae{
+  direction: rtl;
+  text-align: right;
+  td{
+    text-align: right!important;
+  }
+}
+
 .fxst-i-ae { background-position: 0 0; }
 /* emirates arabes */
 .fxst-i-ar { background-position: -14px 0; }

@@ -1,0 +1,240 @@
+// VENDOR IMPORTS
+@import "c3.min.css"; // c3 Graphics BASE library FOR ALL WIDGETS CHARTS. AVOID OTHER LIBRARIES!!
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins
+@import "../../../website/css/less/vendor/component-animations.less";  // Bootstrap 3.3.5 component animations
+@import "../../../website/css/less/vendor/tooltip.less"; // Bootstrap Tooltip
+
+// IMPORTS GENERAL APLICATION
+@import "../../../website/css/less/vars.less"; // Application variables
+@import "../../../website/css/less/mixins.less"; // Application mixins & extendible classes
+@import "../../../website/css/less/components.less";  // Molecular-combined components
+
+// UTILITIES, HELPERS & EXTENDIBLE CLASSES
+@import "../../../website/css/less/utilities.less";  // Helper classes
+// hack IE
+@import "../../../website/css/fxs_ie.css";  // Hack ie
+
+// Forced styles for widgets
+[class^="fxs_widget_"] {
+  font-family: @txt_fontfamily;
+  line-height: @txt_lineheight;
+  // Box model & typo rendering
+  * { .box-sizing(border-box); }
+  // lists
+  ol, ul { list-style: none; }
+  ol, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  a { &:extend(.fxs_boldAntialised_style, .fxs_transition); }
+  // Small tag
+  small {
+    font-size: @txt_size_nano;
+    color: @light_1_clr;
+  }
+  .fxs_marginBase_top { margin-top: 1rem; }
+  .fxs_marginHalf_top { margin-top: 0.5rem; }
+  .fxs_marginBase_right { margin-right: 1rem; }
+  .fxs_marginBase_bottom { margin-bottom: 1rem; }
+  .fxs_marginHalf_bottom { margin-bottom: 0.5rem; }
+  .fxs_marginBase_left { margin-left: 1rem; }
+  .fxs_resetRow_margin {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+// Tables
+.fxs_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: @txt_fontfamily;
+  a { &:extend(.fxs_boldAntialised_style, .fxs_transition);}
+  // Box model & typo rendering
+  * { .box-sizing(border-box); }
+}
+
+[class^="fxs_avatar_circleImage"] {
+  * { .box-sizing(border-box); }
+  
+}
+
+.fxs_list_table {
+  margin: 0;
+  padding: 0;
+  * { .box-sizing(border-box); }
+  li { list-style: none; }
+  blockquote {
+    font-style: italic;
+    position: relative;
+    &:before { position: absolute; }
+    &:before{
+      display: block;
+      color: @light_4_clr;
+      font: normal normal normal 1.25rem FontAwesome;
+      width: 2rem;
+      height: 2rem;
+      top: 0;
+      left: 0;
+      content: "\f10d";
+    }
+    footer {
+      color: @light_2_clr;
+      font-size: @txt_size_small;
+      line-height: @txt_lineheight_small;
+    }
+  }
+}
+///////////////////////////////////////////////////////////
+/////////////// FLAGS SPRITE //////////////////////////////
+//////////////////////////////////////////////////////////
+
+.tags-flag-custom {
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+    background-image: url('https://staticcontent.azureedge.net/website/img/sprite-flags5.png');
+    background-repeat: no-repeat;
+    margin-left:5px;
+    border: 1px solid #ccc;
+}
+
+.i-ar-AE {
+    background-position: -14px 0
+}
+.i-br {
+    //background-position: -84px 0 (no)
+}
+.i-ca-ES {
+    background-position: -112px 0
+}
+.i-zh-CN{
+    background-position: -154px 0; // chinesse
+}
+.i-zh-CHT{
+    background-position: -336px 0; // korean
+}
+.i-ch {
+    //background-position: -126px 0 (no)
+}
+.i-de-DE {
+    background-position: -196px 0
+}
+.i-es-ES {
+    background-position: -280px 0
+}
+.i-fr-FR {
+    background-position: -308px 0
+}
+.i-chi {
+    //background-position: -336px 0 (no)
+}
+.i-hu-HU {
+    background-position: -350px 0
+}
+.i-id-ID {
+    background-position: -364px 0
+}
+.i-it-IT {
+    background-position: -448px 0
+}
+.i-ja-JP {
+    background-position: -462px 0
+}
+.i-ko-KR {
+    background-position: -476px 0
+}
+.i-pl-PL {
+    background-position: -84px -11px
+}
+.i-pt-PT {
+    background-position: -98px -11px
+}
+.i-ru-RU {
+    background-position: -126px -11px
+}
+.i-tr-TR {
+    background-position: -210px -11px
+}
+.i-vi-VN {
+    background-position: -294px -11px
+}
+.i-en-US {
+    background-position: -322px -11px
+} 
+
+//////////////////////////// old culture, remove this pieces of css /////////////////////////
+////////////////////////////  when activate the new culture above //////////////////////////
+
+.i-AR {
+  background-position: -14px 0;
+}
+.i-AU {
+  background-position: -42px 0;
+}
+.i-br {
+    background-position: -84px 0; /* (no) */
+}
+.i-NZ {
+    background-position: -42px 0;
+}
+.i-CA {
+    background-position: -112px 0;
+}
+.i-CN{
+    background-position: -154px 0; // chinesse
+}
+.i-ZH{
+    background-position: -336px 0; // korean
+}
+.i-CH {
+    background-position: -126px 0;
+}
+.i-DE {
+    background-position: -196px 0;
+}
+.i-ES {
+    background-position: -280px 0;
+}
+.i-FR {
+    background-position: -308px 0;
+}
+.i-chi {
+    //background-position: -336px 0 (no)
+}
+.i-HU {
+    background-position: -350px 0;
+}
+.i-ID {
+    background-position: -364px 0;
+}
+.i-IT {
+    background-position: -448px 0;
+}
+.i-JP {
+    background-position: -462px 0;
+}
+.i-KP {
+    background-position: -476px 0;
+}
+.i-PL {
+    background-position: -84px -11px;
+}
+.i-PT {
+    background-position: -98px -11px;
+}
+.i-RU {
+    background-position: -126px -11px;
+}
+.i-TR {
+    background-position: -210px -11px;
+}
+.i-VN {
+    background-position: -294px -11px;
+}
+.i-EN {
+    background-position: -322px -11px;
+} 
+.i-EMU{
+    background-position: -266px 0;
+}
