@@ -1992,9 +1992,15 @@ width:calc(100% - 320px);
   display: inline-block;
   white-space: nowrap;
   margin-top: -0.25rem;
+  font-size: 0.8rem;
 }
 .fxs_price_bidask .fxs_price_big_figure {
-  font-size: 1.34rem;
+  font-size: 0.92rem;
+}
+@media (min-width: 1150px) {
+  .fxs_price_bidask .fxs_price_big_figure {
+    font-size: 1.34rem;
+  }
 }
 .fxs_price_ohl {
   display: none;
@@ -2196,6 +2202,10 @@ width:calc(100% - 320px);
   position: relative;
   max-width: 1033px;
   margin: 0 auto;
+}
+.fxs_modal_content .fxs_global_alert {
+  position: inherit;
+  width: 100%!important;
 }
 @media (min-width: 680px) {
   .fxs_modal_content {
