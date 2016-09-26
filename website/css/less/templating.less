@@ -2057,13 +2057,6 @@ clean rules for new calendar widget
 
 /////////////// Flexible cols //
 .fxs_flex_col {
-   // 50% //
-  .fxs_col_50 { .make-m-column(6); }
-
-  // 33% //
-  .fxs_col_33 {
-    &:not(.fxs_col_dismissible) { .make-m-column(4); }
-  }
   @media (min-width: @screen-s) {
     float: left;
     .calc(width, ~'100% - ((@{left_rail_space}) - 5px)'); //left_rail_space_reduced
@@ -2090,6 +2083,13 @@ clean rules for new calendar widget
       width: @left_rail_space;
       .stickem { width: @left_rail_space - ((@txt_defaultsize_px / 1.5) * 2); }
     }
+  }
+  // 50% //
+  .fxs_col_50 { .make-m-column(6); }
+
+  // 33% //
+  .fxs_col_33 {
+    &:not(.fxs_col_dismissible) { .make-m-column(4); }
   }
 }
 
