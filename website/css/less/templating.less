@@ -40,7 +40,6 @@
   }
   .fxs_modal_page & { height: 100%; }
 }
-
 .fxs_pageSidebar {
   &:extend(.fxs_scrollableContent all, .fxs_transition);
   background-color: @dark_1_clr;
@@ -55,7 +54,6 @@
   &.fxs_sidebar_user { right: 0; }
   .fxs_helperLabel_title { color: @light_2_clr; }
 }
-
 ////////// PUSH LEFT & RIGHT MENU BEHAVIOUR //////////
 .cbp-spmenu-push {
   &.cbp-spmenu-push-toright {
@@ -73,19 +71,19 @@
       }
     }
     @media (min-width: @screen-l) {
-      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(0)!important; }
+      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(0); }
     }
   }
   &.cbp-spmenu-push-toleft {
     .fxs_sidebar_user { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space)!important; }
+    .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space); }
   }
 }
 
 /////////////// PUSH TIMEZONE BEHAVIOR //////////////////
 .fxs_push_timezone {
   .fxs_sidebar_user { visibility: hidden; }
-  .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space)!important; }
+  .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space); }
 }
 
 
@@ -2057,6 +2055,10 @@ clean rules for new calendar widget
 
 /////////////// Flexible cols //
 .fxs_flex_col {
+
+  // 50% //
+  .fxs_col_50 { .make-m-column(6); }
+  
   @media (min-width: @screen-s) {
     float: left;
     .calc(width, ~'100% - ((@{left_rail_space}) - 5px)'); //left_rail_space_reduced
@@ -2084,8 +2086,6 @@ clean rules for new calendar widget
       .stickem { width: @left_rail_space - ((@txt_defaultsize_px / 1.5) * 2); }
     }
   }
-  // 50% //
-  .fxs_col_50 { .make-m-column(6); }
 
   // 33% //
   .fxs_col_33 {
