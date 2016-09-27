@@ -1,0 +1,422 @@
+/*************** Variables ***************/
+/*Color*/
+/*Font*/
+/**********************************
+
+clean rules for new calendar widget
+
+**********************************/
+.fxs_centering_data {
+  text-align: center!important;
+}
+.fxs_calendar_date {
+  background-color: #dddddd;
+  text-align: center!important;
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2;
+}
+.fxs_calendar_header th {
+  font-style: normal!important;
+  color: #000!important;
+  text-transform: none!important;
+}
+.fxit-eventInfo-vol .fxit-eventInfo-vol-c {
+  max-width: 150px;
+  width: 100%;
+  height: 12px;
+  padding: 0;
+  background-color: #E0E0E0;
+  color: transparent;
+}
+.fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol {
+  display: block;
+}
+.fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol1 {
+  width: 30%;
+  height: 100%;
+  background-color: #ffcc00;
+}
+.fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol2 {
+  width: 60%;
+  height: 100%;
+  background-color: #fa9900;
+}
+.fxit-eventInfo-vol .fxit-eventInfo-vol-c .fxst-i-vol3 {
+  width: 100%;
+  height: 100%;
+  background-color: #de3322;
+}
+#fxst-calendartable {
+  background-color: #F1F1F1;
+}
+#fxst-calendartable tr.fxs_calendar_row:hover {
+  background-color: #ffffff;
+}
+#fxst-calendartable tr td,
+#fxst-calendartable tr th {
+  border-bottom: 1px solid #DEDEDE;
+}
+#fxst-calendartable tr td .fxit-eventInfo,
+#fxst-calendartable tr th .fxit-eventInfo,
+#fxst-calendartable tr td .fxit-event,
+#fxst-calendartable tr th .fxit-event {
+  display: inherit;
+  float: left;
+}
+#fxst-calendartable tr td .fxit-eventInfo div,
+#fxst-calendartable tr th .fxit-eventInfo div,
+#fxst-calendartable tr td .fxit-event div,
+#fxst-calendartable tr th .fxit-event div {
+  display: inline-block;
+  float: left;
+  width: auto;
+}
+/**** ICONS ****/
+.fxs_cal_yellow {
+  color: #FA9900;
+}
+.fxst-revised {
+  background-color: #E2E2E2;
+  color: #333333;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100000;
+}
+.fxs_previous {
+  position: relative;
+}
+.fxs_previous b {
+  display: none;
+}
+.fxs_previous:hover {
+  cursor: pointer;
+}
+.fxs_previous:hover b {
+  display: block;
+  position: absolute;
+}
+.fxst-i-report {
+  background-color: #ccc;
+  color: #333333;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.fxst-preliminar {
+  color: #868686;
+  padding: 3px 8px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.fxst-ui-icon-flag {
+  background-position: -16px -112px;
+}
+.fxs_cal_nextEvent td {
+  background-color: #ffffff !important;
+}
+.fxs_table.fxs_calendar_table {
+  font-size: 0.8rem;
+}
+@media (min-width: 680px) {
+  .fxs_table.fxs_calendar_table {
+    font-size: 0.92rem;
+  }
+  .fxs_table.fxs_calendar_table th {
+    font-size: 0.92rem;
+  }
+}
+.fxs_table.fxs_calendar_table a {
+  text-decoration: none;
+  color: #49494f;
+}
+.fxs_table.fxs_calendar_table .fxit-noleftclick {
+  padding-left: 5px;
+}
+.fxs_table.fxs_calendar_table > tbody > tr > td,
+.fxs_table.fxs_calendar_table > thead > tr > td,
+.fxs_table.fxs_calendar_table > tfoot > tr > td,
+.fxs_table.fxs_calendar_table > tbody > tr > th,
+.fxs_table.fxs_calendar_table > thead > tr > th,
+.fxs_table.fxs_calendar_table > tfoot > tr > th {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.fxst-flag {
+  display: inline-block;
+  height: 11px;
+  width: 14px;
+  margin-right: 2px;
+  background-image: url("https://staticcontent.azureedge.net/website/img/sprites/sprite-flags5.png");
+  color: transparent;
+  left: 0;
+}
+/* For right to left (RTL) languages */
+.fxst-lang-ae {
+  direction: rtl;
+  text-align: right;
+}
+.fxst-lang-ae td {
+  text-align: right!important;
+}
+.fxst-i-ae {
+  background-position: 0 0;
+}
+/* emirates arabes */
+.fxst-i-ar {
+  background-position: -14px 0;
+}
+/* Argentina  */
+.fxst-i-at {
+  background-position: -28px 0;
+}
+/* Austria  */
+.fxst-i-au {
+  background-position: -42px 0;
+}
+/* Australia  */
+.fxst-i-be {
+  background-position: -56px 0;
+}
+/* Belgica  */
+.fxst-i-bg {
+  background-position: -70px 0;
+}
+/* Bulgaria  */
+.fxst-i-br {
+  background-position: -84px 0;
+}
+/* Brazil  */
+.fxst-i-ca {
+  background-position: -98px 0;
+}
+/* Canada  */
+.fxst-i-cat {
+  background-position: -112px 0;
+}
+/* Catalonia  */
+.fxst-i-ch {
+  background-position: -126px 0;
+  background-color: #F00;
+}
+/* Suiza (schweiz)  */
+.fxst-i-cl {
+  background-position: -140px 0;
+}
+/* Chile  */
+.fxst-i-cn {
+  background-position: -154px 0;
+}
+/* China  */
+.fxst-i-co {
+  background-position: -168px 0;
+}
+/* Colombia  */
+.fxst-i-cz {
+  background-position: -182px 0;
+}
+/* Republica Checa (czech) */
+.fxst-i-de {
+  background-position: -196px 0;
+}
+/* Alemania  */
+.fxst-i-dk {
+  background-position: -210px 0;
+}
+/* Dinamarca */
+.fxst-i-dz {
+  background-position: -224px 0;
+}
+/* Algeria */
+.fxst-i-ee {
+  background-position: -238px 0;
+}
+/* Estonia */
+.fxst-i-eg {
+  background-position: -252px 0;
+}
+/* Egipto */
+.fxst-i-emu {
+  background-position: -266px 0;
+}
+/* European Monetary Union */
+.fxst-i-es {
+  background-position: -280px 0;
+}
+/* Espanya*/
+.fxst-i-fi {
+  background-position: -294px 0;
+}
+/* Finland */
+.fxst-i-fr {
+  background-position: -308px 0;
+}
+/* Francia */
+.fxst-i-gr {
+  background-position: -322px 0;
+}
+/* Grecia  */
+.fxst-i-hk {
+  background-position: -336px 0;
+}
+/* Hong Kong */
+.fxst-i-hu {
+  background-position: -350px 0;
+}
+/* Hungria */
+.fxst-i-id {
+  background-position: -364px 0;
+}
+/* Indonesia */
+.fxst-i-ie {
+  background-position: -378px 0;
+}
+/* Ireland */
+.fxst-i-il {
+  background-position: -392px 0;
+}
+/* Israel */
+.fxst-i-in {
+  background-position: -406px 0;
+}
+/* India */
+.fxst-i-ir {
+  background-position: -420px 0;
+}
+/* Iran */
+.fxst-i-is {
+  background-position: -434px 0;
+}
+/* Islandia */
+.fxst-i-it {
+  background-position: -448px 0;
+}
+/* Italia */
+.fxst-i-jp {
+  background-position: -462px 0;
+}
+/* Japon */
+.fxst-i-kr {
+  background-position: -476px 0;
+}
+/* Korea del sur */
+.fxst-i-lt {
+  background-position: -490px 0;
+}
+/* Lithuania */
+.fxst-i-lv {
+  background-position: -504px 0;
+}
+/* Latvia */
+.fxst-i-mt {
+  background-position: -518px 0;
+}
+/* Malta */
+.fxst-i-mx {
+  background-position: -532px 0;
+}
+/* Mexico */
+.fxst-i-my {
+  background-position: -546px 0;
+}
+/* Malaysia */
+.fxst-i-ng {
+  background-position: -560px 0;
+}
+/* Nigeria */
+.fxst-i-nl {
+  background-position: 0 -11px;
+}
+/* Netherlands */
+.fxst-i-no {
+  background-position: -14px -11px;
+}
+/* Noruega */
+.fxst-i-nz {
+  background-position: -28px -11px;
+}
+/* Nueva Zelanda */
+.fxst-i-pe {
+  background-position: -42px -11px;
+}
+/* Peru */
+.fxst-i-ph {
+  background-position: -56px -11px;
+}
+/* Phillippines/Filipinas */
+.fxst-i-pk {
+  background-position: -70px -11px;
+}
+/* Pakistan */
+.fxst-i-pl {
+  background-position: -84px -11px;
+}
+/* Polonia */
+.fxst-i-pt {
+  background-position: -98px -11px;
+}
+/* Portugal */
+.fxst-i-ro {
+  background-position: -112px -11px;
+}
+/* Romania */
+.fxst-i-ru {
+  background-position: -126px -11px;
+}
+/* Rusia */
+.fxst-i-sa {
+  background-position: -140px -11px;
+}
+/* Saudi Arabia */
+.fxst-i-se {
+  background-position: -154px -11px;
+}
+/* Suecia */
+.fxst-i-sg {
+  background-position: -168px -11px;
+}
+/* Singapur */
+.fxst-i-sk {
+  background-position: -182px -11px;
+}
+/* Slovakia */
+.fxst-i-th {
+  background-position: -196px -11px;
+}
+/* Thailand */
+.fxst-i-tr {
+  background-position: -210px -11px;
+}
+/* Turquia */
+.fxst-i-tw {
+  background-position: -224px -11px;
+}
+/* Taiwan */
+.fxst-i-ua {
+  background-position: -238px -11px;
+}
+/* Ukrania */
+.fxst-i-uk,
+.fxst-i-en {
+  background-position: -252px -11px;
+}
+/* UK, Reino Unido */
+.fxst-i-us {
+  background-position: -266px -11px;
+}
+/* USA */
+.fxst-i-ve {
+  background-position: -280px -11px;
+}
+/* Venezuela */
+.fxst-i-vn {
+  background-position: -294px -11px;
+}
+/* Vietnam */
+.fxst-i-za {
+  background-position: -308px -11px;
+}
+/**********************************/
