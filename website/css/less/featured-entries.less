@@ -158,7 +158,11 @@
     }
   }
   .fxs_article_author {
-    .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
+    //.calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
+    max-width:150px;
+    @media(min-width:@screen-hd){
+      .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
+    }
   }
   .fxs_medium_clean_video_label{
     position: relative;

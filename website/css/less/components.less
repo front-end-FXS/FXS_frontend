@@ -694,14 +694,18 @@
 
 ///////////////////////////////////////////////////////////////
 ////////////////////// Contributor Boxes ///////////////////////
-.fxs_contributorBox, .fxs_article_author {
+.fxs_contributorBox {
   display: inline-block;
   vertical-align: top;
+}
+.fxs_article_author{
+  vertical-align: top;
+  display: inline-block;
 }
 .fxs_contributorBox {
   font-size: @txt_size_small;
   line-height: @txt_lineheight_xsmall;
-  white-space: nowrap;
+  white-space: normal;
   .fxs_article_author a {
     display: inline-block;
     margin-bottom: 0.33rem;
