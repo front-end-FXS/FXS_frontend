@@ -169,7 +169,7 @@
     }
   }
 
-  &.fxs_widget_big, &.fxs_widget_default {
+  &.fxs_widget_big{
     .fxs_price_ohl{
       span{
         margin-left: 0.1em;
@@ -190,11 +190,35 @@
         }
       }
     }
-
+  }
+  &.fxs_widget_default{
+    @media(max-width:@screen-m){
+      .fxs_asset_label { font-size: @txt_size_xsmall; }
+    }
+    .fxs_price_ohl{
+      span{
+        margin-left: 0.1em;
+        padding-left: 0.1em;
+        display: block;
+      }
+    }
+    @media(min-width:@screen-m) {
+      .fxs_price_ohl {
+        font-size: @txt_size_xsmall;
+        span {
+          display: block;
+          vertical-align: middle;
+          margin-left: 0.2em;
+          padding-left: 0.2em;
+        }
+      }
+    }
+  } 
+  &.fxs_widget_big, &.fxs_widget_default {
     .fxs_price_change{ 
       padding-left:5px!important; 
       font-size: @txt_size_xsmall; 
-      min-width: 100px;
+      min-width: 50px;
       @media(min-width:@screen-l){
         font-size: @txt_size_small;
       }
