@@ -200,232 +200,91 @@
                     </header>
 
                     <section class="fxs_detail" role="main">
-                       
-                        <h2 class="fxs_subsectionTitle">
-                            Widget prices header
-                        </h2>
-                        <!-- note: fxs_widget_price_header: this rule is very important to display this widget as a price header -->
-                        
-                        <!-- Widget prices header -->
-                        <div class="fxs_widget_price fxs_widget_price_header price_down">
-                            <div class="fxs_asset_label_block">
-                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                    <a href="/">EUR/USD</a>
-                                </abbr>
-                                <span class="fxs_price_change">
-                                    <span class="fxs_change_pips">0.0026</span>
-                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                </span>
-                            </div>
-                            <div class="fxs_widget_price_value">
-                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                <small class="fxs_price_ohl">
-                                    <span>Open 1.1872</span>
-                                    <span>High 1.1872</span>
-                                    <span>Low 1.1810</span>
-                                </small>
-                            </div>
-                        </div>
-                       <!-- /Widget prices header -->
-                       
 
-                       <div class="fxs_clearfix">
-                            <h2 class="fxs_subsectionTitle">
-                                Widget prices list view
-                            </h2>
+                        <div class="fxs_widget_summary">
+
+                            <!-- //////////////// widget price filter ///////////////////////////--> 
                             
-                            <!-- Widget prices listView-->
-                            <div class="fxs_widget_price fxs_widget_price_listView price_down">
-                                <span class="fxs_asset_label_block">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0026</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </span>
+                            <div class="fxs_price_filter">
 
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                    <small class="fxs_price_ohl">
-                                        <span>Open 1.1872</span>
-                                        <span>High 1.1872</span>
-                                        <span>Low 1.1810</span>
-                                    </small>
-                                </div>
-                            </div>
-                            <!-- /Widget prices listView-->
+                                    <header class="fxs_price_filter_header">
+                                        <h2 class="fxs_helperLabel_title">LATEST RATES & CHARTS </h2>
 
-                        </div>
-                        
-                        <div class="fxs_clearfix">
-                            <h2 class="fxs_subsectionTitle">
-                                Widget prices default
-                            </h2>
-                        
-                        <!-- Widget prices default -->
 
-                            <!-- widget price - price up -->
-                            <div class="fxs_widget_divider_module">
-                                <div class="fxs_widget_price price_up">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <div class="fxs_widget_price_value">
-                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                        <span class="fxs_price_change">
-                                            <span class="fxs_change_pips">0.0026</span>
-                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                        </span>
+                                        <!-- ///////////////////////////  filter button  /////////////////////////// -->
+
+                                        <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
+                                            <div class="fxs_typeaheadContainer">
+
+                                                <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#price-filter-block" aria-expanded="false" aria-controls="price-filter-block">
+                                                    <span class="fxs_togglebtn_txt init_txt"><i class="fa fa-filter" aria-hidden="true"></i></span>
+                                                    <span class="fxs_togglebtn_txt toggled_txt">Close</span>
+                                                </button>
+
+                                                <div class="fxs_typeaheadField fxs_txt_center">
+                                                    <span class="fxs_helperLabel_title">Filter rates & charts</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+
+                                    <!-- ///////////////////////////  filter and results /////////////////////////// -->
+                                   
+                                    <div id="price-filter-block" class="collapse fxs_listViewRail fxs_filter_rail collapse fxs_listViewRail_price_filter">
+                                        
+                                        <div class="fxs_filterResults_bg fxs_clearfix">
+                                            <div class="">
+                                                <!-- rates typeahead filter -->
+                                                <div class="fxs_filter_new fxs_advanced_filter active" id="fxs_typeahead">
+                                                    <form>
+                                                        <div class="fxs_typeaheadContainer">
+                                                            <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
+                                                                <i class="fa fa-search"></i>
+                                                                <span class="fxs_skip">Add pairs to list</span>
+                                                            </label>
+                                                            <div class="fxs_typeaheadField">
+                                                                <div class="fxs_typeaheadQuery">
+                                                                    <input id="f" name="f" type="search" placeholder="" autocomplete="off">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <!-- /Typeahead -->
+                                            </div>
+                                            
+                                            <div class="fxs_col fxs_col_50">
+                                                <div class="fxs_filter_rail_container fxs_filter_price_container">
+                                                    <form>
+                                                        <fieldset class="fxs_fieldset">
+                                                            <legend>Selected items</legend>
+                                                            <ul class="fxs_list_unstyled fxs_rates_filter_list">
+                                                               <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                           </ul>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="fxs_col fxs_col_50">
+                                                <div class="fxs_filter_buttons_container">
+                                                    <button type="button" class="fxs_btn fxs_btn_line fxs_btn_block" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Clear all filters</button>
+
+                                                    <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_price" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Apply filters</button>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
                                     </div>
-                                </div>
                             </div>
-                            <!-- /widget price - price up -->
 
-                            <!-- widget price - price down -->
-                            <div class="fxs_widget_divider_module">
-                                <div class="fxs_widget_price price_down">
-                                    <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                        <a href="/">EUR/USD</a>
-                                    </abbr>
-                                    <div class="fxs_widget_price_value">
-                                        <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                        <span class="fxs_price_change">
-                                            <span class="fxs_change_pips">0.0026</span>
-                                            <span class="fxs_change_percent">(-0.12%)</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /widget price - price down -->
-
-                        <!-- /Widget prices default -->
-
-                        </div>
-
-                        <h2 class="fxs_subsectionTitle">
-                            Widget prices mini
-                        </h2>
-                        <!-- note: fxs_widget_mini: this rule is very important to display this widget as a price mini -->
-                        
-                        <!-- Widget prices mini -->
-                        <div class="fxs_widget_divider_module">
-                            <div class="fxs_widget_price fxs_widget_mini price_down">
-                                <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                    <a href="/">EUR/USD</a>
-                                </abbr>                              
-                                <div class="fxs_widget_price_value">
-                                    <span class="fxs_price_change">
-                                        <span class="fxs_change_pips">0.0026</span>
-                                        <span class="fxs_change_percent">(-0.12%)</span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /Widget prices mini -->
-
-                        <h2 class="fxs_subsectionTitle">
-                            widget prices table
-                        </h2>
-
-                        <div class="fxs_widget_summary">
-                            <h3 class="fxs_subtitle">
-                                Most traded pairs (mini)
-                            </h3>
-
-                            <!-- Table mini -->
-                            <table class="fxs_table fxs_table_prices fxs_tableHover">
-                                
-                                <tbody>
-                                    <tr onclick="todo" class="fxs_widget_price price_down">
-                                        <td>
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                        </td>
-                                        <td>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr onclick="todo" class="fxs_widget_price price_down">
-                                        <td>
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                        </td>
-                                        <td>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr onclick="todo" class="fxs_widget_price price_down">
-                                        <td>
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                        </td>
-                                        <td>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </td>
-
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                            <!-- /Table mini -->
-
-                        </div>
-
-                        <div class="fxs_widget_summary">
-                            <h3 class="fxs_subtitle">
-                                Most traded pairs (default)
-                            </h3>
+                            <!-- //////////////// end widget price filter ///////////////////////////--> 
 
                             <!-- Table default size -->
-                            <table class="fxs_table fxs_table_prices fxs_widget_default fxs_tableHover">
+                            <table id="fxs_block_table" class="fxs_table fxs_table_prices fxs_widget_default fxs_tableHover">
                                 
                                 <tbody>
                                     <tr onclick="todo" class="fxs_widget_price price_up">
@@ -497,7 +356,107 @@
                                         </td>
                                         <td>
                                             <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
+                                                <span class="fxs_price_bidask">
+                                                    <span class="fxs_price_change_bg">
+                                                        1.27<strong class="fxs_price_big_figure">68</strong>
+                                                        <sup>8</sup>/<strong class="fxs_price_big_figure">56</strong>
+                                                        <sup>7</sup>
+                                                    </span>
+                                                </span>
+                                                <span class="fxs_price_change">
+                                                    <span class="fxs_change_pips">0.0026</span>
+                                                    <span class="fxs_change_percent">(-0.12%)</span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <small class="fxs_price_ohl">
+                                                <span>Open 1.1872</span>
+                                                <span>High 1.1872</span>
+                                                <span>Low 1.1810</span>
+                                            </small>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr onclick="todo" class="fxs_widget_price price_up">
+                                        <td>
+                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                <a href="/">EUR/USD</a>
+                                            </abbr>
+                                        </td>
+                                        <td>
+                                            <div class="fxs_widget_price_value">
+                                                <span class="fxs_price_bidask">
+                                                   
+                                                        <span class="fxs_price_change_bg up">
+                                                            1.27<strong class="fxs_price_big_figure">68</strong>
+                                                            <sup>8</sup>/<strong class="fxs_price_big_figure">56</strong>
+                                                            <sup>7</sup>
+                                                        </span>
+                                                    
+                                                </span>
+                                                <span class="fxs_price_change">
+                                                    <span class="fxs_change_pips">0.0026</span>
+                                                    <span class="fxs_change_percent">(0.12%)</span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <small class="fxs_price_ohl">
+                                                <span>Open 1.1872</span>
+                                                <span>High 1.1872</span>
+                                                <span>Low 1.1810</span>
+                                            </small>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr onclick="todo" class="fxs_widget_price price_down">
+                                        <td>
+                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                <a href="/">EUR/USD</a>
+                                            </abbr>
+                                        </td>
+                                        <td>
+                                            <div class="fxs_widget_price_value">
+                                                <span class="fxs_price_bidask">
+                                                    <span class="fxs_price_change_bg">
+                                                    1.27<strong class="fxs_price_big_figure">68</strong>
+                                                    <sup>8</sup>/<strong class="fxs_price_big_figure">56</strong>
+                                                    </span>
+                                                </span>
+                                                <span class="fxs_price_change">
+                                                    <span class="fxs_change_pips">0.0026</span>
+                                                    <span class="fxs_change_percent">(-0.12%)</span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <small class="fxs_price_ohl">
+                                                <span>Open 1.1872</span>
+                                                <span>High 1.1872</span>
+                                                <span>Low 1.1810</span>
+                                            </small>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr onclick="todo" class="fxs_widget_price price_down">
+                                        <td>
+                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
+                                                <a href="/">EUR/USD</a>
+                                            </abbr>
+                                        </td>
+                                        <td>
+                                            <div class="fxs_widget_price_value">
+                                                <span class="fxs_price_bidask">
+                                                     <span class="fxs_price_change_bg">
+                                                        1.27<strong class="fxs_price_big_figure">68</strong>
+                                                        <sup>8</sup>/<strong class="fxs_price_big_figure">56</strong>
+                                                        <sup>7</sup>
+                                                    </span>
+                                                </span>
                                                 <span class="fxs_price_change">
                                                     <span class="fxs_change_pips">0.0026</span>
                                                     <span class="fxs_change_percent">(-0.12%)</span>
@@ -518,97 +477,6 @@
                             </table>
                             <!-- /Table default size -->
                         </div>
-
-
-                        <div class="fxs_widget_summary">
-                            <h3 class="fxs_subtitle">
-                                Most traded pairs (big)
-                            </h3>
-
-                            <!-- Table prices big size -->
-                            <table class="fxs_table fxs_table_prices fxs_widget_big fxs_tableHover">
-                                
-                                <tbody>
-                                    <tr onclick="todo" class="fxs_widget_price price_down">
-                                        <td>
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                        </td>
-                                        <td>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr onclick="todo" class="fxs_widget_price price_down">
-                                        <td>
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                        </td>
-                                        <td>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr onclick="todo" class="fxs_widget_price price_down">
-                                        <td>
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                        </td>
-                                        <td>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <small class="fxs_price_ohl">
-                                                <span>Open 1.1872</span>
-                                                <span>High 1.1872</span>
-                                                <span>Low 1.1810</span>
-                                            </small>
-                                        </td>
-
-                                    </tr>
-
-                                </tbody>
-                            </table>
-                            <!-- /Table prices big size -->
-                        </div>
-
                         
                     </section>
                 </div>
@@ -859,6 +727,22 @@
         <script src="../../../js/classie.js"></script>
         <script src="../../../js/jquery.typeahead.min.js"></script>
         <script src="../../../js/site.js"></script>
+
+        <script>
+
+            /////////////////// javascript cutre queemula el comportamiento deseado ////////////////////
+
+            // muestra y oculta el detalle del filtro
+            $('#fxs_filter').on('click', function () {
+                $('#fxs_block_table').toggleClass('fxs_table_prices_block');
+            });
+
+            // cierra detalel del filtro desde el boton apply filter
+            $('.fxs_apply_filter_price').on('click', function (){
+                $('#fxs_block_table').removeClass('fxs_table_prices_block');
+            });
+  
+        </script>
 
         <!-- javascript c3 charts mini -->
         <script src="../../../../widgets/core/js/c3.min.js"></script>

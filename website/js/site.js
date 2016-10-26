@@ -332,18 +332,21 @@ $(document).ready(function () {
         $('.fxs_rates_addPair').addClass('fxs_dismissQuery_disabled');
     })
 
-    $('.sticky').fixTo('.sticky-holder',{
-        top: 130
-    });
+      // optimization images load time
+
+
+    // $('.sticky').fixTo('.sticky-holder',{
+    //     top: 130
+    // });
 
     //$('.sticky').fixTo('.sticky-holder');
     // sticky
     // disable when sidebar is active
-    $('#showRightPush').on('click',function(){
-        $(".pinned" ).toggle();
-    })
-    $(".pinned").pin({
-        containerSelector: ".container", minWidth: 940, padding: {top: 0, bottom: 10}
-    })
+    // $('#showRightPush').on('click',function(){
+    //     $(".pinned" ).toggle();
+    // })
+    // $(".pinned").pin({
+    //     containerSelector: ".container", minWidth: 940, padding: {top: 0, bottom: 10}
+    // })
 
 });

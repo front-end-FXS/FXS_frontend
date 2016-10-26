@@ -215,6 +215,9 @@
   .fxs_textInput {
     .calc(width, ~'100% - 165px');
     max-width: 350px;
+    &.fxs_newsletter_email{
+      width:100%!important;
+    }
   }
   .fxs_btn_group { margin-left: -2px; }
 }
@@ -542,7 +545,10 @@
   &.in {
     display: block;
     & + .fxs_contentView{ 
-      padding-top: @main_header_height + 5px;
+      padding-top: @main_headercookies_height;
+      @media(min-width:@screen-s){
+        padding-top: @main_header_height + 5px;
+      }
       .fxs_wallpaper_wrap { 
         .fxs_wallpaper_img{
           padding-top: @main_header_height;
@@ -833,6 +839,24 @@
 ////////////// DROPDOWNS ///////////////////////////
 
 // Dropdown list
+.fxs_dropdownList_items_v2{
+    padding:10px;
+    margin-top:10px;
+    display:  block;
+    > li {
+      display: inline-block;
+      > label {
+        color: @lightest_clr;
+        //line-height: @base_module_size - 5;
+        display: inline-block; 
+        width:240px;
+        font-size: 12px;
+        &.fxs_get_all{
+          font-size: 16px;
+        }
+      }
+    }
+  }
 .fxs_dropdownList {
   &:extend(.fxs_list_unstyled, .fxs_dropdown_generic all);
 	background-color: @dark_3_clr;
@@ -845,6 +869,21 @@
       line-height: @base_module_size - 5;
       text-decoration: none;
       &:hover{ background-color: @dark_4_clr; }
+    }
+  }
+  &.fxs_dropdownList_items{
+    padding:10px;
+    > li {
+      > label {
+        color: @lightest_clr;
+        //line-height: @base_module_size - 5;
+        display: inline-block; 
+        width:240px;
+        font-size: 12px;
+        &.fxs_get_all{
+          font-size: 16px;
+        }
+      }
     }
   }
   &::after {
@@ -996,6 +1035,7 @@
     }
   }
 }
+
 
 // LOADERS & FEEDBACK
 .fxs_feedbackLoading_msg {
@@ -1301,7 +1341,7 @@
 
 // Widget data Lables
 .fxs_widget_custom_data_lable {
-  font-size: @txt_size_xlarge;
+  font-size: @txt_size_large;
   display: block;
   @media (min-width: @screen-s) {
     font-size: @txt_size_xxlarge;
@@ -1381,7 +1421,10 @@
 .fxs_price_change {
   white-space: nowrap;
   display: inline-block;
-  padding-left: 1rem;
+  padding-left: 0.1rem;
+  @media(min-width:@screen-l) {
+    padding-left: 1rem;
+  }
 }
 
 .fxs_asset_label_block {
@@ -1414,16 +1457,17 @@
     &:first-child { display: none; }
   }
 }
-// rule to display just first letter in mobile devices
-.fxs_first_char{
-  font-weight: normal;
-  visibility:hidden;
-  display: inline-block;
-  &:first-letter{
+ //rule to display just first letter in mobile devices
+ .fxs_first_char{
+   font-weight: normal;
+   visibility:hidden;
+   display: inline-block;
+   &:first-letter{
     visibility: visible!important;
     font-weight: 700;
-  }
-}
+   }
+ }
+
 
 // List table split widget (COT & Bullish index)
 .fxs_list_table_item_split_widget {
@@ -1438,6 +1482,44 @@
         border-top: none;
         &:first-child { border-right: 1px solid @light_4_clr; }
       }
+    }
+  }
+}
+
+// price list filter
+.fxs_filterResults_bg{
+  background-color: @lightest_clr;
+}
+.fxs_price_filter{
+  .fxs_row{
+    background-color: @lightest_clr;
+  }
+  .fxs_price_filter_header{
+    padding:0!important;
+    &:extend(.fxs_listview_subnav);
+  }
+  .fxs_filter_price_container{
+    li{
+      display: inline-block;
+      width:150px;
+    }
+    fieldset{
+      border-bottom: none;
+    }
+  }
+  .fxs_filter_buttons_container{
+    padding-top:20px;
+    max-width: 420px;
+  }
+}
+
+// disabled table when filter is opened
+
+.fxs_table_prices_block{
+  tbody {
+    > tr{
+      opacity: .2;
+      cursor: default!important;
     }
   }
 }
@@ -1688,4 +1770,15 @@
 
 .mcx-widget{
       margin-top: -275.5px !important; 
+}
+
+// plugin layzyload
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
 }
