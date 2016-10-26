@@ -1,0 +1,246 @@
+﻿// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+////////////////////////////////////////////////
+//////////// Widget Single asset //////////////
+//////////////////////////////////////////////
+.forecast_timeframe_slot {
+  .fxs_widget_slot_label {
+    max-width: 200px;
+    text-align: center;
+    display: none;
+  }
+}
+
+.forecast_results_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  li {
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+    font-size: @txt_size_small;
+    .fxs_widget_custom_bold {
+      width: @base_module_size;
+      display: inline-block;
+    }
+  }
+}
+
+.forecast_result_txt {
+  .fxs_txt_color_variants(@light_1_clr);
+  display: inline-block;
+}
+
+.forecast_avg_result {
+  padding-top: 0.5rem;
+  border-top: 2px solid @light_1_clr;
+  text-align: left;
+  .fxs_widget_custom_bold {
+    .fxs_txt_color_variants(@light_1_clr);
+  }
+
+  &.result_bullish {
+    border-top-color: @success_clr;
+    .fxs_widget_custom_bold {
+      .fxs_txt_color_variants(@success_clr);
+    }
+  }
+  &.result_bearish {
+    border-top-color: @error_clr;
+    .fxs_widget_custom_bold {
+      .fxs_txt_color_variants(@error_clr);
+    }
+  }
+}
+
+// Single asset module
+.fxs_forecast_widget {
+  .fxs_gauge_container, .fxs_widget_avg_col { vertical-align: top; }
+  .fxs_widget_avg_col {
+    margin-left: 0;
+    padding-top: 2px;
+  }
+
+  // Default & Big widget media queries
+  &.fxs_widget_big, &.fxs_widget_default {
+    @media (min-width: @screen-s) {
+      .forecast_timeframe_slot {
+        display: block;
+        .opacity(1);
+        .fxs_widget_slot_label { display: block; }
+      }
+      .fxs_tabs_nav { display: none; }
+    }
+  }
+
+  // Default widget values & media queries
+  &.fxs_widget_default {
+    @media (min-width: @screen-s) {
+      .fxs_widget_avg_col {
+        margin: 0 1rem;
+        text-align: center;
+        max-width: 200px;
+        .calc(width, ~'100% - 210px - 2rem');
+      }
+    }
+  }
+  
+  // Big widget values & media queries
+  &.fxs_widget_big {
+    @media (min-width: @screen-s) {
+      .fxs_widget_slot_label { margin: 0 auto; }
+      .fxs_gauge_container {
+        display: block;
+        margin: 0 auto 1rem;
+      }
+      .fxs_widget_divider_module {
+        .make-row();
+      }
+      .forecast_timeframe_slot {
+        .column-default-parameters();
+      }
+      .fxs_widget_avg_col {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+        border-top: 1px solid @light_3_clr;
+      }
+    }
+    .forecast_timeframe_slot {
+      .make-s-column(4);
+    }
+  }
+
+  // Mini widget values & media queries
+  &.fxs_widget_mini {
+    @media (min-width: @screen-s) { 
+      .fxs_gauge_container, .fxs_widget_avg_col {
+        width: auto;
+        display: block;
+        max-width: 200px;
+        margin: 0 auto 1rem;
+      }
+      .fxs_widget_avg_col {
+        padding: 0.5rem 1rem;
+        border-top: 1px solid @light_3_clr;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
+//////////// Widget Multi asset ///////////////
+//////////////////////////////////////////////
+
+.forecast_graphic_wrapper {
+  min-width: 1px;
+  min-height: 1px;
+  max-width: 250px;
+  position: relative;
+}
+.fxs_forecast_widget_multi {
+  .fxs_table {
+    >thead, .forecast_timeframe { display: none; }
+    // Show '.forecast_timeframe' when `.active`
+    .forecast_timeframe {
+      padding-left: 0.5rem;
+      &.active {
+        display: block;
+      }
+    }
+    >tbody >tr >td {
+      &:nth-child(n+2):nth-child(-n+4) { padding: 0.5rem 0; }// force width due to firefox awkward render
+    }
+  }
+  .fxs_widget_slot_label {
+    margin-bottom: -0.5rem;
+    .fxs_widget_small, .fxs_widget_custom_data_lable { display: inline-block; }
+  }
+  .fxs_widget_slot_label, .forecast_avg_result { white-space: nowrap; }
+  .forecast_avg_result {
+    border-top: 0 none;
+    padding-top: 0;
+  }
+  // Default widget values & media queries
+  &.fxs_widget_default {
+    @media (min-width: @screen-xl) {
+      .fxs_tabs_nav { display: none; }
+      .fxs_table {
+        >thead { display: table-header-group; }
+        .forecast_timeframe {
+          display: block;
+          padding-left: 0;
+        }
+        >tbody >tr >td {
+          &:nth-child(n+2):nth-child(-n+4) {
+            width: 28%;// force width due to firefox awkward render
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Big widget values & media queries
+  &.fxs_widget_big {
+    @media (min-width: @screen-s) {
+      .fxs_tabs_nav { display: none; }
+      .fxs_table {
+        >thead { display: table-header-group; }
+        .forecast_timeframe {
+          display: block;
+          padding-left: 0;
+        }
+        >tbody >tr >td {
+          &:nth-child(n+2):nth-child(-n+4) {
+            width: 28%;// force width due to firefox awkward render
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Mini widget values & media queries
+  &.fxs_widget_mini {
+    
+  }
+}
+
+// forecast week prediction Table 
+.fxs_forecast_week_table {
+    thead{
+        //display:none;
+    }
+    tbody, thead, tfoot {
+        >tr >td, >tr >th {
+            &:not(:nth-child(-n+2)) { display: none; }
+            &:last-child { display: table-cell; }
+
+            @media (min-width: @screen-s){
+            &:nth-child(n+3):nth-child(-n+4) { display: table-cell; }
+            }
+        }
+    }
+    @media(min-width:@screen-s){
+        thead{
+            display: table-header-group;
+        }
+    }
+}
+.fa-comment{
+    color:@dark_2_clr;
+}
+
+// Reset & overrides C3 library
+.fxs_forecast_widget_multi {
+  .c3-axis-x { display: none; }
+}

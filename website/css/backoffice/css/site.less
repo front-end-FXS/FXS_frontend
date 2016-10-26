@@ -18,6 +18,18 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
+.fxs_author_trans_title{
+    span{
+        font-weight:300;
+        font-size:18px;
+        color:#999;
+    }
+}
+.fxs_custom_panel{
+    .panel-body{
+        padding-bottom: 0px;
+    }
+}
 
 body {
 	background-color: #E5E9EC;
@@ -54,11 +66,7 @@ strong {
 
 // scrollbars
 
-.fxs_custom_panel{
-    .panel-body{
-        padding-bottom: 0px;
-    }
-}
+
 .profile-pic {
     width: 65px;
     height: 65px;
@@ -86,6 +94,13 @@ strong {
     opacity: 1.0;
 }
 
+.fxs_translation_btn{
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
 .logo {
 	height: 62px;
     margin: -10px -10px 0;
@@ -93,25 +108,6 @@ strong {
     background-image: url('https://fxstreet.s3.amazonaws.com/imglogos/small-roadblock.png');
     background-repeat: no-repeat;
     background-position: 10px;
-}
-.fxs_translation_btn{
-    cursor: pointer;
-    &:hover{
-        opacity: 0;
-    }
-}
-
-.fxs_author_trans_title{
-    span{
-        font-weight:300;
-        font-size:18px;
-        color:#999;
-    }
-}
-.fxs_custom_panel{
-    .panel-body{
-        padding-bottom: 0px;
-    }
 }
 
 .menu {
@@ -155,6 +151,12 @@ strong {
         color: #1B1E24;
         background-color: #ee970c;
     }
+}
+.fxs_scollable_box{
+    overflow: auto;
+    resize:vertical;
+    border:1px solid #ccc;
+    height:100px
 }
  
 .cbp-spmenu-left {
@@ -290,7 +292,7 @@ strong {
 }
 
 .table-hover>tbody>tr:hover>td {
-    background-color: rgba(91, 192, 222, 0.20);
+    //background-color: rgba(91, 192, 222, 0.20);
 }
 .table>tbody>tr.checkedED>td {
     background-color: rgba(184, 235, 119, 0.52);
@@ -428,6 +430,14 @@ strong {
         input {
             //border: 1px solid transparent !important;
         }
+        &.fxs_wide_field{
+            display:block;
+            textarea{
+                min-height:100px;
+                resize:vertical;
+            }
+        }
+
     }
     .input-group:hover {
         input {
@@ -836,6 +846,9 @@ strong {
     .accessLocalization{
         background-color:#3c998a;
     }
+    .accessEvents{
+        background-color:#3c998a;
+    }
 }
 .flip-container {
 	perspective: 1000;
@@ -948,6 +961,11 @@ strong {
     .accessLocalization{
         .fa:before {
             content: "\f0ac";
+        }
+    }
+    .accessEvents{
+        .fa:before {
+            content: "\f144";
         }
     }
 }
@@ -1303,9 +1321,9 @@ strong {
 }
 
 // custom localization table, delete this rule after html refactor
-.fxs_localization_form{
-    .table > tbody > tr > td {
-        word-break:normal;
+.fxs_localization_result{
+    .col-md-4{
+        padding-bottom: 5px;
     }
 }
 .fxs_add_domain{
@@ -1420,6 +1438,53 @@ strong {
 }
 // post
 
+// post user history button
+.fxs_post_user{
+    textarea{
+        width:100%;
+        text-align: left;
+        border-radius: 4px;
+        border:1px solid #ccc;
+        min-height: 150px;
+    }
+    background-color: #fff;
+    margin-left:-8px;
+    margin-right: -8px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+    &.fxs_post_user_create{
+        border-left:5px solid #338473;
+        span{
+            color: #338473; 
+        }
+         .fxs_json_code{
+            margin:0 auto;
+            padding-top:10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .collapsed .fa:before{
+            content: "\f121";
+        }
+    }
+    &.fxs_post_user_edit{
+        border-left:5px solid #E4871B;
+        span{
+            color: #E4871B;
+        }
+        .fxs_json_code{
+            margin:0 auto;
+            padding-top:10px;
+            padding-bottom: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .collapsed .fa:before{
+            content: "\f121";
+        }
+    }
+}
 .news-option{
     min-width:200px;
 }
@@ -1480,8 +1545,20 @@ strong {
 .cke_button__sentiment_cke_icon{
     background: url(../../scripts/ckeditor/plugins/widgets/icons/sentiment_cke.png) no-repeat!important;
 }
-.cke_button__ctp_icon{
+.cke_button__ctp_cke_icon{
     background: url(../../scripts/ckeditor/plugins/widgets/icons/ctp_cke.png) no-repeat!important;
+}
+.cke_button__pivotpoints_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/pivotpoints_cke.png) no-repeat!important;
+}
+.cke_button__forecast_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/forecast_cke.png) no-repeat!important;
+}
+.cke_button__lastcandle_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/lastcandle_cke.png) no-repeat!important;
+}
+.cke_button__youtube_cke_icon{
+    background: url(../../scripts/ckeditor/plugins/widgets/icons/youtube_cke.png) no-repeat!important;
 }
 // ctp signals
 .ctp-filter-form{

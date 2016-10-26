@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>FXStreet - The Forex Market</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="../../css/fxs_screen.min.css">
-        <link rel="stylesheet" href="../../css/mini_responsive_50.css">
+        <link rel="stylesheet" href="https://staticcontent.azureedge.net/website/css/fxs_screen.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
@@ -25,6 +24,19 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <style type="text/css">
+            .fxs_wallpaper_wrap img{
+                display: block!important,
+            }
+            .lazyload,
+            .lazyloading {
+                opacity: 0;
+            }
+            .lazyloaded {
+                opacity: 1;
+                transition: opacity 300ms;
+            }
+        </style>
     </head>
     <body class="cbp-spmenu-push">
 
@@ -50,48 +62,6 @@
                     <li><a href="../brokers/brokers-home.html" title="">Find a Broker</a></li>
                 </ul>
             </nav>
-
-            <!-- Social & RSS links
-            <div class="fxs_socialLinks_nav">
-                <ul class="fxs_shareOptions_boxed">
-                    <li class="fxs_socialMedia_item">
-                        <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
-                    </li>
-                    <li class="fxs_socialMedia_item">
-                        <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
-                    </li>
-                    <li class="fxs_overflowOptions">
-                        <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
-                        <ul class="fxs_dropdownList">
-                            <li class="fxs_dropdownHeader">Follow us on</li>
-                            <li>
-                                <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
-                            </li>
-                            <li class="fxs_divider_third">&nbsp;</li>
-                            <li class="fxs_dropdownHeader">RSS feeds</li>
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-           Social & RSS links -->
 
             <!-- Social & RSS links -->
             <div class="fxs_socialLinks_nav">
@@ -156,10 +126,10 @@
                             <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
                         </li>
                         <li class="fxs_socialMedia_item">
-                            <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                            <a href="https://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
                         </li>
                         <li class="fxs_socialMedia_item">
-                            <a href="http://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                            <a href="https://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
                         </li>
                         <li class="fxs_socialMedia_item">
                             <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
@@ -228,48 +198,8 @@
                     
                     <!-- --------------- SPONSOR CONTENT EXAMPLE --------------- -->
                     
-                    <div class="fxs_wallpaper_wrap">
-                        <div class="fxs_wallpaper_img fxs_image_left">
-                            <img class="b-lazy" src="../../img/ad_L.jpg">
-                        </div>
-                        <div class="fxs_wallpaper_img fxs_image_right">
-                            <img class="b-lazy" src="../../img/ad_R.jpg">
-                        </div>
-                        <a href="http://path-to-sponsor" target="_blank">
-                            <span class="fxs_skip">Some text for this link please</span>
-                        </a>
-                    </div>
+                    
 
-                    <!-- IMPORTANT, this is an example of css config for the ad, use the sf css widget to configure and errase this -->
-                    <style type="text/css">
-                        .fxs_wallpaper_wrap { /*background-color: #ED242A;*/ }
-                    </style>
-                    <!-- /IMPORTANT, this is an example of css config for the ad, use the sf css widget to configure and errase this -->
-
-                    <!-- Leaderboard + roadblock -->
-                    <div class="fxs_leaderboard fxs_leaderboard_transition">
-                        
-                        <!-- roadblock slide instead a leaderboard-->
-                        <div class="fxs_roadblock_slide">
-                            <a href="http://path-to-sponsor" target="_blank">
-                                <img class="lazy b-lazy" src="../../img/ad_C.jpg">
-                            </a>
-                        </div>
-                        <!--/ roadblock slide -->
-                        
-                    </div>
-
-                    <!-- example without slider 
-                    <div class="fxs_leaderboard fxs_leaderboard_adjust">
-                        
-                        <div class="fxs_ad">
-                            <a target="_blank" href="http://adclick.g.doubleclick.net/aclk?sa=L&amp;ai=B1Pglz6MwVuumLozVWv-1rvAMjP_31AgAAAAQASAAOABYhK_YiqoCYNWN04K8CIIBF2NhLXB1Yi03OTQ1ODMxMTc0NjM1NzM2sgEQd3d3LmZ4c3RyZWV0LmNvbboBCWdmcF9pbWFnZcgBCdoBGGh0dHA6Ly93d3cuZnhzdHJlZXQuY29tL6kCDulDWfCJsj7AAgLgAgDqAgovNzEzOC9Ib21l-AL30R6AAwGQA4wGmAOMBqgDAeAEAZAGAaAGHtgHAA&amp;num=0&amp;cid=5GhaUeCSlgPdQSI4NDWiO48f&amp;sig=AOD64_0u0AD4PkhtvnnKORhLXm19_9UqfA&amp;client=ca-pub-7945831174635736&amp;adurl=https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjsuFNC9Slw3OH0TWavbWdfoN7hz6yuJX7LdGuWt0ylb3TwL9WC1g5k1FCwUhkFRi9e7004ohodpERx10VGDI4NQmiDTlGLeRZOFmZPcnpQzC3HxTdPhO&amp;sig=Cg0ArKJSzJBmQD6gBKal&amp;urlfix=1&amp;adurl=http://www.fxpro.co.uk/promo/fxpro/%3Futm_source%3DFxStreet%2Bcom%26utm_medium%3DBanner%26utm_term%3DBrand%26utm_content%3DUK%26utm_campaign%3D728x90%2BBanner%2Bon%2BFxStreet%26source%3D20">
-                                <img src="https://s1.2mdn.net/viewad/4310423/6-all_three_spreads_banner_728x90.jpg" alt="Advertisement" border="0" width="728" height="90">
-                            </a>
-                        </div>
-
-                    </div>
-                    /Leaderboard + roadblock -->
                     
                     <!-- --------------- /SPONSOR CONTENT EXAMPLE -------------- -->
 
@@ -351,73 +281,6 @@
                                     </div>
                                 </div>
 
-                                <!-- widget price default example -->
-
-                                <!--<div class="fxs_col fxs_col_25">
-                                    <div class="fxs_widget_divider_module">
-                                        <div class="fxs_widget_price price_down">
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_25">
-                                    <div class="fxs_widget_divider_module">
-                                        <div class="fxs_widget_price price_up">
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">GBP/USD</a>
-                                            </abbr>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_25">
-                                    <div class="fxs_widget_divider_module">
-                                        <div class="fxs_widget_price price_up">
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">USD/JPY</a>
-                                            </abbr>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="fxs_col fxs_col_25">
-                                    <div class="fxs_widget_divider_module">
-                                        <div class="fxs_widget_price price_down">
-                                            <abbr class="fxs_asset_label" title="Euro - US Dollar">
-                                                <a href="/">EUR/USD</a>
-                                            </abbr>
-                                            <div class="fxs_widget_price_value">
-                                                <span class="fxs_price_bidask">1.27<strong class="fxs_price_big_figure">68</strong><sup>8</sup>/<strong class="fxs_price_big_figure">56</strong><sup>7</sup></span>
-                                                <span class="fxs_price_change">
-                                                    <span class="fxs_change_pips">0.0026</span>
-                                                    <span class="fxs_change_percent">(-0.12%)</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
-                                
                             </div>                         
                             <!-- /marquee container -->
                             
@@ -442,12 +305,12 @@
                                         <article class="fxs_entryFeatured_med">
                                             <header>
                                                 <h3 class="fxs_entryHeadline">
-                                                    <a href="http://www.fxstreet.com/analysis/eur-usd-forecast-modestly-bullish-break-above-1-1120-needed-201607290939" title="EUR/USD Forecast: modestly bullish, break above 1.1120 needed">EUR/USD Forecast: modestly bullish, break above 1.1120 needed</a>
+                                                    <a href="https://www.fxstreet.com/analysis/eur-usd-forecast-modestly-bullish-break-above-1-1120-needed-201607290939" title="EUR/USD Forecast: modestly bullish, break above 1.1120 needed">EUR/USD Forecast: modestly bullish, break above 1.1120 needed</a>
                                                 </h3>
                                                 <address class="fxs_contributorBox fxs_contributorBox_small">
                                                     <div class="fxs_avatar_circleImage_s">
                                                         <a href="/author/valeria-bednarik" title="Valeria Bednarik">
-                                                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/Valeria%20Bednarik.jpeg" alt="Valeria Bednarik" width="35" height="35">
+                                                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Valeria%20Bednarik.jpeg"  src="" alt="Valeria Bednarik" width="35" height="35">
                                                         </a>
                                                     </div>
                                                     <span class="fxs_article_author">
@@ -461,8 +324,9 @@
                                                 </address>
                                             </header>
                                             <div class="fxs_entryFeatured_img">
-                                                <a href="http://www.fxstreet.com/analysis/risk-on-us-dollar-down-201609050856" title="Risk-on, US dollar down"><img class="b-lazy" data-src="image.jpg" data-src-small="small-image.jpg"
-     alt="Image description" src="https://editorial.azureedge.net/images/Markets/Equities/FTSE/ftse-100-index-17327640_Small.jpg" alt="Risk-on, US dollar down"></a>
+                                                <a href="https://www.fxstreet.com/analysis/risk-on-us-dollar-down-201609050856" title="Risk-on, US dollar down">
+                                                
+                                                <img class="lazyload" data-src="https://editorial.azureedge.net/images/Markets/Equities/FTSE/ftse-100-index-17327640_Small.jpg" src=""  data-src-small="small-image.jpg" alt="Image description" alt="Risk-on, US dollar down"></a>
                                             </div>
                                         </article>
                                     </div>
@@ -485,7 +349,7 @@
                     <li>
                         <article>
                             <h3 class="fxs_entryHeadline">
-                                <a href="http://www.fxstreet.com/news/eur-usd-flirts-with-1-1100-post-emu-data-201607290938" title="EUR/USD flirts with 1.1100 post-EMU data">EUR/USD flirts with 1.1100 post-EMU data</a>
+                                <a href="https://www.fxstreet.com/news/eur-usd-flirts-with-1-1100-post-emu-data-201607290938" title="EUR/USD flirts with 1.1100 post-EMU data">EUR/USD flirts with 1.1100 post-EMU data</a>
                             </h3>
                             <address class="fxs_entry_metaInfo">
                                 <span class="fxs_article_author">
@@ -495,12 +359,12 @@
                         </article>
                         <script type="application/ld+json">
                             {
-                            "@context": "http://schema.org",
+                            "@context": "https://schema.org",
                             "@type": "NewsArticle",
                             "name": "EUR/USD flirts with 1.1100 post-EMU data",
                             "headline": "EUR/USD flirts with 1.1100 post-EMU data",
                             "datePublished": "7/29/2016 11:38:32 AM"
-                            "url" : "http://www.fxstreet.com/news/eur-usd-flirts-with-1-1100-post-emu-data-201607290938",
+                            "url" : "https://www.fxstreet.com/news/eur-usd-flirts-with-1-1100-post-emu-data-201607290938",
                             "author": {
                             "@type":"Person",
                             "name":"Pablo Piovano",
@@ -517,7 +381,7 @@
                     <li>
                         <article>
                             <h3 class="fxs_entryHeadline">
-                                <a href="http://www.fxstreet.com/news/emu-s-cpi-gdp-preview-what-to-expect-of-eur-usd-201607290818" title="EMU’s CPI/GDP Preview: what to expect of EUR/USD">EMU’s CPI/GDP Preview: what to expect of EUR/USD</a>
+                                <a href="https://www.fxstreet.com/news/emu-s-cpi-gdp-preview-what-to-expect-of-eur-usd-201607290818" title="EMU’s CPI/GDP Preview: what to expect of EUR/USD">EMU’s CPI/GDP Preview: what to expect of EUR/USD</a>
                             </h3>
                             <address class="fxs_entry_metaInfo">
                                 <span class="fxs_article_author">
@@ -527,12 +391,12 @@
                         </article>
                         <script type="application/ld+json">
                             {
-                            "@context": "http://schema.org",
+                            "@context": "https://schema.org",
                             "@type": "NewsArticle",
                             "name": "EMU&#8217;s CPI/GDP Preview: what to expect of EUR/USD",
                             "headline": "EMU&#8217;s CPI/GDP Preview: what to expect of EUR/USD",
                             "datePublished": "7/29/2016 10:18:54 AM"
-                            "url" : "http://www.fxstreet.com/news/emu-s-cpi-gdp-preview-what-to-expect-of-eur-usd-201607290818",
+                            "url" : "https://www.fxstreet.com/news/emu-s-cpi-gdp-preview-what-to-expect-of-eur-usd-201607290818",
                             "author": {
                             "@type":"Person",
                             "name":"Pablo Piovano",
@@ -549,7 +413,7 @@
                     <li>
                         <article>
                             <h3 class="fxs_entryHeadline">
-                                <a href="http://www.fxstreet.com/news/eur-usd-taps-1-1100-handle-ahead-of-eu-cpi-and-gdp-201607290745" title="EUR/USD taps 1.1100 handle ahead of EU CPI and GDP">EUR/USD taps 1.1100 handle ahead of EU CPI and GDP</a>
+                                <a href="https://www.fxstreet.com/news/eur-usd-taps-1-1100-handle-ahead-of-eu-cpi-and-gdp-201607290745" title="EUR/USD taps 1.1100 handle ahead of EU CPI and GDP">EUR/USD taps 1.1100 handle ahead of EU CPI and GDP</a>
                             </h3>
                             <address class="fxs_entry_metaInfo">
                                 <span class="fxs_article_author">
@@ -559,12 +423,12 @@
                         </article>
                         <script type="application/ld+json">
                             {
-                            "@context": "http://schema.org",
+                            "@context": "https://schema.org",
                             "@type": "NewsArticle",
                             "name": "EUR/USD taps 1.1100 handle ahead of EU CPI and GDP",
                             "headline": "EUR/USD taps 1.1100 handle ahead of EU CPI and GDP",
                             "datePublished": "7/29/2016 9:45:08 AM"
-                            "url" : "http://www.fxstreet.com/news/eur-usd-taps-1-1100-handle-ahead-of-eu-cpi-and-gdp-201607290745",
+                            "url" : "https://www.fxstreet.com/news/eur-usd-taps-1-1100-handle-ahead-of-eu-cpi-and-gdp-201607290745",
                             "author": {
                             "@type":"Person",
                             "name":"Haresh Menghani",
@@ -593,12 +457,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/murrey-math-lines-eur-usd-usd-cad-201607291026" title="Murrey Math Lines: EUR/USD, USD/CAD">Murrey Math Lines: EUR/USD, USD/CAD</a>
+                    <a href="https://www.fxstreet.com/analysis/murrey-math-lines-eur-usd-usd-cad-201607291026" title="Murrey Math Lines: EUR/USD, USD/CAD">Murrey Math Lines: EUR/USD, USD/CAD</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/roboforex" title="RoboForex">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/roboforex-author-photoMedium.jpeg" alt="RoboForex" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/roboforex-author-photoMedium.jpeg" alt="RoboForex" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -612,7 +476,7 @@
                 </address>
             </header>
             <div class="fxs_entryFeatured_img">
-                <a href="http://www.fxstreet.com/analysis/the-dilemma-continues-but-the-fed-has-run-out-of-time-201609051428" title="The Dilemma continues, but the Fed has run out of time"><img class="b-lazy" src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/federal-reserve-facade-7769724_Small.jpg" alt="The Dilemma continues, but the Fed has run out of time"></a>
+                <a href="https://www.fxstreet.com/analysis/the-dilemma-continues-but-the-fed-has-run-out-of-time-201609051428" title="The Dilemma continues, but the Fed has run out of time"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/federal-reserve-facade-7769724_Small.jpg" alt="The Dilemma continues, but the Fed has run out of time"></a>
             </div>
         </article>
     </div>
@@ -627,12 +491,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/us-gdp-performance-2013-2016-volatile-but-mediocre-201607281610" title="US GDP performance 2013-2016: Volatile but mediocre">US GDP performance 2013-2016: Volatile but mediocre</a>
+                    <a href="https://www.fxstreet.com/analysis/us-gdp-performance-2013-2016-volatile-but-mediocre-201607281610" title="US GDP performance 2013-2016: Volatile but mediocre">US GDP performance 2013-2016: Volatile but mediocre</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/yohay-elam" title="Yohay Elam">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/Yohay%20Elam.jpg" alt="Yohay Elam" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Yohay%20Elam.jpg" alt="Yohay Elam" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -646,7 +510,7 @@
                 </address>
             </header>
             <div class="fxs_entryFeatured_img">
-                <a href="http://www.fxstreet.com/analysis/the-dilemma-continues-but-the-fed-has-run-out-of-time-201609051428" title="The Dilemma continues, but the Fed has run out of time"><img class="b-lazy" src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/federal-reserve-facade-7769724_Small.jpg" alt="The Dilemma continues, but the Fed has run out of time"></a>
+                <a href="https://www.fxstreet.com/analysis/the-dilemma-continues-but-the-fed-has-run-out-of-time-201609051428" title="The Dilemma continues, but the Fed has run out of time"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/federal-reserve-facade-7769724_Small.jpg" alt="The Dilemma continues, but the Fed has run out of time"></a>
             </div>
         </article>
     </div>
@@ -682,12 +546,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/yen-surges-on-moderate-boj-stimulus-201607290628" title="Yen Surges on Moderate BoJ Stimulus">Yen Surges on Moderate BoJ Stimulus</a>
+                    <a href="https://www.fxstreet.com/analysis/yen-surges-on-moderate-boj-stimulus-201607290628" title="Yen Surges on Moderate BoJ Stimulus">Yen Surges on Moderate BoJ Stimulus</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/craig-erlam" title="Craig Erlam">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/Craig%20Erlam.png" alt="Craig Erlam" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Craig%20Erlam.png" alt="Craig Erlam" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -701,7 +565,7 @@
                 </address>
             </header>
            <div class="fxs_entryFeatured_img">
-                <a href="http://www.fxstreet.com/analysis/eurusd-broke-below-the-bottom-of-the-price-channel-201609051126" title="EURUSD broke below the bottom of the price channel"><img class="b-lazy" src="https://editorial.azureedge.net/images/Markets/Currencies/Majors/EURUSD/dollar-and-euro-bills-58059534_Small.jpg" alt="EURUSD broke below the bottom of the price channel"></a>
+                <a href="https://www.fxstreet.com/analysis/eurusd-broke-below-the-bottom-of-the-price-channel-201609051126" title="EURUSD broke below the bottom of the price channel"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Markets/Currencies/Majors/EURUSD/dollar-and-euro-bills-58059534_Small.jpg" alt="EURUSD broke below the bottom of the price channel"></a>
             </div>
         </article>
     </div>
@@ -737,7 +601,7 @@
             <li>
                 <article>
                     <h3 class="fxs_entryHeadline">
-                        <a href="http://www.fxstreet.com/news/us-cad-gdp-preview-what-to-expect-of-usd-cad-201607291053" title="US/CAD GDP Preview: what to expect of USD/CAD">US/CAD GDP Preview: what to expect of USD/CAD</a>
+                        <a href="https://www.fxstreet.com/news/us-cad-gdp-preview-what-to-expect-of-usd-cad-201607291053" title="US/CAD GDP Preview: what to expect of USD/CAD">US/CAD GDP Preview: what to expect of USD/CAD</a>
                     </h3>
                     <address class="fxs_entry_metaInfo">
                         <span class="fxs_article_author">
@@ -747,12 +611,12 @@
                 </article>
                 <script type="application/ld+json">
         {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "NewsArticle",
         "name": "US/CAD GDP Preview: what to expect of USD/CAD",
         "headline": "US/CAD GDP Preview: what to expect of USD/CAD",
         "datePublished": "7/29/2016 12:53:44 PM"
-        "url" : "http://www.fxstreet.com/news/us-cad-gdp-preview-what-to-expect-of-usd-cad-201607291053",
+        "url" : "https://www.fxstreet.com/news/us-cad-gdp-preview-what-to-expect-of-usd-cad-201607291053",
         "author": {
         "@type":"Person",
         "name":"Pablo Piovano",
@@ -768,7 +632,7 @@
             <li>
                 <article>
                     <h3 class="fxs_entryHeadline">
-                        <a href="http://www.fxstreet.com/news/eur-gbp-heading-for-a-fresh-break-out-above-0-8450-201607291052" title="EUR/GBP heading for a fresh break-out above 0.8450">EUR/GBP heading for a fresh break-out above 0.8450</a>
+                        <a href="https://www.fxstreet.com/news/eur-gbp-heading-for-a-fresh-break-out-above-0-8450-201607291052" title="EUR/GBP heading for a fresh break-out above 0.8450">EUR/GBP heading for a fresh break-out above 0.8450</a>
                     </h3>
                     <address class="fxs_entry_metaInfo">
                         <span class="fxs_article_author">
@@ -778,12 +642,12 @@
                 </article>
                 <script type="application/ld+json">
         {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "NewsArticle",
         "name": "EUR/GBP heading for a fresh break-out above 0.8450",
         "headline": "EUR/GBP heading for a fresh break-out above 0.8450",
         "datePublished": "7/29/2016 12:52:52 PM"
-        "url" : "http://www.fxstreet.com/news/eur-gbp-heading-for-a-fresh-break-out-above-0-8450-201607291052",
+        "url" : "https//www.fxstreet.com/news/eur-gbp-heading-for-a-fresh-break-out-above-0-8450-201607291052",
         "author": {
         "@type":"Person",
         "name":"Haresh Menghani",
@@ -799,7 +663,7 @@
             <li>
                 <article>
                     <h3 class="fxs_entryHeadline">
-                        <a href="http://www.fxstreet.com/news/usd-jpy-parked-around-103-50-us-gdp-eyed-201607291018" title="USD/JPY parked around 103.50, US GDP eyed">USD/JPY parked around 103.50, US GDP eyed</a>
+                        <a href="https://www.fxstreet.com/news/usd-jpy-parked-around-103-50-us-gdp-eyed-201607291018" title="USD/JPY parked around 103.50, US GDP eyed">USD/JPY parked around 103.50, US GDP eyed</a>
                     </h3>
                     <address class="fxs_entry_metaInfo">
                         <span class="fxs_article_author">
@@ -809,12 +673,12 @@
                 </article>
                 <script type="application/ld+json">
         {
-        "@context": "http://schema.org",
+        "@context": "https://schema.org",
         "@type": "NewsArticle",
         "name": "USD/JPY parked around 103.50, US GDP eyed",
         "headline": "USD/JPY parked around 103.50, US GDP eyed",
         "datePublished": "7/29/2016 12:18:17 PM"
-        "url" : "http://www.fxstreet.com/news/usd-jpy-parked-around-103-50-us-gdp-eyed-201607291018",
+        "url" : "https://www.fxstreet.com/news/usd-jpy-parked-around-103-50-us-gdp-eyed-201607291018",
         "author": {
         "@type":"Person",
         "name":"Pablo Piovano",
@@ -833,7 +697,7 @@
 
 
 <div>
-    <div><div style="text-align:right;"><a class="fxs_btn fxs_btn_line fxs_btn_small fxs_fLeft" href="http://www.fxstreet.com/macroeconomics/central-banks/boj">All you need to know about BOJ</a></div></div>
+    <div><div style="text-align:right;"><a class="fxs_btn fxs_btn_line fxs_btn_small fxs_fLeft" href="https://www.fxstreet.com/macroeconomics/central-banks/boj">All you need to know about BOJ</a></div></div>
 </div>
 
         </div>
@@ -857,12 +721,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/ftse-rides-boj-disappointment-201607290923" title="FTSE rides BoJ disappointment">FTSE rides BoJ disappointment</a>
+                    <a href="https://www.fxstreet.com/analysis/ftse-rides-boj-disappointment-201607290923" title="FTSE rides BoJ disappointment">FTSE rides BoJ disappointment</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/joshua-mahony" title="Joshua Mahony">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/Joshua%20Mahony.jpeg" alt="Joshua Mahony" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Joshua%20Mahony.jpeg" alt="Joshua Mahony" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -876,7 +740,7 @@
                 </address>
             </header>
             <div class="fxs_entryFeatured_img">
-                <a href="http://www.fxstreet.com/analysis/parsing-divergence-focus-shifts-from-fed-to-ecb-201609050615" title="Parsing Divergence: Focus Shifts from Fed to ECB"><img class="b-lazy" src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/Janet_Yellen2_2016_Small.jpg" alt="Parsing Divergence: Focus Shifts from Fed to ECB"></a>
+                <a href="https://www.fxstreet.com/analysis/parsing-divergence-focus-shifts-from-fed-to-ecb-201609050615" title="Parsing Divergence: Focus Shifts from Fed to ECB"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/FED/Janet_Yellen2_2016_Small.jpg" alt="Parsing Divergence: Focus Shifts from Fed to ECB"></a>
             </div>
         </article>
     </div>
@@ -891,12 +755,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/boj-review-boj-disappoints-but-keeps-door-open-for-more-easing-201607290806" title="BoJ Review: BoJ disappoints but keeps door open for more easing">BoJ Review: BoJ disappoints but keeps door open for more easing</a>
+                    <a href="https://www.fxstreet.com/analysis/boj-review-boj-disappoints-but-keeps-door-open-for-more-easing-201607290806" title="BoJ Review: BoJ disappoints but keeps door open for more easing">BoJ Review: BoJ disappoints but keeps door open for more easing</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/danske-research-team" title="Danske Research Team">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/Companies/Danske%20Bank.jpeg" alt="Danske Research Team" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Companies/Danske%20Bank.jpeg" alt="Danske Research Team" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -910,7 +774,7 @@
                 </address>
             </header>
             <div class="fxs_entryFeatured_img">
-                <a href="http://www.fxstreet.com/analysis/so-we-had-the-jobs-report-but-so-what-201609051812" title="So, we had the jobs report. But, so what?"><img class="b-lazy" src="https://editorial.azureedge.net/images/Macroeconomics/EconomicIndicator/Employment/job-in-the-employment-section-of-newspaper-19942906_Small.jpg" alt="So, we had the jobs report. But, so what?"></a>
+                <a href="https://www.fxstreet.com/analysis/so-we-had-the-jobs-report-but-so-what-201609051812" title="So, we had the jobs report. But, so what?"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Macroeconomics/EconomicIndicator/Employment/job-in-the-employment-section-of-newspaper-19942906_Small.jpg"  alt="So, we had the jobs report. But, so what?"></a>
             </div>
         </article>
     </div>
@@ -931,16 +795,16 @@
             <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisSmall">
                 <article class="fxs_entryFeatured_reduced">
                     <div class="fxs_entryFeatured_img">
-                        <a href="http://www.fxstreet.com/analysis/usd-jpy-selling-pressures-surged-201609220928" title="USD/JPY - Selling Pressures Surged"><img class="b-lazy" src="https://editorial.azureedge.net/images/Markets/Currencies/Majors/USDJPY/japanease-10000-yen-and-100-dollar-24332032_Small.jpg" alt="USD/JPY - Selling Pressures Surged"></a>
+                        <a href="https://www.fxstreet.com/analysis/usd-jpy-selling-pressures-surged-201609220928" title="USD/JPY - Selling Pressures Surged"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Markets/Currencies/Majors/USDJPY/japanease-10000-yen-and-100-dollar-24332032_Small.jpg" alt="USD/JPY - Selling Pressures Surged"></a>
                     </div>
                     <header>
                         <h3 class="fxs_entryHeadline">
-                            <a href="http://www.fxstreet.com/analysis/usd-jpy-selling-pressures-surged-201609220928" title="USD/JPY - Selling Pressures Surged">USD/JPY - Selling Pressures Surged</a>
+                            <a href="https://www.fxstreet.com/analysis/usd-jpy-selling-pressures-surged-201609220928" title="USD/JPY - Selling Pressures Surged">USD/JPY - Selling Pressures Surged</a>
                         </h3>
                         <address class="fxs_contributorBox fxs_contributorBox_small">
                             <div class="fxs_avatar_circleImage_s">
                                 <a href="/author/yann-quelenn" title="Yann Quelenn">
-                                    <img src="https://editorial.azureedge.net/authors/Yann%20Quelenn.jpg" alt="Yann Quelenn" width="35" height="35">
+                                    <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Yann%20Quelenn.jpg"  alt="Yann Quelenn" width="35" height="35">
                                 </a>
                             </div>
                             <span class="fxs_article_author">
@@ -972,16 +836,16 @@
             <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisSmall">
                 <article class="fxs_entryFeatured_reduced">
                     <div class="fxs_entryFeatured_img">
-                        <a href="http://www.fxstreet.com/analysis/wti-oversold-conditions-to-ease-target-at-4600-201609220849" title="WTI oversold conditions to ease: Target at $46.00"><img class="b-lazy" src="https://editorial.azureedge.net/images/Markets/Commodities/Energy/Oil/crude-oil-sign-on-well-tank-21046779_Small.jpg" alt="WTI oversold conditions to ease: Target at $46.00"></a>
+                        <a href="https://www.fxstreet.com/analysis/wti-oversold-conditions-to-ease-target-at-4600-201609220849" title="WTI oversold conditions to ease: Target at $46.00"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Markets/Commodities/Energy/Oil/crude-oil-sign-on-well-tank-21046779_Small.jpg" alt="WTI oversold conditions to ease: Target at $46.00"></a>
                     </div>
                     <header>
                         <h3 class="fxs_entryHeadline">
-                            <a href="http://www.fxstreet.com/analysis/wti-oversold-conditions-to-ease-target-at-4600-201609220849" title="WTI oversold conditions to ease: Target at $46.00">WTI oversold conditions to ease: Target at $46.00</a>
+                            <a href="https://www.fxstreet.com/analysis/wti-oversold-conditions-to-ease-target-at-4600-201609220849" title="WTI oversold conditions to ease: Target at $46.00">WTI oversold conditions to ease: Target at $46.00</a>
                         </h3>
                         <address class="fxs_contributorBox fxs_contributorBox_small">
                             <div class="fxs_avatar_circleImage_s">
                                 <a href="/author/jason-sen" title="Jason Sen">
-                                    <img class="b-lazy" src="https://editorial.azureedge.net/authors/Jason%20Sen.jpg" alt="Jason Sen" width="35" height="35">
+                                    <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Jason%20Sen.jpg" alt="Jason Sen" width="35" height="35">
                                 </a>
                             </div>
                             <span class="fxs_article_author">
@@ -1011,7 +875,7 @@
             <div fxs_sf_widget="" class="fxs_entryFeatured" fxs_name="highlightedAnalysisSmall">
                 <article class="fxs_entryFeatured_reduced">
                     <div class="fxs_entryFeatured_img">
-                        <a href="http://www.fxstreet.com/analysis/rbnz-also-stands-pat-with-a-dovish-outlook-201609220538" title="RBNZ also stands pat with a dovish outlook"><img class="b-lazy" src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/RBNZ/Bank_of_New_Zealand_2015_Small.jpg" alt="RBNZ also stands pat with a dovish outlook"></a>
+                        <a href="https://www.fxstreet.com/analysis/rbnz-also-stands-pat-with-a-dovish-outlook-201609220538" title="RBNZ also stands pat with a dovish outlook"><img class="lazyload" data-src="https://editorial.azureedge.net/images/Macroeconomics/CentralBanks/RBNZ/Bank_of_New_Zealand_2015_Small.jpg"  alt="RBNZ also stands pat with a dovish outlook"></a>
                     </div>
                     <header>
                         <h3 class="fxs_entryHeadline">
@@ -1020,7 +884,7 @@
                         <address class="fxs_contributorBox fxs_contributorBox_small">
                             <div class="fxs_avatar_circleImage_s">
                                 <a href="/author/tradethenewscom-staff" title="TradeTheNews.com Staff">
-                                    <img class="b-lazy" src="https://editorial.azureedge.net/authors/Companies/TradeTheNews.com.jpg" alt="TradeTheNews.com Staff" width="35" height="35">
+                                    <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Companies/TradeTheNews.com.jpg" alt="TradeTheNews.com Staff" width="35" height="35">
                                 </a>
                             </div>
                             <span class="fxs_article_author">
@@ -1063,12 +927,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/-ftse-set-to-end-the-week-lower-201607291038" title="&#8203;FTSE set to end the week lower">&#8203;FTSE set to end the week lower</a>
+                    <a href="https://www.fxstreet.com/analysis/-ftse-set-to-end-the-week-lower-201607291038" title="&#8203;FTSE set to end the week lower">&#8203;FTSE set to end the week lower</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/David-Cheetham" title="David Cheetham">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/David%20Cheetham.jpg" alt="David Cheetham" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/David%20Cheetham.jpg"  alt="David Cheetham" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -1099,12 +963,12 @@
         <article class="fxs_entryFeatured_med">
             <header>
                 <h3 class="fxs_entryHeadline">
-                    <a href="http://www.fxstreet.com/analysis/oil-continues-its-fall-201607290939" title="Oil continues its fall">Oil continues its fall</a>
+                    <a href="https://www.fxstreet.com/analysis/oil-continues-its-fall-201607290939" title="Oil continues its fall">Oil continues its fall</a>
                 </h3>
                 <address class="fxs_contributorBox fxs_contributorBox_small">
                     <div class="fxs_avatar_circleImage_s">
                         <a href="/author/alpari-team-of-analysts" title="Alpari Team of Analysts">
-                            <img class="b-lazy" src="https://editorial.azureedge.net/authors/Companies/Alpari.jpg" alt="Alpari Team of Analysts" width="35" height="35">
+                            <img class="lazyload" data-src="https://editorial.azureedge.net/authors/Companies/Alpari.jpg"  alt="Alpari Team of Analysts" width="35" height="35">
                         </a>
                     </div>
                     <span class="fxs_article_author">
@@ -1152,7 +1016,7 @@
                 <tr class="fxs_widget_price price_up">
                     <td>
                         <abbr class="fxs_asset_label" title="">
-                            <a href="//www.fxstreet.com/rates-charts/eurusd">EUR/USD</a>
+                            <a href="https:////www.fxstreet.com/rates-charts/eurusd">EUR/USD</a>
                         </abbr>
                     </td>
                     <td>
@@ -1181,7 +1045,7 @@
                 <tr class="fxs_widget_price price_up">
                     <td>
                         <abbr class="fxs_asset_label" title="">
-                            <a href="//www.fxstreet.com/rates-charts/gbpusd">GBP/USD</a>
+                            <a href="https://www.fxstreet.com/rates-charts/gbpusd">GBP/USD</a>
                         </abbr>
                     </td>
                     <td>
@@ -1210,7 +1074,7 @@
                 <tr class="fxs_widget_price price_down">
                     <td>
                         <abbr class="fxs_asset_label" title="">
-                            <a href="//www.fxstreet.com/rates-charts/usdjpy">USD/JPY</a>
+                            <a href="https://www.fxstreet.com/rates-charts/usdjpy">USD/JPY</a>
                         </abbr>
                     </td>
                     <td>
@@ -1239,7 +1103,7 @@
                 <tr class="fxs_widget_price price_down">
                     <td>
                         <abbr class="fxs_asset_label" title="">
-                            <a href="//www.fxstreet.com/rates-charts/usdchf">USD/CHF</a>
+                            <a href="https://www.fxstreet.com/rates-charts/usdchf">USD/CHF</a>
                         </abbr>
                     </td>
                     <td>
@@ -1268,7 +1132,7 @@
                 <tr class="fxs_widget_price price_up">
                     <td>
                         <abbr class="fxs_asset_label" title="">
-                            <a href="//www.fxstreet.com/rates-charts/audusd">AUD/USD</a>
+                            <a href="https://www.fxstreet.com/rates-charts/audusd">AUD/USD</a>
                         </abbr>
                     </td>
                     <td>
@@ -1297,7 +1161,7 @@
                 <tr class="fxs_widget_price price_up">
                     <td>
                         <abbr class="fxs_asset_label" title="">
-                            <a href="//www.fxstreet.com/rates-charts/eurgbp">EUR/GBP</a>
+                            <a href="https://www.fxstreet.com/rates-charts/eurgbp">EUR/GBP</a>
                         </abbr>
                     </td>
                     <td>
@@ -1339,7 +1203,7 @@
     <div class="fxs_col fxs_col_50">
         <div id="Content_C743_Col01" class="sf_colsIn">
 <div>
-    <div><a class="fxs_btn fxs_btn_line fxs_btn_small fxs_fRight" href="http://www.fxstreet.com/rates-charts/rates/">All the rates <i class="fa fa-angle-double-right"></i></a></div>
+    <div><a class="fxs_btn fxs_btn_line fxs_btn_small fxs_fRight" href="https://www.fxstreet.com/rates-charts/rates/">All the rates <i class="fa fa-angle-double-right"></i></a></div>
 </div>
 
         </div>
@@ -1384,7 +1248,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1408,7 +1272,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload"  data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1432,7 +1296,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload"  data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1456,7 +1320,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1480,7 +1344,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1504,7 +1368,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1528,7 +1392,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1552,7 +1416,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1576,7 +1440,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1600,7 +1464,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1624,7 +1488,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1648,7 +1512,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1672,7 +1536,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1696,7 +1560,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="100" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="100" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1720,7 +1584,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="35" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1744,7 +1608,7 @@
                                                     <td>
                                                         <div class="fxs_squareImage_brokers">
                                                                 <a href="/">
-                                                                    <img src="../../img/brokers/ActivTrades-100x35.jpg" alt="NOMBRE DEL BROKER" width="35" height="35">
+                                                                    <img class="lazyload" src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" data-src="https://editorial.azureedge.net/brokers/CMC_Gran_Spreads.png" alt="NOMBRE DEL BROKER" width="35" height="35">
                                                                 </a>
                                                         </div>
                                                     </td>
@@ -1796,7 +1660,7 @@
                                                         <a href="" title="">Soft US payrolls data wont affect this year's rate hike plan</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
+                                                        <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
                                                     </address>
                                                 </article>
                                             </li>
@@ -1806,7 +1670,7 @@
                                                         <a href="" title="">EUR/USD: Greece and EZ deflation keeping the downside favored</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                                        <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
                                                     </address>
                                                 </article>
                                             </li>
@@ -1817,7 +1681,7 @@
                                                         <a href="" title="">New record lows for European sovereign yields</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                        <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
                                                     </address>
                                                 </article>
                                             </li>
@@ -1827,7 +1691,7 @@
                                                         <a href="" title="">Credit Agricole: New rules to limit US corporate tax inversions boost USD European sovereign</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                        <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
                                                     </address>
                                                 </article>
                                             </li>
@@ -1837,7 +1701,7 @@
                                                         <a href="" title="">EUR/USD tests 1.0800 post</a>
                                                     </h3>
                                                     <address class="fxs_entry_metaInfo">
-                                                        <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
+                                                        <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">FXStreet</a></span> | <time pubdate="" datetime="2015-09-12 15:08">Sept 12, 15:08 UTC</time>
                                                     </address>
                                                 </article>
                                             </li>
@@ -2348,7 +2212,7 @@
                             <div class="fxs_row stickem-container">
                                 <div class="fxs_flex_col fxs_flex_ad_col">
                                     <div class="fxs_content_adContainer stickem">
-                                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="margin-bottom:16px;"></iframe>
+                                        <iframe src="https://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="margin-bottom:16px;"></iframe>
                                     </div>
                                 </div>
                                 <div class="fxs_flex_col">
@@ -2446,7 +2310,7 @@
                                             <div class="fxs_entryFeatured">
                                                 <article class="fxs_entryFeatured_med">
                                                     <div class="fxs_entryFeatured_img">
-                                                        <img src="http://i.ytimg.com/vi/rzlC20j4qDk/maxresdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                        <img class="lazyload" data-src="https://i.ytimg.com/vi/rzlC20j4qDk/maxresdefault.jpg" src="http://i.ytimg.com/vi/rzlC20j4qDk/maxresdefault.jpg" width="" height="" alt="Nombre del vídeo">
                                                         <!-- May or may not be premium!!!!! -->
                                                         <span class="fxs_label fxs_label_featured">Premium</span>
                                                         <!-- /May or may not be premium!!!!! -->
@@ -2501,7 +2365,7 @@
                                                                     <a href="" title="">XAU/USD tests 100-DMA, will the rally sustain?</a>
                                                                 </h3>
                                                                 <address class="fxs_entry_metaInfo">
-                                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Kathleen Brooks</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
+                                                                    <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">Kathleen Brooks</a></span> | <time pubdate="" datetime="2015-09-14 09:30">10 <abbr title="Minutes">min</abbr> ago</time>
                                                                 </address>
                                                             </article>
                                                         </li>
@@ -2511,7 +2375,7 @@
                                                                     <a href="" title="">China concerns gather pace</a>
                                                                 </h3>
                                                                 <address class="fxs_entry_metaInfo">
-                                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Ilya Spivak</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
+                                                                    <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">Ilya Spivak</a></span> | <time pubdate="" datetime="2015-09-14 09:30">50 <abbr title="Minutes">min</abbr> ago</time>
                                                                 </address>
                                                             </article>
                                                         </li>
@@ -2522,7 +2386,7 @@
                                                                     <a href="" title="">New record lows for European sovereign yields</a>
                                                                 </h3>
                                                                 <address class="fxs_entry_metaInfo">
-                                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                                    <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">Valeria Bednarik</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
                                                                 </address>
                                                             </article>
                                                         </li>
@@ -2532,7 +2396,7 @@
                                                                     <a href="" title="">Technical Outlook for Majors 21/08/2015</a>
                                                                 </h3>
                                                                 <address class="fxs_entry_metaInfo">
-                                                                    <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Nenad Kerkez</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
+                                                                    <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">Nenad Kerkez</a></span> | <time pubdate="" datetime="2015-09-14 09:25">09:25 UTC</time>
                                                                 </address>
                                                             </article>
                                                         </li>
@@ -2639,7 +2503,7 @@
 
                                     <div class="fxs_content_adContainer stickem">
 
-                                        <iframe src="http://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto;"></iframe>
+                                        <iframe src="https://octaengine.com/b/162/" framespacing="0" frameborder="no" scrolling="no" width="300" height="250" allowtransparency="true" style="display: block; margin-left: auto; margin-right: auto;"></iframe>
 
                                     </div>
 
@@ -2674,8 +2538,8 @@
                             </div>
 
                             <div class="fxs_leaderboard">
-                                <a href="http://path-to-sponsor.html" target="_blank">
-                                    <img src="../../img/ad_C.jpg">
+                                <a href="https://path-to-sponsor.html" target="_blank">
+                                    <img class="lazyload" data-src="https://staticcontentqa.blob.core.windows.net/website/img/ad_C.jpg" src="https://staticcontentqa.blob.core.windows.net/website/img/ad_C.jpg">
                                 </a>
                             </div>
 
@@ -2793,7 +2657,7 @@
                                                         <!-- Author's image -->
                                                         <div class="fxs_avatar_circleImage_s">
                                                             <a href="path/to/author" title="NOMBRE DEL AUTOR">
-                                                                <img src="http://mediaserver.fxstreet.com/images/kathleen-books-author-photoMedium.jpeg" alt="NOMBRE DEL AUTOR" width="35" height="35">
+                                                                <img src="https://mediaserver.fxstreet.com/images/kathleen-books-author-photoMedium.jpeg" alt="NOMBRE DEL AUTOR" width="35" height="35">
                                                             </a>
                                                         </div>
                                                         <!-- /Author's image -->
@@ -2807,7 +2671,7 @@
 
                                                             <!-- Event author -->
                                                             <address class="fxs_entry_metaInfo">
-                                                                <span class="fxs_article_author">By <a href="http://www.myspace.com/timbo">Kathleen Brooks</a></span>
+                                                                <span class="fxs_article_author">By <a href="https://www.myspace.com/timbo">Kathleen Brooks</a></span>
                                                             </address>
                                                             <!-- /Event author -->
                                                         </div>
@@ -2939,7 +2803,7 @@
                                         <div class="fxs_entryFeatured">
                                             <article class="fxs_entryFeatured_reduced">
                                                 <div class="fxs_entryFeatured_img">
-                                                    <img src="http://www.luckyoptions.ru/wp-content/uploads/2014/06/Raznitsa-mezhdu-binarnimi-opcionami-i-obichnimi-opcionami.jpg" width="" height="" alt="Nombre del vídeo">
+                                                    <img src="https://www.luckyoptions.ru/wp-content/uploads/2014/06/Raznitsa-mezhdu-binarnimi-opcionami-i-obichnimi-opcionami.jpg" width="" height="" alt="Nombre del vídeo">
                                                     <span class="fxs_miniLabel_video">
                                                         <i class="fa fa-play"></i> <span>42:20</span>
                                                     </span>
@@ -3018,7 +2882,7 @@
                                         <div class="fxs_entryFeatured">
                                             <article class="fxs_entryFeatured_reduced">
                                                 <div class="fxs_entryFeatured_img">
-                                                    <img src="http://i.ytimg.com/vi/rzlC20j4qDk/maxresdefault.jpg" width="" height="" alt="Nombre del vídeo">
+                                                    <img src="https://i.ytimg.com/vi/rzlC20j4qDk/maxresdefault.jpg" width="" height="" alt="Nombre del vídeo">
                                                     <!-- May or may not be premium!!!!! -->
                                                     <span class="fxs_label fxs_label_featured">Premium</span>
                                                     <!-- /May or may not be premium!!!!! -->
@@ -3241,7 +3105,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/XAUUSD">XAU/USD</a>
+                                                            <a href="https://localhost:60876/rates-charts/XAUUSD">XAU/USD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3271,7 +3135,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/XAGUSD">XAG/USD</a>
+                                                            <a href="https://localhost:60876/rates-charts/XAGUSD">XAG/USD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3301,7 +3165,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/Copper">Copper</a>
+                                                            <a href="https://localhost:60876/rates-charts/Copper">Copper</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3331,7 +3195,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/WTI">WTI</a>
+                                                            <a href="https://localhost:60876/rates-charts/WTI">WTI</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3361,7 +3225,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/BrentOil">Brent Oil</a>
+                                                            <a href="https://localhost:60876/rates-charts/BrentOil">Brent Oil</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3391,7 +3255,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/DollarIndexSpot">Dollar Index Spot</a>
+                                                            <a href="https://localhost:60876/rates-charts/DollarIndexSpot">Dollar Index Spot</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3421,7 +3285,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/DBBrent">DB Brent</a>
+                                                            <a href="https://localhost:60876/rates-charts/DBBrent">DB Brent</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3464,7 +3328,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/EURGBP">EUR/GBP</a>
+                                                            <a href="https://localhost:60876/rates-charts/EURGBP">EUR/GBP</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3494,7 +3358,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/USDSEK">USD/SEK</a>
+                                                            <a href="https://localhost:60876/rates-charts/USDSEK">USD/SEK</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3524,7 +3388,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/EURNOK">EUR/NOK</a>
+                                                            <a href="https://localhost:60876/rates-charts/EURNOK">EUR/NOK</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3554,7 +3418,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/USDTRY">USD/TRY</a>
+                                                            <a href="https://localhost:60876/rates-charts/USDTRY">USD/TRY</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3584,7 +3448,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/USDRUB">USD/RUB</a>
+                                                            <a href="https://localhost:60876/rates-charts/USDRUB">USD/RUB</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3614,7 +3478,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/EURJPY">EUR/JPY</a>
+                                                            <a href="https://localhost:60876/rates-charts/EURJPY">EUR/JPY</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3644,7 +3508,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/EURAUD">EUR/AUD</a>
+                                                            <a href="https://localhost:60876/rates-charts/EURAUD">EUR/AUD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3674,7 +3538,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/EURCAD">EUR/CAD</a>
+                                                            <a href="https://localhost:60876/rates-charts/EURCAD">EUR/CAD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3704,7 +3568,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/EURCHF">EUR/CHF</a>
+                                                            <a href="https://localhost:60876/rates-charts/EURCHF">EUR/CHF</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3734,7 +3598,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/NZDEUR">NZD/EUR</a>
+                                                            <a href="https://localhost:60876/rates-charts/NZDEUR">NZD/EUR</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3764,7 +3628,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/GBPJPY">GBP/JPY</a>
+                                                            <a href="https://localhost:60876/rates-charts/GBPJPY">GBP/JPY</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3794,7 +3658,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/GBPAUD">GBP/AUD</a>
+                                                            <a href="https://localhost:60876/rates-charts/GBPAUD">GBP/AUD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3824,7 +3688,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_down">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/GBPCAD">GBP/CAD</a>
+                                                            <a href="https://localhost:60876/rates-charts/GBPCAD">GBP/CAD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3854,7 +3718,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/GBPCHF">GBP/CHF</a>
+                                                            <a href="https://localhost:60876/rates-charts/GBPCHF">GBP/CHF</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3884,7 +3748,7 @@
                                                 <tr onclick="todo" class="fxs_widget_price price_up">
                                                     <td>
                                                         <abbr class="fxs_asset_label" title="">
-                                                            <a href="http://localhost:60876/rates-charts/GBPNZD">GBP/NZD</a>
+                                                            <a href="https://localhost:60876/rates-charts/GBPNZD">GBP/NZD</a>
                                                         </abbr>
                                                     </td>
                                                     <td>
@@ -3991,7 +3855,7 @@
                                             </div>
                                         </div>
                                         <figure class="fxs_sexy_bannerImg">
-                                            <img src="http://staticconent.blob.core.windows.net/testimages22/forex_Large.jpg" alt="fxstreet" width="800" height="450">
+                                            <img class="lazyload" data-src="https://staticconent.blob.core.windows.net/testimages22/forex_Large.jpg" src="https://staticconent.blob.core.windows.net/testimages22/forex_Large.jpg" alt="fxstreet" width="800" height="450">
                                         </figure>
                                     </article>
                                 </div>
@@ -4307,770 +4171,17 @@
         </div>
         <!-- /The wrapper -->
         
-        <script src="../../js/jquery-1.11.3.min.js"></script>
+        <script src="https://staticcontent.azureedge.net/website/js/jquery-1.11.3.min.js"></script>
+        <script src="https://staticcontentqa.blob.core.windows.net/website/js/jquery.typeahead.min.js"></script>
         <!-- Bootstrap -->
-        <script src="../../js/bootstrap.min.js"></script>
+        <script src="https://staticcontent.azureedge.net/website/js/bootstrap.min.js"></script>
 
-        <script src="../../js/classie.js"></script>
-        <script src="../../js/jquery.typeahead.min.js"></script>
-        <script src="../../js/jquery.stickem.js"></script>
+        <script src="https://staticcontent.azureedge.net/website/js/classie.min.js"></script>
+        <script src="https://staticcontentqa.blob.core.windows.net/website/js/fixto.min.js"></script>
         <!-- Countdown plugin -->
-        <script src="../../js/jquery.countdown.min.js"></script>
-        <script src="../../js/blazy.min.js"></script>
-        <script src="../../js/site.js"></script>
+        <script src="https://staticcontentqa.blob.core.windows.net/website/js/site.js"></script>
 
 
-        <!-- javascript widget -->
-        <script src="../../../widgets/core/js/c3.min.js"></script>
-        <script src="../../../widgets/core/js/d3.min.js"></script>
-        <!-- javascript widget mini -->
-
-        <!--<script src="../../js/fixto.min.js"></script>-->
-
-        <script type="text/javascript">
-             // otro ejemplo (Premium-user logged premium)
-            $('#clock_3').countdown('2017/11/30 13:00:30')
-            .on('update.countdown', function(event) {
-                var $this = $(this).html(event.strftime(''
-                + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">%H :</span>hours</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">%M :</span>min</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">%S</span>sec</span>'));
-            })
-            .on('finish.countdown', function(event) {
-                $(this).html(''
-                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>days</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>hours</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>min</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">00</span>sec</span>')
-                // .parent().addClass('disabled');
-                .closest('.fxs_live_event_module').addClass( "on_air" );
-            });
-        </script>
-
-        <script>
-            // optimization images load time
-            var bLazy = new Blazy({
-                breakpoints: [{
-                width: 420 // Max-width
-                  , src: 'data-src-small'
-            }]
-              , success: function(element){
-                setTimeout(function(){
-                // We want to remove the loader gif now.
-                // First we find the parent container
-                // then we remove the "loading" class which holds the loader image
-                var parent = element.parentNode;
-                parent.className = parent.className.replace(/\bloading\b/,'');
-                }, 200);
-                }
-           });
-
-            // simulate broker detail link
-
-            function todo(){
-                $(location).attr('href', 'http://www.sitefinity.com');
-            }
-    
-            $(function () {
-              $('[data-toggle="tooltip"]').tooltip()
-            });
-
-            ////////////////////////////////
-            //// Stick em /////////////////
-            function checkSticky() {
-                $('.fxs_detail').stickem({
-                   containerScroll: $("#fxs_content"),
-                   offset: 65
-                });
-            }
-            setTimeout(checkSticky, 1500);
-
-            // Live event example
-            $('#clock_6').countdown('2016/01/13 09:16:00')
-            .on('update.countdown', function(event) {
-                var $this = $(this).html(event.strftime(''
-                + '<span><span class="fxs_widget_custom_data_lable">%d :</span>days</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">%H :</span>hours</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">%M :</span>min</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">%S</span>sec</span>'));
-            })
-            .on('finish.countdown', function(event) {
-                $(this).html(''
-                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>days</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>hours</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">00 :</span>min</span>'
-                + '<span><span class="fxs_widget_custom_data_lable">00</span>sec</span>')
-                // .parent().addClass('disabled');
-                .closest('.fxs_live_event_module').addClass( "on_air" );
-            });
-
-
-            // Omar A. 'nice' code (mixed with Omar P. 'chapuza' code)
-
-            var forecastProgressBarObj = function () {
-                var id = "";
-                var chart = null;
-                var container = null;
-                var colunms = null;
-
-                var setVars = function (initJson) {
-                    id = initJson.Id;
-                    colunms = initJson.Colunms;
-                    container = $('#' + id);
-                };
-
-                var initChart = function () {
-                    chart = c3.generate({
-                        bindto: '#' + id,
-                        data: {
-                            columns: [['Bullish', 0],['Bearish', 0],['Sideways', 0]],
-                            type: 'bar',
-                            groups: [
-                                ['Bullish', 'Bearish', 'Sideways']
-                            ],
-                            order: 'null',
-                            colors: {
-                                Bullish: '#338473',
-                                Bearish: '#D25746',
-                                Sideways: '#8b8c91'
-                            }
-                        },
-                        padding: { right: 0 },
-                        axis: {
-                            y: { show: false },
-                            x: { show: false },
-                            rotated: true
-                        },
-                        bar: { width: 6 },
-                        size: {
-                            height: 35,
-                            width: 90
-                        },
-                        legend: { show: false },
-                        tooltip: {
-                            format: {
-                                title: function (d) { return '1 Week'; },
-                                value: function (value, ratio, id) {
-                                    var format = id === 'data1' ? d3.format(',') : d3.format('%');
-                                    return format(value);
-                                }
-                            }
-                        }
-                    });
-                };
-
-                var delayLoad = function () {
-                    setTimeout(function () {
-                        chart.resize({
-                            height: 35,
-                            width: undefined
-                        });
-                    }, 250);
-                    setTimeout(function () {
-                        chart.load({
-                            columns: colunms
-                        });
-                    }, 250);
-                };
-
-                var print = function () {
-                    initChart();
-                    delayLoad();
-                };
-
-                this.ActiveChange = function() {
-                    if (container.closest(".forecast_timeframe").hasClass("active")) {
-                        chart.flush();
-                    }
-                };
-
-                this.Init = function (initJson) {
-                    setVars(initJson);
-                    print();
-                };
-            };
-
-            var forecastWidgetObj = function () {
-
-                var charts = [];
-
-                var manageRenderedHtml = function () {
-                    addTabOnClick();
-                };
-
-                var notifyChartsActiveChange = function () {
-                    $.each(charts, function(i, chart) {
-                        chart.ActiveChange();
-                    });
-                };
-
-                var addTabOnClick = function () {
-
-                    // Default widget
-                    $('#tab_1_default').on('click', function () {
-                        $('.avg_1w').addClass('active');
-                        $('#tab_2_default, #tab_3_default').parent().removeClass('active');
-                        $(this).parent().addClass('active');
-                        $('.avg_1m, .avg_1q').removeClass('active');
-                        notifyChartsActiveChange();
-                    });
-                    $('#tab_2_default').on('click', function () {
-                        $('.avg_1m').addClass('active');
-                        $('#tab_1_default, #tab_3_default').parent().removeClass('active');
-                        $(this).parent().addClass('active');
-                        $('.avg_1w, .avg_1q').removeClass('active');
-                        notifyChartsActiveChange();
-                    });
-                    $('#tab_3_default').on('click', function () {
-                        $('.avg_1q').addClass('active');
-                        $('#tab_1_default, #tab_2_default').parent().removeClass('active');
-                        $(this).parent().addClass('active');
-                        $('.avg_1w, .avg_1m').removeClass('active');
-                        notifyChartsActiveChange();
-                    });
-                };
-
-                //#region Charts
-
-                var printCharts = function () {
-                    // Default Widget
-                    instanciateProgressBar("forecast_bar_stacked_1w_default", [['Bullish', 0.25],['Bearish', 0.5],['Sideways', 0.25]]);
-                    instanciateProgressBar("forecast_bar_stacked_1m_default", [['Bullish', 0.8], ['Bearish', 0.1], ['Sideways', 0.1]]);
-                    instanciateProgressBar("forecast_bar_stacked_1q_default", [['Bullish', 0.3], ['Bearish', 0.3], ['Sideways', 0.4]]);
-
-                    instanciateProgressBar("forecast_bar_stacked_1w_2_default", [['Bullish', 0.25],['Bearish', 0.7],['Sideways', 0.05]]);
-                    instanciateProgressBar("forecast_bar_stacked_1m_2_default", [['Bullish', 0.6], ['Bearish', 0.3], ['Sideways', 0.1]]);
-                    instanciateProgressBar("forecast_bar_stacked_1q_2_default", [['Bullish', 0.2], ['Bearish', 0.3], ['Sideways', 0.5]]);
-                };
-
-                var instanciateProgressBar = function (widgetId, colunms) {
-                    var initJsonProgressBar = {
-                        Id: widgetId,
-                        Colunms: colunms
-                    };
-
-                    var ctpProgressBar = new forecastProgressBarObj();
-                    ctpProgressBar.Init(initJsonProgressBar);
-
-                    charts.push(ctpProgressBar);
-                };
-
-                //#endregion Charts
-
-                this.Init = function () {
-                    manageRenderedHtml();
-                    printCharts();
-                };
-            };
-
-            var forecast = new forecastWidgetObj();
-            forecast.Init();
-
-        </script>
-
-        <script type="text/javascript" src="http://az687397.vo.msecnd.net/babel-fxstreet/html5chart/TTChart.js">
-        </script>
-
-        <script>
-        
-
-            var d = Date.now();
-
-            var strSymbolname = "tts-3212164";
-            var strLabelname = "EUR/USD";
-            var strLocale = "en";
-
-            //symbolname, labelname, daterange & locale definition through query string     
-            var strquery = document.URL.split('?')[1];
-            if (strquery)
-                strquery = strquery.split('&');
-            for (var y in strquery) {
-                var z = strquery[y].toString().split('=');
-                if (z.length == 2) {
-                    if (z[0].toLowerCase() == "lang") {
-                        strLocale = z[1];
-                    }
-                    else if (z[0].toLowerCase() == "symbolname") {
-                        strSymbolname = z[1];
-                    }
-                    else if (z[0].toLowerCase() == "labelname") {
-                        strLabelname = z[1];
-                    }
-                }
-            }
-
-
-               
-
-            var chart_1 = TTChart.create({ id: "chartDiv_1" });
-
-            chart_1.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv_1'
-            });
-
-            chart_1.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart_1.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart_1.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart_1.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart_1.resize();
-
-            chart_1.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart_1.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart.symbols.addIndicator(objValue);
-                    chart.display();
-                }
-            }
-
-
-            var chart_2 = TTChart.create({ id: "chartDiv_2" });
-
-            chart_2.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv_2'
-            });
-
-            chart_2.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart_2.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart_2.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart_2.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart_2.resize();
-
-            chart_2.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart_2.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart.symbols.addIndicator(objValue);
-                    chart.display();
-                }
-            }
-
-            var chart_3 = TTChart.create({ id: "chartDiv_3" });
-
-            chart_3.setOptions({
-                "global.locale": "en",
-                "data.sourceUrl": "http://www.fxstreet.com/dataproducer/proxy.aspx",
-                "data.period": 'INTRADAY 60',
-                "data.numberOfBars": 1000,           
-                // grid
-                "grid.show":true,
-                // custom graph
-                "main.chartType": 'mountain',
-                // colors values down
-                //"main.lineColor": "rgba(51, 132, 115, 1)",
-                //"main.areaColors": ["rgba(51, 132, 115, 1)", "rgba(51, 132, 115, 0)"],
-                // colors value up
-                "main.lineColor": "rgba(206, 71, 53, 1)",
-                "main.areaColors": ["rgba(206, 71, 53, 1)", "rgba(206, 71, 53, 0)"],
-
-                // custom tootlbars and history
-                "volume.show": false,
-                "history.show": false,
-                "history.sliderBorderColor": "#fff",
-                "dataInfo.show": false,
-                "toolbar.top.show": false,
-                "toolbar.left.show": false,
-                "toolbar.top.items": ["file", "symbols", "periods", "dateRange", "chartType", "comparisons", , "relativeScale", "logarithmicScale", , ["volume", "history", "dataInfo", "showMinMax"], "last", "crosshair", "crosshairlast", , "indicators", "grid", , 'fullscreen', , 'zoomIn', 'zoomOut', , 'print', 'exportPng', 'popup', 'zeroPointTool', 'reload'],
-                "toolbar.left.items": ["dt_hand", ["dt_line", "dt_horizLine", "dt_trendChannel"], ["dt_rectangle", "dt_circle"], ["dt_fibFan", "dt_fibVertRet", "dt_fibRet", "dt_fibArc"], "dt_andrewsPitch", ["dt_regressionLine", "dt_regressionChannel"], ["dt_arrow_up", "dt_arrow_down"], "dt_text", 'dt_delete', 'dt_drawRepeatedly'],
-                "contextMenu.show": false,
-                "data.usePush": false,
-                // custom panel
-                "panel.background.color": "#F7F7F7",
-                "global.verticalAxisZoom": true,
-                "data.pushServerUrl": 'http://push.ttweb.net/http_push/',
-                "data.maxAdditionalBars": 1000,
-                'data.dynamicHistoryLoading': true,
-                'zoom.dateRange': '1d',
-                'dialogs.limitingElementId': 'chartDiv_3'
-            });
-
-            chart_3.setOption("toolbar.symbols", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart_3.setOption("toolbar.comparisons", [['*|search|*', ''],
-                ['EUR/USD', 'tts-3212164'],
-                ['USD/JPY', 'tts-3212155'],
-                ['GBP/USD', 'tts-3212166'],
-                ['USD/CHF', 'tts-3212167'],
-                ['USD/CAD', 'tts-3212172'],
-                ['NZD/USD', 'tts-3212173'],
-                ['AUD/USD', 'tts-3212322'],
-                ['USD/HKD', 'tts-3212406'],
-                ['USD/SGD', 'tts-3215241'],
-                ['EUR/AUD', 'tts-3212169'],
-                ['EUR/CHF', 'tts-3212215'],
-                ['EUR/JPY', 'tts-3212165'],
-                ['EUR/GBP', 'tts-3212168'],
-                ['GBP/CHF', 'tts-3212158'],
-                ['GBP/JPY', 'tts-3212160'],
-                ['CAD/JPY', 'tts-3212163'],
-                ['CHF/JPY', 'tts-3212200'],
-                ['NZD/JPY', 'tts-3212268'],
-                ['AUD/CAD', 'tts-3212182'],
-                ['AUD/JPY', 'tts-3212171'],
-                ['AUD/NZD', 'tts-3212259'],
-                ['AUD/SGD', 'tts-3212321'],
-                ['AUD/CHF', 'tts-3212170'],
-                ['AUD/EUR', 'tts-3212510'],
-                //['XAU/USD', 'tts-396017'],
-                //['XAG/USD', 'tts-395119'],
-                ['Dow Jones', 'tts-3212165'],
-                ['Nasdaq 100', 'tts-751307'],
-                ['SP100', 'tts-898976'],
-                ['SP500', 'tts-898974'],
-                //['Nikkei', 'tts-955000'],
-                ['DAX', 'tts-514562'],
-                ['TecDAX', 'tts-457683'],
-                //['SMI', 'tts-675717'],
-                ['FTSE 100', 'tts-402482'],            
-                ['Nikkei 225', 'tts-18922968'],
-                ['Gold', 'tts-3230110']]);
-
-            chart_3.setOption("toolbar.dateRanges", [
-                ['*|records|*', [['50', "data.numberOfBars:50,data.dateRange:,zoom.dateRange:"],
-                    ['100', "data.numberOfBars:100,data.dateRange:,zoom.dateRange:"],
-                    ['200', "data.numberOfBars:200,data.dateRange:,zoom.dateRange:"],
-                    ['510', "data.numberOfBars:510,data.dateRange:,zoom.dateRange:"],
-                    ['1000', "data.numberOfBars:1000,data.dateRange:,zoom.dateRange:"],
-                    ['5000', "data.numberOfBars:5000,data.dateRange:,zoom.dateRange:"]
-                ]],
-                ['*|Day|*', "data.dateRange:1d,data.period:INTRADAY 15"],
-                ['*|Month|*', "data.dateRange:1m,data.period:DAILY"],
-                ['3 *|Months|*', "data.dateRange:3m,data.period:DAILY"],
-                ['6 *|Months|*', "data.dateRange:6m,data.period:DAILY"],
-                ['1 *|Year|*', "data.dateRange:1Y,data.period:DAILY"],
-                ['2 *|Years|*', "data.dateRange:2Y,data.period:DAILY"],
-                ['3 *|Years|*', "data.dateRange:3Y,data.period:DAILY"],
-                ['5 *|Years|*', "data.dateRange:5Y,data.period:DAILY"],
-                ['10 *|Years|*', "data.dateRange:10Y,data.period:DAILY"]
-            ]);
-
-            chart_3.symbols.setMainSymbol(strSymbolname, strLabelname);
-
-            chart_3.resize();
-
-            chart_3.setOption("toolbar.file", [['*|menu_load|*', 'load'],
-                //['*|Quick Save|*', 'quickSave'],
-                ['*|menu_save|*', 'save'],
-                //['*|menu_quick_load|*', 'quickLoad'],
-                ['*|Load Template|*', 'loadTemplate'],
-                ['*|Save Template|*', 'saveTemplate'],
-                ['*|Save Default|*', 'saveDefault']
-            ]);
-            chart_3.display();
-            function addIndicator(objValue) {
-                if (objValue != "") {
-                    chart.symbols.addIndicator(objValue);
-                    chart.display();
-                }
-            }
-        </script> 
+        <script src="http://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>
     </body>
 </html>
