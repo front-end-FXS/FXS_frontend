@@ -2622,8 +2622,8 @@ width:calc(100% - 320px);
 .fxs_filterResults_bg {
   background-color: #ffffff;
 }
-.fxs_price_filter .fxs_col_50 {
-  padding: 0;
+.fxs_price_filter {
+  position: relative;
 }
 .fxs_price_filter .fxs_price_filter_header {
   padding: 0!important;
@@ -4714,8 +4714,8 @@ height:calc(100% - 45px);
 }
 @media (min-width: 680px) {
   .fxs_listView_space,
-  .fxs_listViewRail .fxs_dateIndicator_divider,
-  .fxs_listViewRail .fxs_feedbackLoading_msg,
+  .fxs_dateIndicator_divider,
+  .fxs_feedbackLoading_msg,
   .fxs_listView_blockWrapper,
   .fxs_listViewAlert,
   .fxs_filter_rail_container,
@@ -4727,8 +4727,8 @@ height:calc(100% - 45px);
 }
 @media (min-width: 1150px) {
   .fxs_listView_space,
-  .fxs_listViewRail .fxs_dateIndicator_divider,
-  .fxs_listViewRail .fxs_feedbackLoading_msg,
+  .fxs_dateIndicator_divider,
+  .fxs_feedbackLoading_msg,
   .fxs_listView_blockWrapper,
   .fxs_listViewAlert,
   .fxs_filter_rail_container,
@@ -4737,6 +4737,16 @@ height:calc(100% - 45px);
   .fxs_listView_filterAlert {
     width: 320px;
   }
+}
+.fxs_listViewRail_price_filter {
+  position: absolute;
+  width: 100%;
+}
+.fxs_modal_page  {
+  height: 100%;
+}
+.fxs_listViewRail_modified {
+  top: 70px;
 }
 .fxs_listViewRail {
   position: absolute;
@@ -4755,29 +4765,6 @@ height:calc(100% - 35px - 45px);
   .fxs_listViewRail:hover {
     overflow-y: scroll;
   }
-}
-.fxs_listViewRail.fxs_listViewRail_price_filter {
-  top: auto;
-}
-.fxs_listViewRail.fxs_listViewRail_price_filter.fxs_filter_default {
-  -lh-property: 0;
-width:-webkit-calc(100% - 15px);
-width:-moz-calc(100% - 15px);
-width:calc(100% - 15px);
-;
-}
-.fxs_listViewRail.fxs_listViewRail_price_filter.fxs_filter_big {
-  -lh-property: 0;
-width:-webkit-calc(100% - 15px);
-width:-moz-calc(100% - 15px);
-width:calc(100% - 15px);
-;
-}
-.fxs_modal_page .fxs_listViewRail {
-  height: 100%;
-}
-.fxs_listViewRail.fxs_listViewRail_modified {
-  top: 70px;
 }
 .fxs_listview_subnav,
 .fxs_price_filter .fxs_price_filter_header {
