@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Widget Heatmap - FXStreet</title>
+        <title>Widget Newsletter - FXStreet</title>
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="../../../css/fxs_screen.min.css">
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -232,6 +232,28 @@
                                                 <input id="EXAMPLEInputName" type="email" class="fxs_textInput fxs_newsletter_email" placeholder="Your Email address" />
                                                 <button type="submit" class="fxs_btn fxs_btn_cta">Subscribe</button>
                                             </div>
+
+                                            <!-- subscribe ok! message -->
+                                            <div class="fxs_contextual_alert fxs_alert_success alert alert-dismissible fade in" role="alert">
+                                                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                                                  <i class="fa fa-close"></i>
+                                                  <span class="fxs_skip">Close alert</span>
+                                                </button>
+                                                <span class="fxs_alertLabel">Congrats!</span>
+                                                <p class="fxs_alertText">Thank you for subscribing to our list!</p>
+                                            </div>
+                                            <!-- / subscribe ok! message -->
+
+                                            <!-- subscribe error! message -->
+                                            <div class="fxs_contextual_alert fxs_alert_error alert alert-dismissible fade in" role="alert">
+                                                <button type="button" class="fxs_close close" data-dismiss="alert" aria-label="Close">
+                                                  <i class="fa fa-close"></i>
+                                                  <span class="fxs_skip">Close alert</span>
+                                                </button>
+                                                <span class="fxs_alertLabel">Error!</span>
+                                                <p class="fxs_alertText">The email address you entered is not valid! Try again!</p>
+                                            </div>
+                                            <!-- subscribe error! message -->
                                         </form>
                                         <!-- /Subscribe Email -->
                                     </div>
