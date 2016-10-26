@@ -1,0 +1,736 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>FXStreet - The Forex Market</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://staticcontent.azureedge.net/website/css/fxs_screen.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+        <!-- ATTENTION: this must be add in header -->
+        <!-- all images must be allocated in the root of the site -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <meta name="msapplication-TileImage" content="../mstile-144x144.png">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <!--<link rel="apple-touch-icon" sizes="76x76" href="../touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../touch-icon-ipad-retina.png">
+        <!-- /this must be add in header -->
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style type="text/css">
+            .fxs_wallpaper_wrap img{
+                display: block!important,
+            }
+        </style>
+    </head>
+    <body class="cbp-spmenu-push">
+
+        <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
+        
+        <header class="fxs_header">
+            <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+                <i class="fa fa-bars"></i>
+                <span class="fxs_skip">Show navigation</span>
+            </button>
+            <a class="fxs_logo" href="../home/home-example-full.html" title="FXStreet">
+                FXStreet - The forex market
+            </a>
+            <nav class="fxs_nav_menu" role="navigation">
+                <ul>
+                    <li class="active"><a href="" title="">Home</a></li>
+                    <li><a href="../rates-and-charts/rates-charts-home.html" title="">Rates & Charts</a></li>
+                    <li><a href="../news-components/news-sponsor-roadblock-slide.html" title="">News</a></li>
+                    <li><a href="../analysis-components/analysis-components-sizes-roadblock.html" title="">Analysis</a></li>
+                    <li><a href="" title="">Economic Calendar</a></li>
+                    <li><a href="../live-video/live-video-home-example.html" title="">Live Video</a></li>
+                    <li><a href="" title="">Education</a></li>
+                    <li><a href="../brokers/brokers-home.html" title="">Find a Broker</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social & RSS links -->
+            <div class="fxs_socialLinks_nav">
+                <ul class="fxs_shareOptions_boxed">
+                    <li class="fxs_site_clock">
+                        <a href="#" title="change timezone" class="fxs_timezone_btn_navbar" id="showTimezoneClock">
+                            <span class="fxs_event_time">
+                                <i class="fa fa-clock-o"></i> 
+                                <time datetime="2015-12-01 12:44:00">12:44:29 UTC</time>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /Social & RSS links -->
+
+            <button type="button" id="showRightPush" class="fxs_show_usermenu">
+                <i class="fa fa-user"></i>
+                <span class="fxs_skip">User Settings</span>
+            </button>
+        </header>
+
+        <!-- The wrapper -->
+        <div class="fxs_wrapper fxs_content_wide">
+
+            <!-- Sidebar left nav -->
+            <div class="fxs_pageSidebar fxs_sidebar_nav" id="cbp-spmenu-s1">
+                <!-- Main-nav -->
+                <nav class="fxs_nav_menu" role="navigation">
+                    <ul>
+                        <li class="active"><a href="" title="">Home</a></li>
+                        <li><a href="../rates-and-charts/rates-charts-home.html" title="">Rates & Charts</a></li>
+                        <li><a href="../news-components/news-sponsor-roadblock-slide.html" title="">News</a></li>
+                        <li><a href="../analysis-components/analysis-components-sizes-roadblock.html" title="">Analysis</a></li>
+                        <li><a href="" title="">Economic Calendar</a></li>
+                        <li><a href="../live-video/live-video-home-example.html" title="">Live Video</a></li>
+                        <li><a href="" title="">Education</a></li>
+                        <li><a href="../brokers/brokers-home.html" title="">Find a Broker</a></li>
+                    </ul>
+                </nav>
+                <!-- /Main-nav -->
+
+                <!-- About -->
+                <ul class="fxs_items_list_nav">
+                    <li class="fxs_menuList_header">About</li>
+                    <li><a href="" title="">About fxstreet</a></li>
+                    <li><a href="" title="">Advertise with us</a></li>
+                </ul>
+                <!-- terms and conditions -->
+                <ul class="fxs_items_list_nav">
+                    <li><a href="" title="">Terms and conditions</a></li>
+                    <li><a href="" title="">Privacy policy</a></li>
+                    <li><a href="" title="">Contact us</a></li>
+                    <li><a href="" title="">Site map</a></li>
+                </ul>
+                <!-- /Complementary links -->
+                
+                <!-- Social Media links widget -->
+                <div class="fxs_socialLinks_nav">
+                    <ul class="fxs_shareOptions_boxed">
+                        <li class="fxs_socialMedia_item">
+                            <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://about.fxstreet.com/blog/" class="fxs_btn_icon" target="_blank" title="FXStreet Blog"><i class="fa fa-commenting-o"></i><span class="fxs_skip">FXStreet Blog</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.youtube.com/user/fxstreetcom/" class="fxs_btn_icon" target="_blank" title="Youtube channel"><i class="fa fa-youtube-play"></i><span class="fxs_skip">Youtube channel</span></a>
+                        </li>
+                        <li class="fxs_socialMedia_item">
+                            <a href="https://www.linkedin.com/company/fxstreet" class="fxs_btn_icon" target="_blank" title="LinkedIn page"><i class="fa fa-linkedin"></i><span class="fxs_skip">LinkedIn page</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Social Media links widget -->
+                
+                <!-- lang-edition -->
+                <div class="fxs_btn_group fxs_btn_block fxs_sidebar_language">
+                    <button type="button" class="fxs_btn fxs_lang_btn fxs_btn_block fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                    
+                    <ul class="fxs_dropdownList dropup">
+                        <li class="fxs_dropdownHeader">Other sites</li>
+                        <li><a href="#">体中文</a></li>
+                        <li><a href="#">繁體中文</a></li>
+                        <li><a href="#">Русский</a></li>
+                        <li><a href="#">Indonesia</a></li>
+                        <li><a href="#">العربية</a></li>
+                        <li><a href="#">Italiano</a></li>
+                        <li><a href="#">Português</a></li>
+                        <li><a href="#">Magyar</a></li>
+                        <li><a href="#">Türkçe</a></li>
+                        <li><a href="#">Tiếng Việt</a></li>
+                        <li><a href="#">한국어</a></li>
+                        <li class="fxs_divider_third">&nbsp;</li>
+                        <li class="fxs_dropdownHeader">Edition</li>
+                        <li><a href="#">Yсский</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Français</a></li>
+                    </ul>
+                </div>
+                <!-- /lang-edition -->
+            </div>
+            <!-- /Sidebar left -->
+
+           
+
+            <div class="fxs_content" id="fxs_content">
+
+             <!-- Topics subnav -->
+            <nav class="fxs_content_subnav">
+                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All News</a>
+                <div class="fxs_topics_nav fxs_swipeContent_slider">
+                    <h1 class="fxs_label">Popular on FXStreet</h1>
+                    <ul class="fxs_subnavInlined_list">
+                        <li><a href="#" class="fxs_mutedLink">Forex technical analysis</a></li>
+                        <li><a href="#" class="fxs_mutedLink">FED's meeting</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 3</a></li>
+                        <li><a href="#" class="fxs_mutedLink">Popular topic 4</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /Topics subnav -->
+
+                <!-- Space for Global Alerts & Notifications --><!-- For dev -->
+                
+                <!-- /Space for Global Alerts & Notifications -->
+
+                <!-- The content rail -->
+                <div class="fxs_contentView">
+                    <!-- --------------- SPONSOR CONTENT EXAMPLE --------------- -->
+                    <div class="fxs_wallpaper_wrap">
+                        <div class="fxs_wallpaper_img fxs_image_left">
+                            <img src="https://staticcontentqa.blob.core.windows.net/website/img/ad_L.jpg">
+                        </div>
+                        <div class="fxs_wallpaper_img fxs_image_right">
+                            <img src="https://staticcontentqa.blob.core.windows.net/website/img/ad_R.jpg">
+                        </div>
+                        <a href="https://path-to-sponsor" target="_blank">
+                            <span class="fxs_skip">Some text for this link please</span>
+                        </a>
+                    </div>
+
+                    <!-- IMPORTANT, this is an example of css config for the ad, use the sf css widget to configure and errase this -->
+                    <style type="text/css">
+                        .fxs_wallpaper_wrap { /*background-color: #ED242A;*/ }
+                    </style>
+                    <!-- /IMPORTANT, this is an example of css config for the ad, use the sf css widget to configure and errase this -->
+                    <!-- Leaderboard + roadblock -->
+                    <div class="fxs_leaderboard fxs_leaderboard_transition">
+                        <!-- roadblock slide instead a leaderboard-->
+                        <div class="fxs_roadblock_slide">
+                            <a href="https://path-to-sponsor" target="_blank">
+                                <img src="https://staticcontentqa.blob.core.windows.net/website/img/ad_C.jpg">
+                            </a>
+                        </div>
+                        <!--/ roadblock slide -->
+                    </div>
+                    <!-- --------------- /SPONSOR CONTENT EXAMPLE -------------- -->
+                    <main id="fxs_it_detail" role="main">
+                        <!-- Main Setcion -->
+                        <section class="fxs_detail">
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_100">
+                                    <div class="fxs_clearfix">
+                                      <h2 class="fxs_headline_large">Jobs</h2>
+                                        </div> 
+                                      <h2 class="fxs_headline_medium"><em>Join our team!</em></h2>
+                                      <hr class="fxs_divider_third" />
+                                      <style type="text/css">
+                                          em{display: block}
+                                          .fa-star, .fa-star-half-o{
+                                            color: #338473;
+                                          }
+                                          .fxs_skill_size{
+                                            width:120px;
+                                          }
+                                      </style>
+                                </div>
+                            </div>
+                            <div class="fxs_row">
+                                <div class="fxs_col fxs_col_100">
+                                    <h2 class="fxs_subsectionTitle">
+                                        Full Stack Software Engineer
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="fxs_row">
+                                    <div class="fxs_col fxs_col_50">
+                                        <h3 class="fxs_subtitle">
+                                            Location
+                                        </h3>
+                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> Barcelona, Spain</p>
+                                        <p><strong>Duties</strong></p>
+
+                                        <p>70% Develop and Design new features of the system</p>
+                                        <p>10% Assist to SCRUM meetings</p>
+                                        <p>20% Bugs resolution</p>
+
+                                        <h3 class="fxs_subtitle">
+                                            Description
+                                        </h3>
+
+                                        <dl class="">
+                                          <dt>This is what you will need Strong understanding of:
+                                          <dd>
+                                            <ul class="">
+                                                <li>
+                                                    <em>POO is a must</em>
+                                                </li>
+                                                <li>
+                                                    <em>DDD and Clean Code are the two pillars of the department</em>
+                                                </li>
+                                                <li>
+                                                    <em>Problem solving mind oriented</em>
+                                                </li>
+                                                <li>
+                                                    <em>Excel skills in C#,</em> 
+                                                </li>
+                                                <li>
+                                                    <em>Javascript framework such as JQuery,</em>
+                                                </li>
+                                                <li>
+                                                    <em>AngularJS</em>
+                                                </li>
+                                                <li>
+                                                    <em>T-SQL</em>
+                                                </li>
+                                                <li>
+                                                    <em>Unit testing</em>
+                                                </li>
+                                                <li>
+                                                    <em>Cloud Environment experience (Azure / AWS)</em>
+                                                </li>
+                                                <li>
+                                                    <em>Good communication skills</em>
+                                                </li>
+                                                <li>
+                                                    <em>Bonus points if you:</em>
+                                                    <ul>
+                                                        <li><em>Contributed to an open source project</em></li>
+                                                        <li><em>RESTful API experience</em></li>
+                                                        <li><em>Good communication skills</em></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                          </dd>
+                                       </dl>
+                                        
+                                        
+                                    </div>
+                                    <div class="fxs_col fxs_col_50">
+                                        <h3 class="fxs_subtitle">
+                                            Technical Skills rates
+                                        </h3>
+
+                                        <table class="fxs_table">
+                                            <tbody>
+                                            <tr>
+                                                <td class="fxs_skill_size"><em>C#</em></td>
+                                                <td>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="fxs_skill_size"><em>SQL Queries</em></td>
+                                                <td>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="fxs_skill_size"><em>Javascript</em></td>
+                                                <td>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="fxs_skill_size"><em>Unit Testing</em></td>
+                                                <td>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="fxs_skill_size"><em>Patterns</em></td>
+                                                <td>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="fxs_skill_size"><em>API REST</em></td>
+                                                <td>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i> 
+                                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <p></p>
+                                        <p><strong>About FXStreet IT department:</strong></p>
+                                        
+                                        <p>FXStreet IT Department simply rocks, we are 6 Software Engineers and 1 Front End developer passionate about doing things the right way while having fun and learning.</p> <p> The whole infrastructure has been built in less than 2 years so expect working with the latest technologies, there are still loads of things to do and improve. We are a democratic team where everybody has its opinions and responsibilities so we want people very responsible and who go beyond and who want to leave their mark on whatever they do.</p>
+
+                                        <p><strong>Apply for the job!</strong></p>
+
+                                        <p>Contact information:</p>
+                                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> 
+                                        <a href="mailto:javier@fxstreet.com">javier@fxstreet.com</a></p>
+                                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> 
+                                        <a href="mailto:alain@fxstreet.com">alain@fxstreet.com</a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- /Main Section -->
+                    </main>
+                </div>
+                <!-- /The content rail -->
+
+
+                
+
+            </div>
+            <!-- Site footer -->
+                <footer class="fxs_footer">
+                    <div class="fxs_copy_disclaimer">
+                        <div class="fxs_terms_nav">
+                            <small class="fxs_copyRight">©2015 "FXStreet" All Rights Reserved</small>
+                            <ul class="fxs_subnavInlined_list">
+
+                                <!-- Button DropUp 1 -->
+                                <li class="fxs_btn_group">
+                                    <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">About <i class="fa fa-caret-up"></i></button>
+                                    <ul class="fxs_dropdownList dropup">
+                                        <li><a href="" title="">About fxstreet</a></li>
+                                        <li><a href="" title="">Advertise with us</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /Button DropUp 1-->
+
+                                <li><a href="#" class="fxs_mutedLink">Terms and conditions</a></li>
+                                <li><a href="#" class="fxs_mutedLink">Privacy policy</a></li>
+                                <li><a href="#" class="fxs_mutedLink">Contact us</a></li>
+                                <li><a href="#" class="fxs_mutedLink">Site map</a></li>
+
+                                <!-- Button DropUp 2-->
+                                <li class="fxs_btn_group">
+                                    <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd" data-toggle="dropdown">English <i class="fa fa-caret-up"></i></button>
+                        
+                                    <ul class="fxs_dropdownList dropup">
+                                        <li class="fxs_dropdownHeader">Edition</li>
+                                        <li><a href="#">Yсский</a></li>
+                                        <li><a href="#">Español</a></li>
+                                        <li><a href="#">Deutsch</a></li>
+                                        <li><a href="#">Français</a></li>
+                                        <li class="fxs_divider_third">&nbsp;</li>
+                                        <li class="fxs_dropdownHeader">Other sites</li>
+                                        <li><a href="#">体中文</a></li>
+                                        <li><a href="#">繁體中文</a></li>
+                                        <li><a href="#">Русский</a></li>
+                                        <li><a href="#">Indonesia</a></li>
+                                        <li><a href="#">العربية</a></li>
+                                        <li><a href="#">Italiano</a></li>
+                                        <li><a href="#">Português</a></li>
+                                        <li><a href="#">Magyar</a></li>
+                                        <li><a href="#">Türkçe</a></li>
+                                        <li><a href="#">Tiếng Việt</a></li>
+                                        <li><a href="#">한국어</a></li>
+                                    </ul>
+                                </li>
+                                <!-- /Button DropUp 2-->
+
+                            </ul>
+                        </div>
+                        <button type="button" class="fxs_btn fxs_btn_phantom fxs_btn_dd fxs_fRight" data-toggle="dropdown">Disclaimer <i class="fa fa-caret-up"></i></button>
+                        <div class="fxs_disclaimer_block">
+                            <p>Note: All information on this page is subject to change. The use of this website constitutes acceptance of our user agreement. Please read our privacy policy and legal disclaimer.</p>
+                            <p>Trading foreign exchange on margin carries a high level of risk and may not be suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade foreign exchange you should carefully consider your investment objectives, level of experience and risk appetite. The possibility exists that you could sustain a loss of some or all of your initial investment and therefore you should not invest money that you cannot afford to lose. You should be aware of all the risks associated with foreign exchange trading and seek advice from an independent financial advisor if you have any doubts.</p>
+                            <p>Opinions expressed at FXStreet are those of the individual authors and do not necessarily represent the opinion of FXStreet or its management. FXStreet has not verified the accuracy or basis-in-fact of any claim or statement made by any independent author: errors and Omissions may occur.Any opinions, news, research, analyses, prices or other information contained on this website, by FXStreet, its employees, partners or contributors, is provided as general market commentary and does not constitute investment advice. FXStreet will not accept liability for any loss or damage, including without limitation to, any loss of profit, which may arise directly or indirectly from use of or reliance on such information.</p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- /Site footer -->
+
+            <!-- Sidebar right -->
+            <div class="fxs_pageSidebar fxs_sidebar_user" id="cbp-spmenu-s2">
+                <ul class="fxs_tabs_nav">
+                    <li class="active"><a data-toggle="tab" href="#login" title="Login">Log in</a></li>
+                    <li><a data-toggle="tab" href="#signup" title="Sign up">Sign up</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" id="login" class="fxs_authentication_form_content tab-pane fade in active">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Username" for="user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Username" id="user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Password" for="password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Password" id="password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup"><input type="checkbox" id="terms" /> Remember me </label>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">log in</button>
+                            <a href="#" title="Forgot password">Forgot password</a>
+                        </form>
+
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Log in with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Log in with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">I'm not an fxstreet member</span>
+                            <a href="#">Sign up</a>
+                        </div>
+                    </div>
+                    <div role="tabpanel" id="signup" class="fxs_authentication_form_content tab-pane fade">
+                        <form class="fxs_authentication_form">
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Enter your email address" for="email">
+                                    <i class="fa fa-envelope-o"></i>
+                                    <span class="fxs_skip">Enter your email address</span>
+                                </label>
+                                <input type="email" class="fxs_textInput" placeholder="Enter your email address" id="email" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Choose your Username" for="choose-user-name">
+                                    <i class="fa fa-user"></i>
+                                    <span class="fxs_skip">Choose your username</span>
+                                </label>
+                                <input type="text" class="fxs_textInput" placeholder="Choose your username" id="choose-user-name" />
+                            </div>
+                            <div class="fxs_formGroup fxs_inputGroup_iconLabel">
+                                <label class="fxs_btn_icon" title="Set your password" for="set-password">
+                                    <i class="fa fa-lock"></i>
+                                    <span class="fxs_skip">Set your password</span>
+                                </label>
+                                <input type="password" class="fxs_textInput" placeholder="Set your password" id="set-password" />
+                            </div>
+                            <div class="fxs_formGroup">
+                                <label class="fxs_checkboxGroup">
+                                    <input type="checkbox" id="terms" />
+                                    I have read and accept the
+                                </label>
+                                <a href="#" class="fxs_signup_conditions" title="terms and conditions">FXStreet terms and conditions</a>
+                            </div>
+                            <button type="submit" class="fxs_btn fxs_btn_cta fxs_btn_block">Sign up now</button>
+                        </form>
+                        
+                        <div class="fxs_sidebar_divider"><span>or</span></div>
+
+                        <div class="fxs_social_sidebar_nav">
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-facebook"></i> Sign up with Facebook</button>
+                            <button type="submit" class="fxs_btn fxs_btn_line fxs_btn_block"><i class="fa fa-google-plus"></i> Sign up with Google</button>
+                        </div>
+
+                        <div class="fxs_login_message">
+                            <span class="fxs_label">Already an fxstreet member?</span>
+                            <a href="#" title="login">login</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="fxs_timezone_btn" title="select timezone">
+                    <span class="fxs_helperLabel_title">Timezone</span>
+                    <time class="fxs_timestamp">10:20 (GMT+1:00)</time> <i class="fa fa-angle-right fa-lg"></i>
+                </button>
+            </div>
+            <!-- /Sidebar right -->
+
+            <!-- Timezones -->
+             <div class="fxs_pageSidebar fxs_timezone_items" id="cbp-spmenu-s4">
+                <div class="fxs_timezone_nav">
+                    <span class="fxs_helperLabel_title">Change timezone</span>
+                    <button type="button" class="fxs_btn fxs_dismissQuery" id="close_timezone_sidebar">
+                            Cancel
+                        </button>
+                </div>
+                <div class="fxs_nav_menu fxs_timezone_hours">
+
+                    <ol>
+                        <li class="active">
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">TIME FROM YOUR DEVICE ZONE</span>
+                                <time class="fxs_timestamp">SET AUTOMATICALLY</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT-1:00</time>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT+2:00</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT+1:00</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT-3:00</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT+1:00</time>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT+1:00</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT+1:00</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">GMT+1:00</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="fxs_timezone_item_location">hawaii</span>
+                                <time class="fxs_timestamp">10:20 (GMT+1:00)</time>
+                            </a>
+                        </li>
+                        
+                    </ol>
+                </div>
+            </div>
+            <!-- /Timezones -->
+
+            
+        </div>
+        <!-- /The wrapper -->
+        
+        <script src="https://staticcontent.azureedge.net/website/js/jquery-1.11.3.min.js"></script>
+        <script src="https://staticcontentqa.blob.core.windows.net/website/js/jquery.typeahead.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="https://staticcontent.azureedge.net/website/js/bootstrap.min.js"></script>
+
+        <script src="https://staticcontent.azureedge.net/website/js/classie.min.js"></script>
+        <script src="https://staticcontentqa.blob.core.windows.net/website/js/fixto.min.js"></script>
+        <!-- Countdown plugin -->
+        <!--<script src="https://staticcontentqa.blob.core.windows.net/website/js/blazy.min.js"></script>-->
+        <script src="https://staticcontentqa.blob.core.windows.net/website/js/site.js"></script>
+
+        <script>
+
+            // simulate broker detail link
+
+    
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            });
+
+        
+        </script>
+    </body>
+</html>

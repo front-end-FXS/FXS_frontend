@@ -28,6 +28,11 @@
   font-weight: @txt_fontweight_light;
   margin-bottom: 0.5rem;
   span { &:extend(.fxs_boldAntialised_style); }
+  &.fxs_subscribe_title{
+    span{
+      &:extend(.fxs_txt_large);
+    }
+  }
 }
 
 // Entries plain text General
@@ -160,9 +165,9 @@
   .fxs_article_author {
     //.calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
     max-width:150px;
-    @media(min-width:@screen-hd){
+    /*@media(min-width:@screen-hd){
       .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
-    }
+    }*/
   }
   .fxs_medium_clean_video_label{
     position: relative;

@@ -6,6 +6,14 @@ body {
   width: 100%;
   height: 100%;
 }
+.fxs_author_trans_title span {
+  font-weight: 300;
+  font-size: 18px;
+  color: #999;
+}
+.fxs_custom_panel .panel-body {
+  padding-bottom: 0px;
+}
 body {
   background-color: #E5E9EC;
   background-image: url('../images/paper_texture.png');
@@ -43,9 +51,6 @@ strong {
   font-weight: 800;
   color: #333;
 }
-.fxs_custom_panel .panel-body {
-  padding-bottom: 0px;
-}
 .profile-pic {
   width: 65px;
   height: 65px;
@@ -70,6 +75,12 @@ strong {
 .navBtn:hover {
   opacity: 1.0;
 }
+.fxs_translation_btn {
+  cursor: pointer;
+}
+.fxs_translation_btn:hover {
+  opacity: 0.7;
+}
 .logo {
   height: 62px;
   margin: -10px -10px 0;
@@ -77,20 +88,6 @@ strong {
   background-image: url('https://fxstreet.s3.amazonaws.com/imglogos/small-roadblock.png');
   background-repeat: no-repeat;
   background-position: 10px;
-}
-.fxs_translation_btn {
-  cursor: pointer;
-}
-.fxs_translation_btn:hover {
-  opacity: 0;
-}
-.fxs_author_trans_title span {
-  font-weight: 300;
-  font-size: 18px;
-  color: #999;
-}
-.fxs_custom_panel .panel-body {
-  padding-bottom: 0px;
 }
 .menu {
   padding: 10px;
@@ -142,6 +139,12 @@ strong {
   text-decoration: none;
   color: #1B1E24;
   background-color: #ee970c;
+}
+.fxs_scollable_box {
+  overflow: auto;
+  resize: vertical;
+  border: 1px solid #ccc;
+  height: 100px;
 }
 .cbp-spmenu-left {
   left: -260px;
@@ -253,9 +256,6 @@ strong {
 .table > thead > tr > th a {
   color: #333;
 }
-.table-hover > tbody > tr:hover > td {
-  background-color: rgba(91, 192, 222, 0.2);
-}
 .table > tbody > tr.checkedED > td {
   background-color: rgba(184, 235, 119, 0.52);
 }
@@ -364,6 +364,13 @@ strong {
 .workingForm input:hover {
   cursor: default !important;
   border-radius: 0px 4px 4px 0px !important;
+}
+.workingForm .input-group.fxs_wide_field {
+  display: block;
+}
+.workingForm .input-group.fxs_wide_field textarea {
+  min-height: 100px;
+  resize: vertical;
 }
 .workingForm .input-group:hover input {
   border: 1px solid #B1B1B1 !important;
@@ -762,6 +769,9 @@ strong {
 .square .accessLocalization {
   background-color: #3c998a;
 }
+.square .accessEvents {
+  background-color: #3c998a;
+}
 .flip-container {
   perspective: 1000;
 }
@@ -848,6 +858,9 @@ strong {
 }
 .front .accessLocalization .fa:before {
   content: "\f0ac";
+}
+.front .accessEvents .fa:before {
+  content: "\f144";
 }
 .back {
   transform: rotateY(180deg);
@@ -1180,8 +1193,8 @@ strong {
 .table > tbody > tr > td {
   word-break: break-all;
 }
-.fxs_localization_form .table > tbody > tr > td {
-  word-break: normal;
+.fxs_localization_result .col-md-4 {
+  padding-bottom: 5px;
 }
 .fxs_add_domain {
   position: relative;
@@ -1283,6 +1296,52 @@ strong {
   font-weight: 400;
   padding-top: 10px;
 }
+.fxs_post_user {
+  background-color: #fff;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+}
+.fxs_post_user textarea {
+  width: 100%;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-height: 150px;
+}
+.fxs_post_user.fxs_post_user_create {
+  border-left: 5px solid #338473;
+}
+.fxs_post_user.fxs_post_user_create span {
+  color: #338473;
+}
+.fxs_post_user.fxs_post_user_create .fxs_json_code {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.fxs_post_user.fxs_post_user_create .collapsed .fa:before {
+  content: "\f121";
+}
+.fxs_post_user.fxs_post_user_edit {
+  border-left: 5px solid #E4871B;
+}
+.fxs_post_user.fxs_post_user_edit span {
+  color: #E4871B;
+}
+.fxs_post_user.fxs_post_user_edit .fxs_json_code {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+.fxs_post_user.fxs_post_user_edit .collapsed .fa:before {
+  content: "\f121";
+}
 .news-option {
   min-width: 200px;
 }
@@ -1333,8 +1392,20 @@ strong {
 .cke_button__sentiment_cke_icon {
   background: url(../../scripts/ckeditor/plugins/widgets/icons/sentiment_cke.png) no-repeat !important;
 }
-.cke_button__ctp_icon {
+.cke_button__ctp_cke_icon {
   background: url(../../scripts/ckeditor/plugins/widgets/icons/ctp_cke.png) no-repeat !important;
+}
+.cke_button__pivotpoints_cke_icon {
+  background: url(../../scripts/ckeditor/plugins/widgets/icons/pivotpoints_cke.png) no-repeat !important;
+}
+.cke_button__forecast_cke_icon {
+  background: url(../../scripts/ckeditor/plugins/widgets/icons/forecast_cke.png) no-repeat !important;
+}
+.cke_button__lastcandle_cke_icon {
+  background: url(../../scripts/ckeditor/plugins/widgets/icons/lastcandle_cke.png) no-repeat !important;
+}
+.cke_button__youtube_cke_icon {
+  background: url(../../scripts/ckeditor/plugins/widgets/icons/youtube_cke.png) no-repeat !important;
 }
 .ctp-filter-form {
   max-width: 900px;
