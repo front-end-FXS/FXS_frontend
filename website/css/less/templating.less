@@ -585,6 +585,20 @@ body.cbp-spmenu-push-toright{
   @media (min-width: @screen-l) { width: @left_rail_space; }
 }
 
+// general filter
+
+.fxs_listViewRail_price_filter{
+  position: absolute;
+  width: 100%;
+}
+.fxs_dateIndicator_divider, .fxs_feedbackLoading_msg {
+  &:extend(.fxs_listView_space all);
+}
+.fxs_modal_page  & { height: 100%; }
+&.fxs_listViewRail_modified{
+  top:@double_module_size;
+}
+
 .fxs_listViewRail {
   &:extend(.fxs_scrollableContent all);
   position: absolute;
@@ -594,22 +608,6 @@ body.cbp-spmenu-push-toright{
   @media (min-width: @screen-l) {
     overflow-y: hidden;
     &:hover { overflow-y: scroll; }
-  }
-  &.fxs_listViewRail_price_filter{
-    top:auto;
-    &.fxs_filter_default{
-      .calc(width, ~'100% - @{txt_defaultsize_px}'); 
-    }
-    &.fxs_filter_big{
-      .calc(width, ~'100% - @{txt_defaultsize_px}');
-    }
-  }
-  .fxs_dateIndicator_divider, .fxs_feedbackLoading_msg {
-    &:extend(.fxs_listView_space all);
-  }
-  .fxs_modal_page  & { height: 100%; }
-  &.fxs_listViewRail_modified{
-    top:@double_module_size;
   }
 }
 
