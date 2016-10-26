@@ -1486,18 +1486,19 @@
   }
 }
 
-// price list filter
+// price list filter module
 .fxs_filterResults_bg{
   background-color: @lightest_clr;
 }
 .fxs_price_filter{
-  .fxs_row{
-    background-color: @lightest_clr;
+  .fxs_col_50{
+    padding:0;
   }
   .fxs_price_filter_header{
     padding:0!important;
     &:extend(.fxs_listview_subnav);
   }
+  // alinear elementos
   .fxs_filter_price_container{
     li{
       display: inline-block;
@@ -1520,6 +1521,9 @@
     > tr{
       opacity: .2;
       cursor: default!important;
+      &:hover{
+        opacity: .2;
+      }
     }
   }
 }
