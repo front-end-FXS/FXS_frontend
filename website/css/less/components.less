@@ -558,6 +558,22 @@
   }
   .cbp-spmenu-push-toleft &, .cbp-spmenu-push-toright & { display: none; }
 }
+// .fxs_globalAlert_wrapper > div > div.fxs_global_alert.in{
+//   &.in {
+//     display: block;
+//     & + .fxs_contentView{ 
+//       padding-top: @main_headercookies_height;
+//       @media(min-width:@screen-s){
+//         padding-top: @main_header_height + 5px;
+//       }
+//       .fxs_wallpaper_wrap { 
+//         .fxs_wallpaper_img{
+//           padding-top: @main_header_height;
+//         }
+//       }  
+//     } 
+//   }
+// }
 
 
 // Alert variants
@@ -681,6 +697,7 @@
 .fxs_squareImage_brokers{
   width:@avatar_broker;
   height: @avatar_s;
+  margin-top:3px;
 }
 
 .fxs_avatar_circleImage_s, .fxs_squareImage_s {
@@ -1767,6 +1784,29 @@
 
   }
   
+}
+
+// container general msg ( recomended to use un full pages messages )
+.fxs_msg_general_wrapper{
+  background-color:#fff;
+  height: calc(100vh - 20vh);
+  width: 100%;
+  top: 51px;
+  left: 0;
+}
+.fxs_activation_msg{
+  position: absolute;
+  margin: 0 auto;
+  top:50%;
+  left:50%;
+  width:100%;
+  .translate(-50%, -50%);
+  @media(min-width:@screen-m){
+    top:50%;
+    left:50%;
+    width:50%;
+    .translate(-50%, -50%);
+  }
 }
 
 // plugin feedback - add some margin to top

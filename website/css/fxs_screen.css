@@ -1799,6 +1799,7 @@ width:calc(100% - 320px);
 .fxs_squareImage_brokers {
   width: 100px;
   height: 35px;
+  margin-top: 3px;
 }
 .fxs_avatar_circleImage_s,
 .fxs_squareImage_s {
@@ -2877,6 +2878,37 @@ width:calc(100% - 320px);
     -webkit-transform: scale(1);
     transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
+  }
+}
+.fxs_msg_general_wrapper {
+  background-color: #fff;
+  height: calc(80vh);
+  width: 100%;
+  top: 51px;
+  left: 0;
+}
+.fxs_activation_msg {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 1024px) {
+  .fxs_activation_msg {
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 .mcx-widget {
@@ -4837,6 +4869,12 @@ height:calc(100% - 35px - 45px);
 .fxs_listView_adContiner.listView_item_active * {
   color: #ffffff;
 }
+.fxs_listView_item.listView_item_active .down *,
+.fxs_listView_adContiner.listView_item_active .down *,
+.fxs_listView_item.listView_item_active .up *,
+.fxs_listView_adContiner.listView_item_active .up * {
+  color: #25252b;
+}
 .fxs_listView_adContiner {
   background-color: #dddedf;
   text-align: center;
@@ -5230,6 +5268,7 @@ fieldset[disabled] .fxs_rates_addPair {
   z-index: 2;
   bottom: -1px;
   width: 100%;
+  margin-bottom: -1px;
 }
 @media (min-width: 1024px) {
   .fxs_footer {

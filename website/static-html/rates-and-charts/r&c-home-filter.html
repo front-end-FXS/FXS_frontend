@@ -161,17 +161,21 @@
 
                     <!-- ///////////////////////////  filter button  /////////////////////////// -->
 
-                    <div id="fxs_filter_header_container" class="fxs_filter">
+                    <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
                         <div class="fxs_typeaheadContainer">
-                            <button id="fxs_filter" type="button" class="fxs_btn_filter" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block">
-                                <i class="fa fa-sliders"></i>
+                            <!-- <button id="fxs_filter" type="button" class="fxs_btn_filter" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block">
+                                <span class="fxs_togglebtn_txt init_txt"><i class="fa fa-filter" aria-hidden="true"></i></span>
                                 <span class="fxs_skip">Filter results</span>
+                            </button> -->
+                            <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#rates-filter-block" aria-expanded="false" aria-controls="rates-filter-block">
+                                <span class="fxs_togglebtn_txt init_txt"><i class="fa fa-filter" aria-hidden="true"></i></span>
+                                <span class="fxs_togglebtn_txt toggled_txt">Close</span>
                             </button>
-                            <div class="fxs_queryResults">
+                            <!-- <div class="fxs_queryResults">
                                 <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block">
                                     Cancel
                                 </button>
-                            </div>
+                            </div> -->
                             <div class="fxs_typeaheadField fxs_txt_center">
                                 <span class="fxs_helperLabel_title">Filter rates & charts</span>
                             </div>
