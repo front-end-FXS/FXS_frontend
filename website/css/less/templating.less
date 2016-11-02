@@ -670,7 +670,12 @@ body.cbp-spmenu-push-toright{
   &.listView_item_active{
     background-color: @dark_2_clr;
     * { 
-      color: @lightest_clr; 
+        color: @lightest_clr; 
+    }
+    .down, .up{
+      * {
+        color:@dark_2_clr;
+      }
     }
   }
 }
@@ -995,6 +1000,7 @@ body.cbp-spmenu-push-toright{
   z-index: 2;
   bottom: -1px;
   width: 100%;
+  margin-bottom:-1px;
   @media (min-width: @screen-m) {
     margin-left: @left_rail_space_reduced;
     .calc(width, ~'100% - @{left_rail_space_reduced}'); 
