@@ -118,7 +118,7 @@
   .fxs_vertical_block_nav(1px solid @dark_3_clr, 24px, @txt_size_small);    
   .fxs_header & {
     .fxs_tab_item(0 none transparent; @lightest_clr; @brand_highlight_clr; @main_header_height);
-    li:first-child { display: none; }
+    li:first-child { /*display: none;*/ }
     a { 
       border-bottom-color: transparent; 
       @media(min-width:@screen-m){
@@ -970,7 +970,7 @@ body.cbp-spmenu-push-toright{
   position: relative;
   min-height: 100%;
   background-color: @lightest_clr;
-  padding: 1rem 0 50px;
+  padding: 1rem 0 20px;
   &.fxs_filter_price_container{ // price filter container
     width:100%;
   }
@@ -1861,7 +1861,7 @@ clean rules for new calendar widget
 .fxs_row {
   &.fxs_marquee_container {
     margin-top:-0.5rem;
-    margin-bottom:1rem;
+    //margin-bottom:1rem;
     .fxs_widget_divider_module {
       @media(min-width:@screen-m){
         border-bottom:none;
@@ -1874,6 +1874,14 @@ clean rules for new calendar widget
     .fxs_col_25 {
       .make-s-column(6);
       .make-m-column(3);
+      border-right:none;
+      @media(min-width:@screen-m){
+        border-right:1px solid #ccc;
+        &:last-child{
+          border-right:none;
+        }
+      }
+      
     }
   }
 }

@@ -212,6 +212,12 @@
 .fxs_subscribeForm_group {
   &:extend(.fxs_inlineForm_group all);
   margin-bottom: 1rem;
+  .fxs_newsletter_email, .fxs_reCaptcha, .fxs_btn_cta{
+    display: block;
+  }
+  label{
+    color: @lightest_clr;
+  }
   .fxs_textInput {
     .calc(width, ~'100% - 165px');
     max-width: 350px;
@@ -1460,7 +1466,7 @@
   @media(min-width:@screen-l) {
     
     .fxs_price_big_figure {
-      font-size: @txt_size_xlarge;
+      font-size: @txt_size_large;
     }
   }
 }
