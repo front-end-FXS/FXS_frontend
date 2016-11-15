@@ -25,6 +25,12 @@
     }
 
   }
+  .fxs_spread_link{
+    a{
+      color: @dark_4_clr;
+      text-decoration: none!important;
+    }
+  }
 
 	// Spread txt item
 	.fxs_widget_spreads_item {
@@ -46,6 +52,11 @@
 
   &.fxs_widget_mini, &.fxs_widget_default, &.fxs_widget_big {
     // default spreads table rules
+    .fxs_spread_link{
+        color: @dark_4_clr;
+        text-decoration: none!important;
+        font-weight: normal;
+    }
     tr:nth-child(even) {background-color: @light_5_clr}
     >thead tr> th, tbody> tr> td {
       // custom the two first rows
