@@ -159,7 +159,10 @@
       min-height:100px;
     }
     .fxs_article_author{
-      .calc(max-width, ~'100% - ( @{avatar_l} + 10px )');
+      .calc(max-width, ~'100% - ( 85px + 10px )');
+      @media(min-width:@screen-l){
+        .calc(max-width, ~'100% - ( @{avatar_l} + 10px )');
+      }
     }
   }
   .fxs_article_author {
