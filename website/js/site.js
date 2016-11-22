@@ -211,9 +211,9 @@ $(document).ready(function () {
 
     ////////// Estados del list filter //////////
     // METIDO A SACO para que funcione el trigger del filtro
-    $('.fxs_btn_filter').click(function(evt) {
-        $(this).closest('.fxs_filter').toggleClass("active");
-    }); 
+    //$('.fxs_btn_filter').click(function(evt) {
+        //$(this).closest('.fxs_filter').toggleClass("active");
+    //}); 
 
     // ESTO ESTÁ METIDO MÁS A SACO AÚN: DESACTIVAR EL TRIGGER AL CLICKAR FUERA
     $('.fxs_dismissQuery').click(function() {
@@ -335,9 +335,9 @@ $(document).ready(function () {
       // optimization images load time
 
 
-    $('.sticky').fixTo('.sticky-holder',{
-        top: 130
-    });
+    //$('.sticky').fixTo('.sticky-holder',{
+        //top: 130
+    //});
 
     //$('.sticky').fixTo('.sticky-holder');
     // sticky
