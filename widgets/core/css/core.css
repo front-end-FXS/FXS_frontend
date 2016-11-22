@@ -270,6 +270,16 @@ tbody.collapse.in {
   padding-bottom: 7.5px;
   border-bottom: 2px solid #dddedf;
 }
+.fxs_subtitleSection {
+  display: block;
+  color: #49494f;
+  font-size: 0.92rem;
+  letter-spacing: normal;
+  margin-top: 0.2rem;
+  background-color: #49494f;
+  color: #ffffff;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
 .fxs_helperLabel_title {
   display: inline-block;
   color: #49494f;
@@ -1693,26 +1703,25 @@ width:calc(100% - 320px);
 }
 .fxs_site_clock {
   display: inline-block;
-  margin-top: 12px;
-  margin-left: 5px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 .fxs_site_clock a {
   color: #dddedf;
-  font-size: 0.8rem;
 }
 .fxs_site_clock a:hover {
   color: #ffffff;
-}
-@media (min-width: 680px) {
-  .fxs_site_clock a {
-    font-size: 1rem;
-  }
 }
 .fxs_shareOptions_boxed {
   font-size: 5px;
   white-space: nowrap;
 }
 .fxs_shareOptions_boxed .fxs_btn_icon {
+  margin: 0;
+}
+.fxs_timezone_btn_navbar {
+  height: 45px;
+  line-height: 45px;
   margin: 0;
 }
 .fxs_overflowOptions {
@@ -1760,14 +1769,20 @@ width:calc(100% - 320px);
 .fxs_header .fxs_socialLinks_nav {
   padding: 0;
   position: absolute;
-  right: 45px;
+  right: 35px;
 }
 .fxs_header .fxs_socialLinks_nav .fxs_btn_icon {
   height: 45px;
   line-height: 45px;
+  width: 25px;
 }
 .fxs_header .fxs_socialLinks_nav .fxs_btn_icon:hover {
   background-color: #304c70;
+}
+@media (min-width: 1150px) {
+  .fxs_header .fxs_socialLinks_nav .fxs_btn_icon {
+    width: 35px;
+  }
 }
 .fxs_header .fxs_socialLinks_nav .fxs_overflowOptions.open > .fxs_btn_icon,
 .fxs_header .fxs_socialLinks_nav .fxs_overflowOptions:hover .fxs_btn_icon {
@@ -2103,11 +2118,12 @@ width:calc(100% - 320px);
   position: relative;
 }
 .fxs_price_filter .fxs_price_filter_header {
-  padding: 0!important;
+  padding: 10px 0 0 0!important;
+  border-bottom: 0;
 }
 .fxs_price_filter .fxs_filter_price_container li {
   display: inline-block;
-  width: 150px;
+  padding-right: 10px;
 }
 .fxs_price_filter .fxs_filter_price_container fieldset {
   border-bottom: none;
@@ -2553,6 +2569,7 @@ lesshat-selector {
 .fxs_sectionTitle_header,
 .fxs_subsectionTitle,
 .fxs_subtitle,
+.fxs_subtitleSection,
 .fxs_helperLabel_title,
 .fxs_fieldset legend,
 .fxs_label,
@@ -2572,6 +2589,7 @@ lesshat-selector {
 .fxs_sectionTitle_header,
 .fxs_subsectionTitle,
 .fxs_subtitle,
+.fxs_subtitleSection,
 .fxs_helperLabel_title,
 .fxs_fieldset legend,
 .fxs_btn,

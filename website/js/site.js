@@ -335,9 +335,9 @@ $(document).ready(function () {
       // optimization images load time
 
 
-    // $('.sticky').fixTo('.sticky-holder',{
-    //     top: 130
-    // });
+    $('.sticky').fixTo('.sticky-holder',{
+        top: 130
+    });
 
     //$('.sticky').fixTo('.sticky-holder');
     // sticky

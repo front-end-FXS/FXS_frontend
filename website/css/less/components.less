@@ -43,6 +43,13 @@
   padding-bottom: @half_base_spacer;
   border-bottom: 2px solid @light_3_clr;
 }
+.fxs_subtitleSection{
+  .fxs_stiled_text_variants(block; @dark_4_clr; @txt_size_small);
+  margin-top:0.2rem;
+  background-color: @dark_4_clr;
+  color: @lightest_clr;
+  padding:0.5rem 0 0.5rem 1rem;
+}
 
 .fxs_helperLabel_title {
   .fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
@@ -244,7 +251,6 @@
     margin:0;
   }
 }
-
 .fxs_btn_icon {
   font-size: @icon_defaultsize;
   width: @base_module_size;
@@ -264,31 +270,31 @@
 .fxs_btn_group {
   // open - add this lines to modify button behavior
   &.fxs_btn_group_align_calendar{
-      float:none;
-      margin-right:5px;
-      .fxs_btn, .fxs_btn_icon {
-        height:32px;
-        margin:0;
-        font-family: Arial, Verdana, Helvetica, sans-serif;
-        background: #DDD;
-        border:solid 1px #D6D6D6;
-        color:#333;
-        font-size: 13px;
-      }
-      &.open{
-        .fxs_btn_default{
-          &.fxs_btn_dd{
-            background-color: #DDD!important;
-            border:none!important;
-          }
+    float:none;
+    margin-right:5px;
+    .fxs_btn, .fxs_btn_icon {
+      height:32px;
+      margin:0;
+      font-family: Arial, Verdana, Helvetica, sans-serif;
+      background: #DDD;
+      border:solid 1px #D6D6D6;
+      color:#333;
+      font-size: 13px;
+    }
+    &.open{
+      .fxs_btn_default{
+        &.fxs_btn_dd{
+          background-color: #DDD!important;
+          border:none!important;
         }
       }
-      .fxs_btn_icon{
-        width:32px;
-      }
-      .fxs_dropdownList{
-        margin-top:5px;
-      }
+    }
+    .fxs_btn_icon{
+      width:32px;
+    }
+    .fxs_dropdownList{
+      margin-top:5px;
+    }
     @media (min-width: @screen-m) {
       float:right;
       margin-right:5px;
@@ -1105,26 +1111,31 @@
 ////////////////// general clock ///////////////////
 .fxs_site_clock{
   display: inline-block;
-  margin-top:12px;
-  margin-left:5px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
   a{
     color:@light_3_clr;
-    font-size: @txt_size_xsmall;
+    //font-size: @txt_size_xsmall;
     &:hover{
       color:@lightest_clr; 
     }
     @media(min-width:@screen-s){
-      font-size: @txt_defaultsize_rem;
+      //font-size: @txt_defaultsize_rem;
     }
   }
 }
 
 ///////////////// Social media objects /////////////
-.fxs_shareOptions_boxed {
+.fxs_shareOptions_boxed{
   &:extend(.fxs_list_unstyled);
   font-size: 5px;
   white-space: nowrap;
   .fxs_btn_icon { margin: 0; }
+}
+.fxs_timezone_btn_navbar{
+  height: @main_header_height;
+  line-height: @main_header_height;
+  margin: 0;
 }
 
 // trigger/holder btn Group dd
@@ -1178,11 +1189,15 @@
   .fxs_header & {
     padding: 0;
     position: absolute;
-    right: @main_header_height;
+    right: @base_module_size;
     .fxs_btn_icon {
       height: @main_header_height;
       line-height: @main_header_height;
       &:hover { background-color: @brand_highlight_clr; }
+      width:25px;
+      @media(min-width:@screen-l){
+        width: 35px;
+      }
     }
     .fxs_overflowOptions {
       &.open > .fxs_btn_icon, &:hover .fxs_btn_icon { background-color: @brand_highlight_clr; }
@@ -1521,14 +1536,15 @@
 .fxs_price_filter{
   position: relative;
   .fxs_price_filter_header{
-    padding:0!important;
-    &:extend(.fxs_listview_subnav);
+    padding:10px 0 0 0!important;
+    //&:extend(.fxs_listview_subnav);
+    border-bottom: 0;
   }
   // alinear elementos
   .fxs_filter_price_container{
     li{
       display: inline-block;
-      width:150px;
+      padding-right:10px;
     }
     fieldset{
       border-bottom: none;
