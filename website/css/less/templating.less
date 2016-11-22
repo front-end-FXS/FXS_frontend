@@ -123,9 +123,11 @@
       border-bottom-color: transparent; 
       @media(min-width:@screen-m){
         font-size: @txt_size_nano!important;
+        padding: 0 0.45rem 0 0.45rem!important;
       }
       @media(min-width:@screen-l){
         font-size: @txt_size_xsmall!important;
+        padding: 0 0.63rem 0 0.63rem!important;
       }
     } 
   } 
@@ -516,6 +518,11 @@ body.cbp-spmenu-push-toright{
       margin-bottom:1rem;
     }
   }
+  &.fxs_leaderboard_small{
+    @media(max-width:@screen-xs){
+      margin-left: -1rem;
+    }
+  }
 }
 // this sticky goes at the bottom of the left sidebar
 .fxs_stickyAd_sidebar{
@@ -573,6 +580,55 @@ body.cbp-spmenu-push-toright{
   .fxs_listView_item_high{
     padding-top: 0px;
     padding-bottom:0px;
+  }
+  .fxs_asset_label_filter{
+    padding-right: 5px;
+  }
+}
+.fxs_listView_vers{
+  background-color: @light_1_clr;
+  padding:4px;
+  .fxs_listView_blockWrapper, .fxs_listview_subnav{
+    @media (min-width: @screen-s) { width: 266px; }
+    @media (min-width: @screen-l) { width: 316px; }
+  }
+  .fxs_listView_item{ border-bottom:4px solid @light_1_clr; }
+  .fxs_listview_subnav{ background-color: @light_1_clr; }
+}
+.fxs_listView_vers_btn{
+  .fxs_helperLabel_title { color: @lightest_clr; }
+  .fxs_btn_filter{ width:100%; }
+  .fxs_togglebtn_txt{
+    position: relative;
+    margin-bottom: 5px;
+  }
+  .fxs_filter_price_btn{
+    width: 85px!important;
+    .toggled_txt{
+      font-size: @txt_size_xsmall!important;
+    }
+  }
+  .fxs_label_filter{
+    background-color: @brand_highlight_clr;
+    color: @lightest_clr;
+    font-size: 10px;
+    font-weight: 400;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    position: absolute;
+    line-height: 29px;
+    margin-top: 3px;
+    padding: 0 7px 0 7px;
+  }
+  .fxs_icon_filter{
+    background-color: @highlight_icon_bg;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-size: 18px;
+    padding: 3px 7px 4px 7px;
+    color: @lightest_clr;
+    .fa-filter{ display: inherit; }
+    margin-left: 54px;
   }
 }
 
@@ -689,10 +745,24 @@ body.cbp-spmenu-push-toright{
     }
   }
 }
+.fxs_listeView_loadMore{
+  text-align: center;
+  padding: 1rem;
+  a{
+    color:@lightest_clr;
+    font-weight: 400;
+    span{
+      padding-right: 5px;
+      vertical-align: 4px;
+    }
+  }
+  font-size: @txt_size_xsmall;
+
+}
 
 // Ads in listView
 .fxs_listView_adContiner{
-  background-color: @light_3_clr;
+  //background-color: @light_3_clr;
   text-align: center;
   padding: 10px;
 }
