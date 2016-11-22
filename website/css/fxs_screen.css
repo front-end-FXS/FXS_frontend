@@ -701,6 +701,16 @@ input[type=submit] {
   padding-bottom: 7.5px;
   border-bottom: 2px solid #dddedf;
 }
+.fxs_subtitleSection {
+  display: block;
+  color: #49494f;
+  font-size: 0.92rem;
+  letter-spacing: normal;
+  margin-top: 0.2rem;
+  background-color: #49494f;
+  color: #ffffff;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
 .fxs_helperLabel_title {
   display: inline-block;
   color: #49494f;
@@ -2227,26 +2237,25 @@ width:calc(100% - 320px);
 }
 .fxs_site_clock {
   display: inline-block;
-  margin-top: 12px;
-  margin-left: 5px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 .fxs_site_clock a {
   color: #dddedf;
-  font-size: 0.8rem;
 }
 .fxs_site_clock a:hover {
   color: #ffffff;
-}
-@media (min-width: 680px) {
-  .fxs_site_clock a {
-    font-size: 1rem;
-  }
 }
 .fxs_shareOptions_boxed {
   font-size: 5px;
   white-space: nowrap;
 }
 .fxs_shareOptions_boxed .fxs_btn_icon {
+  margin: 0;
+}
+.fxs_timezone_btn_navbar {
+  height: 45px;
+  line-height: 45px;
   margin: 0;
 }
 .fxs_overflowOptions {
@@ -2294,14 +2303,20 @@ width:calc(100% - 320px);
 .fxs_header .fxs_socialLinks_nav {
   padding: 0;
   position: absolute;
-  right: 45px;
+  right: 35px;
 }
 .fxs_header .fxs_socialLinks_nav .fxs_btn_icon {
   height: 45px;
   line-height: 45px;
+  width: 25px;
 }
 .fxs_header .fxs_socialLinks_nav .fxs_btn_icon:hover {
   background-color: #304c70;
+}
+@media (min-width: 1150px) {
+  .fxs_header .fxs_socialLinks_nav .fxs_btn_icon {
+    width: 35px;
+  }
 }
 .fxs_header .fxs_socialLinks_nav .fxs_overflowOptions.open > .fxs_btn_icon,
 .fxs_header .fxs_socialLinks_nav .fxs_overflowOptions:hover .fxs_btn_icon {
@@ -2640,11 +2655,12 @@ width:calc(100% - 320px);
   position: relative;
 }
 .fxs_price_filter .fxs_price_filter_header {
-  padding: 0!important;
+  padding: 10px 0 0 0!important;
+  border-bottom: 0;
 }
 .fxs_price_filter .fxs_filter_price_container li {
   display: inline-block;
-  width: 150px;
+  padding-right: 10px;
 }
 .fxs_price_filter .fxs_filter_price_container fieldset {
   border-bottom: none;
@@ -3124,6 +3140,7 @@ lesshat-selector {
 .fxs_sectionTitle_header,
 .fxs_subsectionTitle,
 .fxs_subtitle,
+.fxs_subtitleSection,
 .fxs_helperLabel_title,
 .fxs_fieldset legend,
 .fxs_label,
@@ -3152,6 +3169,7 @@ label,
 .fxs_sectionTitle_header,
 .fxs_subsectionTitle,
 .fxs_subtitle,
+.fxs_subtitleSection,
 .fxs_helperLabel_title,
 .fxs_fieldset legend,
 .fxs_btn,
@@ -4213,11 +4231,13 @@ height:calc(100% - 35px);
 @media (min-width: 1024px) {
   .fxs_header .fxs_nav_menu a {
     font-size: 11px !important;
+    padding: 0 0.45rem 0 0.45rem!important;
   }
 }
 @media (min-width: 1150px) {
   .fxs_header .fxs_nav_menu a {
     font-size: 0.8rem !important;
+    padding: 0 0.63rem 0 0.63rem!important;
   }
 }
 .fxs_header .fxs_nav_menu {
@@ -4664,6 +4684,11 @@ height:calc(100% - 45px);
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+@media (max-width: 320px) {
+  .fxs_leaderboard.fxs_leaderboard_small {
+    margin-left: -1rem;
+  }
+}
 .fxs_stickyAd_sidebar {
   z-index: 9999;
   position: absolute;
@@ -4749,6 +4774,71 @@ height:calc(100% - 45px);
   padding-top: 0px;
   padding-bottom: 0px;
 }
+.fxs_listView .fxs_asset_label_filter {
+  padding-right: 5px;
+}
+.fxs_listView_vers {
+  background-color: #8c8d91;
+  padding: 4px;
+}
+@media (min-width: 680px) {
+  .fxs_listView_vers .fxs_listView_blockWrapper,
+  .fxs_listView_vers .fxs_listview_subnav {
+    width: 266px;
+  }
+}
+@media (min-width: 1150px) {
+  .fxs_listView_vers .fxs_listView_blockWrapper,
+  .fxs_listView_vers .fxs_listview_subnav {
+    width: 316px;
+  }
+}
+.fxs_listView_vers .fxs_listView_item {
+  border-bottom: 4px solid #8c8d91;
+}
+.fxs_listView_vers .fxs_listview_subnav {
+  background-color: #8c8d91;
+}
+.fxs_listView_vers_btn .fxs_helperLabel_title {
+  color: #ffffff;
+}
+.fxs_listView_vers_btn .fxs_btn_filter {
+  width: 100%;
+}
+.fxs_listView_vers_btn .fxs_togglebtn_txt {
+  position: relative;
+  margin-bottom: 5px;
+}
+.fxs_listView_vers_btn .fxs_filter_price_btn {
+  width: 85px!important;
+}
+.fxs_listView_vers_btn .fxs_filter_price_btn .toggled_txt {
+  font-size: 0.8rem !important;
+}
+.fxs_listView_vers_btn .fxs_label_filter {
+  background-color: #304c70;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  position: absolute;
+  line-height: 29px;
+  margin-top: 3px;
+  padding: 0 7px 0 7px;
+}
+.fxs_listView_vers_btn .fxs_icon_filter {
+  background-color: #0cb5c6;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 18px;
+  padding: 3px 7px 4px 7px;
+  color: #ffffff;
+  margin-left: 54px;
+}
+.fxs_listView_vers_btn .fxs_icon_filter .fa-filter {
+  display: inherit;
+}
 @media (min-width: 680px) {
   .fxs_listView,
   .fxs_listViewRail {
@@ -4820,8 +4910,7 @@ height:calc(100% - 35px - 45px);
 .fxs_listViewRail.fxs_listViewRail_modified {
   top: 70px;
 }
-.fxs_listview_subnav,
-.fxs_price_filter .fxs_price_filter_header {
+.fxs_listview_subnav {
   width: 100%;
   height: 36px;
   background-color: #ffffff;
@@ -4897,8 +4986,20 @@ height:calc(100% - 35px - 45px);
 .fxs_listView_adContiner.listView_item_active .up * {
   color: #25252b;
 }
+.fxs_listeView_loadMore {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+.fxs_listeView_loadMore a {
+  color: #ffffff;
+  font-weight: 400;
+}
+.fxs_listeView_loadMore a span {
+  padding-right: 5px;
+  vertical-align: 4px;
+}
 .fxs_listView_adContiner {
-  background-color: #dddedf;
   text-align: center;
   padding: 10px;
 }
@@ -6959,15 +7060,9 @@ max-width:-webkit-calc(100% - ( 85px + 10px ));
 max-width:-moz-calc(100% - ( 85px + 10px ));
 max-width:calc(100% - ( 85px + 10px ));
 ;
-}
-@media (min-width: 1150px) {
-  .fxs_entryFeatured.fxs_article_author_small_cols .fxs_article_author {
-    -lh-property: 0;
-max-width:-webkit-calc(100% - ( 75px + 10px ));
-max-width:-moz-calc(100% - ( 75px + 10px ));
-max-width:calc(100% - ( 75px + 10px ));
-;
-  }
+  /*@media(min-width:@screen-l){
+        .calc(max-width, ~'100% - ( @{avatar_l} + 10px )');
+      }*/
 }
 .fxs_entryFeatured .fxs_article_author {
   max-width: 150px;
