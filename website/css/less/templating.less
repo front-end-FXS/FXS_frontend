@@ -585,6 +585,8 @@ body.cbp-spmenu-push-toright{
     padding-right: 5px;
   }
 }
+////////////////////////////// modify r&c sidebar ////////////////////////////////
+// custom sidebar
 .fxs_listView_vers{
   background-color: @light_1_clr;
   padding:4px;
@@ -594,7 +596,71 @@ body.cbp-spmenu-push-toright{
   }
   .fxs_listView_item{ border-bottom:4px solid @light_1_clr; }
   .fxs_listview_subnav{ background-color: @light_1_clr; }
+  .toggled_txt{ // modify color button
+    color: @lightest_clr;
+    text-decoration: underline;
+    font-size: @txt_size_xsmall;
+    text-transform: none;
+  }
+  .fxs_listViewRail{
+    position: relative;
+    top:0px;
+    @media(min-width:@screen-m){
+      position: absolute;
+      top:37px;
+    }
+  }
+  .fxs_filter_rail_container{
+    background-color: @light_1_clr;
+    min-height: 100%;
+    @media(min-width:@screen-m){
+      min-height:80%;
+    }
+  }
+  .fxs_rates_filter_list{
+    li{
+      font-size: @txt_size_xsmall;
+      font-weight: 400;
+      color:@lightest_clr; 
+      border-bottom:1px solid @lightest_clr;
+      padding: 3px;
+    }
+    .fa-minus-circle{
+      color: @lightest_clr;
+    }
+  }
+  .fxs_fieldset{
+    border-bottom: none;
+  }
+  // fixed 
+  .fxs_apply_filters_block{
+    bottom:@main_header_height;
+    position: absolute;
+    width:100%;
+    @media(min-width:@screen-m){
+      bottom:5px;
+    }
+    padding:0.2rem;
+    .fxs_filter_reset{
+      font-size: @txt_size_xsmall;
+      text-decoration: underline;
+      font-weight: 400;
+    }
+    .fxs_assets_info{
+      background-color: #B1C4D5;
+      padding:0.3rem;
+      width:100%;
+      .fxs_assets_number{
+        font-size: @txt_size_small;
+        font-weight: bold;
+      }
+      .fxs_assets_number_info{
+        font-size: @txt_size_xsmall;
+      }
+    }
+  }
 }
+// custom button
 .fxs_listView_vers_btn{
   .fxs_helperLabel_title { color: @lightest_clr; }
   .fxs_btn_filter{ width:100%; }
@@ -632,6 +698,8 @@ body.cbp-spmenu-push-toright{
   }
 }
 
+////////////////////////////// /modify r&c sidebar ////////////////////////////////
+
 // Absolute dimension spaces in layout
 .fxs_listView, .fxs_listViewRail {
   @media (min-width: @screen-s) {
@@ -665,7 +733,7 @@ body.cbp-spmenu-push-toright{
 .fxs_listViewRail {
   &:extend(.fxs_scrollableContent all);
   position: absolute;
-  top: @base_module_size + 1;
+  top: @base_module_size + 2;
   width: 100%;
   .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
   @media (min-width: @screen-l) {

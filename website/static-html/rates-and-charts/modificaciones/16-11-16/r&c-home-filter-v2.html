@@ -203,7 +203,7 @@
                         <div class="fxs_filter_rail_container">
                             <form>
                                 <fieldset class="fxs_fieldset">
-                                    <legend>Selected items</legend>
+                                    <!--<legend>Selected items</legend>-->
                                     <ul class="fxs_list_unstyled fxs_rates_filter_list">
                                        <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
@@ -213,12 +213,23 @@
                                    </ul>
                                 </fieldset>
 
-                                <div class="fxs_apply_filters">
+                                <!--<div class="fxs_apply_filters">
                                     <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Apply filters</button>
-                                </div>
+                                </div>-->
                                 
                                 <div class="fxs_apply_filters_block">
-                                    <button type="button" class="fxs_btn fxs_btn_line fxs_btn_block" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Clear all filters</button>
+                                    <div class="fxs_assets_info fxs_align_center">
+                                        <span class="fxs_assets_number">6 assets</span> <span class="fxs_assets_number_info">are in your custom filter</span>
+                                    </div>
+                                    <div class="fxs_col fxs_col_100 fxs_marginBase_top fxs_marginBase_bottom">
+                                        <a href="" class="fxs_filter_reset">Reset</a>
+                                    </div>
+                                    <div class="fxs_col fxs_col_50">
+                                        <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Apply</button>
+                                    </div>
+                                    <div class="fxs_col fxs_col_50">
+                                        <button type="button" class="fxs_btn fxs_btn_line fxs_btn_block" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Cancel</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -499,7 +510,7 @@
                                 </div>
                             </li>
                             <li class="fxs_listeView_loadMore">
-                                <a href="#" class="fxs_loadMore_btn">
+                                <a href="#" class="fxs_loadMore_btn" id="fxs_loadMore_btn">
                                     <span>LOAD MORE CURRENCY ASSETS</span><i class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -1186,10 +1197,12 @@
 
         <script src="../../../../js/classie.js"></script>
         <script src="../../../../js/jquery.typeahead.min.js"></script>
-        <!--<script src="../../js/site.js"></script>-->
+        <script src="../../../../js/site.js"></script>
         <script>
-        $('.fxs_loadMore_btn').on('click',function(){
-             $(".fxs_hideElements" ).toggle();
+
+        $('#fxs_loadMore_btn').click( function(){
+            $(".fxs_hideElements" ).slideToggle('slow');
+            $(this).find('i').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
         });
         </script>
 
