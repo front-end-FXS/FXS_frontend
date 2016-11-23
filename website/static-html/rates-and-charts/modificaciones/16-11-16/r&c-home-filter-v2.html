@@ -202,9 +202,24 @@
                         <!-- /Typeahead -->
                         <div class="fxs_filter_rail_container">
                             <form>
-                                <fieldset class="fxs_fieldset">
+                                <fieldset class="fxs_fieldset fxs_scrollable_list">
                                     <!--<legend>Selected items</legend>-->
                                     <ul class="fxs_list_unstyled fxs_rates_filter_list">
+                                       <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
@@ -1204,6 +1219,10 @@
             $(".fxs_hideElements" ).slideToggle('slow');
             $(this).find('i').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');
         });
+
+         $("#demoBtn").click(function(){
+              $(".fxs_btn_content_toggle_collapse").collapse('toggle'); // toggle collapse
+         });
         </script>
 
     </body>

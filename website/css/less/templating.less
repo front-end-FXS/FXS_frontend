@@ -660,6 +660,10 @@ body.cbp-spmenu-push-toright{
     }
   }
 }
+
+.collapsing {
+    transition: height 0.3s;
+}
 // custom button
 .fxs_listView_vers_btn{
   .fxs_helperLabel_title { color: @lightest_clr; }
@@ -1126,7 +1130,7 @@ body.cbp-spmenu-push-toright{
   bottom: 100px;
   padding: 0.5rem 1rem;
   .in & {
-    .animation(fadeInUp 0.33s ease-in);
+    //.animation(fadeInUp 0.33s ease-in);
     display: block;
   }
   &.fxs_apply_filter_price{
