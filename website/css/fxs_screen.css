@@ -781,7 +781,12 @@ input[type=submit] {
   letter-spacing: normal;
 }
 .fxs_fieldset.fxs_scrollable_list {
-  max-height: 500px;
+  max-height: 300px;
+}
+@media (min-width: 1150px) {
+  .fxs_fieldset.fxs_scrollable_list {
+    max-height: 500px;
+  }
 }
 .fxs_contactUs_form .sf-fieldWrp input,
 .fxs_contactUs_form .sf-fieldWrp textarea,
@@ -4865,6 +4870,9 @@ height:calc(100% - 45px);
 .fxs_listView_vers .fxs_apply_filters_block .fxs_assets_info .fxs_assets_number_info {
   font-size: 0.8rem;
 }
+.collapsing {
+  transition: height 0.3s;
+}
 .fxs_listView_vers_btn .fxs_helperLabel_title {
   color: #ffffff;
 }
@@ -5439,10 +5447,6 @@ fieldset[disabled] .fxs_rates_addPair {
   }
 }
 .in .fxs_apply_filters_block {
-  -webkit-animation: fadeInUp 0.33s ease-in;
-  -moz-animation: fadeInUp 0.33s ease-in;
-  -o-animation: fadeInUp 0.33s ease-in;
-  animation: fadeInUp 0.33s ease-in;
   display: block;
 }
 .fxs_apply_filters_block.fxs_apply_filter_price {

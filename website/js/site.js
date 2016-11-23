@@ -70,11 +70,6 @@ $(document).ready(function () {
         indexes: ["DB FTSE MIB FUTURES", "DB DOW JONES FUTURES", "DB NASDAQ 100 FUTURES", "DB S&P 500 FUTURES", "DB SMI FUTURES", "DB EURO STOXX 50 FUTURES", "DB DAX FUTURES", "DB NIKKEI 225 FUTURES"]
     };
 
-    var ratesFilter = {
-        pairs: ["EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
-            "NZD/USD", "GBP/JPY"]
-    }
-
     $('#q').typeahead({
         minLength: 1,
         order: "asc",
@@ -120,6 +115,15 @@ $(document).ready(function () {
         debug: true
     });
 
+    // typeahead filter rates nad charts prototype
+
+    var ratesFilter = {
+        pairs: [
+            "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+            "NZD/USD", "GBP/JPY"
+        ]
+    }
+
     $('#f').typeahead({
         minLength: 1,
         order: "asc",
@@ -128,14 +132,18 @@ $(document).ready(function () {
         hint: true,
         dropdownFilter: false,
         emptyTemplate: 'No result for "{{query}}"',
-        source: {
+        source:{
             pairs: {
                 data: ratesFilter.pairs,
-                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
+                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">',
             }
         },
         debug: true
     });
+    //set a value to input to trigger opening
+    $("#f").eq(0).val("a").trigger("input");
+    //remove value for end user
+    $("#f").eq(0).val("");
 
     
     // Layout - Menu 
