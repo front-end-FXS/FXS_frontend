@@ -350,7 +350,12 @@ tbody.collapse.in {
   letter-spacing: normal;
 }
 .fxs_fieldset.fxs_scrollable_list {
-  max-height: 500px;
+  max-height: 300px;
+}
+@media (min-width: 1150px) {
+  .fxs_fieldset.fxs_scrollable_list {
+    max-height: 500px;
+  }
 }
 .fxs_contactUs_form .sf-fieldWrp input,
 .fxs_contactUs_form .sf-fieldWrp textarea,

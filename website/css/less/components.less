@@ -120,7 +120,10 @@
   border-bottom: 1px solid @light_3_clr;
   legend { .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall;); }
   &.fxs_scrollable_list{
-    max-height: 500px;
+    max-height: 300px;
+    @media(min-width:@screen-l){
+      max-height: 500px;
+    }
     &:extend(.fxs_scrollableContent all);
   }
 }
