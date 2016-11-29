@@ -3476,7 +3476,7 @@ h5 a:hover,
   padding-top: 1rem;
 }
 .fxs_paddingBaseDouble_top {
-  padding-top: 35px;
+  padding-top: 45px;
 }
 .fxs_paddingBase_bottom {
   padding-bottom: 1rem;
@@ -4822,10 +4822,6 @@ height:calc(100% - 45px);
 .fxs_listView_vers .fxs_listView_item {
   border-bottom: 4px solid #8c8d91;
 }
-.fxs_listView_vers .fxs_listview_subnav {
-  background-color: #8c8d91;
-  border-bottom: 0;
-}
 .fxs_listView_vers .toggled_txt {
   color: #ffffff;
   text-decoration: underline;
@@ -4857,6 +4853,14 @@ height:calc(100% - 45px);
   .fxs_price_filter_sidebar {
     width: auto;
   }
+}
+.fxs_price_filter_sidebar .fxs_listview_subnav {
+  background-color: #8c8d91;
+  border-bottom: 0;
+  height: 45px;
+}
+.fxs_price_filter_sidebar .fxs_listview_subnav .fxs_helperLabel_title {
+  line-height: 45px;
 }
 .fxs_price_filter_sidebar .fxs_filter_rail_container {
   background-color: #8c8d91;
@@ -5002,6 +5006,7 @@ height:calc(100% - 45px);
 }
 .fxs_listView_vers_btn .fxs_btn_filter {
   width: 100%;
+  top: 4px;
 }
 .fxs_listView_vers_btn .fxs_togglebtn_txt {
   position: relative;
