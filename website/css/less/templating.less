@@ -604,7 +604,6 @@ body.cbp-spmenu-push-toright{
     @media (min-width: @screen-l) { width: 316px; }
   }
   .fxs_listView_item{ border-bottom:4px solid @light_1_clr; }
-  .fxs_listview_subnav{ background-color: @light_1_clr; border-bottom:0; }
   .toggled_txt{ // modify color button
     color: @lightest_clr;
     text-decoration: underline;
@@ -635,6 +634,12 @@ body.cbp-spmenu-push-toright{
   padding-right: 8px;
   @media(min-width:@screen-s){
     width: auto;
+  }
+  .fxs_listview_subnav{ 
+    background-color: @light_1_clr; border-bottom:0; height:45px; 
+    .fxs_helperLabel_title {
+      line-height: @main_header_height;
+    }
   }
   .fxs_filter_rail_container{
     background-color: @light_1_clr;
@@ -789,7 +794,7 @@ body.cbp-spmenu-push-toright{
     }
   }
   .fxs_helperLabel_title { color: @lightest_clr; }
-  .fxs_btn_filter{ width:100%; }
+  .fxs_btn_filter{ width:100%; top:4px; }
   .fxs_togglebtn_txt{
     position: relative;
     margin-bottom: 5px;
