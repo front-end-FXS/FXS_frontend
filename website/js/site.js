@@ -118,16 +118,16 @@ $(document).ready(function () {
     // typeahead filter rates nad charts prototype
 
     var ratesFilter = {
-        pairs: [
-            "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
-            "NZD/USD", "GBP/JPY"
+        pairs: [ 
+            //"EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+            //"NZD/USD", "GBP/JPY"
         ]
     }
 
     $('#f').typeahead({
         minLength: 1,
         order: "asc",
-        group: true,
+        group: false,
         groupMaxItem: 6,
         hint: true,
         dropdownFilter: false,
@@ -135,15 +135,13 @@ $(document).ready(function () {
         source:{
             pairs: {
                 data: ratesFilter.pairs,
-                template: '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">',
+                template: '',
+                //template:' '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">
             }
         },
         debug: true
     });
-    //set a value to input to trigger opening
-    $("#f").eq(0).val("a").trigger("input");
-    //remove value for end user
-    $("#f").eq(0).val("");
+
 
     
     // Layout - Menu 

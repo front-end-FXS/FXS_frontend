@@ -58,7 +58,12 @@
 .cbp-spmenu-push {
   &.cbp-spmenu-push-toright {
     .fxs_sidebar_nav  { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(@slide_sidebar_space); }
+    .fxs_content, .fxs_header, .fxs_footer, .fxs_modal_wrap, .modal-backdrop, .fxs_listView  { .translate(@slide_sidebar_space); }
+    @media(min-width:@screen-s){
+      .fxs_listView_vers{
+        .translate(-@slide_sidebar_space);
+      }
+    }
     &.fxs_isParent_section{
       .fxs_listView {
         .translate(@slide_sidebar_space);
@@ -66,17 +71,17 @@
       }
     }
     @media (min-width: @screen-m) {
-      &.fxs_isParent_section .fxs_listView , .fxs_listView {
+      &.fxs_isParent_section .fxs_listView, .fxs_listView{
         .translate(@slide_sidebar_space);
       }
     }
     @media (min-width: @screen-l) {
-      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(0); }
+      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop{ .translate(0); }
     }
   }
   &.cbp-spmenu-push-toleft {
     .fxs_sidebar_user { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space); }
+    .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop{ .translate(-@slide_sidebar_space); }
   }
 }
 
@@ -585,17 +590,21 @@ body.cbp-spmenu-push-toright{
     padding-right: 5px;
   }
 }
-////////////////////////////// modify r&c sidebar ////////////////////////////////
-// custom sidebar
+////////////////////////////// NEW RATES AND CHARTS SIDEBAR DESIGN ////////////////////////////////
+
+///////////// custom sidebar ////////////////
+
 .fxs_listView_vers{
   background-color: @light_1_clr;
-  padding:4px;
+  padding:0 4px 4px 4px;
+  position: initial;
+  @media(min-width:@screen-s){ position: fixed;}
   .fxs_listView_blockWrapper, .fxs_listview_subnav{
     @media (min-width: @screen-s) { width: 266px; }
     @media (min-width: @screen-l) { width: 316px; }
   }
   .fxs_listView_item{ border-bottom:4px solid @light_1_clr; }
-  .fxs_listview_subnav{ background-color: @light_1_clr; }
+  .fxs_listview_subnav{ background-color: @light_1_clr; border-bottom:0; }
   .toggled_txt{ // modify color button
     color: @lightest_clr;
     text-decoration: underline;
@@ -603,18 +612,36 @@ body.cbp-spmenu-push-toright{
     text-transform: none;
   }
   .fxs_listViewRail{
+    &:extend(.fxs_pageSidebar_transition);
     position: relative;
-    top:0px;
-    @media(min-width:@screen-m){
-      position: absolute;
-      top:37px;
-    }
+    top:0;
+    z-index: 2;
+   
+  }
+  .fxs_blur_effect{
+    -webkit-filter: opacity(.1);
+    filter: opacity(.1);
+  }
+  
+}
+
+///////////// custom filter widget and results ////////////////
+
+.fxs_price_filter_sidebar{
+  &:extend(.fxs_pageSidebar_transition);
+  position: fixed;
+  width: 100%;
+  z-index: 7;
+  padding-right: 8px;
+  @media(min-width:@screen-s){
+    width: auto;
   }
   .fxs_filter_rail_container{
     background-color: @light_1_clr;
     min-height: 100%;
     @media(min-width:@screen-m){
-      min-height:80%;
+      min-height:40%;
+      padding: 1rem 0 5px
     }
   }
   .fxs_rates_filter_list{
@@ -632,13 +659,29 @@ body.cbp-spmenu-push-toright{
   .fxs_fieldset{
     border-bottom: none;
   }
+  .fxs_listView_mobile{
+    display: inline-block;
+    @media(min-width:@screen-s){
+      display: none;
+    }
+    i{
+      color: @lightest_clr;
+      padding-left: 1rem;
+    }
+  }
   // fixed 
   .fxs_apply_filters_block{
     bottom:@main_header_height;
     position: absolute;
     width:100%;
-    @media(min-width:@screen-m){
+    @media(min-width:@screen-s){
       bottom:5px;
+      position: relative;
+      bottom:0;
+    }
+    .fxs_col_50{
+      width:50%!important;
+      float: left!important;
     }
     padding:0.2rem;
     .fxs_filter_reset{
@@ -659,13 +702,92 @@ body.cbp-spmenu-push-toright{
       }
     }
   }
-}
 
-.collapsing {
-    transition: height 0.3s;
+  .fxs_typeaheadList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      font-size: .92rem;
+      background-color: #fff;
+      border: 0!important;
+      list-style: none;
+      margin: 3px 0 0 0.5rem!important; //add
+      padding: 0;
+      .fxs_typeaheadTxt{
+        padding-left:1rem;
+        padding-top:3px;
+        padding-bottom:3px;
+        width:80px;
+      }
+      width:95%!important;
+      
+  }
+  .fxs_typeaheadList strong{
+    background-color: transparent!important;
+  }
+  .fxs_typeaheadList > li{
+    border: 0!important;
+  }
+  .fxs_typeaheadContainer{
+    // hide message filter result
+    .typeahead-result ~.typeahead-result {
+        display: none!important;
+    }
+  }
+  // applly filter msg
+  .fxs_apply_filter_msg{
+    position: absolute;
+    top:50px;
+    left:4rem;
+    z-index: 4;
+    background: rgba(51, 132, 115, 0.9);
+    text-align: center;
+    line-height: @main_header_height; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    color: @lightest_clr;
+    font-size: @txt_size_small;
+    display: none;
+  }
+  .fxs_asset_selected{
+    background-color: @light_3_clr!important;
+  }
+  /*.fxs_typeaheadList > li:nth-child(5) {
+      background-color: @light_3_clr; 
+  }
+  .fxs_typeaheadList > li:nth-child(3) {
+      background-color: @light_3_clr; 
+  }*/
+  .fxs_typeaheadList > li a {
+    display: block;
+    padding: 5px 1rem;
+    clear: both;
+    font-size: @txt_size_xsmall; // add
+    font-weight: 400;
+    line-height:normal!important;
+    color: #49494f;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 3px;
+    text-decoration: none; // add
+  }
+
 }
-// custom button
+///////////// custom filter buttons ////////////////
+
 .fxs_listView_vers_btn{
+  // change button filter behaviour
+  .fxs_btn_content_toggle_collapse{
+    opacity: 0.65;
+    cursor: not-allowed;
+    @media(min-width:@screen-s){
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
   .fxs_helperLabel_title { color: @lightest_clr; }
   .fxs_btn_filter{ width:100%; }
   .fxs_togglebtn_txt{
@@ -702,17 +824,17 @@ body.cbp-spmenu-push-toright{
   }
 }
 
-////////////////////////////// /modify r&c sidebar ////////////////////////////////
+////////////////////////////// /NEW RATES AND CHARTS SIDEBAR DESIGN ////////////////////////////////
 
 // Absolute dimension spaces in layout
 .fxs_listView, .fxs_listViewRail {
   @media (min-width: @screen-s) {
     width: @left_rail_space_reduced + 5px;
-    padding-right: 5px;
+    //padding-right: 5px;
   }
   @media (min-width: @screen-l) {
     width: @left_rail_space + 5px;
-    padding-right: 5px;
+    //padding-right: 5px;
   }
 }
 .fxs_listView_space {
@@ -1124,7 +1246,7 @@ body.cbp-spmenu-push-toright{
   background-color: @lightest_clr;
   border-top: 1px solid @light_5_clr;
   position: static;
-  @media(min-width:@screen-m){
+  @media(min-width:@screen-s){
     position: absolute;
   }
   bottom: 100px;
