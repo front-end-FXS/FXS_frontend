@@ -58,12 +58,7 @@
 .cbp-spmenu-push {
   &.cbp-spmenu-push-toright {
     .fxs_sidebar_nav  { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_footer, .fxs_modal_wrap, .modal-backdrop, .fxs_listView  { .translate(@slide_sidebar_space); }
-    @media(min-width:@screen-s){
-      .fxs_listView_vers{
-        .translate(-@slide_sidebar_space);
-      }
-    }
+    .fxs_content, .fxs_header, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(@slide_sidebar_space); }
     &.fxs_isParent_section{
       .fxs_listView {
         .translate(@slide_sidebar_space);
@@ -71,17 +66,17 @@
       }
     }
     @media (min-width: @screen-m) {
-      &.fxs_isParent_section .fxs_listView, .fxs_listView{
+      &.fxs_isParent_section .fxs_listView , .fxs_listView {
         .translate(@slide_sidebar_space);
       }
     }
     @media (min-width: @screen-l) {
-      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop{ .translate(0); }
+      .fxs_content, .fxs_header, .fxs_listView, .fxs_content_subnav, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(0); }
     }
   }
   &.cbp-spmenu-push-toleft {
     .fxs_sidebar_user { visibility: visible; }
-    .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop{ .translate(-@slide_sidebar_space); }
+    .fxs_content, .fxs_header, .fxs_listView, .fxs_footer, .fxs_modal_wrap, .modal-backdrop { .translate(-@slide_sidebar_space); }
   }
 }
 
@@ -590,20 +585,17 @@ body.cbp-spmenu-push-toright{
     padding-right: 5px;
   }
 }
-////////////////////////////// NEW RATES AND CHARTS SIDEBAR DESIGN ////////////////////////////////
-
-///////////// custom sidebar ////////////////
-
+////////////////////////////// modify r&c sidebar ////////////////////////////////
+// custom sidebar
 .fxs_listView_vers{
   background-color: @light_1_clr;
-  padding:0 4px 4px 4px;
-  position: initial;
-  @media(min-width:@screen-s){ position: fixed;}
+  padding:4px;
   .fxs_listView_blockWrapper, .fxs_listview_subnav{
     @media (min-width: @screen-s) { width: 266px; }
     @media (min-width: @screen-l) { width: 316px; }
   }
   .fxs_listView_item{ border-bottom:4px solid @light_1_clr; }
+  .fxs_listview_subnav{ background-color: @light_1_clr; }
   .toggled_txt{ // modify color button
     color: @lightest_clr;
     text-decoration: underline;
@@ -611,34 +603,11 @@ body.cbp-spmenu-push-toright{
     text-transform: none;
   }
   .fxs_listViewRail{
-    &:extend(.fxs_pageSidebar_transition);
     position: relative;
-    top:0;
-    z-index: 2;
-   
-  }
-  .fxs_blur_effect{
-    -webkit-filter: opacity(.1);
-    filter: opacity(.1);
-  }
-  
-}
-
-///////////// custom filter widget and results ////////////////
-
-.fxs_price_filter_sidebar{
-  &:extend(.fxs_pageSidebar_transition);
-  position: fixed;
-  width: 100%;
-  z-index: 7;
-  padding-right: 8px;
-  @media(min-width:@screen-s){
-    width: auto;
-  }
-  .fxs_listview_subnav{ 
-    background-color: @light_1_clr; border-bottom:0; height:45px; 
-    .fxs_helperLabel_title {
-      line-height: @main_header_height;
+    top:0px;
+    @media(min-width:@screen-m){
+      position: absolute;
+      top:37px;
     }
   }
   .fxs_filter_rail_container{
@@ -664,29 +633,15 @@ body.cbp-spmenu-push-toright{
   .fxs_fieldset{
     border-bottom: none;
   }
-  .fxs_listView_mobile{
-    display: inline-block;
-    @media(min-width:@screen-s){
-      display: none;
-    }
-    i{
-      color: @lightest_clr;
-      padding-left: 1rem;
-    }
-  }
   // fixed 
   .fxs_apply_filters_block{
     bottom:@main_header_height;
     position: absolute;
     width:100%;
-    @media(min-width:@screen-s){
+    @media(min-width:@screen-m){
       bottom:5px;
       position: relative;
       bottom:0;
-    }
-    .fxs_col_50{
-      width:50%!important;
-      float: left!important;
     }
     padding:0.2rem;
     .fxs_filter_reset{
@@ -726,7 +681,7 @@ body.cbp-spmenu-push-toright{
         padding-bottom:3px;
         width:80px;
       }
-      width:95%!important;
+      width:300px!important;
       
   }
   .fxs_typeaheadList strong{
@@ -746,7 +701,7 @@ body.cbp-spmenu-push-toright{
     position: absolute;
     top:50px;
     left:4rem;
-    z-index: 4;
+    z-index: 3;
     background: rgba(51, 132, 115, 0.9);
     text-align: center;
     line-height: @main_header_height; 
@@ -759,6 +714,11 @@ body.cbp-spmenu-push-toright{
   }
   .fxs_asset_selected{
     background-color: @light_3_clr!important;
+  }
+
+  .fxs_blur_effect{
+    -webkit-filter: opacity(.1);
+    filter: opacity(.1);
   }
   /*.fxs_typeaheadList > li:nth-child(5) {
       background-color: @light_3_clr; 
@@ -779,22 +739,12 @@ body.cbp-spmenu-push-toright{
     padding: 3px;
     text-decoration: none; // add
   }
-
 }
-///////////// custom filter buttons ////////////////
 
+// custom button
 .fxs_listView_vers_btn{
-  // change button filter behaviour
-  .fxs_btn_content_toggle_collapse{
-    opacity: 0.65;
-    cursor: not-allowed;
-    @media(min-width:@screen-s){
-      opacity: 1;
-      cursor: pointer;
-    }
-  }
   .fxs_helperLabel_title { color: @lightest_clr; }
-  .fxs_btn_filter{ width:100%; top:4px; }
+  .fxs_btn_filter{ width:100%; }
   .fxs_togglebtn_txt{
     position: relative;
     margin-bottom: 5px;
@@ -829,17 +779,17 @@ body.cbp-spmenu-push-toright{
   }
 }
 
-////////////////////////////// /NEW RATES AND CHARTS SIDEBAR DESIGN ////////////////////////////////
+////////////////////////////// /modify r&c sidebar ////////////////////////////////
 
 // Absolute dimension spaces in layout
 .fxs_listView, .fxs_listViewRail {
   @media (min-width: @screen-s) {
     width: @left_rail_space_reduced + 5px;
-    //padding-right: 5px;
+    padding-right: 5px;
   }
   @media (min-width: @screen-l) {
     width: @left_rail_space + 5px;
-    //padding-right: 5px;
+    padding-right: 5px;
   }
 }
 .fxs_listView_space {
@@ -1251,7 +1201,7 @@ body.cbp-spmenu-push-toright{
   background-color: @lightest_clr;
   border-top: 1px solid @light_5_clr;
   position: static;
-  @media(min-width:@screen-s){
+  @media(min-width:@screen-m){
     position: absolute;
   }
   bottom: 100px;
@@ -1853,6 +1803,14 @@ clean rules for new calendar widget
   }
 }
 
+///////////////////// overrite icons font-awsome /////////////////
+.fa-commenting-o:before, .fa-fxstreetblog:before {
+  content: "\f27b";
+}
+.fa-youtube-play:before, .fa-youtube:before {
+  content: "\f16a";
+}
+
 /////////////////////////////////////////////////////////////
 ////////////////////// Chart ///////////////////////////////
 
@@ -1869,6 +1827,9 @@ clean rules for new calendar widget
       background-color:#fff;
       border:none;
       padding-top:0!important;
+      .tt_leftToolbar{
+        padding-right: 0!important;
+      }
       .tt_chartDiv_lastContainer{
         .tt_lastLabel{
           background: @brand_highlight_clr!important;

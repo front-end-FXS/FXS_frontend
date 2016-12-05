@@ -2145,12 +2145,11 @@ width:calc(100% - 320px);
   opacity: .2;
 }
 .fxs_preload_modules {
-  background-image: url('../img/fxs_preloader.gif');
+  background-image: url('../img/icons/fxs_loader.gif');
   width: 30px;
   height: 30px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: 50%;
+  float: right;
+  text-align: right;
 }
 .fxs_notify_btn {
   background-image: none!important;
@@ -2226,6 +2225,14 @@ width:calc(100% - 320px);
 }
 .fxs_fixed_height .fxs_widget_big .tt_chartContainer .tt_copyrightSign {
   display: none;
+}
+.fxs_lineChart_buy .tt_tradingLineMainLine {
+  stroke-width: 1px;
+  stroke: #338473;
+}
+.fxs_lineChart_sell .tt_tradingLineMainLine {
+  stroke-width: 1px;
+  stroke: #d25746;
 }
 .fxs_compare_performance_chart .tt_panelDiv .tt_symbolTitle {
   display: block!important;
@@ -2827,9 +2834,6 @@ lesshat-selector {
 .fxs_paddingBase_top {
   padding-top: 1rem;
 }
-.fxs_paddingBaseDouble_top {
-  padding-top: 45px;
-}
 .fxs_paddingBase_bottom {
   padding-bottom: 1rem;
 }
@@ -3002,6 +3006,11 @@ lesshat-selector {
 .fxs_floatingMedia_imageContainer img {
   min-width: 100%;
   min-height: 100%;
+}
+.fxs_mediaContainer.fxs_mediaContainer_mod,
+.fxs_entryFeatured_img.fxs_mediaContainer_mod,
+.fxs_floatingMedia_imageContainer.fxs_mediaContainer_mod {
+  max-height: 315px;
 }
 .fxs_hidden_xs,
 .fxs_shareContent_holder {
