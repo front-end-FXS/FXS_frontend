@@ -266,6 +266,12 @@ body.cbp-spmenu-push-toright{
       color:@light_3_clr;
     }
   }
+  .fxs_select{
+    .calc(width, ~'100% - 170px');
+  }
+  .fxs_auth_code{
+    .calc(width, ~'100% - 92px');
+  }
 }
 
 // Divider options
@@ -758,16 +764,18 @@ body.cbp-spmenu-push-toright{
   .fxs_label_filter{
     background-color: @brand_highlight_clr;
     color: @lightest_clr;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    position: absolute;
+    position: relative;
     line-height: 29px;
     margin-top: 3px;
-    padding: 0 7px 0 7px;
+    padding:7px;
+    margin-right: -5px;
+    .fa-filter{
+      display: inherit;
+    }
   }
-  .fxs_icon_filter{
+  /*.fxs_icon_filter{
     background-color: @highlight_icon_bg;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -776,7 +784,7 @@ body.cbp-spmenu-push-toright{
     color: @lightest_clr;
     .fa-filter{ display: inherit; }
     margin-left: 54px;
-  }
+  }*/
 }
 
 ////////////////////////////// /modify r&c sidebar ////////////////////////////////

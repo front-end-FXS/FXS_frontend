@@ -2682,9 +2682,9 @@ width:calc(100% - 320px);
   opacity: .2;
 }
 .fxs_preload_modules {
-  background-image: url('../img/icons/fxs_loader.gif');
-  width: 30px;
-  height: 30px;
+  background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/fxs_loader.gif');
+  width: 38px;
+  height: 38px;
   float: right;
   text-align: right;
 }
@@ -4431,6 +4431,20 @@ width:calc(100% - 320px);
   font-size: 0.8rem;
   color: #dddedf;
 }
+.fxs_sidebar_user .fxs_select {
+  -lh-property: 0;
+width:-webkit-calc(100% - 170px);
+width:-moz-calc(100% - 170px);
+width:calc(100% - 170px);
+;
+}
+.fxs_sidebar_user .fxs_auth_code {
+  -lh-property: 0;
+width:-webkit-calc(100% - 92px);
+width:-moz-calc(100% - 92px);
+width:calc(100% - 92px);
+;
+}
 .fxs_sidebar_divider {
   margin: 7.5px 0;
   text-align: center;
@@ -4958,6 +4972,18 @@ height:calc(100% - 45px);
   padding: 3px;
   text-decoration: none;
 }
+.fxs_listView_vers_btn {
+  /*.fxs_icon_filter{
+    background-color: @highlight_icon_bg;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-size: 18px;
+    padding: 3px 7px 4px 7px;
+    color: @lightest_clr;
+    .fa-filter{ display: inherit; }
+    margin-left: 54px;
+  }*/
+}
 .fxs_listView_vers_btn .fxs_helperLabel_title {
   color: #ffffff;
 }
@@ -4977,25 +5003,15 @@ height:calc(100% - 45px);
 .fxs_listView_vers_btn .fxs_label_filter {
   background-color: #304c70;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  position: absolute;
+  position: relative;
   line-height: 29px;
   margin-top: 3px;
-  padding: 0 7px 0 7px;
+  padding: 7px;
+  margin-right: -5px;
 }
-.fxs_listView_vers_btn .fxs_icon_filter {
-  background-color: #0cb5c6;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-  font-size: 18px;
-  padding: 3px 7px 4px 7px;
-  color: #ffffff;
-  margin-left: 54px;
-}
-.fxs_listView_vers_btn .fxs_icon_filter .fa-filter {
+.fxs_listView_vers_btn .fxs_label_filter .fa-filter {
   display: inherit;
 }
 @media (min-width: 680px) {
