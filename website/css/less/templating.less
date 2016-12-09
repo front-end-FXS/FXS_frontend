@@ -1876,6 +1876,22 @@ clean rules for new calendar widget
     // big    
     &.fxs_widget_big{
       height:580px;
+      .tt_leftToolbar > div{
+        border-right:none!important;
+        border-left:none!important;
+        background-color: #f3f3f3;
+        &:hover{
+          background-color: #000;
+        }
+      }
+      .tt_topToolbar > div{
+        border-top:none!important;
+        border-bottom:none!important;
+        background-color: #f3f3f3;
+        &:hover{
+          background-color: #000;
+        }
+      }
     }
     &.fxs_custom_box_sizing{ // regla que se aplica a fxs_widget_big para mantener los estilos por defecto del grafico
       *{
