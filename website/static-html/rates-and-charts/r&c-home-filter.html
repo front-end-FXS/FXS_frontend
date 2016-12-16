@@ -155,86 +155,92 @@
             </div>
 
             <!-- ListView -->
-            <section class="fxs_listView" id="cbp-spmenu-s3">
-                <header class="fxs_listview_subnav">
-                    <h2 class="fxs_helperLabel_title">LATEST RATES & CHARTS <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="breve texto" data-original-title="breve texto explicativo"></i></h2>
+            <section class="fxs_listView fxs_listView_vers" id="cbp-spmenu-s3">
+                <div class="fxs_price_filter_sidebar">
+                    <header class="fxs_listview_subnav fxs_listView_vers_btn">
+                        <h2 class="fxs_helperLabel_title">
+                            <span class="fxs_asset_label_filter">ASSETS</span> 
+                            <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="right" title="breve texto" data-original-title="breve texto explicativo"></i>
+                        </h2>
 
-                    <!-- ///////////////////////////  filter button  /////////////////////////// -->
+                        <!-- ///////////////////////////  filter button  /////////////////////////// -->
 
-                    <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
-                        <div class="fxs_typeaheadContainer">
-                            <!-- <button id="fxs_filter" type="button" class="fxs_btn_filter" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block">
-                                <span class="fxs_togglebtn_txt init_txt"><i class="fa fa-filter" aria-hidden="true"></i></span>
-                                <span class="fxs_skip">Filter results</span>
-                            </button> -->
-                            <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#rates-filter-block" aria-expanded="false" aria-controls="rates-filter-block">
-                                <span class="fxs_togglebtn_txt init_txt"><i class="fa fa-filter" aria-hidden="true"></i></span>
-                                <span class="fxs_togglebtn_txt toggled_txt">Close</span>
-                            </button>
-                            <!-- <div class="fxs_queryResults">
-                                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block">
-                                    Cancel
+                        <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
+                            <div class="fxs_typeaheadContainer">
+                                <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#rates-filter-block" aria-expanded="false" aria-controls="rates-filter-block">
+                                    <div class="fxs_togglebtn_txt init_txt">
+                                        <span class="fxs_label_filter">CUSTOM</span> 
+                                        <span class="fxs_icon_filter"><i class="fa fa-filter" aria-hidden="true"></i></span>
+                                    </div>
+                                    <div class="fxs_togglebtn_txt toggled_txt">Apply none</div>
                                 </button>
-                            </div> -->
-                            <div class="fxs_typeaheadField fxs_txt_center">
-                                <span class="fxs_helperLabel_title">Filter rates & charts</span>
+                                <div class="fxs_typeaheadField fxs_txt_center">
+                                    <span class="fxs_helperLabel_title">Filter rates & charts</span>
+                                </div>
+                                
                             </div>
                         </div>
-                    </div>
-                </header>
+                    </header>
 
-                <!-- ///////////////////////////  filter and results /////////////////////////// -->
+                    <!-- ///////////////////////////  filter and results /////////////////////////// -->
 
-                <div id="rates-filter-block" class="fxs_listViewRail fxs_filter_rail collapse">
-                    <!-- rates typeahead filter -->
-                    <div class="fxs_filter_new fxs_advanced_filter active" id="fxs_typeahead">
-                        <form>
-                            <div class="fxs_typeaheadContainer">
-                                <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
-                                    <i class="fa fa-search"></i>
-                                    <span class="fxs_skip">Add pairs to list</span>
-                                </label>
-                                <div class="fxs_queryResults">
-                                    <button type="reset" title="Clear search" class="fxs_rates_addPair fxs_dismissQuery_disabled"><i class="fa fa-times-circle"></i></button>
-                                </div>
-                                <div class="fxs_typeaheadField">
-                                    <div class="fxs_typeaheadQuery">
-                                        <input id="f" name="f" type="search" placeholder="Add pairs to list" autocomplete="off">
+                    <div id="rates-filter-block" class="fxs_listViewRail fxs_filter_rail collapse">
+                        <!-- rates typeahead filter -->
+                        <div class="fxs_filter_new fxs_advanced_filter active" id="fxs_typeahead">
+                            <form>
+                                <div class="fxs_typeaheadContainer">
+                                    <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
+                                        <i class="fa fa-search"></i>
+                                        <span class="fxs_skip">Add pairs to list</span>
+                                    </label>
+                                    <div class="fxs_queryResults">
+                                        <button type="reset" title="Clear search" class="fxs_rates_addPair fxs_dismissQuery_disabled"><i class="fa fa-times-circle"></i></button>
+                                    </div>
+                                    <div class="fxs_typeaheadField">
+                                        <div class="fxs_typeaheadQuery">
+                                            <input id="f" name="f" type="search" placeholder="Add pairs to list" autocomplete="off">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- /Typeahead -->
-                    <div class="fxs_filter_rail_container">
-                        <form>
-                            <fieldset class="fxs_fieldset">
-                                <legend>Selected items</legend>
-                                <ul class="fxs_list_unstyled fxs_rates_filter_list">
-                                   <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                   <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                   <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                   <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                   <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                               </ul>
-                            </fieldset>
+                            </form>
+                        </div>
+                        <!-- /Typeahead -->
+                        <div class="fxs_filter_rail_container">
+                            <form>
+                                <fieldset id="fxs_listView_defalult" class="fxs_fieldset fxs_scrollable_list">
+                                    <!--<legend>Selected items</legend>-->
+                                    <ul class="fxs_list_unstyled fxs_rates_filter_list">
+                                       <li class="fxs_remove_item"><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>USD/CAD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>NZD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li><div>EUR/GBP</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                       <li class="fxs_add_item fxs_show"><div>EUR/GBP</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
 
-                            <div class="fxs_apply_filters">
-                                <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block" data-toggle="collapse" data-target="#rates-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Apply filters</button>
-                            </div>
-                            
-                            <div class="fxs_apply_filters_block">
-                                <button type="button" class="fxs_btn fxs_btn_line fxs_btn_block" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Clear all filters</button>
-                            </div>
-                        </form>
+                                   </ul>
+                                </fieldset>
+
+                                <div class="fxs_apply_filters_block">
+                                    <div class="fxs_col fxs_col_50">
+                                        <a href="#" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_btn">Apply</a>
+                                    </div>
+                                    <div class="fxs_col fxs_col_50">
+                                        <!--<a href="#" class="fxs_btn fxs_btn_line fxs_btn_block fxs_apply_cancel_btn">Cancel</a>-->
+                                        <button type="button" class="close fxs_btn fxs_btn_line fxs_btn_block fxs_apply_cancel_btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                    </div>
+                                    <div style="clear: both"></div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
+
+                    <!-- ///////////////////////////  end filter and results /////////////////////////// -->
                 </div>
-
-                <!-- ///////////////////////////  end filter and results /////////////////////////// -->
-
-                <nav class="fxs_listViewRail fxs_listViewRail_modified">
+                <nav class="fxs_listViewRail">
                     <ol class="fxs_listView_blockWrapper">
-                        <li class="fxs_listView_item">
+                        <li class="fxs_listView_item fxs_listView_item_high">
                             <div class="fxs_widget_price fxs_widget_price_listView price_down">
                                 <span class="fxs_asset_label_block">
                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
@@ -256,7 +262,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="fxs_listView_item">
+                        <li class="fxs_listView_item fxs_listView_item_high">
                             <div class="fxs_widget_price fxs_widget_price_listView price_down">
                                 <span class="fxs_asset_label_block">
                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
@@ -283,7 +289,7 @@
                             <img class="fxs_hidden_xs fxs_visible_m EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://www.denimblog.com/wp-content/uploads/2009/08/250x250.png" width="250" height="250">
                             <img class="fxs_visible_xs EJEMPLO-DE-ANUNCIO-SCREEN-XS-M" src="http://yaffacdn.s3.amazonaws.com/live/adnews/images/dmImage/SourceImage/opPICTURE06.jpg" width="320" height="49">
                         </li>
-                        <li class="fxs_listView_item">
+                        <li class="fxs_listView_item fxs_listView_item_high">
                             <div class="fxs_widget_price fxs_widget_price_listView price_up">
                                 <span class="fxs_asset_label_block">
                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
@@ -305,7 +311,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="fxs_listView_item">
+                        <li class="fxs_listView_item fxs_listView_item_high">
                             <div class="fxs_widget_price fxs_widget_price_listView price_down">
                                 <span class="fxs_asset_label_block">
                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
@@ -327,7 +333,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="fxs_listView_item">
+                        <li class="fxs_listView_item fxs_listView_item_high">
                             <div class="fxs_widget_price fxs_widget_price_listView price_up">
                                 <span class="fxs_asset_label_block">
                                     <abbr class="fxs_asset_label" title="Euro - US Dollar">
@@ -347,10 +353,8 @@
                                         <span>Low 1.1810</span>
                                     </small>
                                 </div>
-                            </div>>
+                            </div>
                         </li>
-                    
-                    
                     </ol>
                     <div class="fxs_feedbackLoading_msg">
                         <i class="fa fa-refresh fa-spin"></i>
