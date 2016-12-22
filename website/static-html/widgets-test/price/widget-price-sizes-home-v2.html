@@ -201,93 +201,85 @@
                                 <div class="fxs_col fxs_col_50">
                                     <!-- //////////////// widget price filter ///////////////////////////--> 
                                     <div class="fxs_price_filter">
+                                    <header class="fxs_price_filter_header">
+                                        <h3 class="fxs_subtitle">LATEST RATES & CHARTS </h3>
 
-                                        <header class="fxs_price_filter_header fxs_clearfix">
-                                            <h3 class="fxs_subtitle">LATEST RATES & CHARTS </h3>
-
-
-                                            <!-- ///////////////////////////  filter button  /////////////////////////// -->
-                                            <div class="fxs_listView_vers_btn">
-                                                <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
-                                                    <div class="fxs_typeaheadContainer">
-
-                                                        <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#price-filter-block" aria-expanded="false" aria-controls="price-filter-block">
+                                        <!-- ///////////////////////////  filter button  /////////////////////////// -->
+                                        <div class="fxs_listView_vers_btn">
+                                            <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
+                                                <div class="fxs_typeaheadContainer">
+                                                    <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#price-filter-block" aria-expanded="false" aria-controls="price-filter-block">
                                                         <div class="fxs_togglebtn_txt init_txt">
                                                             <span class="fxs_label_filter">CUSTOM <i class="fa fa-filter" aria-hidden="true"></i></span> 
                                                             <!--<span class="fxs_icon_filter"></span>-->
                                                         </div>
                                                         <div class="fxs_togglebtn_txt toggled_txt">Apply none</div>
                                                     </button>
-                                                        <div class="fxs_typeaheadField fxs_txt_center">
-                                                            <span class="fxs_helperLabel_title">Filter rates & charts</span>
-                                                        </div>
-
-                                                        <!--<button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#price-filter-block" aria-expanded="false" aria-controls="price-filter-block">
-                                                            <span class="fxs_togglebtn_txt init_txt">Custom<i class="fa fa-filter" aria-hidden="true"></i></span>
-                                                            <span class="fxs_togglebtn_txt toggled_txt">Close</span>
-                                                        </button>
-
-                                                        <div class="fxs_typeaheadField fxs_txt_center">
-                                                            <span class="fxs_helperLabel_title">Filter rates & charts</span>
-                                                        </div>-->
+                                                    <div class="fxs_typeaheadField fxs_txt_center">
+                                                        <span class="fxs_helperLabel_title">Filter rates & charts</span>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </header>
-
-                                        <!-- ///////////////////////////  filter and results /////////////////////////// -->
-                                       <!-- fxs_listViewRail -->
-                                        <div id="price-filter-block" class="fxs_filter_rail collapse fxs_listViewRail_price_filter">
-                                            
-                                            <div class="fxs_filterResults_bg fxs_clearfix">
-                                                <div class="">
-                                                    <!-- rates typeahead filter -->
-                                                    <div class="fxs_filter_new fxs_advanced_filter active" id="fxs_typeahead">
-                                                        <form>
-                                                            <div class="fxs_typeaheadContainer">
-                                                                <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
-                                                                    <i class="fa fa-search"></i>
-                                                                    <span class="fxs_skip">Add pairs to list</span>
-                                                                </label>
-                                                                <div class="fxs_typeaheadField">
-                                                                    <div class="fxs_typeaheadQuery">
-                                                                        <input id="f" name="f" type="search" placeholder="Add assets" autocomplete="off">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-                                                    </div>
-                                                    <!-- /Typeahead -->
-                                                </div>
-                                                
-                                                <div class="fxs_col fxs_col_50">
-                                                    <div class="fxs_filter_rail_container fxs_filter_price_container">
-                                                        <form>
-                                                            <fieldset class="fxs_fieldset">
-                                                                <legend>Selected items</legend>
-                                                                <ul class="fxs_list_unstyled fxs_rates_filter_list">
-                                                                   <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                                                   <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                                                   <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                                                   <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                                                   <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                                               </ul>
-                                                            </fieldset>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="fxs_col fxs_col_50">
-                                                    <div class="fxs_filter_buttons_container">
-                                                        <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_price" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Apply filters</button>
-
-                                                        <button type="button" class="fxs_btn fxs_btn_line fxs_btn_block" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Clear all filters</button>
-                                                    </div>
-                                                </div>
-                                              
                                             </div>
                                         </div>
+                                    </header>
+                                    <div id="price-filter-block" class="fxs_filter_rail collapse fxs_listViewRail_price_filter fxs_listView_vers">
+                                        
+                                        <div class="fxs_filterResults_bg fxs_clearfix">
+                                            <div class="fxs_filter_new fxs_advanced_filter active" id="fxs_typeahead">
+                                                <form>
+                                                    <div class="fxs_typeaheadContainer">
+                                                        <label for="q" class="fxs_btn_filter" title="Search in Rates & Charts">
+                                                            <i class="fa fa-search"></i>
+                                                            <span class="fxs_skip">Add pairs to list</span>
+                                                        </label>
+                                                        <div class="fxs_queryResults">
+                                                            <button type="reset" title="Clear search" class="fxs_rates_addPair fxs_dismissQuery_disabled"><i class="fa fa-times-circle"></i></button>
+                                                        </div>
+                                                        <div class="fxs_typeaheadField">
+                                                            <div class="fxs_typeaheadQuery">
+                                                                <input id="f" name="f" type="search" placeholder="Add pairs to list" autocomplete="off">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- /Typeahead -->
+                                           
+                                            <div class="fxs_col fxs_col_50">
+                                                <div class="fxs_filter_rail_container fxs_filter_price_container">
+                                                    <form>
+                                                        <fieldset class="fxs_fieldset fxs_scrollable_list">
+                                                            <ul class="fxs_list_unstyled fxs_rates_filter_list">
+                                                               <li><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>AUD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                               <li><div>USD/CHF</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
+                                                           </ul>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="fxs_col fxs_col_50">
+                                                <div class="fxs_filter_buttons_container">
+                                                        <a href="#" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_btn">Apply</a>
+                                                        <!--<a href="#" class="fxs_btn fxs_btn_line fxs_btn_block fxs_apply_cancel_btn">Cancel</a>-->
+                                                        <button type="button" class="close fxs_btn fxs_btn_line fxs_btn_block fxs_apply_cancel_btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                                    <div style="clear: both"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--<div class="fxs_col fxs_col_50">
+                                                <div class="fxs_filter_buttons_container">
+                                                    <button type="button" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_price" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Apply filters</button>
 
+                                                    <button type="button" class="fxs_btn fxs_btn_line fxs_btn_block" data-toggle="collapse" data-target="#price-filter-block" aria-controls="rates-filter-block" data-remove="filter-active-class">Clear all filters</button>
+                                                </div>
+                                            </div>-->
+                                        </div>
                                     </div>
+                                </div>
 
                                     <!-- //////////////// end widget price filter ///////////////////////////--> 
                                     <div class="fxs_filter_wrapper fxs_clearfix">
@@ -1597,11 +1589,11 @@
             <!-- Timezones -->
             <div class="fxs_pageSidebar fxs_timezone_items">
                 <div class="fxs_timezone_nav">
-                <span class="fxs_helperLabel_title">Change timezone</span>
-                <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
-                    Cancel
-                </button>
-            </div>
+                    <span class="fxs_helperLabel_title">Change timezone</span>
+                    <button type="button" class="fxs_btn fxs_dismissQuery" data-toggle="fxs_timezone_items">
+                        Cancel
+                    </button>
+                </div>
                 <div class="fxs_nav_menu fxs_timezone_hours">
 
                     <ol>

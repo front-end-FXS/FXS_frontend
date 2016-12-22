@@ -246,10 +246,10 @@ $(document).ready(function () {
 
     //////////////// toggle timezone nabvar button //////////////////
 
-    /*$('.fxs_timezone_btn_navbar').on('click', function(){
+    $('.fxs_timezone_btn_navbar').on('click', function(){
         $(body).addClass('cbp-spmenu-push-toleft');
         //$('.fxs_timezone_items').toggleClass('fxs_show_timezoneHours');
-    });*/
+    });
 
 
     // USER ZONE
@@ -341,9 +341,9 @@ $(document).ready(function () {
       // optimization images load time
 
 
-    //$('.sticky').fixTo('.sticky-holder',{
-        //top: 130
-    //});
+    $('.sticky').fixTo('.sticky-holder',{
+        top: 130
+    });
 
     //$('.sticky').fixTo('.sticky-holder');
     // sticky
