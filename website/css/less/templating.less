@@ -24,7 +24,7 @@
   &:extend(.fxs_pageSidebar_transition, .fxs_scrollableContent all);
   position: relative;
   background-color: @light_4_clr;
-  overflow: hidden;
+  overflow: visible;
   height: 100%;
   padding-top: @base_module_size;
   .calc(height, ~'100% - @{double_module_size}');
@@ -593,26 +593,27 @@ body.cbp-spmenu-push-toright{
 }
 ////////////////////////////// modify r&c sidebar ////////////////////////////////
 // custom sidebar
-.fxs_price_filter_sidebar{
-  &:extend(.fxs_pageSidebar_transition);
-  position: fixed;
-  width: 100%;
-  z-index: 7;
-  padding-right: 8px;
-  @media(min-width:@screen-s){
-    width: auto;
+.fxs_listView_vers{
+  .fxs_filter{
+    overflow: inherit;
   }
-  .fxs_listview_subnav{ 
-    border-bottom:0; height:45px; 
-    .fxs_helperLabel_title {
-      line-height: @main_header_height;
-    }
+  .toggled_txt{ // modify color button
+    color: @dark_4_clr;
+    text-decoration: underline;
+    font-size: @txt_size_xsmall;
+    text-transform: none;
   }
   .fxs_filter_rail_container{
+    background-color: @lightest_clr;
     min-height: 100%;
     @media(min-width:@screen-m){
-      min-height:40%;
-      padding: 1rem 0 5px
+      padding: 1rem 0 5px;
+      min-height: 40%;
+    }
+  }
+  &.fxs_listViewRail_price_filter{
+    li{
+      border-bottom:0!important;
     }
   }
   .fxs_rates_filter_list{
@@ -620,12 +621,8 @@ body.cbp-spmenu-push-toright{
       font-size: @txt_size_xsmall;
       font-weight: 400;
       color:@dark_4_clr; 
-      border-bottom:1px solid @lightest_clr;
+      border-bottom:1px solid @light_4_clr;
       padding: 3px;
-    }
-    // font awsome custom
-    .fxs_show{
-      display: none;
     }
     .fa-minus-circle{
       color: @dark_4_clr;
@@ -634,39 +631,22 @@ body.cbp-spmenu-push-toright{
   .fxs_fieldset{
     border-bottom: none;
   }
-  .fxs_listView_mobile{
-    display: inline-block;
-    @media(min-width:@screen-s){
-      display: none;
-    }
-    i{
-      color: @dark_4_clr;
-      padding-left: 1rem;
-    }
-  }
   // fixed 
   .fxs_apply_filters_block{
-    bottom:@main_header_height;
+    bottom:10px;
     position: absolute;
     width:100%;
-    background-color: @light_1_clr;
-    @media(min-width:@screen-s){
+    display: inline-block!important;
+    @media(min-width:@screen-m){
       bottom:5px;
       position: relative;
       bottom:0;
-    }
-    .fxs_col_50{
-      width:50%!important;
-      float: left!important;
     }
     padding:0.2rem;
     .fxs_filter_reset{
       font-size: @txt_size_xsmall;
       text-decoration: underline;
       font-weight: 400;
-      &:hover{
-        text-decoration: none;
-      }
     }
     .fxs_assets_info{
       background-color: #B1C4D5;
@@ -681,48 +661,66 @@ body.cbp-spmenu-push-toright{
       }
     }
   }
-}
-.fxs_listView_vers{
-  background-color: @lightest_clr;
-  padding:0 4px 4px 4px;
-  position: initial;
-  @media(min-width:@screen-s){ position: fixed;}
-  .fxs_listView_blockWrapper, .fxs_listview_subnav{
-    @media (min-width: @screen-s) { width: 266px; }
-    @media (min-width: @screen-l) { width: 316px; }
+
+  .fxs_typeaheadList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      font-size: .92rem;
+      background-color: #fff;
+      border: 0!important;
+      list-style: none;
+      margin: 3px 0 0 0.5rem!important; //add
+      padding: 0;
+      .fxs_typeaheadTxt{
+        padding-left:1rem;
+        padding-top:3px;
+        padding-bottom:3px;
+        width:80px;
+      }
+      width:300px!important;
+      
   }
-  .toggled_txt{ // modify color button
-    color: @dark_4_clr;
-    text-decoration: underline;
-    font-size: @txt_size_xsmall;
-    text-transform: none;
+  .fxs_typeaheadList strong{
+    background-color: transparent!important;
   }
-  .fxs_listViewRail{
-    &:extend(.fxs_pageSidebar_transition);
-    position: relative;
-    top:0;
-    z-index: 2;
-    .calc(height, ~'100% - @{main_header_height_custom} - @{main_header_height}');
+  .fxs_typeaheadList > li{
+    border: 0!important;
   }
+  .fxs_asset_selected{
+    background-color: @light_3_clr!important;
+  }
+
   .fxs_blur_effect{
     -webkit-filter: opacity(.1);
     filter: opacity(.1);
   }
-  
+  /*.fxs_typeaheadList > li:nth-child(5) {
+      background-color: @light_3_clr; 
+  }
+  .fxs_typeaheadList > li:nth-child(3) {
+      background-color: @light_3_clr; 
+  }*/
+  .fxs_typeaheadList > li a {
+    display: block;
+    padding: 5px 1rem;
+    clear: both;
+    font-size: @txt_size_xsmall; // add
+    font-weight: 400;
+    line-height:normal!important;
+    color: #49494f;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 3px;
+    text-decoration: none; // add
+  }
 }
 
+// custom button
 .fxs_listView_vers_btn{
-  // change button filter behaviour
-  .fxs_btn_content_toggle_collapse{
-    opacity: 0.65;
-    cursor: not-allowed;
-    @media(min-width:@screen-s){
-      opacity: 1;
-      cursor: pointer;
-    }
-  }
-  .fxs_helperLabel_title { color: @dark_4_clr; }
-  .fxs_btn_filter{ width:100%; top:4px; }
+  .fxs_btn_filter{ width:100%; }
   .fxs_togglebtn_txt{
     position: relative;
     margin-bottom: 5px;
@@ -731,25 +729,26 @@ body.cbp-spmenu-push-toright{
     width: 85px!important;
     .toggled_txt{
       font-size: @txt_size_xsmall!important;
-      &:hover{
-        text-decoration: none;
-        color: @lightest_clr;
-      }
+    }
+    .fxs_btn{
+      padding:0 5px 0 0;
     }
   }
   .fxs_label_filter{
-    background-color: @brand_highlight_clr;
-    color: @lightest_clr;
-    font-size: 10px;
+    background-color: #304c70;
+    color: #fff;
+    font-size: 12px;
     font-weight: 400;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    position: absolute;
+    position: relative;
     line-height: 29px;
     margin-top: 3px;
-    padding: 0 7px 0 7px;
+    padding: 7px;
+    margin-right: -5px;
+    .fa-filter{
+      display: inherit;
+    }
   }
-  .fxs_icon_filter{
+  /*.fxs_icon_filter{
     background-color: @highlight_icon_bg;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -758,7 +757,7 @@ body.cbp-spmenu-push-toright{
     color: @lightest_clr;
     .fa-filter{ display: inherit; }
     margin-left: 54px;
-  }
+  }*/
 }
 
 ////////////////////////////// /modify r&c sidebar ////////////////////////////////
@@ -796,7 +795,7 @@ body.cbp-spmenu-push-toright{
 .fxs_listViewRail {
   &:extend(.fxs_scrollableContent all);
   position: absolute;
-  top: @base_module_size + 2;
+  top: @base_module_size + 5;
   width: 100%;
   .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
   @media (min-width: @screen-l) {
@@ -1168,12 +1167,13 @@ body.cbp-spmenu-push-toright{
 
 .fxs_filter_rail_container {
   &:extend(.fxs_listView_space all);
-  position: relative;
-  min-height: 100%;
+  //position: relative;
   background-color: @lightest_clr;
   padding: 1rem 0 20px;
+  min-height: 100%;
   &.fxs_filter_price_container{ // price filter container
     width:100%;
+    min-height: 40%;
   }
 }
 
