@@ -84,6 +84,12 @@
   }
 }
 
+.fxs_custom_author_segment{
+  .fxs_article_author{
+    width: 270px;
+  }
+}
+
 //
 .fxs_definition_list{
   .fxs_clean_list{
@@ -91,6 +97,19 @@
   }
   .fxs_divider_third{
     margin-bottom:0;
+  }
+}
+.fxs_list_unstyled{
+  &.fxs_custom_newsletter_segments{
+    .fxs_custom_label{
+      min-width: 270px;
+      display: inline-block;
+    }
+    li{
+      margin-top: 5px;
+      border-bottom: 1px solid @light_4_clr;
+      max-width: 400px;
+    }
   }
 }
 
