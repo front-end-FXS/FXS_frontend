@@ -2683,7 +2683,6 @@ width:calc(100% - 320px);
   border-bottom: none;
 }
 .fxs_price_filter .fxs_filter_buttons_container {
-  padding-top: 20px;
   max-width: 420px;
 }
 .fxs_table_prices_block tbody > tr {
@@ -2712,24 +2711,6 @@ width:calc(100% - 320px);
 .fxs_notify_btn span:hover {
   color: #1b1c23;
 }
-/*.fxs_preload{
-  &.fxs_custom_site_elements_preload{
-    visibility: hidden;
-    height:30px;
-  }
-  height:100px;
-  &.fxs_ad_role{
-    height:2rem;
-  }
-  .fa{
-    color:@info_clr;
-    vertical-align: middle;
-  }
-  .fxs_preload_spin_text{
-    padding-left:@half_base_spacer;
-    vertical-align: middle;
-  }
-}*/
 .c3 .tick line {
   zoom: 1;
   filter: alpha(opacity=0);
@@ -4667,6 +4648,15 @@ height:calc(100% - 45px);
 .fxs_contentView .fxs_feedbackLoading_msg {
   margin-bottom: 7.5px;
 }
+.fxs_contentView.fxs_contentView-full {
+  padding: 45px 0 0 0;
+  background-color: #ffffff;
+}
+@media (min-width: 1150px) {
+  .fxs_contentView.fxs_contentView-full {
+    padding: 45px 2rem 0 0;
+  }
+}
 .fxs_sectionTitle {
   margin: auto auto 6px auto;
   max-width: 1033px;
@@ -4850,7 +4840,7 @@ height:calc(100% - 45px);
 @media (min-width: 1024px) {
   .fxs_listView_vers .fxs_filter_rail_container {
     padding: 1rem 0 5px;
-    min-height: 40%;
+    min-height: auto;
   }
 }
 .fxs_listView_vers.fxs_listViewRail_price_filter li {
@@ -6851,6 +6841,40 @@ width:calc(100% - 315px - 5px);
     width: 25%;
   }
 }
+.fxs_wide_col {
+  width: 100%;
+}
+.fxs_wide_col .fxs_flex_ad_col {
+  width: 150px;
+  float: left;
+}
+@media (min-width: 1280px) {
+  .fxs_wide_col .fxs_flex_ad_col {
+    width: 320px;
+  }
+}
+.fxs_wide_col .fxs_flex_col {
+  float: left;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .fxs_wide_col .fxs_flex_col {
+    -lh-property: 0;
+width:-webkit-calc(100% - ((150px)));
+width:-moz-calc(100% - ((150px)));
+width:calc(100% - ((150px)));
+;
+  }
+}
+@media (min-width: 1280px) {
+  .fxs_wide_col .fxs_flex_col {
+    -lh-property: 0;
+width:-webkit-calc(100% - ((320px)));
+width:-moz-calc(100% - ((320px)));
+width:calc(100% - ((320px)));
+;
+  }
+}
 .fxs_col_15 {
   min-height: 100px;
 }
@@ -7037,15 +7061,6 @@ width:calc(100% - 150px);
   .fxs_sponsored_content_row {
     padding: 0 1rem 1rem;
   }
-}
-.pablo_test_translate {
-  -webkit-animation: fadeInDown 0.7s ease-in;
-  -moz-animation: fadeInDown 0.7s ease-in;
-  -o-animation: fadeInDown 0.7s ease-in;
-  animation: fadeInDown 0.7s ease-in;
-  width: 200px;
-  height: 200px;
-  background-color: #1b1c23;
 }
 .fxs_suscribe {
   border-top: 3px solid #ececf1;
