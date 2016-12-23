@@ -463,6 +463,13 @@ body.cbp-spmenu-push-toright{
     &:extend(.fxs_contentRail_box);
     margin-bottom: @half_base_spacer;
   }
+  &.fxs_contentView-full{
+    padding: @main_header_height 0 0 0;
+    background-color: @lightest_clr;
+    @media(min-width:@screen-l){
+      padding: @main_header_height 2rem 0 0;
+    }
+  }
 }
 
 .fxs_sectionTitle {
@@ -608,7 +615,7 @@ body.cbp-spmenu-push-toright{
     min-height: 100%;
     @media(min-width:@screen-m){
       padding: 1rem 0 5px;
-      min-height: 40%;
+      min-height: auto;
     }
   }
   &.fxs_listViewRail_price_filter{
@@ -2336,7 +2343,28 @@ clean rules for new calendar widget
   }
 }
 
-// 15% //
+// new full col //
+.fxs_wide_col{
+  width: 100%;
+  .fxs_flex_ad_col {
+    width: @left_rail_space_small;
+    float: left;
+    @media(min-width:@screen-xl){
+      width: @left_rail_space;
+    }
+  }
+  .fxs_flex_col{
+    float: left;
+    width:100%;
+    @media(min-width:@screen-m){
+      .calc(width, ~'100% - ((@{left_rail_space_small}))');
+    }
+    @media(min-width:@screen-xl){
+      .calc(width, ~'100% - ((@{left_rail_space}))');
+    }
+  }
+
+}
 .fxs_col_15 { min-height: 100px; .make-s-column(2); .make-m-column(2); }
 
 /////////////// Flexible cols //
@@ -2462,15 +2490,6 @@ clean rules for new calendar widget
   @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
 }
 
-
-////////////////////  TEST TRANSITIONS /////////////////////////////////////////
-
-.pablo_test_translate{
-  .animation(fadeInDown 0.70s ease-in);
-  width:200px;
-  height:200px;
-  background-color: @dark_1_clr;
-}
 
 
 
