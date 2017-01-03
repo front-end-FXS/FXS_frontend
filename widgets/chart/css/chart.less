@@ -1,0 +1,89 @@
+// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+////////////////////////////////////////////////
+//////////// Widget Gauge module //////////////
+//////////////////////////////////////////////
+
+// override teletrader chart widget
+.fxs_custom_top{ // rule to override 'fxs_modal_wrap' behavior
+  top:0!important;
+}
+.fxst_chart_title{
+  padding-right: 20px;
+}
+.fxs_widget_chart{
+  .fxs_tabs_nav{
+      margin:0;
+  }
+  .fxs_widget_chart_graph{    
+    .tt_chartContainer{
+      background-color:#fff;
+      border:none;
+      padding-top:0!important;
+      .tt_chartDiv_lastContainer{
+        .tt_lastLabel{
+          background: @brand_highlight_clr!important;
+        }
+      }
+    }
+
+    // default
+    &.fxs_widget_default{
+      height:260px!important;
+      .tt_panelDiv{
+        height: 135px; // capa contenedora
+      }
+      .tt_lastLabel{
+        background: @brand_highlight_clr!important;
+      }
+      .tt_copyrightSign, .tt_symbolTitle{
+        display:none;
+      }
+    }
+
+    // mini
+    &.fxs_widget_mini{
+      height:150px!important;
+      .tt_panelDiv{
+        height: 125px!important; // capa contenedora 
+      }
+      .fxs_tabs_nav{
+        display:none;
+      }
+      .tt_copyrightSign, .tt_symbolTitle{
+        display:none;
+      }
+    }
+
+    // big    
+    &.fxs_widget_big{
+      height:580px;
+      .tt_leftToolbar > div{
+        border-right:none!important;
+        border-left:none!important;
+        background-color: #f3f3f3;
+        &:hover{
+          background-color: #000;
+        }
+      }
+      .tt_topToolbar > div{
+        border-top:none!important;
+        border-bottom:none!important;
+        background-color: #f3f3f3;
+        &:hover{
+          background-color: #000;
+        }
+      }
+    }
+    &.fxs_custom_box_sizing{ // regla que se aplica a fxs_widget_big para mantener los estilos por defecto del grafico
+      *{
+        .box-sizing(content-box);
+      }
+    }
+  } 
+}
