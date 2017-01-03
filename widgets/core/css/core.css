@@ -510,6 +510,7 @@ width:calc(100% - 165px);
 .fxs_btn_icon[disabled],
 fieldset[disabled] .fxs_btn,
 fieldset[disabled] .fxs_btn_icon {
+  cursor: auto;
   zoom: 1;
   filter: alpha(opacity=65);
   -webkit-opacity: 0.65;
@@ -2015,6 +2016,12 @@ width:calc(100% - 320px);
 .fxs_widget_small {
   display: block;
 }
+.fxst_custom_content.fxst_chart_title {
+  padding-right: 20px;
+}
+.fxec_tabcontent .chart_path_line {
+  direction: ltr!important;
+}
 .fxs_gauge_container {
   display: inline-block;
   max-width: 190px;
@@ -2760,6 +2767,10 @@ lesshat-selector {
 }
 .fxs_border_bottom_second {
   border-bottom: 1px solid #ececf1;
+}
+.fxs_marginAuto {
+  margin: 0 auto;
+  float: none;
 }
 .fxs_hideElements {
   display: none;
