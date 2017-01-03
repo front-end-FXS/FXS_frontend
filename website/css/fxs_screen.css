@@ -948,6 +948,7 @@ fieldset[disabled] .fxs_btn_icon,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed.disabled,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed[disabled],
 fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.collapsed {
+  cursor: auto;
   zoom: 1;
   filter: alpha(opacity=65);
   -webkit-opacity: 0.65;
@@ -2552,6 +2553,12 @@ width:calc(100% - 320px);
 .fxs_widget_small {
   display: block;
 }
+.fxst_custom_content.fxst_chart_title {
+  padding-right: 20px;
+}
+.fxec_tabcontent .chart_path_line {
+  direction: ltr!important;
+}
 .fxs_gauge_container {
   display: inline-block;
   max-width: 190px;
@@ -3403,6 +3410,10 @@ h5 a:hover,
 }
 .fxs_border_bottom_second {
   border-bottom: 1px solid #ececf1;
+}
+.fxs_marginAuto {
+  margin: 0 auto;
+  float: none;
 }
 .fxs_hideElements {
   display: none;
@@ -4301,6 +4312,7 @@ height:calc(100% - 35px);
 .fxs_show_usermenu[disabled],
 fieldset[disabled] .fxs_show_navmenu,
 fieldset[disabled] .fxs_show_usermenu {
+  cursor: auto;
   zoom: 1;
   filter: alpha(opacity=65);
   -webkit-opacity: 0.65;
@@ -4649,13 +4661,7 @@ height:calc(100% - 45px);
   margin-bottom: 7.5px;
 }
 .fxs_contentView.fxs_contentView-full {
-  padding: 45px 0 0 0;
   background-color: #ffffff;
-}
-@media (min-width: 1150px) {
-  .fxs_contentView.fxs_contentView-full {
-    padding: 45px 2rem 0 0;
-  }
 }
 .fxs_sectionTitle {
   margin: auto auto 6px auto;
@@ -5056,7 +5062,7 @@ height:calc(100% - 35px - 45px);
   background-color: #ffffff;
   position: relative;
   padding: 0 1rem;
-  z-index: 2;
+  z-index: 3;
   border-bottom: 1px solid #f3f3f8;
 }
 .fxs_listview_subnav .fxs_helperLabel_title {
@@ -5150,10 +5156,6 @@ height:calc(100% - 35px - 45px);
   background-color: #ffffff;
   height: 100%;
   position: relative;
-}
-.fxs_queryResults,
-.fxs_queryResults_label {
-  display: none;
 }
 .fxs_typeaheadField {
   position: relative;
@@ -5317,6 +5319,7 @@ height:calc(100% - 35px - 45px);
 fieldset[disabled] .fxs_btn_filter,
 fieldset[disabled] .fxs_dismissQuery,
 fieldset[disabled] .fxs_rates_addPair {
+  cursor: auto;
   zoom: 1;
   filter: alpha(opacity=65);
   -webkit-opacity: 0.65;
@@ -5404,7 +5407,7 @@ fieldset[disabled] .fxs_rates_addPair {
   margin-bottom: 5px;
 }
 .fxs_rates_filter_list li div {
-  min-width: 65px;
+  min-width: 140px;
   display: inline-block;
 }
 .fxs_rates_filter_list .fa-minus-circle {
@@ -6107,6 +6110,7 @@ clean rules for new calendar widget
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse.disabled,
 .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse[disabled],
 fieldset[disabled] .fxs_broker_contact_footer .fxs_btn_content_toggle_collapse {
+  cursor: auto;
   zoom: 1;
   filter: alpha(opacity=65);
   -webkit-opacity: 0.65;
@@ -6501,7 +6505,7 @@ width:calc(100% - 315px - 5px);
   .fxs_push_timezone .fxs_wallpaper_wrap {
     top: 0;
     right: 0;
-    position: inherit;
+    position: absolute;
   }
 }
 @media (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 0) {
@@ -6848,11 +6852,6 @@ width:calc(100% - 315px - 5px);
   width: 150px;
   float: left;
 }
-@media (min-width: 1280px) {
-  .fxs_wide_col .fxs_flex_ad_col {
-    width: 320px;
-  }
-}
 .fxs_wide_col .fxs_flex_col {
   float: left;
   width: 100%;
@@ -6863,15 +6862,6 @@ width:calc(100% - 315px - 5px);
 width:-webkit-calc(100% - ((150px)));
 width:-moz-calc(100% - ((150px)));
 width:calc(100% - ((150px)));
-;
-  }
-}
-@media (min-width: 1280px) {
-  .fxs_wide_col .fxs_flex_col {
-    -lh-property: 0;
-width:-webkit-calc(100% - ((320px)));
-width:-moz-calc(100% - ((320px)));
-width:calc(100% - ((320px)));
 ;
   }
 }
@@ -7567,8 +7557,7 @@ max-width:calc(100% - ( 85px + 10px ));
 }
 .fxs_live_event_cell .fxs_live_event_cta_content {
   max-width: inherit;
-  padding-top: 0;
-  padding-bottom: 7.5px;
+  padding: 0 1rem 7.5px 1rem;
 }
 .fxs_live_event_cell .fxs_btn_content_toggle {
   color: #a3a3a8;
@@ -7998,6 +7987,9 @@ max-width:calc(100% - ( 85px + 10px ));
 }
 .fxs_custom_top {
   top: 0!important;
+}
+.fxst_chart_title {
+  padding-right: 20px;
 }
 .fxs_widget_chart .fxs_tabs_nav {
   margin: 0;

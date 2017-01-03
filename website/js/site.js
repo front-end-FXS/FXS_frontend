@@ -119,8 +119,8 @@ $(document).ready(function () {
 
     var ratesFilter = {
         pairs: [ 
-            //"EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
-            //"NZD/USD", "GBP/JPY"
+            "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+            "NZD/USD", "GBP/JPY"
         ]
     }
 
@@ -135,8 +135,7 @@ $(document).ready(function () {
         source:{
             pairs: {
                 data: ratesFilter.pairs,
-                template: '',
-                //template:' '<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">
+                template:'<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
             }
         },
         debug: true

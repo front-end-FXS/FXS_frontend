@@ -169,15 +169,21 @@ dl > dt,dd{
     padding: 0; 
 }
 .fxst_custom_content{
-    margin:15px 0 15px 15px;
+    margin:15px 15px 15px 15px;
     color:@colorTextSecondary;
     display:block;
     &.fxst_chart_title{
         font-size:@titleTextSize;
+        padding-right: 20px;
     }
     @media(min-width:@screen-m){
         display:inline-block;
     }
+}
+.fxec_tabcontent{
+  .chart_path_line{
+    direction: ltr!important;
+  }
 }
 .fxst_select_label,.fxst_custom_select{
     display:inline-block;
@@ -2305,6 +2311,7 @@ fxst-olsendata {
   text-transform: uppercase;
   position: relative;
   z-index: 100000;
+  right: 20px;
 }
 .fxst-preliminar {
   color: #868686;
@@ -2666,6 +2673,9 @@ fxst-olsendata {
 .fxst-lang-ae{
   direction: rtl;
   text-align: right;
+  .chart_path_line{
+    direction: ltr!important;
+  }
   td{
     text-align: right!important;
   }

@@ -1426,6 +1426,20 @@
 
 .fxs_widget_small { display: block; }
 
+
+// Override css rules to solve problem with C3 languages support
+.fxst_custom_content{
+  &.fxst_chart_title{
+      padding-right: 20px;
+  }
+}
+
+.fxec_tabcontent{
+  .chart_path_line{
+    direction: ltr!important;
+  }
+}
+
 // Gauge chart container
 .fxs_gauge_container {
   display: inline-block; 
