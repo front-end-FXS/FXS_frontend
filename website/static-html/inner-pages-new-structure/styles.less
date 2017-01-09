@@ -1,0 +1,57 @@
+// Vendor imports
+@import "../../css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../css/less/vars.less";
+@import "../../css/less/mixins.less";
+
+// test container 
+.fxs_pages_container{
+  max-width: 1280px;
+  @media(min-width:@screen-xl){
+    max-width: 1353px;
+    .fxs_content_subnav, .fxs_global_alert{
+      //.calc(width, ~'100% - 1033px');
+      width:72%;  
+    }
+    .fxs_wallpaper_wrap{
+      display: none;
+    }
+  }
+  @media(min-width:@screen-hd){
+    max-width: 1280px;
+    .fxs_content_subnav, .fxs_global_alert{
+      //.calc(width, ~'100% - 940px'); 
+      width:50.5%; 
+    }
+    .fxs_wallpaper_wrap{
+      display: block;
+    }
+  }
+  margin: 0 auto!important;
+  .fxs_wallpaper_wrap {
+    z-index: 2;
+    &.fxs_innerpages_wallpaper{
+      top:0;
+    }
+  }
+  .fxs_detail{
+  	z-index: 2;
+  }
+}
+.fxs_contentView{
+  padding:0;
+}
+
+.fxs_footer{
+  &.fxs_footer-wall{
+    @media(min-width:@screen-xl){
+      margin-left: 360px;
+      width:72%;
+    }
+    @media(min-width:@screen-hd){
+      margin-left: 637px;
+      width:50%;
+    }
+  }
+}

@@ -208,7 +208,6 @@ body.cbp-spmenu-push-toright{
     top:50px;
     //left: @left_rail_space;
     .calc(width, ~'100% - @{left_rail_space}'); 
-
   }
   .fxs_content_wide &{
     top:50px;
@@ -464,6 +463,13 @@ body.cbp-spmenu-push-toright{
     margin-bottom: @half_base_spacer;
   }
   &.fxs_contentView-full{
+    padding:0;
+    .fxs_flex_col{
+      padding-left:0;
+    }
+    .fxs_flex_ad_col {
+      padding-top:@base_module_size;
+    }
     //padding: @main_header_height 0 0 0;
     background-color: @lightest_clr;
     @media(min-width:@screen-l){
@@ -1087,7 +1093,46 @@ body.cbp-spmenu-push-toright{
 }
 
 // query rates and charts results
-
+/*
+.fxs_rates_filter_list, .typeahead__result{
+  background-color: @lightest_clr;
+  ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-bottom: 0;
+  }
+  li{
+    &:extend(.fxs_list_unstyled);
+    padding: 5px 1rem;
+    margin-bottom: 5px;
+    border-bottom: solid 1px @light_5_clr;
+    a {
+      display: block;
+      clear: both;
+      color: @dark_4_clr;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    a:hover, a:focus, &.active a {
+      color: @dark_3_clr;
+      text-decoration: none;
+    }
+    span,div{
+      min-width:140px;
+      display: inline-block;
+      font-size: @txt_size_xsmall;
+      text-transform: uppercase;
+      font-weight: @txt_fontweight;
+    }
+  }
+  .fa-minus-circle{
+    color:@error_clr;
+    cursor: pointer;
+  }
+}
+*/
 .fxs_rates_filter_list{
   li{
     font-size: @txt_size_small;
@@ -1105,12 +1150,14 @@ body.cbp-spmenu-push-toright{
 }
 
 // TYPEAHEAD
+
 .fxs_typeaheadContainer {
   position: relative;
   &.result .fxs_typeaheadList { display: block!important; }
   .fxs_typeaheadList { display: none!important; }
   &.hint .typeahead-hint { visibility: visible!important; }
   .typeahead-hint { visibility: hidden!important; }
+  border-bottom: solid 1px @light_5_clr;
 }
 .fxs_typeaheadQuery {
   background: @lightest_clr;
@@ -1118,7 +1165,8 @@ body.cbp-spmenu-push-toright{
 }
 
 // Typeahead results list
-.fxs_typeaheadList {
+
+.fxs_typeaheadList{
   &:extend(.fxs_list_unstyled);
   position: absolute;
   top: 100%;
@@ -1165,6 +1213,7 @@ body.cbp-spmenu-push-toright{
     vertical-align: top;
   }
 }
+
 
 //////////////////////////
 // Filter rail in listView
@@ -2126,75 +2175,75 @@ clean rules for new calendar widget
 
 .tags-flag-custom {
     display: inline-block;
-    width: 16px;
-    height: 13px;
-    background-image: url('../img/sprite-flags5.png');
+    width: 14px;
+    height: 11px;
+    background-image: url('https://staticcontent.azureedge.net/website/img/sprites/sprite-flags5.png');
     background-repeat: no-repeat;
     margin-left:5px;
-    border: 1px solid #ccc;
+    //border: 1px solid #ccc;
 }
 
-.i-ar-AE {
+.ar-ae {
     background-position: -14px 0;
 }
-.i-br {
+.br-br {
     //background-position: -84px 0 (no)
 }
-.i-ca-ES {
+.ca-es {
     background-position: -112px 0;
 }
-.i-zh-CN{
+.zh-cn{
     background-position: -154px 0; // chinesse
 }
-.i-zh-CHT{
+.zh-cht{
     background-position: -336px 0; // korean
 }
-.i-ch {
+.ch-ch {
     //background-position: -126px 0 (no)
 }
-.i-de-DE {
+.de-de {
     background-position: -196px 0;
 }
-.i-es-ES {
+.es-es {
     background-position: -280px 0;
 }
-.i-fr-FR {
+.fr-fr {
     background-position: -308px 0;
 }
-.i-chi {
+.chi {
     //background-position: -336px 0 (no)
 }
-.i-hu-HU {
+.hu-hu {
     background-position: -350px 0;
 }
-.i-id-ID {
+.id-id {
     background-position: -364px 0;
 }
-.i-it-IT {
+.it-it {
     background-position: -448px 0;
 }
-.i-ja-JP {
+.ja-jp {
     background-position: -462px 0;
 }
-.i-ko-KR {
+.ko-kr {
     background-position: -476px 0;
 }
-.i-pl-PL {
+.pl-pl {
     background-position: -84px -11px;
 }
-.i-pt-PT {
+.pt-pt {
     background-position: -98px -11px;
 }
-.i-ru-RU {
+.ru-ru {
     background-position: -126px -11px;
 }
-.i-tr-TR {
+.tr-tr {
     background-position: -210px -11px;
 }
-.i-vi-VN {
+.vi-vn {
     background-position: -294px -11px;
 }
-.i-en-US {
+.en-us {
     background-position: -322px -11px;
 } 
 

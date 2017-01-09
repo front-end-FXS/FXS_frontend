@@ -177,19 +177,20 @@
                             <!-- widget starts here -->
                             <div class="fxs_widget_summary">
                                 <ul class="fxs_tabs_nav">
-                                    <li><a data-toggle="tab" href="#myTab1" title="My tab">Newsletters</a></li>
-                                    <li class="active"><a data-toggle="tab" href="#myTab2" title="My tab">Authors</a></li>
+                                    <li id="fxs_list_tab">
+                                        <a href="#" class="fxs_news_btn" title="Newsletter">Newsletters</a>
+                                    </li>
+                                    <li id="fxs_list_tab" class="active">
+                                        <a href="#" class="fxs_author_btn" title="Authors">Authors</a>
+                                    </li>
                                 </ul>
-
-                                <!-- tabs content -->
                                 <div class="tab-content">
-                                    <div role="tabpanel" id="myTab1" class="fxs_authentication_form_content tab-pane ">
-
+                                    <div role="tabpanel" id="fxs_news_panel" class="fxs_custom_news_segment fxs_authentication_form_content fade">
                                         <div class="fxs_suscribeForm">
                                             <ul class="fxs_list_unstyled fxs_custom_newsletter_segments">
                                                 <li>
                                                     <label>
-                                                        <div class="fxs_custom_label fxs_"> Get all updates</div> 
+                                                        <div class="fxs_custom_label"> Get all updates</div> 
                                                         <input type="checkbox" name="newsletters" value="-1">
                                                      </label>
                                                      <div class="fxs_entryPlain_txt">
@@ -276,7 +277,7 @@
                                         </div>
                                     </div>
 
-                                    <div role="tabpanel" id="myTab2" class="fxs_custom_author_segment fxs_authentication_form_content tab-pane fade in active">
+                                    <div role="tabpanel" id="fxs_author_panel" class="fxs_custom_author_segment fxs_authentication_form_content fade in">
                                         <div class="fxs_clearfix fxs_marginBase_bottom">
                                             <address class="fxs_contributorBox fxs_contributorBox_medium fxs_border_bottom_second fxs_paddingBase_bottom">
                                                 <div class="fxs_avatar_circleImage_s">
@@ -339,7 +340,7 @@
                                                     </span>
                                                 </span>
 
-                                                <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
+                                                <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false">
                                                     <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
                                                     <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
                                                 </button>
@@ -386,14 +387,15 @@
                                                 </span>
 
                                                 <button type="button" class="fxs_btn fxs_btn_line fxs_btn_small btn" data-toggle="button" aria-pressed="false" >
-                                                    <span class="fxs_togglebtn_txt init_txt" data-toggle="tooltip" data-placement="bottom" title="Follow autor's updates">Follow</span>
-                                                    <span class="fxs_togglebtn_txt toggled_txt" data-toggle="tooltip" data-placement="bottom" title="Stop following autor's updates">Following</span>
+                                                    <span class="fxs_togglebtn_txt init_txt" data-placement="bottom" title="Follow autor's updates">Follow</span>
+                                                    <span class="fxs_togglebtn_txt toggled_txt" data-placement="bottom" title="Stop following autor's updates">Following</span>
                                                 </button>
                                             </address>
                                         </div>
-
                                     </div>
                                 </div> 
+
+                                
                             </div>
                             <!-- /widget starts here -->     
                         
@@ -701,8 +703,6 @@
                     </div>
                 </footer>
                 <!-- /Site footer -->
-
-            
         </div>
         <!-- /The wrapper -->
         
@@ -714,10 +714,25 @@
         <script src="../../js/jquery.typeahead.min.js"></script>
         <script src="../../js/site.js"></script>
         <script type="text/javascript">
-        // Activate bootstrap tooltip (must be!)
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        });
+            // Activate bootstrap tooltip (must be!)
+            $(function () {
+              $('[data-toggle="tooltip"]').tooltip()
+            });
+            $('#fxs_news_panel').css('display','none');
+            $('.fxs_news_btn').on('click', function(){
+              $('#fxs_news_panel').addClass('in');
+              $('#fxs_author_panel').removeClass('in');
+              $('#fxs_author_panel').css('display','none');
+              $('#fxs_news_panel').css('display','block');
+            })
+
+            $('.fxs_author_btn').on('click', function(){
+              $('#fxs_author_panel').addClass('in');
+              $('#fxs_news_panel').removeClass('in');
+              $('#fxs_author_panel').css('display','block');
+              $('#fxs_news_panel').css('display','none');
+            })
+
         </script>
         
     </body>
