@@ -11,8 +11,7 @@
   @media(min-width:@screen-xl){
     max-width: 1353px;
     .fxs_content_subnav, .fxs_global_alert{
-      //.calc(width, ~'100% - 1033px');
-      width:72%;  
+      max-width:1033px;
     }
     .fxs_wallpaper_wrap{
       display: none;
@@ -21,8 +20,8 @@
   @media(min-width:@screen-hd){
     max-width: 1280px;
     .fxs_content_subnav, .fxs_global_alert{
-      //.calc(width, ~'100% - 940px'); 
-      width:50.5%; 
+      max-width:960px;
+      //margin-right: 350px;
     }
     .fxs_wallpaper_wrap{
       display: block;
@@ -42,16 +41,17 @@
 .fxs_contentView{
   padding:0;
 }
-
+.fxs_test_container{
+  //max-width:1033px;
+  //position: relative;
+}
 .fxs_footer{
   &.fxs_footer-wall{
     @media(min-width:@screen-xl){
-      margin-left: 360px;
-      width:72%;
+      max-width:1033px;
     }
     @media(min-width:@screen-hd){
-      margin-left: 637px;
-      width:50%;
+      max-width:960px;
     }
   }
 }
