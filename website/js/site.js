@@ -42,6 +42,14 @@ $(document).ready(function () {
             onInit: function (node) {
                 console.log('Typeahead Initiated on ' + node.selector);
             }
+        },
+        selector:{
+            container:"fxs_typeaheadContainer",
+            group:"fxs_typeaheadGroup",
+            result:"typeahead-result",
+            list:"fxs_typeaheadList",
+            display:"typeahead-display",
+            query:"fxs_typeaheadQuery"
         }
     });*/
 
@@ -158,8 +166,8 @@ $(document).ready(function () {
 
     var ratesFilter = {
         pairs: [ 
-            "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
-            "NZD/USD", "GBP/JPY"
+           // "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+           // "NZD/USD", "GBP/JPY"
         ]
     }
 
@@ -171,6 +179,14 @@ $(document).ready(function () {
         hint: true,
         dropdownFilter: false,
         emptyTemplate: 'No result for "{{query}}"',
+        selector:{
+            container:"fxs_typeaheadContainer",
+            group:"fxs_typeaheadGroup",
+            result:"typeahead-result",
+            list:"fxs_typeaheadList",
+            display:"typeahead-display",
+            query:"fxs_typeaheadQuery"
+        },
         source:{
             pairs: {
                 data: ratesFilter.pairs,
