@@ -4424,6 +4424,56 @@ width:calc(100% - 320px);
 .fxs_topics_nav.fxs_topics_nav_custom .fxs_subnavInlined_list li:nth-last-child(1) {
   border-right: none;
 }
+.fxs_pages_container {
+  max-width: 1280px;
+  margin: 0 auto!important;
+}
+@media (min-width: 1280px) {
+  .fxs_pages_container {
+    max-width: 1353px;
+  }
+  .fxs_pages_container .fxs_content_subnav,
+  .fxs_pages_container .fxs_global_alert {
+    max-width: 1033px;
+  }
+  .fxs_pages_container .fxs_wallpaper_wrap {
+    display: none;
+  }
+}
+@media (min-width: 1480px) {
+  .fxs_pages_container {
+    max-width: 1280px;
+  }
+  .fxs_pages_container .fxs_content_subnav,
+  .fxs_pages_container .fxs_global_alert {
+    max-width: 960px;
+  }
+  .fxs_pages_container .fxs_wallpaper_wrap {
+    display: block;
+  }
+}
+.fxs_pages_container .fxs_wallpaper_wrap {
+  z-index: 2;
+}
+.fxs_pages_container .fxs_wallpaper_wrap.fxs_innerpages_wallpaper {
+  top: 0;
+}
+.fxs_pages_container .fxs_detail {
+  z-index: 2;
+}
+.fxs_pages_container .fxs_contentView {
+  padding: 0;
+}
+@media (min-width: 1280px) {
+  .fxs_footer-wall .fxs_footer {
+    max-width: 1033px;
+  }
+}
+@media (min-width: 1480px) {
+  .fxs_footer-wall .fxs_footer {
+    max-width: 960px;
+  }
+}
 .fxs_sidebar_user .fxs_authentication_form_content {
   margin-bottom: 45px;
   font-size: 0.8rem;
@@ -4729,6 +4779,7 @@ height:calc(100% - 45px);
 .fxs_leaderboard.fxs_leaderboard_adjust {
   padding-top: 0;
   margin-top: 0;
+  background-color: #ffffff;
 }
 .fxs_leaderboard.fxs_leaderboard_adjust img,
 .fxs_leaderboard.fxs_leaderboard_adjust iframe,
@@ -4752,6 +4803,26 @@ height:calc(100% - 45px);
   .fxs_stickyAd_sidebar {
     display: block;
   }
+}
+.fxs_stickyAd-mobile {
+  z-index: 3;
+  width: 100%;
+  position: fixed;
+  background-color: #dddee0;
+  bottom: -5px;
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 680px) {
+  .fxs_stickyAd-mobile {
+    display: none;
+  }
+}
+.fxs_stickyAd-mobile-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 1px 3px 3px 3px;
 }
 .fxs_detail {
   background-color: #ffffff;
@@ -4915,6 +4986,7 @@ height:calc(100% - 45px);
   list-style: none;
   margin: 3px 0 0 0.5rem!important;
   padding: 0;
+  max-height: 200px;
   width: 300px!important;
 }
 .fxs_listView_vers .fxs_typeaheadList .fxs_typeaheadTxt {
