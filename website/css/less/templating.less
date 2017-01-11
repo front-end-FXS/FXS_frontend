@@ -216,7 +216,6 @@ body.cbp-spmenu-push-toright{
     .fxs_toggleList { display: none; }
   }
 }
-
 .fxs_topics_nav {
   &:extend(.fxs_hidden_s all);
   height: @base_module_size;
@@ -246,6 +245,58 @@ body.cbp-spmenu-push-toright{
     }
   }
 }
+
+////////////////////////////////////////////////////////////////
+////improvements sidebar inner pages to allow add wallpaper ///
+//////////////////////////////////////////////////////////////
+
+// test container 
+.fxs_pages_container{
+  max-width: 1280px;
+  @media(min-width:@screen-xl){
+    max-width: 1353px;
+    .fxs_content_subnav, .fxs_global_alert{
+      max-width:1033px;
+    }
+    .fxs_wallpaper_wrap{
+      display: none;
+    }
+  }
+  @media(min-width:@screen-hd){
+    max-width: 1280px;
+    .fxs_content_subnav, .fxs_global_alert{
+      max-width:960px;
+      //margin-right: 350px;
+    }
+    .fxs_wallpaper_wrap{
+      display: block;
+    }
+  }
+  margin: 0 auto!important;
+  .fxs_wallpaper_wrap {
+    z-index: 2;
+    &.fxs_innerpages_wallpaper{
+      top:0;
+    }
+  }
+  .fxs_detail{
+    z-index: 2;
+  }
+  .fxs_contentView{
+    padding:0;
+  }
+}
+.fxs_footer-wall{
+  .fxs_footer{
+    @media(min-width:@screen-xl){
+      max-width:1033px;
+    }
+    @media(min-width:@screen-hd){
+      max-width:960px;
+    }
+  }
+}
+
 
 /////////////////////////////////////////////////////////////
 ////////////////////// sidebar user ////////////////////////
@@ -532,6 +583,7 @@ body.cbp-spmenu-push-toright{
   &.fxs_leaderboard_adjust{
     padding-top:0;
     margin-top:0;
+    background-color:@lightest_clr;
     img, iframe, a{
       margin-top:1rem;
       margin-bottom:1rem;
@@ -544,6 +596,9 @@ body.cbp-spmenu-push-toright{
   }
 }
 // this sticky goes at the bottom of the left sidebar
+.fxs_stickyAd-container{
+  //position: relative;
+}
 .fxs_stickyAd_sidebar{
   z-index:9999; 
   position:absolute; 
@@ -553,6 +608,25 @@ body.cbp-spmenu-push-toright{
   @media (min-width: @screen-l) {
     display:block;
   }
+}
+.fxs_stickyAd-mobile{
+  z-index:3; 
+  width:100%;
+  position:fixed; 
+  background-color: #dddee0;
+  padding-top:2px;
+  bottom:-5px;
+  display:block;
+  margin:0 auto;
+  @media(min-width: @screen-s){
+    display: none;
+  }
+}
+.fxs_stickyAd-mobile-btn{
+  position: absolute;
+  top:0px;
+  right:0px;
+  padding:1px 3px 3px 3px;
 }
 
 .fxs_detail {
@@ -687,6 +761,7 @@ body.cbp-spmenu-push-toright{
       list-style: none;
       margin: 3px 0 0 0.5rem!important; //add
       padding: 0;
+      max-height: 200px;
       .fxs_typeaheadTxt{
         padding-left:1rem;
         padding-top:3px;
