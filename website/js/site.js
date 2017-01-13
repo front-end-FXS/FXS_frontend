@@ -1,57 +1,5 @@
+var selectedAssets = [];
 $(document).ready(function () {
-
-    ///////////////////////////////////////////
-    /////////////// TYPE AHEAD ///////////////
-    /////////////////////////////////////////
-
-    // DATOS METIDOS A SACO!!!!
-
-    /*$.typeahead({
-        input: '.js-typeahead-country_v1',
-        order: "desc",
-        source: {
-            data: [
-                "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",
-                "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh",
-                "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia",
-                "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma",
-                "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad",
-                "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the",
-                "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti",
-                "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador",
-                "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon",
-                "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea",
-                "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India",
-                "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan",
-                "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos",
-                "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
-                "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands",
-                "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco",
-                "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger",
-                "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru",
-                "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino",
-                "Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone",
-                "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain",
-                "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan",
-                "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey",
-                "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
-                "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
-            ]
-        },
-        callback: {
-            onInit: function (node) {
-                console.log('Typeahead Initiated on ' + node.selector);
-            }
-        },
-        selector:{
-            container:"fxs_typeaheadContainer",
-            group:"fxs_typeaheadGroup",
-            result:"typeahead-result",
-            list:"fxs_typeaheadList",
-            display:"typeahead-display",
-            query:"fxs_typeaheadQuery"
-        }
-    });*/
 
     var data = {
         topics: ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",
@@ -166,9 +114,25 @@ $(document).ready(function () {
 
     var ratesFilter = {
         pairs: [ 
-           // "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
-           // "NZD/USD", "GBP/JPY"
+            "EUR/USD", "GBP/USD", "USD/JPY", "USD/CAD", "AUD/USD", "USD/CHF",
+            "NZD/USD", "GBP/JPY"
         ]
+    }
+    $('.jq_addAssets').click(function () {
+        //$('.jq_append').html("");
+        $(selectedAssets).each(function (index, item) {
+            var html = $('<div class="col-md-12"><a href="#" class="fxs_remove_item ">' + item + '</a></div>');
+            $('.jq_append').append(html);
+            AttachEvents(item, html);
+            $('.js-typeahead-country_v1').val("");
+        });
+    });
+     function AttachEvents(item, context) {
+        $(".fxs_remove_item", context).click(function () {
+            $(this).removeClass("clickedAsset");
+            $(this).remove();
+            selectedAssets.splice(selectedAssets.indexOf(item), 1);
+        });
     }
 
     $('#f').typeahead({
@@ -187,10 +151,41 @@ $(document).ready(function () {
             display:"typeahead-display",
             query:"fxs_typeaheadQuery"
         },
+        callback: {
+                    onLayoutBuiltBefore: function (node, query, result, resultHtmlList) {
+                        if (resultHtmlList != null && resultHtmlList.children().length >= 1) {
+                            resultHtmlList.children().each(function (index, item) {
+                                if (selectedAssets.length > 0) {
+                                    if ($.inArray(item.innerText, selectedAssets) !== -1) {
+                                        $(this).addClass("clickedAsset");
+                                    }
+                                }
+                            });
+                        }
+                    },
+                    onClickBefore: function (node, a, item, event) {
+                        event.preventDefault();
+                        if ($.inArray(item.display, selectedAssets) !== -1) {
+                            a.children().children().children('i').removeClass("fa-minus-circle");
+                            a.children().children().children('i').addClass("fa-check");
+                            selectedAssets.splice(selectedAssets.indexOf(item.display), 1);
+                            var selectedRecords = $(".jq_append").find('.fxs_remove_item');
+                            $(selectedRecords).each(function () {
+                                if ($(this).innerText === item.display) {
+                                    $(this).remove();
+                                }
+                            });
+                        } else {
+                            a.children().children().children('i').addClass("fa-check");
+                            selectedAssets.push(item.display);
+                            //$('.js-typeahead-country_v1').focus();
+                        }
+                    }
+                },
         source:{
             pairs: {
                 data: ratesFilter.pairs,
-                template:'<span class="fxs_typeaheadTxt">{{display}}<span class="fxs_typeaheadTxt">'
+                template:'<li><div>{{display}}</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>'
             }
         },
         debug: true

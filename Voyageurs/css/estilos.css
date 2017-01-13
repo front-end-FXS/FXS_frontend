@@ -1,0 +1,365 @@
+@charset "utf-8";
+/* CSS para el sitio Voyageurs */
+
+/* Declaraciones para elementos generales de la página */
+
+* {
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin:0;
+	font: 1rem "Arial", "Helvetica", sans-serif;
+	background-color: #F0F0F1;
+	color: #222;
+}
+
+a, abbr{text-decoration: none;}
+
+ul{
+	list-style-type: none; 
+	margin:0; 
+	padding:0;
+}
+
+
+h1,h2,h3,h4{font-family:"Georgia", serif; margin: 1em 0; padding: 0;}
+
+
+/* Declaraciones para el formato de los elementos estructurales de la página */
+
+header, footer {
+	width: 100%;
+	background-color: #3F3A40;
+	margin: 0 auto;
+}
+
+.container {
+	margin: 0 auto;	
+	max-width: 960px;
+	width: 100%;
+	padding: 5px;
+}
+
+section{
+	max-width: 960px; 
+	margin: 0 auto;
+	width: 100%;
+	overflow: auto;
+	padding: 10px;
+}
+
+.tercio{
+	width: 33.33%;
+}
+
+.tercio img, .dos-tercios img{
+	width: 100%;
+	height: auto;
+	padding: 0.3em;
+}
+
+.dos-tercios{
+	width: 66.333%;
+}
+
+
+/* Declaraciones para el header */
+
+header {
+	padding: 0.3em 0; 
+	overflow: auto;
+}
+
+
+.logo {
+	float:left;
+	max-width: 275px;
+}
+
+.logo img{
+	vertical-align: middle; 
+	margin: 5px;
+	width: 50%;
+	height: auto;
+}
+
+.logo a{color:white;}
+.logo a:hover{color:#DDDEDF;}
+
+.menu {
+	float:right;
+	line-height: 4em;
+}
+
+ul.listamenu {
+	font-size:1.2em;
+    margin: 0;
+    padding:1em 2em 0 0;
+    overflow: hidden;
+}
+
+ul.listamenu li {
+    float: left;
+	padding: 0 2em 0 2em;
+	color:white;
+}
+
+ul.listamenu a{
+	color: white;
+}
+
+ul.listamenu a:hover{color:#DDDEDF;}
+
+.active{text-decoration: underline;}
+
+/* Declaraciones para el footer */
+
+footer {
+	overflow: auto;
+	font-size: 0.85em;
+	margin-top: 3em;
+	padding: 2em;
+
+}
+
+footer .container{
+	display: -webkit-flex;
+   	display: flex;
+}
+
+footer .tercio{
+	float: left;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	text-align: center;
+}
+
+.tercio .about li{
+	clear: left;
+	line-height: 2em;
+	font-size: 1.3em;
+}
+
+.tercio .social li{
+	float: left;
+	width: 25%;
+}
+
+footer a{color: white;}
+
+footer a:hover{color:#DDDEDF;}
+
+fieldset{
+	border: none;
+	color: white;
+}
+
+legend{
+	font-size: 1.3em;
+	width: 100%;
+	margin:0.4em auto;
+}
+
+form li{line-height: 2.3em;}
+
+input#enviar{
+	background-color: #4A8ABC;
+	border:none;
+	padding:0.5em 1.5em;
+	color:white;
+	margin-top:0.5em;
+}
+
+input#enviar:hover{
+	background-color: #83A6BF;
+	cursor: pointer;
+}
+
+.copy {
+    clear: both;
+    margin: 0 auto;
+    max-width: 960px;
+    padding-top: 1em;
+    text-align: center;
+    color:#DDDEDF;
+}
+
+
+/* Declaraciones para inicio */
+
+#inicio .tercio{
+	float: left;
+}
+
+
+.portada{
+	width: 100%;
+	height: 15em; 
+	margin: 0 auto 2em;
+	background-size: cover;
+	background-image: url("https://s19.postimg.org/w7o7hw5j7/bg_inicio.jpg");
+	background-position: center 70%;
+	background-color: black;
+	color:white;
+	font:1.2em "Georgia", serif;
+}
+
+.portada h1{
+	padding: 2.5em;
+	text-align: center;
+	margin: 0;
+}
+
+.more{
+	font-size: 0.8em;
+	
+}
+.more a{
+	border: 1px solid #222;
+	border-radius: 3px;
+	padding: 6px;
+	color:#222;
+	background-color: white;
+	font-weight: bold;
+}
+
+.more a:hover{background-color: #DDDEDF;}
+
+#inicio .tercio p{padding: 0 5px;}
+
+
+/* Declaraciones comunes en viajeros y destinos */
+
+#destinos .tercio, #viajeros .tercio {float: right; text-align: right;}
+
+#destinos .dos-tercios, #viajeros .dos-tercios{float: left;}
+
+#destinos li, #viajeros li{line-height: 2em;}
+
+#destinos li a, #viajeros li a{color:#222;}
+
+.info{font-size: 0.85em;}
+
+.funcional{text-decoration: underline;}
+
+.pie a, .info a{color: #E66546;}
+
+#destinos li a:hover, .pie a:hover, .info a:hover, #viajeros a:hover{text-decoration: underline;}
+
+h4{
+	font-size: 1.2em;
+	text-decoration: underline;
+	margin:1em 0;
+}
+
+/* Declaraciones para destinos */
+
+
+.pie{font-size: 0.7em;}
+
+
+/* Declaraciones para viajeros */
+
+.autor{
+	margin-bottom: 2em;
+	padding-left: 3em;
+}
+
+.autor img{width: 50%; height: auto;}
+
+.autor p{font-size: 0.85em; margin-top:0;}
+
+
+/* Declaraciones para utiles */
+
+#utiles img{width: 100%; height: auto;}
+
+#utiles h3{margin-bottom:0.25em;}
+
+#utiles p{
+	margin:0; 
+	border-bottom: 1px solid #222; 
+	padding-bottom: 10px;
+}
+
+dd a, #utiles p a{
+	color: #E66546; 
+	font-size: 0.85em; 
+	font-style: italic;
+}
+
+dd{margin:0 0 1.5em 0;}
+
+dt {font-weight: bold;}
+
+.lista-app dt{margin-bottom: 10px;}
+
+.lista-app dd{margin-bottom: 15px;}
+
+dl {counter-reset: subsection;}
+
+dt:before {
+    counter-increment: subsection;
+    content: counter(subsection) " ";
+}
+
+div.blogs, div.lista-app{width: 50%; padding: 0 1em;}
+
+div.blogs{float: left;}
+
+div.lista-app{float:right;}
+
+
+/* Declaraciones para media queries */
+
+@media only screen and (max-width: 960px){
+
+	header ul li, .logo a, footer{font-size: 80%;}
+	ul.listamenu li{padding: 0 0.7em;}
+	h1{
+		font-size: 1.5em; 
+		line-height: 1.7em;
+	}
+	.logo img{width: 40%;}
+	.social li{font-size: 70%;}
+}
+
+@media only screen and (max-width: 550px){
+	
+	.tercio, .dos-tercios{
+		clear: both; 
+		width: 100%; 
+		border-bottom: 1px solid white; 
+		padding-bottom: 10px; 
+		margin-bottom: 10px;
+	}
+
+	div.lista-app, div.blogs{clear: both; width: 100%;}
+
+	footer .tercio{
+		border:none; 
+		border-bottom: 1px solid white;
+	}
+	
+	footer .container{display: block;}
+
+	footer .tercio .social li{font-size: 90%;}
+
+	.portada{margin-bottom: 10px;}
+	
+	#inicio .tercio p{margin-top:5px;}
+	
+	#destinos .tercio, #viajeros .tercio{text-align: left;}
+
+	.autor{padding: 5px;}
+
+	.autor img{
+		width: 30%; 
+		float: left;
+	}
+
+}
