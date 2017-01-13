@@ -276,7 +276,7 @@ body.cbp-spmenu-push-toright{
   .fxs_wallpaper_wrap {
     z-index: 2;
     &.fxs_innerpages_wallpaper{
-      top:0;
+      top:@main_header_height;
     }
   }
   .fxs_detail{
@@ -611,7 +611,8 @@ body.cbp-spmenu-push-toright{
   z-index:3; 
   width:100%;
   position:fixed; 
-  background-color: #dddee0;
+  background-color: #F0F0F1;
+  padding-top:20px;
   bottom:-5px;
   display:block;
   margin:0 auto;
@@ -828,7 +829,6 @@ body.cbp-spmenu-push-toright{
     line-height: 29px;
     margin-top: 3px;
     padding: 7px;
-    margin-right: -5px;
     .fa-filter{
       display: inherit;
     }
@@ -861,6 +861,22 @@ body.cbp-spmenu-push-toright{
 .fxs_listView_space {
   @media (min-width: @screen-s) { width: @left_rail_space_reduced; }
   @media (min-width: @screen-l) { width: @left_rail_space; }
+}
+// applly filter msg
+.fxs_apply_filter_msg{
+  position: absolute;
+  top:50px;
+  left:4rem;
+  z-index: 4;
+  background: rgba(51, 132, 115, 0.9);
+  text-align: center;
+  line-height: @main_header_height; 
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 20px;
+  color: @lightest_clr;
+  font-size: @txt_size_small;
+  display: none;
 }
 
 // general filter
