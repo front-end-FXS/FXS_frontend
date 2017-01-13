@@ -461,7 +461,7 @@
                 </div>
                 <!-- ListView -->
                 <section class="fxs_listView fxs_listView_vers" id="cbp-spmenu-s3">
-                   
+                   <div class="fxs_apply_filter_msg">Your assets have been added</div>
                     <header class="fxs_listview_subnav fxs_listView_vers_btn">
                         <h2 class="fxs_helperLabel_title">
                             <span class="fxs_asset_label_filter">ASSETS</span> 
@@ -471,6 +471,7 @@
                         <!-- ///////////////////////////  filter button  /////////////////////////// -->
 
                         <div id="fxs_filter_header_container" class="fxs_filter fxs_filter_price_btn">
+
                             <div class="fxs_typeaheadContainer">
                                 <button id="fxs_filter" type="button" class="fxs_btn_filter fxs_btn_content_toggle fxs_btn_content_toggle_collapse btn collapsed" data-toggle="collapse" data-target="#rates-filter-block" aria-expanded="false" aria-controls="rates-filter-block">
                                     <div class="fxs_togglebtn_txt init_txt">
@@ -507,7 +508,7 @@
                                            
                                         </div>
                                     </div>
-                                    <div class="typeahead-result">
+                                   <!--<div class="typeahead-result">
                                         <ul class="fxs_typeaheadList fxs_fieldset fxs_scrollable_list">
                                             <li class="fxs_asset_item fxs_demo_check">
                                                 <a href="javascript:;">
@@ -595,7 +596,7 @@
                                             </li>
 
                                         </ul>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </form>
                         </div>
@@ -603,7 +604,7 @@
                         <div class="fxs_filter_rail_container">
                             <form>
                                 <fieldset id="fxs_listView_defalult" class="fxs_fieldset fxs_scrollable_list">
-                                    <ul class="fxs_list_unstyled fxs_rates_filter_list">
+                                    <ul class="fxs_list_unstyled fxs_rates_filter_list jq_append">
                                        <li class="fxs_remove_item"><div>EUR/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>USD/JPY</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>GBP/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
@@ -611,7 +612,6 @@
                                        <li><div>USD/CAD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>NZD/USD</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
                                        <li><div>EUR/GBP</div> <i class="fa fa-minus-circle" aria-hidden="true" title="delete item from list"></i></li>
-                                       
                                    </ul>
                                 </fieldset>
 
@@ -620,7 +620,7 @@
                                         <span class="fxs_assets_number">7 assets</span> <span class="fxs_assets_number_info">are in your custom filter</span>
                                     </div>
                                     <div class="fxs_col fxs_col_50">
-                                        <a href="#" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_btn">Apply</a>
+                                        <a href="#" class="fxs_btn fxs_btn_default fxs_btn_block fxs_apply_filter_btn jq_addAssets">Apply</a>
                                     </div>
                                     <div class="fxs_col fxs_col_50">
                                         <!--<a href="#" class="fxs_btn fxs_btn_line fxs_btn_block fxs_apply_cancel_btn">Cancel</a>-->
@@ -874,7 +874,7 @@
                 
                 <div class="fxs_stickyAd-mobile fxs_align_center">
                     <div class="fxs_stickyAd-mobile-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
-                    <img src="../../img/imgad-test.png" border="0" width="320" height="65" alt="" class="img_ad">
+                    <img src="../../img/imgad-test-small.png" border="0" width="320" height="65" alt="" class="img_ad">
                 </div>
                 
                 <!-- Site footer -->
@@ -1194,7 +1194,9 @@
             }
         });
 
-        
+        $('.fxs_stickyAd-mobile-btn').on('click', function(){
+            $('.fxs_stickyAd-mobile').hide();
+        })
 
         // click filter button apply blur effect to background and change text label
         $('#fxs_filter').click( function(){
@@ -1204,7 +1206,19 @@
         $('.fxs_listView_mobile').click( function(){
             $('.fxs_filter_rail_container,.fxs_advanced_filter').css('display','none');
             $(".fxs_listViewRail").slideToggle('slow');
-        })
+        });
+        // apply changes button 
+        $('.fxs_apply_filter_btn').click( function(){
+            $('.fxs_apply_filter_msg').show().delay(2000).fadeOut(function() { $(this).empty(); });
+            $('.fxs_demo_default_items').hide();
+            setTimeout(function() {
+                   $('#rates-filter-block').removeClass("in");
+                   $('.fxs_listView_blockWrapper').removeClass('fxs_blur_effect');
+                   $("#fxs_filter").addClass('collapsed');
+                    $("#fxs_filter").attr('aria-expanded','false');
+                   $('.fxs_asset_label_filter').toggleText('CUSTOMIZE ASSETS','YOUR CUSTOM ASSETS');
+            }, 2500);
+        });
 
         // cancel button 
         $('.fxs_apply_cancel_btn').click(function(){

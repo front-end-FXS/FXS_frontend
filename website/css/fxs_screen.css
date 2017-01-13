@@ -4456,7 +4456,7 @@ width:calc(100% - 320px);
   z-index: 2;
 }
 .fxs_pages_container .fxs_wallpaper_wrap.fxs_innerpages_wallpaper {
-  top: 0;
+  top: 45px;
 }
 .fxs_pages_container .fxs_detail {
   z-index: 2;
@@ -4808,7 +4808,8 @@ height:calc(100% - 45px);
   z-index: 3;
   width: 100%;
   position: fixed;
-  background-color: #dddee0;
+  background-color: #F0F0F1;
+  padding-top: 20px;
   bottom: -5px;
   display: block;
   margin: 0 auto;
@@ -5059,7 +5060,6 @@ height:calc(100% - 45px);
   line-height: 29px;
   margin-top: 3px;
   padding: 7px;
-  margin-right: -5px;
 }
 .fxs_listView_vers_btn .fxs_label_filter .fa-filter {
   display: inherit;
@@ -5103,6 +5103,21 @@ height:calc(100% - 45px);
   .fxs_listView_filterAlert {
     width: 320px;
   }
+}
+.fxs_apply_filter_msg {
+  position: absolute;
+  top: 50px;
+  left: 4rem;
+  z-index: 4;
+  background: rgba(51, 132, 115, 0.9);
+  text-align: center;
+  line-height: 45px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 0.92rem;
+  display: none;
 }
 .fxs_listViewRail_price_filter {
   position: absolute;
