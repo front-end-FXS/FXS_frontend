@@ -17,6 +17,28 @@
     color: @dark_4_clr;
     .fxs_widget_custom_bold { display: block; }
   }
+
+  // new rules for vertical behaviour //
+  &.fxs_pivotPoint_newlist{
+    display: table;
+    li{
+      display: table-cell;
+      .fxs_widget_custom_bold { display: inline-block; }
+    }
+    .fxs_support_points, .fxs_pivot{
+      text-align: center;
+    }
+    @media(min-width:@screen-s){
+      display: block;
+      li{
+        display: block;
+      }
+      .fxs_support_points, .fxs_pivot{
+        text-align: left;
+      }
+    }
+  }
+  // /new rules for vertical behaviour //
 }
 
 .fxs_pivotPoints_list_item { padding: floor(@half_base_spacer); }
