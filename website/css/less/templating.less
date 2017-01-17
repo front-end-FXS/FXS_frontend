@@ -583,7 +583,7 @@ body.cbp-spmenu-push-toright{
   &.fxs_leaderboard_adjust{
     padding-top:0;
     margin-top:0;
-    background-color:@lightest_clr;
+    //background-color:@lightest_clr;
     img, iframe, a{
       margin-top:1rem;
       margin-bottom:1rem;
@@ -613,6 +613,7 @@ body.cbp-spmenu-push-toright{
   position:fixed; 
   background-color: #F0F0F1;
   padding-top:20px;
+  padding-bottom: 10px;
   bottom:-5px;
   display:block;
   margin:0 auto;
@@ -2493,7 +2494,25 @@ clean rules for new calendar widget
       .calc(width, ~'100% - ((@{left_rail_space_small}))');
     }
   }
+}
 
+// CAG widget columns//
+.fxs_cag_col{
+  width: 100%;
+  .fxs_flex_ad_col {
+    width: 100%;
+    float: left;
+    @media(min-width:@screen-s){
+      width: @avatar_broker;
+    }
+  }
+  .fxs_flex_col{
+    float: left;
+    width:100%;
+    @media(min-width:@screen-s){
+      .calc(width, ~'100% - ((@{avatar_broker}))');
+    }
+  }
 }
 .fxs_col_15 { min-height: 100px; .make-s-column(2); .make-m-column(2); }
 
