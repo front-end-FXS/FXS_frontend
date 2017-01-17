@@ -763,7 +763,6 @@ height:calc(100% - 45px);
 .fxs_leaderboard.fxs_leaderboard_adjust {
   padding-top: 0;
   margin-top: 0;
-  background-color: #ffffff;
 }
 .fxs_leaderboard.fxs_leaderboard_adjust img,
 .fxs_leaderboard.fxs_leaderboard_adjust iframe,
@@ -794,6 +793,7 @@ height:calc(100% - 45px);
   position: fixed;
   background-color: #F0F0F1;
   padding-top: 20px;
+  padding-bottom: 10px;
   bottom: -5px;
   display: block;
   margin: 0 auto;
@@ -2977,6 +2977,31 @@ width:calc(100% - 315px - 5px);
 width:-webkit-calc(100% - ((150px)));
 width:-moz-calc(100% - ((150px)));
 width:calc(100% - ((150px)));
+;
+  }
+}
+.fxs_cag_col {
+  width: 100%;
+}
+.fxs_cag_col .fxs_flex_ad_col {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 680px) {
+  .fxs_cag_col .fxs_flex_ad_col {
+    width: 100px;
+  }
+}
+.fxs_cag_col .fxs_flex_col {
+  float: left;
+  width: 100%;
+}
+@media (min-width: 680px) {
+  .fxs_cag_col .fxs_flex_col {
+    -lh-property: 0;
+width:-webkit-calc(100% - ((100px)));
+width:-moz-calc(100% - ((100px)));
+width:calc(100% - ((100px)));
 ;
   }
 }
