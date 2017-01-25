@@ -277,6 +277,7 @@ body.cbp-spmenu-push-toright{
     z-index: 2;
     &.fxs_innerpages_wallpaper{
       top:@main_header_height;
+      z-index: 1;
     }
   }
   .fxs_detail{
@@ -765,7 +766,8 @@ body.cbp-spmenu-push-toright{
         padding-left:1rem;
         padding-top:3px;
         padding-bottom:3px;
-        width:80px;
+        width:190px;
+        display: inline-block;
       }
       width:300px!important;
       
@@ -1228,7 +1230,7 @@ body.cbp-spmenu-push-toright{
     font-weight: 700;
     margin-bottom: 5px;
     div{
-      min-width:140px;
+      min-width:190px;
       display: inline-block;
     }
   }
@@ -2035,11 +2037,11 @@ clean rules for new calendar widget
   width:100%;
   @media(min-width:@screen-s){
     //width: calc((100% - 270px) - 5px);
-     .calc(width, ~'100% - 315px - 5px');
+     //.calc(width, ~'100% - 315px - 5px');
   }
   @media(min-width:@screen-m){
     //width: calc((100% - 315px) - 5px);
-    .calc(width, ~'100% - 315px - 5px');
+    //.calc(width, ~'100% - 315px - 5px');
   }
 }
 .fxs_rMedia{
@@ -2273,7 +2275,7 @@ clean rules for new calendar widget
 }
 
 .ar-ae {
-    background-position: -14px 0;
+    background-position: 0 0;
 }
 .br-br {
     //background-position: -84px 0 (no)
