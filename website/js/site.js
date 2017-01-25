@@ -152,36 +152,36 @@ $(document).ready(function () {
             query:"fxs_typeaheadQuery"
         },
         callback: {
-                    onLayoutBuiltBefore: function (node, query, result, resultHtmlList) {
-                        if (resultHtmlList != null && resultHtmlList.children().length >= 1) {
-                            resultHtmlList.children().each(function (index, item) {
-                                if (selectedAssets.length > 0) {
-                                    if ($.inArray(item.innerText, selectedAssets) !== -1) {
-                                        $(this).addClass("clickedAsset");
-                                    }
-                                }
-                            });
+            onLayoutBuiltBefore: function (node, query, result, resultHtmlList) {
+                if (resultHtmlList != null && resultHtmlList.children().length >= 1) {
+                    resultHtmlList.children().each(function (index, item) {
+                        if (selectedAssets.length > 0) {
+                            if ($.inArray(item.innerText, selectedAssets) !== -1) {
+                                $(this).addClass("clickedAsset");
+                            }
                         }
-                    },
-                    onClickBefore: function (node, a, item, event) {
-                        event.preventDefault();
-                        if ($.inArray(item.display, selectedAssets) !== -1) {
-                            a.children().children().children('i').removeClass("fa-minus-circle");
-                            a.children().children().children('i').addClass("fa-check");
-                            selectedAssets.splice(selectedAssets.indexOf(item.display), 1);
-                            var selectedRecords = $(".jq_append").find('.fxs_remove_item');
-                            $(selectedRecords).each(function () {
-                                if ($(this).innerText === item.display) {
-                                    $(this).remove();
-                                }
-                            });
-                        } else {
-                            a.children().children().children('i').addClass("fa-check");
-                            selectedAssets.push(item.display);
-                            //$('.js-typeahead-country_v1').focus();
+                    });
+                }
+            },
+            onClickBefore: function (node, a, item, event) {
+                event.preventDefault();
+                if ($.inArray(item.display, selectedAssets) !== -1) {
+                    a.children().children().children('i').removeClass("fa-minus-circle");
+                    a.children().children().children('i').addClass("fa-check");
+                    selectedAssets.splice(selectedAssets.indexOf(item.display), 1);
+                    var selectedRecords = $(".jq_append").find('.fxs_remove_item');
+                    $(selectedRecords).each(function () {
+                        if ($(this).innerText === item.display) {
+                            $(this).remove();
                         }
-                    }
-                },
+                    });
+                } else {
+                    a.children().children().children('i').addClass("fa-check");
+                    selectedAssets.push(item.display);
+                    //$('.js-typeahead-country_v1').focus();
+                }
+            }
+        },
         source:{
             pairs: {
                 data: ratesFilter.pairs,

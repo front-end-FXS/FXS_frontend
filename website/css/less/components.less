@@ -591,28 +591,16 @@
         .fxs_wallpaper_img{
           padding-top: @main_header_height;
         }
+        &.fxs_innerpages_wallpaper{
+          .fxs_wallpaper_img{
+            padding-top: 0;
+          }
+        }
       }  
     } 
   }
   .cbp-spmenu-push-toleft &, .cbp-spmenu-push-toright & { display: none; }
 }
-// .fxs_globalAlert_wrapper > div > div.fxs_global_alert.in{
-//   &.in {
-//     display: block;
-//     & + .fxs_contentView{ 
-//       padding-top: @main_headercookies_height;
-//       @media(min-width:@screen-s){
-//         padding-top: @main_header_height + 5px;
-//       }
-//       .fxs_wallpaper_wrap { 
-//         .fxs_wallpaper_img{
-//           padding-top: @main_header_height;
-//         }
-//       }  
-//     } 
-//   }
-// }
-
 
 // Alert variants
 .fxs_alert_featured, .fxs_alert_live  {
@@ -1706,6 +1694,9 @@
   right:5rem;
   top:0.2rem;
   z-index: 2;
+}
+.tt_saveDialog input[type="text"]{
+  width: auto;
 }
 
 /////////////////////////////////////////////////////////////////////////
