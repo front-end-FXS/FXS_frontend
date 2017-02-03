@@ -66,6 +66,18 @@ blockquote {
   font-style: italic;
   position: relative;
   margin-bottom: 1rem;
+  &.blockquote_small{
+    &:before{
+        display: block;
+        color: @light_4_clr;
+        font: normal normal normal 1rem FontAwesome;
+        width: 2rem;
+        height: 2rem;
+        top: 0;
+        left: 0;
+        content: "\f10d";
+      }
+  }
   &:before, &:after { position: absolute; }
   &:before{
     display: block;
@@ -83,8 +95,6 @@ blockquote {
     bottom: 0;
     left: 0;
     margin-bottom: 0;
-        background-color: @light_4_clr;
-    height: 3px;
   }
   footer {
     color: @light_2_clr;
