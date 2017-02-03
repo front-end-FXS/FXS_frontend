@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////
-///////////////////// NAVIGATIONS ////////////////////////
+///////////////////// NAVIGATIONSs ////////////////////////
 
 // items nav list (2nd level navigations)
 .fxs_items_list_nav {
@@ -865,6 +865,22 @@
     line-height: @txt_lineheight_large;
     padding-left: @avatar_l + 48px;
   }
+  &.fxs_rates_quote{
+      padding-left:30px;
+      line-height:1.2rem;
+      font-weight: @txt_fontweight;
+      &.fxs_quote_vs_one{
+          font-size:@txt_size_xsmall;
+          &.fxs_quote_center{
+              margin-left:30px;
+          }
+      }
+      &.fxs_quote_vs_two{
+          font-size:@txt_size_small;
+          color:@light_2_clr;
+          margin-left:10px;
+      }
+  }
   .fxs_avatar_circleImage {
     position: absolute;
     left: 2rem;
@@ -1596,10 +1612,15 @@
 
 // preload widgets
 .fxs_preload_modules_container{
-  text-align: center;
-  padding-top:20px;
   &.fxs_preload_cag_chart{
     height:330px;
+    .fxs_preload_modules{
+      float:none;
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 .fxs_preload_modules{
@@ -1608,6 +1629,9 @@
   height:38px;
   float: right;
   text-align: right;
+  &.fxs_preload_cag{
+    float:none;
+  }
 }
 
 // notify button

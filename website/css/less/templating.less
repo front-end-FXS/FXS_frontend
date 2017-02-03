@@ -1191,9 +1191,8 @@ body.cbp-spmenu-push-toright{
   display: block;
   text-align: center;
   float: none;
-  margin-right: 1rem;
   img{
-    width: 50%;
+    width: 40%;
   }
   @media(min-width:@screen-s){
     width: 33%;
@@ -1205,6 +1204,83 @@ body.cbp-spmenu-push-toright{
     }
   }
 }
+.fxs_rates_list{
+    dd{
+        -webkit-margin-start:75px;
+        //margin-left:-5px;
+        @media(min-width:@screen-s){
+            -webkit-margin-start:15px;
+        }
+    }
+}
+
+.fxs_rates_boxes{
+    border-radius:5px;
+    background-color:@light_4_clr;
+    padding:1rem;
+    margin-left:-15px;
+    margin-right:-15px;
+    @media(min-width:@screen-s){
+        margin:0;
+    }
+    height:275px;
+    margin-bottom:0.5rem;
+    .fxs_entryRates_img{
+        margin-right:0;
+        float: left;
+        width: 33%;
+        display: inline-block;
+        margin-top: 0;
+        img{
+            width:100%;
+        }
+    }
+    .fxs_rates_list{
+        font-size:@txt_size_xsmall;
+        float:left;
+        dd{
+            -webkit-margin-start:15px;
+            //margin-left:-5px;
+        }
+    }
+    .fxs_entryPlain_txt{
+        padding-top:5px;
+        font-size:@txt_size_small;
+    }
+}
+.fxs_entriesList{
+    .fxs_rates_button_cont{
+        width:100%;
+        text-align:center;
+        .fxs_btn_default{
+            //float:none;
+             @media(min-width:@screen-s){
+                float:right;
+                display:inline-block;
+                margin-top:65px;
+            }
+             @media(min-width:@screen-l){
+                 margin-right:3rem;
+             }
+        }
+    }
+    .fxs_rates_list_cont{
+        //width:100%;
+        //text-align:center;
+        .fa-check{
+            padding-right:10px;
+        }
+        .fxs_rates_list{
+            display:block;
+            @media(min-width:@screen-s){
+                display:inline-block;
+                float:left;
+            }
+        }
+    }
+}
+
+
 
 // query rates and charts results
 /*
@@ -1969,6 +2045,19 @@ clean rules for new calendar widget
 .fxs_custom_top{ // rule to override 'fxs_modal_wrap' behavior
   top:0!important;
 }
+ //default cag
+.fxs_container_chart_cag{
+    .fxs_widget_chart{
+        .fxs_widget_chart_graph{
+            &.fxs_chart_cag{
+                height:330px!important;
+                .tt_panelDiv{
+                    height: 205px; // capa contenedora
+                }
+            }
+        }
+    }
+}
 .fxs_widget_chart{
   .fxs_tabs_nav{
       margin:0;
@@ -2001,6 +2090,7 @@ clean rules for new calendar widget
         background: @brand_highlight_clr!important;
       }
     }
+   
 
     // mini
     &.fxs_widget_mini{
@@ -2473,7 +2563,7 @@ clean rules for new calendar widget
 // 100% //
 .fxs_col_100 { &:extend(.fxs_clearfix all); }
 
-// 75% //
+// 75% ///
 .fxs_col_75 { .make-m-column(9); }
 
 // 67% //
@@ -2505,7 +2595,7 @@ clean rules for new calendar widget
   }
 }
 
-// new full col //
+// new full co0l //
 .fxs_wide_col{
   width: 100%;
   .fxs_flex_ad_col {
@@ -2521,7 +2611,7 @@ clean rules for new calendar widget
   }
 }
 
-// R&C custom home colsss
+// R&C custom homee colssss
 
 .fxs_extra_cols{
     .fxs_flex_quote_col{
@@ -2529,6 +2619,7 @@ clean rules for new calendar widget
         float: left;
         @media(min-width:@screen-s){
           width: @left_rail_space;
+          padding-left:30px;
         }
     }
     .fxs_flex_content_col{
@@ -2558,15 +2649,14 @@ clean rules for new calendar widget
     }
     .fxs_tabs_col{
       float: left;
-      max-width: 530px;
       //width:100%;
-      .calc(width, ~'100% - 100px');
+      //.calc(width, ~'100% - 80px');
     }
     .fxs_forecast_col{
       width: 100%;
       float: left;
       @media(min-width:@screen-s){
-        width: 100px;
+        width: 80px;
       }
     }
   }
