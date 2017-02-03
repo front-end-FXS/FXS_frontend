@@ -1183,6 +1183,29 @@ body.cbp-spmenu-push-toright{
   }
 }
 
+// rates and charts home
+
+.fxs_entryRates_img{
+  width: 100%;
+  position: relative;
+  display: block;
+  text-align: center;
+  float: none;
+  margin-right: 1rem;
+  img{
+    width: 50%;
+  }
+  @media(min-width:@screen-s){
+    width: 33%;
+    float: left;
+    display: inline-block;
+    margin-top: 0;
+    img{
+      width: 80%;
+    }
+  }
+}
+
 // query rates and charts results
 /*
 .fxs_rates_filter_list, .typeahead__result{
@@ -2498,6 +2521,25 @@ clean rules for new calendar widget
   }
 }
 
+// R&C custom home colsss
+
+.fxs_extra_cols{
+    .fxs_flex_quote_col{
+        width: 100%;
+        float: left;
+        @media(min-width:@screen-s){
+          width: @left_rail_space;
+        }
+    }
+    .fxs_flex_content_col{
+        float: left;
+        width:100%;
+        @media(min-width:@screen-s){
+          .calc(width, ~'100% - ((@{left_rail_space}))');
+        }
+    }
+}
+
 // CAG widget columns//
 .fxs_cag_col{
   width: 100%;
@@ -2513,6 +2555,19 @@ clean rules for new calendar widget
     width:100%;
     @media(min-width:@screen-s){
       .calc(width, ~'100% - ((@{avatar_broker}))');
+    }
+    .fxs_tabs_col{
+      float: left;
+      max-width: 530px;
+      //width:100%;
+      .calc(width, ~'100% - 100px');
+    }
+    .fxs_forecast_col{
+      width: 100%;
+      float: left;
+      @media(min-width:@screen-s){
+        width: 100px;
+      }
     }
   }
 }

@@ -1,7 +1,64 @@
-﻿// Vendor imports
-@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+﻿@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
 
 // Application variables & mixins
 @import "../../../website/css/less/vars.less";
 @import "../../../website/css/less/mixins.less";
-@import "../../../website/css/less/templating.less";
+.fxs_cag_tabs_container{
+	max-width: 530px;
+}
+// forecast
+.forecast_avg_result{
+	&.fxs_forecast_avg_cag{
+	    border-top:0;
+	    padding-top: 2rem;
+	    position: relative;
+	    .fxs_forecast_avg_cag_content{
+	      padding-top: 21px; 
+	      .fxs_widget_custom_bold{
+	        font-weight: 400;
+	      }
+	      .fxs_label{
+	        padding:0;
+	      }
+	    }
+  	}
+}
+// price
+.fxs_widget_price {
+	&.fxs_widget_price_header {
+	    &.fxs_widget_price_header_cag{
+	      border-bottom: 1px solid @light_4_clr;
+	      margin-left:0;
+	      margin-right:0;
+	      padding-left:0;
+	      padding-right: 0;
+	      margin-bottom: 0.7rem;
+	    }
+	}
+}
+
+// sentiment
+.fxs_indexes_tabpanel{
+	&.fxs_indexes_cag{
+	  	.fxs_tabs_nav{
+	  		margin-bottom: 0;
+	  	}
+	   .fxs_indexes_cag_item{
+		  	display: inline-block;
+		  	padding-right: 1.5rem;
+		  	padding-top: 1rem;
+	  	}
+	}
+}
+// pivot points
+.fxs_widget_pivotPoints {
+	&.fxs_widget_pivotPoints_cag{
+    padding-top:3.5rem;
+    .fxs_label{
+      font-weight: bold;
+    }
+    .fxs_pivotPoints_list_item{
+      padding-bottom: 1rem;
+    }
+  }
+}

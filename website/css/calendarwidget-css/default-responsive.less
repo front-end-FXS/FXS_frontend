@@ -2672,12 +2672,21 @@ fxst-olsendata {
 
 .fxst-lang-ae{
   direction: rtl;
-  text-align: right;
+  text-align: right!important;
   .chart_path_line{
     direction: ltr!important;
   }
   td{
     text-align: right!important;
+  }
+  .fxs_new_calendar_header_item, .fxit-eventInfo, .fxit-eventInfo-time, .fxit-eventInfo-country, .fxit-event-url, .fxit-eventInfo-vol, .fxit-event-info-desktop, .fxst-calendar-filter, .fxit-prefiltered-date, .fxit-event-name{
+    float: right!important;
+  }
+  .fxit-event-numbers{
+    float: left!important;
+  }
+  .fxit-event-title{
+    padding-right: 10px;
   }
 }
 .icon {
