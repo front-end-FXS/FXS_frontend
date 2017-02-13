@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>some title</title>
+    <style type="text/css">
+
+        /* //////////////////// main estructure rules ////////////////////// */
+
+        .ai-wrapper{
+            border-collapse:collapse;
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+            font-family: roboto;
+            font-size:16px;
+        }
+        .ai-wrapper-col{
+            width:100%;
+        }
+        .ai-container-size{
+            max-width:700px;
+            background-color:#fafafa;
+        }
+        .ai-container-size a{
+            text-decoration: none;
+            color: #1b1c23;
+        }
+        /* ////////////////// header site rules ///////////////////// */
+        .ai-header{
+            background-color:#2A3646;
+            padding:7px 7px 3px 7px;
+        }
+        ul.ai-header--list{
+            padding:0;
+            margin:0 0 20px 0;
+            text-align:center;
+        }
+        .ai-header-link{
+            white-space: nowrap;
+            display: block;
+            line-height: 32px;
+            height: 32px;
+            font-size:14px;
+        }
+        .ai-header-link span{
+            float:right;
+            line-height:25px;
+        }
+        .ai-header--list li{
+            display:inline-block;
+            list-style:none;
+            padding:0 5px 0 5px;
+            margin:0;
+        }
+        .ai-header-list--center li{
+            text-align:center;
+            padding-left:30px;
+            padding-right:30px;
+        }
+        .ai-header-list--colDivider{
+            border-right:1px solid #ccc;
+        }
+        .ai-header-list--rowDivider{
+            border-bottom:1px solid #ccc;
+        }
+        .ai-header-nav{
+            display:inline-block;
+        }
+        .ai-header-nav--flag{
+            display:inline-block;
+            width:25px;
+            height:25px;
+            background-size: contain;
+        }
+        .ai-header-nav--flag-one {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/flag-canada.png');
+        }
+        .ai-header-nav--flag-two {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/flag-cn.png');
+        }
+        .ai-header-nav--flag-three {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/flag-gb.png');
+        }
+        .ai-header-nav-box{
+            display:inline-block;
+        }
+        /* Logo site */
+        .ai-header-logo{
+            width: 99px;
+            height: 23px;
+            background: url('https://gallery.mailchimp.com/ddc02e0fd41273f61524f2222/images/44dc08b6-1d17-4a8f-9f9f-a0b0badef270.png');
+            background-size: contain;
+        }
+
+        /* /////////////////// custom site content + elements ////////////////////// */
+        .ai-icon-base{
+            width: 16px;
+            height:16px;
+            display:inline-block;
+            margin-right: 5px;
+        }
+        .ai-icon-base-url {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/web.png');
+        }
+        .ai-icon-base-chat {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/live-chat.png');
+        }
+        .ai-icon-base-phone {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/telephone.png');
+        }
+        .ai-icon-base-email {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/e-mail.png');
+        }
+        .ai-icon-label{
+            float:left;
+            padding-right:5px;
+        }
+        .ai-up-icon{
+            width: 16px;
+            font-size: 14px;
+            display: inline-block;
+            text-align: right;
+            float:right;
+            padding-top:5px;
+        }
+        .ai-button-default{
+            color: #1b1c23;
+            border:1px solid #1b1c23;
+            background-color: transparent;
+            min-height: 27px;
+            line-height: 26px;
+            font-size: .92rem;
+            text-decoration:none;
+            margin: 2px 0;
+            padding: 0 1rem;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin-top:20px;
+        }
+
+        /* ////////////////////// news content /////////////////////// */
+        .ai-main-content{
+            padding: 0 20px 20px 20px;
+        }
+        .ai-main-content--header{
+            padding-top:20px;
+        }
+        .ai-main-content h2{
+            font-size: 18px;
+            font-weight:bold;
+            line-height: 2rem;
+            padding:0;
+            margin:0;
+        }
+        .ai-main-content h1{
+            font-size: 24px;
+            font-weight:bold;
+            line-height: 2rem;
+        }
+        .ai-content-custom-title{
+            font-style:italic;
+            text-transform:uppercase;
+        }
+
+        /* ///////////////////// footer ///////////////////////// */
+        .ai-footer-wrapper{
+            background-color:#313b47;
+            margin-top:50px;
+            padding-top:20px;
+        }
+        .ai-footer-content{
+            padding: 0 20px 20px 20px;
+        }
+        .ai-footer-content p{
+            color:#bfbfbf;
+        }
+        .ai-footer-icon-face {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/facebook.png');
+            width:32px;
+            height:32px;
+            background-size: contain;
+        }
+        .ai-footer-icon-linkedin {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/linkedin.png');
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+        }
+        .ai-footer-icon-twitter {
+            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/twitter.png');
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+        }
+
+         /* /////////////// utilities ////////////////// */
+        .ai-font-bold{
+            font-weight:bold;
+        }
+        .ai-font-italic{
+            font-style: italic;
+        }
+        .ai-font-clear{
+            color:#999999;
+        }
+        .ai-divider{
+            height: 2px;
+            margin-bottom: 1rem;
+            background-color: #ececf1;
+            border: 0;
+        }
+        .ai-clearfix-modules:before{
+            content: " ";
+            display: table;
+        }
+        .ai-clearfix-modules:after{
+            clear:both;
+        }
+        .ai-img-responsive{
+            width:100%;
+        }
+        .ai-float-right{
+            float:right;
+        }
+        /* hide elements */
+        .ai-display-none{
+            display:none;
+        }
+        .ai-rtl{
+            direction:rtl;
+        }
+        .ai-ltr{
+            direction:ltr;
+        }
+    </style>
+</head>
+<body>
+    <table class="ai-wrapper ai-ltr" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" class="ai-wrapper-col">
+                <table class="ai-container-size" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="wrapper-col">
+                            <ul class="ai-header--list ai-header-list--rowDivider">
+                                <!-- nav list header-->
+                                <li>
+                                    <a href="some link" class="ai-header-link" title="some link title">
+                                        <i class="ai-icon-base ai-icon-base-url"></i><span>www.website.com</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="some link" class="ai-header-link" title="some link title">
+                                        <i class="ai-icon-base ai-icon-base-chat"></i> <span>Live Chat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="some link" class="ai-header-link" title="some link title">
+                                        <i class="ai-icon-base ai-icon-base-email"></i> <span>email@example.com</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="some link" class="ai-header-link" title="some link title">
+                                        <i class="ai-icon-base ai-icon-base-phone"></i> <span>+34678738475</span>
+                                    </a>
+                                </li>
+                                <!-- flags -->
+                                <li>
+                                    <a href="some link" title="some title"><i class="ai-header-nav--flag ai-header-nav--flag-one"></i></a>
+                                    <a href="some link" title="some title"><i class="ai-header-nav--flag ai-header-nav--flag-two"></i></a>
+                                    <a href="some link" title="some title"><i class="ai-header-nav--flag ai-header-nav--flag-three"></i></a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ai-wrapper-col">
+                            <ul class="ai-header--list ai-header-list--center">
+                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">EUR/USD</a></li>
+                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">GBP/USD</a></li>
+                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">EUR/GBP</a></li>
+                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">USD/CAD</a></li>
+                                <li><a href="" class="ai-header-link ai-font-bold" title="some asset news">AUD/USD</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ai-wrapper-col">
+                            <!-- logo site -->
+                            <div class="ai-header">
+                                <a href="http://www.fxstreet.com/#utm_source=NLsession&amp;utm_medium=email&amp;utm_content=logoheader&amp;utm_campaign=america-newsletter" target="_blank" title="some title">
+                                    <div class="ai-header-logo"></div>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- content hedaer -->
+                        <td class="ai-wrapper-col">
+                            <div id="anchor-top" class="ai-main-content ai-main-content--header">
+                                <time class="ai-font-italic ai-font-clear" datetime="2008-02-14 20:00">JANUARY 16TH</time>
+                                <h2 class="ai-content-custom-title ai-header-list--rowDivider">
+                                    your daily market report
+                                </h2>
+                           </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- main content -->
+                        <td class="ai-wrapper-col">
+                            <div class="ai-main-content">
+                                <h1 class="ai-header-list--rowDivider">
+                                    <a href="some link" title="some title">EUR/USD</a>
+                                </h1>
+                                <p>
+                                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </p>
+
+                                <img src="https://staticconent.blob.core.windows.net/website/img/icons/chart-650x480.png" class="ai-img-responsive" alt="post img" />
+
+                                <a href="#anchor-top" class="ai-button-default ai-float-right" title="back to top">
+                                    <span class="icon-label">Back to top</span>
+                                    <img src="https://staticconent.blob.core.windows.net/website/img/icons/arrow-up.png" class="ai-up-icon" alt="some img description">
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- main content -->
+                        <td class="wrapper-col">
+                            <div class="ai-main-content">
+                                <h1 class="ai-header-list--rowDivider">
+                                    <a href="some link" title="some title">GBP/USD</a>
+                                </h1>
+                                <p>
+                                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </p>
+
+                                <img src="https://staticconent.blob.core.windows.net/website/img/icons/chart-650x480.png" class="ai-img-responsive" alt="some post img" />
+
+                                <a href="#anchor-top" class="ai-button-default ai-float-right" title="back to top">
+                                    <span class="icon-label">Back to top</span>
+                                    <img src="https://staticconent.blob.core.windows.net/website/img/icons/arrow-up.png" class="ai-up-icon" alt="some img description">
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="wrapper-col">
+                            <!-- footer site -->
+                            <div class="ai-footer-wrapper">
+                                <ul class="ai-header--list ai-header-list--center">
+                                    <li><a href="some link" class="ai-header-link font-bold"><div class="ai-footer-icon-face"></div></a></li>
+                                    <li><a href="some link" class="ai-header-link font-bold"><div class="ai-footer-icon-linkedin"></div></a></li>
+                                    <li><a href="some link" class="ai-header-link font-bold"><div class="ai-footer-icon-twitter"></div></a></li>
+                                </ul>
+                                <div class="ai-footer-content">
+                                    <hr class="ai-divider" />
+                                    <p>
+                                        FXStreet Newsletter does not constitute a solicitation for the purpose of buying or selling in the foreign exchange market. Although the information contained in FXStreet Newsletter comes from trusted sources, FXStreet is not responsible for guaranteeing the accuracy, timeliness, completeness or fitness of such sources. © 2016 "FXStreet. The Forex Market" All Rights Reserved. FOREXSTREET, S.L. - Portaferrissa 7, 1r 2a Barcelona 08002 Catalonia - Spain.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
