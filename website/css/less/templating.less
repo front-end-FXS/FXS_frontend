@@ -679,8 +679,43 @@ body.cbp-spmenu-push-toright{
   }
 }
 ////////////////////////////// modify r&c sidebar ////////////////////////////////
-// custom sidebar
 .fxs_listView_vers{
+     &.fxs_listView_widget{
+        max-width: 400px;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%,0%);
+        .fxs_typeahead_widget_results{
+            max-width: 300px;
+            padding-left: 30px;
+            width: 100%;
+		    .fxs_filter_rail_container {
+			    background-color: transparent;
+		    }
+        }
+        .fxs_filterResults_bg{
+            background-color: #8c8d91;
+            .fxs_helperLabel_title {
+                color: @lightest_clr;
+                float: left;
+            }
+            .fxs_helperLabel_btn {
+                float: right;
+                text-decoration: underline;
+                font-size: .8rem;
+                text-transform: none;
+                font-style: normal;
+            }
+        }
+        .fxs_rates_filter_list{
+            div,span{
+                color:@lightest_clr;
+            }
+            .fa-minus-circle{
+                color:@lightest_clr;
+            }
+        }
+    }
   .fxs_filter{
     overflow: inherit;
   }
@@ -696,11 +731,6 @@ body.cbp-spmenu-push-toright{
     @media(min-width:@screen-m){
       padding: 1rem 0 5px;
       min-height: auto;
-    }
-  }
-  &.fxs_listViewRail_price_filter{
-    li{
-      border-bottom:0!important;
     }
   }
   .fxs_rates_filter_list{
@@ -734,6 +764,7 @@ body.cbp-spmenu-push-toright{
       font-size: @txt_size_xsmall;
       text-decoration: underline;
       font-weight: 400;
+      padding-left:1rem;
     }
     .fxs_assets_info{
       background-color: #B1C4D5;
@@ -759,7 +790,7 @@ body.cbp-spmenu-push-toright{
       background-color: #fff;
       border: 0!important;
       list-style: none;
-      margin: 3px 0 0 0.5rem!important; //add
+      margin-top:2px; //add
       padding: 0;
       max-height: 200px;
       .fxs_typeaheadTxt{
@@ -769,7 +800,7 @@ body.cbp-spmenu-push-toright{
         width:190px;
         display: inline-block;
       }
-      width:300px!important;
+     // width:300px!important;
       
   }
   .fxs_typeaheadList strong{
@@ -782,16 +813,6 @@ body.cbp-spmenu-push-toright{
     background-color: @light_3_clr!important;
   }
 
-  .fxs_blur_effect{
-    -webkit-filter: opacity(.1);
-    filter: opacity(.1);
-  }
-  /*.fxs_typeaheadList > li:nth-child(5) {
-      background-color: @light_3_clr; 
-  }
-  .fxs_typeaheadList > li:nth-child(3) {
-      background-color: @light_3_clr; 
-  }*/
   .fxs_typeaheadList > li a {
     display: block;
     padding: 5px 1rem;
@@ -806,6 +827,10 @@ body.cbp-spmenu-push-toright{
     text-decoration: none; // add
   }
 }
+ .fxs_blur_effect{
+    -webkit-filter: opacity(.1);
+    filter: opacity(.1);
+  }
 
 // custom button
 .fxs_listView_vers_btn{
@@ -836,16 +861,6 @@ body.cbp-spmenu-push-toright{
       display: inherit;
     }
   }
-  /*.fxs_icon_filter{
-    background-color: @highlight_icon_bg;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    font-size: 18px;
-    padding: 3px 7px 4px 7px;
-    color: @lightest_clr;
-    .fa-filter{ display: inherit; }
-    margin-left: 54px;
-  }*/
 }
 
 ////////////////////////////// /modify r&c sidebar ////////////////////////////////
@@ -1025,7 +1040,7 @@ body.cbp-spmenu-push-toright{
   input {
     width: 100%;
     line-height: @base_module_size;
-    padding: 5px 0 5px @base_module_size;
+    padding: 5px 0 0 @base_module_size;
     border-width: 0;
     border-bottom-width: 3px;
     &.disabled, &[disabled] {
