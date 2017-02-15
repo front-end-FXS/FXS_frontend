@@ -5,242 +5,16 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>some title</title>
-    <style type="text/css">
-
-        /* //////////////////// main estructure rules ////////////////////// */
-
-        .ai-wrapper{
-            border-collapse:collapse;
-            margin:0;
-            padding:0;
-            width:100%;
-            height:100%;
-            font-family: roboto;
-            font-size:16px;
-        }
-        .ai-wrapper-col{
-            width:100%;
-        }
-        .ai-container-size{
-            max-width:700px;
-            background-color:#fafafa;
-        }
-        .ai-container-size a{
-            text-decoration: none;
-            color: #1b1c23;
-        }
-        /* ////////////////// header site rules ///////////////////// */
-        .ai-header{
-            background-color:#2A3646;
-            padding:7px 7px 3px 7px;
-        }
-        ul.ai-header--list{
-            padding:0;
-            margin:0 0 20px 0;
-            text-align:center;
-        }
-        .ai-header-link{
-            white-space: nowrap;
-            display: block;
-            line-height: 32px;
-            height: 32px;
-            font-size:14px;
-        }
-        .ai-header-link span{
-            float:right;
-            line-height:25px;
-        }
-        .ai-header--list li{
-            display:inline-block;
-            list-style:none;
-            padding:0 5px 0 5px;
-            margin:0;
-        }
-        .ai-header-list--center li{
-            text-align:center;
-            padding-left:30px;
-            padding-right:30px;
-        }
-        .ai-header-list--colDivider{
-            border-right:1px solid #ccc;
-        }
-        .ai-header-list--rowDivider{
-            border-bottom:1px solid #ccc;
-        }
-        .ai-header-nav{
-            display:inline-block;
-        }
-        .ai-header-nav--flag{
-            display:inline-block;
-            width:25px;
-            height:25px;
-            background-size: contain;
-        }
-        .ai-header-nav--flag-one {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/flag-canada.png');
-        }
-        .ai-header-nav--flag-two {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/flag-cn.png');
-        }
-        .ai-header-nav--flag-three {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/flag-gb.png');
-        }
-        .ai-header-nav-box{
-            display:inline-block;
-        }
-        /* Logo site */
-        .ai-header-logo{
-            width: 99px;
-            height: 23px;
-            background: url('https://gallery.mailchimp.com/ddc02e0fd41273f61524f2222/images/44dc08b6-1d17-4a8f-9f9f-a0b0badef270.png');
-            background-size: contain;
-        }
-
-        /* /////////////////// custom site content + elements ////////////////////// */
-        .ai-icon-base{
-            width: 16px;
-            height:16px;
-            display:inline-block;
-            margin-right: 5px;
-        }
-        .ai-icon-base-url {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/web.png');
-        }
-        .ai-icon-base-chat {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/live-chat.png');
-        }
-        .ai-icon-base-phone {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/telephone.png');
-        }
-        .ai-icon-base-email {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/e-mail.png');
-        }
-        .ai-icon-label{
-            float:left;
-            padding-right:5px;
-        }
-        .ai-up-icon{
-            width: 16px;
-            font-size: 14px;
-            display: inline-block;
-            text-align: right;
-            float:right;
-            padding-top:5px;
-        }
-        .ai-button-default{
-            color: #1b1c23;
-            border:1px solid #1b1c23;
-            background-color: transparent;
-            min-height: 27px;
-            line-height: 26px;
-            font-size: .92rem;
-            text-decoration:none;
-            margin: 2px 0;
-            padding: 0 1rem;
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
-            margin-top:20px;
-        }
-
-        /* ////////////////////// news content /////////////////////// */
-        .ai-main-content{
-            padding: 0 20px 20px 20px;
-        }
-        .ai-main-content--header{
-            padding-top:20px;
-        }
-        .ai-main-content h2{
-            font-size: 18px;
-            font-weight:bold;
-            line-height: 2rem;
-            padding:0;
-            margin:0;
-        }
-        .ai-main-content h1{
-            font-size: 24px;
-            font-weight:bold;
-            line-height: 2rem;
-        }
-        .ai-content-custom-title{
-            font-style:italic;
-            text-transform:uppercase;
-        }
-
-        /* ///////////////////// footer ///////////////////////// */
-        .ai-footer-wrapper{
-            background-color:#313b47;
-            margin-top:50px;
-            padding-top:20px;
-        }
-        .ai-footer-content{
-            padding: 0 20px 20px 20px;
-        }
-        .ai-footer-content p{
-            color:#bfbfbf;
-        }
-        .ai-footer-icon-face {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/facebook.png');
-            width:32px;
-            height:32px;
-            background-size: contain;
-        }
-        .ai-footer-icon-linkedin {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/linkedin.png');
-            width: 32px;
-            height: 32px;
-            background-size: contain;
-        }
-        .ai-footer-icon-twitter {
-            background-image: url('https://staticconent.blob.core.windows.net/website/img/icons/twitter.png');
-            width: 32px;
-            height: 32px;
-            background-size: contain;
-        }
-
-         /* /////////////// utilities ////////////////// */
-        .ai-font-bold{
-            font-weight:bold;
-        }
-        .ai-font-italic{
-            font-style: italic;
-        }
-        .ai-font-clear{
-            color:#999999;
-        }
-        .ai-divider{
-            height: 2px;
-            margin-bottom: 1rem;
-            background-color: #ececf1;
-            border: 0;
-        }
-        .ai-clearfix-modules:before{
-            content: " ";
-            display: table;
-        }
-        .ai-clearfix-modules:after{
-            clear:both;
-        }
-        .ai-img-responsive{
-            width:100%;
-        }
-        .ai-float-right{
-            float:right;
-        }
-        /* hide elements */
-        .ai-display-none{
-            display:none;
-        }
-        .ai-rtl{
-            direction:rtl;
-        }
-        .ai-ltr{
-            direction:ltr;
-        }
-    </style>
 </head>
 <body>
+    <style type="text/css">
+        /* 
+            HEAD UP
+            we use css inside body because the email client delete the head tag inside html 
+        */
+        /* //////////////////// main estructure rules ////////////////////// */
+      .ai-button-default,.ai-container-size a{color:#1b1c23;text-decoration:none}.ai-wrapper{border-collapse:collapse;margin:0;padding:0;width:100%;height:100%;font-family:roboto,"Times New Roman";font-size:16px}.ai-wrapper-col{width:100%}.ai-container-size{max-width:700px;background-color:#fafafa}.ai-header{background-color:#2A3646;padding:7px 7px 3px}ul.ai-header--list{padding:0;margin:0 0 20px;text-align:center}.ai-header-link{white-space:nowrap;display:block;line-height:32px;height:32px;font-size:14px}.ai-header--list li,.ai-header-nav,.ai-header-nav--flag,.ai-header-nav-box{display:inline-block}.ai-header-link span{float:right;line-height:25px}.ai-header--list li{list-style:none;padding:0 5px;margin:0}.ai-header-list--center li{text-align:center;padding-left:30px;padding-right:30px}.ai-header-list--colDivider{border-right:1px solid #ccc}.ai-header-list--rowDivider{border-bottom:1px solid #ccc}.ai-header-nav--flag{width:25px;height:25px;background-size:contain}.ai-header-nav--flag-one{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/flag-canada.png)}.ai-header-nav--flag-two{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/flag-cn.png)}.ai-header-nav--flag-three{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/flag-gb.png)}.ai-header-logo{width:99px;height:23px;background:url(https://gallery.mailchimp.com/ddc02e0fd41273f61524f2222/images/44dc08b6-1d17-4a8f-9f9f-a0b0badef270.png);background-size:contain}.ai-icon-base,.ai-up-icon{width:16px;display:inline-block}.ai-icon-base{height:16px;margin-right:5px}.ai-icon-base-url{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/web.png)}.ai-icon-base-chat{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/live-chat.png)}.ai-icon-base-phone{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/telephone.png)}.ai-icon-base-email{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/e-mail.png)}.ai-icon-label{float:left;padding-right:5px}.ai-float-right,.ai-up-icon{float:right}.ai-up-icon{font-size:14px;text-align:right;padding-top:5px}.ai-footer-icon-face,.ai-footer-icon-linkedin,.ai-footer-icon-twitter{width:32px;height:32px;background-size:contain}.ai-button-default{border:1px solid #1b1c23;background-color:transparent;min-height:27px;line-height:26px;font-size:.92rem;margin:20px 0 2px;padding:0 1rem;cursor:pointer;display:inline-block;text-align:center;vertical-align:middle}.ai-main-content{padding:0 20px 20px}.ai-main-content--header{padding-top:20px}.ai-main-content h2{font-size:18px;font-weight:700;line-height:2rem;padding:0;margin:0}.ai-main-content h1{font-size:24px;font-weight:700;line-height:2rem}.ai-content-custom-title{font-style:italic;text-transform:uppercase}.ai-footer-wrapper{background-color:#313b47;margin-top:50px;padding-top:20px}.ai-footer-content{padding:0 20px 20px}.ai-footer-content p{color:#bfbfbf}.ai-footer-icon-face{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/facebook.png)}.ai-footer-icon-linkedin{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/linkedin.png)}.ai-footer-icon-twitter{background-image:url(https://staticconent.blob.core.windows.net/website/img/icons/twitter.png)}.ai-font-bold{font-weight:700}.ai-font-italic{font-style:italic}.ai-font-clear{color:#999}.ai-divider{height:2px;margin-bottom:1rem;background-color:#ececf1;border:0}.ai-clearfix-modules:before{content:" ";display:table}.ai-clearfix-modules:after{clear:both}.ai-img-responsive{width:100%}.ai-display-none{display:none}.ai-rtl{direction:rtl}.ai-ltr{direction:ltr}
+    </style>
     <table class="ai-wrapper ai-ltr" align="center" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <td align="center" class="ai-wrapper-col">
@@ -281,11 +55,11 @@
                     <tr>
                         <td class="ai-wrapper-col">
                             <ul class="ai-header--list ai-header-list--center">
-                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">EUR/USD</a></li>
-                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">GBP/USD</a></li>
-                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">EUR/GBP</a></li>
-                                <li class="ai-header-list--colDivider"><a href="" class="ai-header-link ai-font-bold" title="some asset news">USD/CAD</a></li>
-                                <li><a href="" class="ai-header-link ai-font-bold" title="some asset news">AUD/USD</a></li>
+                                <li class="ai-header-list--colDivider"><a href="some link" class="ai-header-link ai-font-bold" title="some asset news">EUR/USD</a></li>
+                                <li class="ai-header-list--colDivider"><a href="some link" class="ai-header-link ai-font-bold" title="some asset news">GBP/USD</a></li>
+                                <li class="ai-header-list--colDivider"><a href="some link" class="ai-header-link ai-font-bold" title="some asset news">EUR/GBP</a></li>
+                                <li class="ai-header-list--colDivider"><a href="some link" class="ai-header-link ai-font-bold" title="some asset news">USD/CAD</a></li>
+                                <li><a href="some link" class="ai-header-link ai-font-bold" title="some asset news">AUD/USD</a></li>
                             </ul>
                         </td>
                     </tr>

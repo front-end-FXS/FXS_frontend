@@ -80,7 +80,6 @@
 .fxs_txt_neutral {
   .fxs_txt_color_variants(@light_1_clr);
 }
-
 // muted text
 .fxs_mutedContent_label {
   font-size: @txt_size_xsmall;
@@ -252,6 +251,13 @@
   text-transform: uppercase;
 }
 
+// center boxes
+.fxs_center_objects{
+  position: absolute;
+  left: @leftBox;
+  top: @topBox;
+  transform: translate(-@topBox, -@leftBox);
+}
 ////////////////////////////////////////////
 // Borders ////////////////////////////////
 

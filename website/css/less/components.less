@@ -425,6 +425,9 @@
 .fxs_btn_danger {
   .fxs-button-variants(@lightest_clr; @error_clr; @error_clr);
 }
+.fxs_btn_light{
+  .fxs-button-variants(@lightest_clr; @light_clr; @light_clr);
+}
 
 .fxs_btn_line {
   .fxs-btn-line-variants(@dark_1_clr; @dark_1_clr; @dark_1_clr);
@@ -1569,14 +1572,23 @@
 }
 
 // price list filter module
-
-.fxs_filterResults_bg{
-  background-color: @lightest_clr;
+.fxs_filter_custom{
+    display:block;
+    float:none;
+    margin-left:45px;
+    @media(min-width:@screen-s){
+        float:right;
+        margin-left:5px;
+        margin-right:0;
+    }
+    .fxs_dismissQuery{
+        color:@lightest_clr!important;
+    }
 }
 .fxs_price_filter{
   position: relative;
   .fxs_price_filter_header{
-    padding:10px 0 0 0!important;
+    //padding:10px 0 0 0!important;
     //&:extend(.fxs_listview_subnav);
     border-bottom: 0;
   }
@@ -1684,6 +1696,33 @@
 .ui-helper-hidden-accessible{
   display:none;
 }
+.fxs_settings_message{
+    padding:2rem;
+    background-color:@lightest_clr;
+    width:100%;
+    top:20px;
+    position:absolute;
+    @media(min-width:@screen-m){
+        max-width:450px;
+        transform: translate(-50%, 0%);
+        left: 50%;
+    }
+}
+.fxs_settings_message_icon{
+    width:70px;
+    float:left;
+    .fa-exclamation-triangle{
+        color:@warning_clr;
+    }
+}
+.fxs_settings_message_content{
+    .calc(width, ~'100% - 70px');
+    float:left;
+    span{
+        display:block;
+        font-size:@txt_size_small;
+    }
+}
 
 /////////////////////////////////////////////////////////////////////////
 /////////////////// Overrides teletrader library
@@ -1759,6 +1798,29 @@
 }
 
 //////////////// Modals //////////////////
+
+// custom modal for widgets
+.fxs_modal_widgets{
+    position:absolute; 
+    background-color: rgba(140, 141, 145, 0.5);
+    width:100%; 
+    height:100%;
+    z-index:9;
+    .fxs_modal_nav{
+        padding:1rem;
+    }
+    .fxs_filter_buttons_box{
+        float:right;
+        padding-top:1rem;
+        padding-right:1rem;
+        .fxs_btn {
+            width:100px;
+        }
+    }
+    .fxs_apply_filter_msg{
+        &:extend(.fxs_center_objects);
+    }
+}
 
 // overwrited styles
 .fxs_modal_wrap {
