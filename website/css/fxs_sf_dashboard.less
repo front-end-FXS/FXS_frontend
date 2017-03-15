@@ -1,0 +1,316 @@
+﻿body{
+     &.sfPageEditor{
+        // disable modal in sitefinity dashboard
+        .fxs_wrapper{
+            padding-top:0!important;
+        }
+        .fxs_contentView{
+            margin-top:100px;
+        }
+        .modal-header{
+            h3.modal-title{
+                font-size: 22px;
+                font-weight: 300;
+                color:#999;
+            }
+        }
+        .fxs_SFeditor_textarea{
+            label{
+                vertical-align: top;
+            }
+            textarea{
+                height: auto;
+            }
+        }
+        .fxs_SFeditor_label{
+            input{
+                width:72%;
+            }
+        }
+        // space to display topics bar
+        .fxs_content{
+            padding-top:0px;
+        }
+        .fxs_divider_editor{
+            width:100%;
+            background-color: #ccc;
+        }
+        .fxs_topic_title{
+            font-size: 18px;
+        } 
+        .fxs_content_wide {
+            .fxs_content_subnav{
+                width:100%;
+            }
+        }
+        // height background topics
+        .fxs_content_subnav{
+            height:70px;
+            //margin-top:50px;
+            left:10px;
+            top:0;
+            position:inherit;
+            width:100%;
+        }
+        input.fxs_ad_num_field{
+            border:1px solid #ccc;
+            height:30px;
+            width:100px;
+        }
+        label{
+            min-width:100px;
+        }
+        input.fxs_count_items{
+            width:30px;
+            padding:5px;
+        }
+        .fxs_info_fields{
+            font-size: 12px;
+            color:#666;
+            padding-left:5px;
+        }
+         // disable alert 
+        .fxs_global_alert{
+            display:none;
+        }
+        &.fxs_modal_page{
+            .fxs_modal_wrap{
+                display:block;
+                top:120px;
+                &.fade{
+                    opacity:1;
+                }
+                .fxs_modal_close{
+                    display: none;
+                }
+            }
+            .sfPageContainer{
+                overflow: hidden!important;
+            }
+        }
+        .ZoneEditorToolboxContainer{
+            z-index: 9999;
+        }
+         // body //
+        overflow:auto!important;
+        background-color: #DEE2E7;
+
+        // sitefinity template
+        .sfPageContainer{
+            width:auto!important;
+        }
+
+        // sitefinity editor
+        .k-window .k-window-titlebar{
+            margin-top:-16px!important;
+            cursor:move;
+        }
+        .k-window-actions{
+            top:39px!important;
+            .k-window-action {
+                &.k-state-hover{
+                    background-color: transparent;
+                }
+            }
+        }
+        .k-window-content{
+            padding:20px;
+            button{
+                margin-top:20px;
+                height:30px;
+            }
+            select{
+                height:32px;
+                padding:0;
+            }
+        }
+        .modal-body .k-editor-widget .k-editor-toolbar > li:last-child, .modal-body .k-editor-widget .k-editor-toolbar > li:nth-last-child(2){
+            position:relative;
+            right:auto;
+            top:auto;
+        }
+        .custom-tool .glyphicon {
+            padding-top:0!important;
+        }
+        .modal-body .k-editor-widget .k-editor-toolbar {
+            padding: 0 30px 10px 30px;
+        }
+        .k-window{
+            border:1px;
+            .field-group{
+                img{
+                    padding:10px 0 10px 0;
+                }
+                button{
+                    margin-top:10px;
+                    border-radius: 4px;
+                    &:hover{
+                        background-color: #ccc;
+                    }
+                    padding-left:10px;
+                    padding-right:10px;
+                }
+                input{
+                    padding:2px;
+                    box-sizing:border-box;
+                    width:100%;
+                    border:1px solid #a9a9a9;
+                }
+                select{
+                    width:100%;
+                }
+                .k-state-hover{
+                    &:hover{
+                        background-color: transparent;
+                    }
+                }
+            } 
+            .k-header{
+                background-color: #999999;
+            }
+            .dropdown-menu{
+                overflow-y:scroll;
+                height:300px;
+                margin-top:5px;
+                li a{
+                    color:#8C8D91;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 300;
+                    strong{
+                        color:#e4871b;
+                    }
+                    &:hover{                       
+                        color:#49494F;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .field-group{
+            padding-bottom:10px;
+        }
+
+        // fxstreet dashboard rules
+        .fxs_wrapper{
+            overflow:visible;
+            height:auto;
+        }
+        // override sidebar widget
+        .fxs_listView{
+            top:140px;
+        }
+        .fxs_footer{
+            display:none;
+        }
+        // Sitefinity widgets thumbnailç
+
+        /*
+        Se agrega la regla important para sobreescribir la imagen en sprite que se pinta en cada widget
+        cuando se realize el refactor definitivo del ccs se debe eliminar el backgraund por defecto de 
+        cada widget y eliminar el important
+        */
+        .fxs_widget_thumb {
+            padding: 10px 0 0 59px;
+            height: 29px;
+            width: auto;
+            text-indent: 0;
+            border-top-width: 1px;
+            border-left-width: 1px;
+            border-top-style: solid;
+            border-top-color: #f1f1f1;
+            border-left-style: solid;
+            border-left-color: #f1f1f1;
+            color: #333;
+
+            &.fxs_add_thumb { background: url('../img/widget-thumbnails/ad.jpg') no-repeat 3px 0 !important; }
+            &.fxs_dynamicAlert_thumb { background: url('../img/widget-thumbnails/alertdinamic.jpg') no-repeat 3px 0!important; }
+            &.fxs_staticAlert_thumb { background: url('../img/widget-thumbnails/alert.jpg') no-repeat 3px 0px!important; }
+            &.fxs_subscribeNewsletter_thumb { background: url('../img/widget-thumbnails/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_subsectionTitle_thumb { background: url('../img/widget-thumbnails/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_textOverCI_thumb { background:url('../img/widget-thumbnails/textover.jpg') no-repeat 3px 0!important; }
+            &.fxs_single_ctp_thumb { background:url('../img/widget-thumbnails/CTPsingle.jpg') no-repeat 3px 0!important; }
+            &.fxs_multi_ctp_thumb { background:url('../img/widget-thumbnails/CTPmulti.jpg') no-repeat 3px 0!important; }
+            &.fxs_ctp_contributors_thumb{ background:url('../img/widget-thumbnails/CTPcon.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_single_thumb{ background:url('../img/widget-thumbnails/forecastsingle.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_multi_thumb{ background:url('../img/widget-thumbnails/forecastmulti.jpg') no-repeat 3px 0!important; }
+            &.fxs_forecast_contributors_thumb{ background:url('../img/widget-thumbnails/forecastcon.jpg') no-repeat 3px 0!important; }
+            &.fxs_priceStats_thumb{ background:url('../img/widget-thumbnails/pricestats.jpg') no-repeat 3px 0!important; }
+            &.fxs_newsList_thumb{ background:url('../img/widget-thumbnails/newsletter.jpg') no-repeat 3px 0!important; }
+            &.fxs_postList_thumb{ background:url('../img/widget-thumbnails/postlist.jpg') no-repeat 3px 0!important; }
+            &.fxs_topics_thumb{ background:url('../img/widget-thumbnails/topics.jpg') no-repeat 3px 0!important; }
+            &.fxs_headers_thumb{ background:url('../img/widget-thumbnails/header.jpg') no-repeat 3px 0!important; }
+            &.fxs_analysisList_thumb{ background:url('../img/widget-thumbnails/analysis_list.jpg') no-repeat 3px 0!important; }
+            &.fxs_educationList_thumb{ background:url('../img/widget-thumbnails/education_List.jpg') no-repeat 3px 0!important; }
+            &.fxs_calendar_thumb{ background:url('../img/widget-thumbnails/calendar.jpg') no-repeat 3px 0!important; }
+            &.fxs_spreads_thumb{ background:url('../img/widget-thumbnails/brokers-spreads.jpg') no-repeat 3px 0!important; }
+            &.fxs_contentBlock_thumb{ background:url('../img/widget-thumbnails/content-block.jpg') no-repeat 3px 0!important; }
+
+
+            // fxsGrid columns
+            &.col_100{ background:url('../img/fxsGrid/100.jpg') no-repeat 3px 0!important; border:1px solid #ccc}
+            &.col_2_50{ background:url('../img/fxsGrid/2_50.jpg') no-repeat 3px 0!important;}
+            &.col_2_75_25{ background:url('../img/fxsGrid/2_75_25.jpg') no-repeat 3px 0!important;}
+            &.col_2_25_75{ background:url('../img/fxsGrid/2_25_75.jpg') no-repeat 3px 0!important;}
+            &.col_2_67_33{ background:url('../img/fxsGrid/2_67_33.jpg') no-repeat 3px 0!important;}
+            &.col_2_33_67{ background:url('../img/fxsGrid/2_33_67.jpg') no-repeat 3px 0!important;}
+            &.col_3_33{ background:url('../img/fxsGrid/3_33.jpg') no-repeat 3px 0!important;}
+            &.col_4_25{ background:url('../img/fxsGrid/4_25.jpg') no-repeat 3px 0!important;}
+            &.flex_right{ background:url('../img/fxsGrid/flex_r.jpg') no-repeat 3px 0!important;}
+            &.flex_left{ background:url('../img/fxsGrid/flex_l.jpg') no-repeat 3px 0!important;}
+            &.sticky_right{ background:url('../img/fxsGrid/flex_r_sticky.jpg') no-repeat 3px 0!important;}
+            &.sticky_left{ background:url('../img/fxsGrid/flex_l_sticky.jpg') no-repeat 3px 0!important;}
+            //&.col_marquee{ background:url('../img/fxsGrid/flex_l_sticky.png') no-repeat 3px 0!important;}
+        }
+        .fxs_icon_editor{
+            width:16px;
+            height:16px;
+            vertical-align: middle;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            font-size: 0;
+            line-height: 0;
+            text-align: center;
+            display: inline-block;
+            &.fxs_icon_editor_ad{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/adcontent.jpg')
+            }
+            &.fxs_icon_editor_post{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/postlist.jpg')
+            }
+            &.fxs_icon_editor_cdn{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/cdn.jpg')
+            }
+            &.fxs_icon_editor_quote{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/blockquote.png')
+            }
+            &.fxs_icon_editor_analisys{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/highlighted_analysis.png')
+            }
+            &.fxs_icon_editor_news{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/highlighted_news.png')
+            }
+            &.fxs_icon_editor_divider{
+                opacity: .5;
+                background-image: url('../img/editor-thumbnails/divider.png')
+            }
+        }
+    }
+
+    // sitefinity dashboard msg
+    .fxs_sitefinity_dashboard_msg{
+        position:absolute; 
+        z-index:9999;
+        padding-top:25px;
+        font-size: 18px;
+        padding-left:50px;
+    }
+}
+
+

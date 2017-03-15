@@ -680,40 +680,57 @@ body.cbp-spmenu-push-toright{
 }
 ////////////////////////////// modify r&c sidebar ////////////////////////////////
 .fxs_listView_vers{
+    background-color: @dark_4_clr;
+    //padding-left:5px;
+    padding:0; 
+    @media(min-width: @screen-s){
+        padding:0 4px 4px 4px;
+    }
+    .fxs_listView_blockWrapper, .fxs_listview_subnav{
+        @media (min-width: @screen-s) { width: 266px; }
+        @media (min-width: @screen-l) { width: 316px; }
+     }
+    .fxs_listview_subnav{
+        background-color:transparent;
+    }
+    .fxs_listView_item{
+        border-bottom:2px solid @dark_4_clr;
+    }
+    .fxs_filterResults_bg{
+        background-color: @dark_4_clr;
+        //overflow:hidden;
+        .fxs_helperLabel_title {
+            color: @lightest_clr;
+            float: left;
+            line-height:inherit;
+        }
+        .fxs_helperLabel_btn {
+            float: right;
+            text-decoration: underline;
+            font-size: .8rem;
+            text-transform: none;
+            font-style: normal;
+        }
+     }
      &.fxs_listView_widget{
+        padding:0;
         max-width: 400px;
         top: 20px;
         left: 50%;
         transform: translate(-50%,0%);
         .fxs_typeahead_widget_results{
             max-width: 300px;
-            padding-left: 30px;
+            padding-left: 1rem;
+            @media(min-width:@screen-s){
+                padding-left: 30px;
+            }            
             width: 100%;
 		    .fxs_filter_rail_container {
 			    background-color: transparent;
 		    }
         }
-        .fxs_filterResults_bg{
-            background-color: #8c8d91;
-            .fxs_helperLabel_title {
-                color: @lightest_clr;
-                float: left;
-            }
-            .fxs_helperLabel_btn {
-                float: right;
-                text-decoration: underline;
-                font-size: .8rem;
-                text-transform: none;
-                font-style: normal;
-            }
-        }
-        .fxs_rates_filter_list{
-            div,span{
-                color:@lightest_clr;
-            }
-            .fa-minus-circle{
-                color:@lightest_clr;
-            }
+        .fxs_apply_filters_block{
+            margin-top:0;
         }
     }
   .fxs_filter{
@@ -726,7 +743,7 @@ body.cbp-spmenu-push-toright{
     text-transform: none;
   }
   .fxs_filter_rail_container{
-    background-color: @lightest_clr;
+    background-color: @dark_4_clr;
     min-height: 100%;
     @media(min-width:@screen-m){
       padding: 1rem 0 5px;
@@ -737,24 +754,35 @@ body.cbp-spmenu-push-toright{
     li{
       font-size: @txt_size_xsmall;
       font-weight: 400;
-      color:@dark_4_clr; 
+      //color:@dark_4_clr; 
       border-bottom:1px solid @light_4_clr;
       padding: 3px;
-    }
-    .fa-minus-circle{
-      color: @dark_4_clr;
+      div,span{
+        color:@lightest_clr;
+      }
+      .fa-minus-circle{
+        color:@lightest_clr;
+      }
     }
   }
+
   .fxs_fieldset{
     border-bottom: none;
+    //height:auto;
+    min-height:250px;
+    &.fxs_containerBlock_height{
+        max-height:250px;
+    }
   }
-  // fixed 
+  // fixedd 
   .fxs_apply_filters_block{
-    bottom:10px;
+    bottom:1rem;
     position: absolute;
     width:100%;
     display: inline-block!important;
-    @media(min-width:@screen-m){
+    border: 2px solid @dark_4_clr;
+    z-index:10;
+    @media(min-width:@screen-s){
       bottom:5px;
       position: relative;
       bottom:0;
@@ -784,7 +812,7 @@ body.cbp-spmenu-push-toright{
       position: absolute;
       top: 100%;
       left: 0;
-      z-index: 10;
+      //z-index: 10;
       width: 100%;
       font-size: .92rem;
       background-color: #fff;
@@ -793,7 +821,7 @@ body.cbp-spmenu-push-toright{
       margin-top:2px; //add
       padding: 0;
       max-height: 200px;
-      .fxs_typeaheadTxt{
+      .fxs_typeaheadTxt, .typeahead-display{
         padding-left:1rem;
         padding-top:3px;
         padding-bottom:3px;
@@ -833,7 +861,7 @@ body.cbp-spmenu-push-toright{
   }
 
 // custom button
-.fxs_listView_vers_btn{
+/*.fxs_listView_vers_btn{
   .fxs_btn_filter{ width:100%; }
   .fxs_togglebtn_txt{
     position: relative;
@@ -861,7 +889,7 @@ body.cbp-spmenu-push-toright{
       display: inherit;
     }
   }
-}
+}*/
 
 ////////////////////////////// /modify r&c sidebar ////////////////////////////////
 
@@ -895,6 +923,9 @@ body.cbp-spmenu-push-toright{
   color: @lightest_clr;
   font-size: @txt_size_small;
   display: none;
+  &.fxs_apply_filter_msg_widget{
+      &:extend(.fxs_center_objects);
+  }
 }
 
 // general filter
@@ -914,7 +945,7 @@ body.cbp-spmenu-push-toright{
 .fxs_listViewRail {
   &:extend(.fxs_scrollableContent all);
   position: absolute;
-  top: @base_module_size + 5;
+  top: @main_header_height;
   width: 100%;
   .calc(height, ~'100% - @{base_module_size} - @{main_header_height}');
   @media (min-width: @screen-l) {
@@ -933,8 +964,14 @@ body.cbp-spmenu-push-toright{
   position: relative;
   padding: 0 1rem;
   z-index: 3;
-  border-bottom: 1px solid @light_5_clr;
+  //border-bottom: 1px solid @light_5_clr;
   .fxs_helperLabel_title { line-height: @base_module_size; }
+  &.fxs_navFilter_bg {
+      border-bottom:none;
+      .fa-info-circle{
+          color:@lightest_clr;
+      }
+  }
 }
 
 .fxs_listView_blockWrapper {
@@ -1113,7 +1150,6 @@ body.cbp-spmenu-push-toright{
   }
   &.fxs_advanced_filter{
     position:relative;
-    border-bottom: 1px solid @light_4_clr; 
   }
   &:extend(.fxs_transition);
   position: absolute;
@@ -1184,7 +1220,9 @@ body.cbp-spmenu-push-toright{
     float: left;
     line-height: @base_module_size; 
     margin-top: 0;
+    display:none;
     //margin-right: -5px;
+    display:none;
 }
 
 // Filter within titles
@@ -1220,11 +1258,24 @@ body.cbp-spmenu-push-toright{
   }
 }
 .fxs_rates_list{
+    padding-left:10px;
+    @media(min-width:@screen-m){
+        -webkit-margin-start:0px;
+        padding-left:0px;
+    }
+    .fxs_align_list{
+        padding-left:0px;
+        @media(min-width:@screen-l){
+            -webkit-margin-start:0px;
+            padding-left:10px;
+        }
+    }
     dd{
-        -webkit-margin-start:75px;
+        //-webkit-margin-start:0px;
         //margin-left:-5px;
+        margin:0;
         @media(min-width:@screen-s){
-            -webkit-margin-start:15px;
+            -webkit-margin-start:0px;
         }
         .fa-check{
             vertical-align:top;
@@ -1233,8 +1284,11 @@ body.cbp-spmenu-push-toright{
             display: inline-block;
             margin: 0;
             word-break: normal;
-            width: 85px;
-            @media(min-width:@screen-l){
+            width: 200px;
+            @media(min-width:@screen-s){
+                width: 110px;
+            }
+             @media(min-width:@screen-xl){
                 width: 130px;
             }
         }
@@ -1242,18 +1296,18 @@ body.cbp-spmenu-push-toright{
 }
 
 .fxs_rates_boxes{
-    border-radius:5px;
-    background-color:@light_4_clr;
+    background-color:@light_5_clr;
     padding:1rem;
     margin-left:-10px;
     margin-right:-10px;
+    position:relative;
+    min-height:350px;
     @media(min-width:@screen-s){
         margin-left:-5px;
         margin-right:-5px;
     }
-    min-height:300px;
-    @media(min-width:@screen-l){
-        min-height:275px;
+    @media(min-width:@screen-xl){
+        min-height:300px;
     }
     margin-bottom:0.5rem;
     .fxs_entryRates_img{
@@ -1270,30 +1324,38 @@ body.cbp-spmenu-push-toright{
         font-size:@txt_size_xsmall;
         float:left;
         dd{
-            -webkit-margin-start:15px;
-            //margin-left:-5px;
+            //-webkit-margin-start:0px;
+            margin:0;
         }
     }
     .fxs_entryPlain_txt{
         padding-top:5px;
         font-size:@txt_size_small;
     }
+    .fxs_rates_boxes_btn_cont{
+        position:absolute; 
+        bottom:5px;
+        padding-right:2rem; 
+        width:100%;
+    }
+    .fxs_btn_block{     
+         position: relative;
+       // bottom: @txt_defaultsize_rem;
+        display:inline-block;
+        vertical-align: middle;
+       // right: 15px;
+    }
 }
 .fxs_entriesList{
     position:relative;
     .fxs_rates_button_cont{
         width:100%;
-        text-align:center;
-        @media(min-width:@screen-s){
-            text-align:right;
-        }
+        text-align:left;
         .fxs_btn_default{
             //float:none;
              @media(min-width:@screen-l){
                  margin-right:3rem;
-                 float:right;
-                 display:inline-block;
-                 margin-top:65px;
+                 margin-top:15px;
              }
         }
     }
@@ -1301,7 +1363,8 @@ body.cbp-spmenu-push-toright{
         //width:100%;
         //text-align:center;
         .fa-check{
-            padding-right:10px;
+            padding-right:5px;
+            padding-top:4px;
         }
         .fxs_rates_list{
             display:block;
@@ -1313,50 +1376,8 @@ body.cbp-spmenu-push-toright{
     }
 }
 
-
-
-// query rates and charts results
-/*
-.fxs_rates_filter_list, .typeahead__result{
-  background-color: @lightest_clr;
-  ul{
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 5px;
-    padding-left: 5px;
-    padding-bottom: 0;
-  }
-  li{
-    &:extend(.fxs_list_unstyled);
-    padding: 5px 1rem;
-    margin-bottom: 5px;
-    border-bottom: solid 1px @light_5_clr;
-    a {
-      display: block;
-      clear: both;
-      color: @dark_4_clr;
-      white-space: nowrap;
-      vertical-align: middle;
-    }
-    a:hover, a:focus, &.active a {
-      color: @dark_3_clr;
-      text-decoration: none;
-    }
-    span,div{
-      min-width:140px;
-      display: inline-block;
-      font-size: @txt_size_xsmall;
-      text-transform: uppercase;
-      font-weight: @txt_fontweight;
-    }
-  }
-  .fa-minus-circle{
-    color:@error_clr;
-    cursor: pointer;
-  }
-}
-*/
 .fxs_rates_filter_list{
+    //min-height:100px;
   li{
     font-size: @txt_size_small;
     font-weight: 700;
@@ -1377,10 +1398,10 @@ body.cbp-spmenu-push-toright{
 .fxs_typeaheadContainer {
   position: relative;
   &.result .fxs_typeaheadList { display: block!important; }
-  .fxs_typeaheadList { display: none!important; }
+  .fxs_typeaheadList { display: none!important; z-index:10; }
   &.hint .typeahead-hint { visibility: visible!important; }
   .typeahead-hint { visibility: hidden!important; }
-  border-bottom: solid 1px @light_5_clr;
+  //border-bottom: solid 1px @light_5_clr;
 }
 .fxs_typeaheadQuery {
   background: @lightest_clr;
@@ -1394,7 +1415,7 @@ body.cbp-spmenu-push-toright{
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 10;
+  //z-index: 10;
   width: 100%;
   font-size: @txt_size_small;
   background-color: @lightest_clr;
@@ -2078,6 +2099,10 @@ clean rules for new calendar widget
 .fxs_custom_top{ // rule to override 'fxs_modal_wrap' behavior
   top:0!important;
 }
+// reduce left column
+.tt_topToolbar > div:not(.tt_spacer), .tt_leftToolbar > div:not(.tt_spacer)  {
+    
+}
  //default cag
 .fxs_container_chart_cag{
     .fxs_widget_chart{
@@ -2654,15 +2679,18 @@ clean rules for new calendar widget
         float: left;
         @media(min-width:@screen-s){
           width: @left_rail_space;
-          padding-left:30px;
+          padding-left:20px;
         }
     }
     .fxs_flex_content_col{
         float: left;
         width:100%;
+        margin-left:5px;
         @media(min-width:@screen-s){
-          .calc(width, ~'100% - ((@{left_rail_space}))');
+          .calc(width, ~'100% - ((@{left_rail_space} + 10px))');
         }
+        background-color:@light_5_clr;
+        padding:1.5rem;
     }
 }
 
@@ -2686,13 +2714,6 @@ clean rules for new calendar widget
       float: left;
       //width:100%;
       //.calc(width, ~'100% - 80px');
-    }
-    .fxs_forecast_col{
-      width: 100%;
-      float: left;
-      @media(min-width:@screen-s){
-        width: 80px;
-      }
     }
   }
 }

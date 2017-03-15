@@ -89,7 +89,6 @@
   display: block;
   i{ font-size: @txt_size_small; }
 }
-
 // Italic upercased labels
 .fxs_styledIndicator_label {
   text-transform: uppercase;
@@ -97,6 +96,56 @@
   &.fxs_indicator_broker{
     font-size: @txt_size_xsmall;
   }
+}
+// colors
+.fxs_whiteClr{
+    color:@lightest_clr;
+    margin-left:-5px;
+    z-index:9999;
+}
+// //////////////////////////// tooltip with css /////////////////////////////////////////
+.fxs_tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.fxs_tooltip .fxs_tooltiptext {
+    visibility: hidden;
+    width: 145px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 2px 5px 2px;
+    font-family:@txt_fontfamily;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 2;
+}
+.fxs_tooltip:hover .fxs_tooltiptext {
+    visibility: visible;
+}
+
+// tooltip position
+.fxs_toolip_bottom{
+    width: 120px;
+    top: 100%;
+    left: 50%; 
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+.fxs_toolip_right{
+    top: -5px;
+    left: 105%;
+}
+.fxs_toolip_left{
+    top: -5px;
+    right: 105%; 
+}
+.fxs_toolip_top{
+    width: 120px;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
 // Bolds & strongs with smooth borders
@@ -149,6 +198,12 @@
 .fxs_mutedLink {
   color: @dark_1_clr;
   padding-right: 5px;
+}
+.fxs_lockLink{
+    pointer-events: none;
+    cursor: default;
+    opacity:0.6;
+    display:inline-block!important;
 }
 
 ////////////////////
@@ -249,6 +304,7 @@
 }
 .fxs_toUppercase{
   text-transform: uppercase;
+  font-style:italic;
 }
 
 // center boxes

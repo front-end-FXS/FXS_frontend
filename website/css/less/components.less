@@ -139,10 +139,7 @@
   border-bottom: 1px solid @light_3_clr;
   legend { .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall;); }
   &.fxs_scrollable_list{
-    max-height: 300px;
-    @media(min-width:@screen-l){
-      max-height: 500px;
-    }
+    max-height: 340px;
     &:extend(.fxs_scrollableContent all);
   }
 }
@@ -526,6 +523,146 @@
   min-width: 1rem;
 }
 
+// ADVERTISE TRANSITIONS
+
+.fxs_ad_transition{
+    text-align:center;
+    margin: -10px -1rem auto -1rem;
+    iframe{
+        margin:0 auto;
+    }
+}
+
+// SEARCH MODULE (Algolia)
+
+.fxs_search_box {
+    display: inline-block;
+    position: relative;
+    max-width:1033px;
+    width:100%;
+}
+
+.fxs_search_input {
+    width: 240px;
+    padding: 5px 2rem 5px 2rem!important;
+    border: 1px solid #e4e4e4;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.fxs_search_input::-webkit-search-decoration, .fxs_search_input::-webkit-search-cancel-button, .fxs_search_input::-webkit-search-results-button, .fxs_search_input::-webkit-search-results-decoration {
+    display: none;
+}
+
+.aa-dropdown-menu {
+    background-color: @dark_3_clr;
+    min-width:320px;
+    width:100%;
+    max-height:400px;
+    @media(min-width:@screen-s){
+        min-width:420px;
+        max-height:400px;
+    }
+    @media(min-width:@screen-m){
+        min-width:500px;
+        max-height:680px;
+    }
+    display:block;
+    box-sizing: border-box;
+    right:0;
+    left:auto;
+    overflow:hidden;
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    p{
+        &:extend(.fxs_search_module_item);
+        font-style:italic;
+        color:@lightest_clr;
+    }
+    &:extend(.fxs_scrollableContent all);
+}
+
+.fxs_search_icon{
+    display:inline-block!important;
+    @media(min-width:@screen-l){
+        display:none!important;
+    }
+}
+.fxs_search_module{
+    display:none;
+    position:absolute;
+    left:-80px;
+    @media(min-width:@screen-s){
+        left:0;
+    }
+    @media(min-width:@screen-l){
+        position:relative;
+        display:inline-block;
+        left:0;
+        height:45px;
+        //line-height:30px;
+        margin-right:5px;
+    }
+    h4{
+        font-size:@txt_size_small;
+        color:@lightest_clr; 
+        text-decoration:none;
+    }
+    mark{
+        background-color:@lightest_clr;
+    }
+    a{text-decoration:none;}
+}
+.fxs_search_module_item{
+    padding-left:@txt_defaultsize_rem * 2;
+    padding-right:@txt_defaultsize_rem * 2;
+    padding-top: 0.5rem;
+}
+.fxs_search_row{
+    width:100%;
+    &:hover{
+        background-color:@dark_4_clr;
+    }
+}
+.fxs_search_list_item{
+    margin:0;
+    padding:0;
+    a{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width:100%;
+        display:block;
+        &:hover{
+            background-color:@dark_4_clr;
+        }
+        span{
+            font-size: @txt_size_xsmall;
+            color: @lightest_clr;
+            &:extend(.fxs_search_module_item);
+        }
+    }
+    p{
+        &:extend(.fxs_search_module_item);
+        font-style:italic;
+        color:@lightest_clr;
+    }
+}
+.fxs_search_box_title{
+    background-color:@light_3_clr;
+    margin:0 -1.5rem 0 -1.5rem;
+    padding:1rem 2rem 1rem 2rem;
+    font-weight:bold;
+    .fxs_mutedContent_label{
+        padding-left:@txt_defaultsize_rem * 2;
+        color:@dark_3_clr;
+    }
+}
+
+
+// CLOSE SEARCH MODULE
+
 // ALERTS
 .fxs_alert, .fxs_contextual_alert, .fxs_global_alert {
   .animation(fadeInDown 0.33s ease-in);
@@ -702,6 +839,11 @@
   width: 70px;
   height: 70px;
   img{ max-width: inherit; }
+  &.fxs_squareImage_small{
+      width:50px;
+      height:50px;
+      margin-right:0.5rem;
+  }
 }
 
 // SQUARE & AVATAR IMAGES
@@ -1082,11 +1224,11 @@
     }
     &:hover {
       > tr {
-        .opacity(.5);
+        //.opacity(.7);
         &:hover {
           &:extend(.fxs_transition);
-          .opacity(1);
-          //background-color: @lightest_clr;
+          //.opacity(1);
+          background-color: @light_5_clr;
           cursor: pointer;
           .fxs_btn_icon {
             color: @dark_4_clr;
@@ -1484,7 +1626,9 @@
 }
 
 // Widget price components
-.fxs_widget_price { &:extend(.fxs_clearfix all); }
+.fxs_widget_price { 
+    &:extend(.fxs_clearfix all);
+}
 .fxs_asset_label, .fxs_widget_price_value {
   display: inline-block;
   vertical-align: top;
@@ -1590,7 +1734,7 @@
   .fxs_price_filter_header{
     //padding:10px 0 0 0!important;
     //&:extend(.fxs_listview_subnav);
-    border-bottom: 0;
+    //border-bottom: 0;
   }
   // alinear elementos
   .fxs_filter_price_container{
@@ -1760,10 +1904,21 @@
   }
 }
 .fxs_fullreport_chart{
-  position: absolute;
-  right:5rem;
-  top:0.2rem;
+  position:absolute;
+  right:5.5rem;
+  top:0.5rem;
   z-index: 2;
+  .fxs_btn_small{
+      opacity:0.8;
+  }
+  &.fxs_fullreport_chart_mini{
+     .fxs_btn_small{
+         font-size:0.82rem;
+         min-height:20px;
+         line-height:20px;
+         padding:0 0.5rem 0 0.5rem;
+     }
+  }
 }
 .tt_saveDialog input[type="text"]{
   width: auto;
