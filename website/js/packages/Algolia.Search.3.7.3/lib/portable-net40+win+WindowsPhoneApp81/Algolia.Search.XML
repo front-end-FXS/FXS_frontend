@@ -1,0 +1,1582 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Algolia.Search</name>
+    </assembly>
+    <members>
+        <member name="T:Algolia.Search.AlgoliaException">
+            <summary>
+            Algolia exception.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaException.#ctor(System.String)">
+            <summary>
+            Create a new Algolia exception.
+            </summary>
+            <param name="message">The exception details.</param>
+        </member>
+        <member name="T:Algolia.Search.AlgoliaClient">
+            <summary>
+            Client for the Algolia Search cloud API.
+            You should instantiate a Client object with your ApplicationID, ApiKey and Hosts to start using Algolia Search API
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Net.Http.HttpMessageHandler)">
+            <summary>
+            Algolia Search initialization
+            </summary>
+            <param name="applicationId">The application ID you have in your admin interface</param>
+            <param name="apiKey">A valid API key for the service</param>
+            <param name="hosts">The list of hosts that you have received for the service</param>
+            <param name="mock">Mocking object for controlling HTTP message handler</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.getHosts(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            return the hosts array with the last 3 elements shuffled
+            </summary>
+            <param name="baseHost"></param>
+            <param name="hosts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.ConfigureAwait(System.Boolean)">
+            <summary>
+            Configure the await in the library. Useful to avoid a deadlock with ASP.NET projects.
+            </summary>
+            <param name="continueOnCapturedContext">Set to false to turn it off and avoid deadlocks</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.getContinueOnCapturedContext">
+            <summary>
+            Get the context
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.setTimeout(System.Double,System.Double)">
+            <summary>
+            Set the read timeout for the search and for the build operation
+            This method should be called before any api call.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.SetSecurityTags(System.String)">
+            <summary>
+            Add security tag header (see http://www.algolia.com/doc/guides/csharp#SecurityUser for more details)
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.SetUserToken(System.String)">
+            <summary>
+            Add user-token header (see http://www.algolia.com/doc/guides/csharp#SecurityUser for more details)
+            </summary>
+            <param name="userToken"></param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.SetExtraHeader(System.String,System.String)">
+            <summary>
+            Set extra HTTP request headers
+            </summary>
+            <param name="key">The header key</param>
+            <param name="value">The header value</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.MultipleQueriesAsync(System.Collections.Generic.List{Algolia.Search.IndexQuery},System.String,System.Threading.CancellationToken)">
+            <summary>
+            This method allows querying multiple indexes with one API call
+            </summary>
+            <param name="queries">List of queries per index</param>
+            <param name="strategy">Strategy applied on the sequence of queries</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.MultipleQueries(System.Collections.Generic.List{Algolia.Search.IndexQuery},System.String,System.Threading.CancellationToken)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.MultipleQueriesAsync(System.Collections.Generic.List{Algolia.Search.IndexQuery},System.String,System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="queries">List of queries per index</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.ListIndexesAsync(System.Threading.CancellationToken)">
+            <summary>
+            List all existing indexes.
+            </summary>
+            <returns>An object in the form:
+               {"items": [ {"name": "contacts", "createdAt": "2013-01-18T15:33:13.556Z"},
+                           {"name": "notes", "createdAt": "2013-01-18T15:33:13.556Z"} ] }
+            </returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.ListIndexes">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.ListIndexesAsync(System.Threading.CancellationToken)"/> 
+            </summary>
+            <returns>An object in the form:
+               {"items": [ {"name": "contacts", "createdAt": "2013-01-18T15:33:13.556Z"},
+                           {"name": "notes", "createdAt": "2013-01-18T15:33:13.556Z"} ] }
+            </returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.DeleteIndexAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Delete an index.
+            </summary>
+            <param name="indexName">The name of index to delete</param>
+            <returns>An object containing a "deletedAt" attribute</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.DeleteIndex(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.DeleteIndexAsync(System.String,System.Threading.CancellationToken)"/> 
+            </summary>
+            <returns>An object containing a "deletedAt" attribute</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.MoveIndexAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Move an existing index.
+            </summary>
+            <param name="srcIndexName">The name of index to move.</param>
+            <param name="dstIndexName">The new index name that will contain a copy of srcIndexName (destination will be overriten if it already exists).</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.MoveIndex(System.String,System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.MoveIndexAsync(System.String,System.String,System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="srcIndexName">The name of index to move.</param>
+            <param name="dstIndexName">The new index name that will contain a copy of srcIndexName (destination will be overriten if it already exists).</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.CopyIndexAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Copy an existing index.
+            </summary>
+            <param name="srcIndexName">The name of index to copy.</param>
+            <param name="dstIndexName">The new index name that will contain a copy of srcIndexName (destination will be overriten if it already exists).</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.CopyIndex(System.String,System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.CopyIndexAsync(System.String,System.String,System.Threading.CancellationToken)"/> 
+            </summary>
+            <param name="srcIndexName">The name of index to copy.</param>
+            <param name="dstIndexName">The new index name that will contain a copy of srcIndexName (destination will be overriten if it already exists).</param>
+        </member>
+        <member name="T:Algolia.Search.AlgoliaClient.LogType">
+            <summary>
+            The type of log
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.AlgoliaClient.LogType.LOG_BUILD">
+            <summary>
+            All build logs
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.AlgoliaClient.LogType.LOG_QUERY">
+            <summary>
+            All query logs
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.AlgoliaClient.LogType.LOG_ERROR">
+            <summary>
+            All error logs
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.AlgoliaClient.LogType.LOG_ALL">
+            <summary>
+            All logs
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GetLogsAsync(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Return last logs entries.
+            </summary>
+            <param name="offset">Specify the first entry to retrieve (0-based, 0 is the most recent log entry).</param>
+            <param name="length">Specify the maximum number of entries to retrieve starting at offset. Maximum allowed value: 1000.</param>
+            <param name="onlyErrors">If set to true, the answer will only contain API calls with errors.</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GetLogsAsync(System.Int32,System.Int32,Algolia.Search.AlgoliaClient.LogType,System.Threading.CancellationToken)">
+            <summary>
+            Return last logs entries.
+            </summary>
+            <param name="offset">Specify the first entry to retrieve (0-based, 0 is the most recent log entry).</param>
+            <param name="length">Specify the maximum number of entries to retrieve starting at offset. Maximum allowed value: 1000.</param>
+            <param name="logType">Specify the type of logs to include.</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GetLogs(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.GetLogsAsync(System.Int32,System.Int32,System.Boolean)"/>
+            </summary>
+            <param name="offset">Specify the first entry to retrieve (0-based, 0 is the most recent log entry).</param>
+            <param name="length">Specify the maximum number of entries to retrieve starting at offset. Maximum allowed value: 1000.</param>
+            <param name="onlyErrors">If set to true, the answer will only contain API calls with errors.</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GetLogs(System.Int32,System.Int32,Algolia.Search.AlgoliaClient.LogType)">
+            <summary>
+            Synchronously call <see cref="!:AlgoliaClient.GetLogsAsync(int, int, Algolia.Search.AlgoliaClient.LogType)"/>
+            </summary>
+            <param name="offset">Specify the first entry to retrieve (0-based, 0 is the most recent log entry).</param>
+            <param name="length">Specify the maximum number of entries to retrieve starting at offset. Maximum allowed value: 1000.</param>
+            <param name="logType">Specify the type of logs to include.</param>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.InitIndex(System.String)">
+            <summary>
+            Get the index object initialized (no server call needed for initialization).
+            </summary>
+            <param name="indexName">The name of the index</param>
+            <returns>An instance of the Index object that exposes Index actions</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.ListUserKeysAsync(System.Threading.CancellationToken)">
+            <summary>
+            List all existing user keys with their associated ACLs.
+            </summary>
+            <returns>An object containing the list of keys.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.ListUserKeys">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.ListUserKeysAsync(System.Threading.CancellationToken)"/> 
+            </summary>
+            <returns>An object containing the list of keys.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GetUserKeyACLAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get ACL for an existing user key.
+            </summary>
+            <returns>Returns an object with an "acls" array containing an array of strings with rights.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GetUserKeyACL(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.GetUserKeyACLAsync(System.String,System.Threading.CancellationToken)"/> 
+            </summary>
+            <returns>Returns an object with an "acls" array containing an array of strings with rights.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.DeleteUserKeyAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Delete an existing user key.
+            </summary>
+            <returns>Returns an object with a "deleteAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.DeleteUserKey(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.DeleteUserKeyAsync(System.String,System.Threading.CancellationToken)"/> 
+            </summary>
+            <returns>Returns an object with a "deleteAt" attribute.</returns>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.AlgoliaClient.AddUserKeyAsync(System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)" -->
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.AlgoliaClient.AddUserKey(System.Collections.Generic.Dictionary{System.String,System.Object})" -->
+        <member name="M:Algolia.Search.AlgoliaClient.AddUserKeyAsync(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Create a new user key.
+            </summary>
+            <param name="acls">The list of ACL for this key. Defined by an array of strings that can contains the following values:
+              - search: allow searching (https and http)
+              - addObject: allow adding/updating an object in the index (https only)
+              - deleteObject : allow deleting an existing object (https only)
+              - deleteIndex : allow deleting an index (https only)
+              - settings : allow getting index settings (https only)
+              - editSettings : allow changing index settings (https only)</param>
+            <param name="validity">The number of seconds after which the key will be automatically removed (0 means no time limit for this key).</param>
+            <param name="maxQueriesPerIPPerHour">Specify the maximum number of API calls allowed from an IP address per hour.  Defaults to 0 (no rate limit).</param>
+            <param name="maxHitsPerQuery">Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited).</param>
+            <param name="indexes">Restrict the new API key to specific index names.</param>
+            <returns>Returns an object with a "key" string attribute containing the new key.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.AddUserKey(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.AddUserKeyAsync(System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="acls">The list of ACL for this key. Defined by an array of strings that can contains the following values:
+              - search: allow searching (https and http)
+              - addObject: allow adding/updating an object in the index (https only)
+              - deleteObject : allow deleting an existing object (https only)
+              - deleteIndex : allow deleting an index (https only)
+              - settings : allow getting index settings (https only)
+              - editSettings : allow changing index settings (https only)</param>
+            <param name="validity">The number of seconds after which the key will be automatically removed (0 means no time limit for this key).</param>
+            <param name="maxQueriesPerIPPerHour">Specify the maximum number of API calls allowed from an IP address per hour.  Defaults to 0 (no rate limit).</param>
+            <param name="maxHitsPerQuery">Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited).</param>
+            <param name="indexes">Restrict the new API key to specific index names.</param>
+            <returns>Returns an object with a "key" string attribute containing the new key.</returns>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.AlgoliaClient.UpdateUserKeyAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)" -->
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.AlgoliaClient.UpdateUserKey(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})" -->
+        <member name="M:Algolia.Search.AlgoliaClient.UpdateUserKeyAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Update a user key.
+            </summary>
+            <param name="key">The user key</param>
+            <param name="acls">The list of ACL for this key. Defined by an array of strings that can contains the following values:
+              - search: allow searching (https and http)
+              - addObject: allow adding/updating an object in the index (https only)
+              - deleteObject : allow deleting an existing object (https only)
+              - deleteIndex : allow deleting an index (https only)
+              - settings : allow getting index settings (https only)
+              - editSettings : allow changing index settings (https only)</param>
+            <param name="validity">The number of seconds after which the key will be automatically removed (0 means no time limit for this key).</param>
+            <param name="maxQueriesPerIPPerHour">Specify the maximum number of API calls allowed from an IP address per hour.  Defaults to 0 (no rate limit).</param>
+            <param name="maxHitsPerQuery">Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited).</param>
+            <param name="indexes">Restrict the new API key to specific index names.</param>
+            <returns>Returns an object with a "key" string attribute containing the new key.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.UpdateUserKey(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.UpdateUserKeyAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="key">The user key</param>
+            <param name="acls">The list of ACL for this key. Defined by an array of strings that can contains the following values:
+              - search: allow searching (https and http)
+              - addObject: allow adding/updating an object in the index (https only)
+              - deleteObject : allow deleting an existing object (https only)
+              - deleteIndex : allow deleting an index (https only)
+              - settings : allow getting index settings (https only)
+              - editSettings : allow changing index settings (https only)</param>
+            <param name="validity">The number of seconds after which the key will be automatically removed (0 means no time limit for this key).</param>
+            <param name="maxQueriesPerIPPerHour">Specify the maximum number of API calls allowed from an IP address per hour.  Defaults to 0 (no rate limit).</param>
+            <param name="maxHitsPerQuery">Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited).</param>
+            <param name="indexes">Restrict the new API key to specific index names.</param>
+            <returns>Returns an object with a "key" string attribute containing the new key.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.BatchAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Send a batch targeting multiple indices
+            </summary>
+            <param name="actions">An array of action to send.</param>
+            <returns>An object containing an "objectIDs" attribute (array of string) and a dictionary for the taskIDs.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.Batch(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.AlgoliaClient.BatchAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)"/>
+            </summary>
+            <param name="actions">An array of action to send.</param>
+            <returns>An object containing an "objectIDs" attribute (array of string) and a dictionary for the taskIDs.</returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GenerateSecuredApiKey(System.String,Algolia.Search.Query,System.String)">
+            <summary>
+            Generates a secured and public API Key from a query parameters and an optional user token identifying the current user
+            </summary>
+            <param name="privateApiKey">Your private API Key</param>
+            <param name="query">The query parameters applied to the query (used as security)</param>
+            <param name="userToken">An optional token identifying the current user</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.GenerateSecuredApiKey(System.String,System.String,System.String)">
+            <summary>
+            Generates a secured and public API Key from a list of tagFilters and an optional user token identifying the current user
+            </summary>
+            <param name="privateApiKey">Your private API Key</param>
+            <param name="tagFilter">The list of tags applied to the query (used as security)</param>
+            <param name="userToken">An optional token identifying the current user</param>
+            <returns></returns>
+        </member>
+        <member name="P:Algolia.Search.AlgoliaClient.HttpClient">
+            <summary>
+            Main HTTP client
+            </summary>
+        </member>
+        <member name="P:Algolia.Search.AlgoliaClient.SearchHttpClient">
+            <summary>
+            Search HTTP client
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.AlgoliaClient.ExecuteRequest(Algolia.Search.AlgoliaClient.callType,System.String,System.String,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Used to execute the search request
+            </summary>
+            <param name="method">HTTP method</param>
+            <param name="requestUrl">URL to request</param>
+            <param name="content">The content</param>
+            <returns></returns>
+        </member>
+        <member name="T:Algolia.Search.Index">
+            <summary>
+            Contains all the functions related to one index.
+            You should use AlgoliaClient.initIndex(indexName) to instantiate this object.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.#ctor(Algolia.Search.AlgoliaClient,System.String)">
+            <summary>
+            Index initialization (You should not call this constructor yourself).
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.AddObjectAsync(System.Object,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Add an object to this index.
+            </summary>
+            <param name="content">The object you want to add to the index.</param>
+            <param name="objectId">Optional objectID you want to attribute to this object (if the attribute already exists the old object will be overwritten).</param>
+            <returns>An object that contains an "objectID" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.AddObject(System.Object,System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.AddObjectAsync(System.Object,System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="content">The object you want to add to the index.</param>
+            <param name="objectId">Optional objectID you want to attribute to this object (if the attribute already exists the old object will be overwritten).</param>
+            <returns>An object that contains an "objectID" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.AddObjectsAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Add several objects to this index.
+            </summary>
+            <param name="objects">An array of objects to add. If the objects contains objectIDs, they will be used.</param>
+            <returns>An object containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.AddObjects(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.AddObjectsAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objects">An array of objects to add. If the objects contains objectIDs, they will be used.</param>
+            <returns>An object containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.GetObjectAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Get an object from this index.
+            </summary>
+            <param name="objectID">The unique identifier of the object to retrieve.</param>
+            <param name="attributesToRetrieve">Optional list of attributes to retrieve.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Index.GetObject(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.GetObjectAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objectID">The unique identifier of the object to retrieve.</param>
+            <param name="attributesToRetrieve">Optional list of attributes to retrieve.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Index.GetObjectsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Get several objects from this index.
+            </summary>
+            <param name="objectIDs">An array of unique identifiers of the objects to retrieve.</param>
+            <returns></returns> 
+        </member>
+        <member name="M:Algolia.Search.Index.GetObjectsAsync(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Get several objects from this index.
+            </summary>
+            <param name="objectIDs">An array of unique identifiers of the objects to retrieve.</param>
+            <returns></returns> 
+        </member>
+        <member name="M:Algolia.Search.Index.GetObjects(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.GetObjectsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objectIDs">An array of unique identifiers of the objects to retrieve.</param>
+            <returns></returns> 
+        </member>
+        <member name="M:Algolia.Search.Index.GetObjects(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Synchronously call <see cref="!:Index.GetObjectsWithAttributesAsync"/>.
+            </summary>
+            <param name="objectIDs">An array of unique identifiers of the objects to retrieve.</param>
+            <param name="attributesToRetrieve">list of attributes to retrieve.</param>
+            <returns></returns> 
+        </member>
+        <member name="M:Algolia.Search.Index.PartialUpdateObjectAsync(Newtonsoft.Json.Linq.JObject,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Partially update an object (only update attributes passed in argument).
+            </summary>
+            <param name="partialObject">The object attributes to override (must contains an objectID attribute).</param>
+            <returns>An object containing an "updatedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.PartialUpdateObject(Newtonsoft.Json.Linq.JObject,System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.PartialUpdateObjectAsync(Newtonsoft.Json.Linq.JObject,System.Boolean,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="partialObject">The object attributes to override (must contains an objectID attribute).</param>
+            <returns>An object containing an "updatedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.PartialUpdateObjectsAsync(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject},System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Partially update the content of several objects.
+            </summary>
+            <param name="objects">An array of objects to update (each object must contain an objectID attribute).</param>
+            <returns>An object containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.PartialUpdateObjects(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject},System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.PartialUpdateObjectsAsync(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject},System.Boolean,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objects">An array of objects to update (each object must contain an objectID attribute).</param>
+            <returns>An object containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.SaveObjectAsync(Newtonsoft.Json.Linq.JObject,System.Threading.CancellationToken)">
+            <summary>
+            Override the contents of an object.
+            </summary>
+            <param name="obj">The object to save (must contain an objectID attribute).</param>
+            <returns>An object containing an "updatedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.SaveObject(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SaveObjectAsync(Newtonsoft.Json.Linq.JObject,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="obj">The object to save (must contain an objectID attribute).</param>
+            <returns>An object containing an "updatedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.SaveObjectsAsync(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject},System.Threading.CancellationToken)">
+            <summary>
+            Override the contents of several objects.
+            </summary>
+            <param name="objects">An array of objects to update (each object must contain an objectID attribute).</param>
+            <returns>An object containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.SaveObjects(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SaveObjectsAsync(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objects">An array of objects to update (each object must contain an objectID attribute).</param>
+            <returns>An object containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteObjectAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Delete an object from the index.
+            </summary>
+            <param name="objectID">The unique identifier of the object to delete.</param>
+            <returns>An object containing a "deletedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteObject(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.DeleteObjectAsync(System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objectID">The unique identifier of the object to delete.</param>
+            <returns>An object containing a "deletedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteObjectsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <summary>
+            Delete several objects.
+            </summary>
+            <param name="objects">An array of objectIDs to delete.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteObjects(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.DeleteObjectsAsync(System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objects">An array of objectIDs to delete.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteByQueryAsync(Algolia.Search.Query)">
+            <summary>
+            Delete all objects matching a query.
+            </summary>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteByQuery(Algolia.Search.Query)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.DeleteByQueryAsync(Algolia.Search.Query)"/>.
+            </summary>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchAsync(Algolia.Search.Query,System.Threading.CancellationToken)">
+            <summary>
+            Search inside the index.
+            </summary>
+            <param name="q">The query.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.Search(Algolia.Search.Query)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SearchAsync(Algolia.Search.Query,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="q">The query.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.WaitTaskAsync(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Check to see if the asynchronous server task is complete.
+            </summary>
+            <param name="taskID">The id of the task returned by server.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.WaitTask(System.String,System.Int32)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.WaitTaskAsync(System.String,System.Int32,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="taskID">The id of the task returned by server.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.GetSettingsAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get the index settings.
+            </summary>
+            <returns>An object containing the settings.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.GetSettings">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.GetSettingsAsync(System.Threading.CancellationToken)"/>.
+            </summary>
+            <returns>An object containing the settings.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.BrowseAsync(System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+             Browse all index contents.
+            </summary>
+            <param name="page">The page number to browse.</param>
+            <param name="hitsPerPage">The number of hits per page.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.Browse(System.Int32,System.Int32)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.BrowseAsync(System.Int32,System.Int32,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="page">The page number to browse.</param>
+            <param name="hitsPerPage">The number of hits per page.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.BrowseFromAsync(Algolia.Search.Query,System.String,System.Threading.CancellationToken)">
+            <summary>
+             Browse all index contents.
+            </summary>
+            <param name="q">The query parameters for the browse.</param>
+            <param name="cursor">The cursor to start the browse can be empty.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.BrowseFrom(Algolia.Search.Query,System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.BrowseFromAsync(Algolia.Search.Query,System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="q">The query parameters for the browse.</param>
+            <param name="cursor">The cursor to start the browse can be empty.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.BrowseAll(Algolia.Search.Query)">
+            <summary>
+             Browse all index contents.
+            </summary>
+            <param name="q">The query parameters for the browse.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.ClearIndexAsync(System.Threading.CancellationToken)">
+            <summary>
+            Delete the index contents without removing settings and index specific API keys.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.ClearIndex">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.ClearIndexAsync(System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.SetSettingsAsync(Newtonsoft.Json.Linq.JObject,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Set the settings for this index.
+            </summary>
+            <param name="settings">The settings object can contain:
+             - minWordSizefor1Typo: (integer) the minimum number of characters to accept one typo (default = 3).
+             - minWordSizefor2Typos: (integer) the minimum number of characters to accept two typos (default = 7).
+             - hitsPerPage: (integer) the number of hits per page (default = 10).
+             - attributesToRetrieve: (array of strings) default list of attributes to retrieve in objects. 
+               If set to null, all attributes are retrieved.
+             - attributesToHighlight: (array of strings) default list of attributes to highlight. 
+               If set to null, all indexed attributes are highlighted.
+             - attributesToSnippet**: (array of strings) default list of attributes to snippet alongside the number of words to return (syntax is attributeName:nbWords).
+               By default no snippet is computed. If set to null, no snippet is computed.
+             - searchableAttributes(formerly attributesToIndex): (array of strings) the list of fields you want to index.
+               If set to null, all textual and numerical attributes of your objects are indexed, but you should update it to get optimal results.
+               This parameter has two important uses:
+                 - Limit the attributes to index: For example if you store a binary image in base64, you want to store it and be able to 
+                   retrieve it but you don't want to search in the base64 string.
+                 - Control part of the ranking*: (see the ranking parameter for full explanation) Matches in attributes at the beginning of 
+                   the list will be considered more important than matches in attributes further down the list. 
+                   In one attribute, matching text at the beginning of the attribute will be considered more important than text after, you can disable 
+                   this behavior if you add your attribute inside `unordered(AttributeName)`, for example searchableAttributes: ["title", "unordered(text)"].
+             - attributesForFaceting: (array of strings) The list of fields you want to use for faceting. 
+               All strings in the attribute selected for faceting are extracted and added as a facet. If set to null, no attribute is used for faceting.
+             - ranking: (array of strings) controls the way results are sorted.
+               We have six available criteria: 
+                - typo: sort according to number of typos,
+                - geo: sort according to decreassing distance when performing a geo-location based search,
+                - proximity: sort according to the proximity of query words in hits,
+                - attribute: sort according to the order of attributes defined by searchableAttributes,
+                - exact: sort according to the number of words that are matched identical to query word (and not as a prefix),
+                - custom: sort according to a user defined formula set in **customRanking** attribute.
+               The standard order is ["typo", "geo", "proximity", "attribute", "exact", "custom"]
+             - customRanking: (array of strings) lets you specify part of the ranking.
+               The syntax of this condition is an array of strings containing attributes prefixed by asc (ascending order) or desc (descending order) operator.
+               For example `"customRanking" => ["desc(population)", "asc(name)"]`  
+             - queryType: Select how the query words are interpreted, it can be one of the following value:
+               - prefixAll: all query words are interpreted as prefixes,
+               - prefixLast: only the last word is interpreted as a prefix (default behavior),
+               - prefixNone: no query word is interpreted as a prefix. This option is not recommended.
+             - highlightPreTag: (string) Specify the string that is inserted before the highlighted parts in the query result (default to "<em>").
+             - highlightPostTag: (string) Specify the string that is inserted after the highlighted parts in the query result (default to "</em>").
+             - optionalWords: (array of strings) Specify a list of words that should be considered as optional when found in the query.
+            </param>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SetSettings(Newtonsoft.Json.Linq.JObject,System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SetSettingsAsync(Newtonsoft.Json.Linq.JObject,System.Boolean,System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.ListUserKeysAsync(System.Threading.CancellationToken)">
+            <summary>
+            List all user keys associated with this index along with their associated ACLs.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.ListUserKeys">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.ListUserKeysAsync(System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.GetUserKeyACLAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get ACL of a user key associated with this index.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.GetUserKeyACL(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.GetUserKeyACLAsync(System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteUserKeyAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Delete an existing user key associated with this index.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteUserKey(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.DeleteUserKeyAsync(System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Index.AddUserKeyAsync(System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)" -->
+        <member name="M:Algolia.Search.Index.AddUserKey(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.AddUserKeyAsync(System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.AddUserKeyAsync(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create a new user key associated with this index.
+            </summary>
+            <param name="acls">The list of ACL for this key. Defined by an array of strings that can contains the following values:
+              - search: allow searching (https and http)
+              - addObject: allow adding/updating an object in the index (https only)
+              - deleteObject : allow deleting an existing object (https only)
+              - deleteIndex : allow deleting an index (https only)
+              - settings : allow getting index settings (https only)
+              - editSettings : allow changing index settings (https only)</param>
+            <param name="validity">The number of seconds after which the key will be automatically removed (0 means no time limit for this key).</param>
+            <param name="maxQueriesPerIPPerHour">Specify the maximum number of API calls allowed from an IP address per hour.  Defaults to 0 (no rate limit).</param>
+            <param name="maxHitsPerQuery">Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited).</param>
+            <returns>Returns an object with a "key" string attribute containing the new key.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.AddUserKey(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.AddUserKeyAsync(System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Index.UpdateUserKeyAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)" -->
+        <member name="M:Algolia.Search.Index.UpdateUserKey(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.UpdateUserKeyAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.UpdateUserKeyAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Update a user key associated to this index.
+            </summary>
+            <param name="key">The user key</param>
+            <param name="acls">The list of ACL for this key. Defined by an array of strings that can contains the following values:
+              - search: allow searching (https and http)
+              - addObject: allow adding/updating an object in the index (https only)
+              - deleteObject : allow deleting an existing object (https only)
+              - deleteIndex : allow deleting an index (https only)
+              - settings : allow getting index settings (https only)
+              - editSettings : allow changing index settings (https only)</param>
+            <param name="validity">The number of seconds after which the key will be automatically removed (0 means no time limit for this key).</param>
+            <param name="maxQueriesPerIPPerHour">Specify the maximum number of API calls allowed from an IP address per hour.  Defaults to 0 (no rate limit).</param>
+            <param name="maxHitsPerQuery">Specify the maximum number of hits this API key can retrieve in one call. Defaults to 0 (unlimited).</param>
+            <returns>Returns an object with a "key" string attribute containing the new key.</returns>
+        </member>
+        <member name="M:Algolia.Search.Index.UpdateUserKey(System.String,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.UpdateUserKeyAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchDisjunctiveFacetingAsync(Algolia.Search.Query,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">
+            <summary>
+            Perform a search with disjunctive facets generating as many queries as number of disjunctive facets
+            </summary>
+            <param name="query">The query.</param>
+            <param name="disjunctiveFacets">The array of disjunctive facets.</param>
+            <param name="refinements">The current refinements. Example: { "my_facet1" => ["my_value1", "my_value2"], "my_disjunctive_facet1" => ["my_value1", "my_value2"] }.</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchDisjunctiveFaceting(Algolia.Search.Query,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.UpdateUserKeyAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Threading.CancellationToken)"/>.
+            </summary>
+        </member>
+        <member name="T:Algolia.Search.Index.SynonymType">
+            <summary>
+            The type of synonyms
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchSynonymsAsync(System.String,System.Collections.Generic.IEnumerable{Algolia.Search.Index.SynonymType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Search/Browse all synonyms
+            </summary>
+            <param name="query">The query string</param>
+            <param name="types">Specify the types</param>
+            <param name="page">The page to fetch</param>
+            <param name="hitsPerPage">number of synonyms to fetch</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchSynonyms(System.String,System.Collections.Generic.IEnumerable{Algolia.Search.Index.SynonymType},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SearchSynonymsAsync(System.String,System.Collections.Generic.IEnumerable{Algolia.Search.Index.SynonymType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="query">The query string</param>
+            <param name="types">Specify the types</param>
+            <param name="page">The page to fetch</param>
+            <param name="hitsPerPage">number of synonyms to fetch</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchSynonymsAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)">
+            <summary>
+            Search/Browse all synonyms
+            </summary>
+            <param name="query">The query string</param>
+            <param name="types">Specify the types</param>
+            <param name="page">The page to fetch</param>
+            <param name="hitsPerPage">number of synonyms to fetch</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchSynonyms(System.String,System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SearchSynonymsAsync(System.String,System.Collections.Generic.IEnumerable{Algolia.Search.Index.SynonymType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="query">The query string</param>
+            <param name="types">Specify the types</param>
+            <param name="page">The page to fetch</param>
+            <param name="hitsPerPage">number of synonyms to fetch</param>
+        </member>
+        <member name="M:Algolia.Search.Index.GetSynonymAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Get one synonym
+            </summary>
+            <param name="objectID">The objectID of the synonym</param>
+        </member>
+        <member name="M:Algolia.Search.Index.GetSynonym(System.String)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.GetSynonymAsync(System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objectID">The objectID of the synonym</param>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteSynonymAsync(System.String,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Delete one synonym
+            </summary>
+            <param name="objectID">The objectID of the synonym</param>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.DeleteSynonym(System.String,System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.DeleteSynonymAsync(System.String,System.Boolean,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="objectID">The objectID of the synonym</param>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.ClearSynonymsAsync(System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Delete all synonym set
+            </summary>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.ClearSynonyms(System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.BrowseFromAsync(Algolia.Search.Query,System.String,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.BatchSynonymsAsync(System.Collections.Generic.IEnumerable{System.Object},System.Boolean,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Add or Replace a list of synonyms 
+            </summary>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+            <param name="replaceExistingSynonyms">Replace the existing synonyms with this batch</param>
+        </member>
+        <member name="M:Algolia.Search.Index.BatchSynonyms(System.Collections.Generic.IEnumerable{System.Object},System.Boolean,System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.BatchSynonymsAsync(System.Collections.Generic.IEnumerable{System.Object},System.Boolean,System.Boolean,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+            <param name="replaceExistingSynonyms">Replace the existing synonyms with this batch</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SaveSynonymAsync(System.String,System.Object,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Update one synonym
+            </summary>
+            <param name="objectID">The objectID of the synonym</param>
+            <param name="content">The new content of this synonym</param>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SaveSynonym(System.String,System.Object,System.Boolean,System.Boolean)">
+            <summary>
+            Synchronously call <see cref="M:Algolia.Search.Index.SaveSynonymAsync(System.String,System.Object,System.Boolean,System.Threading.CancellationToken)"/>.
+            </summary>
+            <param name="forwardToReplicas">Forward the operation to the replica indices</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchForFacetValues(System.String,System.String,Algolia.Search.Query)">
+            <summary>
+            Synchronously call <see cref="!:Index.SearchForFacetValuestAsync"/>.
+            </summary>
+            <param name="facetName">Name of the facet</param>
+            <param name="facetQuery">Current query</param>
+            <param name="queryParams">Optional query parameter</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchFacet(System.String,System.String,Algolia.Search.Query)">
+             <summary>
+            = kept for backward compatibility - Synchronously call <see cref="M:Algolia.Search.Index.SearchFacetAsync(System.String,System.String,Algolia.Search.Query,System.Threading.CancellationToken)"/>.
+             </summary>
+             <param name="facetName">Name of the facet</param>
+             <param name="facetQuery">Current query</param>
+             <param name="queryParams">Optional query parameter</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchFacetAsync(System.String,System.String,Algolia.Search.Query,System.Threading.CancellationToken)">
+            <summary>
+            Search for facets async
+            </summary>
+            <param name="facetName">Name of the facet</param>
+            <param name="facetQuery">Current Query</param>
+            <param name="queryParams">Optional query parameter</param>
+        </member>
+        <member name="M:Algolia.Search.Index.SearchForFacetValuesAsync(System.String,System.String,Algolia.Search.Query,System.Threading.CancellationToken)">
+            <summary>
+            Search for facets async = kept for backward compatibility
+            </summary>
+            <param name="facetName">Name of the facet</param>
+            <param name="facetQuery">Current Query</param>
+            <param name="queryParams">Optional query parameter</param>
+        </member>
+        <member name="T:Algolia.Search.IndexHelper`1">
+            <summary>
+            Helper class for making it simpler to work with an index.
+            </summary>
+            <typeparam name="T">The type of data for the index.</typeparam>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.#ctor(Algolia.Search.AlgoliaClient,System.String,System.String)">
+            <summary>
+            Create a new IndexHelper.
+            </summary>
+            <param name="client">The AlgoliaClient to use for index management.</param>
+            <param name="indexName">The name of the Algolia index.</param>
+            <param name="objectIdField">The name of the field to use for mapping to the Algolia objectID.</param>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.OverwriteIndexAsync(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Indexes all objects using a temporary index that is then atomically moved to the destination index.
+            All previous content will be overwritten. You must supply all objects to this method that need to
+            exist within the index.
+            </summary>
+            <param name="objects">An enumerable list of objects to override the index with.</param>
+            <param name="maxObjectsPerCall">Maximum number of objects per indexing call. Should be between 1,000 and 10,000 depending on size of objects.</param>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.OverwriteIndex(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Indexes all objects using a temporary index that is then atomically moved to the destination index.
+            All previous content will be overwritten. You must supply all objects to this method that need to
+            exist within the index.
+            </summary>
+            <param name="objects">An enumerable list of objects to override the index with.</param>
+            <param name="maxObjectsPerCall">Maximum number of objects per indexing call. Should be between 1,000 and 10,000 depending on size of objects.</param>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.SaveObjectsAsync(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Add or update the contents of several objects.
+            </summary>
+            <param name="objects">An enumerable list of objects to add or update.</param>
+            <param name="maxObjectsPerCall">Maximum number of objects per indexing call. Should be between 1,000 and 10,000 depending on size of objects.</param>
+            <returns>An array of objects containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.SaveObjects(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Add or update the contents of several objects.
+            </summary>
+            <param name="objects">An enumerable list of objects to add or update.</param>
+            <param name="maxObjectsPerCall">Maximum number of objects per indexing call. Should be between 1,000 and 10,000 depending on size of objects.</param>
+            <returns>An array of objects containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.SaveObjectAsync(`0)">
+            <summary>
+            Add or update the contents of an object.
+            </summary>
+            <param name="obj">The object to add or update.</param>
+            <returns>An object containing an "updatedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.SaveObject(`0)">
+            <summary>
+            Add or update the contents of an object.
+            </summary>
+            <param name="obj">The object to add or update.</param>
+            <returns>An object containing an "updatedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.DeleteObjectsAsync(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Delete several objects.
+            </summary>
+            <param name="objects">An enumerable list of objects to delete.</param>
+            <param name="maxObjectsPerCall">Maximum number of objects per indexing call. Should be between 1,000 and 10,000 depending on size of objects.</param>
+            <returns>An array of objects containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.DeleteObjects(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Delete several objects.
+            </summary>
+            <param name="objects">An enumerable list of objects to delete.</param>
+            <param name="maxObjectsPerCall">Maximum number of objects per indexing call. Should be between 1,000 and 10,000 depending on size of objects.</param>
+            <returns>An array of objects containing an "objectIDs" attribute (array of string).</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.DeleteObjectAsync(`0)">
+            <summary>
+            Delete an object from the index.
+            </summary>
+            <param name="obj">The object to delete.</param>
+            <returns>An object containing a "deletedAt" attribute.</returns>
+        </member>
+        <member name="M:Algolia.Search.IndexHelper`1.DeleteObject(`0)">
+            <summary>
+            Delete an object from the index.
+            </summary>
+            <param name="obj">The object to delete.</param>
+            <returns>An object containing a "deletedAt" attribute.</returns>
+        </member>
+        <member name="P:Algolia.Search.IndexHelper`1.Client">
+            <summary>
+            The Algolia client
+            </summary>
+        </member>
+        <member name="P:Algolia.Search.IndexHelper`1.IndexName">
+            <summary>
+            The name of the index for this manager
+            </summary>
+        </member>
+        <member name="P:Algolia.Search.IndexHelper`1.ObjectIdField">
+            <summary>
+            The field of objects that maps to the Algolia objectID
+            </summary>
+        </member>
+        <member name="T:Algolia.Search.IndexQuery">
+            <summary>
+            Used for building index queries.
+            </summary>
+        </member>
+        <member name="P:Algolia.Search.IndexQuery.Index">
+            <summary>
+            Get or set the index name.
+            </summary>
+        </member>
+        <member name="P:Algolia.Search.IndexQuery.Query">
+            <summary>
+            Get or set the query.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.IndexQuery.#ctor(System.String,Algolia.Search.Query)">
+            <summary>
+            Create a new index query.
+            </summary>
+            <param name="index">The name of the index.</param>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Algolia.Search.IndexQuery.#ctor">
+            <summary>
+            Create a new index query.
+            </summary>
+        </member>
+        <member name="T:Algolia.Search.Query">
+            <summary>
+            Builder of queries.
+            </summary>
+        </member>
+        <member name="T:Algolia.Search.Query.QueryType">
+            <summary>
+            The type of query.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.QueryType.PREFIX_ALL">
+            <summary>
+            All query words are interpreted as prefixes.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.QueryType.PREFIX_LAST">
+            <summary>
+            Only the last word is interpreted as a prefix (default behavior).
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.QueryType.PREFIX_NONE">
+            <summary>
+            No query word is interpreted as a prefix. This option is not recommended.
+            </summary>
+        </member>
+        <member name="T:Algolia.Search.Query.RemoveWordsIfNoResult">
+            <summary>
+            Remove words if no result.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.RemoveWordsIfNoResult.NONE">
+            <summary>
+            No specific processing is done when a query does not return any result.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.RemoveWordsIfNoResult.LAST_WORDS">
+            <summary>
+            When a query does not return any result, the final word will be removed until there is results.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.RemoveWordsIfNoResult.FIRST_WORDS">
+            <summary>
+            When a query does not return any result, the first word will be removed until there is results.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.RemoveWordsIfNoResult.ALL_OPTIONAL">
+            <summary>
+            When a query does not return any result, a second trial will be made with all words as optional (which is equivalent to transforming the AND operand between query terms in a OR operand) 
+            </summary>
+        </member>
+        <member name="T:Algolia.Search.Query.TypoTolerance">
+            <summary>
+            Typo tolerance.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.TypoTolerance.TYPO_TRUE">
+            <summary>
+            the typo-tolerance is enabled and all matching hits are retrieved. (Default behavior)
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.TypoTolerance.TYPO_FALSE">
+            <summary>
+            the typo-tolerance is disabled.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.TypoTolerance.TYPO_MIN">
+            <summary>
+             only keep the results with the minimum number of typos.
+            </summary>
+        </member>
+        <member name="F:Algolia.Search.Query.TypoTolerance.TYPO_STRICT">
+            <summary>
+            hits matching with 2 typos are not retrieved if there are some matching without typos.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.#ctor(System.String)">
+            <summary>
+            Create a new query.
+            </summary>
+            <param name="query">The query.</param>
+        </member>
+        <member name="M:Algolia.Search.Query.#ctor">
+            <summary>
+            Create a new query.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.clone">
+            <summary>
+            Clone this query to a new query.
+            </summary>
+            <returns>The cloned query.</returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetQueryType(Algolia.Search.Query.QueryType)">
+            <summary>
+            Select how the query words are interpreted.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetRemoveWordsIfNoResult(Algolia.Search.Query.RemoveWordsIfNoResult)">
+            <summary>
+            Select the spécific processing for the query.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetQueryString(System.String)">
+            <summary>
+            Set the full text query.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetSimilarQueryString(System.String)">
+            <summary>
+            Set the full text similar query.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetMinProximity(System.Int32)">
+             <summary>
+             Configure the precision of the proximity ranking criterion. By default, the minimum (and best) proximity value distance between 2 matching words is 1. Setting it to 2 (or 3) would allow 1 (or 2) words to be found between the matching words without degrading the proximity ranking value.
+            
+             Considering the query "javascript framework", if you set minProximity=2 the records "JavaScript framework" and "JavaScript charting framework" will get the same proximity score, even if the second one contains a word between the 2 matching words. Default to 1.
+             </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetHighlightingTags(System.String,System.String)">
+            <summary>
+            Specify the string that is inserted before/after the highlighted parts in the query result (default to "<em>" / "</em>").
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetSnippetEllipsisText(System.String)">
+            <summary>
+            Specify the string that is used as an ellipsis indicator when a snippet is truncated (defaults to the empty string).
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetAttributesToRetrieve(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Specify the list of attribute names to retrieve.
+            </summary>
+            <param name="attributes">The attributes to retrieve.</param>
+            <returns>Query for the attributes.</returns>
+        </member>
+        <member name="M:Algolia.Search.Query.DisableTypoToleranceOnAttributes(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            List of attributes on which you want to disable typo tolerance (must be a subset of the searchableAttributes index setting).
+            </summary>
+            <param name="attributes">The list of attributes.</param>
+        </member>
+        <member name="M:Algolia.Search.Query.SetAttributesToHighlight(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Specify the list of attribute names to highlight.
+            </summary>
+            <param name="attributes">The attributes to highlight.</param>
+            <returns>Query for the attributes.</returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetAttributesToSnippet(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Specify the list of attribute names to Snippet alongside the number of words to return (syntax is 'attributeName:nbWords'). By default no snippet is computed.
+            </summary>
+            <param name="attributes">The attributes to Snippet.</param>
+            <returns>Query for the attributes.</returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetFieldsToRetrieve(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Choose which fields the response will contain
+            </summary>
+            <param name="fields">Fields to retrieve</param>
+            <returns>Query for the attributes.</returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetMinWordSizeToAllowOneTypo(System.Int32)">
+            <summary>
+            Specify the minimum number of characters in a query word to accept one typo in this word. Defaults to 3.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetMinWordSizeToAllowTwoTypos(System.Int32)">
+            <summary>
+            Specify the minimum number of characters in a query word to accept two typos in this word. Defaults to 7.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.GetRankingInfo(System.Boolean)">
+            <summary>
+            If set, the result hits will contain ranking information in _rankingInfo attribute.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.IgnorePlural(System.Boolean)">
+            <summary>
+            If set to true, plural won't be considered as a typo (for example car/cars will be considered as equals). Defaults to false.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.IgnorePlural(Algolia.Search.Models.IIgnorePlurals)">
+            <summary>
+            ignorePlural accept a comma separated string of languages "af,ar,az"
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableDistinct(System.Boolean)">
+            <summary>
+            This feature is similar to the SQL "distinct" keyword: when enabled in a query with the distinct=1 parameter, 
+            all hits containing a duplicate value for the attributeForDistinct attribute are removed from results. 
+            For example, if the chosen attribute is show_name and several hits have the same value for show_name, then only the best 
+            one is kept and others are removed.
+            </summary>
+            <param name="enabled">If set to true, enable the distinct feature (disabled by default) if the attributeForDistinct index setting is set.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableFacetingAfterDistinct(System.Boolean)">
+            <summary>
+            Force faceting to be applied after de-duplication, 
+            When using the distinct setting in combination with faceting, facet counts may be higher than expected. 
+            This is because the engine computes faceting before applying de-duplication (distinct)
+            https://www.algolia.com/doc/rest-api/search/#facetingafterdistinct
+            </summary>
+            <param name="enabled">If set to true, enable the facetingAfterDistinct feature (disabled by default)</param>
+            <returns></returns>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Query.EnableDistinct(System.Int32)" -->
+        <member name="M:Algolia.Search.Query.EnableAnalytics(System.Boolean)">
+            <summary>
+            If set to false, this query will not be taken into account in analytics feature. Default to true.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetAnalyticsTags(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Tag the query with the specified identifiers
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableSynonyms(System.Boolean)">
+            <summary>
+             If set to false, this query will not use synonyms defined in configuration. Default to true.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableReplaceSynonymsInHighlight(System.Boolean)">
+            <summary>
+            If set to false, words matched via synonyms expansion will not be replaced by the matched synonym in highlight result. Default to true.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableTypoTolerance(System.Boolean)">
+            <summary>
+            If set to false, disable typo-tolerance. Default to true.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetTypoTolerance(Algolia.Search.Query.TypoTolerance)">
+            <summary>
+            This option allows you to control the number of typos in the result set.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableTyposOnNumericTokens(System.Boolean)">
+            <summary>
+            If set to false, disable typo-tolerance on numeric tokens. Default to true.
+            </summary> 
+        </member>
+        <member name="M:Algolia.Search.Query.SetPage(System.Int32)">
+            <summary>
+            Set the page to retrieve (zero base). Defaults to 0.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetNbHitsPerPage(System.Int32)">
+            <summary>
+            Set the number of hits per page. Defaults to 10.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetOffset(System.Nullable{System.Int32})">
+            <summary>
+            Set the offset for the pagination.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetLength(System.Nullable{System.Int32})">
+            <summary>
+            Set the length for the pagination.
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.ExactOnSingleWordQuery(System.String)">
+            <summary>
+            Set the the parameter that controls how the `exact` ranking criterion is computed when the query contains one word
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.AlternativesAsExact(System.String)">
+             <summary>
+            Specify the list of approximation that should be considered as an exact match in the ranking formula
+             </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitude(System.Single,System.Single)">
+            <summary>
+            Search for entries around a given latitude/longitude with an automatic guessing of the radius depending of the area density 
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="latitude">The latitude</param>
+            <param name="longitude">The longitude</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitude(System.Single,System.Single,Algolia.Search.Models.IAllRadius)">
+            <summary>
+            Search for entries around a given latitude/longitude. 
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="latitude">The latitude</param>
+            <param name="longitude">The longitude</param>
+            <param name="radius">set the maximum distance in meters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitude(System.Single,System.Single,System.Int32)">
+             <summary>
+            (BACKWARD COMPATIBILITY)Search for entries around a given latitude/longitude. 
+             Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+             </summary>
+             <param name="latitude">The latitude</param>
+             <param name="longitude">The longitude</param>
+             <param name="radius">set the maximum distance in meters.</param>
+             <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitudeViaIP">
+            <summary>
+            Search for entries around a given latitude/longitude (using IP geolocation) with an automatic radius depending of the density of the area
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="radius">set the maximum distance in meters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitude(System.Single,System.Single,Algolia.Search.Models.IAllRadius,System.Int32)">
+            <summary>
+            Search for entries around a given latitude/longitude. 
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="latitude">The latitude</param>
+            <param name="longitude">The longitude</param>
+            <param name="radius">set the maximum distance in meters.</param>
+            <param name="precision">set the precision for ranking (for example if you set precision=100, two objects that are distant of less than 100m will be considered as identical for "geo" ranking parameter).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitude(System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            (BACKWARD COMPATIBILITY)Search for entries around a given latitude/longitude. 
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="latitude">The latitude</param>
+            <param name="longitude">The longitude</param>
+            <param name="radius">set the maximum distance in meters.</param>
+            <param name="precision">set the precision for ranking (for example if you set precision=100, two objects that are distant of less than 100m will be considered as identical for "geo" ranking parameter).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitudeViaIP(Algolia.Search.Models.IAllRadius)">
+            <summary>
+            Search for entries around a given latitude/longitude (using IP geolocation).
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="radius">set the maximum distance in meters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitudeViaIP(System.Int32)">
+             <summary>
+            (BACKWARD COMPATIBILITY) Search for entries around a given latitude/longitude (using IP geolocation).
+             Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+             </summary>
+             <param name="radius">set the maximum distance in meters.</param>
+             <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitudeViaIP(Algolia.Search.Models.IAllRadius,System.Int32)">
+            <summary>
+            Search for entries around a given latitude/longitude (using IP geolocation).
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="radius">set the maximum distance in meters.</param>
+            <param name="precision">set the precision for ranking (for example if you set precision=100, two objects that are distant of less than 100m will be considered as identical for "geo" ranking parameter).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AroundLatitudeLongitudeViaIP(System.Int32,System.Int32)">
+            <summary>
+            (BACKWARD COMPATIBILITY) Search for entries around a given latitude/longitude (using IP geolocation).
+            Note: at indexing, geoloc of an object should be set with _geoloc attribute containing lat and lng attributes (for example {"_geoloc":{"lat":48.853409, "lng":2.348800}})
+            </summary>
+            <param name="radius">set the maximum distance in meters.</param>
+            <param name="precision">set the precision for ranking (for example if you set precision=100, two objects that are distant of less than 100m will be considered as identical for "geo" ranking parameter).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.InsideBoundingBox(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Search for entries inside a given area defined by the two extreme points of a rectangle.
+            At indexing, you should specify geoloc of an object with the _geoloc attribute (in the form "_geoloc":{"lat":48.853409, "lng":2.348800} or 
+            "_geoloc":[{"lat":48.853409, "lng":2.348800},{"lat":48.547456, "lng":2.972075}] if you have several geo-locations in your record).
+            
+            You can use several bounding boxes (OR) by calling this method several times.        
+            </summary>
+            <param name="latitudeP1"></param>
+            <param name="longitudeP1"></param>
+            <param name="latitudeP2"></param>
+            <param name="longitudeP2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AddInsidePolygon(System.Single,System.Single)">
+            <summary>
+            Add a point to the polygon of geo-search (requires a minimum of three points to define a valid polygon)
+            At indexing, you should specify geoloc of an object with the _geoloc attribute (in the form "_geoloc":{"lat":48.853409, "lng":2.348800} or 
+            "_geoloc":[{"lat":48.853409, "lng":2.348800},{"lat":48.547456, "lng":2.972075}] if you have several geo-locations in your record).
+            </summary>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Query.SetAroundRadius(Algolia.Search.Models.IAllRadius)" -->
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Query.SetAroundRadius(System.Int32)" -->
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Query.setAroundPrecision(System.Int32)" -->
+        <member name="M:Algolia.Search.Query.SetFilters(System.String)">
+            <summary>
+            Filter the query with numeric, facet or/and tag filters. The syntax is a SQL like syntax, you can use the OR and AND keywords.
+            The syntax for the underlying numeric, facet and tag filters is the same than in the other filters:
+            available=1 AND (category:Book OR NOT category:Ebook) AND public
+            </summary>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
+        <!-- Commentaire XML incorrect pour le membre "M:Algolia.Search.Query.SetTagFilters(System.String)" -->
+        <member name="M:Algolia.Search.Query.SetNumericFilters(System.String)">
+            <summary>
+            Add a list of numeric filters separated by a comma.
+            The syntax of one filter is `attributeName` followed by `operand` and `value`.
+            Suported operand are &lt;, &lt;=, =, &gt; and &gt;=
+            You can have multiple conditions on one attribute like for example `numerics=price&gt;100,price&lt;1000`
+            </summary>
+        </member>
+        <member name="M:Algolia.Search.Query.SetOptionalWords(System.String)">
+            <summary>
+            Set the list of words that should be considered as optional when found in the query.
+            </summary>
+            <param name="words">The list of optional words, comma separated.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetFacetFilters(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Filter the query by a list of facets.
+            </summary>
+            <param name="facets">Each facet is encoded as `attributeName:value`. For example: `["category:Book","author:John%20Doe"].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetFacetFilters(System.String)">
+            <summary>
+            Filter the query by a facet.
+            </summary>
+            <param name="facets">The facet is encoded as `attributeName:value`.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetFacetFilters(Newtonsoft.Json.Linq.JArray)">
+            <summary>
+            Filter the query by a list of facets.
+            </summary>
+            <param name="facets">Each facet is encoded as `attributeName:value`. For example: `["category:Book","author:John%20Doe"].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetMaxValuesPerFacets(System.Int32)">
+            <summary>
+            Set the max value per facet.
+            </summary>
+            <param name="numbers">The number to limit it by.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.RestrictSearchableAttributes(System.String)">
+            <summary>
+            List of attributes you want to use for textual search (must be a subset of the searchableAttributes index setting).
+            </summary>
+            <param name="attributes">Attributes are separated with a comma (for example @"name,address"). You can also use a JSON string array encoding (for example encodeURIComponent("[\"name\",\"address\"]")). By default, all attributes specified in searchableAttributes settings are used to search.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableAdvancedSyntax(System.Boolean)">
+            <summary>
+            Allows enabling of advanced syntax.
+            </summary>
+            <param name="enabled">Turn it on or off</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableRemoveStopWords(Algolia.Search.Models.IEnabledRemoveStopWords)">
+            <summary>
+            Allows enabling of stop words removal.
+            </summary>
+            <param name="enabled">Turn it on or/off or providing a list of keywords</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.EnableRemoveStopWords(System.Boolean)">
+            <summary>
+            Allows enabling of stop words removal.
+            </summary>
+            <param name="enabled">Turn it on or/off or providing a list of keywords</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetReferers(System.String)">
+            <summary>
+            Limit the search from a referer pattern. Only works on HTTPS
+            </summary>
+            <param name="facets">List of referers used to limit the search on a website.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetUserToken(System.String)">
+            <summary>
+            Set the key used for the rate-limit
+            </summary>
+            <param name="userToken">Identifier used for the rate-limit</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetRestrictIndices(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Restrict an API key to a list of indices
+            </summary>
+            <param name="indices"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetRestrictSources(System.String)">
+            <summary>
+            Restrict an API key to a specific IPv4
+            </summary>
+            <param name="sources"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.SetFacets(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Set the object attributes that you want to use for faceting.
+            </summary>
+            <param name="facets">List of object attributes that you want to use for faceting. Only attributes that have been added in **attributesForFaceting** index setting can be used in this parameter. You can also use `*` to perform faceting on all attributes specified in **attributesForFaceting**.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.AddCustomParameter(System.String,System.String)">
+            <summary>
+            Add a custom query parameter
+            </summary>
+            <param name="name">The name of the custom parameter</param>
+            <param name="value">The associated value</param>
+            <returns></returns>
+        </member>
+        <member name="M:Algolia.Search.Query.GetQueryString">
+            <summary>
+            Get out the query as a string
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
