@@ -144,44 +144,43 @@ $(document).ready(function () {
         dropdownFilter: false,
         emptyTemplate: 'No result for "{{query}}"',
         selector:{
-            container:"fxs_typeaheadContainer",
-            group:"fxs_typeaheadGroup",
-            result:"typeahead-result",
-            list:"fxs_typeaheadList",
-            display:"typeahead-display",
-            query:"fxs_typeaheadQuery"
+            container: "fxs_typeaheadContainer",
+            group: "fxs_typeaheadGroup",
+            result: "typeahead-result",
+            list: "fxs_typeaheadList fxs_fieldset fxs_scrollable_list",
+            display: "typeahead-display",
+            query: "fxs_typeaheadQuery"
         },
-        callback: {
-            onLayoutBuiltBefore: function (node, query, result, resultHtmlList) {
-                if (resultHtmlList != null && resultHtmlList.children().length >= 1) {
-                    resultHtmlList.children().each(function (index, item) {
-                        if (selectedAssets.length > 0) {
-                            if ($.inArray(item.innerText, selectedAssets) !== -1) {
-                                $(this).addClass("clickedAsset");
-                            }
+        /*callback: {
+                    onLayoutBuiltBefore: function (node, query, result, resultHtmlList) {
+                        if (resultHtmlList != null && resultHtmlList.children().length >= 1) {
+                            resultHtmlList.children().each(function (index, item) {
+                                if (selectedAssets.length > 0) {
+                                    if ($.inArray(item.innerText, selectedAssets) !== -1) {
+                                        $(this).addClass("clickedAsset");
+                                    }
+                                }
+                            });
                         }
-                    });
-                }
-            },
-            onClickBefore: function (node, a, item, event) {
-                event.preventDefault();
-                if ($.inArray(item.display, selectedAssets) !== -1) {
-                    a.children().children().children('i').removeClass("fa-minus-circle");
-                    a.children().children().children('i').addClass("fa-check");
-                    selectedAssets.splice(selectedAssets.indexOf(item.display), 1);
-                    var selectedRecords = $(".jq_append").find('.fxs_remove_item');
-                    $(selectedRecords).each(function () {
-                        if ($(this).innerText === item.display) {
-                            $(this).remove();
+                    },
+                    onClickBefore: function (node, a, item, event) {
+                        event.preventDefault();
+                        if ($.inArray(item.display, selectedAssets) !== -1) {
+                            a.children().children().children('i').removeClass("fa-minus-circle");
+                            a.children().children().children('i').addClass("fa-check");
+                            selectedAssets.splice(selectedAssets.indexOf(item.display), 1);
+                            var selectedRecords = $(".jq_append").find('.fxs_remove_item');
+                            $(selectedRecords).each(function () {
+                                if ($(this).innerText === item.display) {
+                                    $(this).remove();
+                                }
+                            });
+                        } else {
+                            a.children().children().children('i').addClass("fa-check");
+                            selectedAssets.push(item.display);
                         }
-                    });
-                } else {
-                    a.children().children().children('i').addClass("fa-check");
-                    selectedAssets.push(item.display);
-                    //$('.js-typeahead-country_v1').focus();
-                }
-            }
-        },
+                    }
+                },*/
         source:{
             pairs: {
                 data: ratesFilter.pairs,
@@ -204,12 +203,12 @@ $(document).ready(function () {
         showTimezoneClock = document.getElementById('showTimezoneClock'), // add
         close_timezone_sidebar = document.getElementById('close_timezone_sidebar'), // add
         showLeft = document.getElementById('showLeft'),
-        body = document.body
+        body = document.body;
 
     showLeftPush.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(body, 'cbp-spmenu-push-toright');
-        classie.toggle(menuLeft, 'cbp-spmenu-open');
+        $(this).toggleClass('active');
+        $(body).toggleClass('cbp-spmenu-push-toright');
+        $(menuLeft).toggleClass('cbp-spmenu-open');
         $(body).removeClass('fxs_push_timezone'); //add 
         $('.fxs_listView').removeClass('cbp-spmenu-open');
         $('.fxs_toggleList').removeClass('active');
@@ -217,9 +216,9 @@ $(document).ready(function () {
     };
 
     showRightPush.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(body, 'cbp-spmenu-push-toleft');
-        classie.toggle(menuRight, 'cbp-spmenu-open');
+        $(this).toggleClass('active');
+        $(body).toggleClass('cbp-spmenu-push-toleft');
+        $(menuRight).toggleClass('cbp-spmenu-open');
         $(body).removeClass('fxs_push_timezone'); // add
         $('.fxs_listView').removeClass('cbp-spmenu-open');
         $('.fxs_timezone_items').removeClass('fxs_show_timezoneHours');
@@ -229,9 +228,9 @@ $(document).ready(function () {
 
     // display timezone sidebar
     showTimezoneClock.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(body, 'fxs_push_timezone');
-        classie.toggle(itemsTimezone, 'fxs_show_timezoneHours');
+        $(this).toggleClass('active');
+        $(body).toggleClass('fxs_push_timezone');
+        $(itemsTimezone).toggleClass('fxs_show_timezoneHours');
     };
 
     // close all, timezone and sidebar
@@ -244,19 +243,19 @@ $(document).ready(function () {
     }
 
     showLeft.onclick = function () {
-        classie.toggle(this, 'active');
-        classie.toggle(listView, 'cbp-spmenu-open');
+        $(this).toggleClass('active');
+        $(listView).toggleClass('cbp-spmenu-open');
         disableOther('showLeft');
     };
     function disableOther(button) {
         if (button !== 'showLeftPush') {
-            classie.toggle(showLeftPush, 'disabled');
+            $(showLeftPush).toggleClass('disabled');
         }
         if (button !== 'showRightPush') {
-            classie.toggle(showRightPush, 'disabled');
+            $(showRightPush).toggleClass('disabled');
         }
         if (button !== 'showLeft') {
-            classie.toggle(showLeft, 'disabled');
+            $(showLeft).toggleClass('disabled');
         }
     }
 
@@ -360,8 +359,8 @@ $(document).ready(function () {
         } 
 
         // copy the same properties of event function "showLeftPush.onclick = function ()" line:129   
-        classie.toggle(this, 'active');
-        classie.toggle(menuLeft, 'cbp-spmenu-open');
+        $(this).toggleClass('active');
+        $(menuLeft).toggleClass('cbp-spmenu-open');
         $('.fxs_listView').removeClass('cbp-spmenu-open');
         $('.fxs_toggleList').removeClass('active');
         disableOther('showLeftPush');
@@ -405,3 +404,235 @@ $(document).ready(function () {
     // })
 
 });
+
+// algolia advanced search
+
+'use strict';
+/* global instantsearch */
+
+var search = instantsearch({
+    appId: '50DEV6P9K0',
+    apiKey: '3805ad29c0e7ea0077d1acab07993f62',
+    indexName: 'FxsIndexQa',
+    urlSync: true
+});
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+      container: '#q',
+      placeholder: 'Search a product'
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.stats({
+      container: '#stats'
+  })
+);
+
+search.on('render', function () {
+    $('.product-picture img').addClass('transparent');
+    $('.product-picture img').one('load', function () {
+        $(this).removeClass('transparent');
+    }).each(function () {
+        if (this.complete) $(this).load();
+    });
+});
+
+var hitTemplate =
+'<div class="fxs_entryFeatured">' +
+    '<article class="fxs_clearfix">' +
+        '<div class="fxs_squareImage">' +
+            '<a href="/">' +
+                '<img src="{{ImageUrl}}" />' +
+            '</a>' +
+        '</div>' +
+        '<div class="fxs_floatingMedia_textBody">' +
+            '<h4 class="fxs_headline_tiny">' +
+                '<a href="{{FullUrl}}">{{{_highlightResult.Title.value}}}</a>' +
+            '</h4>' +
+            '<address class="fxs_entry_metaInfo">' +
+                '<span class="fxs_article_author">' +
+                '<a href="{{AuthorUrl}}">{{_highlightResult.AuthorName.value}}</a>'+
+                '</span>{{#PublicationTime}} | <time pubdate="" datetime="{{PublicationTime}}">{{PublicationTime}}</time>{{/PublicationTime}}' +
+            '</address>' +
+            '<span class="fxs_label fxs_label_muted">{{Category}}</span>' +
+        '</div>' +
+    '</article>' +
+'</div>';
+
+var noResultsTemplate =
+  '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
+
+var menuTemplate =
+  '<a href="javascript:void(0);" class="facet-item {{#isRefined}}active{{/isRefined}}"><span class="facet-name"><i class="fa fa-angle-right"></i> {{name}}</span class="facet-name"></a>';
+
+var facetTemplateCheckbox =
+  '<a href="javascript:void(0);" class="facet-item">' +
+    '<input type="checkbox" class="{{cssClasses.checkbox}}" value="{{name}}" {{#isRefined}}checked{{/isRefined}} />{{name}}' +
+    '<span class="facet-count">({{count}})</span>' +
+  '</a>';
+
+var facetTemplateColors =
+  '<a href="javascript:void(0);" data-facet-value="{{name}}" class="facet-color {{#isRefined}}checked{{/isRefined}}"></a>';
+
+//search.addWidget(
+//  instantsearch.widgets.infiniteHits({
+//      container: '#hits',
+//      templates: {
+//          empty: noResultsTemplate,
+//          item: hitTemplate
+//      },
+//      hitsPerPage: 3
+//  })
+//);
+
+
+search.addWidget(
+  instantsearch.widgets.hits({
+      container: '#hits',
+      hitsPerPage: 20,
+      templates: {
+          empty: noResultsTemplate,
+          item: hitTemplate
+      },
+      transformData: function (hit) {
+          hit.stars = [];
+          hit.Publication = getPublicationDate(hit.Publication);
+          for (var i = 1; i <= 5; ++i) {
+              hit.stars.push(i <= hit.rating);
+          }
+          return hit;
+      }
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.pagination({
+      container: '#pagination',
+      cssClasses: {
+          active: 'active'
+      },
+      labels: {
+          previous: '<span><i class="fa fa-angle-left fa-2x"></i> Previous page</span>',
+          next: '<span>Next page  <i class="fa fa-angle-right fa-2x"></i></span>'
+      },
+      showFirstLast: false
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
+      container: '#filter-categories',
+      attributeName: 'Category',
+      operator: 'or',
+      limit: 10,
+      templates: {
+          item: facetTemplateCheckbox,
+          header: '<h3 class="fxs_subtitle">Categories</h3>'
+      },
+      collapsible: true
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
+      container: '#filter-tags',
+      attributeName: 'Tags',
+      operator: 'or',
+      limit: 10,
+      searchForFacetValues: {
+          placeholder: 'Search for tags',
+          templates: {
+              noResults: '<div class="sffv_no-results">No matching tags.</div>',
+          },
+      },
+      templates: {
+          item: facetTemplateCheckbox,
+          header: '<h3 class="fxs_subtitle">Tags</h3>'
+      },
+      collapsible: true
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.refinementList({
+      container: '#filter-authors',
+      attributeName: 'AuthorName',
+      operator: 'or',
+      limit: 10,
+      searchForFacetValues: {
+          placeholder: 'Search for authors',
+          templates: {
+              noResults: '<div class="sffv_no-results">No matching authors.</div>',
+          },
+      },
+      templates: {
+          item: facetTemplateCheckbox,
+          header: '<h3 class="fxs_subtitle">Authors</h3>'
+      },
+      collapsible: true
+  })
+);
+
+//search.addWidget(
+//  instantsearch.widgets.rangeSlider({
+//      container: '#dates',
+//      attributeName: 'Publication',
+//      templates: {
+//          header: '<div class="facet-title">Publication</div class="facet-title">'
+//      },
+//      tooltips: {
+//          format: getPublicationDate
+//      },
+//      pips: false,
+//      collapsible: true
+//  })
+//);
+
+function getPublicationDate(rawValue) {
+    var offset = (((rawValue / 60) / 60) / 24);
+    var date = new Date("1970-01-01");
+    var utcoffset = parseInt(date.getUTCOffset()) / 100;
+    date = date.addDays(offset).addHours(-utcoffset);
+    return date.toString("MMM dd hh:mm") + " GMT";
+};
+//search.addWidget(
+//  instantsearch.widgets.priceRanges({
+//    container: '#dates',
+//    attributeName: 'Publication',
+//    cssClasses: {
+//      list: 'nav nav-list',
+//      count: 'badge pull-right',
+//      active: 'active'
+//    },
+//    templates: {
+//      header: '<div class="facet-title">Prices</div class="facet-title">'
+//    }
+//  })
+//);
+
+//search.addWidget(
+//  instantsearch.widgets.sortBySelector({
+//    container: '#sort-by-selector',
+//    indices: [
+//      { name: 'test_post', label: 'Publication' }
+//    ],
+//    label:'sort by'
+//  })
+//);
+
+search.addWidget(
+  instantsearch.widgets.clearAll({
+      container: '#clear-all',
+      templates: {
+          link: '<i class="fa fa-eraser"></i> Clear all filters'
+      },
+      cssClasses: {
+          root: 'btn btn-block btn-default'
+      },
+      autoHideContainer: true
+  })
+);
+
+search.start();
