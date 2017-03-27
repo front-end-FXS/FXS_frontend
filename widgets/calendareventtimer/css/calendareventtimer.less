@@ -1,0 +1,173 @@
+// Vendor imports
+@import "../../../website/css/less/vendor/lesshat.less";  // lesshat - LESS Mixins library
+
+// Application variables & mixins
+@import "../../../website/css/less/vars.less";
+@import "../../../website/css/less/mixins.less";
+
+// event
+.fxs_widget_event{
+	.fxs_event_list {
+		list-style: none;
+		display: table;
+		width: 100%;
+        padding:0.5rem;
+        &.fxs_event_list_trigger{
+            &:hover{
+                background-color:@light_4_clr;
+                cursor:pointer;
+            }
+        }
+        &.fxs_event_list_last{
+            li{
+                border:none;
+                padding-left:0;
+            }
+            @media(min-width:@screen-s){
+                li:nth-child(n+2){
+			        border-left:1px solid #ccc;
+                    padding-left:10px;
+		        }
+            }
+        }
+        .fxs_txt_neutral{ 
+            font-size: @txt_size_xsmall; 
+            display:block; 
+        }
+		.fxs_event_list_item {
+			color: @dark_4_clr;
+			display: table-cell;
+			vertical-align: bottom;
+			.fxs_event_font{ font-size: @txt_size_xlarge; }
+			.fxs_event_font_bis{ font-size: @txt_size_small;}
+			.fxs_subtitle{ border-bottom: none;} 
+			.fxs_event_font{
+				strong{
+					font-size: @txt_size_small;
+				}
+			}
+		}
+		&.fxs_event_header{
+			border-bottom: 2px solid @light_3_clr;
+			li.fxs_event_list_item{
+				border-right:none!important;
+			}
+			padding: 0!important;
+		}
+		.fxs_event_flag{
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
+	.fxs_event_actual { color: @success_clr; font-weight: @txt_fontweight_bold; }
+	.fxs_event_previous{ 
+        font-weight: @txt_fontweight_bold; 
+        line-height: inherit; 
+        @media(min-width:@screen-m){
+            line-height: 1rem; 
+        }
+	}
+    // others
+    .fxs_event_list_others{
+        width: 100%;
+        .fxs_event_list{
+            padding-top:0;
+        }
+        .fxs_event_list_item{
+            .fxs_event_font, .fxs_event_font_bis{ font-size: @txt_size_xsmall;}
+            .fxs_event_font{font-weight:bold; }
+            .fxs_txt_neutral{font-size:@txt_size_nano}
+            .fxs_event_font, .fxs_txt_neutral{ line-height:1rem;}
+        }
+        ul{
+            padding:0;
+            margin:0;
+        }
+        h2{
+            padding-bottom:5px;
+            margin-bottom:0;
+        }
+        .fxs_txt_neutral{ 
+            display:block;
+            @media(min-width:@screen-m){
+                //display:inline-block;
+                float:left;
+                //line-height:1.5rem!important;
+                padding-right:5px;
+            }
+         }
+        .fxs_event_list_others_date{
+            font-size:0.7rem;
+            @media(min-width:@screen-m){
+                font-size:0.8rem;
+            }
+            span{
+                display:block;
+                font-weight:bold;
+                line-height:1rem;
+            }
+            time{
+                line-height:1rem;
+            }
+        }
+        .fxs_calendar_ad_col {
+            width: 120px;
+            float: left;
+        }
+        .fxs_calendar_col{
+            float: left;
+            /*width:100%;*/
+           .calc(width, ~'100% - 120px');
+        }
+        .fxs_headline_from_nano_to_tiny{
+            font-size:0.9rem;
+            @media(min-width:@screen-m){
+                font-size:inherit;
+            }
+        }
+    }
+	// video countdown
+	.fxs_countdown_clock {
+		font-size: @txt_size_xsmall;
+		color: @light_2_clr;
+		>span {
+			display: inline-block;
+			text-align: left;
+			&:not(:first-child) { margin-left: 0.33rem; }
+		}
+		.fxs_widget_custom_data_lable {
+			font-size: @txt_size_xxlarge;
+			font-weight: @txt_fontweight_bold;
+			color:@dark_4_clr;
+			//&:extend(.fxs_boldAntialised_style);
+		}
+	}	  
+	.fxs_event_font{
+		.fxs_subtitle_variant{
+			font-weight: @txt_fontweight;
+			font-size: @txt_size_xsmall;
+			font-style: italic;
+			//display: block;
+		}
+	}
+	.fxs_subtitle{
+        &.fxs_event_mini_title{
+            margin-bottom:0;
+            padding-top:0;
+            margin-top:0;
+            border-bottom:none;
+        }
+		.fxs_subtitle_variant{
+			font-weight: @txt_fontweight;
+			font-size: @txt_size_xsmall;
+			//display: block;
+
+		}
+		time{
+			font-size: @txt_size_nano;
+			font-style: normal;
+			color: @light_2_clr;
+			font-weight: @txt_fontweight;
+		}
+	}
+}

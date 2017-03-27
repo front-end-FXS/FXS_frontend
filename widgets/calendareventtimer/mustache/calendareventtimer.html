@@ -1,0 +1,78 @@
+﻿<div class="fxs_widget_event">
+    <h3 class="fxs_subtitle">
+        {{Event.EventName}} <span class="fxs_subtitle_variant">{{Event.CountryName}}</span>
+        <i class="tags-flag-custom i-{{Event.CountryCode}}"></i><strong>{{Event.Currency}}</strong>
+    </h3>
+    <div class="fxs_event_block fxs_widget_divider_module">
+        <h3 class="fxs_subtitle fxs_event_mini_title">
+            <span class="fxs_subtitle_variant">{{Translations.LastRelease}}</span>
+            <time class="fxs_txt_neutral" pubdate="" datetime="{{Event.EventDateDisplayDate}}">{{Event.EventDateDisplayDate}} </time>
+        </h3>
+        <ul class="fxs_event_list fxs_event_list_last fxs_event_list_trigger">
+            <li class="fxs_event_list_item">
+                {{^Event.ShowNextEvent}}
+                <div class="fxs_event_font fxs_event_actual">                    
+                    <span class="fxs_event_price">{{Event.EventDate.ActualDisplay}}</span>                  
+                    <span class="fxs_txt_neutral">{{Translations.Actual}}</span>
+                </div> 
+                {{/Event.ShowNextEvent}}
+                {{#Event.ShowNextEvent}}
+                <div id="clock_{{Event.EventId}}" class="fxs_countdown_clock"></div>    
+                {{/Event.ShowNextEvent}}                        
+            </li>
+
+            <li class="fxs_event_list_item">
+                <div class="fxs_event_font fxs_event_consensus">
+                    <span class="fxs_event_price">{{Event.EventDate.ConsensusDisplay}}</span>
+                    <span class="fxs_txt_neutral">{{Translations.Consensus}}</span>
+                </div>
+            </li>
+            <li class="fxs_event_list_item">
+                <div class="fxs_event_font_bis fxs_event_previous">
+                    <span class="fxs_event_price">{{Event.EventDate.PreviousDisplay}}</span>
+                    <span class="fxs_txt_neutral">{{Translations.Previous}}</span>
+                </div>
+            </li>          
+        </ul>
+    </div>
+
+    {{#OtherEvents.length}}
+    <h3 class="fxs_subtitle">
+       {{Translations.OtherEvents}}
+    </h3>
+    {{/OtherEvents.length}}
+
+    {{#OtherEvents}}
+    <div class="fxs_event_block fxs_event_list_others fxs_widget_divider_module">      
+        <div class="fxs_event_list_others_date fxs_calendar_ad_col">
+            <span>{{EventDateDayDisplay}}</span>
+            <time pubdate="" datetime="{{EventDate.Date}}">{{EventDateHourDisplay}} </time>
+        </div>
+        <div class="fxs_event_list_others_event fxs_calendar_col">
+            <h2 class="fxs_headline_from_nano_to_tiny fxs_toUppercase">
+                <span class="fxs_subtitle_variant">{{EventName}}</span>
+            </h2>
+            <ul class="fxs_event_list">
+                <li class="fxs_event_list_item">
+                    <div class="fxs_event_font fxs_event_actual">
+                        <span class="fxs_event_price">{{EventDate.ActualDisplay}}</span> 
+                        <span class="fxs_txt_neutral">{{Translations.Actual}}</span>
+                    </div>
+                </li>
+                <li class="fxs_event_list_item">
+                    <div class="fxs_event_font fxs_event_consensus">
+                        <span class="fxs_event_price">{{EventDate.ConsensusDisplay}}</span>
+                        <span class="fxs_txt_neutral">{{Translations.Consensus}}</span>
+                    </div>
+                </li>
+                <li class="fxs_event_list_item">
+                    <div class="fxs_event_font_bis fxs_event_previous">
+                        <span class="fxs_event_price">{{EventDate.PreviousDisplay}}</span>
+                        <span class="fxs_txt_neutral">{{Translations.Previous}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {{/OtherEvents}}
+</div>  
