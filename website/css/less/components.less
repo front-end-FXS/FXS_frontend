@@ -662,6 +662,105 @@
     }
 }
 
+// ADVANCED SEARCH
+
+.fxs_advanced_search{
+    .fxs_listView_blockWrapper{
+        padding:1rem;
+        background-color:#fff;
+        height:100%;
+        
+    }
+    .facet-item{
+        color:@dark_4_clr;
+        font-size:@txt_size_small;
+    }
+    .sbx-sffv__input{
+        height:auto;
+        border-radius:0;
+        border:1px solid #ccc;
+        border-color:transparent!important;
+        padding-left:1.5rem;
+    }
+    .searchbox{
+        margin-bottom:@txt_defaultsize_rem;
+    }
+    .ais-refinement-list--body{
+        margin-bottom:@txt_defaultsize_rem;
+    }
+    .fxs_subtitle{
+        margin-bottom:0.5rem;
+    }
+    .sbx-sffv__submit{
+        svg{
+            fill:#000;
+        }
+    }
+    #clear-all{
+        display:inline-block;
+    }
+    .fxs_article_author {
+        max-width:inherit;
+    }
+}
+ .fxs_main_search{
+    input{
+        width:100%;
+        padding-left:2rem;
+    }
+    .fxs_btn_filter{
+        left:7px;
+    }
+    .fxs_advanced_search_pag{
+        margin-bottom:3rem;
+    }
+}
+
+ // PAGINATION
+
+.fxs_advanced_search_pag {
+    text-align: center;
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    } 
+}
+.ais-pagination--item__page{
+    background-color:@light_4_clr;
+    margin-right:2px;
+    a{
+        color:@dark_4_clr;
+    }
+    &.ais-pagination--item__active{
+        background-color:transparent;
+    }
+}
+.ais-pagination--link{
+    color:@dark_4_clr;
+}
+.ais-pagination--item__disabled {
+    visibility: visible; 
+}
+.ais-pagination--item__disabled a {
+    color: #bbbbbb; 
+}
+.ais-pagination--item__disabled a:hover {
+    cursor: default;
+    text-decoration: none; 
+}
+.fxs_advanced_search_pag ul {
+    margin: 0;
+    padding: 0; 
+}
+.fxs_advanced_search_pag li {
+    padding: 0 8px; 
+}
+.fxs_advanced_search_pag .fa {
+    position: relative;
+    top: 5px; 
+    padding:0 5px 0 5px;
+}
 
 // CLOSE SEARCH MODULE
 
@@ -1926,7 +2025,7 @@
   width: auto;
 }
 
-/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 ////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
 //////////////////// (custom bootstrap snipets) ///////////////////////
 
