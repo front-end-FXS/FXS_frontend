@@ -10,7 +10,6 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,300italic,400italic,500italic,700,700italic' rel='stylesheet' type='text/css'>
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css" />
-        <link rel="stylesheet" type="text/css" href="../css/main.css" />
         <!--[if lte IE 9]>
         <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
         <![endif]-->
@@ -258,29 +257,26 @@
 
                         
                         <section class="fxs_detail">
-
-                            <!-- cag test -->
                             <div class="fxs_row">
-                                <header class="content-wrapper">
-                                    <a href="./" class="logo">amazing</a>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="q" />
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default"><i class="fa fa-search"></i></button>
-                                        </span>
+                                <div class="fxs_col fxs_col_100">
+                                    <div class="fxs_main_search">
+                                        <div class="input-group">
+                                            <label class="fxs_btn_filter" title="Advanced search"> <i class="fa fa-search"></i> <span class="fxs_skip">Advanced search</span> </label>
+                                            <input type="text" class="form-control" id="q" />
+                                        </div>
+                                        <section id="results-topbar" class="fxs_marginBase_top">
+                                            <!--<div class="sort-by">
+                                                <label>Sort by</label>
+                                                <div id="sort-by-selector"></div>
+                                            </div>-->
+                                            <div id="stats" class="text-muted"></div>
+                                        </section>
+                                        <hr class="fxs_divider_third" />
+                                        <main id="hits"></main>
+                                        <hr class="fxs_divider_third" />
+                                        <section id="pagination" class="fxs_advanced_search_pag"></section>
                                     </div>
-                                </header>
-                                
-                                <section id="results-topbar">
-                                    <div class="sort-by">
-                                        <label>Sort by</label>
-                                        <div id="sort-by-selector"></div>
-                                    </div>
-                                    <div id="stats" class="text-muted"></div>
-                                </section>
-                                <main id="hits"></main>
-                                <section id="pagination"></section>
-                                
+                                </div>
                             </div>
                         </section>
                         <!-- //Main Section -->
@@ -288,17 +284,18 @@
                     <!-- /The content rail -->
                 </div>
                 <!-- ListView -->
-                <section class="fxs_listView " id="cbp-spmenu-s3">
-                    <aside>
+                <section class="fxs_listView fxs_advanced_search" id="cbp-spmenu-s3">
+                    <header class="fxs_listview_subnav">
+                        <div class="fxs_helperLabel_title">LATEST NEWS</div>
                         <div id="clear-all"></div>
+                    </header>
+                    <div class="fxs_listView_blockWrapper">
                         <section class="facet-wrapper">
-                            <div class="facet-category-title">Categories:</div>
                             <div id="filter-categories" class="facet"></div>
                             <div id="filter-tags" class="facet"></div>
                             <div id="filter-authors" class="facet"></div>
-                            <div id="dates" class="facet"></div>
                         </section>
-                    </aside>
+                    </div>
                 </section>
                 <!-- /ListView -->
                 
@@ -612,11 +609,11 @@
         <!-- Initialize autocomplete menu -->
 
         <script>
-            var client = algoliasearch("J5FJN741DX", "467d0ca4af64e6bb2b20d0e604bac5aa")
-            var posts = client.initIndex('test_post');
-            var assets = client.initIndex('test_asset');
+            var client = algoliasearch("50DEV6P9K0", "3805ad29c0e7ea0077d1acab07993f62")
+            var posts = client.initIndex('FxsIndexQa');
 
-            autocomplete('#aa-search-input') [
+
+            autocomplete('#aa-search-input', [
             {
                 source: autocomplete.sources.hits(posts, { hitsPerPage: 5 }),
                 displayKey: 'name',
@@ -626,20 +623,8 @@
                         return  '<img src="' + suggestion.ImageUrl + '">' +
                                 '<span>' + suggestion.Title + '</span>' +
                                 '<br>by <span>' + suggestion.AuthorName + '</span>' +
-                                '<br>into <span>' + suggestion.FeedId + '</span>' +
-                                '<br>since <span>' + suggestion.Publication + '</span>';
-                    }
-                }
-            },
-            {
-                source: autocomplete.sources.hits(assets, { hitsPerPage: 5 }),
-                displayKey: 'name',
-                templates: {
-                    header: '<div class="aa-suggestions-category">Assets</div>',
-                    suggestion: function (suggestion) {
-                        return '<span>' +
-                          suggestion.Name + '</span><span>'
-                            + suggestion.Description + '</span>';
+                                '<br>into <span>' + suggestion.Category + '</span>' +
+                                '<br>since <span>' + suggestion.PublicationTime + '</span>';
                     }
                 }
             }
@@ -652,11 +637,10 @@
         <script src="../js/bootstrap.min.js"></script>
 
         <script src="../js/jquery.typeahead.min-new.js"></script>
-        <script src="../js/site.js"></script>
+        
         <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
         <script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/datejs/date.js"></script>
-        <script src="../js/search.js"></script>
-
+        <script src="../js/site.js"></script>
         <script>
         // i use this to toogle text
         $.fn.extend({
