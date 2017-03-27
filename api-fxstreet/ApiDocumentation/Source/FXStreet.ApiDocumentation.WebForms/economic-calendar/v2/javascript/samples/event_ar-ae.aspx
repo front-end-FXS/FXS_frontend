@@ -1,9 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  MasterPageFile="/_masterpages/Site.master" Inherits="System.Web.UI.Page" %>
-<%@ Register src="event.ascx" tagname="Enginy" tagprefix="event" %>
-<%@ Register src="eventheader.ascx" tagname="Enginy" tagprefix="eventheader" %>
-<asp:Content runat="server" ContentPlaceHolderID="HeadContent">
-    <eventheader:Enginy id="eventheader" runat="server" Culture="ar-ae"></eventheader:Enginy>    
-</asp:Content>
-<asp:Content runat="server" ContentPlaceHolderID="MainContent">
-    <event:Enginy id="event" runat="server" Culture="ar-ae"></event:Enginy>    
-</asp:Content>
