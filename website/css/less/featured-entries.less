@@ -1,14 +1,85 @@
-// SUSCRIBE NEWSLETTER
+/// SUSCRIBE NEWSLETTER
+
+.fxs_col_33, .fxs_flex_ad_col{
+    .fxs_subscribe_mini{
+        .fxs_textInput{
+            display:block;
+            width:100%;
+        }
+        .fxs_btn_group {
+            width:100%;
+            margin-left:1px;
+        }
+        .fxs_btn {
+            .calc(width, ~'100% - 37px'); 
+        }
+    }
+}
 .fxs_suscribe {
   .fxs_wideWidget_pre(3px solid @light_4_clr; 3px solid @light_4_clr);
   background-color: @dark_2_clr;
-}
+  &.fxs_suscribe_simple{
+      min-width:320px;
+  }
+  &.fxs_suscribeForm_whiteVersion{
+      background-color:@lightest_clr;
+      padding:0;
+      .fxs_list_unstyled{
+          &.fxs_list_block{
+            display:block;
+            padding-right:2rem;
+            @media(min-width:@screen-m){
+                display:table-cell;
+            }
+            li{
+                display:inline-block;
+                width:100%;
+                padding-right:50px;
+                p{
+                    word-break:break-word;
+                }
+                @media(min-width:@screen-s){
+                    width:420px;
 
+                }
+                &:first-child{
+                    vertical-align:top;
+                    display:block;
+                    margin-bottom:1rem;
+                    font-size:@txt_size_large;
+                  
+                }
+            }
+          }
+          .fxs_custom_label{
+              display:inline-block;
+              width:300px;
+               @media(min-width:@screen-s){
+                    width:320px;
+
+                }
+          }
+      }
+  }
+}
+// authors subscribe section
+.fxs_author_subscription_listItem{
+    .fxs_contributorBox {
+        height:auto;
+        margin-right:20px;
+        @media(min-width:@screen-s){
+            height:60px;
+        }
+    }
+}
 .fxs_suscribeForm {
   &:extend(.fxs_clearfix all);
   @media (min-width: @screen-s) {
     float: left;
     .calc(width, ~'100% - 220px'); 
+  }
+  &.fxs_suscriptionForm_wide{
+      width:100%;
   }
 }
 
