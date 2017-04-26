@@ -318,10 +318,10 @@ body.cbp-spmenu-push-toright{
     }
   }
   .fxs_select{
-    .calc(width, ~'100% - 170px');
+    .calc(width, ~'100% - 160px');
   }
   .fxs_auth_code{
-    .calc(width, ~'100% - 92px');
+    .calc(width, ~'100% - 102px');
   }
 }
 
@@ -353,6 +353,9 @@ body.cbp-spmenu-push-toright{
     }
   }
 }
+.fxs_remember_form{
+    max-width:500px;
+}
 .fxs_remember_pass{
   width:100%;
   height:500px;
@@ -361,7 +364,7 @@ body.cbp-spmenu-push-toright{
     margin-top:100px!important;
   }
 }
-//
+////
 
 .fxs_social_sidebar_nav {
   padding: 10px;
@@ -536,7 +539,8 @@ body.cbp-spmenu-push-toright{
   background-color: @lightest_clr;
   //margin-bottom: 6px;
   padding: @half_base_spacer 1rem;
-  height: @base_module_size;
+  height: auto;
+  line-height: 20px;
   position: relative;
   @media (min-width: @screen-s) {
     height: @main_header_height;
@@ -756,9 +760,16 @@ body.cbp-spmenu-push-toright{
       font-weight: 400;
       //color:@dark_4_clr; 
       border-bottom:1px solid @light_4_clr;
-      padding: 3px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left:5px;
+      margin:0;
       div,span{
         color:@lightest_clr;
+      }
+      cursor:pointer;
+      &:hover{
+          background-color:@dark_3_clr;
       }
       .fa-minus-circle{
         color:@lightest_clr;
@@ -1393,7 +1404,7 @@ body.cbp-spmenu-push-toright{
   }
 }
 
-// TYPEAHEAD
+// TYPEAHEADd
 
 .fxs_typeaheadContainer {
   position: relative;
@@ -1406,6 +1417,9 @@ body.cbp-spmenu-push-toright{
 .fxs_typeaheadQuery {
   background: @lightest_clr;
   position: relative;
+  .typeahead__hint{
+      display:none!important;
+  }
 }
 
 // Typeahead results list
@@ -2117,6 +2131,9 @@ clean rules for new calendar widget
     }
 }
 .fxs_widget_chart{
+     .tt_lastLabel{
+        z-index:0;
+    }
   .fxs_tabs_nav{
       margin:0;
   }
@@ -2721,7 +2738,7 @@ clean rules for new calendar widget
 
 /////////////// Flexible cols //
 .fxs_flex_col {
-
+    
   // 50% //
   .fxs_col_50 { .make-m-column(6); }
   
@@ -2729,6 +2746,7 @@ clean rules for new calendar widget
     float: left;
     .calc(width, ~'100% - ((@{left_rail_space}) - 5px)'); //left_rail_space_reduced
     &.fxs_flex_ad_col {
+      z-index:1;
       width: @left_rail_space - (@txt_defaultsize_px / 3); //left_rail_space_reduced
       position: static;
       &.fxs_flex_ad_col_fRight { float: right; }
@@ -2820,7 +2838,7 @@ clean rules for new calendar widget
 
 .fxs_content_adContainer {
   margin: 0 auto;
-  overflow: hidden;
+  //overflow: hidden;
   iframe {
     display: block;
     margin: 0 auto;
@@ -2841,6 +2859,11 @@ clean rules for new calendar widget
   .fxs_headline_tiny { margin-bottom: 0; }
   @media (min-width: @screen-s) { padding: 0 1rem 1rem; }
 }
+
+/////////////////////////////////////////////////////////////
+/////////////////////// FLEXBOX COLS ///////////////////////
+///////////////////////////////////////////////////////////
+
 
 
 
