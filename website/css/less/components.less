@@ -43,6 +43,32 @@
   padding-bottom: @half_base_spacer;
   border-bottom: 2px solid @light_3_clr;
 }
+
+/////////////////// new component for widget structure ///////////////////////////
+
+// dark version
+.fxs_widget_header_title_dark{
+    background-color:@light_3_clr;
+    position:absolute;
+    width:100%;
+    height:@base_module_size;
+    .fxs_helperLabel_title{
+        line-height:@base_module_size;
+        padding-left:1rem;
+    }
+}
+// margin and top space
+.fxs_widget_container_gutter{
+    padding:@main_header_height 1rem 1rem 1rem;
+}
+//clear version
+.fxs_widget_header_title_light{
+    &:extend(.fxs_widget_header_title_dark all);
+    background-color:@lightest_clr;
+    border-bottom:1px solid @light_3_clr;
+}
+//////////////// /new component for widget structure ////////////////////////////
+
 .fxs_subtitleSection{
   .fxs_stiled_text_variants(block; @dark_4_clr; @txt_size_small);
   margin-top:0.2rem;
@@ -56,8 +82,8 @@
   margin: 0 @half_base_spacer 0 0;
 }
 
-////////////////////////////////////////////////////////////////////////
-/////////////////////////// Styled lists //////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////// Styled lists ///////////////////////////////
 
 // Inlined lists
 .fxs_subnavInlined_list, .fxs_plainInlined_list {
@@ -139,7 +165,7 @@
   border-bottom: 1px solid @light_3_clr;
   legend { .fxs_stiled_text_variants(block; @light_1_clr; @txt_size_xsmall;); }
   &.fxs_scrollable_list{
-    max-height: 340px;
+    max-height: 250px;
     &:extend(.fxs_scrollableContent all);
   }
 }
@@ -237,6 +263,7 @@
 //
 .fxs_subscribeForm_group {
   &:extend(.fxs_inlineForm_group all);
+  position:relative;
   margin-bottom: 1rem;
   .fxs_newsletter_email, .fxs_reCaptcha, .fxs_btn_cta{
     display: block;
@@ -533,7 +560,20 @@
     }
 }
 
-// SEARCH MODULE (Algolia)
+// //SEARCH MODULE (Algolia)
+
+
+// hide simple search in advanced search page
+.fxs_skip_search{
+    .fxs_search_module{
+        display:none;
+    }
+    .fxs_socialMedia_item{
+        &.fxs_search_icon{
+            display:none!important;
+        }
+    }
+}
 
 .fxs_search_box {
     display: inline-block;
@@ -555,23 +595,8 @@
     display: none;
 }
 
-.aa-dropdown-menu {
+.fxs_search_typeahead_box {
     background-color: @dark_3_clr;
-    min-width:320px;
-    width:100%;
-    max-height:400px;
-    @media(min-width:@screen-s){
-        min-width:420px;
-        max-height:400px;
-    }
-    @media(min-width:@screen-m){
-        min-width:500px;
-        max-height:550px;
-    }
-    @media(min-width:@screen-l){
-        min-width:500px;
-        max-height:700px
-    }
     display:block;
     box-sizing: border-box;
     right:0;
@@ -585,15 +610,32 @@
         font-style:italic;
         color:@lightest_clr;
     }
-    &:extend(.fxs_scrollableContent all);
     .fxs_divider_third{
         background-color:@dark_4_clr;
     }
+    .fxs_search_results{
+         max-height:370px;
+         min-width:320px;
+         width:100%;
+         &:extend(.fxs_scrollableContent all);
+        @media(min-width:@screen-s){
+            min-width:420px;
+            max-height:400px;
+        }
+        @media(min-width:@screen-m){
+            min-width:500px;
+            max-height:500px;
+        }
+    }
+}
+.fxs_search_goto_advanced{
+    position:relative; 
+    bottom:-7px; 
 }
 
 .fxs_search_icon{
     display:inline-block!important;
-    @media(min-width:@screen-l){
+    @media(min-width:@screen-hd){
         display:none!important;
     }
 }
@@ -601,7 +643,7 @@
     display:none;
     position:absolute;
     left:-130px;
-    @media(min-width:@screen-l){
+    @media(min-width:@screen-hd){
         position:relative;
         display:inline-block;
         left:0;
@@ -663,17 +705,68 @@
 }
 
 // ADVANCED SEARCH
-
+.fxs_col_50{
+    &.fxs_advanced_cols{
+        min-height:120px;
+        @media(min-width:@screen-l){
+            min-height:110px;
+        }
+    }
+}
 .fxs_advanced_search{
-    .fxs_listView_blockWrapper{
-        padding:1rem;
-        background-color:#fff;
-        height:100%;
-        
+    .ais-refinement-list--item{
+        word-break:break-all;
+    }
+    .fxs_btn_small{
+        top:3px;
+        position:absolute;
+        display:inline-block;
+        right:1rem;
+        @media(min-width:@screen-s){
+            display:none;
+        }
+    }
+    .fxs_clear_filter{
+        position:absolute; 
+        top: auto;
+        bottom:0; 
+        width:100%; 
+        margin-bottom:50px; 
+        text-align:center; 
+        padding:5px; 
+        background-color:@brand_highlight_clr;
+        a{
+            color:@lightest_clr;
+        }
+        z-index:9999;
+        @media(min-width:@screen-s){
+            z-index:3;
+            background-color:@brand_highlight_clr;
+            top: 3px;
+            width: auto;
+            right: 1rem;
+            bottom:auto;
+            padding:5px 10px 5px 10px;
+            a{
+                color:@lightest_clr;
+            }
+        }  
+    }
+    .fxs_advanced_search_sidebar{
+        margin-bottom:50px;
+        &.fxs_listViewRail{
+            //padding-right:0px;
+            top:35px;
+            //overflow-y:auto;
+        }
     }
     .facet-item{
         color:@dark_4_clr;
         font-size:@txt_size_small;
+    }
+    .facet-wrapper{
+        background-color:@lightest_clr;
+        padding:1rem;
     }
     .sbx-sffv__input{
         height:auto;
@@ -1162,20 +1255,28 @@
       }
     }
   }
+.fxs_dropdownList_notwide{
+    display:none;
+    position:absolute;
+    background-color:@dark_2_clr;
+    padding:1rem!important;
+    width:100%;
+    z-index:2;
+}
 .fxs_dropdownList {
-  &:extend(.fxs_list_unstyled, .fxs_dropdown_generic all);
+    &:extend(.fxs_list_unstyled, .fxs_dropdown_generic all);
 	background-color: @dark_3_clr;
-	min-width: @base_module_size*4;
-  padding-bottom: 2px;
-  .fxs_btn_block & { min-width: 100%; }
-  > li {
-    > a {
-      color: @lightest_clr;
-      line-height: @base_module_size - 5;
-      text-decoration: none;
-      &:hover{ background-color: @dark_4_clr; }
+    min-width: @base_module_size*4;
+    padding-bottom: 2px;
+    .fxs_btn_block & { min-width: 100%; }
+    > li {
+        > a {
+            color: @lightest_clr;
+            line-height: @base_module_size - 5;
+            text-decoration: none;
+            &:hover{ background-color: @dark_4_clr; }
+        }
     }
-  }
   &.fxs_dropdownList_items{
     padding:10px;
     > li {
@@ -2024,9 +2125,16 @@
 .tt_saveDialog input[type="text"]{
   width: auto;
 }
+// add news icon
+.fxs_chart_icon {
+    background-image: none!important;
+    line-height:35px!important;
+    padding-left:10px;
+    padding-right:10px;
+}
 
-////////////////////////////////////////////////////////////////////////
-////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
+//////////////////////////////////////////////////////////////////////////
+/////////////////////// Bootstrap 3.3.5 Overrides ///////////////////////
 //////////////////// (custom bootstrap snipets) ///////////////////////
 
 // Tab panes
@@ -2181,24 +2289,12 @@
 // container general msg ( recomended to use un full pages messages )
 .fxs_msg_general_wrapper{
   background-color:#fff;
-  height: calc(100vh - 20vh);
   width: 100%;
-  top: 51px;
   left: 0;
 }
 .fxs_activation_msg{
-  position: absolute;
   margin: 0 auto;
-  top:50%;
-  left:50%;
   width:100%;
-  .translate(-50%, -50%);
-  @media(min-width:@screen-m){
-    top:50%;
-    left:50%;
-    width:50%;
-    .translate(-50%, -50%);
-  }
 }
 
 // plugin feedback - add some margin to top
