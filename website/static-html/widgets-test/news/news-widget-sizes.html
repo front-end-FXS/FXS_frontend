@@ -201,7 +201,7 @@
                                 <div class="fxs_col fxs_col_67">
                                     <div class="fxs_widget_summary">
                                         <div class="fxs_widget_news">
-                                            <div class="fxs_widget_news_sidenav">
+                                            <div class="fxs_widget_news_sidenav" id="fxs_open_sidebar">
                                                 <header class="fxs_widget_header_title_light">
                                                     <span><a href="#" class="fxs_widget_news_clear" type="submit">Clear all filters</a></span>
                                                     <span><a href="javascript:;" class="fxs_widget_news_close_filter fxs_absolutePositioning"><i class="fa fa-times" aria-hidden="true"></i></a></span>
@@ -309,8 +309,10 @@
                                                     <div class="fxs_helperLabel_title">News</div>
                                                 </header>
                                                 <div class="fxs_widget_container_gutter">
-                                                    <a href="javascript:;" id="showLeft" class="fxs_widget_news_show_filter" title=""><i class="fa fa-chevron-left"></i> <span>Show filters</span></a>
-                                                    <hr class="fxs_divider_third" />
+                                                    <div id="showLeft" class="fxs_widget_news_show_filter">
+                                                        <a href="javascript:;" title=""><i class="fa fa-chevron-left"></i> <span>Show filters</span></a>
+                                                        <hr class="fxs_divider_third" />
+                                                    </div>
                                                     <div class="fxs_widget_news_items_container">
                                                         <div class="fxs_entryFeatured">
                                                             <article class="fxs_clearfix">
@@ -331,6 +333,8 @@
                                                                             The Non-Farm Payroll report, because of its importance to the reserve currency, tends to move all markets. No trader in the world ignores the "NFP" acronym. Some want to avoid it at all costs, others try and trade the high volatility it produces to make some pips.
                                                                         </p>
                                                                     </div>
+                                                                    <span class="fxs_label fxs_label_muted">tag</span><span class="fxs_label fxs_label_muted">tag</span><span class="fxs_label fxs_label_muted">tag</span><span class="fxs_label fxs_label_muted">tag</span>
+
                                                                 </div>
                                                             </article>
                                                         </div>
@@ -492,6 +496,7 @@
                                                                 </div>
                                                             </article>
                                                         </div>
+                                                        <button class="fxs_btn fxs_btn_line fxs_btn_block" type="submit">Load more news</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -504,7 +509,7 @@
                                 <div class="fxs_col fxs_col_100">
                                     <div class="fxs_widget_summary">
                                         <div class="fxs_widget_news">
-                                            <div class="fxs_widget_news_sidenav">
+                                            <div class="fxs_widget_news_sidenav" id="fxs_open_sidebar">
                                                 <header class="fxs_widget_header_title_light">
                                                     <span><a href="#" class="fxs_widget_news_clear" type="submit">Clear all filters</a></span>
                                                     <span><a href="javascript:;" class="fxs_widget_news_close_filter fxs_absolutePositioning"><i class="fa fa-times" aria-hidden="true"></i></a></span>
@@ -797,6 +802,7 @@
                                                                 </div>
                                                             </article>
                                                         </div>
+                                                        <button class="fxs_btn fxs_btn_line fxs_btn_block" type="submit">Load more news</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1093,100 +1099,9 @@
                                         <div class="fxs_typeaheadField">
                                             <div class="fxs_typeaheadQuery">
                                                 <input id="f" name="f" type="search" placeholder="Add pairs to list" autocomplete="off">
-
-                                                <!--<input class="js-typeahead-country_v1" name="country_v1[query]" type="search" placeholder="Add pairs to list" autocomplete="off">-->
-
                                             </div>
                                         </div>
-                                        <!--<div class="typeahead-result">
-                             <ul class="fxs_typeaheadList fxs_fieldset fxs_scrollable_list">
-                                 <li class="fxs_asset_item fxs_demo_check">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt"><strong>EUR</strong>/NOK<span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item fxs_asset_selected">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">EUR/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-check" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt"><strong>USD</strong>/JPY<span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">GBP/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">AUD/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt"><strong>USD</strong>/CAD<span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item fxs_asset_selected">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">NZD/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-check" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item fxs_demo_check">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt"><strong>EUR</strong>/GBP<span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item fxs_asset_selected">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">EUR/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-check" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt"><strong>USD</strong>/JPY<span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">GBP/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">AUD/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt"><strong>USD</strong>/CAD<span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-                                 <li class="fxs_asset_item fxs_asset_selected">
-                                     <a href="javascript:;">
-                                         <span class="fxs_typeaheadTxt">NZD/<strong>USD</strong><span class="fxs_typeaheadTxt"></span></span>
-                                         <i class="fa fa-check" aria-hidden="true"></i>
-                                     </a>
-                                 </li>
-
-                             </ul>
-                         </div>-->
+                                        
                                     </div>
                                 </form>
                             </div>
@@ -1820,32 +1735,14 @@
                 $('.fxs_asset_label_filter').toggleText('CUSTOMIZE ASSETS','ASSETS');
             });
 
-
             // custom news widget behaviour
             /* Set the width of the side navigation to 250px */
             $('.fxs_widget_news_show_filter').on('click', function () {
-                $('.fxs_widget_news_sidenav').css(
-                    {
-                        'left': '0px'
-                    }
-                );
+                $('#fxs_open_sidebar').addClass('cbp-spmenu-open');
             });
             $('.fxs_widget_news_close_filter').on('click', function () {
-                $('.fxs_widget_news_sidenav').css(
-                    {
-                        'left': '-270px',
-                        'transition': '0.5s'
-                    }
-                );
+                $('#fxs_open_sidebar').removeClass('cbp-spmenu-open');
             });
-            //if($(window).width() >= 1150)
-            //{
-            //    $('.fxs_widget_news_sidenav').css(
-            //        {
-            //            'left': 'auto'
-            //        }
-            //    );
-            //}
 
         </script>
 

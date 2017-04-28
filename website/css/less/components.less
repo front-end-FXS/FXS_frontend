@@ -49,7 +49,6 @@
 // dark version
 .fxs_widget_header_title_dark{
     background-color:@light_3_clr;
-    position:absolute;
     width:100%;
     height:@base_module_size;
     .fxs_helperLabel_title{
@@ -59,7 +58,11 @@
 }
 // margin and top space
 .fxs_widget_container_gutter{
-    padding:@main_header_height 1rem 1rem 1rem;
+    padding:1rem;
+}
+.fxs_power{
+    position:absolute;
+    right:1rem;
 }
 //clear version
 .fxs_widget_header_title_light{
@@ -156,7 +159,7 @@
 }
 
 ////////////////////////////////////////////////////////////////////////
-/////////////////////////// Form components ///////////////////////////
+////////////////////////// Form components ///////////////////////////
 
 // Fieldset styles
 .fxs_fieldset {
@@ -1752,6 +1755,37 @@
     border-bottom: none;
     border-top: 1px solid #f0f0f1;
   }
+}
+
+// widget news custom behaviour in small cols
+.fxs_col_50, .fxs_col_67{
+    .fxs_widget_news{
+        .cbp-spmenu-open {
+            .translateX(270px);
+        }
+        .fxs_widget_news_content{
+            margin-left:0;
+        }
+        .fxs_widget_news_show_filter{
+             a{
+                 display:inline-block!important;
+                 transition: 0.3s;
+             }
+             .fxs_divider_third{
+                 display:block!important;
+             }
+         } 
+        .fxs_widget_news_sidenav{
+            left:-270px;
+            position:absolute;
+            transition: 0.5s;  //0.5 second transition effect to slidee in the sidenav 
+            z-index:1;
+            .fxs_widget_news_close_filter{
+                right:0;
+                display:inline-block;
+            }
+        }
+    }
 }
 
 // Widget data Lables

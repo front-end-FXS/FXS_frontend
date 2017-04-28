@@ -659,30 +659,14 @@
         <script src="../../../js/site.js"></script> 
 
         <script>
+            // custom news widget behaviour
             /* Set the width of the side navigation to 250px */
             $('.fxs_widget_news_show_filter').on('click', function () {
-                $('.fxs_widget_news_sidenav').css(
-                    {
-                        'left': '0px'
-                    }
-                );
+                $('#fxs_open_sidebar').addClass('cbp-spmenu-open');
             });
             $('.fxs_widget_news_close_filter').on('click', function () {
-                $('.fxs_widget_news_sidenav').css(
-                    {
-                        'left': '-270px',
-                        'transition': '0.5s'                       
-                    }
-                );
+                $('#fxs_open_sidebar').removeClass('cbp-spmenu-open');
             });
-            if($(window).width() >= 768)
-            {
-                $('.fxs_widget_news_sidenav').css(
-                    {
-                        'left': 'auto'
-                    }
-                );
-            }
         </script> 
 
     </body>
