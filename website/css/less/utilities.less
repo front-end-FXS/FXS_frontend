@@ -338,9 +338,10 @@
 .fxs_align_right{ text-align: right; }
 .fxs_relativePositioning { position: relative; }
 .fxs_absolutePositioning { position: absolute; }
+.fxs_positionFixed {position:fixed; top:0;}
 .fxs_iBlock { display: inline-block; }
 .fxs_align_middle { vertical-align: middle; }
-.fxs_dBlock { display: block; }
+.fxs_dBlock { display: block!important; }
 .fxs_dTable { display: table; width: 100%; }
 .fxs_fLeft { float: left; }
 .fxs_fRight { float: right; }
@@ -532,7 +533,7 @@
   @media (min-width: @screen-l) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
-      width: 5px;
+      width: 6px;
       height: 5px;
       border-radius: 0;
     }

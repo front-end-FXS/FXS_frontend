@@ -4,7 +4,7 @@
 
 ////////// TEXT RULES ///////////
 
-// Plain text generic style
+// Plainn text generic style
 .fxs_plain_txt_rules(@txt-font-size; @txt-line-height) {
   font-size: @txt-font-size;
   line-height: @txt-line-height;
@@ -112,7 +112,10 @@
     padding: 10px 1rem 10px 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    &:hover { background-color:@dark_4_clr; }
+    &:hover { 
+        background-color:@dark_4_clr; 
+        border-bottom: 5px solid #dddedf!important;
+    }
   }
   .active a { background-color: lighten(@dark_3_clr, 4%); }
 }
@@ -134,12 +137,20 @@
   }
 }
 
+// centering components
+.fxs_center_components(@valueLeft; @valueTop){
+  position: absolute;
+  left: @valueLeft;
+  top: @valueTop;
+  transform: translate(-@valueLeft, -@valueTop);
+}
+
 // tabs items
 .fxs_tab_item(@tabs-container-border; @tab-link-color; @tab-link-hover-border; @tab-height) {
   list-style: none;
   border-bottom: @tabs-container-border;
   height: @tab-height;
-  margin: 0 0 1rem;
+  //margin: 0 0 1rem;
   padding: 0 0.5rem;
   font-size: 5px;
   ul { &:extend(.fxs_list_unstyled); }
@@ -163,11 +174,15 @@
     &.active a {
       border-bottom: 5px solid @highlight_clr;
       background-color: transparent;
-      color: @tab-link-color;
+      color: @highlight_clr;
+    }
+     &.active a.fxs_nav_main_menu_desktop{
+        &:hover{
+            border-bottom: 5px solid @highlight_clr!important;
+        }
     }
   }   
 }
-
 ////////// MEDIA & WIDGETS ///////////
 
 // Media objects
