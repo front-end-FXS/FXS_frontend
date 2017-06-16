@@ -14,7 +14,6 @@
     padding: 1.38rem 1rem 0.75rem;
   }
 }
-
 // Tabs navigation (overall nav options)
 .fxs_tabs_nav {
   .fxs_tab_item(1px solid @light_3_clr; @dark_4_clr; @light_3_clr; @base_module_size);
@@ -23,13 +22,11 @@
     .fxs_tab_item(1px solid @dark_4_clr; @light_2_clr; @dark_4_clr; @main_header_height);
   }
 }
-
 // SECTION & SUBSECTION TITLES
 .fxs_sectionTitle_header {
   .fxs_stiled_text_variants(inline-block; @dark_3_clr; @txt_defaultsize_rem);
   @media (min-width: @screen-s) { line-height: @main_header_height;  }
 }
-
 .fxs_subsectionTitle {
 	.fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
 	background-color: @light_3_clr;
@@ -43,9 +40,7 @@
   padding-bottom: @half_base_spacer;
   border-bottom: 2px solid @light_3_clr;
 }
-
 /////////////////// new component for widget structure ////////////////////////////
-
 // dark version
 .fxs_widget_header_title_dark{
     background-color:@light_3_clr;
@@ -69,16 +64,14 @@
     &:extend(.fxs_widget_header_title_dark all);
     background-color:@lightest_clr;
     border-bottom:1px solid @light_3_clr;
-    padding:;
 }
 //////////////// /new component for widget structure ////////////////////////////
-
 .fxs_subtitleSection{
   .fxs_stiled_text_variants(block; @dark_4_clr; @txt_size_small);
   margin-top:0.2rem;
   background-color: @dark_4_clr;
   color: @lightest_clr;
-  padding:0.5rem 0 0.5rem 1rem;
+  padding:0.5rem 0 0.5rem 2rem;
 }
 
 .fxs_helperLabel_title {
@@ -585,6 +578,7 @@
     position: relative;
     max-width:1033px;
     width:100%;
+    margin-top:5px;
 }
 
 .fxs_search_input {
@@ -640,21 +634,30 @@
 
 .fxs_search_icon{
     display:inline-block!important;
-    @media(min-width:@screen-hd){
+    @media(min-width:@screen-m){
         display:none!important;
     }
 }
 .fxs_search_module{
     display:none;
     position:absolute;
-    left:-130px;
-    @media(min-width:@screen-hd){
+    right:0;
+    top:40px;
+    @media(min-width:@screen-m){
         position:relative;
         display:inline-block;
         left:0;
         height:40px;
+        float:right;
+        top:auto;
         //line-height:30px;
         margin-right:5px;
+    }
+    .fxs_search_icon_hd{
+
+    }
+    .fxs_search_input{
+        max-width:200px;
     }
     h4{
         font-size:@txt_size_small;
@@ -815,6 +818,26 @@
 }
 
  // PAGINATION
+ .fxs_advanced_search{
+     .fxs_listViewRail{
+         top:0!important;
+         position:relative;
+         @media(min-width:@screen-s){
+             position:absolute;
+         }
+     }
+ }
+ .fxs_search_content{
+     margin-left:auto;
+     @media(min-width:@screen-s){
+        margin-left:250px;
+    }
+ }
+ .fxs_search_config{
+     .fxs_hideElements{
+         padding-top:45px;
+     }
+ }
 
 .fxs_advanced_search_pag {
     text-align: center;
@@ -905,7 +928,11 @@
 .fxs_contextual_alert { margin-bottom: 1rem; }
 
 // Global alert
-
+.fxs_header_scrolled{
+    .fxs_global_alert{
+        top:45px;
+    }
+}
 .fxs_global_alert {
   display: none;
   margin-top: -1px;
@@ -918,6 +945,11 @@
   .fxs_content_wide & { width: 100%; }
   &.fxs_alertCookies{
     z-index: 1000;
+    bottom:60px;
+    top:auto;
+    @media (min-width: @screen-s) { 
+        bottom:35px;
+    }
   }
   &.in {
     display: block;
@@ -944,6 +976,10 @@
 // Alert variants
 .fxs_alert_featured, .fxs_alert_live  {
   .fxs_alert_variants(darken(@corp_clr,5%); @lightest_clr);
+  top: @main_header_height + 5px;
+  @media(min-width:@screen-l){
+    top: auto;
+  }
 }
 
 .fxs_alert_error  {
@@ -1020,6 +1056,72 @@
 
 // MEDIA OBJECTS (images & media)
 .fxs_entryFeatured_img { &:extend(.fxs_mediaContainer all); }
+
+// Media header bar
+
+.fxs_mediaHeader_bar{
+    width:100%; 
+    height:40px; 
+    background-color:@lightest_clr;
+}
+.fxs_mediaHeader_content{
+    //width:60%;
+    /*.calc(width, ~'100% - 40%');
+    background-color:#f0f0f1;*/
+    height:100%;
+    position:absolute;
+    right:0;
+    text-align:right;
+    /*@media (min-width: @screen-l) { 
+        width:43%;
+    }*/
+    .fxs_mediaHeader_items{
+        padding:0 0 0 20px;
+    }
+    .fxs_sectionTitle_header{
+        padding-right:20px;
+        font-size:@txt_size_xsmall;
+        font-weight:400;
+    }
+    .fxs_mediaHeader_social{
+        line-height:40px;
+        height:40px;
+        padding:0;
+        margin:0;
+        background-color:#f0f0f1;
+        display:inline-block;
+        @media (min-width: 1440px) {
+            padding-right:80px;
+        }
+        @media (min-width: 1600px) {
+            padding-right:306px;
+        }
+        li{
+            list-style:none;
+            padding:0 15px 0 0;
+            display:inline-block;
+            .fa{
+                font-size:@txt_size_large;
+            }
+            a{
+                color:@dark_4_clr;
+                font-weight:400;
+                font-size:@txt_size_small;
+            }
+        }
+        li:first-child{
+            &:before{
+                content: "";
+                display: block;
+                background: url("../../img/bg-header-border.png") no-repeat;
+                width: 20px;
+                height: 40px;
+                position:absolute;
+                left:0;
+            }
+        }
+    }
+}
 
 // Floating media
 .fxs_floatingMedia_imageContainer {
@@ -1553,10 +1655,10 @@
     }
   }
 }
-
 // Social media object - Spescific for social channels nav (header & sidebar left)
 .fxs_socialLinks_nav {
   padding: 1rem 10px;
+  float:right;
   .fxs_btn_icon {
     color: @light_2_clr;
     &:hover{
@@ -1566,7 +1668,7 @@
   }
   .fxs_header & {
     padding: 0;
-    position: absolute;
+    //position: absolute;
     right: @base_module_size;
     .fxs_btn_icon {
       height: @main_header_height;
@@ -1582,7 +1684,6 @@
     }
   }
 }
-
 // Social media object - Spescific for subscribe social media widget
 .fxs_suscribeSocialBtn {
   &:extend(.fxs_list_unstyled);
@@ -1595,7 +1696,7 @@
       background-color: transparent;
     }
   }
-  li { margin: 0 @half_base_spacer 0 0; }
+  li { margin: 10px @half_base_spacer 0 0; }
   .fxs_btn_icon {
     background-color: @light_3_clr;
     color: @dark_2_clr;
@@ -1668,7 +1769,9 @@
   .make-row();
   overflow: hidden;
   font-size: 0;
-  .fxs_swipeContent_slider { &:extend(.fxs_list_unstyled); }
+  .fxs_swipeContent_slider { 
+      &:extend(.fxs_list_unstyled); 
+  }
 }
 // holder for columns
 .fxs_brokerContent_holder{
@@ -1759,8 +1862,30 @@
   }
 }
 
-// widget news custom behaviour in small col
-.fxs_col_50, .fxs_col_67{
+// widget news custom behaviour in small coll
+.fxs_widget_news_content{
+    margin-left: 0;
+    position:relative;
+    @media(min-width:@screen-st){
+        margin-left:250px;
+    }
+    .fxs_widget_news_show_filter{
+        a{
+            display:inline-block;
+            transition: 0.3s;
+            @media(min-width:@screen-st){
+                display:none;
+            }
+        }
+        .fxs_divider_third{
+            display:block;
+            @media(min-width:@screen-st){
+                display:none;
+            }
+        }
+    }
+}
+.fxs_col_50, .fxs_col_67, .fxs_flex_col{
     .fxs_widget_news{
         .cbp-spmenu-open {
             .translateX(270px);
@@ -1789,7 +1914,6 @@
         }
     }
 }
-
 // Widget data Lables
 .fxs_widget_custom_data_lable {
   font-size: @txt_size_large;
@@ -1957,11 +2081,17 @@
 .fxs_filter_custom{
     display:block;
     float:none;
-    margin-left:45px;
-    @media(min-width:@screen-s){
+    //margin-left:45px;
+    .fxs_btn_light{
+         font-size:12px; 
+    }   
+    @media(min-width:@screen-st){
         float:right;
-        margin-left:5px;
-        margin-right:0;
+    }
+    @media(min-width:@screen-l){
+        .fxs_btn_light{
+             font-size:@txt_defaultsize_rem; 
+        }
     }
     .fxs_dismissQuery{
         color:@lightest_clr!important;
@@ -2026,6 +2156,14 @@
   &.fxs_preload_cag{
     float:none;
   }
+}
+.fxs_preload_widgets{
+    float:none;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    &:extend(.fxs_preload_modules);
 }
 
 // notify button
@@ -2223,9 +2361,11 @@
 }
 
 // overwrited styles
+.fxs_modal_wrap, .modal-backdrop, .fxs_modal_close{
+    top:0px;
+}
 .fxs_modal_wrap {
   &:extend(.fxs_pageSidebar_transition, .fxs_scrollableContent all);
-  top: @main_header_height;
   padding: 3px!important;
   @media(min-width:@screen-s){ padding: 0 1rem!important; }
   // When fading in the modal, animate it to slide down
@@ -2238,18 +2378,17 @@
 
 .modal-backdrop {
   &:extend(.fxs_pageSidebar_transition);
-  top: @main_header_height;
 }
 
 .fxs_modal_close{
   position:fixed; 
-  top: @main_header_height+3px;
   right: 3px;
   margin: 0;
   z-index: 9999;
   @media(min-width:@screen-s){
     right: @half_base_spacer;
-    top: @main_header_height;
+    //top: @main_header_height;
+    top:0;
   }
   @media(min-width:@screen-l){ right: 1rem; }
   .cbp-spmenu-push-toleft & { display: none; }
@@ -2349,3 +2488,11 @@
     opacity: 1;
     transition: opacity 300ms;
 }
+
+// timeline
+
+
+#24lb_list{
+    margin-top:20px;
+}
+
