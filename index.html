@@ -47,71 +47,130 @@
     </style>
 <body class="cbp-spmenu-push">
     <a id="" class="fxs_skip" href="#fxs_content">Skip to main content</a>
-    <header class="fxs_header">
-        <button type="button" id="showLeftPush" class="fxs_show_navmenu">
-            <i class="fa fa-bars"></i>
-            <span class="fxs_skip">Show navigation</span>
-        </button>
-        <a class="fxs_logo" href="/FXS_frontend" title="FXStreet">FXStreet</a>
-        <!-- Main-nav -->
-        <nav id="fxs-stylesNav" class="fxs_nav_menu navbar" role="navigation">
-            <ul class="nav navbar-nav">
-                <li><a href="#about-guide" title="">Intro</a></li>
-                <li><a href="#atoms" title="">Atoms</a></li>
-                <li><a href="#molecules" title="">Molecules</a></li>
-                <li><a href="#organisms" title="">Organisms</a></li>
-                <li><a href="#templates" title="">Templates</a></li>
-                <li><a href="#pages" title="">Pages</a></li>
-            </ul>
-        </nav>
-        <!-- /Main-nav -->
-        <!-- Social & RSS links -->
-        <div class="fxs_socialLinks_nav">
-            <ul class="fxs_shareOptions_boxed">
-                <li class="fxs_socialMedia_item">
-                    <a class="fxs_btn_icon" href="https://twitter.com/FXstreetUpdate" target="_blank" title="@FXstreetUpdate"><i class="fa fa-twitter"></i><span class="fxs_skip">@FXstreetUpdate</span></a>
-                </li>
-                <li class="fxs_socialMedia_item">
-                    <a href="http://www.facebook.com/FXstreet" class="fxs_btn_icon" target="_blank" title="Facebook page"><i class="fa fa-facebook"></i><span class="fxs_skip">Facebook page</span></a>
-                </li>
-                <li class="fxs_overflowOptions">
-                    <span class="fxs_btn_icon" data-toggle="dropdown" title="More options"><i class="fa fa-ellipsis-h"></i><span class="fxs_skip">More options</span></span>
-                    <ul class="fxs_dropdownList">
-                        <li class="fxs_dropdownHeader">Follow us on</li>
-                        <li>
-                            <a href="http://about.fxstreet.com/blog/" target="_blank"><i class="fa fa-commenting-o fxs_marginHalf_right"></i> FXStreet Blog</a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/user/fxstreetcom/" target="_blank"><i class="fa fa-youtube-play fxs_marginHalf_right"></i> Youtube channel</a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/company/fxstreet" target="_blank"><i class="fa fa-linkedin fxs_marginHalf_right"></i> LinkedIn page</a>
-                        </li>
-                        <li class="fxs_divider_third">&nbsp;</li>
-                        <li class="fxs_dropdownHeader">RSS feeds</li>
-                        <li>
-                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> All the headlines</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> News</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Analysis</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank"><i class="fa fa-rss fxs_marginHalf_right"></i> Economic Calendar</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!-- /Social & RSS links -->
+    <div class="fxs_bgHeader">
+    <!-- new social media component-->
+            <div class="fxs_mediaHeader_bar fxs_hidden_s">
+                <div class="fxs_mediaHeader_content">
+                    <span class="fxs_mediaHeader_icon"></span>
+                    <div class="fxs_mediaHeader_items">
+                        <ul class="fxs_mediaHeader_social">
+                            <!-- social -->
+                            <li>
+                                <h1 class="fxs_sectionTitle_header">follow us on:</h1>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-youtube fa-lg" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fa fa-chrome fa-lg" aria-hidden="true"></i></a>
+                            </li>
 
-        <button type="button" id="showRightPush" class="fxs_show_usermenu">
-            <i class="fa fa-user"></i>
-            <span class="fxs_skip">User Settings</span>
-        </button>
-    </header>
+                            <!-- rss -->
+                            <li>
+                                <a href=""><i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
+                            </li>
+
+                            <!-- divider -->
+                            <li>
+                                |
+                            </li>
+
+                            <!-- blog -->
+                            <li>
+                               <a href="">FXStreet Blog</a> 
+                            </li>
+
+                            <!-- divider -->
+                            <li>
+                                |
+                            </li>
+
+                            <!-- newsletter -->
+                            <li>
+                                <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i> Newsletter</a>
+                            </li>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- close new social media component -->
+            <div class="fxs_staticHeader">
+                <header class="fxs_header">
+                     <!-- LOGO -->
+                    <div id="fxs_socialLogo_header" class="fxs_socialHeader">
+                        <button type="button" id="showLeftPush" class="fxs_show_navmenu">
+                            <i class="fa fa-bars"></i>
+                            <span class="fxs_skip">Show navigation</span>
+                        </button>
+                        <a class="fxs_logo" href="#" title="FXStreet">
+                            FXStreet - The forex market
+                        </a>
+
+                        <!--<button type="button" id="showRightPush" class="fxs_show_usermenu">
+                            <i class="fa fa-user"></i>
+                            <span class="fxs_skip">User Settings</span>
+                        </button>-->
+                        <div class="fxs_user_access">
+                            <a class="fxs_user_login_btn" href="">Log in</a> 
+                            <a class="fxs_btn fxs_btn_cta fxs_btn_small" role="button">Sign up</a>
+                        </div>
+                        <!-- Social & RSS links -->
+                        <div class="fxs_socialLinks_nav">
+                            <ul class="fxs_shareOptions_boxed">
+                                <li class="fxs_socialMedia_item fxs_search_icon">
+                                    <a href="#" class="fxs_btn_icon"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                </li>
+                                <li id="fxs_changetimezone_button" class="fxs_site_clock"> 
+                                    <a href="#" title="change timezone" class="fxs_timezone_btn_navbar"> 
+                                        <span class="fxs_event_time"> <i class="fa fa-clock-o"></i> 
+                                            <time datetime="2017-05-24 09:04:06" class="fxs_hidden_m_iBlock">09:04:06 GMT</time> 
+                                        </span> 
+                                    </a> 
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /Social & RSS links -->
+                    </div>
+                    <div class="fxs_clearfix"></div>
+
+                    <div id="fxs_nav_position" class="fxs_clearfix fxs_navControl">
+                        <div class="fxs_navBg">
+                            <a id="fxs_logo_reduced" class="fxs_logo fxs_hideElements" href="#" title="FXStreet">
+                                FXStreet - The forex market
+                            </a>
+                            <nav id="fxs-stylesNav" class="fxs_nav_menu fxs_main_nav" role="navigation">
+                                <ul>
+                                    <li><a href="#about-guide" title="">Intro</a></li>
+                                    <li><a href="#atoms" title="">Atoms</a></li>
+                                    <li><a href="#molecules" title="">Molecules</a></li>
+                                    <li><a href="#organisms" title="">Organisms</a></li>
+                                    <li><a href="#templates" title="">Templates</a></li>
+                                    <li><a href="#pages" title="">Pages</a></li>
+                                </ul>
+                            </nav>
+                            <div id="fxs-search-area" class="fxs_search_module">
+                                <div class="fxs_search_box" id="aa-input-container">
+                                    <!--<a href="#" class="fxs_btn_icon fxs_search_icon_hd"><i class="fa fa-search" aria-hidden="true"></i></a>-->
+                                    <input type="search" id="fxs-search-input" class="fxs_search_input" placeholder="Find in our content..." name="search" autocomplete="off">
+                                    <label for="typeaheadTarget" class="fxs_btn_filter" id="fxs_btn_filter" title="Search in rates &amp; charts"> <i class="fa fa-search"></i> <span class="fxs_skip">Add pairs to list</span> </label>
+                                </div>
+                                <div id="index-data" class="fxs_col fxs_col_100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Main-nav -->
+                </header>
+            </div>
+    </div>
      <!-- The wrapper -->
     <div class="fxs_wrapper">
         <!-- Sidebar left nav -->
@@ -199,19 +258,6 @@
         
 
         <div class="fxs_content" id="fxs_content" data-spy="scroll" data-target="#fxs-stylesNav" data-offset="45">
-            <!-- Topics subnav -->
-            <nav class="fxs_content_subnav">
-                <a id="showLeft" class="fxs_toggleList" title=""><i class="fa fa-chevron-left"></i> All Items</a>
-                <div class="fxs_topics_nav">
-                    <span class="fxs_label">Popular topics</span>
-                    <ul class="fxs_subnavInlined_list">
-                        <li><a href="#" class="fxs_mutedLink">Popular topic 1</a></li>
-                        <li><a href="#" class="fxs_mutedLink">Popular topic 2</a></li>
-                        <li><a href="#" class="fxs_mutedLink">Popular topic 3</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- /Topics subnav -->
 
             <!-- Global Alerts & Notifications --><!-- For dev -->
             <div id="globalAlertExample" class="fxs_global_alert fxs_alert_success alert alert-dismissible fade" role="alert">
