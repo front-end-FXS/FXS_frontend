@@ -73,16 +73,13 @@
   color: @lightest_clr;
   padding:0.5rem 0 0.5rem 2rem;
 }
-
 .fxs_helperLabel_title {
   .fxs_stiled_text_variants(inline-block; @dark_4_clr; @txt_size_small);
   margin: 0 @half_base_spacer 0 0;
 }
-
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////// Styled lists ///////////////////////////////
 /////////////////////////////////////////////////////////////////////////
-
 // Inlined lists
 .fxs_subnavInlined_list, .fxs_plainInlined_list {
   &:extend(.fxs_list_unstyled);
@@ -192,6 +189,11 @@
     margin-bottom: 0;
     margin-left: 2px;
   }
+  label{
+      .fxs_signup_custom_small{
+          font-size: @txt_size_small;
+          }
+      }
 }
 
 .fxs_textInput, .fxs_select {
@@ -289,7 +291,8 @@
   line-height: @base_module_size - 1;
 }
 
-.fxs_btn { 
+.fxs_btn {
+  .fa{padding-right:10px;} 
   font-size: @txt_size_small; 
   &.fxs_brokersList_button{
     margin:0;
@@ -309,7 +312,6 @@
     width: @base_module_size - 8;
   }
 }
-
 // custom fxs_btn to add dropdown to calendar 
 .fxs_btn_group {
   // open - add this lines to modify button behavior
@@ -595,7 +597,7 @@
 }
 
 .fxs_search_typeahead_box {
-    background-color: @dark_3_clr;
+    background-color: @lightest_clr;
     display:block;
     box-sizing: border-box;
     right:0;
@@ -604,6 +606,7 @@
     position: absolute;
     top: 100%;
     z-index: 100;
+    border:1px solid @light_4_clr;
     p{
         &:extend(.fxs_search_module_item);
         font-style:italic;
@@ -629,7 +632,23 @@
 }
 .fxs_search_goto_advanced{
     position:relative; 
-    bottom:-7px; 
+    bottom:-7px;
+    border-top:1px solid @light_4_clr;
+    text-align:center;
+    padding:0.5rem 1rem 1rem 1rem;
+    &.fxs_search_goto_advanced_top{
+        top:0;
+        bottom:auto;
+        border-bottom:1px solid @light_4_clr;
+    }
+    a{
+        &:hover{
+            text-decoration: underline!important;
+        }
+    }
+    .fa-times{
+        cursor: pointer;
+    }
 }
 
 .fxs_search_icon{
@@ -661,7 +680,7 @@
     }
     h4{
         font-size:@txt_size_small;
-        color:@lightest_clr; 
+        //color:@lightest_clr; 
         text-decoration:none;
     }
     mark{
@@ -677,7 +696,7 @@
 .fxs_search_row{
     width:100%;
     &:hover{
-        background-color:@dark_4_clr;
+        background-color:@light_4_clr;
     }
 }
 .fxs_search_list_item{
@@ -1053,15 +1072,12 @@
   font-size: @txt_size_xsmall;
   padding: 0.33rem 1rem;
 }
-
 // MEDIA OBJECTS (images & media)
 .fxs_entryFeatured_img { &:extend(.fxs_mediaContainer all); }
-
 // Media header bar
-
 .fxs_mediaHeader_bar{
     width:100%; 
-    height:40px; 
+    height:25px; 
     background-color:@lightest_clr;
 }
 .fxs_mediaHeader_content{
@@ -1079,16 +1095,17 @@
         padding:0 0 0 20px;
     }
     .fxs_sectionTitle_header{
-        padding-right:20px;
-        font-size:@txt_size_xsmall;
+        font-size:0.7rem;
         font-weight:400;
+        line-height:30px;
+        span{padding-left:15px;}
     }
     .fxs_mediaHeader_social{
-        line-height:40px;
-        height:40px;
+        line-height:25px;
+        height:25px;
         padding:0;
         margin:0;
-        background-color:#f0f0f1;
+        background-color:@light_3_clr;
         display:inline-block;
         @media (min-width: 1440px) {
             padding-right:80px;
@@ -1101,12 +1118,12 @@
             padding:0 15px 0 0;
             display:inline-block;
             .fa{
-                font-size:@txt_size_large;
+                font-size:@txt_defaultsize_rem;
             }
             a{
                 color:@dark_4_clr;
-                font-weight:400;
-                font-size:@txt_size_small;
+                font-weight:300;
+                font-size:@txt_size_xsmall;
             }
         }
         li:first-child{
@@ -1115,7 +1132,7 @@
                 display: block;
                 background: url("../../img/bg-header-border.png") no-repeat;
                 width: 20px;
-                height: 40px;
+                height: 35px;
                 position:absolute;
                 left:0;
             }
@@ -1299,7 +1316,6 @@
   }
 
 }
-
 // AUTHOR FEATURED QUOTES
 .fxs_featured_quote {
   font-weight: @txt_fontweight_light;
@@ -1442,10 +1458,8 @@
 		&:hover { .opacity(.75); }
 	}
 }
-
 //////////////////////////////////////////////////////
 ////////////// STICKY ///////////////////////////////
-
 .fxs_row{
   &.container{
     position: relative;
@@ -1611,6 +1625,10 @@
   font-size: 5px;
   white-space: nowrap;
   .fxs_btn_icon { margin: 0; }
+  li{
+      margin-left:5px;
+      margin-right:5px;
+  }
 }
 .fxs_timezone_btn_navbar{
   height: @main_header_height;
