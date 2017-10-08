@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background-color: @light_4_clr;
+	background-color: @dark_2_clr;
 	color: @dark_4_clr;
 	font-family: @txt_fontfamily;
 	font-size: @txt_defaultsize_rem;
@@ -53,7 +53,7 @@ a {
 
 strong { &:extend(.fxs_boldAntialised_style); }
 
-h1, h2, h3, h4, h5, .fxs_headline_muted { &:extend(.fxs_headline_base_rules all); }
+h1, h2, h3, h4, h5 { &:extend(.fxs_headline_base_rules all); }
 
 h2 { font-size: @txt_size_xxlarge; }
 
@@ -66,18 +66,6 @@ blockquote {
   font-style: italic;
   position: relative;
   margin-bottom: 1rem;
-  &.blockquote_small{
-    &:before{
-        display: block;
-        color: @light_4_clr;
-        font: normal normal normal 1rem FontAwesome;
-        width: 2rem;
-        height: 2rem;
-        top: 0;
-        left: 0;
-        content: "\f10d";
-      }
-  }
   &:before, &:after { position: absolute; }
   &:before{
     display: block;
@@ -95,6 +83,8 @@ blockquote {
     bottom: 0;
     left: 0;
     margin-bottom: 0;
+        background-color: @light_4_clr;
+    height: 3px;
   }
   footer {
     color: @light_2_clr;
@@ -104,13 +94,8 @@ blockquote {
   }
 }
 
-<<<<<<< HEAD
-abbr { 
-  //cursor: help; 
-}
+abbr { cursor: help; }
 
-=======
->>>>>>> parent of c9d69f0... Merge pull request #136 from front-end-FXS/proof-layout
 address, cite { font-style: normal; }
 
 em { font-weight: @txt_fontweight; }
@@ -152,19 +137,19 @@ dl {
   dt { &:extend(.fxs_boldAntialised_style); }
 }
 
-pre {
+code, pre {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
   padding: 4px;
-  font-size: 12px;
+  font-size: 90%;
   color: @dark_2_clr;
   background-color: fade(@light_3_clr, 40%);
   overflow: auto;
-  word-wrap: normal;
 }
 
 // Images
 img {
   max-width: 100%;
+  min-width: 100%;
   height: inherit;
 }
 
@@ -196,10 +181,10 @@ input[type=text], input[type=email], input[type=password], input[type=search], i
     outline: 0;
     border-color: @highlight_clr;
   }
-  /*&:invalid, .fxs_hasError & {
+  &:invalid, .fxs_hasError & {
     border-color: @error_clr;
     background-color: lighten(@error_clr, 45%);
-  }*/
+  }
   .fxs_hasWarning & {
     border-color: @warning_clr;
     background-color: lighten(@warning_clr, 30%);
