@@ -210,6 +210,7 @@
 // center boxes
 
 // Pre space wide widgets
+<<<<<<< HEAD:website/css/less/mixins.less
 .fxs_wideWidget_pre(@widget-border-top; @widget-border-bottom) {
   &:extend(.fxs_wideContent all, .fxs_wideItem_pre_space all);
   border-top: @widget-border-top;
@@ -219,6 +220,20 @@
 //////////////////////////////////////
 ////////// GRID SYSTEMS /////////////
 ////////////////////////////////////
+=======
+.fxs_wideWidget_pre(@widget-padding-default: 1rem; @widget-padding-m: 2rem) {
+  padding: @widget-padding-default;
+  margin-bottom: 1rem;
+  &:extend(.fxs_wideContent_bordered);
+  @media (min-width: @screen-s) { padding: @widget-padding-m; }
+}
+
+////////// GRID SYSTEMS ///////////
+
+// fxstreet grid breakpoints
+@grid-columns: 12;
+@grid-gutter-width: 1rem;
+>>>>>>> parent of bb6c07d... Merge remote-tracking branch 'origin/master':website-css/less/mixins.less
 
 // Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
