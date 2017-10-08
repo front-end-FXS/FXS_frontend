@@ -40,8 +40,8 @@
     line-height: @base_module_size;
 		text-align: center;
     &.fxs_widget_spreads_item_lower {
-      background-color: fade(@success_clr, 25%);
-      color: lighten(@success_clr, 10%);
+      background-color: lighten(@success_clr, 55%);
+      color: @success_clr;
     }
 	}
 
@@ -71,6 +71,7 @@
     >thead tr> th {
       &:nth-child(n+3) { text-align: center; }
     }
+<<<<<<< HEAD
     tbody >tr {
       &.fxs_sponsored_broker_row {
         >td {
@@ -84,6 +85,11 @@
         &:first-child { border-bottom: none; }
       }
     } 
+=======
+    tbody> tr> td {
+      &:first-child { border-bottom: none; }
+    }
+>>>>>>> parent of c9d69f0... Merge pull request #136 from front-end-FXS/proof-layout
   }
 
   &.fxs_widget_default,
