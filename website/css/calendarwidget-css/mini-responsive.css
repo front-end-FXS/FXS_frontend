@@ -129,21 +129,17 @@ dd {
   padding: 0;
 }
 .fxst_custom_content {
-  margin: 15px 15px 15px 15px;
+  margin: 15px 0 15px 15px;
   color: #777777;
   display: block;
 }
 .fxst_custom_content.fxst_chart_title {
   font-size: 18px;
-  padding-right: 20px;
 }
 @media (min-width: 768px) {
   .fxst_custom_content {
     display: inline-block;
   }
-}
-.fxec_tabcontent .chart_path_line {
-  direction: ltr!important;
 }
 .fxst_select_label,
 .fxst_custom_select {
@@ -348,9 +344,7 @@ dd {
 #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus,
 #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus,
 #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous,
-#fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-eventInfo-vol,
-#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-eventInfo-vol {
+#fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous {
   text-align: center;
   width: 25%;
   height: 16px;
@@ -363,9 +357,7 @@ dd {
   #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-consensus,
   #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-consensus,
   #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-previous,
-  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous,
-  #fxst-calendartable tr td .fxit-event .fxit-event-numbers .fxit-eventInfo-vol,
-  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-eventInfo-vol {
+  #fxst-calendartable tr th .fxit-event .fxit-event-numbers .fxit-previous {
     /*width:33%;
 				        	position: relative;
 				        	float: left;
@@ -2286,7 +2278,6 @@ fxst-olsendata {
   text-transform: uppercase;
   position: relative;
   z-index: 100000;
-  right: 20px;
 }
 .fxst-preliminar {
   color: #868686;
@@ -2646,31 +2637,10 @@ fxst-olsendata {
 }
 .fxst-lang-ae {
   direction: rtl;
-  text-align: right!important;
-}
-.fxst-lang-ae .chart_path_line {
-  direction: ltr!important;
+  text-align: right;
 }
 .fxst-lang-ae td {
   text-align: right!important;
-}
-.fxst-lang-ae .fxs_new_calendar_header_item,
-.fxst-lang-ae .fxit-eventInfo,
-.fxst-lang-ae .fxit-eventInfo-time,
-.fxst-lang-ae .fxit-eventInfo-country,
-.fxst-lang-ae .fxit-event-url,
-.fxst-lang-ae .fxit-eventInfo-vol,
-.fxst-lang-ae .fxit-event-info-desktop,
-.fxst-lang-ae .fxst-calendar-filter,
-.fxst-lang-ae .fxit-prefiltered-date,
-.fxst-lang-ae .fxit-event-name {
-  float: right!important;
-}
-.fxst-lang-ae .fxit-event-numbers {
-  float: left!important;
-}
-.fxst-lang-ae .fxit-event-title {
-  padding-right: 10px;
 }
 .icon {
   display: inline-block;
@@ -2696,4 +2666,194 @@ fxst-olsendata {
 .fxst-i-16 {
   width: 16px;
   height: 16px;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers {
+  clear: both;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers .fxit-actual:after {
+  content: 'ACTUAL';
+  font-size: 10px;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers .fxit-consensus:after {
+  content: 'CONSENSUS';
+  font-size: 10px;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers .fxit-previous:after {
+  content: 'PREVIOUS';
+  font-size: 10px;
+}
+.fxst-gnral.fxs_calendar_mini .fxst-flag {
+  position: inherit;
+}
+.fxst-gnral.fxs_calendar_mini .fxst-calendarhead {
+  display: none!important;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-eventInfo-country {
+  width: 20px!important;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-eventInfo-time {
+  margin: 0!important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event {
+  width: 100%!important;
+  float: none!important;
+}
+@media (min-width: 768px) {
+  .fxst-gnral.fxs_calendar_mini .fxit-event {
+    float: left;
+  }
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event .fxit-event-url {
+  width: 100%!important;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers {
+  width: 100%;
+  padding-top: 20px;
+}
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers .fxit-actual,
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers .fxit-consensus,
+.fxst-gnral.fxs_calendar_mini .fxit-event-numbers .fxit-previous {
+  display: inline-block;
+  width: 32%;
+  min-height: :40px;
+  text-align: center;
+}
+.fxst-gnral.fxs_calendar_mini .fxs_text_numbers {
+  font-size: 10px;
+  color: #808080;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .fxst-gnral.fxs_calendar_mini .fxs_text_numbers {
+    font-size: 8px;
+  }
+}
+@media (min-width: 1025px) {
+  .fxst-gnral.fxs_calendar_mini .fxs_text_numbers {
+    font-size: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .fxst-gnral.fxs_calendar_default .fxit-eventInfo-vol {
+    margin-top: 15px;
+  }
+  .fxst-gnral.fxs_calendar_default .fxit-event-numbers .fxit-actual:after {
+    content: 'ACTUAL';
+    font-size: 10px;
+  }
+  .fxst-gnral.fxs_calendar_default .fxit-event-numbers .fxit-consensus:after {
+    content: 'CONSENSUS';
+    font-size: 10px;
+  }
+  .fxst-gnral.fxs_calendar_default .fxit-event-numbers .fxit-previous:after {
+    content: 'PREVIOUS';
+    font-size: 10px;
+  }
+}
+.fxst-gnral.fxs_calendar_default .fxst-calendarhead.fxs_eventInfo_header .fxit-eventInfo,
+.fxst-gnral.fxs_calendar_default .fxst-calendarhead.fxs_eventInfo_header .fxit-event,
+.fxst-gnral.fxs_calendar_default .fxst-calendarhead.fxs_eventInfo_header .fxit-event-numbers {
+  font-weight: 700;
+  font-size: 12px;
+  color: #333;
+}
+.fxst-gnral.fxs_calendar_default .fxit-event-numbers.fxs_event_numbers_header {
+  width: 50%;
+  float: right;
+}
+.fxst-gnral.fxs_calendar_default .fxit-event-numbers.fxs_event_numbers_header .fxit-actual,
+.fxst-gnral.fxs_calendar_default .fxit-event-numbers.fxs_event_numbers_header .fxit-consensus,
+.fxst-gnral.fxs_calendar_default .fxit-event-numbers.fxs_event_numbers_header .fxit-previous {
+  display: inline-block;
+  width: 30%;
+}
+.fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers {
+  width: 50%;
+  float: right;
+}
+@media (max-width: 768px) {
+  .fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers {
+    float: none;
+    width: 100%;
+    clear: both;
+  }
+}
+.fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers .fxit-actual,
+.fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers .fxit-consensus,
+.fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers .fxit-previous {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers .fxit-actual,
+  .fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers .fxit-consensus,
+  .fxst-gnral.fxs_calendar_default .fxst-tr-event .fxit-event-numbers .fxit-previous {
+    text-align: center;
+  }
+}
+.fxst-gnral.fxs_calendar_default .fxit-eventInfo .fxit-eventInfo-time {
+  width: auto!important;
+}
+.fxst-gnral.fxs_calendar_default .fxit-eventInfo .fxit-eventInfo-time.fxs_eventInfo_custom {
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .fxst-gnral.fxs_calendar_default .fxit-eventInfo .fxit-eventInfo-time {
+    margin: 0!important;
+  }
+}
+.fxst-gnral.fxs_calendar_default .fxit-eventInfo .fxs_country_name {
+  display: none;
+}
+.fxst-gnral.fxs_calendar_default .fxit-countryurl .fxst-flag {
+  vertical-align: middle!important;
+  margin-left: 5px;
+}
+.fxst-gnral.fxs_calendar_default .fxit-event {
+  width: 30%!important;
+}
+@media (max-width: 768px) {
+  .fxst-gnral.fxs_calendar_default .fxit-event {
+    width: 70%!important;
+  }
+}
+.fxst-gnral.fxs_calendar_default .fxit-event .fxit-event-url {
+  width: 100%!important;
+}
+.fxit-first-row .fxst-td-currency {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .fxit-first-row .fxst-td-currency {
+    display: block;
+  }
+}
+.fxit-first-row .fxst-td-time,
+.fxit-first-row .fxst-td-flag,
+.fxit-first-row .fxst-td-currency {
+  float: none;
+  width: 30%;
 }
