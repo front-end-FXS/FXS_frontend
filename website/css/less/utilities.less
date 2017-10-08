@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////
 
 ///////////////////////////////
-// Transitions & animationss //
+// Transitions & animations //
 
 // Transitions
 .fxs_transition { .transition(all .25s ease-in); }
@@ -47,16 +47,10 @@
   font-size: @txt_size_xsmall;
   line-height: @txt_lineheight_xsmall;
 }
-.fxs_txt_normal{
-  font-size: @txt_defaultsize_px;
-}
 
 .fxs_txt_large {
   font-size: @txt_size_large;
   line-height: @txt_lineheight_reset;
-}
-.fxs_txt_clean_large{
-  font-size: @txt_size_xlarge;
 }
 
 // Text aligments
@@ -80,6 +74,7 @@
 .fxs_txt_neutral {
   .fxs_txt_color_variants(@light_1_clr);
 }
+
 // muted text
 .fxs_mutedContent_label {
   font-size: @txt_size_xsmall;
@@ -89,62 +84,11 @@
   display: block;
   i{ font-size: @txt_size_small; }
 }
+
 // Italic upercased labels
 .fxs_styledIndicator_label {
   text-transform: uppercase;
   font-style: italic;
-  &.fxs_indicator_broker{
-    font-size: @txt_size_xsmall;
-  }
-}
-// colors
-.fxs_whiteClr{
-    color:@lightest_clr;
-    margin-left:-5px;
-    z-index:9999;
-}
-// //////////////////////////// tooltip with css /////////////////////////////////////////
-.fxs_tooltip {
-    position: relative;
-    display: inline-block;
-}
-.fxs_tooltip .fxs_tooltiptext {
-    visibility: hidden;
-    width: 145px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 2px 5px 2px;
-    font-family:@txt_fontfamily;
-
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 2;
-}
-.fxs_tooltip:hover .fxs_tooltiptext {
-    visibility: visible;
-}
-
-// tooltip position
-.fxs_toolip_bottom{
-    width: 120px;
-    top: 100%;
-    left: 50%; 
-    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-}
-.fxs_toolip_right{
-    top: -5px;
-    left: 105%;
-}
-.fxs_toolip_left{
-    top: -5px;
-    right: 105%; 
-}
-.fxs_toolip_top{
-    width: 120px;
-    bottom: 100%;
-    left: 50%; 
-    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
 }
 
 // Bolds & strongs with smooth borders
@@ -183,13 +127,6 @@
   }
 }
 
-// text messages
-
-.fxs_simple_error_msg{
-    color:@error_clr;
-    padding:5px;
-}
-
 ////////////////////
 /// Links styles //
 
@@ -205,12 +142,6 @@
   color: @dark_1_clr;
   padding-right: 5px;
 }
-.fxs_lockLink{
-    pointer-events: none;
-    cursor: default;
-    opacity:0.6;
-    display:inline-block!important;
-}
 
 ////////////////////
 // Header styles //
@@ -221,6 +152,7 @@
   color: @dark_1_clr;
   letter-spacing: -0.02rem;
   margin: 0 0 0.33em;
+  // Headline link
   a {
     color: @dark_1_clr;
     display: block;
@@ -229,10 +161,6 @@
       text-decoration: none;
     }
   }
-}
-// Invert link color
-.fxs_invert_link{
-    color:@highlight_clr;
 }
 
 // Default
@@ -258,15 +186,12 @@
 .fxs_headline_tiny {
   &:extend(.fxs_headline);
   margin-bottom: 0;
-  &.fxs_headline_muted{
-    color: @dark_1_clr;
-  }
 }
 
 .fxs_headline_from_tiny_to_small {
   &:extend(.fxs_headline);
   @media (min-width: @screen-l) {
-    font-size: @txt_size_xlarge;
+    font-size: @txt_size_large;
     line-height: @txt_lineheight;
   }
 }
@@ -295,11 +220,6 @@
   }
 }
 
-.fxs_headline_title_ctrl{
-  &:extend(.fxs_floatingMedia_textBody, .fxs_headline_medium);
-  color:@lightest_clr;
-}
-
 .fxs_headline_hero{
   font-size: @txt_size_xhuge;
   line-height: @txt_lineheight_xlarge;
@@ -308,70 +228,27 @@
     line-height: @txt_lineheight_xxlarge;
   }
 }
-.fxs_toUppercase{
-  text-transform: uppercase;
-  font-style:italic;
-}
-
-// center boxes
-.fxs_center_objects{
-  position: absolute;
-  left: @leftBox;
-  top: @topBox;
-  transform: translate(-@topBox, -@leftBox);
-}
-////////////////////////////////////////////
-// Borders ////////////////////////////////
-
-.fxs_border_bottom_second{
-  border-bottom: 1px solid @light_4_clr;
-}
-.fxs_marginAuto{
-  margin: 0 auto;
-  float: none;
-}
 
 ///////////////////////////////////////////
 // Margins, positions, boxes & displays //
-.fxs_hideElements { display: none; }
-.fxs_align_center{ text-align: center; }
-.fxs_align_right{ text-align: right; }
+
 .fxs_relativePositioning { position: relative; }
-.fxs_absolutePositioning { position: absolute; }
-.fxs_positionFixed {position:fixed; top:0;}
 .fxs_iBlock { display: inline-block; }
 .fxs_align_middle { vertical-align: middle; }
-.fxs_dBlock { display: block!important; }
+.fxs_dBlock { display: block; }
 .fxs_dTable { display: table; width: 100%; }
 .fxs_fLeft { float: left; }
 .fxs_fRight { float: right; }
-.fxs_aCenter { text-align: center; }
-.fxs_positionAbsolute_right { right:0; left:inherit; }
-.fxs_positionAbsolute_left { left:0; right:inherit; }
 .fxs_marginBase_top { margin-top: 1rem; }
-.fxs_marginBase_top_big { margin-top: 2rem!important; }
 .fxs_marginHalf_top { margin-top: @half_base_spacer; }
 .fxs_marginBase_right { margin-right: 1rem; }
 .fxs_marginHalf_right { margin-right: @half_base_spacer; }
 .fxs_marginBase_bottom { margin-bottom: 1rem; }
 .fxs_marginHalf_bottom { margin-bottom: @half_base_spacer; }
 .fxs_marginBase_left { margin-left: 1rem; }
-.fxs_paddingBase_top { padding-top: 1rem; }
-.fxs_paddingBase_bottom { padding-bottom: 1rem; }
-.fxs_padding_big{padding:20px;}
 .fxs_resetRow_margin {
   padding-left: @half_base_spacer;
   padding-right: @half_base_spacer;
-}
-
-// add separator with seudo elements
-.fxs_add_separator li{
-  &:after{
-    content:',';
-  }
-  &:last-child:after{
-    content:'';
-  }
 }
 
 // Absolute center element
@@ -393,7 +270,7 @@
 
 // Content rail items dimensions and margins
 .fxs_contentRail_box {
-  margin: 0 auto!important;
+  margin: 0 auto;
   max-width: @content_rail_width;
 }
 
@@ -401,7 +278,7 @@
 .fxs_divider_base {
   background-color: @light_4_clr;
   margin-bottom: 1rem;
-  @media (min-width: @screen-s) { margin-bottom: 1rem; }
+  @media (min-width: @screen-s) { margin-bottom: 1.5rem; }
 }
 
 // generic content pannels
@@ -409,14 +286,6 @@
   padding: 1rem;
   background-color: @light_5_clr;
   margin-bottom: @half_base_spacer;
-  &.fxs_wide_panel_info{
-    margin-bottom:-2rem;
-    margin-top: -1.5rem;
-    &:extend(.fxs_label_info);
-    .fxs_headline_medium{
-      padding-left:1rem;
-    }
-  }
 }
 
 // contextual detail section
@@ -447,13 +316,6 @@
 .fxs_mediaContainer {
   .fxs_aspectRatio_media(16, 9);
   margin-bottom: 1rem;
-  img {
-    min-width: 100%;
-    min-height: 100%;
-  }
-  &.fxs_mediaContainer_mod{
-    max-height: 315px;
-  }
 }
 
 /////////////////////
@@ -502,8 +364,8 @@
   margin-left: -1rem;
   margin-right: -1rem;
   @media (min-width: @screen-s) {
-      margin-left: -1.5rem;
-      margin-right: -1.5rem;
+      margin-left: -2rem;
+      margin-right: -2rem;
   }
   &.no_wide_content {
     @media (min-width: @screen-s) {
@@ -533,7 +395,7 @@
   @media (min-width: @screen-l) {
     &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-corner, &::-webkit-scrollbar-button { background-color: transparent;}
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 5px;
       height: 5px;
       border-radius: 0;
     }
@@ -546,19 +408,6 @@
     &::-webkit-scrollbar-button { display: none; }
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
-}
-// disable topics in mobile devices
-.fxs_notSlider_topics{
-  .fxs_swipeContent_slider{
-    display: none;
-     @media (min-width: @screen-m) {
-      display:block;
-     }
-  }
-}
-
-.fxs_wide_element{
-  width:100%;
 }
 
 // Swipe content in mobile
@@ -574,5 +423,3 @@
     width: 100%;
   }
 }
-
-

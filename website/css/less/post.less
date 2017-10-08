@@ -10,11 +10,13 @@
 }
 
 .fxs_article_ad {
+  display: none;
   clear: both;
   @media (min-width: @screen-s) {
     background-color: #E2E2E2;
     display: block;
-    //height: 250px; 
+    width: 300px;
+    height: 250px; 
     float: right;
     margin: 0 0 2rem 2rem;
   }
@@ -25,15 +27,6 @@
   margin-bottom: 1.4rem;
   @media (min-width: @screen-l) {
     > * { max-width: 75%; }
-  }
-  .fxs_article_content{
-    max-width:100%;
-    img{
-      height:100%!important;
-      @media(min-width:@screen-m){
-        //max-width: 50%;
-      }
-    }
   }
 }
 
@@ -50,8 +43,8 @@
 .fxs_article_tags {
   padding: 1rem 0;
   margin-bottom: 1rem;
-  border-top: 1px solid @light_4_clr;
-  border-bottom: 1px solid @light_4_clr;
+  border-top: 2px solid @light_4_clr;
+  border-bottom: 2px solid @light_4_clr;
   vertical-align: middle;
   ul {
     &:extend(.fxs_list_unstyled);

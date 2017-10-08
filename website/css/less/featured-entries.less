@@ -1,85 +1,14 @@
-/// SUSCRIBE NEWSLETTER
-
-.fxs_col_33, .fxs_flex_ad_col{
-    .fxs_subscribe_mini{
-        .fxs_textInput{
-            display:block;
-            width:100%;
-        }
-        .fxs_btn_group {
-            width:100%;
-            margin-left:1px;
-        }
-        .fxs_btn {
-            .calc(width, ~'100% - 37px'); 
-        }
-    }
-}
+// SUSCRIBE NEWSLETTER
 .fxs_suscribe {
   .fxs_wideWidget_pre(3px solid @light_4_clr; 3px solid @light_4_clr);
   background-color: @dark_2_clr;
-  &.fxs_suscribe_simple{
-      min-width:320px;
-  }
-  &.fxs_suscribeForm_whiteVersion{
-      background-color:@lightest_clr;
-      padding:0;
-      .fxs_list_unstyled{
-          &.fxs_list_block{
-            display:block;
-            padding-right:2rem;
-            @media(min-width:@screen-m){
-                display:table-cell;
-            }
-            li{
-                display:inline-block;
-                width:100%;
-                padding-right:50px;
-                p{
-                    word-break:break-word;
-                }
-                @media(min-width:@screen-s){
-                    width:420px;
-
-                }
-                &:first-child{
-                    vertical-align:top;
-                    display:block;
-                    margin-bottom:1rem;
-                    font-size:@txt_size_large;
-                  
-                }
-            }
-          }
-          .fxs_custom_label{
-              display:inline-block;
-              width:300px;
-               @media(min-width:@screen-s){
-                    width:320px;
-
-                }
-          }
-      }
-  }
 }
-// authors subscribe section
-.fxs_author_subscription_listItem{
-    .fxs_contributorBox {
-        height:auto;
-        margin-right:20px;
-        @media(min-width:@screen-s){
-            height:60px;
-        }
-    }
-}
+
 .fxs_suscribeForm {
   &:extend(.fxs_clearfix all);
   @media (min-width: @screen-s) {
     float: left;
     .calc(width, ~'100% - 220px'); 
-  }
-  &.fxs_suscriptionForm_wide{
-      width:100%;
   }
 }
 
@@ -99,11 +28,6 @@
   font-weight: @txt_fontweight_light;
   margin-bottom: 0.5rem;
   span { &:extend(.fxs_boldAntialised_style); }
-  &.fxs_subscribe_title{
-    span{
-      &:extend(.fxs_txt_large);
-    }
-  }
 }
 
 // Entries plain text General
@@ -114,7 +38,7 @@
   &:extend(.fxs_clearfix all, .fxs_marginBase_bottom);
   position: relative;
   &:hover {
-      //cursor: pointer;
+      cursor: pointer;
       .fxs_sexy_bannerText { background-color: fade(@dark_2_clr, 85%); }
       .fxs_sexy_bannerImg { .opacity(.75); }
   }
@@ -127,10 +51,8 @@
   left: 0;
   padding: @txt_defaultsize_rem;
   background-color: fade(@dark_2_clr, 80%);
-  height:100%;
-  width: 100%;
-  @media (min-width: @screen-l) {width:80%;}
-  @media (min-width: @screen-xl) {width:70%;}
+  height: 100%;
+  width: 48%;
   @media (min-width: @screen-s) { padding: 2rem; }
   .fxs_entryHeadline, .fxs_entryHeadline a, .fxs_entryPlain_txt, .fxs_helperLabel_title, .fxs_entry_metaInfo { color: @lightest_clr; }
   header, .fxs_helperLabel_title{
@@ -141,47 +63,37 @@
     font-size: @txt_size_large;
     line-height: @txt_lineheight;
     margin-bottom: 5px;
-    z-index: 2;
     @media (min-width: @screen-s) {
       font-size: @txt_size_xhuge;
       line-height: @txt_lineheight_xlarge;
     }
   }
-  .fxs_entryPlain_txt, .fxs_helperLabel_title { /*display: none;*/ }
-  /*.fxs_helperLabel_title {
+  .fxs_entryPlain_txt, .fxs_helperLabel_title { display: none; }
+  .fxs_helperLabel_title {
     @media (min-width: @screen-l) { display: inherit; }
   }
   .fxs_entryPlain_txt {
     @media (min-width: @screen-xl) { display: inherit; }
-  }*/
+  }
 }
 
 .fxs_sexy_bannerImg {
   &:extend(.fxs_mediaContainer all);
-  &:before{
-    padding-top:100%;
-  }
+  max-height: 160px;
   margin-bottom: 0;
   @media (min-width: @screen-s) {
     max-height: 350px;
-  }
-  img{
-    max-width: none;
+    img { max-width: inherit; }
   }
 }
 
 // Entries list
 .fxs_entriesList {
   margin-bottom: 1rem;
-  &.fxs_entriesList_alternative{ 
-    li{
-      padding: 0.5rem 0;
-    }
-  }
   ol { &:extend(.fxs_list_unstyled); }
   li {
-    padding: 0.5rem 0;
-    //border-bottom: 1px solid @light_4_clr;
+    padding: 1rem 0;
+    border-bottom: 1px solid @light_4_clr;
     &:first-child { padding-top: 0.5rem; }
     &:last-child { border-bottom: none; }
   }
@@ -195,62 +107,18 @@
       @media(min-width:@screen-s){ font-size: @txt_size_xxlarge; }
     }
   }
-  &.fxs_links_list_module{
-    li{
-      article{
-        h3{
-          a{
-            color:@highlight_clr;
-            &:hover{
-              color:@dark_1_clr;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 // Entries featured
 .fxs_entryFeatured {
   &:extend(.fxs_marginBase_bottom);
   header { margin-bottom: 0.5rem; }
-<<<<<<< HEAD
-  //border-bottom: 1px solid @light_4_clr;
-=======
->>>>>>> parent of 44f64a7... Merge pull request #270 from front-end-FXS/frontend-branch-1
   &:hover {
-    //cursor: pointer;
+    cursor: pointer;
     .fxs_entryFeatured_img img { .opacity(.75); }
   }
-  // for small colls
-  &.fxs_article_author_small_cols{
-    //max-height:0;
-    @media(min-width:@screen-s){
-      min-height:130px;
-    }
-    @media(min-width:@screen-l){
-      min-height:100px;
-    }
-    .fxs_article_author{
-      .calc(max-width, ~'100% - ( 85px + 10px )');
-      /*@media(min-width:@screen-l){
-        .calc(max-width, ~'100% - ( @{avatar_l} + 10px )');
-      }*/
-    }
-  }
   .fxs_article_author {
-    //.calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
-    max-width:150px;
-    /*@media(min-width:@screen-hd){
-      .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
-    }*/
-  }
-  .fxs_medium_clean_video_label{
-    position: relative;
-    .fxs_label_featured,.fxs_miniLabel_video{
-      display:inline-block; position: inherit;
-    }
+    .calc(max-width, ~'100% - ( @{avatar_s} + 5px )');
   }
 }
 
@@ -366,13 +234,13 @@
 
 // Live event modules components
 .fxs_background_video {
-  background: url('https://staticcontent.azureedge.net/website/img/video_cta_bg.jpg') no-repeat @dark_2_clr;
+  background: url(../img/video_cta_bg.jpg) no-repeat @dark_2_clr;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   &::after {
-    background: url('https://staticcontent.azureedge.net/website/img/pixel_pattern_layer.png') repeat transparent;
+    background: url(../img/pixel_pattern_layer.png) repeat transparent;
     content: " ";
     display: block;
     position: absolute;
@@ -383,25 +251,6 @@
   }
   .on_air & .fxs_placeholder_video.fxs_onAir_item {
     &:extend(.fxs_hidden_xs all);
-  }
-}
-.fxs_live_event_module{
-  .fxs_passed_item{
-    display: none;
-  }
-  &.finished_event{
-    .fxs_passed_item{
-      display: block;
-    }
-    .fxs_next_item,.fxs_onAir_item {
-      display: none;
-    }
-  }
-  &.fxs_live_event_data_box{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right:0;
-
   }
 }
 
@@ -452,15 +301,12 @@
     color: @light_5_clr;
   }
 }
-// ccomment
+
 .fxs_live_event_cta_content {
   &:extend(.fxs_wideItem_pre_space all);
   max-width: @left_rail_space * 2;
   position: relative;
   z-index: 2;
-  .fxs_onair_footer_title{
-      color:@lightest_clr;
-  }
 }
 
 .fxs_main_cta_block {
@@ -507,43 +353,6 @@
 .fxs_video_chat_block {
   position: relative;
   overflow: hidden;
-  .fxs_live_event_module{
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .fxs_timer_countdown_block{
-    width: 100%;
-  }
-  .fxs_main_cta_block{
-    margin: 0;
-  }
-  .fxs_countdown{
-    text-align: center;
-  }
-  .fxs_btn_cta{
-    min-width: 200px;
-  }
-  .fxs_live_event_cta_content{
-    padding: 5rem 0 15.5rem 0;
-    .fxs_live_video_author{
-      position: absolute;
-      bottom: 150px;
-      left: 20%;
-      .translate(-10%, 0);
-    }
-  }
-  .fxs_footer_video_chat{
-    position: absolute;
-    bottom: 130px;
-    margin: 0 1rem 0 1rem;
-  }
-  .fxs_checkboxGroup{
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    .translate(-50%, 0);
-  }
 }
 
 .fxs_live_video_main_media {
@@ -564,11 +373,6 @@
     width: 33.33333333%;
     z-index: 1;
   }
-  &.fxs_live_chat_block_module{
-    position: inherit;
-    width:100%;
-    height:456px;
-  }
 }
 
 .fxs_live_event_cell {
@@ -576,7 +380,8 @@
   @media (min-width: @screen-s) { display: table-cell; }
   .fxs_live_event_cta_content {
     max-width: inherit;
-    padding: 0 1rem @half_base_spacer 1rem; 
+    padding-top: 0;
+    padding-bottom: @half_base_spacer;
   }
   .fxs_btn_content_toggle {
     color: @light_2_clr;
