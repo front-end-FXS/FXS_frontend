@@ -1,78 +1,6 @@
 ﻿body{
      &.sfPageEditor{
         // disable modal in sitefinity dashboard
-        .fxs_wrapper{
-            padding-top:0!important;
-        }
-        .fxs_contentView{
-            margin-top:100px;
-        }
-        .modal-header{
-            h3.modal-title{
-                font-size: 22px;
-                font-weight: 300;
-                color:#999;
-            }
-        }
-        .fxs_SFeditor_textarea{
-            label{
-                vertical-align: top;
-            }
-            textarea{
-                height: auto;
-            }
-        }
-        .fxs_SFeditor_label{
-            input{
-                width:72%;
-            }
-        }
-        // space to display topics bar
-        .fxs_content{
-            padding-top:0px;
-        }
-        .fxs_divider_editor{
-            width:100%;
-            background-color: #ccc;
-        }
-        .fxs_topic_title{
-            font-size: 18px;
-        } 
-        .fxs_content_wide {
-            .fxs_content_subnav{
-                width:100%;
-            }
-        }
-        // height background topics
-        .fxs_content_subnav{
-            height:70px;
-            //margin-top:50px;
-            left:10px;
-            top:0;
-            position:inherit;
-            width:100%;
-        }
-        input.fxs_ad_num_field{
-            border:1px solid #ccc;
-            height:30px;
-            width:100px;
-        }
-        label{
-            min-width:100px;
-        }
-        input.fxs_count_items{
-            width:30px;
-            padding:5px;
-        }
-        .fxs_info_fields{
-            font-size: 12px;
-            color:#666;
-            padding-left:5px;
-        }
-         // disable alert 
-        .fxs_global_alert{
-            display:none;
-        }
         &.fxs_modal_page{
             .fxs_modal_wrap{
                 display:block;
@@ -105,14 +33,6 @@
             margin-top:-16px!important;
             cursor:move;
         }
-        .k-window-actions{
-            top:39px!important;
-            .k-window-action {
-                &.k-state-hover{
-                    background-color: transparent;
-                }
-            }
-        }
         .k-window-content{
             padding:20px;
             button{
@@ -120,8 +40,8 @@
                 height:30px;
             }
             select{
-                height:32px;
-                padding:0;
+                min-width:121px;
+                min-height:30px;
             }
         }
         .modal-body .k-editor-widget .k-editor-toolbar > li:last-child, .modal-body .k-editor-widget .k-editor-toolbar > li:nth-last-child(2){
@@ -141,14 +61,11 @@
                 img{
                     padding:10px 0 10px 0;
                 }
+                label,button{
+                    display:block;
+                }
                 button{
                     margin-top:10px;
-                    border-radius: 4px;
-                    &:hover{
-                        background-color: #ccc;
-                    }
-                    padding-left:10px;
-                    padding-right:10px;
                 }
                 input{
                     padding:2px;
@@ -158,11 +75,6 @@
                 }
                 select{
                     width:100%;
-                }
-                .k-state-hover{
-                    &:hover{
-                        background-color: transparent;
-                    }
                 }
             } 
             .k-header{
@@ -189,10 +101,14 @@
         }
         .field-group{
             padding-bottom:10px;
+            input{
+                padding:0;
+            }
         }
 
         // fxstreet dashboard rules
         .fxs_wrapper{
+            padding-top:0;
             overflow:visible;
             height:auto;
         }
@@ -243,9 +159,6 @@
             &.fxs_analysisList_thumb{ background:url('../img/widget-thumbnails/analysis_list.jpg') no-repeat 3px 0!important; }
             &.fxs_educationList_thumb{ background:url('../img/widget-thumbnails/education_List.jpg') no-repeat 3px 0!important; }
             &.fxs_calendar_thumb{ background:url('../img/widget-thumbnails/calendar.jpg') no-repeat 3px 0!important; }
-            &.fxs_spreads_thumb{ background:url('../img/widget-thumbnails/brokers-spreads.jpg') no-repeat 3px 0!important; }
-            &.fxs_contentBlock_thumb{ background:url('../img/widget-thumbnails/content-block.jpg') no-repeat 3px 0!important; }
-
 
             // fxsGrid columns
             &.col_100{ background:url('../img/fxsGrid/100.jpg') no-repeat 3px 0!important; border:1px solid #ccc}
@@ -296,20 +209,7 @@
                 opacity: .5;
                 background-image: url('../img/editor-thumbnails/highlighted_news.png')
             }
-            &.fxs_icon_editor_divider{
-                opacity: .5;
-                background-image: url('../img/editor-thumbnails/divider.png')
-            }
         }
-    }
-
-    // sitefinity dashboard msg
-    .fxs_sitefinity_dashboard_msg{
-        position:absolute; 
-        z-index:9999;
-        padding-top:25px;
-        font-size: 18px;
-        padding-left:50px;
     }
 }
 
