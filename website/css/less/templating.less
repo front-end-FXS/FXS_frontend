@@ -3,7 +3,6 @@
     background-color: @corp_clr;
     position:relative;
     z-index:6;
-    border-bottom:1px solid @light_4_clr;
 }
 .fxs_staticHeader{
     width:100%;
@@ -67,9 +66,6 @@
         display:inline-block!important;
         vertical-align:top;
         border-right:1px solid @light_3_clr;
-        @media(min-width:769px){
-            height: 135px;
-        }
         .fxs_headline_from_nano_to_tiny{
             padding:inherit;
             margin:0;
@@ -77,8 +73,6 @@
                 padding:0 0 0 2rem;
             }
             font-size:@txt_size_small;
-            font-weight:700;
-            color: @dark_4_clr;
         }
         .fa-angle-right{
             font-weight:bold;
@@ -232,9 +226,6 @@
                     border:0!important;
                 }
             }
-            .fxs_btn_small{
-                font-weight:400;
-            }
         }
     }
 }
@@ -267,6 +258,7 @@
         .fxs_navItemsBox:first-child{
             padding-right:0px!important;
         }
+
         ul.fxs_subNav_col_4, ul.fxs_subNav_col_3, ul.fxs_subNav_col_2, ul.fxs_subNav_col_1{
             -webkit-column-gap: 0px!important;
             -moz-column-gap: 0px!important;
@@ -434,10 +426,6 @@
   @media (min-width: @screen-s) {
     padding-left:1rem;
   }
-  .fa-user{
-      height: 42px;
-      line-height: 42px;
-  }
   a{
       color:@light_4_clr;
       font-size:@txt_size_small;
@@ -446,40 +434,13 @@
       text-decoration:underline;
   }
   &.fxs_show_user_icon_logged{
+    background-color: transparent;
     .fa-user{
       color:@success_clr;
     }
   }
-  .fxs_user_options{
-      top:3rem;
-      position:absolute;
-      background-color:@lightest_clr;
-      z-index:101;
-      left:auto;
-      right:0;
-      min-width:250px;
-      .fa-caret-up{
-          color:@lightest_clr;
-          position:absolute;
-          top:-31px;
-          right:18px;
-      }
-      .fa-times{
-          position:absolute;
-          right:9px;
-          top:3px;
-          color:@dark_4_clr;
-      }
-      a{
-          color:@dark_4_clr;
-          height:40px;
-          line-height:40px;
-          padding:0 1rem 0 1rem;
-          display:block;
-      }
-      .fxs_suscriptions_btn{
-          border-bottom:1px solid #ccc;
-      }
+  &.fxs_user_logged{
+    background-color: @success_clr;
   }
 }
 body.cbp-spmenu-push-toleft, body.fxs_push_timezone{
@@ -732,7 +693,7 @@ body.cbp-spmenu-push-toright{
   // new modifications
   &.fxs_timezone_modify{
       left:auto;
-      right:-35px;
+      right:-100px;
       z-index:9999;
       position:absolute;
       @media(min-width:@screen-s){
@@ -746,13 +707,10 @@ body.cbp-spmenu-push-toright{
           position:absolute;
           background-color:#fff;
           .calc(height, ~'60% - 150px');
-          height:400px;
+          height:600px;
           width:320px;
           right:0;
           border:1px solid @light_4_clr;
-          @media(min-width:@screen-s){
-              height:600px;
-          }
           a{
             color: @dark_4_clr;
             display: block;
@@ -783,13 +741,8 @@ body.cbp-spmenu-push-toright{
           background-color:#fff;
           border:1px solid @light_4_clr;
           width:320px;
-          .fxs_timezone_closeBtn{
+          button{
               color:@highlight_clr;
-              &:hover{
-                  text-decoration: underline!important;
-                  opacity: 1;
-                  color:@highlight_clr;
-              }
           }
       }
   }
@@ -822,7 +775,6 @@ body.cbp-spmenu-push-toright{
     display: block;
     font-size: @txt_size_xsmall;
   }
-  &::-webkit-scrollbar { width: 10px; }
 }
 
 .fxs_timezone_nav {
@@ -866,20 +818,14 @@ body.cbp-spmenu-push-toright{
     }
 }
 .fxs_detail_user{
-    height: 100vh;
+    height: 100%;
     padding-left:0!important;
     padding-right:0!important;
     @media(min-width:@screen-s){
         height: 100vh; /* For 100% screen height */
     }
     .fxs_user_component_wrapper{
-        padding-top:10%;
-        @media(min-width:@screen-m){
-            padding-top:3%;
-        }
-        .fxs_user_form{
-            margin:0 auto;
-        }
+        .fxs_center_components(50%, 15%);
     }
     legend{
         font-size: @txt_size_xxlarge;
@@ -947,34 +893,24 @@ body.cbp-spmenu-push-toright{
             }
         }
         .fxs_signup_content{
-            padding-top:3%;
+            padding-top:10%;
             @media(min-width:@screen-m){
-                padding-top:0%;
+                padding-top:3%;
             } 
             .fxs_formGroup{
                 label{
                     font-size:@txt_size_xsmall;
                 }
             }
-            .fa-check{
-                color:@success_clr;
-            }
-            .fxs_user_msg_congrats{
-                .calc(width, ~'100% - 75px');
-                display:inline-block;
-                margin-left:1rem;
-                color:@success_clr;
-                padding-bottom:3rem;
-            }
         }
     }
-    .fxs_user_form, .fxs_confirm_signup{
+    .fxs_user_form{
         padding:2rem;
         border:1px solid @light_3_clr;
         width:100%;
         @media(min-width:@screen-s){
             min-width:320px;
-            max-width:450px;
+            max-width:420px;
         }
         background-color:@lightest_clr;
         .fxs_fieldset{
@@ -1008,10 +944,6 @@ body.cbp-spmenu-push-toright{
                     color:@highlight_clr;
                     font-weight:700;
                     font-size:@txt_size_small;
-                    top:1.5rem;
-                     @media(min-width:420px){
-                        top:0
-                    }
                 }
             }
             .fxs_checkboxGroup{
@@ -1021,28 +953,6 @@ body.cbp-spmenu-push-toright{
                         text-decoration:underline;
                     }
                 }
-            }
-            ::-webkit-input-placeholder{
-                color: @light_2_clr;
-                font-size: @txt_size_xsmall;
-                opacity: 1;
-                }
-
-            ::-moz-placeholder{
-                color: @light_1_clr;
-                font-size: @txt_size_xsmall;
-                opacity: 1;
-            }
-            :-ms-input-placeholder{
-                color: @light_1_clr;
-                font-size: @txt_size_xsmall;
-                opacity: 1;
-
-            }
-            :-moz-placeholder {
-              color: @light_1_clr;
-              font-size: @txt_size_xsmall;
-              opacity: 1;
             }
         }
         .fxs_user_field_error{
@@ -1054,15 +964,6 @@ body.cbp-spmenu-push-toright{
             }
             span{
                 color:@error_clr;
-            }
-        }
-    }
-    .fxs_confirm_signup{
-        padding:4rem;
-        .fxs_headline_from_tiny_to_small{
-            padding:4.5rem 0 2rem 0;
-            .fxs_dBlock{
-                padding-top:10px;
             }
         }
     }
@@ -1249,18 +1150,12 @@ body.cbp-spmenu-push-toright{
 
 .fxs_detail {
   &:extend(.fxs_clearfix all, .fxs_contentRail_box);
-  &.fxs_detail__custom{
-      z-index: 3;
-  }
   background-color: @lightest_clr;
   margin-bottom: @half_base_spacer;
   padding: 1rem;
   position: relative;
   @media (min-width: @screen-s) { padding: 1.5rem 1.5rem; } // modified padding: 1.5rem 1.5rem instead of 1.5rem 2rem
   .fxs_modal_page .fxs_wrapper & { min-height: @content_wide_width; }
-  &.fxs_detail_custom{
-      z-index:3;
-  }
 }
 
 .fxs_content_wide {
@@ -1293,7 +1188,7 @@ body.cbp-spmenu-push-toright{
   .fxs_isParent_section & { left: auto; }
   @media (min-width: @screen-s){ left: -(@left_rail_space_reduced + 5px)!important; }
   @media (min-width: @screen-m) { left: auto!important;}
-  @media (min-width: @screen-m) { top: 121px;}
+  @media (min-width: @screen-m) { top: 135px;}
   &.cbp-spmenu-open {
     .translateX(100%);
     @media (min-width: @screen-s){
@@ -2966,7 +2861,7 @@ clean rules for new calendar widget
   .animation(show-sponsor-from-top 0.6s ease-in 0.6s forwards);
   max-height: 0;
   overflow: hidden;
-  @media(min-width: @screen-xl){ margin: -0.40rem 0 0 0; }
+  @media(min-width: @screen-xl){ margin: -0.32rem 0 0 0; }
   img {
     display: block;
     margin: 0 auto;
@@ -2987,7 +2882,7 @@ clean rules for new calendar widget
     .animation(fadeIn 1s ease-in forwards);
     display: block;
     position: fixed;
-    top: 119px;
+    top: 129px;
     left: 0;
     right: 0;
     bottom: 0;
